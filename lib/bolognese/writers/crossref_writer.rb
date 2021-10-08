@@ -4,7 +4,7 @@ module Bolognese
   module Writers
     module CrossrefWriter
       def crossref
-        from == "crossref" ? raw : nil
+        should_passthru ? raw : crossref_xml
       end
     end
   end
