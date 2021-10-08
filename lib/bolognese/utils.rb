@@ -257,7 +257,7 @@ module Bolognese
       "ReferenceEntry" => nil,
       "JournalVolume" => nil,
       "BookSet" => nil,
-      "PostedContent" => "JournalArticle",
+      "PostedContent" => "Preprint",
       "PeerReview" => "PeerReview"
     }
 
@@ -265,7 +265,7 @@ module Bolognese
       "Article" => "Text",
       "AudioObject" => "Sound",
       "Blog" => "Text",
-      "BlogPosting" => "Text",
+      "BlogPosting" => "Preprint",
       "Book" => "Book",
       "Chapter" => "BookChapter",
       "Collection" => "Collection",
