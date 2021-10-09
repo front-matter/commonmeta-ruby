@@ -202,7 +202,7 @@ module Bolognese
           "subjects" => nil,
           "language" => nil,
           "sizes" => nil,
-          "schema_version" => nil,
+          "schema_version" => "http://datacite.org/schema/kernel-4",
           "state" => state,
           "date_registered" => date_registered
         }.merge(read_options)
@@ -221,7 +221,7 @@ module Bolognese
           end
         elsif parse_attributes(bibliographic_metadata.fetch("item_number", nil)).present?
           [{ "identifier" => parse_attributes(bibliographic_metadata.fetch("item_number", nil)),
-            "identifierType" => "Publisher ID" }]
+            "identifierType" => parse_attributes(bibliographic_metadata.dig("item_number", "item_number_type")) || "Publisher ID" }]
         elsif parse_attributes(bibliographic_metadata.fetch("isbn", nil)).present?
           [{ "identifier" => parse_attributes(bibliographic_metadata.fetch("isbn", nil), first: true),
              "identifierType" => "ISBN" }]

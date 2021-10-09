@@ -80,7 +80,7 @@ describe Bolognese::Metadata, vcr: true do
       expect(rdf_xml.dig("BlogPosting", "author", "Person", "name")).to eq("Martin Fenner")
       expect(rdf_xml.dig("BlogPosting", "name")).to eq("Eating your own Dog Food")
       expect(rdf_xml.dig("BlogPosting", "keywords")).to eq("datacite, doi, metadata, featured")
-      expect(rdf_xml.dig("BlogPosting", "datePublished", "__content__")).to eq("2016-12-20")
+      expect(rdf_xml.dig("BlogPosting", "datePublished", "__content__")).to eq("2016-12-20T00:00:01Z")
     end
   end
 end

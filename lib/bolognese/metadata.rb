@@ -147,7 +147,7 @@ module Bolognese
       exists? && errors.nil?
     end
 
-    # validate against DataCite schema, unless there are already errors in the reader
+    # validate against DataCite schema, unless already errors in the reader
     def errors
       meta.fetch("errors", nil) || datacite_errors(xml: datacite, schema_version: schema_version)
     end
