@@ -28,12 +28,18 @@ module Bolognese
 
         url = normalize_id(id)
         response = Maremma.get(url)
-        doc = Nokogiri::XML(response.body.fetch("data", nil), nil, 'UTF-8')
 
-        # workaround for xhtml documents
-        nodeset = doc.css("script")
-        string = nodeset.find { |element| element["type"] == "application/ld+json" }
-        string = string.text if string.present?
+        # some responses are returned as a hash
+        if response.body["data"].is_a?(Hash)
+          string = response.body.dig("data", "html", "head", "script", 1, "__content__")
+        else
+          doc = Nokogiri::XML(response.body.fetch("data", nil), nil, 'UTF-8')
+          
+          # workaround for xhtml documents
+          nodeset = doc.css("script")
+          string = nodeset.find { |element| element["type"] == "application/ld+json" }
+          string = string.text if string.present?
+        end
 
         { "string" => string }
       end
@@ -106,7 +112,11 @@ module Bolognese
           Array.wrap(schema_org_is_supplemented_by(meta))
 
         rights_list = Array.wrap(meta.fetch("license", nil)).compact.map do |rl|
-          hsh_to_spdx("__content__" => rl["name"], "rightsURI" => rl["id"])
+          if rl.is_a?(String)
+            hsh_to_spdx("rightsURI" => rl)
+          else
+            hsh_to_spdx("__content__" => rl["name"], "rightsURI" => rl["id"])
+          end
         end
 
         funding_references = Array.wrap(meta.fetch("funder", nil)).compact.map do |fr|
@@ -120,10 +130,12 @@ module Bolognese
               "funderName" => fr["name"] }.compact
           end
         end
+
+        # strip milliseconds from iso8601, as edtf library doesn't handle them
         dates = []
-        dates << { "date" => meta.fetch("datePublished"), "dateType" => "Issued" } if Date.edtf(meta.fetch("datePublished", nil)).present?
-        dates << { "date" => meta.fetch("dateCreated"), "dateType" => "Created" } if Date.edtf(meta.fetch("dateCreated", nil)).present?
-        dates << { "date" => meta.fetch("dateModified"), "dateType" => "Updated" } if Date.edtf(meta.fetch("dateModified", nil)).present?
+        dates << { "date" => strip_milliseconds(meta.fetch("datePublished")), "dateType" => "Issued" } if Date.edtf(strip_milliseconds(meta.fetch("datePublished", nil))).present?
+        dates << { "date" => strip_milliseconds(meta.fetch("dateCreated")), "dateType" => "Created" } if Date.edtf(strip_milliseconds(meta.fetch("dateCreated", nil))).present?
+        dates << { "date" => strip_milliseconds(meta.fetch("dateModified")), "dateType" => "Updated" } if Date.edtf(strip_milliseconds(meta.fetch("dateModified", nil))).present?
         publication_year = meta.fetch("datePublished")[0..3] if meta.fetch("datePublished", nil).present?
 
         if meta.fetch("inLanguage", nil).is_a?(String)

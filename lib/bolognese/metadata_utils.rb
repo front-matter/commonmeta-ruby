@@ -2,6 +2,7 @@
 
 require_relative 'doi_utils'
 require_relative 'author_utils'
+require_relative 'crossref_utils'
 require_relative 'datacite_utils'
 require_relative 'utils'
 
@@ -36,6 +37,7 @@ module Bolognese
     # include BenchmarkMethods
     include Bolognese::DoiUtils
     include Bolognese::AuthorUtils
+    include Bolognese::CrossrefUtils
     include Bolognese::DataciteUtils
     include Bolognese::Utils
 
@@ -89,7 +91,7 @@ module Bolognese
     end
 
     def should_passthru
-      (from == "datacite") && regenerate.blank? && raw.present?
+      (from == "datacite" || from == "crossref") && regenerate.blank? && raw.present?
     end
 
     def container_title
