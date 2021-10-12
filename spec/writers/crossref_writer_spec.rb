@@ -8,7 +8,6 @@ describe Bolognese::Metadata, vcr: true do
       input = fixture_path + 'crossref.xml'
       subject = Bolognese::Metadata.new(input: input)
       expect(subject.valid?).to be true
-      puts subject.crossref
       expect(subject.doi).to eq("10.7554/elife.01567")
       expect(subject.url).to eq("https://elifesciences.org/articles/01567")
       crossref = Maremma.from_xml(subject.crossref).dig("doi_records", "doi_record", "crossref", "journal")

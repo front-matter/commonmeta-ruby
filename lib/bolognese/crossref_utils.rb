@@ -76,6 +76,7 @@ module Bolognese
         insert_crossref_alternate_identifiers(xml)
         insert_crossref_access_indicators(xml)
         insert_doi_data(xml)
+        insert_citation_list(xml)
       end
     end
 
