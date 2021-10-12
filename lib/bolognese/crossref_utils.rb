@@ -4,8 +4,10 @@ module Bolognese
   module CrossrefUtils
     def crossref_xml
       @crossref_xml ||= Nokogiri::XML::Builder.new(:encoding => 'UTF-8') do |xml|
-        xml.doi_records do
-          insert_crossref_work(xml)
+        xml.doi_batch(crossref_root_attributes) do
+          xml.doi_records do
+            insert_crossref_work(xml)
+          end
         end
       end.to_xml
     end
@@ -292,5 +294,15 @@ module Bolognese
         xml.p(d["description"])
       end
     end
+
+    def crossref_root_attributes
+      { :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
+        :'xsi:schemaLocation' => 'http://www.crossref.org/schema/5.3.1 https://www.crossref.org/schemas/crossref5.3.1.xsd',
+        :'xmlns' => 'http://www.crossref.org/schema/5.3.1',
+        :'xmlns:jats' => 'http://www.ncbi.nlm.nih.gov/JATS1',
+        :'xmlns:fr' => 'http://www.crossref.org/fundref.xsd',
+        :'xmlns:mml' => 'http://www.w3.org/1998/Math/MathML',
+        :'version' => '5.3.1' }
+    end
   end
-end
+end 
