@@ -152,6 +152,11 @@ module Bolognese
       meta.fetch("errors", nil) || datacite_errors(xml: datacite, schema_version: schema_version)
     end
 
+    # validate against Crossref schema, unless already errors in the reader
+    def errors_with_crossref
+      meta.fetch("errors", nil) || crossref_errors(xml: crossref)
+    end
+
     def descriptions
       @descriptions ||= meta.fetch("descriptions", nil)
     end

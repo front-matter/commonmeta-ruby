@@ -155,7 +155,7 @@
                   </rel:related_item>
                 </rel:program>
                 <archive_locations>
-                  <archive name="CLOCKSS" />
+                  <archive name="CLOCKSS"/>
                 </archive_locations>
                 <doi_data>
                   <doi>10.7554/eLife.01567</doi>
@@ -416,7 +416,7 @@
                     <titles>
                       <title>Abstract</title>
                     </titles>
-                    <format mime_type="text/plain" />
+                    <format mime_type="text/plain"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.001</doi>
                       <resource>https://elifesciences.org/articles/01567#abstract</resource>
@@ -426,7 +426,7 @@
                     <titles>
                       <title>eLife digest</title>
                     </titles>
-                    <format mime_type="text/plain" />
+                    <format mime_type="text/plain"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.002</doi>
                       <resource>https://elifesciences.org/articles/01567#digest</resource>
@@ -437,7 +437,7 @@
                       <title>Figure 1. Cellular level analysis of Arabidopsis hypocotyl secondary growth.</title>
                       <subtitle>(A) Light microscopy of cross sections obtained from Arabidopsis hypocotyls (organ position illustrated for a 9-day-old seedling, lower left) at 9 dag (upper left) and 35 dag (right). Size bars are 100 μm. Blue GUS staining due to the presence of an APL::GUS reporter gene in this Col-0 background line marks phloem bundles. (B) Overview of the developmental series (time points and distinct samples per genotype) analyzed in this study. (C) Example of a high-resolution hypocotyl section image assembled from 11 × 11 tiles. (D) The same image after pre-processing and binarization, and (E) subsequent segmentation using a watershed algorithm. (F) Number of mis-segmented cells as determined by careful visual inspection in 12 sections, plotted against the total number of cells per section (log scale).</subtitle>
                     </titles>
-                    <format mime_type="image/tiff" />
+                    <format mime_type="image/tiff"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.003</doi>
                       <resource>https://elifesciences.org/articles/01567#fig1</resource>
@@ -448,7 +448,7 @@
                       <title>Figure 2. The ‘Quantitative Histology’ approach.</title>
                       <subtitle>(A) Overview of the computational pipeline from image acquisition to analysis. (B) ‘Phenoprints’ for the different genotypes and developmental stages.</subtitle>
                     </titles>
-                    <format mime_type="image/tiff" />
+                    <format mime_type="image/tiff"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.004</doi>
                       <resource>https://elifesciences.org/articles/01567#fig2</resource>
@@ -459,7 +459,7 @@
                       <title>Figure 2—figure supplement 1. An example of classifier selection through V-fold cross validation.</title>
                       <subtitle>The green arrow points out the selected feature combination according to the criteria of minimum number of features with the highest performance and the lowest variation (the radiusV feature was excluded due to its putative variation in tissue location).</subtitle>
                     </titles>
-                    <format mime_type="image/tiff" />
+                    <format mime_type="image/tiff"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.005</doi>
                       <resource>https://elifesciences.org/articles/01567/figures#fig2s1</resource>
@@ -470,7 +470,7 @@
                       <title>Figure 3. Progression of tissue proliferation.</title>
                       <subtitle>(A) Principal component analysis (PCA) of the phenoprints shown in Figure 2B, performed with normalized values (Supplementary file 4). The inlay screeplot displays the proportion of total variation explained by each principal component. (B–E) Comparative plots of parameter progression in the two genotypes. In (D), xylem represents combined vessel, parenchyma, and fiber cells, phloem represents combined phloem parenchyma and bundle cells. Error bars indicate standard error.</subtitle>
                     </titles>
-                    <format mime_type="image/tiff" />
+                    <format mime_type="image/tiff"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.006</doi>
                       <resource>https://elifesciences.org/articles/01567#fig3</resource>
@@ -481,7 +481,7 @@
                       <title>Figure 4. Bimodal distribution of incline angle according to position.</title>
                       <subtitle>(A and B) Spatial distribution of cell incline angle illustrates the vascular organization in Ler (B) as compared to Col-0 (A) at later stages of development, for example 30 dag. The size of the disc increases with the area of the cell. Blue color indicates radial cell orientation, red orthoradial. (C and D) Violin plots of incline angle distribution, illustrating increasingly bimodal distribution coincident with refined vascular organization and different dynamics of the process in the two genotypes.</subtitle>
                     </titles>
-                    <format mime_type="image/tiff" />
+                    <format mime_type="image/tiff"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.007</doi>
                       <resource>https://elifesciences.org/articles/01567#fig4</resource>
@@ -492,7 +492,7 @@
                       <title>Figure 4—figure supplement 1. An illustration of the incline angle.</title>
                       <subtitle>The incline is the angle between the section radius through the center of an ellipse fit to a cell and the major axis of that ellipse extended towards the x axis.</subtitle>
                     </titles>
-                    <format mime_type="image/tiff" />
+                    <format mime_type="image/tiff"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.008</doi>
                       <resource>https://elifesciences.org/articles/01567/figures#fig4s1</resource>
@@ -503,7 +503,7 @@
                       <title>Figure 5. Distinct local organization of incline angle during hypocotyl secondary growth progression.</title>
                       <subtitle>(A–J) Density plots of cell incline angle vs radial position for the two genotypes at the indicated developmental stages, representing all cells across all sections for a given time point. The red lines represent the fit of these cloud distributions with locally weighted linear regression (i.e., lowess), revealing the essential data trends. All sections were normalized from 0.0 (the manually defined center) to 1.0 (the average radius in a set of sections as determined by the average distance of the outermost cells from the center for individual sections). Box plots indicate the quartiles of the radian distribution for each cell-type class and are placed at the average position of the cell type with respect to the y axis. Outliers are shown as circles.</subtitle>
                     </titles>
-                    <format mime_type="image/tiff" />
+                    <format mime_type="image/tiff"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.009</doi>
                       <resource>https://elifesciences.org/articles/01567#fig5</resource>
@@ -514,7 +514,7 @@
                       <title>Figure 5—figure supplement 1. Analysis of cell number in defined xylem regions of different size.</title>
                       <subtitle>Cell number in a circle of 200–500 pixels around the section centers for Col-0. Cell count in a constant area of xylem over time across all averaged across all sections.</subtitle>
                     </titles>
-                    <format mime_type="image/tiff" />
+                    <format mime_type="image/tiff"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.010</doi>
                       <resource>https://elifesciences.org/articles/01567/figures#fig5s1</resource>
@@ -525,7 +525,7 @@
                       <title>Figure 6. Mapping of phloem pole patterning.</title>
                       <subtitle>(A) Example of Gaussian kernel density estimate of the location of predicted phloem bundles cells in a 30 dag Col-0 section. High density represents phloem poles. (B) Example of an analysis of emerging phloem pole position in a 30 dag Col-0 section. The plot represents a pixel intensity map after noise reduction along a circular region of interest across the emerging phloem poles. Intensity peaks are due to GUS staining conferred to phloem bundles by an APL::GUS reporter construct. (C) Probability density function of the data shown in (B) obtained from an automated Bayesian model. The dominant single peak indicates a constant arc distance of ca. 62 pixel between the phloem poles.</subtitle>
                     </titles>
-                    <format mime_type="image/tiff" />
+                    <format mime_type="image/tiff"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.011</doi>
                       <resource>https://elifesciences.org/articles/01567#fig6</resource>
@@ -536,7 +536,7 @@
                       <title>Supplementary file 1.</title>
                       <subtitle>(A) An explanation of the extracted parameters that describe the cellular features. (B) Summary information of the hand-labeled training set for supervised machine learning. (C) Definition of the classifiers selected for analysis. (D) Summary of the classifier parameters for supervised machine learning. (E) Overview of the cell type classes recognized by the supervised machine learning approach and their assignment codes used in Data Files 3 and 4.</subtitle>
                     </titles>
-                    <format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                    <format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.012</doi>
                       <resource>https://elifesciences.org/articles/01567/figures#SD1-data</resource>
@@ -547,7 +547,7 @@
                       <title>Supplementary file 2.</title>
                       <subtitle>Quality control files for the Col-0 sections.</subtitle>
                     </titles>
-                    <format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                    <format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.013</doi>
                       <resource>https://elifesciences.org/articles/01567/figures#SD2-data</resource>
@@ -558,7 +558,7 @@
                       <title>Supplementary file 3.</title>
                       <subtitle>Quality control files for the Ler sections.</subtitle>
                     </titles>
-                    <format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                    <format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.014</doi>
                       <resource>https://elifesciences.org/articles/01567/figures#SD3-data</resource>
@@ -569,7 +569,7 @@
                       <title>Supplementary file 4.</title>
                       <subtitle>The normalized values of the phenoprints (Figure 2B) used for PCA.</subtitle>
                     </titles>
-                    <format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" />
+                    <format mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.015</doi>
                       <resource>https://elifesciences.org/articles/01567/figures#SD4-data</resource>
@@ -579,7 +579,7 @@
                     <titles>
                       <title>Decision letter</title>
                     </titles>
-                    <format mime_type="text/plain" />
+                    <format mime_type="text/plain"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.016</doi>
                       <resource>https://elifesciences.org/articles/01567#SA1</resource>
@@ -589,7 +589,7 @@
                     <titles>
                       <title>Author response</title>
                     </titles>
-                    <format mime_type="text/plain" />
+                    <format mime_type="text/plain"/>
                     <doi_data>
                       <doi>10.7554/eLife.01567.017</doi>
                       <resource>https://elifesciences.org/articles/01567#SA2</resource>

@@ -8,6 +8,7 @@ describe Bolognese::Metadata, vcr: true do
       input = fixture_path + 'crossref.xml'
       subject = Bolognese::Metadata.new(input: input, regenerate: true)
       expect(subject.valid?).to be true
+      # expect(subject.errors_with_crossref).to be_blank
       expect(subject.doi).to eq("10.7554/elife.01567")
       expect(subject.url).to eq("https://elifesciences.org/articles/01567")
       crossref = Maremma.from_xml(subject.crossref).dig("doi_records", "doi_record", "crossref", "journal")
@@ -18,6 +19,7 @@ describe Bolognese::Metadata, vcr: true do
     it "posted_content" do
       subject = Bolognese::Metadata.new(input: "10.1101/2020.12.01.406702", regenerate: true)
       expect(subject.valid?).to be true
+      # expect(subject.errors_with_crossref).to be_blank
       expect(subject.doi).to eq("10.1101/2020.12.01.406702")
       expect(subject.url).to eq("http://biorxiv.org/lookup/doi/10.1101/2020.12.01.406702")
       crossref = Maremma.from_xml(subject.crossref).dig("doi_records", "doi_record", "crossref", "posted_content")
@@ -28,6 +30,7 @@ describe Bolognese::Metadata, vcr: true do
       input = "https://blog.datacite.org/farewell-to-datacite/"
       subject = Bolognese::Metadata.new(input: input, from: "schema_org")
       expect(subject.valid?).to be true
+      # expect(subject.errors_with_crossref).to be_blank
       expect(subject.doi).to eq("10.5438/zx3k-3923")
       expect(subject.url).to eq("https://blog.datacite.org/farewell-to-datacite")
       expect(subject.types["schemaOrg"]).to eq("BlogPosting")
@@ -44,6 +47,7 @@ describe Bolognese::Metadata, vcr: true do
       input = "https://blog.front-matter.io/posts/editorial-by-more-than-200-call-for-emergency-action-to-limit-global-temperature-increases-restore-biodiversity-and-protect-health"
       subject = Bolognese::Metadata.new(input: input, from: "schema_org")
       expect(subject.valid?).to be true
+      # expect(subject.errors_with_crossref).to be_blank
       puts subject.crossref
       expect(subject.doi).to eq("10.53731/r9nqx6h-97aq74v-ag7bw")
       expect(subject.url).to eq("https://blog.front-matter.io/posts/editorial-by-more-than-200-call-for-emergency-action-to-limit-global-temperature-increases-restore-biodiversity-and-protect-health")
@@ -65,14 +69,14 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.language).to eq("en")
       expect(subject.rights_list).to eq([{"rights"=>"Creative Commons Attribution 4.0 International", "rightsUri"=>"https://creativecommons.org/licenses/by/4.0/legalcode", "rightsIdentifier"=>"cc-by-4.0", "rightsIdentifierScheme"=>"SPDX", "schemeUri"=>"https://spdx.org/licenses/"}])
       crossref = Maremma.from_xml(subject.crossref).dig("doi_records", "doi_record", "crossref", "posted_content")
-      expect(Maremma.from_xml(subject.crossref).dig("doi_records", "doi_record")).to eq("Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health")
-      # expect(crossref.dig("titles", "title")).to eq("Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health")
+      expect(crossref.dig("titles", "title")).to eq("Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health")
     end
 
     it "embedded schema.org from front matter" do
       input = fixture_path + 'schema_org_front-matter.json'
       subject = Bolognese::Metadata.new(input: input, from: "schema_org")
       expect(subject.valid?).to be true
+      # expect(subject.errors_with_crossref).to be_blank
       expect(subject.doi).to eq("10.53731/r9nqx6h-97aq74v-ag7bw")
       expect(subject.url).to eq("https://blog.front-matter.io/posts/editorial-by-more-than-200-call-for-emergency-action-to-limit-global-temperature-increases-restore-biodiversity-and-protect-health")
       expect(subject.types["schemaOrg"]).to eq("BlogPosting")

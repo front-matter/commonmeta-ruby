@@ -10,22 +10,14 @@ module Bolognese
       end.to_xml
     end
 
-    # def crossref_errors(xml: nil, schema_version: nil)
-    #   if xml.present?
-    #     namespaces = Nokogiri::XML(xml, nil, 'UTF-8').root.namespaces
-    #     schema_version = namespaces.fetch('xmlns',nil).presence || namespaces.fetch('xmlns:ns0',nil).presence
-    #   else
-    #     schema_version = schema_version.to_s.start_with?("http://datacite.org/schema/kernel") ? schema_version : "http://datacite.org/schema/kernel-4"
-    #   end
+    def crossref_errors(xml: nil)
+      filepath = File.expand_path("../../../resources/crossref/crossref5.3.1.xsd", __FILE__)
+      schema = Nokogiri::XML::Schema(open(filepath))
 
-    #   kernel = schema_version.to_s.split("/").last
-    #   filepath = File.expand_path("../../../resources/#{kernel}/metadata.xsd", __FILE__)
-    #   schema = Nokogiri::XML::Schema(open(filepath))
-
-    #   schema.validate(Nokogiri::XML(xml, nil, 'UTF-8')).map { |error| error.to_s }.unwrap
-    # rescue Nokogiri::XML::SyntaxError => e
-    #   e.message
-    # end
+      schema.validate(Nokogiri::XML(xml, nil, 'UTF-8')).map { |error| error.to_s }.unwrap
+    rescue Nokogiri::XML::SyntaxError => e
+      e.message
+    end
 
     def insert_crossref_work(xml)
       insert_doi_record(xml)
