@@ -348,7 +348,7 @@ describe Bolognese::Metadata, vcr: true do
       expect(json["name"]).to eq("NWD165827.recab.cram")
       expect(json["author"]).to eq("@type"=>"Organization", "name"=>"TOPMed IRC")
       expect(json["keywords"]).to eq("topmed, whole genome sequencing")
-      expect(json["datePublished"]).to eq("2017-11-30T00:00:01Z")
+      expect(json["datePublished"]).to eq("2017-11-30")
       expect(json["contentUrl"]).to eq(["s3://cgp-commons-public/topmed_open_access/197bc047-e917-55ed-852d-d563cdbc50e4/NWD165827.recab.cram", "gs://topmed-irc-share/public/NWD165827.recab.cram"])
       expect(json["schemaVersion"]).to eq("http://datacite.org/schema/kernel-4")
       expect(json["publisher"]).to eq("@type"=>"Organization", "name"=>"TOPMed")

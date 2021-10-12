@@ -166,12 +166,12 @@ describe Bolognese::Metadata, vcr: true do
       subject = Bolognese::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.url).to eq("http://biorxiv.org/lookup/doi/10.1101/097196")
-      expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"PostedContent", "resourceTypeGeneral"=>"JournalArticle", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
+      expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"PostedContent", "resourceTypeGeneral"=>"Preprint", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
       expect(subject.creators.count).to eq(11)
       expect(subject.creators.last).to eq("nameType"=>"Personal", "nameIdentifiers" => [{"nameIdentifier"=>"https://orcid.org/0000-0003-4060-7360", "nameIdentifierScheme"=>"ORCID", "schemeUri"=>"https://orcid.org"}], "name"=>"Clark, Timothy", "givenName"=>"Timothy", "familyName"=>"Clark")
       expect(subject.titles).to eq([{"title"=>"A Data Citation Roadmap for Scholarly Data Repositories"}])
       expect(subject.id).to eq("https://doi.org/10.1101/097196")
-      expect(subject.identifiers).to eq([{"identifier"=>"biorxiv;097196v2", "identifierType"=>"Publisher ID"}])
+      expect(subject.identifiers).to eq([{"identifier"=>"biorxiv;097196v2", "identifierType"=>"pisa"}])
       expect(subject.descriptions.first["description"]).to start_with("This article presents a practical roadmap")
       expect(subject.dates).to include({"date"=>"2017-10-09", "dateType"=>"Issued"})
       expect(subject.publication_year).to eq("2017")
@@ -1016,7 +1016,7 @@ describe Bolognese::Metadata, vcr: true do
       subject = Bolognese::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.url).to eq("https://cp.copernicus.org/preprints/cp-2020-95/")
-      expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"PostedContent", "resourceTypeGeneral"=>"JournalArticle", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
+      expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"PostedContent", "resourceTypeGeneral"=>"Preprint", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
       expect(subject.creators.count).to eq(6)
       expect(subject.creators.first).to eq("nameType" => "Personal", "familyName" => "Shao",
         "givenName" => "Jun",

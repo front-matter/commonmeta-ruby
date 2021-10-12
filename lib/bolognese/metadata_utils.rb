@@ -91,7 +91,7 @@ module Bolognese
     end
 
     def should_passthru
-      (from == "datacite" || from == "crossref") && regenerate.blank? && raw.present?
+      (from == "datacite") && regenerate.blank? && raw.present?
     end
 
     def container_title

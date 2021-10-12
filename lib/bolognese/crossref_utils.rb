@@ -58,7 +58,8 @@ module Bolognese
           insert_crossref_alternate_identifiers(xml)
           insert_crossref_access_indicators(xml)
           insert_doi_data(xml)
-          # insert_publication_date(xml)
+          insert_crossref_publication_date(xml)
+          insert_citation_list(xml)
         end
       end
     end
@@ -114,6 +115,20 @@ module Bolognese
             xml.title(title["title"])
           else
             xml.title(title)
+          end
+        end
+      end
+    end
+
+    def insert_citation_list(xml)
+      # filter out references
+      references = related_identifiers.find_all { |ri| ri["relationType"] == "References" }
+      return xml if references.blank?
+
+      xml.citation_list do
+        references.each do |ref|
+          xml.citation do
+            xml.doi(ref["relatedIdentifier"])
           end
         end
       end
@@ -203,11 +218,11 @@ module Bolognese
       xml.language(language)
     end
 
-    def insert_publication_date(xml)
+    def insert_crossref_publication_date(xml)
       return xml if date_registered.blank?
 
       date = get_datetime_from_iso8601(date_registered)
-
+      
       xml.publication_date("media_type" => "online") do
         xml.month(date.month) if date.month.present?
         xml.day(date.day) if date.day.present?

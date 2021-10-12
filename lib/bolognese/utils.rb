@@ -1139,11 +1139,12 @@ module Bolognese
     end
 
     # strip milliseconds if there is a time, as it interferes with edtc parsing
+    # keep dates unchanged
     def strip_milliseconds(iso8601_time)
-      return nil if iso8601_time.nil?
+      return iso8601_time.split(".").first + "Z" if iso8601_time.to_s.include? "."
 
-      iso8601_time.length == 10 ? iso8601_time + "T00:00:01Z": iso8601_time.split(".").first + "Z"
-    end
+      return iso8601_time
+   end
 
     # iso8601 datetime without hyphens and colons, used by Crossref
     # return nil if invalid
