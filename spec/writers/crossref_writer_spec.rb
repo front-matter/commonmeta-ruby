@@ -10,7 +10,7 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.valid?).to be true
       expect(subject.doi).to eq("10.7554/elife.01567")
       expect(subject.url).to eq("https://elifesciences.org/articles/01567")
-      crossref = Maremma.from_xml(subject.crossref).dig("doi_batch", "doi_records", "doi_record", "crossref", "journal")
+      crossref = Maremma.from_xml(subject.crossref).dig("doi_batch", "body", "journal")
       expect(crossref.dig("journal_metadata", "full_title")).to eq("eLife")
       expect(crossref.dig("journal_article", "doi_data", "doi")).to eq("10.7554/elife.01567")
     end
@@ -20,7 +20,7 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.valid?).to be true
       expect(subject.doi).to eq("10.1101/2020.12.01.406702")
       expect(subject.url).to eq("http://biorxiv.org/lookup/doi/10.1101/2020.12.01.406702")
-      crossref = Maremma.from_xml(subject.crossref).dig("doi_batch", "doi_records", "doi_record", "crossref", "posted_content")
+      crossref = Maremma.from_xml(subject.crossref).dig("doi_batch", "body", "posted_content")
       expect(crossref.dig("doi_data", "doi")).to eq("10.1101/2020.12.01.406702")
     end
 
@@ -36,7 +36,7 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.types["citeproc"]).to eq("post-weblog")
       expect(subject.titles).to eq([{"title"=>"Farewell to DataCite"}])
       expect(subject.rights_list).to eq([{"rights"=>"Creative Commons Attribution 4.0 International", "rightsUri"=>"https://creativecommons.org/licenses/by/4.0/legalcode", "rightsIdentifier"=>"cc-by-4.0", "rightsIdentifierScheme"=>"SPDX", "schemeUri"=>"https://spdx.org/licenses/"}])
-      crossref = Maremma.from_xml(subject.crossref).dig("doi_batch", "doi_records", "doi_record", "crossref", "posted_content")
+      crossref = Maremma.from_xml(subject.crossref).dig("doi_batch", "body", "posted_content")
       expect(crossref.dig("titles", "title")).to eq("Farewell to DataCite")
     end
 
@@ -64,7 +64,7 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.subjects).to eq([{"subject"=>"news"}])
       expect(subject.language).to eq("en")
       expect(subject.rights_list).to eq([{"rights"=>"Creative Commons Attribution 4.0 International", "rightsUri"=>"https://creativecommons.org/licenses/by/4.0/legalcode", "rightsIdentifier"=>"cc-by-4.0", "rightsIdentifierScheme"=>"SPDX", "schemeUri"=>"https://spdx.org/licenses/"}])
-      crossref = Maremma.from_xml(subject.crossref).dig("doi_batch", "doi_records", "doi_record", "crossref", "posted_content")
+      crossref = Maremma.from_xml(subject.crossref).dig("doi_batch", "body", "posted_content")
       expect(crossref.dig("titles", "title")).to eq("Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health")
     end
 
@@ -79,7 +79,7 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.types["ris"]).to eq("GEN")
       expect(subject.types["citeproc"]).to eq("post-weblog")
       expect(subject.titles).to eq([{"title"=>"Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health"}])
-      crossref = Maremma.from_xml(subject.crossref).dig("doi_batch", "doi_records", "doi_record", "crossref", "posted_content")
+      crossref = Maremma.from_xml(subject.crossref).dig("doi_batch", "body", "posted_content")
       expect(crossref.dig("titles", "title")).to eq("Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health")
     end
   end

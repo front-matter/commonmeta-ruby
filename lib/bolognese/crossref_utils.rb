@@ -5,7 +5,17 @@ module Bolognese
     def crossref_xml
       @crossref_xml ||= Nokogiri::XML::Builder.new(:encoding => 'UTF-8') do |xml|
         xml.doi_batch(crossref_root_attributes) do
-          xml.doi_records do
+          xml.head do
+            # we use a uuid as batch_id
+            xml.doi_batch_id(SecureRandom.uuid)
+            xml.timestamp(Time.now.utc.strftime('%Y%m%d%H%M%S'))
+            xml.depositor do
+              xml.depositor_name(depositor)
+              xml.email_address(email)
+            end
+            xml.registrant(registrant)
+          end
+          xml.body do
             insert_crossref_work(xml)
           end
         end
@@ -22,23 +32,12 @@ module Bolognese
     end
 
     def insert_crossref_work(xml)
-      insert_doi_record(xml)
-    end
-
-    def insert_doi_record(xml)
       return xml if doi.blank?
 
-      date_published = get_date(dates, "Issued")
-      timestamp = date_published.present? ? "#{date_published[0..9]} #{date_published[11..18]}" : nil
-
-      xml.doi_record({ "owner" => doi.split("/").first, "timestamp" => timestamp }.compact) do
-        xml.crossref do
-          if types["resourceTypeGeneral"] == "JournalArticle"
-            insert_journal(xml)
-          elsif types["resourceTypeGeneral"] == "Preprint"
-            insert_posted_content(xml)
-          end
-        end
+      if types["resourceTypeGeneral"] == "JournalArticle"
+        insert_journal(xml)
+      elsif types["resourceTypeGeneral"] == "Preprint"
+        insert_posted_content(xml)
       end
     end
 
@@ -56,25 +55,25 @@ module Bolognese
         xml.journal_article("publication_type" => "full_text") do
           insert_crossref_titles(xml)
           insert_crossref_creators(xml)
+          insert_crossref_publication_date(xml)
           insert_crossref_abstract(xml)
           insert_crossref_alternate_identifiers(xml)
           insert_crossref_access_indicators(xml)
           insert_doi_data(xml)
-          insert_crossref_publication_date(xml)
           insert_citation_list(xml)
         end
       end
     end
 
     def insert_posted_content(xml)
-      posted_content = { "type" => "other", "language" => language, "metadata_distribution_opts" => "any" }.compact
+      posted_content = { "type" => "other", "language" => language }.compact
 
       xml.posted_content(posted_content) do
         insert_group_title(xml)
         insert_crossref_creators(xml)
         insert_crossref_titles(xml)
-        insert_crossref_abstract(xml)
         insert_posted_date(xml)
+        insert_crossref_abstract(xml)
         insert_crossref_alternate_identifiers(xml)
         insert_crossref_access_indicators(xml)
         insert_doi_data(xml)
@@ -161,10 +160,12 @@ module Bolognese
 
     def insert_crossref_access_indicators(xml)
       return xml if rights_list.blank?
+
       rights_uri = Array.wrap(rights_list).map { |l| l["rightsUri"] }.first
 
-      xml.program("xmlns:ai" => "http://www.crossref.org/AccessIndicators.xsd", "name" => "AccessIndicators") do
+      xml.program("xmlns" => "http://www.crossref.org/AccessIndicators.xsd", "name" => "AccessIndicators") do
         xml.license_ref(rights_uri, "applies_to" => "vor")
+        xml.license_ref(rights_uri, "applies_to" => "tdm")
       end
     end
 
@@ -234,9 +235,10 @@ module Bolognese
     end
 
     def insert_posted_date(xml)
-      return xml if date_registered.blank?
+      date_posted = get_date(dates, "Issued")
+      return xml if date_posted.blank?
 
-      date = get_datetime_from_iso8601(date_registered)
+      date = get_datetime_from_iso8601(date_posted)
 
       xml.posted_date do
         xml.month(date.month) if date.month.present?
@@ -251,6 +253,11 @@ module Bolognese
       xml.doi_data do
         xml.doi(doi)
         xml.resource(url)
+        xml.collection("property" => "text-mining") do
+          xml.item do
+            xml.resource(url, "mime_type" => "text/html")
+          end
+        end
       end
     end
 
@@ -290,7 +297,7 @@ module Bolognese
         d["description"] = descriptions.first
       end
 
-      xml.abstract do
+      xml.abstract("xmlns" => "http://www.ncbi.nlm.nih.gov/JATS1") do
         xml.p(d["description"])
       end
     end

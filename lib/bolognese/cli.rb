@@ -30,13 +30,20 @@ module Bolognese
     method_option :style, aliases: "-s", default: "apa"
     method_option :locale, aliases: "-l", default: "en-US"
     method_option :show_errors, :type => :boolean, :force => false
+    method_option :depositor
+    method_option :email
+    method_option :registrant
+
     def convert(input)
       metadata = Metadata.new(input: input,
                               from: options[:from],
                               regenerate: options[:regenerate],
                               style: options[:style],
                               locale: options[:locale],
-                              show_errors: options[:show_errors])
+                              show_errors: options[:show_errors],
+                              depositor: options[:depositor],
+                              email: options[:email],
+                              registrant: options[:registrant])
       to = options[:to] || "schema_org"
 
       if options[:show_errors] && !metadata.valid?

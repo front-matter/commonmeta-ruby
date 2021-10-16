@@ -13,10 +13,12 @@ module Bolognese
                 :subjects, :contributor, :descriptions, :language, :sizes,
                 :formats, :schema_version, :meta, :container, :agency,
                 :format, :funding_references, :state, :geo_locations,
-                :types, :content_url, :related_identifiers, :related_items, :style, :locale, :date_registered
+                :types, :content_url, :related_identifiers, :related_items, :style, :locale, :date_registered,
+                :depositor, :email, :registrant
 
     def initialize(options={})
       options.symbolize_keys!
+
       id = normalize_id(options[:input], options)
       ra = nil
 
@@ -49,6 +51,9 @@ module Bolognese
             "date_updated" => options[:date_updated],
             "provider_id" => options[:provider_id],
             "client_id" => options[:client_id],
+            "depositor" => options[:depositor],
+            "email" => options[:email],
+            "registrant" => options[:registrant],
             "content_url" => options[:content_url] }
           string = IO.read(options[:input])
           @from = options[:from] || find_from_format(string: string, filename: filename, ext: ext)
@@ -64,6 +69,9 @@ module Bolognese
           "date_updated" => options[:date_updated],
           "provider_id" => options[:provider_id],
           "client_id" => options[:client_id],
+          "depositor" => options[:depositor],
+          "email" => options[:email],
+          "registrant" => options[:registrant],
           "content_url" => options[:content_url],
           "creators" => options[:creators],
           "contributors" => options[:contributors],
@@ -93,6 +101,12 @@ module Bolognese
       @client_id = hsh.to_h["client_id"].presence
       @content_url = hsh.to_h["content_url"].presence
 
+      # options that come from the submission, needed
+      # for crossref doi registration
+      @depositor = hsh.to_h["depositor"].presence
+      @email = hsh.to_h["email"].presence
+      @registrant = hsh.to_h["registrant"].presence
+
       # set attributes directly
       read_options = options.slice(
         :creators,
@@ -121,6 +135,18 @@ module Bolognese
       # generate name for method to call dynamically
       opts = { string: string, sandbox: options[:sandbox], doi: options[:doi], id: id, ra: ra }.merge(read_options)
       @meta = @from.present? ? send("read_" + @from, **opts) : {}
+    end
+
+    def depositor
+      @depositor
+    end
+
+    def email
+      @email
+    end
+
+    def registrant
+      @registrant
     end
 
     def id
