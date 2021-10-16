@@ -10,10 +10,10 @@ module Bolognese
             xml.doi_batch_id(SecureRandom.uuid)
             xml.timestamp(Time.now.utc.strftime('%Y%m%d%H%M%S'))
             xml.depositor do
-              xml.depositor_name(depositor)
-              xml.email_address(email)
+              xml.depositor_name("Front Matter")
+              xml.email_address("info@front-matter.io")
             end
-            xml.registrant(registrant)
+            xml.registrant("Front Matter")
           end
           xml.body do
             insert_crossref_work(xml)
@@ -73,6 +73,7 @@ module Bolognese
         insert_crossref_creators(xml)
         insert_crossref_titles(xml)
         insert_posted_date(xml)
+        insert_institution(xml)
         insert_crossref_abstract(xml)
         insert_crossref_alternate_identifiers(xml)
         insert_crossref_access_indicators(xml)
@@ -244,6 +245,14 @@ module Bolognese
         xml.month(date.month) if date.month.present?
         xml.day(date.day) if date.day.present?
         xml.year(date.year) if date.year.present?
+      end
+    end
+
+    def insert_institution(xml)
+      return xml if publisher.blank?
+
+      xml.institution do
+        xml.institution_name(publisher)
       end
     end
 
