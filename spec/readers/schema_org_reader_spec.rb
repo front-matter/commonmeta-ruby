@@ -66,6 +66,29 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.publisher).to eq("DataCite")
     end
 
+    context "get schema_org metadata front matter" do
+      it "BlogPosting" do
+        input = "https://blog.front-matter.io/posts/step-forward-for-software-citation"
+        subject = Bolognese::Metadata.new(input: input, from: "schema_org")
+        expect(subject.valid?).to be true
+        expect(subject.id).to eq("https://doi.org/10.53731/r9531p1-97aq74v-ag78v")
+        expect(subject.url).to eq("https://blog.front-matter.io/posts/step-forward-for-software-citation")
+        expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"post-weblog", "resourceTypeGeneral"=>"Preprint", "ris"=>"GEN", "schemaOrg"=>"BlogPosting")
+        expect(subject.creators).to eq([{"affiliation"=>[],
+          "familyName"=>"Fenner", "givenName"=>"Martin", "name"=>"Fenner, Martin", "nameIdentifiers"=> [{"nameIdentifier"=>"https://orcid.org/0000-0003-1419-2405", "nameIdentifierScheme"=>"ORCID", "schemeUri"=>"https://orcid.org"}], "nameType"=>"Personal"}])
+        expect(subject.titles).to eq([{"title"=>"A step forward for software citation: GitHub's enhanced software citation support"}])
+        expect(subject.descriptions.first["description"]).to start_with("On August 19, GitHub announced software citation")
+        expect(subject.subjects).to eq([{"subject"=>"news"}])
+        expect(subject.dates).to eq([{"date"=>"2021-08-24T16:57:24Z", "dateType"=>"Issued"},
+          {"date"=>"2021-08-24T16:03:56Z", "dateType"=>"Created"},
+          {"date"=>"2021-10-13T10:30:52Z", "dateType"=>"Updated"}])
+        expect(subject.publication_year).to eq("2021")
+        expect(subject.related_identifiers.length).to eq(0)
+        expect(subject.container).to eq("identifier"=>"2749-9952", "identifierType"=>"ISSN", "title"=>"Front Matter", "type"=>"Blog")
+        expect(subject.publisher).to eq("Front Matter")
+      end
+    end
+
     it "zenodo" do
       input = "https://www.zenodo.org/record/1196821"
       subject = Bolognese::Metadata.new(input: input, from: "schema_org")

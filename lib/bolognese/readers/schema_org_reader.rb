@@ -97,6 +97,15 @@ module Bolognese
             "firstPage" => meta.fetch("pageStart", nil),
             "lastPage" => meta.fetch("pageEnd", nil)
           }.compact
+        elsif schema_org == "BlogPosting"
+          issn = meta.dig("isPartOf", "issn")
+
+          {
+            "type" => "Blog",
+            "title" => meta.dig("isPartOf", "name"),
+            "identifier" => issn,
+            "identifierType" => issn.present? ? "ISSN" : nil
+          }.compact
         else
           {}
         end

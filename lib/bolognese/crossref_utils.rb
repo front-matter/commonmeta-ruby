@@ -57,6 +57,7 @@ module Bolognese
           insert_crossref_creators(xml)
           insert_crossref_publication_date(xml)
           insert_crossref_abstract(xml)
+          insert_crossref_issn(xml)
           insert_crossref_alternate_identifiers(xml)
           insert_crossref_access_indicators(xml)
           insert_doi_data(xml)
@@ -294,6 +295,14 @@ module Bolognese
           xml.rights(r["rights"], attributes)
         end
       end
+    end
+
+    def insert_crossref_issn(xml)
+      issn = container.to_h.fetch('identifierType', nil) == "ISSN" ? container.to_h.fetch('identifier', nil) : nil
+
+      return xml if issn.blank?
+
+      xml.issn(issn)
     end
 
     def insert_crossref_abstract(xml)
