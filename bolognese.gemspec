@@ -39,6 +39,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rdf-turtle', '~> 3.1'
   s.add_dependency 'rdf-rdfxml', '~> 3.1'
   s.add_dependency 'benchmark_methods', '~> 0.7'
+  s.add_dependency 'dotenv', '~> 2.1', '>= 2.1.1'
   s.add_dependency 'gender_detector', '~> 0.1.2'
   s.add_dependency 'concurrent-ruby', '~> 1.1', '>= 1.1.5'
   s.add_development_dependency 'bundler', '>= 1.0'

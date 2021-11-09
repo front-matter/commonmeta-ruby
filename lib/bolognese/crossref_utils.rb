@@ -2,6 +2,9 @@
 
 module Bolognese
   module CrossrefUtils
+    # To configure the writing of Crossref metadata, use environmental
+    # variables CROSSREF_DEPOSITOR_NAME, CROSSREF_DEPOSITOR_EMAIL and CROSSREF_REGISTRANT,
+    # e.g. in a .env file
     def crossref_xml
       @crossref_xml ||= Nokogiri::XML::Builder.new(:encoding => 'UTF-8') do |xml|
         xml.doi_batch(crossref_root_attributes) do
@@ -10,10 +13,10 @@ module Bolognese
             xml.doi_batch_id(SecureRandom.uuid)
             xml.timestamp(Time.now.utc.strftime('%Y%m%d%H%M%S'))
             xml.depositor do
-              xml.depositor_name("Front Matter")
-              xml.email_address("info@front-matter.io")
+              xml.depositor_name(ENV['CROSSREF_DEPOSITOR_NAME'])
+              xml.email_address(ENV['CROSSREF_DEPOSITOR_EMAIL'])
             end
-            xml.registrant("Front Matter")
+            xml.registrant(ENV['CROSSREF_REGISTRANT'])
           end
           xml.body do
             insert_crossref_work(xml)
