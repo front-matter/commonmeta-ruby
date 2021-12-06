@@ -1,8 +1,5 @@
-[![Identifier](https://img.shields.io/badge/doi-10.5438%2Fn138--z3mk-fca709.svg)](https://doi.org/10.5438/n138-z3mk)
 [![Gem Version](https://badge.fury.io/rb/briard.svg)](https://badge.fury.io/rb/briard)
-![Build Ruby Gem](https://github.com/datacite/briard/workflows/Build%20Ruby%20Gem/badge.svg)
-[![Code Climate](https://codeclimate.com/github/datacite/briard/badges/gpa.svg)](https://codeclimate.com/github/datacite/briard)
-[![Test Coverage](https://codeclimate.com/github/datacite/briard/badges/coverage.svg)](https://codeclimate.com/github/datacite/briard/coverage)
+![Build Ruby Gem](https://github.com/front-matter/briard/workflows/Build%20Ruby%20Gem/badge.svg)
 
 # Briard: a Ruby library for conversion of DOI Metadata
 
@@ -128,7 +125,7 @@ Briard reads and/or writes these metadata formats:
 
 ## Installation
 
-Requires Ruby 2.2 or later. Then add the following to your `Gemfile` to install the
+Requires Ruby 2.3 or later. Then add the following to your `Gemfile` to install the
 latest version:
 
 ```ruby
