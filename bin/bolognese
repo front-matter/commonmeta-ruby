@@ -1,9 +1,0 @@
-#!/usr/bin/env ruby
-
-require File.expand_path("../../lib/bolognese", __FILE__)
-
-if (ARGV & %w(--version -v help --help)).empty?
-  Bolognese::CLI.start(ARGV.dup.unshift("convert"))
-else
-  Bolognese::CLI.start
-end

@@ -6,7 +6,7 @@ Bundler.setup
 require 'simplecov'
 SimpleCov.start
 
-require 'bolognese'
+require 'briard'
 require 'maremma'
 require 'rspec'
 require 'rack/test'

@@ -2,21 +2,21 @@
 
 require 'spec_helper'
 
-describe Bolognese::Metadata, vcr: true do
+describe Briard::Metadata, vcr: true do
   let(:input) { "http://doi.org/10.5438/4K3M-NYVG" }
-  subject { Bolognese::Metadata.new(input: input) }
+  subject { Briard::Metadata.new(input: input) }
 
   context "handle input" do
     it "unknown DOI prefix" do
       input = "http://doi.org/10.0137/14802"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be false
       expect(subject.bibtex).to be_nil
     end
 
     it "DOI RA not Crossref or DataCite" do
       input = "http://doi.org/10.3980/j.issn.2222-3959.2015.03.07"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be false
       expect(subject.bibtex).to be_nil
     end

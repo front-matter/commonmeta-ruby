@@ -1,0 +1,108 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.7554
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:24:06 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KBrKW%2Bp4jiXDyEUYmTiuY6vdhIEL8nkxI%2FDZzz7xHcfFxiQ2gDunfoFbSHXhOwiXul%2BhmSWruQcSTO0HAT6HEidOJAOTmYm0MomMxJEku9dne2BQBEQ11qo%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b93c5c95c9c5b74-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9c1NTEyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA4VlVnTYAAAA=
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:24:05 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.7554/elife.01567x/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/xml;charset=utf-8
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:24:07 GMT
+      Content-Type:
+      - text/plain;charset=utf-8
+      Content-Length:
+      - '19'
+      Set-Cookie:
+      - AWSALB=nvULoRY5Lvp5kt/Zoi5VsM2mdZtuPgnaY2ZNFkuuMPCQaJdG61147KoEFTMjR0LrgwDnzr63yyouHwRDg9kUqcnXuapnLxNfI0/VQYdL0q+3CrHbo7N0wVjjr2GS;
+        Expires=Mon, 13 Dec 2021 07:24:06 GMT; Path=/, AWSALBCORS=nvULoRY5Lvp5kt/Zoi5VsM2mdZtuPgnaY2ZNFkuuMPCQaJdG61147KoEFTMjR0LrgwDnzr63yyouHwRDg9kUqcnXuapnLxNfI0/VQYdL0q+3CrHbo7N0wVjjr2GS;
+        Expires=Mon, 13 Dec 2021 07:24:06 GMT; Path=/; SameSite=None
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - polite
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: Resource not found.
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:24:06 GMT
+recorded_with: VCR 3.0.3

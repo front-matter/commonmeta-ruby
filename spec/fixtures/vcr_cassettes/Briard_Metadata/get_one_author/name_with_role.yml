@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.14463/gbv:873056442?include=media,client
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:18:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Etag:
+      - W/"3ee776332669de4237b1d71d3e1f862f"
+      X-Runtime:
+      - '0.794202'
+      X-Request-Id:
+      - 365050b8-0233-468d-bac3-f812c11e0ae9
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.12
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.12
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:18:08 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require File.expand_path("../../lib/briard", __FILE__)
+
+if (ARGV & %w(--version -v help --help)).empty?
+  Briard::CLI.start(ARGV.dup.unshift("convert"))
+else
+  Briard::CLI.start
+end

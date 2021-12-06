@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.5063/f1m61h5x?include=media,client
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:17:59 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Etag:
+      - W/"213378f4e046ec7bfdf9472255d6d353"
+      X-Runtime:
+      - '0.323993'
+      X-Request-Id:
+      - e2a1e6ed-5869-4668-93e7-5db39c172b5d
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.12
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.12
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:17:59 GMT
+recorded_with: VCR 3.0.3

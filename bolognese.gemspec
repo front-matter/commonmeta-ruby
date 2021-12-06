@@ -1,16 +1,16 @@
 require "date"
-require File.expand_path("../lib/bolognese/version", __FILE__)
+require File.expand_path("../lib/briard/version", __FILE__)
 
 Gem::Specification.new do |s|
   s.authors       = "Martin Fenner"
-  s.email         = "mfenner@datacite.org"
-  s.name          = "bolognese"
-  s.homepage      = "https://github.com/datacite/bolognese"
+  s.email         = "martin@front-matter.io"
+  s.name          = "briard"
+  s.homepage      = "https://github.com/front-matter/briard"
   s.summary       = "Ruby client library for conversion of DOI Metadata"
   s.date          = Date.today
-  s.description   = "Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including schema.org."
+  s.description   = "Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including schema.org. Fork of bolognese gem."
   s.require_paths = ["lib"]
-  s.version       = Bolognese::VERSION
+  s.version       = Briard::VERSION
   s.extra_rdoc_files = ["README.md"]
   s.license       = 'MIT'
   s.required_ruby_version = '~> 2.3'
@@ -55,5 +55,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.files       = `git ls-files`.split($/)
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables = ["bolognese"]
+  s.executables = ["briard"]
 end

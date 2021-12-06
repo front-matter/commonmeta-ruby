@@ -2,10 +2,10 @@
 
 require 'spec_helper'
 
-describe Bolognese::Metadata, vcr: true do
+describe Briard::Metadata, vcr: true do
   let(:input) { "https://doi.org/10.1101/097196" }
 
-  subject { Bolognese::Metadata.new(input: input, from: "crossref") }
+  subject { Briard::Metadata.new(input: input, from: "crossref") }
 
   context "doi resolver" do
     it "doi" do

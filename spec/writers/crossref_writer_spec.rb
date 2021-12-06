@@ -2,11 +2,11 @@
 
 require 'spec_helper'
 
-describe Bolognese::Metadata, vcr: true do
+describe Briard::Metadata, vcr: true do
   context "write metadata as crossref" do
     it "journal article" do
       input = fixture_path + 'crossref.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.doi).to eq("10.7554/elife.01567")
       expect(subject.url).to eq("https://elifesciences.org/articles/01567")
@@ -16,7 +16,7 @@ describe Bolognese::Metadata, vcr: true do
     end
 
     it "posted_content" do
-      subject = Bolognese::Metadata.new(input: "10.1101/2020.12.01.406702")
+      subject = Briard::Metadata.new(input: "10.1101/2020.12.01.406702")
       expect(subject.valid?).to be true
       expect(subject.doi).to eq("10.1101/2020.12.01.406702")
       expect(subject.url).to eq("http://biorxiv.org/lookup/doi/10.1101/2020.12.01.406702")
@@ -26,7 +26,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "schema.org from datacite" do
       input = "https://blog.datacite.org/farewell-to-datacite/"
-      subject = Bolognese::Metadata.new(input: input, from: "schema_org")
+      subject = Briard::Metadata.new(input: input, from: "schema_org")
       expect(subject.valid?).to be true
       expect(subject.doi).to eq("10.5438/zx3k-3923")
       expect(subject.url).to eq("https://blog.datacite.org/farewell-to-datacite")
@@ -43,7 +43,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "schema.org from front matter" do
       input = "https://blog.front-matter.io/posts/editorial-by-more-than-200-call-for-emergency-action-to-limit-global-temperature-increases-restore-biodiversity-and-protect-health"
-      subject = Bolognese::Metadata.new(input: input, from: "schema_org")
+      subject = Briard::Metadata.new(input: input, from: "schema_org")
       expect(subject.valid?).to be true
       expect(subject.doi).to eq("10.53731/r9nqx6h-97aq74v-ag7bw")
       expect(subject.url).to eq("https://blog.front-matter.io/posts/editorial-by-more-than-200-call-for-emergency-action-to-limit-global-temperature-increases-restore-biodiversity-and-protect-health")
@@ -71,7 +71,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "embedded schema.org from front matter" do
       input = fixture_path + 'schema_org_front-matter.json'
-      subject = Bolognese::Metadata.new(input: input, from: "schema_org")
+      subject = Briard::Metadata.new(input: input, from: "schema_org")
       expect(subject.valid?).to be true
       expect(subject.doi).to eq("10.53731/r9nqx6h-97aq74v-ag7bw")
       expect(subject.url).to eq("https://blog.front-matter.io/posts/editorial-by-more-than-200-call-for-emergency-action-to-limit-global-temperature-increases-restore-biodiversity-and-protect-health")

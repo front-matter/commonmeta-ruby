@@ -1,0 +1,113 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.6002
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:23:59 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bOZbA6aLPRIvdZaeyXP4DCuVd7iz3ILThcGa6BBCeBp0Q1QYK1uIcYMJZJo1%2FFshVGfssg40WkQQ8w5YqmG6Krf5BDL9CkmauDdJ2qIUM7CG0%2FaS%2Fal8y5I%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b93c5a27bf66967-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9MwMDIyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAN9fNlzYAAAA=
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:23:59 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.6002/ect.2015.0371/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/xml;charset=utf-8
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:24:00 GMT
+      Content-Length:
+      - '804'
+      Set-Cookie:
+      - AWSALB=4F46PTD2tWg1W2qRcd054X4GSTjjhGxKI8cQ9L9SUoezfuS2fWqgBqgxnQ7nx1VH3c4cP9+K0zA2fNOQureQDScMwOJHE41FUaekl+XI7/l04AQy3qm7KTo5LlnG;
+        Expires=Mon, 13 Dec 2021 07:24:00 GMT; Path=/, AWSALBCORS=4F46PTD2tWg1W2qRcd054X4GSTjjhGxKI8cQ9L9SUoezfuS2fWqgBqgxnQ7nx1VH3c4cP9+K0zA2fNOQureQDScMwOJHE41FUaekl+XI7/l04AQy3qm7KTo5LlnG;
+        Expires=Mon, 13 Dec 2021 07:24:00 GMT; Path=/; SameSite=None
+      Link:
+      - <http://dx.doi.org/10.6002/ect.2015.0371>; rel="canonical"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - polite
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAKVWXW+bMBR9r7T/gHgHG9KmWUSotGl76qRJa6VpL5EDbvEGNrVNQv79LoYASc1KtTf7+t7j+3E4OLqri9zZU6mY4Bs38LHrUJ6IlPHnjfv48NVbuXfxVZRIoZSkT1tJVZVrB6K42riZ1uUaocPh4J88fCGf0YtUSUYLghYNYA9vdiZ0XSt2Fn5YmMAQ4wD9/Hb/w4R7jCtNeEIhSrF1i3kvEqIN3JzbnSmn1kWhvrKXisrjVlS6rDQE+rVK3fjDleNE7UlbubGALaMk7dawSwXb7ohOsi1LYy44jdCZqQtCo6hoJ9LjgGDucKBaXUFf4S6R72mXwHCJo48l3bi/RSU5ybdMqYq6cYD9JcYhoon2Qxzc+HhxG5gMxuGJLDymaeFwUgBGWe1ypjIqvWbvdshKS5i8G38i6g/l2nnkzExPHyN0AvgXKDSS1TMRne+nFNQs8IIWO0iXpSdoXjUGN77GYTALIWHaUMeCsVosoXMzcbr+W2CCJV6Fy1kgKS0FtMHTrKAw96K8xIJRrgKMF/g6vJ2FKA4c+tPO4LL9HUdm4eREaa8qU6L7KZq1ycgLsIcXD0G4xh/XQfhrbuNpujt6iai4ftUzO0TzAUmaCJmOrAa6/WDf0qC6E4HAD94nH6PAk3pALnb1qDirwQaug16Mcu2IcmEeDrYF1QR6S155gM9TledbzXRO4y91SSXwhGuSO4SnzueccZbA5kESrsqc8JbZERpFWTDJbifpfkA1QCOQCJ15WBBAc7hT0JSRbTvGEgimYYrAU7y6uYlQ4zErkuagWFJAIUCt4Hq5MkSfCm/4MNGq9nSsg5fqN/JstLWSCY1H82/yqM1gI9SfW3JAk0lE6M2RRmeybYM3mtzSs7mF2vpsrakQXGdQf4TaldXpSIk0n3CEzNJW32UGNqdTGXuRV4XNA3y6swCkcNJtaNm0S9uqllT2nr2LFtO/x1HMJUEGcjwJWah2n0Cf4XNUmTj4ZVbeNWmwdDNx1/9yylZ9f3ouj/2DZqylyCKmETJvjv5t0r9HuoPhwTNgnmx/AdkU70Y3CgAA
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:24:00 GMT
+recorded_with: VCR 3.0.3

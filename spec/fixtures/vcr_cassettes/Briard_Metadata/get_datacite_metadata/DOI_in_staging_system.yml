@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.22002
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:21:02 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Cf-Cache-Status:
+      - DYNAMIC
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cdZKzry5apIwB3j6BdEnSO%2B6PCTlOfD6Eye5IlKq8U1VNCh58OEAqWiAXe7GHspk5Xaxhok1QMipxLspYFBaNwGdZLtWfrJuJXEt1hCg2sftCk1MdgjFyhM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6b93c14fadcc5c62-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
+        ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9IyMDAyMlHYhwkCNI1CWxJNE5syRVCShYyxULABOpobw3AAAA
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:21:02 GMT
+- request:
+    method: get
+    uri: https://api.stage.datacite.org/dois/10.22002/d1.694?include=media,client
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:21:03 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Etag:
+      - W/"b58a8c8bbe889bb8d25941b7392e4074"
+      X-Runtime:
+      - '0.113424'
+      X-Request-Id:
+      - 54ea2861-4248-4d58-9839-d252cd404efd
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.12
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.12
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:21:02 GMT
+recorded_with: VCR 3.0.3

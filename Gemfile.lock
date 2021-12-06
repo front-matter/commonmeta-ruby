@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bolognese (2.0.rc2)
+    briard (2.0)
       activesupport (>= 4.2.5)
       benchmark_methods (~> 0.7)
       bibtex-ruby (>= 5.1.0)
@@ -211,7 +211,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bolognese!
+  briard!
   bundler (>= 1.0)
   hashdiff (>= 1.0.0.beta1, < 2.0.0)
   rack-test (~> 0)

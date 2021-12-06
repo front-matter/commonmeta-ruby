@@ -2,10 +2,10 @@
 
 require 'spec_helper'
 
-describe Bolognese::Metadata, vcr: true do
+describe Briard::Metadata, vcr: true do
   let(:input) { fixture_path + "crossref.bib" }
 
-  subject { Bolognese::Metadata.new(input: input) }
+  subject { Briard::Metadata.new(input: input) }
 
   context "detect format" do
     it "extension" do
@@ -13,7 +13,7 @@ describe Bolognese::Metadata, vcr: true do
     end
 
     it "string" do
-      Bolognese::Metadata.new(input: IO.read(input).strip)
+      Briard::Metadata.new(input: IO.read(input).strip)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.7554/elife.01567")
     end
@@ -48,7 +48,7 @@ describe Bolognese::Metadata, vcr: true do
     it "DOI does not exist" do
       input = fixture_path + "pure.bib"
       doi = "10.7554/elife.01567"
-      subject = Bolognese::Metadata.new(input: input, doi: doi)
+      subject = Briard::Metadata.new(input: input, doi: doi)
       expect(subject.valid?).to be false
       expect(subject.state).to eq("not_found")
       expect(subject.id).to eq("https://doi.org/10.7554/elife.01567")

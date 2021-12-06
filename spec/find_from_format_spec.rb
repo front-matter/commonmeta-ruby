@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'bolognese/cli'
+require 'briard/cli'
 
-describe Bolognese::CLI do
+describe Briard::CLI do
   context "find_from_format_by_id", vcr: true do
     let(:subject) do
       described_class.new

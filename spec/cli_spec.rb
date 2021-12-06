@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'bolognese/cli'
+require 'briard/cli'
 
-describe Bolognese::CLI do
+describe Briard::CLI do
   let(:subject) do
     described_class.new
   end
@@ -51,7 +51,7 @@ describe Bolognese::CLI do
       let(:input) { "10.5061/dryad.8515" }
 
       it 'default' do
-        expect { subject.convert input }.to output(/Plasmodium, malaria, taxonomy, mitochondrial genome, Parasites/).to_stdout
+        expect { subject.convert input }.to output(/Plasmodium, malaria, mitochondrial genome, Parasites/).to_stdout
       end
 
       it 'to schema_org' do

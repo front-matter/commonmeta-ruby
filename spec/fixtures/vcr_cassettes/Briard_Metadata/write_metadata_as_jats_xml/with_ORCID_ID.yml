@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1155/2012/291294/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/xml;charset=utf-8
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:19:37 GMT
+      Content-Length:
+      - '3361'
+      Set-Cookie:
+      - AWSALB=+strED1p7NSQLRPhszP97NQfiUiPXqPubODptT68ZRfNTLLSQ3JPaCqJuv6Cm0h6hMXaFq/WJS/mJRPWv7f6V+OFLoKBWx/jtqFvZRnViZU5qlwItIkG5PHAfV2z;
+        Expires=Mon, 13 Dec 2021 07:19:37 GMT; Path=/, AWSALBCORS=+strED1p7NSQLRPhszP97NQfiUiPXqPubODptT68ZRfNTLLSQ3JPaCqJuv6Cm0h6hMXaFq/WJS/mJRPWv7f6V+OFLoKBWx/jtqFvZRnViZU5qlwItIkG5PHAfV2z;
+        Expires=Mon, 13 Dec 2021 07:19:37 GMT; Path=/; SameSite=None
+      Link:
+      - <http://dx.doi.org/10.1155/2012/291294>; rel="canonical", <http://downloads.hindawi.com/journals/pm/2012/291294.pdf>;
+        version="vor"; type="application/pdf"; rel="item", <http://downloads.hindawi.com/journals/pm/2012/291294.xml>;
+        version="vor"; type="application/xml"; rel="item", <http://downloads.hindawi.com/journals/pm/2012/291294.pdf>;
+        version="vor"; rel="item", <http://creativecommons.org/licenses/by/3.0/>;
+        rel="license", <http://orcid.org/0000-0003-2043-4925>; title="Beatriz Hernandez";
+        rel="author"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - polite
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:19:37 GMT
+recorded_with: VCR 3.0.3

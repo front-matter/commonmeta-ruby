@@ -2,10 +2,10 @@
 
 require 'spec_helper'
 
-describe Bolognese::Metadata, vcr: true do
+describe Briard::Metadata, vcr: true do
   let(:input) { fixture_path + "citeproc.json" }
 
-  subject { Bolognese::Metadata.new(input: input, from: "citeproc") }
+  subject { Briard::Metadata.new(input: input, from: "citeproc") }
 
   context "get citeproc raw" do
     it "BlogPosting" do
@@ -30,7 +30,7 @@ describe Bolognese::Metadata, vcr: true do
   context "get citeproc no categories" do
     it "BlogPosting" do
       input = fixture_path + "citeproc-no-categories.json"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5072/4k3m-nyvg")
       expect(subject.url).to eq("https://blog.datacite.org/eating-your-own-dog-food")
@@ -46,7 +46,7 @@ describe Bolognese::Metadata, vcr: true do
   context "get citeproc no author" do
     it "Journal article" do
       input = fixture_path + "citeproc-no-author.json"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       #expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5438/4k3m-nyvg")
       expect(subject.url).to eq("https://blog.datacite.org/eating-your-own-dog-food")

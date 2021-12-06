@@ -2,15 +2,15 @@
 
 require 'spec_helper'
 
-describe Bolognese::Metadata, vcr: true do
+describe Briard::Metadata, vcr: true do
   let(:input) { "https://doi.org/10.5061/DRYAD.8515" }
 
-  subject { Bolognese::Metadata.new(input: input) }
+  subject { Briard::Metadata.new(input: input) }
 
   context "get datacite raw" do
     it "BlogPosting" do
       input = fixture_path + 'datacite.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.raw).to eq(IO.read(input).strip)
     end
   end
@@ -39,7 +39,6 @@ describe Bolognese::Metadata, vcr: true do
         "relatedIdentifierType" => "DOI","relationType"=>"Cites")
       expect(subject.subjects).to eq([{"subject"=>"Plasmodium"},
         {"subject"=>"malaria"},
-        {"subject"=>"taxonomy"},
         {"subject"=>"mitochondrial genome"},
         {"subject"=>"Parasites"}])
       expect(subject.publisher).to eq("Dryad")
@@ -49,7 +48,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "BlogPosting" do
       input = "https://doi.org/10.5438/4K3M-NYVG"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("ScholarlyArticle")
       expect(subject.types["resourceType"]).to eq("BlogPosting")
@@ -82,7 +81,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "date" do
       input = "https://doi.org/10.4230/lipics.tqc.2013.93"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("ScholarlyArticle")
       expect(subject.types["resourceType"]).to eq("ConferencePaper")
@@ -103,7 +102,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "affiliation identifier" do
       input = fixture_path + 'datacite-example-affiliation.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("SoftwareSourceCode")
       expect(subject.types["resourceType"]).to eq("XML")
@@ -155,7 +154,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "xs:string attributes" do
       input = fixture_path + 'pure.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Dataset")
       expect(subject.types["resourceType"]).to eq("Dataset")
@@ -172,7 +171,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "empty sizes and dates attributes" do
       input = fixture_path + 'datacite-empty-sizes.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Dataset")
       expect(subject.types["resourceType"]).to be_nil
@@ -191,7 +190,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "multiple licenses" do
       input = "https://doi.org/10.5281/ZENODO.48440"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5281/zenodo.48440")
       expect(subject.identifiers).to eq([{"identifier"=>"https://zenodo.org/record/48440", "identifierType"=>"URL"}])
@@ -223,7 +222,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "is identical to" do
       input = "10.6084/M9.FIGSHARE.4234751.V1"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.identifiers).to be_empty
       expect(subject.types["schemaOrg"]).to eq("Dataset")
@@ -265,7 +264,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "subject scheme FOR" do
       input = "10.6084/m9.figshare.1449060"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.6084/m9.figshare.1449060")
       expect(subject.types["schemaOrg"]).to eq("Dataset")
@@ -295,7 +294,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "more subject scheme FOR" do
       input = "10.4225/03/5a6931f57c654"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.subjects).to eq([{"subject"=>"90301 Biomaterials", "subjectScheme"=>"FOR", "schemeUri"=>"http://www.abs.gov.au/ausstats/abs@.nsf/0/6BB427AB9696C225CA2574180004463E"},
         {"subject"=>"FOS: Medical engineering", "subjectScheme"=>"Fields of Science and Technology (FOS)", "schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf"}])
@@ -303,7 +302,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "even more subject scheme FOR" do
       input = "10.4225/03/5a31ec65634ef"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.subjects).to eq([{"subject"=>"130103 Higher Education", "subjectScheme"=>"FOR", "schemeUri"=>"http://www.abs.gov.au/ausstats/abs@.nsf/0/6BB427AB9696C225CA2574180004463E"},
         {"subject"=>"FOS: Educational sciences", "subjectScheme"=>"Fields of Science and Technology (FOS)", "schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf"},
@@ -314,7 +313,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "cc-by 3.0 us" do
       input = "10.6084/m9.figshare.1286826.v1"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.rights_list).to eq([{"rights"=>"Creative Commons Attribution 4.0 International",
         "rightsIdentifier"=>"cc-by-4.0",
@@ -325,7 +324,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "funding schema version 3" do
       input = "https://doi.org/10.5281/ZENODO.1239"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5281/zenodo.1239")
       expect(subject.identifiers).to eq([{"identifier"=>"https://zenodo.org/record/1239", "identifierType"=>"URL"}])
@@ -353,7 +352,7 @@ describe Bolognese::Metadata, vcr: true do
     end
 
     it "from attributes" do
-      subject = Bolognese::Metadata.new(input: nil,
+      subject = Briard::Metadata.new(input: nil,
         from: "datacite",
         doi: "10.5281/zenodo.1239",
         creators: [{"nameType"=>"Personal", "name"=>"Jahn, Najko", "givenName"=>"Najko", "familyName"=>"Jahn"}],
@@ -396,7 +395,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "missing resource_type_general" do
       input = fixture_path + 'vivli.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.types["schemaOrg"]).to eq("CreativeWork")
       expect(subject.types["resourceTypeGeneral"]).to be_nil
       expect(subject.valid?).to be false
@@ -405,7 +404,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "multiple languages" do
       input = fixture_path + 'datacite-multiple-language.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.types["schemaOrg"]).to eq("Collection")
       expect(subject.language).to eq("de")
       expect(subject.publisher).to eq("Universitätsbibliothek Tübingen")
@@ -416,7 +415,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "funder identifier with different http scheme" do
       input = fixture_path + 'datacite-funderIdentifier.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.funding_references.first).to eq({
         "funderIdentifier"=>"http://www.isni.org/isni/0000000119587073",
         "funderIdentifierType"=>"ISNI",
@@ -433,7 +432,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "geo_location empty" do
       input = fixture_path + 'datacite-geolocation-empty.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Dataset")
       expect(subject.geo_locations).to eq([{"geoLocationPoint"=>{"pointLatitude"=>"-11.64583333", "pointLongitude"=>"-68.2975"}}])
@@ -442,7 +441,7 @@ describe Bolognese::Metadata, vcr: true do
     it "geo_location in separate input" do
       input = fixture_path + 'datacite-geolocation-empty.xml'
       geo_locations = [{"geoLocationPoint"=>{"pointLatitude"=>"49.0850736", "pointLongitude"=>"-123.3300992"}}]
-      subject = Bolognese::Metadata.new(input: input, geo_locations: geo_locations)
+      subject = Briard::Metadata.new(input: input, geo_locations: geo_locations)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Dataset")
       expect(subject.geo_locations).to eq(geo_locations)
@@ -453,7 +452,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "xml:lang attribute" do
       input = fixture_path + 'datacite-xml-lang.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Collection")
       expect(subject.titles).to eq([{"lang"=>"en", "title"=>"DOI Test 2 title content"}, {"lang"=>"en", "title"=>"AAPP"}])
@@ -463,7 +462,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "wrong attributes" do
       input = fixture_path + 'nist.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.id).to eq("https://doi.org/10.5072/m32163")
       expect(subject.titles).to eq([{"title"=>"Peter Auto Dataset 501"}])
       expect(subject.descriptions).to eq([{"description"=>"This is to overturn Einstein's Relativity Theory.", "descriptionType"=>"Abstract"}])
@@ -474,7 +473,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "schema 4.0" do
       input = fixture_path + 'schema_4.0.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.6071/z7wc73")
       expect(subject.types["schemaOrg"]).to eq("Dataset")
@@ -493,7 +492,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "series_information" do
       input = fixture_path + 'datacite-seriesinformation.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5438/4k3m-nyvg")
       expect(subject.identifiers).to eq([{"identifier"=>"MS-49-3632-5083", "identifierType"=>"Local accession number"}])
@@ -523,7 +522,7 @@ describe Bolognese::Metadata, vcr: true do
     it "geo_location" do
       input = fixture_path + 'datacite-example-geolocation.xml'
       doi = "10.5072/geoPointExample"
-      subject = Bolognese::Metadata.new(input: input, doi: doi)
+      subject = Briard::Metadata.new(input: input, doi: doi)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5072/geopointexample")
       expect(subject.doi).to eq("10.5072/geopointexample")
@@ -540,7 +539,7 @@ describe Bolognese::Metadata, vcr: true do
     it "geo_location_box" do
       input = fixture_path + 'datacite-example-geolocation-2.xml'
       doi = "10.6071/Z7WC73"
-      subject = Bolognese::Metadata.new(input: input, doi: doi)
+      subject = Briard::Metadata.new(input: input, doi: doi)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.6071/z7wc73")
       expect(subject.doi).to eq("10.6071/z7wc73")
@@ -568,7 +567,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "author only full name" do
       input = "https://doi.org/10.14457/KMITL.RES.2006.17"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.14457/kmitl.res.2006.17")
       expect(subject.types["schemaOrg"]).to eq("Dataset")
@@ -578,7 +577,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "multiple author names in one creatorsName" do
       input = "https://doi.org/10.7910/DVN/EQTQYO"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.7910/dvn/eqtqyo")
       expect(subject.types["schemaOrg"]).to eq("Dataset")
@@ -587,7 +586,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "author with scheme" do
       input = "https://doi.org/10.18429/JACOW-IPAC2016-TUPMY003"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.18429/jacow-ipac2016-tupmy003")
       expect(subject.types["schemaOrg"]).to eq("ScholarlyArticle")
@@ -597,7 +596,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "author with wrong orcid scheme" do
       input = "https://doi.org/10.2314/COSCV1"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.2314/coscv1")
       expect(subject.types["schemaOrg"]).to eq("ScholarlyArticle")
@@ -607,7 +606,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "keywords with attributes" do
       input = "https://doi.org/10.21233/n34n5q"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.21233/n34n5q")
       expect(subject.subjects).to eq([{"schemeUri"=>"http://id.loc.gov/authorities/subjects", "subject"=>"Paleoecology", "subjectScheme"=>"Library of Congress"}])
@@ -615,7 +614,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Funding" do
       input = "https://doi.org/10.15125/BATH-00114"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.15125/bath-00114")
       expect(subject.identifiers).to eq([{"identifier"=>"http://researchdata.bath.ac.uk/114/", "identifierType"=>"URL"}])
@@ -648,7 +647,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Funding schema version 4" do
       input = "https://doi.org/10.5438/6423"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5438/6423")
       expect(subject.types["schemaOrg"]).to eq("Collection")
@@ -674,7 +673,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Funding empty awardTitle" do
       input = "https://doi.org/10.26102/2310-6018/2019.24.1.006"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.26102/2310-6018/2019.24.1.006")
       expect(subject.types["schemaOrg"]).to eq("ScholarlyArticle")
@@ -694,7 +693,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "BlogPosting from string" do
       input = fixture_path + "datacite.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("ScholarlyArticle")
       expect(subject.types["resourceType"]).to eq("BlogPosting")
@@ -714,7 +713,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Schema 4.1 from string" do
       input = fixture_path + "datacite-example-complicated-v4.1.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Book")
       expect(subject.types["resourceType"]).to eq("Monograph")
@@ -745,7 +744,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Schema 4.0 from string" do
       input = fixture_path + "datacite-example-complicated-v4.0.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Book")
       expect(subject.types["resourceType"]).to eq("Monograph")
@@ -775,7 +774,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Schema 3 from string" do
       input = fixture_path + "datacite_schema_3.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Dataset")
       expect(subject.types["resourceType"]).to eq("DataPackage")
@@ -804,7 +803,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Schema 3.0 from string" do
       input = fixture_path + "datacite-example-complicated-v3.0.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Book")
       expect(subject.types["resourceType"]).to eq("Monograph")
@@ -834,7 +833,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Schema 2.2 from string" do
       input = fixture_path + "datacite-metadata-sample-complicated-v2.2.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Book")
       expect(subject.types["resourceType"]).to eq("Monograph")
@@ -858,7 +857,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Schema 4.1 from string with doi in options" do
       input = fixture_path + "datacite-example-complicated-v4.1.xml"
-      subject = Bolognese::Metadata.new(input: input, doi: "10.5072/testpub2", content_url: "https://example.org/report.pdf")
+      subject = Briard::Metadata.new(input: input, doi: "10.5072/testpub2", content_url: "https://example.org/report.pdf")
       expect(subject.valid?).to be true
       expect(subject.types["schemaOrg"]).to eq("Book")
       expect(subject.types["resourceType"]).to eq("Monograph")
@@ -891,7 +890,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "namespaced xml from string" do
       input = fixture_path + "ns0.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.4231/d38g8fk8b")
       expect(subject.types["schemaOrg"]).to eq("SoftwareSourceCode")
@@ -909,7 +908,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Schema.org type" do
       input = "https://doi.org/10.25318/3410014001-fra"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.25318/3410014001-fra")
       expect(subject.types["schemaOrg"]).to eq("Dataset")
@@ -926,7 +925,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "doi with + sign" do
       input = "10.5067/terra+aqua/ceres/cldtyphist_l3.004"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5067/terra+aqua/ceres/cldtyphist_l3.004")
       expect(subject.types["schemaOrg"]).to eq("Dataset")
@@ -941,7 +940,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "subject scheme" do
       input = "https://doi.org/10.4232/1.2745"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.4232/1.2745")
       expect(subject.identifiers).to eq([{"identifier"=>"ZA2745", "identifierType"=>"ZA-No."},
@@ -982,7 +981,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "series-information" do
       input = "https://doi.org/10.4229/23RDEUPVSEC2008-5CO.8.3"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.4229/23rdeupvsec2008-5co.8.3")
       expect(subject.identifiers).to eq([{"identifier"=>"3-936338-24-8", "identifierType"=>"ISBN"}])
@@ -1004,7 +1003,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "content url" do
       input = "10.23725/8na3-9s47"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.doi).to eq("10.23725/8na3-9s47")
       expect(subject.id).to eq("https://doi.org/10.23725/8na3-9s47")
@@ -1017,7 +1016,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "empty subject" do
       input = "https://doi.org/10.18169/PAPDEOTTX00502"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.18169/papdeottx00502")
       expect(subject.identifiers).to eq([{"identifier"=>"http://www.priorartregister.com/resolve.php?disclosure=OTTX00502", "identifierType"=>"URL"}])
@@ -1035,7 +1034,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "leading and trailing whitespace" do
       input = "https://doi.org/10.21944/temis-OZONE-MSR2"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
 
       expect(subject.valid?).to be true
       #expect(subject.errors.length).to eq(2)
@@ -1075,7 +1074,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "DOI not found" do
       input = "https://doi.org/10.4124/05F6C379-DD68-4CDB-880D-33D3E9576D52/1"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be false
       expect(subject.id).to eq("https://doi.org/10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1")
       expect(subject.doi).to eq("10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1")
@@ -1085,7 +1084,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "DOI in staging system" do
       input = "https://handle.stage.datacite.org/10.22002/d1.694"
-      subject = Bolognese::Metadata.new(input: input, sandbox: true)
+      subject = Briard::Metadata.new(input: input, sandbox: true)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://handle.stage.datacite.org/10.22002/d1.694")
       expect(subject.types["schemaOrg"]).to eq("Dataset")
@@ -1102,7 +1101,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "DOI in staging system schema 3" do
       input = "10.21956/wellcomeopenres.25947.r17364"
-      subject = Bolognese::Metadata.new(input: input, doi: input, sandbox: true)
+      subject = Briard::Metadata.new(input: input, doi: input, sandbox: true)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://handle.stage.datacite.org/10.21956/wellcomeopenres.25947.r17364")
       expect(subject.types["schemaOrg"]).to eq("ScholarlyArticle")
@@ -1119,7 +1118,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "Referee report in staging system" do
       input = "10.21956/gatesopenres.530.r190"
-      subject = Bolognese::Metadata.new(input: input, sandbox: true)
+      subject = Briard::Metadata.new(input: input, sandbox: true)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://handle.stage.datacite.org/10.21956/gatesopenres.530.r190")
       expect(subject.types["schemaOrg"]).to eq("ScholarlyArticle")
@@ -1137,14 +1136,14 @@ describe Bolognese::Metadata, vcr: true do
 
     it "multiple rights" do
       input = fixture_path + "datacite-multiple-rights.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.rights_list).to eq([{"rights"=>"info:eu-repo/semantics/openAccess"}, {"rights"=>"Open Access", "rightsUri"=>"info:eu-repo/semantics/openAccess"}])
     end
 
     it ":tba" do
       input = fixture_path + "datacite-example-complicated-tba.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.titles).to eq([{"title"=>":unav"}])
       expect(subject.formats).to eq([":null"])
@@ -1153,7 +1152,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "ancient-dates" do
       input = fixture_path + "datacite-example-ancientdates-v4.3.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       #expect(subject.valid?).to be true
       expect(subject.dates).to eq([{"date"=>"-0024/-0022", "dateInformation"=>"from 25 BC to 23 BC", "dateType"=>"Created"}, {"date"=>"2010", "dateType"=>"Issued"}])
     end
@@ -1161,14 +1160,14 @@ describe Bolognese::Metadata, vcr: true do
     # TODO properly handle escaped text
     it "escaped text" do
       input = fixture_path + "datacite-example-escaped-text.xml"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.titles).to eq([{"title"=>"Some initial text"}])
     end
 
     it "missing creators" do
       input = fixture_path + "datacite_missing_creator.xml"
-      subject = Bolognese::Metadata.new(input: input, regenerate: true)
+      subject = Briard::Metadata.new(input: input, regenerate: true)
       expect(subject.creators).to be_blank
       expect(subject.valid?).to be false
       expect(subject.errors).to eq("4:0: ERROR: Element '{http://datacite.org/schema/kernel-4}creators': Missing child element(s). Expected is ( {http://datacite.org/schema/kernel-4}creator ).")
@@ -1176,7 +1175,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "malformed creators" do
       input = fixture_path + "datacite_malformed_creator.xml"
-      subject = Bolognese::Metadata.new(input: input, regenerate: false)
+      subject = Briard::Metadata.new(input: input, regenerate: false)
       expect(subject.creators).to be_blank
       expect(subject.valid?).to be false
       expect(subject.errors).to eq("16:0: ERROR: Element '{http://datacite.org/schema/kernel-4}creatorName': This element is not expected. Expected is ( {http://datacite.org/schema/kernel-4}affiliation ).")
@@ -1184,7 +1183,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "empty funding references" do
       input = fixture_path + "funding_reference.xml"
-      subject = Bolognese::Metadata.new(input: input, regenerate: false)
+      subject = Briard::Metadata.new(input: input, regenerate: false)
       expect(subject.valid?).to be false
       expect(subject.funding_references).to eq([{"funderName"=>"Agency for Science, Technology and Research (Singapore)"}])
       expect(subject.errors.first).to eq("31:0: ERROR: Element '{http://datacite.org/schema/kernel-4}fundingReference': Missing child element(s). Expected is one of ( {http://datacite.org/schema/kernel-4}funderName, {http://datacite.org/schema/kernel-4}funderIdentifier, {http://datacite.org/schema/kernel-4}awardNumber, {http://datacite.org/schema/kernel-4}awardTitle ).")
@@ -1192,7 +1191,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "space in sizes" do
       input = fixture_path + "datacite-space-in-sizes.xml"
-      subject = Bolognese::Metadata.new(input: input, regenerate: false)
+      subject = Briard::Metadata.new(input: input, regenerate: false)
       expect(subject.valid?).to be true
       expect(subject.sizes).to be_empty
       expect(subject.related_identifiers).to eq([{"relatedIdentifier"=>"10.1016/s0040-1951(03)00197-5",
@@ -1202,14 +1201,14 @@ describe Bolognese::Metadata, vcr: true do
 
     it "formats with xs" do
       input = fixture_path + "datacite-formats-with-xs.xml"
-      subject = Bolognese::Metadata.new(input: input, regenerate: false)
+      subject = Briard::Metadata.new(input: input, regenerate: false)
       expect(subject.valid?).to be true
       expect(subject.formats).to eq(["PDF"])
     end
 
     it "dissertation" do
       input = "10.3204/desy-2014-01645"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.3204/desy-2014-01645")
       expect(subject.types["resourceTypeGeneral"]).to eq("Text")
@@ -1230,7 +1229,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "funding references" do
       input = "10.26102/2310-6018/2019.24.1.006"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.26102/2310-6018/2019.24.1.006")
       expect(subject.types["resourceTypeGeneral"]).to eq("Text")
@@ -1257,7 +1256,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "DOI in with related id system" do
       input = "https://doi.org/10.4121/uuid:3926db30-f712-4394-aebc-75976070e91f"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.4121/uuid:3926db30-f712-4394-aebc-75976070e91f")
       expect(subject.types["schemaOrg"]).to eq("Dataset")
@@ -1296,7 +1295,7 @@ describe Bolognese::Metadata, vcr: true do
     it "change doi" do
       input = fixture_path + 'datacite.xml'
       doi = "10.5061/dryad.8515"
-      subject = Bolognese::Metadata.new(input: input, doi: doi)
+      subject = Briard::Metadata.new(input: input, doi: doi)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5061/dryad.8515")
       expect(subject.identifiers).to eq([{"identifier"=>"MS-49-3632-5083", "identifierType"=>"Local accession number"}])
@@ -1312,7 +1311,7 @@ describe Bolognese::Metadata, vcr: true do
     input = fixture_path + 'gtex.xml'
     url = "https://ors.datacite.org/doi:/10.25491/9hx8-ke93"
     content_url = "https://storage.googleapis.com/gtex_analysis_v7/single_tissue_eqtl_data/GTEx_Analysis_v7_eQTL_expression_matrices.tar.gz"
-    subject = Bolognese::Metadata.new(input: input, from: 'datacite', url: url, content_url: content_url)
+    subject = Briard::Metadata.new(input: input, from: 'datacite', url: url, content_url: content_url)
 
     expect(subject.valid?).to be true
     expect(subject.id).to eq("https://doi.org/10.25491/9hx8-ke93")
@@ -1337,7 +1336,7 @@ describe Bolognese::Metadata, vcr: true do
 
   it "geo_location_polygon" do
     input = fixture_path + 'datacite-example-polygon-v4.1.xml'
-    subject = Bolognese::Metadata.new(input: input)
+    subject = Briard::Metadata.new(input: input)
     expect(subject.id).to eq("https://doi.org/10.5072/example-polygon")
     expect(subject.types["schemaOrg"]).to eq("Dataset")
     expect(subject.types["resourceType"]).to eq("Dataset")
@@ -1356,7 +1355,7 @@ describe Bolognese::Metadata, vcr: true do
 
   it "Schema 4.4 from string" do
     input = fixture_path + "datacite-example-full-v4.4.xml"
-    subject = Bolognese::Metadata.new(input: input)
+    subject = Briard::Metadata.new(input: input)
     expect(subject.valid?).to be true
     expect(subject.types["schemaOrg"]).to eq("SoftwareSourceCode")
     expect(subject.types["resourceType"]).to eq("XML")
@@ -1441,7 +1440,7 @@ describe Bolognese::Metadata, vcr: true do
 
   it "Schema 4.4 related items from string" do
     input = fixture_path + "datacite-example-relateditems.xml"
-    subject = Bolognese::Metadata.new(input: input)
+    subject = Briard::Metadata.new(input: input)
     expect(subject.valid?).to be true
 
     expect(subject.related_items.last).to eq(
@@ -1490,7 +1489,7 @@ describe Bolognese::Metadata, vcr: true do
     @doc = File.open(input) { |f| Nokogiri::XML(f) }
     @doc.xpath("//xmlns:relatedItemIdentifier").each {|x| x.remove}
 
-    subject = Bolognese::Metadata.new(input: @doc.to_s)
+    subject = Briard::Metadata.new(input: @doc.to_s)
     expect(subject.valid?).to be true
 
     expect(subject.related_items.last).to eq(
@@ -1525,7 +1524,7 @@ describe Bolognese::Metadata, vcr: true do
 
   it "Schema 4.4 dissertation from string" do
     input = fixture_path + "datacite-example-dissertation-v4.4.xml"
-    subject = Bolognese::Metadata.new(input: input)
+    subject = Briard::Metadata.new(input: input)
     expect(subject.valid?).to be true
     expect(subject.types["resourceType"]).to eq(nil)
     expect(subject.types["resourceTypeGeneral"]).to eq("Dissertation")
@@ -1616,7 +1615,7 @@ describe Bolognese::Metadata, vcr: true do
 
   it "Parsing xs-string attribute correctly" do
     input = fixture_path + "datacite-example-xs-string.xml"
-    subject = Bolognese::Metadata.new(input: input)
+    subject = Briard::Metadata.new(input: input)
     expect(subject.valid?).to be true
     expect(subject.id).to eq("https://doi.org/10.4225/13/511c71f8612c3")
     expect(subject.sizes.first).to eq("1.7 GB")
@@ -1625,7 +1624,7 @@ describe Bolognese::Metadata, vcr: true do
 
   it "Parsing multiple geolocationpolygon elements" do
     input = fixture_path + "datacite-geolocationpolygons-multiple.xml"
-    subject = Bolognese::Metadata.new(input: input)
+    subject = Briard::Metadata.new(input: input)
     expect(subject.valid?).to be true
     expect(subject.id).to eq("https://doi.org/10.5072/multiplegeopolygons")
     expect(subject.geo_locations).to eq([

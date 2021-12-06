@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.16910/jemr.9.1.2/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/xml;charset=utf-8
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:18:12 GMT
+      Content-Length:
+      - '1733'
+      Set-Cookie:
+      - AWSALB=/0zUxmQzeveMJOYNvEtEJv9ISCbPBtQbyELf3Bzx0lawqRdjRVLi2jW38/P8pC1DSCLWSF+8eDsjeQ5kaCUh1lO4Zn19lzhEBVloFC0catbNyEFHrFERYCdPjP8z;
+        Expires=Mon, 13 Dec 2021 07:18:12 GMT; Path=/, AWSALBCORS=/0zUxmQzeveMJOYNvEtEJv9ISCbPBtQbyELf3Bzx0lawqRdjRVLi2jW38/P8pC1DSCLWSF+8eDsjeQ5kaCUh1lO4Zn19lzhEBVloFC0catbNyEFHrFERYCdPjP8z;
+        Expires=Mon, 13 Dec 2021 07:18:12 GMT; Path=/; SameSite=None
+      Link:
+      - <http://dx.doi.org/10.16910/jemr.9.1.2>; rel="canonical", <https://bop.unibe.ch/JEMR/article/download/2430/3624>;
+        version="vor"; type="application/pdf"; rel="item", <https://bop.unibe.ch/JEMR/article/download/2430/3624>;
+        version="vor"; rel="item"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - polite
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:18:12 GMT
+recorded_with: VCR 3.0.3

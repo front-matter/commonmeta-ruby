@@ -1,17 +1,16 @@
 [![Identifier](https://img.shields.io/badge/doi-10.5438%2Fn138--z3mk-fca709.svg)](https://doi.org/10.5438/n138-z3mk)
-[![Gem Version](https://badge.fury.io/rb/bolognese.svg)](https://badge.fury.io/rb/bolognese)
-![Build Ruby Gem](https://github.com/datacite/bolognese/workflows/Build%20Ruby%20Gem/badge.svg)
-[![Code Climate](https://codeclimate.com/github/datacite/bolognese/badges/gpa.svg)](https://codeclimate.com/github/datacite/bolognese)
-[![Test Coverage](https://codeclimate.com/github/datacite/bolognese/badges/coverage.svg)](https://codeclimate.com/github/datacite/bolognese/coverage)
+[![Gem Version](https://badge.fury.io/rb/briard.svg)](https://badge.fury.io/rb/briard)
+![Build Ruby Gem](https://github.com/datacite/briard/workflows/Build%20Ruby%20Gem/badge.svg)
+[![Code Climate](https://codeclimate.com/github/datacite/briard/badges/gpa.svg)](https://codeclimate.com/github/datacite/briard)
+[![Test Coverage](https://codeclimate.com/github/datacite/briard/badges/coverage.svg)](https://codeclimate.com/github/datacite/briard/coverage)
 
-# Bolognese: a Ruby library for conversion of DOI Metadata
+# Briard: a Ruby library for conversion of DOI Metadata
 
-Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including [schema.org](https://schema.org).
-
+Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including [schema.org](https://schema.org). Fork of the [briard](https://github.com/datacite/briard) gem.
 
 ## Features
 
-Bolognese reads and/or writes these metadata formats:
+Briard reads and/or writes these metadata formats:
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -29,7 +28,7 @@ Bolognese reads and/or writes these metadata formats:
       <td>crossref</td>
       <td>application/vnd.crossref.unixref+xml</td>
       <td>Yes</td>
-      <td>No</td>
+      <td>Yes</td>
    </tr>
     <tr>
       <td><a href='https://schema.datacite.org/'>DataCite XML</a></td>
@@ -125,7 +124,7 @@ Bolognese reads and/or writes these metadata formats:
   </tbody>
 </table>
 
-**Crosscite** is the format used internally by bolognese.
+**Crosscite** is the format used internally by briard.
 
 ## Installation
 
@@ -133,7 +132,7 @@ Requires Ruby 2.2 or later. Then add the following to your `Gemfile` to install 
 latest version:
 
 ```ruby
-gem 'bolognese'
+gem 'briard'
 ```
 
 Then run `bundle install` to install into your environment.
@@ -141,22 +140,22 @@ Then run `bundle install` to install into your environment.
 You can also install the gem system-wide in the usual way:
 
 ```bash
-gem install bolognese
+gem install briard
 ```
 
 ## Commands
 
-Run the `bolognese` command with either an identifier (DOI or URL) or filename:
+Run the `briard` command with either an identifier (DOI or URL) or filename:
 
 ```
-bolognese https://doi.org/10.7554/elife.01567
+briard https://doi.org/10.7554/elife.01567
 ```
 
 ```
-bolognese example.xml
+briard example.xml
 ```
 
-Bolognese can read BibTeX files (file extension `.bib`), RIS files (file extension `.ris`), Crossref or DataCite XML files (file extension `.xml`), DataCite JSON files (file extension `Citeproc JSON files ().
+Briard can read BibTeX files (file extension `.bib`), RIS files (file extension `.ris`), Crossref or DataCite XML files (file extension `.xml`), DataCite JSON files (file extension `Citeproc JSON files ().
 
 The input format (e.g. Crossref XML or BibteX) is automatically detected, but
 you can also provide the format with the `--from` or `-f` flag. The supported
@@ -164,14 +163,15 @@ input formats are listed in the table above.
 
 The output format is determined by the `--to` or `-t` flag, and defaults to `schema_org`.
 
-Show all commands with `bolognese help`:
+Show all commands with `briard help`:
 
 ```
 Commands:
-  bolognese                 # convert metadata
-  bolognese --version, -v   # print the version
-  bolognese help [COMMAND]  # Describe available commands or one specific command
+  briard                 # convert metadata
+  briard --version, -v   # print the version
+  briard help [COMMAND]  # Describe available commands or one specific command
 ```
+
 ## Errors
 
 Errors are returned to STDOUT.
@@ -183,7 +183,7 @@ All DataCite XML input is validated against the corresponding schema version (ke
 Read Crossref XML:
 
 ```
-bolognese https://doi.org/10.7554/elife.01567 -t crossref
+briard https://doi.org/10.7554/elife.01567 -t crossref
 
 <?xml version="1.0" encoding="UTF-8"?>
 <doi_records>
@@ -305,8 +305,9 @@ bolognese https://doi.org/10.7554/elife.01567 -t crossref
 ```
 
 Convert Crossref XML to schema.org/JSON-LD:
+
 ```
-bolognese https://doi.org/10.7554/elife.01567
+briard https://doi.org/10.7554/elife.01567
 
 {
     "@context": "http://schema.org",
@@ -502,8 +503,9 @@ bolognese https://doi.org/10.7554/elife.01567
 ```
 
 Convert Crossref XML to DataCite XML:
+
 ```
-bolognese https://doi.org/10.7554/elife.01567 -t datacite
+briard https://doi.org/10.7554/elife.01567 -t datacite
 
 <?xml version="1.0" encoding="UTF-8"?>
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
@@ -594,10 +596,11 @@ bolognese https://doi.org/10.7554/elife.01567 -t datacite
   </rightsList>
 </resource>
 ```
+
 Convert Crossref XML to BibTeX:
 
 ```
-bolognese https://doi.org/10.7554/elife.01567 -t bibtex
+briard https://doi.org/10.7554/elife.01567 -t bibtex
 
 @article{https://doi.org/10.7554/elife.01567,
   doi = {10.7554/eLife.01567},
@@ -610,8 +613,9 @@ bolognese https://doi.org/10.7554/elife.01567 -t bibtex
 ```
 
 Read DataCite XML:
+
 ```
-bolognese 10.5061/DRYAD.8515 -t datacite
+briard 10.5061/DRYAD.8515 -t datacite
 
 <?xml version="1.0" encoding="UTF-8"?>
 <resource
@@ -681,8 +685,9 @@ bolognese 10.5061/DRYAD.8515 -t datacite
 ```
 
 Convert DataCite XML to schema.org/JSON-LD:
+
 ```sh
-bolognese 10.5061/DRYAD.8515
+briard 10.5061/DRYAD.8515
 
 {
     "@context": "http://schema.org",
@@ -752,8 +757,9 @@ bolognese 10.5061/DRYAD.8515
 ```
 
 Convert DataCite XML to schema version 4.0:
+
 ```
-bolognese 10.5061/DRYAD.8515 -t datacite --schema_version http://datacite.org/schema/kernel-4
+briard 10.5061/DRYAD.8515 -t datacite --schema_version http://datacite.org/schema/kernel-4
 
 <?xml version="1.0" encoding="UTF-8"?>
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
@@ -833,25 +839,24 @@ bolognese 10.5061/DRYAD.8515 -t datacite --schema_version http://datacite.org/sc
 </resource>
 ```
 
-
 Convert DataCite XML to Codemeta:
 
 ```
-bolognese https://doi.org/10.5063/f1m61h5x -t codemeta
+briard https://doi.org/10.5063/f1m61h5x -t codemeta
 
-{  
+{
    "@context":"https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld",
    "@type":"SoftwareSourceCode",
    "@id":"https://doi.org/10.5063/f1m61h5x",
    "identifier":"https://doi.org/10.5063/f1m61h5x",
    "title":"dataone: R interface to the DataONE network of data repositories",
-   "agents":{  
+   "agents":{
       "@type":"Person",
       "givenName":"Matthew B.",
       "familyName":"Jones"
    },
    "datePublished":"2016",
-   "publisher":{  
+   "publisher":{
       "@type":"Organization",
       "name":"KNB Data Repository"
    }
@@ -861,7 +866,7 @@ bolognese https://doi.org/10.5063/f1m61h5x -t codemeta
 Convert DataCite XML to BibTeX:
 
 ```
-bolognese 10.5061/DRYAD.8515 -t bibtex
+briard 10.5061/DRYAD.8515 -t bibtex
 
 @misc{https://doi.org/10.5061/dryad.8515,
   doi = {10.5061/DRYAD.8515},
@@ -876,7 +881,7 @@ bolognese 10.5061/DRYAD.8515 -t bibtex
 Convert schema.org/JSON-LD to DataCite XML:
 
 ```
-bolognese https://blog.datacite.org/eating-your-own-dog-food -t datacite
+briard https://blog.datacite.org/eating-your-own-dog-food -t datacite
 
 <?xml version="1.0" encoding="UTF-8"?>
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
@@ -927,7 +932,7 @@ bolognese https://blog.datacite.org/eating-your-own-dog-food -t datacite
 Convert schema.org/JSON-LD to BibTeX:
 
 ```
-bolognese https://blog.datacite.org/eating-your-own-dog-food -t bibtex
+briard https://blog.datacite.org/eating-your-own-dog-food -t bibtex
 
 @article{https://doi.org/10.5438/4k3m-nyvg,
   doi = {10.5438/4k3m-nyvg},
@@ -943,15 +948,15 @@ bolognese https://blog.datacite.org/eating-your-own-dog-food -t bibtex
 Convert Codemeta to schema.org/JSON-LD:
 
 ```
-bolognese https://github.com/datacite/maremma
+briard https://github.com/datacite/maremma
 
-{  
+{
   "@context":"http://schema.org",
   "@type":"SoftwareSourceCode",
   "@id":"https://doi.org/10.5438/qeg0-3gm3",
   "url":"https://github.com/datacite/maremma",
   "name":"Maremma: a Ruby library for simplified network calls",
-  "author":{  
+  "author":{
     "@type":"person",
     "@id":"http://orcid.org/0000-0003-0077-4738",
     "name":"Martin Fenner"
@@ -961,7 +966,7 @@ bolognese https://github.com/datacite/maremma
   "dateCreated":"2015-11-28",
   "datePublished":"2017-02-24",
   "dateModified":"2017-02-24",
-  "publisher":{  
+  "publisher":{
     "@type":"Organization",
     "name":"DataCite"
   }
@@ -971,7 +976,7 @@ bolognese https://github.com/datacite/maremma
 Convert Codemeta to DataCite XML:
 
 ```
-bolognese https://github.com/datacite/maremma -t datacite
+briard https://github.com/datacite/maremma -t datacite
 
 <?xml version="1.0" encoding="UTF-8"?>
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
@@ -1012,16 +1017,17 @@ We use rspec for unit testing:
 bundle exec rspec
 ```
 
-Follow along via [Github Issues](https://github.com/datacite/bolognese/issues).
+Follow along via [Github Issues](https://github.com/datacite/briard/issues).
 Please open an issue if conversion fails or metadata are not properly supported.
 
 ### Note on Patches/Pull Requests
 
-* Fork the project
-* Write tests for your new feature or a test that reproduces a bug
-* Implement your feature or make a bug fix
-* Do not mess with Rakefile, version or history
-* Commit, push and make a pull request. Bonus points for topical branches.
+- Fork the project
+- Write tests for your new feature or a test that reproduces a bug
+- Implement your feature or make a bug fix
+- Do not mess with Rakefile, version or history
+- Commit, push and make a pull request. Bonus points for topical branches.
 
 ## License
-**bolognese** is released under the [MIT License](https://github.com/datacite/bolognese/blob/master/LICENSE.md).
+
+**briard** is released under the [MIT License](https://github.com/datacite/briard/blob/master/LICENSE.md).

@@ -2,15 +2,15 @@
 
 require 'spec_helper'
 
-describe Bolognese::Metadata, vcr: true do
+describe Briard::Metadata, vcr: true do
   let(:input) { "10.7554/eLife.01567" }
 
-  subject { Bolognese::Metadata.new(input: input) }
+  subject { Briard::Metadata.new(input: input) }
 
   context "get crossref raw" do
     it "journal article" do
       input = fixture_path + 'crossref.xml'
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.raw).to eq(IO.read(input).strip)
     end
   end
@@ -30,7 +30,7 @@ describe Bolognese::Metadata, vcr: true do
         "rightsUri"=>"https://creativecommons.org/licenses/by/3.0/legalcode",
         "schemeUri"=>"https://spdx.org/licenses/"}])
       expect(subject.titles).to eq([{"title"=>"Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth"}])
-      expect(subject.dates).to eq([{"date"=>"2014-02-11", "dateType"=>"Issued"}, {"date"=>"2018-08-23T09:41:49Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"2014-02-11", "dateType"=>"Issued"}, {"date"=>"2018-08-23T13:41:49Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2014")
       expect(subject.publisher).to eq("eLife Sciences Publications, Ltd")
       expect(subject.container).to eq("firstPage" => "e01567", "identifier"=>"2050-084X", "identifierType"=>"ISSN", "title"=>"eLife", "type"=>"Journal", "volume"=>"3")
@@ -52,7 +52,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "journal article" do
       input = "https://doi.org/10.1371/journal.pone.0000030"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1371/journal.pone.0000030")
       expect(subject.identifiers).to eq([{"identifier"=>"10.1371/journal.pone.0000030", "identifierType"=>"Publisher ID"}])
@@ -67,10 +67,10 @@ describe Bolognese::Metadata, vcr: true do
         "rightsIdentifierScheme"=>"SPDX",
         "rightsUri"=>"https://creativecommons.org/licenses/by/4.0/legalcode",
         "schemeUri"=>"https://spdx.org/licenses/"}])
-      expect(subject.dates).to eq([{"date"=>"2006-12-20", "dateType"=>"Issued"}, {"date"=>"2020-05-09T09:35:17Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"2006-12-20", "dateType"=>"Issued"}, {"date"=>"2021-08-06T23:49:55Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2006")
       expect(subject.publisher).to eq("Public Library of Science (PLoS)")
-      expect(subject.related_identifiers.length).to eq(64)
+      expect(subject.related_identifiers.length).to eq(68)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier"=>"1932-6203", "relatedIdentifierType"=>"ISSN", "relationType"=>"IsPartOf", "resourceTypeGeneral"=>"Collection")
       expect(subject.related_identifiers.last).to eq("relatedIdentifier"=>"10.1056/nejm199109123251104", "relatedIdentifierType"=>"DOI", "relationType"=>"References")
       expect(subject.container).to eq("firstPage"=>"e30", "identifier"=>"1932-6203", "identifierType"=>"ISSN", "issue"=>"1", "title"=>"PLoS ONE", "type"=>"Journal", "volume"=>"1")
@@ -79,7 +79,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "journal article with funding" do
       input = "https://doi.org/10.3389/fpls.2019.00816"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.3389/fpls.2019.00816")
       expect(subject.identifiers).to eq([{"identifier"=>"816", "identifierType"=>"article_number"}])
@@ -106,7 +106,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "journal article original language title" do
       input = "https://doi.org/10.7600/jspfsm.56.60"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.7600/jspfsm.56.60")
       expect(subject.url).to eq("https://www.jstage.jst.go.jp/article/jspfsm/56/1/56_1_60/_article/-char/ja/")
@@ -124,7 +124,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "journal article with RDF for container" do
       input = "https://doi.org/10.1163/1937240X-00002096"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1163/1937240x-00002096")
       expect(subject.url).to eq("https://academic.oup.com/jcb/article-lookup/doi/10.1163/1937240X-00002096")
@@ -144,7 +144,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "book chapter with RDF for container" do
       input = "10.1007/978-3-642-33191-6_49"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1007/978-3-642-33191-6_49")
       expect(subject.url).to eq("http://link.springer.com/10.1007/978-3-642-33191-6_49")
@@ -163,7 +163,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "posted_content" do
       input = "https://doi.org/10.1101/097196"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.url).to eq("http://biorxiv.org/lookup/doi/10.1101/097196")
       expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"PostedContent", "resourceTypeGeneral"=>"Preprint", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
@@ -181,7 +181,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "peer review" do
       input = "https://doi.org/10.7554/elife.55167.sa2"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.url).to eq("https://elifesciences.org/articles/55167#sa2")
       expect(subject.types).to eq("bibtex"=>"misc", "citeproc"=>"article-journal", "resourceType"=>"PeerReview", "resourceTypeGeneral"=>"PeerReview", "ris"=>"JOUR", "schemaOrg"=>"Review")
@@ -203,7 +203,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "dissertation" do
       input = "https://doi.org/10.14264/uql.2020.791"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.url).to eq("http://espace.library.uq.edu.au/view/UQ:23a1e74")
       expect(subject.types).to eq("bibtex"=>"phdthesis", "citeproc"=>"thesis", "resourceType"=>"Dissertation", "resourceTypeGeneral"=>"Dissertation", "ris"=>"THES", "schemaOrg"=>"Thesis")
@@ -227,7 +227,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "DOI with SICI DOI" do
       input = "https://doi.org/10.1890/0012-9658(2006)87[2832:tiopma]2.0.co;2"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1890/0012-9658(2006)87%255b2832:tiopma%255d2.0.co;2")
       expect(subject.url).to eq("http://doi.wiley.com/10.1890/0012-9658(2006)87[2832:TIOPMA]2.0.CO;2")
@@ -235,7 +235,7 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.creators).to eq([{"nameType"=>"Personal", "name"=>"Fenton, A.", "givenName"=>"A.", "familyName"=>"Fenton"}, {"nameType"=>"Personal", "name"=>"Rands, S. A.", "givenName"=>"S. A.", "familyName"=>"Rands"}])
       expect(subject.rights_list).to eq([{"rightsUri"=>"http://doi.wiley.com/10.1002/tdm_license_1.1"}])
       expect(subject.titles).to eq([{"title"=>"THE IMPACT OF PARASITE MANIPULATION AND PREDATOR FORAGING BEHAVIOR ON PREDATOR???PREY COMMUNITIES"}])
-      expect(subject.dates).to eq([{"date"=>"2006-11", "dateType"=>"Issued"}, {"date"=>"2019-04-28T17:51:50Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"2006-11", "dateType"=>"Issued"}, {"date"=>"2019-04-28T13:51:50Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2006")
       expect(subject.publisher).to eq("Wiley")
       expect(subject.related_identifiers.length).to eq(35)
@@ -247,7 +247,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "DOI with ORCID ID" do
       input = "https://doi.org/10.1155/2012/291294"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1155/2012/291294")
       expect(subject.url).to eq("http://www.hindawi.com/journals/pm/2012/291294/")
@@ -272,7 +272,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "date in future" do
       input = "https://doi.org/10.1016/j.ejphar.2015.03.018"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1016/j.ejphar.2015.03.018")
       expect(subject.identifiers).to eq([{"identifier"=>"S0014299915002332", "identifierType"=>"sequence-number"}])
@@ -552,7 +552,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "vor with url" do
       input = "https://doi.org/10.1038/hdy.2013.26"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1038/hdy.2013.26")
       expect(subject.url).to eq("http://www.nature.com/articles/hdy201326")
@@ -571,7 +571,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "dataset" do
       input = "10.2210/pdb4hhb/pdb"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.2210/pdb4hhb/pdb")
       expect(subject.url).to eq("https://www.wwpdb.org/pdb?id=pdb_00004hhb")
@@ -588,7 +588,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "component" do
       input = "10.1371/journal.pmed.0030277.g001"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1371/journal.pmed.0030277.g001")
       expect(subject.url).to eq("https://dx.plos.org/10.1371/journal.pmed.0030277.g001")
@@ -604,7 +604,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "dataset usda" do
       input = "https://doi.org/10.2737/RDS-2018-0001"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       #expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.2737/rds-2018-0001")
       expect(subject.url).to eq("https://www.fs.usda.gov/rds/archive/Catalog/RDS-2018-0001")
@@ -613,7 +613,7 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.creators.first).to eq("familyName" => "Ribic","givenName" => "Christine A.","name" => "Ribic, Christine A.","affiliation" => [{"name"=>"U.S. Geological Survey"}],"nameIdentifiers" => [{"nameIdentifier"=>"https://orcid.org/0000-0003-2583-1778", "nameIdentifierScheme"=>"ORCID", "schemeUri"=>"https://orcid.org"}],"nameType" => "Personal")
       expect(subject.titles).to eq([{"title"=>"Fledging times of grassland birds"}])
       expect(subject.descriptions).to be_empty
-      expect(subject.dates).to eq([{"date"=>"2017-08-09", "dateType"=>"Issued"}, {"date"=>"2020-06-04T21:31:55Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"2017-08-09", "dateType"=>"Issued"}, {"date"=>"2021-07-01T22:10:21Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2017")
       expect(subject.publisher).to eq("USDA Forest Service")
       expect(subject.agency).to eq("crossref")
@@ -621,7 +621,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "book chapter" do
       input = "https://doi.org/10.1007/978-3-662-46370-3_13"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1007/978-3-662-46370-3_13")
       expect(subject.url).to eq("http://link.springer.com/10.1007/978-3-662-46370-3_13")
@@ -642,7 +642,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "another book chapter" do
       input = "https://doi.org/10.1007/978-3-319-75889-3_1"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1007/978-3-319-75889-3_1")
       expect(subject.url).to eq("http://link.springer.com/10.1007/978-3-319-75889-3_1")
@@ -661,14 +661,14 @@ describe Bolognese::Metadata, vcr: true do
 
     it "yet another book chapter" do
       input = "https://doi.org/10.4018/978-1-4666-1891-6.ch004"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.4018/978-1-4666-1891-6.ch004")
       expect(subject.url).to eq("http://services.igi-global.com/resolvedoi/resolve.aspx?doi=10.4018/978-1-4666-1891-6.ch004")
       expect(subject.types).to eq("bibtex"=>"inbook", "citeproc"=>"chapter", "resourceType"=>"BookChapter", "resourceTypeGeneral"=>"BookChapter", "ris"=>"CHAP", "schemaOrg"=>"Chapter")
       expect(subject.creators).to eq([{"affiliation"=>[{"name"=>"Universit?? de Lyon, France"}], "familyName"=>"Bichot", "givenName"=>"Charles-Edmond", "name"=>"Bichot, Charles-Edmond", "nameType"=>"Personal"}])
       expect(subject.titles).to eq([{"title"=>"Unsupervised and Supervised Image Segmentation Using Graph Partitioning"}])
-      expect(subject.dates).to eq([{"date"=>"2012-08-08", "dateType"=>"Issued"}, {"date"=>"2019-07-02T17:17:21Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"2012-08-08", "dateType"=>"Issued"}, {"date"=>"2019-07-02T13:17:21Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2012")
       expect(subject.publisher).to eq("IGI Global")
       expect(subject.agency).to eq("crossref")
@@ -681,14 +681,29 @@ describe Bolognese::Metadata, vcr: true do
 
     it "missing creator" do
       input = "https://doi.org/10.3390/publications6020015"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.3390/publications6020015")
-      expect(subject.url).to eq("http://www.mdpi.com/2304-6775/6/2/15")
+      expect(subject.url).to eq("https://www.mdpi.com/2304-6775/6/2/15")
       expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"JournalArticle", "resourceTypeGeneral"=>"JournalArticle", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
-      expect(subject.creators).to eq([{"name"=>"Alexander Kohls", "nameType"=>"Organizational"}, {"name"=>"Salvatore Mele", "nameType"=>"Organizational"}])
+      expect(subject.creators).to eq([{"familyName"=>"Kohls",
+        "givenName"=>"Alexander",
+        "name"=>"Kohls, Alexander",
+        "nameIdentifiers"=>
+        [{"nameIdentifier"=>"https://orcid.org/0000-0002-3836-8885",
+          "nameIdentifierScheme"=>"ORCID",
+          "schemeUri"=>"https://orcid.org"}],
+          "nameType"=>"Personal"},
+         {"familyName"=>"Mele",
+          "givenName"=>"Salvatore",
+          "name"=>"Mele, Salvatore",
+          "nameIdentifiers"=>
+       [{"nameIdentifier"=>"https://orcid.org/0000-0003-0762-2235",
+         "nameIdentifierScheme"=>"ORCID",
+         "schemeUri"=>"https://orcid.org"}],
+        "nameType"=>"Personal"}])
       expect(subject.titles).to eq([{"title"=>"Converting the Literature of a Scientific Field to Open Access through Global Collaboration: The Experience of SCOAP3 in Particle Physics"}])
-      expect(subject.dates).to eq([{"date"=>"2018-04-09", "dateType"=>"Issued"}, {"date"=>"2018-04-10T17:58:05Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"2018-04-09", "dateType"=>"Issued"}, {"date"=>"2021-07-22T10:05:05Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2018")
       expect(subject.publisher).to eq("MDPI AG")
       expect(subject.agency).to eq("crossref")
@@ -696,7 +711,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "book" do
       input = "https://doi.org/10.1017/9781108348843"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1017/9781108348843")
       expect(subject.identifiers).to eq([{"identifier"=>"9781108348843", "identifierType"=>"ISBN"}])
@@ -713,7 +728,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "another book" do
       input = "https://doi.org/10.2973/odp.proc.ir.180.2000"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.2973/odp.proc.ir.180.2000")
       expect(subject.url).to eq("http://www-odp.tamu.edu/publications/180_IR/180TOC.HTM")
@@ -731,7 +746,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "yet another book" do
       input = "https://doi.org/10.1029/ar035"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1029/ar035")
       expect(subject.identifiers).to eq([{"identifier"=>"0-87590-181-6", "identifierType"=>"ISBN"}])
@@ -739,10 +754,10 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.types).to eq("bibtex"=>"book", "citeproc"=>"book", "resourceType"=>"Book", "resourceTypeGeneral"=>"Book", "ris"=>"BOOK", "schemaOrg"=>"Book")
       expect(subject.creators).to eq([{"familyName"=>"McGinnis", "givenName"=>"Richard Frank", "name"=>"McGinnis, Richard Frank", "nameType"=>"Personal"}])
       expect(subject.titles).to eq([{"title"=>"Biogeography of Lanternfishes (Myctophidae) South of 30??S"}])
-      expect(subject.dates).to eq([{"date"=>"1982", "dateType"=>"Issued"}, {"date"=>"2021-02-23T21:58:36Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"1982", "dateType"=>"Issued"}, {"date"=>"2021-12-04T00:09:54Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("1982")
       expect(subject.publisher).to eq("Wiley")
-      expect(subject.related_identifiers.length).to eq(44)
+      expect(subject.related_identifiers.length).to eq(46)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier"=>"10.1016/0031-0182(70)90103-3", "relatedIdentifierType"=>"DOI", "relationType"=>"References")
       expect(subject.container).to eq("identifier"=>"0066-4634", "identifierType"=>"ISSN", "title"=>"Antarctic Research Series", "type"=>"Book Series", "volume"=>"35")
       expect(subject.agency).to eq("crossref")
@@ -751,7 +766,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "mEDRA" do
       input = "https://doi.org/10.3280/ecag2018-001005"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.3280/ecag2018-001005")
       expect(subject.identifiers).to eq([{"identifier"=>"5", "identifierType"=>"article_number"}])
@@ -763,12 +778,12 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.dates).to include({"date"=>"2018-05", "dateType"=>"Issued"})
       expect(subject.publication_year).to eq("2018")
       expect(subject.publisher).to eq("Franco Angeli")
-      expect(subject.agency).to eq("mEDRA")
+      expect(subject.agency).to eq("crossref")
     end
 
     it "KISTI" do
       input = "https://doi.org/10.5012/bkcs.2013.34.10.2889"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5012/bkcs.2013.34.10.2889")
       expect(subject.identifiers).to eq([{"identifier"=>"JCGMCS_2013_v34n10_2889", "identifierType"=>"Publisher ID"}])
@@ -777,7 +792,7 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.creators.length).to eq(7)
       expect(subject.creators.first).to eq("familyName"=>"Huang", "givenName"=>"Guimei", "name"=>"Huang, Guimei", "nameType"=>"Personal")
       expect(subject.titles).to eq([{"title"=>"Synthesis, Crystal Structure and Theoretical Calculation of a Novel Nickel(II) Complex with Dibromotyrosine and 1,10-Phenanthroline"}])
-      expect(subject.dates).to eq([{"date"=>"2013-10-20", "dateType"=>"Issued"}, {"date"=>"2016-12-15T02:40:52Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"2013-10-20", "dateType"=>"Issued"}, {"date"=>"2016-12-14T21:40:52Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2013")
       expect(subject.publisher).to eq("Korean Chemical Society")
       expect(subject.agency).to eq("KISTI")
@@ -785,7 +800,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "JaLC" do
       input = "https://doi.org/10.1241/johokanri.39.979"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1241/johokanri.39.979")
       expect(subject.url).to eq("http://joi.jlc.jst.go.jp/JST.JSTAGE/johokanri/39.979?from=CrossRef")
@@ -800,8 +815,8 @@ describe Bolognese::Metadata, vcr: true do
 
     it "OP" do
       input = "https://doi.org/10.2903/j.efsa.2018.5239"
-      subject = Bolognese::Metadata.new(input: input)
-      #expect(subject.valid?).to be true
+      subject = Briard::Metadata.new(input: input)
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.2903/j.efsa.2018.5239")
       expect(subject.url).to eq("http://doi.wiley.com/10.2903/j.efsa.2018.5239")
       expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"JournalArticle", "resourceTypeGeneral"=>"JournalArticle", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
@@ -816,7 +831,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "multiple titles" do
       input = "https://doi.org/10.4000/dms.865"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.4000/dms.865")
       expect(subject.url).to eq("http://journals.openedition.org/dms/865")
@@ -832,7 +847,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "multiple titles with missing" do
       input = "https://doi.org/10.1186/1471-2164-7-187"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1186/1471-2164-7-187")
       expect(subject.url).to eq("https://bmcgenomics.biomedcentral.com/articles/10.1186/1471-2164-7-187")
@@ -862,12 +877,12 @@ describe Bolognese::Metadata, vcr: true do
       expect(subject.publication_year).to eq("2006")
       expect(subject.publisher).to eq("Springer Science and Business Media LLC")
       expect(subject.agency).to eq("crossref")
-      expect(subject.date_registered).to eq("2020-04-20T16:04:45Z")
+      expect(subject.date_registered).to eq("2021-08-31T17:31:49Z")
     end
 
     it "markup" do
       input = "https://doi.org/10.1098/rspb.2017.0132"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1098/rspb.2017.0132")
       expect(subject.url).to eq("https://royalsocietypublishing.org/doi/10.1098/rspb.2017.0132")
@@ -884,23 +899,23 @@ describe Bolognese::Metadata, vcr: true do
 
     it "empty given name" do
       input = "https://doi.org/10.1111/J.1865-1682.2010.01171.X"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1111/j.1865-1682.2010.01171.x")
-      expect(subject.url).to eq("http://doi.wiley.com/10.1111/j.1865-1682.2010.01171.x")
+      expect(subject.url).to eq("https://onlinelibrary.wiley.com/doi/10.1111/j.1865-1682.2010.01171.x")
       expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"JournalArticle", "resourceTypeGeneral"=>"JournalArticle", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
       expect(subject.creators.length).to eq(5)
       expect(subject.creators[3]).to eq("familyName"=>"Ehtisham-ul-Haq", "givenName"=>"???", "name"=>"Ehtisham-ul-Haq, ???", "nameType"=>"Personal")
       expect(subject.titles).to eq([{"title"=>"Serological Evidence of Brucella abortus Prevalence in Punjab Province, Pakistan - A Cross-Sectional Study"}])
       expect(subject.rights_list).to eq([{"rightsUri"=>"http://doi.wiley.com/10.1002/tdm_license_1.1"}])
-      expect(subject.dates).to eq([{"date"=>"2010-12", "dateType"=>"Issued"}, {"date"=>"2021-02-04T22:37:42Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"2010-12", "dateType"=>"Issued"}, {"date"=>"2021-07-07T02:32:16Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2010")
       expect(subject.publisher).to eq("Wiley")
     end
 
     it "invalid date" do
       input = "https://doi.org/10.1055/s-0039-1690894"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1055/s-0039-1690894")
       expect(subject.identifiers).to eq([{"identifier"=>"s-0039-1690894", "identifierType"=>"sequence-number"}])
@@ -921,10 +936,10 @@ describe Bolognese::Metadata, vcr: true do
 
     it "journal article with" do
       input = "https://doi.org/10.1111/nph.14619"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1111/nph.14619")
-      expect(subject.url).to eq("http://doi.wiley.com/10.1111/nph.14619")
+      expect(subject.url).to eq("https://onlinelibrary.wiley.com/doi/10.1111/nph.14619")
       expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"JournalArticle", "resourceTypeGeneral"=>"JournalArticle", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
       expect(subject.creators.length).to eq(3)
       expect(subject.creators.first).to eq("nameType"=>"Personal", "nameIdentifiers" => [{"nameIdentifier"=>"https://orcid.org/0000-0002-4156-3761", "nameIdentifierScheme"=>"ORCID", "schemeUri"=>"https://orcid.org"}], "name"=>"Dissmeyer, Nico", "givenName"=>"Nico", "familyName"=>"Dissmeyer", "affiliation" => [{"name"=>"Independent Junior Research Group on Protein Recognition and Degradation; Leibniz Institute of Plant Biochemistry (IPB); Weinberg 3 Halle (Saale) D-06120 Germany"}, {"name"=>"ScienceCampus Halle - Plant-based Bioeconomy; Betty-Heimann-Strasse 3 Halle (Saale) D-06120 Germany"}])
@@ -943,7 +958,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "author literal" do
       input = "https://doi.org/10.1038/ng.3834"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1038/ng.3834")
       expect(subject.url).to eq("http://www.nature.com/articles/ng.3834")
@@ -960,7 +975,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "affiliation is space" do
       input = "https://doi.org/10.1177/0042098011428175"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1177/0042098011428175")
       expect(subject.url).to eq("http://journals.sagepub.com/doi/10.1177/0042098011428175")
@@ -977,7 +992,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "multiple issn" do
       input = "https://doi.org/10.1007/978-3-642-34922-5_19"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1007/978-3-642-34922-5_19")
       expect(subject.url).to eq("http://link.springer.com/10.1007/978-3-642-34922-5_19")
@@ -995,7 +1010,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "article id as page number" do
       input = "https://doi.org/10.1103/physrevlett.120.117701"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1103/physrevlett.120.117701")
       expect(subject.url).to eq("https://link.aps.org/doi/10.1103/PhysRevLett.120.117701")
@@ -1013,9 +1028,9 @@ describe Bolognese::Metadata, vcr: true do
 
     it "posted content copernicus" do
       input = "https://doi.org/10.5194/CP-2020-95"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.url).to eq("https://cp.copernicus.org/preprints/cp-2020-95/")
+      expect(subject.url).to eq("https://cp.copernicus.org/preprints/cp-2020-95/cp-2020-95.pdf")
       expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"PostedContent", "resourceTypeGeneral"=>"Preprint", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
       expect(subject.creators.count).to eq(6)
       expect(subject.creators.first).to eq("nameType" => "Personal", "familyName" => "Shao",
@@ -1034,7 +1049,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "book oup" do
       input = "10.1093/oxfordhb/9780198746140.013.5"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.url).to eq("http://oxfordhandbooks.com/view/10.1093/oxfordhb/9780198746140.001.0001/oxfordhb-9780198746140-e-5")
       expect(subject.types).to eq("bibtex"=>"book", "citeproc"=>"book", "resourceType"=>"Book", "resourceTypeGeneral"=>"Book", "ris"=>"BOOK", "schemaOrg"=>"Book")
@@ -1054,7 +1069,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "report osti" do
       input = "10.2172/972169"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.url).to eq("http://www.osti.gov/servlets/purl/972169-1QXROM/")
       expect(subject.types).to eq("bibtex"=>"techreport", "citeproc"=>"report", "resourceType"=>"Report", "resourceTypeGeneral"=>"Report", "ris"=>"RPRT", "schemaOrg"=>"Report")
@@ -1073,7 +1088,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "journal issue" do
       input = "https://doi.org/10.6002/ect.2015.0371"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       #expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.6002/ect.2015.0371")
       expect(subject.url).to eq("http://ectrx.org/forms/ectrxcontentshow.php?doi_id=10.6002/ect.2015.0371")
@@ -1091,7 +1106,7 @@ describe Bolognese::Metadata, vcr: true do
 
     it "not found error" do
       input = "https://doi.org/10.7554/elife.01567x"
-      subject = Bolognese::Metadata.new(input: input)
+      subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be false
       expect(subject.id).to eq("https://doi.org/10.7554/elife.01567x")
       expect(subject.doi).to eq("10.7554/elife.01567x")

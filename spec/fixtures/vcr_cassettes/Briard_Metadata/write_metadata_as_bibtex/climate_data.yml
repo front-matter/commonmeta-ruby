@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.5067/altcy-tj122?include=media,client
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 06 Dec 2021 07:19:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Etag:
+      - W/"f586d8d515a866829962b7e40372f18f"
+      X-Runtime:
+      - '1.183261'
+      X-Request-Id:
+      - 03d0b193-864f-4a47-9291-de8e0d42cf9f
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.12
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.12
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version:
+  recorded_at: Mon, 06 Dec 2021 07:19:09 GMT
+recorded_with: VCR 3.0.3

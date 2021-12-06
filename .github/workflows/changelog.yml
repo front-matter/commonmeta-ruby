@@ -18,9 +18,10 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: Generate changelog
-        uses: charmixer/auto-changelog-action@v1.1
+        uses: charmixer/auto-changelog-action@v1.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          since_tag: "1.9.12"
 
       - name: Commit files
         run: |
