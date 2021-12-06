@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.homepage      = "https://github.com/front-matter/briard"
   s.summary       = "Ruby client library for conversion of DOI Metadata"
   s.date          = Date.today
-  s.description   = "Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including schema.org. Fork of bolognese gem."
+  s.description   = "Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including schema.org. Fork of version 1.19.12 of the bolognese gem."
   s.require_paths = ["lib"]
   s.version       = Briard::VERSION
   s.extra_rdoc_files = ["README.md"]
