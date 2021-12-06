@@ -3,7 +3,7 @@
 
 # Briard: a Ruby library for conversion of DOI Metadata
 
-Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including [schema.org](https://schema.org). Fork of the [briard](https://github.com/datacite/briard) gem.
+Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including [schema.org](https://schema.org). Fork of version 1.9.12 of the [bolognese](https://github.com/datacite/bolognese) gem.
 
 ## Features
 
