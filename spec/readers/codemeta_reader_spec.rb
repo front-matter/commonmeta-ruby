@@ -3,7 +3,7 @@
 require 'spec_helper'
 
 describe Briard::Metadata, vcr: true do
-  let(:input) { "https://github.com/datacite/maremma" }
+  let(:input) { "https://github.com/datacite/maremma/blob/master/codemeta.json" }
 
   subject { Briard::Metadata.new(input: input) }
 

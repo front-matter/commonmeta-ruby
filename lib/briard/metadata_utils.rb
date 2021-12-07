@@ -8,6 +8,7 @@ require_relative 'utils'
 
 require_relative 'readers/bibtex_reader'
 require_relative 'readers/citeproc_reader'
+require_relative 'readers/cff_reader'
 require_relative 'readers/codemeta_reader'
 require_relative 'readers/crosscite_reader'
 require_relative 'readers/crossref_reader'
@@ -20,6 +21,7 @@ require_relative 'readers/schema_org_reader'
 require_relative 'writers/bibtex_writer'
 require_relative 'writers/citation_writer'
 require_relative 'writers/citeproc_writer'
+# require_relative 'writers/cff_writer'
 require_relative 'writers/codemeta_writer'
 require_relative 'writers/crosscite_writer'
 require_relative 'writers/crossref_writer'
@@ -43,6 +45,7 @@ module Briard
 
     include Briard::Readers::BibtexReader
     include Briard::Readers::CiteprocReader
+    include Briard::Readers::CffReader
     include Briard::Readers::CodemetaReader
     include Briard::Readers::CrossciteReader
     include Briard::Readers::CrossrefReader
@@ -55,6 +58,7 @@ module Briard
     include Briard::Writers::BibtexWriter
     include Briard::Writers::CitationWriter
     include Briard::Writers::CiteprocWriter
+    # include Briard::Writers::CffWriter
     include Briard::Writers::CodemetaWriter
     include Briard::Writers::CrossciteWriter
     include Briard::Writers::CrossrefWriter

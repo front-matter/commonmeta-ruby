@@ -264,12 +264,12 @@ module Briard
             given_name = parse_attributes(a["given_name"])
             family_name = parse_attributes(a["surname"])
             affiliation = Array.wrap(a["affiliation"]).map do |a|
-              if a.is_a?(Hash) && a.key?("__content__") && a["__content__"].strip.blank?
+              if a.is_a?(Hash)
+                a
+              elsif a.is_a?(Hash) && a.key?("__content__") && a["__content__"].strip.blank?
                 nil
               elsif a.is_a?(Hash) && a.key?("__content__")
                 { "name" => a["__content__"] }
-              elsif a.is_a?(Hash)
-                a
               elsif a.strip.blank?
                 nil
               elsif a.is_a?(String)

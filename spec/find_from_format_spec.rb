@@ -39,8 +39,13 @@ describe Briard::CLI do
       expect(subject.find_from_format_by_id(id)).to eq("op")
     end
 
+    it "cff" do
+      id = "https://github.com/citation-file-format/ruby-cff/blob/main/CITATION.cff"
+      expect(subject.find_from_format_by_id(id)).to eq("cff")
+    end
+
     it "codemeta" do
-      id = "https://github.com/datacite/maremma"
+      id = "https://github.com/datacite/maremma/blob/master/codemeta.json"
       expect(subject.find_from_format_by_id(id)).to eq("codemeta")
     end
 
@@ -63,6 +68,11 @@ describe Briard::CLI do
     it "npm" do
       filename = "package.json"
       expect(subject.find_from_format_by_filename(filename)).to eq("npm")
+    end
+
+    it "cff" do
+      filename = "CITATION.cff"
+      expect(subject.find_from_format_by_filename(filename)).to eq("cff")
     end
   end
 
@@ -89,6 +99,11 @@ describe Briard::CLI do
     it "codemeta" do
       string = IO.read(fixture_path + 'codemeta.json').strip
       expect(subject.find_from_format_by_string(string)).to eq("codemeta")
+    end
+
+    it "cff" do
+      string = IO.read(fixture_path + 'CITATION.cff').strip
+      expect(subject.find_from_format_by_string(string)).to eq("cff")
     end
 
     it "schema_org" do

@@ -43,7 +43,7 @@ module Briard
       elsif options[:input].present? && File.exist?(options[:input])
         filename = File.basename(options[:input])
         ext = File.extname(options[:input])
-        if %w(.bib .ris .xml .json).include?(ext)
+        if %w(.bib .ris .xml .json .cff).include?(ext)
           hsh = {
             "url" => options[:url],
             "state" => options[:state],
@@ -83,7 +83,7 @@ module Briard
       end
 
       # make sure input is encoded as utf8
-      string = string.force_encoding("UTF-8") if string.present?
+      string = string.force_encoding("UTF-8") if string.present? && string.is_a?(String)
       @string = string
 
       # input options for citation formatting

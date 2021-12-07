@@ -507,10 +507,22 @@ describe Briard::Metadata, vcr: true do
       expect(response).to eq(:owner=>"datacite", :repo=>"metadata-reports", :release=>"master", :path=>"software/codemeta.json")
     end
 
+    it "github_from_url cff file" do
+      url = "https://github.com/citation-file-format/ruby-cff/blob/main/CITATION.cff"
+      response = subject.github_from_url(url)
+      expect(response).to eq(:owner=>"citation-file-format", :path=>"CITATION.cff", :release=>"main", :repo=>"ruby-cff")
+    end
+
     it "github_as_codemeta_url" do
       url = "https://github.com/datacite/bolognese"
       response = subject.github_as_codemeta_url(url)
       expect(response).to eq("https://raw.githubusercontent.com/datacite/bolognese/master/codemeta.json")
+    end
+
+    it "github_as_cff_url" do
+      url = "https://github.com/citation-file-format/ruby-cff"
+      response = subject.github_as_cff_url(url)
+      expect(response).to eq("https://raw.githubusercontent.com/citation-file-format/ruby-cff/main/CITATION.cff")
     end
 
     it "github_from_url file" do

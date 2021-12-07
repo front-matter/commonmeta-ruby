@@ -506,7 +506,9 @@ module Briard
         "orcid"
       elsif /\A(http|https):\/(\/)?github\.com\/(.+)\/package.json\z/.match(id)
         "npm"
-      elsif /\A(http|https):\/(\/)?github\.com\/(.+)\z/.match(id)
+      elsif /\A(http|https):\/(\/)?github\.com\/(.+)\/CITATION.cff\z/.match(id)
+        "cff"
+      elsif /\A(http|https):\/(\/)?github\.com\/(.+)\/codemeta.json\z/.match(id)
         "codemeta"
       else
         "schema_org"
@@ -516,6 +518,8 @@ module Briard
     def find_from_format_by_filename(filename)
       if filename == "package.json"
         "npm"
+      elsif filename == "CITATION.cff"
+        "cff"
       end
     end
 
@@ -528,6 +532,8 @@ module Briard
         "crossref"
       elsif options[:ext] == ".xml" && Nokogiri::XML(string, nil, 'UTF-8', &:noblanks).collect_namespaces.find { |k, v| v.start_with?("http://datacite.org/schema/kernel") }
         "datacite"
+      elsif options[:ext] == ".cff"
+        "cff"
       elsif options[:ext] == ".json" && Maremma.from_json(string).to_h.dig("@context").to_s.start_with?("http://schema.org", "https://schema.org")
         "schema_org"
       elsif options[:ext] == ".json" && Maremma.from_json(string).to_h.dig("@context") == ("https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld")
@@ -558,9 +564,13 @@ module Briard
         "citeproc"
       elsif string.start_with?("TY  - ")
         "ris"
+      elsif YAML.load(string).to_h.fetch("cff-version", nil).present?
+        "cff"
       elsif BibTeX.parse(string).first
         "bibtex"
       end
+    rescue Psych::SyntaxError => error
+      "bibtex"
     rescue BibTeX::ParseError => error
       nil
     end
@@ -1076,6 +1086,16 @@ module Briard
         "https://raw.githubusercontent.com/#{github_hash[:owner]}/#{github_hash[:repo]}/#{github_hash[:release]}/#{github_hash[:path]}"
       elsif github_hash[:owner].present?
         "https://raw.githubusercontent.com/#{github_hash[:owner]}/#{github_hash[:repo]}/master/codemeta.json"
+      end
+    end
+
+    def github_as_cff_url(url)
+      github_hash = github_from_url(url)
+
+      if github_hash[:path].to_s.end_with?("CITATION.cff")
+        "https://raw.githubusercontent.com/#{github_hash[:owner]}/#{github_hash[:repo]}/#{github_hash[:release]}/#{github_hash[:path]}"
+      elsif github_hash[:owner].present?
+        "https://raw.githubusercontent.com/#{github_hash[:owner]}/#{github_hash[:repo]}/main/CITATION.cff"
       end
     end
 

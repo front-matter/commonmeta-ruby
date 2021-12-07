@@ -54,7 +54,7 @@ describe Briard::Metadata, vcr: true do
     end
 
     it "github" do
-      id = "https://github.com/datacite/maremma"
+      id = "https://github.com/datacite/maremma/blob/master/codemeta.json"
       expect(subject.find_from_format(id: id)).to eq("codemeta")
     end
 

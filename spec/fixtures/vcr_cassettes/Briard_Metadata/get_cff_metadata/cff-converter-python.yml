@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/citation-file-format/cff-converter-python/main/CITATION.cff
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      Accept:
+      - application/json;charset=UTF-8
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1212'
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - default-src 'none'; style-src 'unsafe-inline'; sandbox
+      Content-Type:
+      - text/plain; charset=utf-8
+      Etag:
+      - W/"481e62c88d87f88f330c3713aad93abd1a281b2967c7ad0cd91ccca939567e52"
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Github-Request-Id:
+      - B098:F9B8:176B365:188E5A5:61AF23E8
+      Content-Encoding:
+      - gzip
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 07 Dec 2021 09:05:45 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-hhn4043-HHN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1638867945.967912,VS0,VE186
+      Vary:
+      - Authorization,Accept-Encoding,Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fastly-Request-Id:
+      - 8209173bb874db42d9e8e382110b46303cc17b0a
+      Expires:
+      - Tue, 07 Dec 2021 09:10:45 GMT
+      Source-Age:
+      - '0'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA62XXXLiOBDH3zmFDrAytsGAedgqQiabTDJJKjAftW/CbmMNtuSS5bDMefYme7FtyRBMgCmo4KpUsGR3/7rVav3NZqVWLNJDMpZ5zkRMMi6AFErOFcuJluSVZTxmGoiZjKR4BaXJ+G46mt49PTpRkpCEZ1A6LVbpVKpy2CKEEpbgKGeaSzEkj6BTUBkaKAlMIg4iAjIGoUHhw4QkLOfZigqWQzkkk4KxRWkn5vwVxGb8c6UUZ0yQW8dOShXxeEhSrYty2G7bW0eqedvFi+KfT/tur0u7bi/8KNN9xl7XEztMU5l/1PQ3UKkEtLlvfaIhYeLUYIOB71Hf7bn7RLdVPpNZrOlXgfZVyfV//2ryqyJXyMnFAaprVZULpg8yFempUB3aDf2A9v3uYB/qjWVFZEKeykwe4HgAKSIu9zm+syzmdT7NCC0rtP2PTb6WLSxLao0bR57jO27L1DBVkAErAaF9F7PlhtT3WzzGteEJh03x6lUBQxJLbs3jBqjw1nOdwB947V8gZCwdz+v5btC3T8RQRooXdVjPxm2p0STZGiaJVIRlGVlDlSZkhFzvp5O9BoHv9XtnedUpLzduj3qtVNb0ulnROddpNXMimbcjru26UbPbKRrOmW6bNK+NgaLFChuA2Gf7+vJgGgluCvIX17fVjCgoJC68VCuLeA5SsSq4rTFsUT8hsgzbl9953s4RDP559XzXWsBqKVW8XukZn2XctLoiXdmBKz6bwg/7E1+u/68jtzfNxlcPyBi+gGb25pOIH6UG+/vlblI/sH6d3GDiyI1NXCvjEYgSwxoVLEqBmgLFsi7ZHMfuErKSFalKqBevlIleMgV/kMJWryECwjU+wcXc5BXHcmTAEmdOa5tcyhQWgu3up6Sv8WKEUX2wDDTXGTSXoPW2ITFajFdBAsr0xs2RsT0/zHVmU91vHX8v2bpP7R8lTAhYwNuk7SCFyVZkmF/xkIkbdk9ovoOOH+Jx47qXov8OapHKzbGwF8FVY2Kf/hzyfuAOaMfv+5ciH4kYMnYEW1ZLOJ3Oo6HrBnQQdi+W1ytZHkZ7ZlrxaHFO6npup0PDnvvjYqnTGvIjqfvMy7Pg3LA7oB6eFhfLHFssGpMHdNBF3DTk334O3knAU0u8IQMvwnhfFQVKtkwfxrxmifhdczmH3e/1fOqFYfdS7N/gWE95kBX24/KsHdDxPCyy3uBSdC8yOwz36e2EPwnNw44c9Gm3G3Qul7imUN8DbIj1E5PXFOwXIbxGNXMM74ap6sz+MQhp6IcXa27TnxLVyj3PyYSJ+ZFVVvwsyEG3gyp+4NWQexLfG1C3T71aL7+T+XVMO3JxjN8aUGhy/XRndelvYkQxaVQOmUJeZExvd/uuijfXke+Hjuf2A88+1dSkNVYk5YJDVOltOlEX7/qiawZ7e0hQmvFTNN3jA0zG7Vq20R0naw13bh7qHGxka63iN9rPdbqOe1jv7ZbLl2gUS3nkuOG51FaxvzHeyqX5yBgbaTxZeyZckNHzCLfmKmuSzTJZ1x9+YwzJn3TtZJMaM+2wgpXmNVtwm5s2llTQdr12KpdUS2qEON3ESbmg+CCtX0t1nrX+B23vkxxeEQAA
+    http_version:
+  recorded_at: Tue, 07 Dec 2021 09:05:45 GMT
+recorded_with: VCR 3.0.3
