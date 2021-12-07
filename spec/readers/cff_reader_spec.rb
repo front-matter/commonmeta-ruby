@@ -36,6 +36,7 @@ describe Briard::Metadata, vcr: true do
         "rightsIdentifierScheme"=>"SPDX",
         "rightsUri"=>"http://www.apache.org/licenses/LICENSE-2.0",
         "schemeUri"=>"https://spdx.org/licenses/"}])
+      expect(subject.related_identifiers).to eq([{"relatedIdentifier"=>"https://doi.org/10.5281/zenodo.1003149", "relatedIdentifierType"=>"DOI", "relationType"=>"References"}])
     end
 
     it "cff-converter-python" do
@@ -101,6 +102,7 @@ describe Briard::Metadata, vcr: true do
         "rightsIdentifierScheme"=>"SPDX",
         "rightsUri"=>"http://www.apache.org/licenses/LICENSE-2.0",
         "schemeUri"=>"https://spdx.org/licenses/"}])
+      expect(subject.related_identifiers).to eq([{"relatedIdentifier"=>"https://doi.org/10.5281/zenodo.1310751", "relatedIdentifierType"=>"DOI", "relationType"=>"References"}])
     end
 
     it "ruby-cff" do
@@ -131,6 +133,7 @@ describe Briard::Metadata, vcr: true do
         "rightsIdentifierScheme"=>"SPDX",
         "rightsUri"=>"http://www.apache.org/licenses/LICENSE-2.0",
         "schemeUri"=>"https://spdx.org/licenses/"}])
+      expect(subject.related_identifiers).to eq([{"relatedIdentifier"=>"https://doi.org/10.5281/zenodo.1003149", "relatedIdentifierType"=>"DOI", "relationType"=>"References"}])
     end
 
     it "ruby-cff repository url" do
@@ -163,6 +166,7 @@ describe Briard::Metadata, vcr: true do
         "rightsIdentifierScheme"=>"SPDX",
         "rightsUri"=>"http://www.apache.org/licenses/LICENSE-2.0",
         "schemeUri"=>"https://spdx.org/licenses/"}])
+      expect(subject.related_identifiers).to eq([{"relatedIdentifier"=>"https://doi.org/10.5281/zenodo.1003149", "relatedIdentifierType"=>"DOI", "relationType"=>"References"}])
     end
   end
 end

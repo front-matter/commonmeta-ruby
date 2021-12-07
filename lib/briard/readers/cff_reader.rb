@@ -49,7 +49,8 @@ module Briard
           sum
         end
 
-        titles =  meta.fetch("title", nil).present? ?  [{ "title" => meta.fetch("title", nil) }] : [] 
+        titles =  meta.fetch("title", nil).present? ?  [{ "title" => meta.fetch("title", nil) }] : []
+        related_identifiers = Array.wrap(cff_references(meta.fetch("references", nil)))
         rights_list = meta.fetch("license", nil).present? ? [hsh_to_spdx("rightsIdentifier" => meta.fetch("license"))] : nil
 
         { "id" => id,
@@ -60,6 +61,7 @@ module Briard
           "titles" => titles,
           "creators" => creators,
           "publisher" => publisher,
+          "related_identifiers" => related_identifiers,
           "dates" => dates,
           "publication_year" => publication_year,
           "descriptions" => meta.fetch("abstract", nil).present? ? [{ "description" => sanitize(meta.fetch("abstract")), "descriptionType" => "Abstract" }] : nil,
@@ -73,7 +75,7 @@ module Briard
       def cff_creators(creators)
         Array.wrap(creators).map do |a|
           name_identifiers = normalize_orcid(parse_attributes(a["orcid"])).present? ? [{ "nameIdentifier" => normalize_orcid(parse_attributes(a["orcid"])), "nameIdentifierScheme" => "ORCID", "schemeUri"=>"https://orcid.org" }] : nil
-          if a["given-names"].present? || name_identifiers.present?
+          if a["given-names"].present? || a["family-names"].present? || name_identifiers.present?
             given_name = parse_attributes(a["given-names"])
             family_name = parse_attributes(a["family-names"])
             affiliation = Array.wrap(a["affiliation"]).map do |a|
@@ -101,6 +103,20 @@ module Briard
               "name" => a["name"] || a["__content__"] }
           end
         end
+      end
+
+      def cff_references(references)
+        Array.wrap(references).map do |r|
+          identifier = Array.wrap(r["identifiers"]).find { |i| i["type"] == "doi" }
+          
+          if identifier.present?
+            { "relatedIdentifier" => normalize_id(parse_attributes(identifier["value"])),
+              "relationType" => "References",
+              "relatedIdentifierType" => "DOI" }.compact
+          else
+            nil
+          end
+        end.compact.unwrap
       end
     end
   end
