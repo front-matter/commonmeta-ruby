@@ -21,7 +21,7 @@ require_relative 'readers/schema_org_reader'
 require_relative 'writers/bibtex_writer'
 require_relative 'writers/citation_writer'
 require_relative 'writers/citeproc_writer'
-# require_relative 'writers/cff_writer'
+require_relative 'writers/cff_writer'
 require_relative 'writers/codemeta_writer'
 require_relative 'writers/crosscite_writer'
 require_relative 'writers/crossref_writer'
@@ -58,7 +58,7 @@ module Briard
     include Briard::Writers::BibtexWriter
     include Briard::Writers::CitationWriter
     include Briard::Writers::CiteprocWriter
-    # include Briard::Writers::CffWriter
+    include Briard::Writers::CffWriter
     include Briard::Writers::CodemetaWriter
     include Briard::Writers::CrossciteWriter
     include Briard::Writers::CrossrefWriter

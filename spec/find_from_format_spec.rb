@@ -44,6 +44,11 @@ describe Briard::CLI do
       expect(subject.find_from_format_by_id(id)).to eq("cff")
     end
 
+    it "cff repository url" do
+      id = "https://github.com/citation-file-format/ruby-cff"
+      expect(subject.find_from_format_by_id(id)).to eq("cff")
+    end
+
     it "codemeta" do
       id = "https://github.com/datacite/maremma/blob/master/codemeta.json"
       expect(subject.find_from_format_by_id(id)).to eq("codemeta")

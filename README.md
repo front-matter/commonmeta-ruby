@@ -88,7 +88,7 @@ Briard reads and/or writes these metadata formats:
       <td>citation file format (cff)</td>
       <td>application/vnd.cff+yaml</td>
       <td>Yes</td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
     <tr>
       <td><a href='https://jats.nlm.nih.gov/'>JATS</a></td>

@@ -506,10 +506,12 @@ module Briard
         "orcid"
       elsif /\A(http|https):\/(\/)?github\.com\/(.+)\/package.json\z/.match(id)
         "npm"
-      elsif /\A(http|https):\/(\/)?github\.com\/(.+)\/CITATION.cff\z/.match(id)
-        "cff"
       elsif /\A(http|https):\/(\/)?github\.com\/(.+)\/codemeta.json\z/.match(id)
         "codemeta"
+      elsif /\A(http|https):\/(\/)?github\.com\/(.+)\/CITATION.cff\z/.match(id)
+        "cff"
+      elsif /\A(http|https):\/(\/)?github\.com\/(.+)\z/.match(id)
+        "cff"
       else
         "schema_org"
       end

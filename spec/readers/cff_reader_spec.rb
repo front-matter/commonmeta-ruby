@@ -132,5 +132,37 @@ describe Briard::Metadata, vcr: true do
         "rightsUri"=>"http://www.apache.org/licenses/LICENSE-2.0",
         "schemeUri"=>"https://spdx.org/licenses/"}])
     end
+
+    it "ruby-cff repository url" do
+      input = "https://github.com/citation-file-format/ruby-cff"
+      subject = Briard::Metadata.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://doi.org/10.5281/zenodo.1184077")
+      expect(subject.url).to eq("https://github.com/citation-file-format/ruby-cff")
+      expect(subject.types).to eq("bibtex"=>"misc", "citeproc"=>"article-journal", "resourceTypeGeneral"=>"Software", "ris"=>"COMP", "schemaOrg"=>"SoftwareSourceCode")
+      expect(subject.creators).to eq([{"affiliation"=>[{"name"=>"The University of Manchester, UK"}], "familyName"=>"Haines", "givenName"=>"Robert", "name"=>"Haines, Robert", "nameIdentifiers"=>
+        [{"nameIdentifier"=>"https://orcid.org/0000-0002-9538-7919",
+          "nameIdentifierScheme"=>"ORCID",
+          "schemeUri"=>"https://orcid.org"}], "nameType"=>"Personal"}, {"name"=>"The Ruby Citation File Format Developers", "nameType"=>"Organizational"}])
+      expect(subject.titles).to eq([{"title"=>"Ruby CFF Library"}])
+      expect(subject.descriptions.first["description"]).to start_with("This library provides a Ruby interface to manipulate Citation File Format files")
+      expect(subject.subjects).to eq([{"subject"=>"ruby"},
+        {"subject"=>"credit"},
+        {"subject"=>"software citation"},
+        {"subject"=>"research software"},
+        {"subject"=>"software sustainability"},
+        {"subject"=>"metadata"},
+        {"subject"=>"citation file format"},
+        {"subject"=>"CFF"}])
+      expect(subject.version_info).to eq("0.9.0")
+      expect(subject.dates).to eq([{"date"=>"2021-08-18", "dateType"=>"Issued"}])
+      expect(subject.publication_year).to eq("2021")
+      expect(subject.publisher).to eq("GitHub")
+      expect(subject.rights_list).to eq([{"rights"=>"Apache License 2.0",
+        "rightsIdentifier"=>"apache-2.0",
+        "rightsIdentifierScheme"=>"SPDX",
+        "rightsUri"=>"http://www.apache.org/licenses/LICENSE-2.0",
+        "schemeUri"=>"https://spdx.org/licenses/"}])
+    end
   end
 end
