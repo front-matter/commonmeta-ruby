@@ -7,7 +7,7 @@ module Briard
         return nil unless valid? || show_errors
 
         # only use CFF for software
-        return nil unless types["resourceTypeGeneral"] == "Software"
+        return nil unless %w(Software Collection).include?(types["resourceTypeGeneral"])
 
         title = parse_attributes(titles, content: "title", first: true)
         
