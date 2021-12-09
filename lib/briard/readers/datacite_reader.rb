@@ -121,7 +121,7 @@ module Briard
           end
 
           sum
-        end.uniq
+        end.uniq { |s| s["subject"] }
 
         dates = Array.wrap(meta.dig("dates", "date")).map do |r|
           if r.is_a?(Hash) && date = sanitize(r["__content__"]).presence

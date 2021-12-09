@@ -74,5 +74,39 @@ describe Briard::Metadata, vcr: true do
       expect(json["license"]).to eq("apache-2.0")
       expect(json["references"]).to eq("identifiers"=>[{"type"=>"doi", "value"=>"10.5281/zenodo.1003149"}])
     end
+
+    it "Collection of Jupyter notebooks" do
+      input = "https://doi.org/10.14454/fqq6-w751"
+      subject = Briard::Metadata.new(input: input, from: "datacite")
+      expect(subject.valid?).to be true
+      json = Psych.safe_load(subject.cff, permitted_classes: [Date])
+      expect(json["doi"]).to eq("https://doi.org/10.14454/fqq6-w751")
+      expect(json["authors"]).to eq([{"family-names"=>"Petryszak",
+        "given-names"=>"Robert",
+        "orcid"=>"https://orcid.org/0000-0001-6333-2182"},
+       {"affiliation"=>"DataCite",
+        "family-names"=>"Fenner",
+        "given-names"=>"Martin",
+        "orcid"=>"https://orcid.org/0000-0003-1419-2405"},
+       {"affiliation"=>"Science and Technology Facilities Council",
+        "family-names"=>"Lambert",
+        "given-names"=>"Simon",
+        "orcid"=>"https://orcid.org/0000-0001-9570-8121"},
+       {"affiliation"=>"European Bioinformatics Institute",
+        "family-names"=>"Llinares",
+        "given-names"=>"Manuel Bernal",
+        "orcid"=>"https://orcid.org/0000-0002-7368-180X"},
+       {"affiliation"=>"British Library",
+        "family-names"=>"Madden",
+        "given-names"=>"Frances",
+        "orcid"=>"https://orcid.org/0000-0002-5432-6116"}])
+      expect(json["title"]).to eq("FREYA PID Graph Jupyter Notebooks")
+      expect(json["abstract"]).to eq("Jupyter notebooks that use GraphQL to implement EC-funded FREYA Project PID Graph user stories.")
+      expect(json["date-released"]).to eq("2020-05-08")
+      expect(json["repository-code"]).to eq("https://github.com/datacite/pidgraph-notebooks-python")
+      expect(json["keywords"]).to eq(["pid graph", "pid", "graphql", "freya", "jupyter", "FOS: Computer and information sciences"])
+      expect(json["license"]).to be_nil
+      expect(json["references"]).to eq("identifiers"=>[{"type"=>"url", "value"=>"https://github.com/woutergins/satlas/tree/v1.0.0"}])
+    end
   end
 end
