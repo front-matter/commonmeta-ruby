@@ -71,10 +71,7 @@ describe Briard::Metadata, vcr: true do
         {"schemeUri"=>"http://www.oecd.org/science/inno",
          "subject"=>"FOS: Computer and information sciences",
          "subjectScheme"=>"Fields of Science and Technology (FOS)",
-         "valueUri"=>"http://www.oecd.org/science/inno/38235147.pdf"},
-        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
-         "subject"=>"FOS: Computer and information sciences",
-         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
+         "valueUri"=>"http://www.oecd.org/science/inno/38235147.pdf"}])
       expect(subject.agency).to eq("datacite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
     end

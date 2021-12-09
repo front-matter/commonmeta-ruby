@@ -58,11 +58,11 @@ describe Briard::Metadata, vcr: true do
       expect(ris[10]).to eq("UR  - http://www.egms.de/en/journals/zma/2017-34/zma001102.shtml")
       expect(ris[11]).to start_with("AB  - Objective: Competence orientation")
       expect(ris[12]).to eq("KW  - medical competence")
-      expect(ris[22]).to eq("PY  - 2017")
-      expect(ris[23]).to eq("PB  - German Medical Science GMS Publishing House")
-      expect(ris[24]).to eq("LA  - en")
-      expect(ris[25]).to eq("SN  - 2366-5017")
-      expect(ris[26]).to eq("ER  - ")
+      expect(ris[21]).to eq("PY  - 2017")
+      expect(ris[22]).to eq("PB  - German Medical Science GMS Publishing House")
+      expect(ris[23]).to eq("LA  - en")
+      expect(ris[24]).to eq("SN  - 2366-5017")
+      expect(ris[25]).to eq("ER  - ")
     end
 
     it "Crossref DOI" do
@@ -97,12 +97,11 @@ describe Briard::Metadata, vcr: true do
       expect(ris[5]).to eq("AB  - Eating your own dog food is a slang term to describe that an organization should itself use the products and services it provides. For DataCite this means that we should use DOIs with appropriate metadata and strategies for long-term preservation for...")
       expect(ris[6]).to eq("KW  - datacite")
       expect(ris[9]).to eq("KW  - FOS: Computer and information sciences")
-      expect(ris[10]).to eq("KW  - FOS: Computer and information sciences")
-      expect(ris[11]).to eq("PY  - 2016")
-      expect(ris[12]).to eq("PB  - DataCite")
-      expect(ris[13]).to eq("LA  - en")
-      expect(ris[14]).to eq("SN  - 10.5438/0000-00ss")
-      expect(ris[15]).to eq("ER  - ")
+      expect(ris[10]).to eq("PY  - 2016")
+      expect(ris[11]).to eq("PB  - DataCite")
+      expect(ris[12]).to eq("LA  - en")
+      expect(ris[13]).to eq("SN  - 10.5438/0000-00ss")
+      expect(ris[14]).to eq("ER  - ")
     end
 
     it "BlogPosting Citeproc JSON" do

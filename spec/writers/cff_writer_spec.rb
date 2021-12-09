@@ -106,7 +106,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["repository-code"]).to eq("https://github.com/datacite/pidgraph-notebooks-python")
       expect(json["keywords"]).to eq(["pid graph", "pid", "graphql", "freya", "jupyter", "FOS: Computer and information sciences"])
       expect(json["license"]).to be_nil
-      expect(json["references"]).to eq("identifiers"=>[{"type"=>"url", "value"=>"https://github.com/woutergins/satlas/tree/v1.0.0"}])
+      expect(json["references"]).to be_nil
     end
   end
 end

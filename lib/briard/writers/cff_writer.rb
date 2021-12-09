@@ -42,6 +42,8 @@ module Briard
       end
 
       def write_references(related_identifiers)
+        return nil if related_identifiers.blank?
+        
         { "identifiers" => 
         Array.wrap(related_identifiers).map do |r|
           { 
