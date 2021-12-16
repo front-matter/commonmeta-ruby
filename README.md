@@ -1,3 +1,4 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5785519.svg)](https://doi.org/10.5281/zenodo.5785519)
 [![Gem Version](https://badge.fury.io/rb/briard.svg)](https://badge.fury.io/rb/briard)
 ![Build Ruby Gem](https://github.com/front-matter/briard/workflows/Build%20Ruby%20Gem/badge.svg)
 
