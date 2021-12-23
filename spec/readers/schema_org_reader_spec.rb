@@ -15,34 +15,29 @@ describe Briard::Metadata, vcr: true do
 
   context "get schema_org metadata" do
     it "BlogPosting" do
-      input = "https://blog.datacite.org/eating-your-own-dog-food/"
+      input = "https://blog.front-matter.io/posts/eating-your-own-dog-food"
       subject = Briard::Metadata.new(input: input, from: "schema_org")
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://doi.org/10.5438/4k3m-nyvg")
-      expect(subject.url).to eq("https://blog.datacite.org/eating-your-own-dog-food")
+      expect(subject.id).to eq("https://doi.org/10.53731/r79vxn1-97aq74v-ag58n")
+      expect(subject.url).to eq("https://blog.front-matter.io/posts/eating-your-own-dog-food")
       expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"post-weblog", "resourceTypeGeneral"=>"Preprint", "ris"=>"GEN", "schemaOrg"=>"BlogPosting")
-      expect(subject.creators).to eq([{"affiliation"=>[{"affiliationIdentifier"=>"https://ror.org/04wxnsj81",
-        "affiliationIdentifierScheme"=>"ROR",
-        "name"=>"DataCite"}],"familyName"=>"Fenner", "givenName"=>"Martin", "name"=>"Fenner, Martin", "nameIdentifiers"=> [{"nameIdentifier"=>"https://orcid.org/0000-0003-1419-2405", "nameIdentifierScheme"=>"ORCID", "schemeUri"=>"https://orcid.org"}], "nameType"=>"Personal"}])
+      expect(subject.creators).to eq([{"affiliation"=>[],"familyName"=>"Fenner", "givenName"=>"Martin", "name"=>"Fenner, Martin", "nameIdentifiers"=> [{"nameIdentifier"=>"https://orcid.org/0000-0003-1419-2405", "nameIdentifierScheme"=>"ORCID", "schemeUri"=>"https://orcid.org"}], "nameType"=>"Personal"}])
       expect(subject.titles).to eq([{"title"=>"Eating your own Dog Food"}])
       expect(subject.descriptions.first["description"]).to start_with("Eating your own dog food")
-      expect(subject.subjects).to eq([{"subject"=>"datacite"}, {"subject"=>"doi"}, {"subject"=>"metadata"}, {"subject"=>"featured"}])
-      expect(subject.dates).to eq([{"date"=>"2016-12-20", "dateType"=>"Issued"},
-        {"date"=>"2016-12-20", "dateType"=>"Created"},
-        {"date"=>"2016-12-20", "dateType"=>"Updated"}])
+      expect(subject.subjects).to eq([{"subject"=>"feature"}])
+      expect(subject.dates).to eq([{"date"=>"2016-12-20T00:00:00Z", "dateType"=>"Issued"}, {"date"=>"2021-07-10T17:56:58Z", "dateType"=>"Created"}, {"date"=>"2021-11-01T20:01:07Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2016")
-      expect(subject.related_identifiers.length).to eq(3)
-      expect(subject.related_identifiers.last).to eq("relatedIdentifier"=>"10.5438/55e5-t5c0", "relatedIdentifierType"=>"DOI", "relationType"=>"References")
-      expect(subject.publisher).to eq("DataCite")
+      expect(subject.related_identifiers.length).to eq(0)
+      expect(subject.publisher).to eq("Front Matter")
     end
 
     it "BlogPosting with new DOI" do
-      input = "https://blog.datacite.org/eating-your-own-dog-food/"
+      input = "https://blog.front-matter.io/posts/eating-your-own-dog-food"
       subject = Briard::Metadata.new(input: input, doi: "10.5438/0000-00ss")
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5438/0000-00ss")
       expect(subject.doi).to eq("10.5438/0000-00ss")
-      expect(subject.url).to eq("https://blog.datacite.org/eating-your-own-dog-food")
+      expect(subject.url).to eq("https://blog.front-matter.io/posts/eating-your-own-dog-food")
       expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"post-weblog", "resourceTypeGeneral"=>"Preprint", "ris"=>"GEN", "schemaOrg"=>"BlogPosting")
     end
 

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    briard (2.2.4)
+    briard (2.2.5)
       activesupport (>= 4.2.5)
       benchmark_methods (~> 0.7)
       bibtex-ruby (>= 5.1.0)
@@ -32,7 +32,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.4.1)
+    activesupport (6.1.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -60,7 +60,7 @@ GEM
       rexml
     csl-styles (1.0.1.11)
       csl (~> 1.0)
-    diff-lcs (1.4.4)
+    diff-lcs (1.5.0)
     docile (1.4.0)
     dotenv (2.7.6)
     ebnf (2.2.1)
@@ -92,7 +92,7 @@ GEM
       concurrent-ruby (~> 1.0)
     iso8601 (0.9.1)
     json (2.6.1)
-    json-canonicalization (0.2.1)
+    json-canonicalization (0.3.0)
     json-ld (3.1.10)
       htmlentities (~> 4.3)
       json-canonicalization (~> 0.2)
@@ -108,7 +108,7 @@ GEM
       optimist (~> 3)
     latex-decode (0.3.2)
     link_header (0.0.8)
-    loofah (2.12.0)
+    loofah (2.13.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     maremma (4.9.6)
@@ -123,14 +123,14 @@ GEM
       oj (>= 2.8.3)
       oj_mimic_json (~> 1.0, >= 1.0.1)
     mini_portile2 (2.5.3)
-    minitest (5.14.4)
+    minitest (5.15.0)
     multi_json (1.15.0)
     multipart-post (2.1.1)
     namae (1.1.1)
     nokogiri (1.11.7)
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
-    oj (3.13.9)
+    oj (3.13.10)
     oj_mimic_json (1.0.1)
     optimist (3.0.1)
     postrank-uri (1.0.24)
