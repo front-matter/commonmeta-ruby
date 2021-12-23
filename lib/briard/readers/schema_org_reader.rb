@@ -27,7 +27,7 @@ module Briard
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
         url = normalize_id(id)
-        response = Maremma.get(url)
+        response = Maremma.get(url, accept: "json", raw: true)
 
         # some responses are returned as a hash
         if response.body["data"].is_a?(Hash)
