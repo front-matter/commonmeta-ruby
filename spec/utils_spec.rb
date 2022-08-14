@@ -624,6 +624,26 @@ describe Briard::Metadata, vcr: true do
       response = subject.hsh_to_fos(hsh)
       expect(response).to eq([{"subject"=>"Random tag"}])
     end
+  end
 
+  context "random doi" do
+    it "encode doi" do
+      prefix = "10.53731"
+      response = subject.encode_doi(prefix)
+      expect(response).to match(/#{prefix}\/[-._;()\/:A-Za-z0-9]+/)
+      expect(response.length).to eq(40)
+    end
+
+    it "decode doi" do
+      doi = "https://doi.org/10.53731/revzwnv-rpd913d-8drwz"
+      response = subject.decode_doi(doi)
+      expect(response).to eq (30286005717401267192153432991)
+    end
+
+    it "decode anothe doi" do
+      doi = "https://doi.org/10.53731/rckvde5-tzg61kj-7zvc1"
+      response = subject.decode_doi(doi)
+      expect(response).to eq (30198793950250854133601922433)
+    end
   end
 end

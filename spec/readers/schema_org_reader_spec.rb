@@ -41,60 +41,6 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"post-weblog", "resourceTypeGeneral"=>"Preprint", "ris"=>"GEN", "schemaOrg"=>"BlogPosting")
     end
 
-    it "BlogPosting yet another URL" do
-      input = "https://upstream.force11.org/posts/welcome-to-upstream"
-      subject = Briard::Metadata.new(input: input, from: "schema_org")
-      expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://doi.org/10.54900/rckn8ey-1fm76va-qsrnf")
-      expect(subject.url).to eq("https://upstream.force11.org/posts/welcome-to-upstream")
-      expect(subject.types).to eq("bibtex"=>"article", "citeproc"=>"post-weblog", "resourceTypeGeneral"=>"Preprint", "ris"=>"GEN", "schemaOrg"=>"BlogPosting")
-      expect(subject.creators).to eq([{"affiliation"=>[],
-        "familyName"=>"Chodacki",
-        "givenName"=>"John",
-        "name"=>"Chodacki, John",
-        "nameIdentifiers"=>
-         [{"nameIdentifier"=>"https://orcid.org/0000-0002-7378-2408",
-           "nameIdentifierScheme"=>"ORCID",
-           "schemeUri"=>"https://orcid.org"}],
-        "nameType"=>"Personal"},
-       {"affiliation"=>[],
-        "familyName"=>"Hendricks",
-        "givenName"=>"Ginny",
-        "name"=>"Hendricks, Ginny",
-        "nameIdentifiers"=>
-         [{"nameIdentifier"=>"https://orcid.org/0000-0002-0353-2702",
-           "nameIdentifierScheme"=>"ORCID",
-           "schemeUri"=>"https://orcid.org"}],
-        "nameType"=>"Personal"},
-       {"affiliation"=>[],
-        "familyName"=>"Ferguson",
-        "givenName"=>"Christine",
-        "name"=>"Ferguson, Christine",
-        "nameIdentifiers"=>
-         [{"nameIdentifier"=>"https://orcid.org/0000-0002-9317-6819",
-           "nameIdentifierScheme"=>"ORCID",
-           "schemeUri"=>"https://orcid.org"}],
-        "nameType"=>"Personal"},
-       {"affiliation"=>[],
-         "familyName"=>"Fenner",
-         "givenName"=>"Martin",
-         "name"=>"Fenner, Martin",
-         "nameIdentifiers"=>
-          [{"nameIdentifier"=>"https://orcid.org/0000-0003-1419-2405",
-            "nameIdentifierScheme"=>"ORCID",
-           "schemeUri"=>"https://orcid.org"}],
-        "nameType"=>"Personal"}])
-      expect(subject.titles).to eq([{"title"=>"Welcome to Upstream: the new space for scholarly community discussion on all things open"}])
-      expect(subject.descriptions.first["description"]).to start_with("Today we are announcing Upstream")
-      expect(subject.subjects).to eq([{"subject"=>"news"}])
-      expect(subject.dates).to eq([{"date"=>"2021-11-22T05:06:00Z", "dateType"=>"Issued"},
-       {"date"=>"2021-11-16T12:54:53Z", "dateType"=>"Created"},
-       {"date"=>"2021-12-14T09:01:25Z", "dateType"=>"Updated"}])
-      expect(subject.publication_year).to eq("2021")
-      expect(subject.related_identifiers.length).to eq(0)
-      expect(subject.publisher).to eq("FORCE11")
-    end
-
     it "BlogPosting with type as array" do
       input = fixture_path + 'schema_org_type_as_array.json'
       subject = Briard::Metadata.new(input: input)

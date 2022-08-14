@@ -83,8 +83,8 @@ module Briard
       end
 
       # make sure input is encoded as utf8
-      string = string.force_encoding("UTF-8") if string.present? && string.is_a?(String)
-      @string = string
+      dup_string = string.dup.force_encoding("UTF-8").encode! if string.present? && string.is_a?(String)
+      @string = dup_string
 
       # input options for citation formatting
       @style = options[:style]

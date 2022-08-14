@@ -1387,5 +1387,17 @@ module Briard
           "lang" => hsh["lang"] }.compact]
       end
     end
+
+    def encode_doi(prefix)
+      random_int = SecureRandom.random_number(2**63..2**64-1)
+      suffix = Base32::URL.encode(random_int)
+      str = "#{suffix[0,7]}-#{suffix[6,7]}"
+      "https://doi.org/#{prefix}/#{str}"
+    end
+
+    def decode_doi(doi)
+      suffix = doi.split('/', 5).last
+      Base32::URL.decode(suffix)
+    end
   end
 end

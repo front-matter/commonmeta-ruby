@@ -46,7 +46,7 @@ describe Briard::Metadata, vcr: true do
       input = fixture_path + "datacite_software_missing_comma.json"
       subject = Briard::Metadata.new(input: input, from: "datacite_json", show_errors: true)
       expect(subject.valid?).to be false
-      expect(subject.errors).to eq(["expected comma, not a string (after doi) at line 4, column 11 [parse.c:388]"])
+      expect(subject.errors).to eq(["expected comma, not a string (after doi) at line 4, column 11 [parse.c:430]"])
       expect(subject.codemeta).to be_nil
     end
 

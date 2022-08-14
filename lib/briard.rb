@@ -20,6 +20,7 @@ require 'citeproc/ruby'
 require 'citeproc'
 require 'csl/styles'
 require 'edtf'
+require 'base32/url'
 
 require "briard/version"
 require "briard/metadata"
