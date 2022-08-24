@@ -207,13 +207,18 @@ describe Briard::Metadata, vcr: true do
     it "doi" do
       ids = [{"@type"=>"CreativeWork", "@id"=>"https://doi.org/10.5438/0012"}, {"@type"=>"CreativeWork", "@id"=>"https://doi.org/10.5438/55E5-T5C0"}]
       response = subject.normalize_ids(ids: ids)
-      expect(response).to eq([{"relatedIdentifier"=>"10.5438/0012", "relatedIdentifierType"=>"DOI"}, {"relatedIdentifier"=>"10.5438/55e5-t5c0", "relatedIdentifierType"=>"DOI"}])
+      expect(response).to eq([{"relatedIdentifier"=>"10.5438/0012",
+        "relatedIdentifierType"=>"DOI",
+        "resourceTypeGeneral"=>"Text"},
+       {"relatedIdentifier"=>"10.5438/55e5-t5c0",
+        "relatedIdentifierType"=>"DOI",
+        "resourceTypeGeneral"=>"Text"}])
     end
 
     it "url" do
       ids = [{"@type"=>"CreativeWork", "@id"=>"https://blog.datacite.org/eating-your-own-dog-food/"}]
       response = subject.normalize_ids(ids: ids)
-      expect(response).to eq("relatedIdentifier"=>"https://blog.datacite.org/eating-your-own-dog-food", "relatedIdentifierType"=>"URL")
+      expect(response).to eq("relatedIdentifier"=>"https://blog.datacite.org/eating-your-own-dog-food", "relatedIdentifierType"=>"URL", "resourceTypeGeneral" => "Text")
     end
   end
 
@@ -568,7 +573,7 @@ describe Briard::Metadata, vcr: true do
     it "name_to_fos match" do
       name = "Biological sciences"
       response = subject.name_to_fos(name)
-      expect(response).to eq([{"subject"=>"Biological sciences"},
+      expect(response).to eq([{"subject"=>"biological sciences"},
        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
         "subject"=>"FOS: Biological sciences",
         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
@@ -577,7 +582,7 @@ describe Briard::Metadata, vcr: true do
     it "name_to_fos for match" do
       name = "Statistics"
       response = subject.name_to_fos(name)
-      expect(response).to eq([{"subject"=>"Statistics"},
+      expect(response).to eq([{"subject"=>"statistics"},
        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
         "subject"=>"FOS: Mathematics",
         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
@@ -586,7 +591,7 @@ describe Briard::Metadata, vcr: true do
     it "name_to_fos no match" do
       name = "Random tag"
       response = subject.name_to_fos(name)
-      expect(response).to eq([{"subject"=>"Random tag"}])
+      expect(response).to eq([{"subject"=>"random tag"}])
     end
 
     it "hsh_to_fos match" do

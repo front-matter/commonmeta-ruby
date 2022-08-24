@@ -53,6 +53,11 @@ module Briard
       end
     end
 
+    desc "", "encode"
+    def encode(prefix)
+      puts encode_doi(prefix)
+    end
+
     default_task :convert
   end
 end

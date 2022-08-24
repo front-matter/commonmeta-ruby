@@ -262,13 +262,14 @@ module Briard
     }
 
     SO_TO_DC_TRANSLATIONS = {
-      "Article" => "Text",
+      "Article" => "Preprint",
       "AudioObject" => "Sound",
       "Blog" => "Text",
       "BlogPosting" => "Preprint",
       "Book" => "Book",
       "Chapter" => "BookChapter",
       "Collection" => "Collection",
+      "CreativeWork" => "Text",
       "DataCatalog" => "Dataset",
       "Dataset" => "Dataset",
       "Event" => "Event",
@@ -309,7 +310,7 @@ module Briard
     }
 
     SO_TO_CP_TRANSLATIONS = {
-      "Article" => "",
+      "Article" => "article-newspaper",
       "AudioObject" => "song",
       "Blog" => "report",
       "BlogPosting" => "post-weblog",
@@ -331,7 +332,7 @@ module Briard
     }
 
     SO_TO_RIS_TRANSLATIONS = {
-      "Article" => nil,
+      "Article" => "GEN",
       "AudioObject" => nil,
       "Blog" => nil,
       "BlogPosting" => "BLOG",
@@ -400,7 +401,7 @@ module Briard
       "OutputManagementPlan" => nil,
       "PeerReview" => nil,
       "PhysicalObject" => nil,
-      "Preprint" => nil,
+      "Preprint" => "RPRT",
       "Report" => "RRPT",
       "Service" => nil,
       "Software" => "COMP",
@@ -938,6 +939,9 @@ module Briard
           scheme_uri = nil
         end
 
+        # alternatively find the nameIdentifier in the sameAs attribute
+        c["@id"] = c["sameAs"].first if Array(c["sameAs"]).find { |item| item.start_with?("https://orcid.org") }
+
         c["nameIdentifier"] = [{ "__content__" => c["@id"], "nameIdentifierScheme" => "ORCID", "schemeUri" => "https://orcid.org" }] if normalize_orcid(c["@id"])
         c["@type"] = c["@type"].find { |t| %w(Person Organization).include?(t) } if c["@type"].is_a?(Array)
         c["creatorName"] = { "nameType" => c["@type"].present? ? c["@type"].titleize + "al" : nil, "__content__" => c["name"] }.compact
@@ -1297,7 +1301,8 @@ module Briard
 
       if subject
         return [{
-          "subject" => sanitize(name) },
+          "subject" => sanitize(name).downcase
+        },
         {
           "subject" => "FOS: " + subject["fosLabel"],
           "subjectScheme" => "Fields of Science and Technology (FOS)",
@@ -1316,14 +1321,15 @@ module Briard
 
       if subject
         [{
-          "subject" => sanitize(name) },
+          "subject" => sanitize(name).downcase 
+        },
         {
           "subject" => "FOS: " + subject["fosLabel"],
           "subjectScheme" => "Fields of Science and Technology (FOS)",
           "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf"
         }]
       else
-        [{ "subject" => sanitize(name) }]
+        [{ "subject" => sanitize(name).downcase }]
       end
     end
 

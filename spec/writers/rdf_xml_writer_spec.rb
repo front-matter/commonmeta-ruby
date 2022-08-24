@@ -71,16 +71,16 @@ describe Briard::Metadata, vcr: true do
     end
 
     it "BlogPosting schema.org" do
-      input = "https://blog.datacite.org/eating-your-own-dog-food/"
+      input = "https://blog.front-matter.io/posts/eating-your-own-dog-food/"
       subject = Briard::Metadata.new(input: input, from: "schema_org")
       expect(subject.valid?).to be true
       rdf_xml = Maremma.from_xml(subject.rdf_xml).fetch("RDF", {})
-      expect(rdf_xml.dig("BlogPosting", "rdf:about")).to eq("https://doi.org/10.5438/4k3m-nyvg")
-      expect(rdf_xml.dig("BlogPosting", "author", "Person", "rdf:about")).to eq("https://orcid.org/0000-0003-1419-2405")
-      expect(rdf_xml.dig("BlogPosting", "author", "Person", "name")).to eq("Martin Fenner")
-      expect(rdf_xml.dig("BlogPosting", "name")).to eq("Eating your own Dog Food")
-      expect(rdf_xml.dig("BlogPosting", "keywords")).to eq("datacite, doi, metadata, featured")
-      expect(rdf_xml.dig("BlogPosting", "datePublished", "__content__")).to eq("2016-12-20")
+      expect(rdf_xml.dig("Article", "rdf:about")).to eq("https://doi.org/10.53731/r79vxn1-97aq74v-ag58n")
+      expect(rdf_xml.dig("Article", "author", "Person", "rdf:about")).to eq("https://orcid.org/0000-0003-1419-2405")
+      expect(rdf_xml.dig("Article", "author", "Person", "name")).to eq("Martin Fenner")
+      expect(rdf_xml.dig("Article", "name")).to eq("Eating your own Dog Food")
+      expect(rdf_xml.dig("Article", "keywords")).to eq("feature")
+      expect(rdf_xml.dig("Article", "datePublished", "__content__")).to eq("2016-12-20T00:00:00Z")
     end
   end
 end

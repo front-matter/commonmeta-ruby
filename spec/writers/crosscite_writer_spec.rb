@@ -11,7 +11,7 @@ describe Briard::Metadata, vcr: true do
       expect(crosscite.fetch("url")).to eq("https://elifesciences.org/articles/01567")
       expect(crosscite.fetch("types")).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"JournalArticle", "resourceTypeGeneral"=>"JournalArticle", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
       expect(crosscite.fetch("titles")).to eq([{"title"=>"Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth"}])
-      expect(crosscite.fetch("related_identifiers").length).to eq(27)
+      expect(crosscite.fetch("related_identifiers").length).to eq(28)
       expect(crosscite.fetch("related_identifiers").first).to eq("relatedIdentifier"=>"2050-084X", "relatedIdentifierType"=>"ISSN", "relationType"=>"IsPartOf", "resourceTypeGeneral"=>"Collection")
       expect(crosscite.fetch("related_identifiers").last).to eq("relatedIdentifier"=>"10.1038/ncb2764", "relatedIdentifierType"=>"DOI", "relationType"=>"References")
       expect(crosscite.fetch("rights_list")).to eq([{"rights"=>"Creative Commons Attribution 3.0 Unported",
@@ -106,17 +106,6 @@ describe Briard::Metadata, vcr: true do
           [{"nameIdentifier"=>"https://orcid.org/0000-0003-0077-4738",
             "nameIdentifierScheme"=>"ORCID", "schemeUri"=>"https://orcid.org"}],
         "nameType"=>"Personal"}])
-    end
-
-    it "with data citation schema.org" do
-      input = "https://blog.datacite.org/eating-your-own-dog-food/"
-      subject = Briard::Metadata.new(input: input, from: "schema_org")
-      expect(subject.valid?).to be true
-      crosscite = JSON.parse(subject.crosscite)
-      expect(crosscite.fetch("titles")).to eq([{"title"=>"Eating your own Dog Food"}])
-      expect(crosscite.fetch("related_identifiers").count).to eq(3)
-      expect(crosscite.fetch("related_identifiers").first).to eq("relatedIdentifier"=>"10.5438/0000-00ss", "relatedIdentifierType"=>"DOI", "relationType"=>"IsPartOf", "resourceTypeGeneral"=>"Text")
-      expect(crosscite.fetch("related_identifiers").last).to eq("relatedIdentifier"=>"10.5438/55e5-t5c0", "relatedIdentifierType"=>"DOI", "relationType"=>"References")
     end
   end
 end

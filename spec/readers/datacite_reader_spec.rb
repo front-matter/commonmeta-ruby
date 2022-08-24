@@ -36,11 +36,11 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publication_year).to eq("2011")
       expect(subject.related_identifiers.length).to eq(1)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.1371/journal.ppat.1000446",
-        "relatedIdentifierType" => "DOI","relationType"=>"Cites")
-      expect(subject.subjects).to eq([{"subject"=>"Plasmodium"},
+        "relatedIdentifierType" => "DOI","relationType"=>"IsCitedBy")
+      expect(subject.subjects).to eq([{"subject"=>"plasmodium"},
         {"subject"=>"malaria"},
         {"subject"=>"mitochondrial genome"},
-        {"subject"=>"Parasites"}])
+        {"subject"=>"parasites"}])
       expect(subject.publisher).to eq("Dryad")
       expect(subject.agency).to eq("datacite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
@@ -88,7 +88,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq("https://doi.org/10.4230/lipics.tqc.2013.93")
       expect(subject.descriptions.first["description"]).to start_with("We investigate the problem of constructing unextendible product bases in the qubit case")
       expect(subject.dates).to eq([{"date"=>"2013-11-05", "dateType"=>"Available"}, {"date"=>"2013", "dateType"=>"Issued"}])
-      expect(subject.subjects).to eq([{"subject"=>"Computer Science"},
+      expect(subject.subjects).to eq([{"subject"=>"computer science"},
        {"subject"=>"000 Computer science, knowledge, general works",
         "subjectScheme"=>"DDC"}])
       expect(subject.publication_year).to eq("2013")
@@ -179,7 +179,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to eq([{"date"=>"2011", "dateType"=>"Issued"}])
       expect(subject.publication_year).to eq("2011")
       expect(subject.sizes).to eq([])
-      expect(subject.subjects).to eq([{"subject"=>"Environmental research"}])
+      expect(subject.subjects).to eq([{"subject"=>"environmental research"}])
       expect(subject.publisher).to eq("EvK2 CNR Committee")
       expect(subject.agency).to eq("datacite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-2.2")
@@ -247,7 +247,7 @@ describe Briard::Metadata, vcr: true do
             {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
              "subject"=>"FOS: Computer and information sciences",
              "subjectScheme"=>"Fields of Science and Technology (FOS)"},
-            {"subject"=>"Computational Biology"},
+            {"subject"=>"computational biology"},
          {"schemeUri"=>
           "http://www.abs.gov.au/ausstats/abs@.nsf/0/6BB427AB9696C225CA2574180004463E",
           "subject"=>"60114 Systems Biology",
@@ -282,7 +282,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to eq([{"date"=>"2015-06-14", "dateType"=>"Created"}, {"date"=>"2020-06-02", "dateType"=>"Updated"}, {"date"=>"2020", "dateType"=>"Issued"}])
       expect(subject.publication_year).to eq("2020")
       expect(subject.publisher).to eq("figshare")
-      expect(subject.subjects).to eq([{"subject"=>"Evolutionary Biology"},
+      expect(subject.subjects).to eq([{"subject"=>"evolutionary biology"},
         {"subject"=>"FOS: Biological sciences", "subjectScheme"=>"Fields of Science and Technology (FOS)", "schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf"},
         {"subject"=>"60412 Quantitative Genetics (incl. Disease and Trait Mapping Genetics)", "subjectScheme"=>"FOR", "schemeUri"=>"http://www.abs.gov.au/ausstats/abs@.nsf/0/6BB427AB9696C225CA2574180004463E"}])
       expect(subject.agency).to eq("datacite")
@@ -305,7 +305,7 @@ describe Briard::Metadata, vcr: true do
         {"subject"=>"FOS: Educational sciences", "subjectScheme"=>"Fields of Science and Technology (FOS)", "schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf"},
         {"subject"=>"130313 Teacher Education and Professional Development of Educators", "subjectScheme"=>"FOR", "schemeUri"=>"http://www.abs.gov.au/ausstats/abs@.nsf/0/6BB427AB9696C225CA2574180004463E"},
         {"subject"=>"80799 Library and Information Studies not elsewhere classified", "subjectScheme"=>"FOR", "schemeUri"=>"http://www.abs.gov.au/ausstats/abs@.nsf/0/6BB427AB9696C225CA2574180004463E"},
-        {"subject"=>"FOS: Media and communications", "subjectScheme"=>"Fields of Science and Technology (FOS)", "schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf"}, {"subject"=>"Library and Information Studies"}])
+        {"subject"=>"FOS: Media and communications", "subjectScheme"=>"Fields of Science and Technology (FOS)", "schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf"}, {"subject"=>"library and information studies"}])
     end
 
     it "cc-by 3.0 us" do
@@ -340,9 +340,9 @@ describe Briard::Metadata, vcr: true do
         "funderIdentifier"=>"https://doi.org/10.13039/501100000780",
         "funderIdentifierType"=>"Crossref Funder ID",
         "funderName"=>"European Commission"}])
-      expect(subject.subjects).to eq([{"subject"=>"Article-Level Metrics"},
-        {"subject"=>"Data mining"},
-        {"subject"=>"Statistical Computing Language R"},
+      expect(subject.subjects).to eq([{"subject"=>"article-level metrics"},
+        {"subject"=>"data mining"},
+        {"subject"=>"statistical computing language r"},
         {"subject"=>"funded research publications"}])
       expect(subject.agency).to eq("datacite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
@@ -478,13 +478,13 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types["resourceTypeGeneral"]).to eq("Dataset")
       expect(subject.creators.length).to eq(6)
       expect(subject.creators.first).to eq("familyName"=>"Bales", "givenName"=>"Roger", "name"=>"Bales, Roger", "nameType"=>"Personal", "affiliation"=>[{"name"=>"UC Merced"}], "nameIdentifiers" => [])
-      expect(subject.subjects).to eq([{"subject"=>"Earth sciences"},
+      expect(subject.subjects).to eq([{"subject"=>"earth sciences"},
         {"subject"=>"soil moisture"},
         {"subject"=>"soil temperature"},
         {"subject"=>"snow depth"},
         {"subject"=>"air temperature"},
         {"subject"=>"water balance"},
-        {"subject"=>"Nevada, Sierra (mountain range)"}])
+        {"subject"=>"nevada, sierra (mountain range)"}])
     end
 
     it "series_information" do
@@ -546,13 +546,13 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publisher).to eq("UC Merced")
       expect(subject.dates).to eq([{"date"=>"2014-10-17", "dateType"=>"Updated"}, {"date"=>"2016-03-14T17:02:02Z", "dateType"=>"Available"}, {"date"=>"2013", "dateType"=>"Issued"}])
       expect(subject.publication_year).to eq("2013")
-      expect(subject.subjects).to eq([{"subject"=>"Earth sciences"},
+      expect(subject.subjects).to eq([{"subject"=>"earth sciences"},
         {"subject"=>"soil moisture"},
         {"subject"=>"soil temperature"},
         {"subject"=>"snow depth"},
         {"subject"=>"air temperature"},
         {"subject"=>"water balance"},
-        {"subject"=>"Nevada, Sierra (mountain range)"}])
+        {"subject"=>"nevada, sierra (mountain range)"}])
       expect(subject.geo_locations).to eq([{"geoLocationBox"=>
         {"eastBoundLongitude"=>"-119.182",
          "northBoundLatitude"=>"37.075",
@@ -992,7 +992,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publication_year).to eq("2008")
       expect(subject.container).to eq("firstPage"=>"Spain; 3353", "lastPage"=>"3356", "title"=>"23rd European Photovoltaic Solar Energy Conference and Exhibition", "type"=>"Series", "volume"=>"1-5 September 2008")
       expect(subject.descriptions[1]["description"]).to start_with("Aim of this paper is the presentation")
-      expect(subject.subjects).to eq([{"subject"=>"PV Systems"}, {"subject"=>"Off-grid Applications"}])
+      expect(subject.subjects).to eq([{"subject"=>"pv systems"}, {"subject"=>"off-grid applications"}])
       expect(subject.publisher).to eq("WIP-Munich")
       expect(subject.agency).to eq("datacite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-2.2")

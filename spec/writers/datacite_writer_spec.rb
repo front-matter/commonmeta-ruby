@@ -11,7 +11,7 @@ describe Briard::Metadata, vcr: true do
       datacite = Maremma.from_xml(subject.datacite).fetch("resource", {})
       expect(datacite.dig("resourceType", "resourceTypeGeneral")).to eq("JournalArticle")
       expect(datacite.dig("titles", "title")).to eq("Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth")
-      expect(datacite.dig("relatedIdentifiers", "relatedIdentifier").length).to eq(27)
+      expect(datacite.dig("relatedIdentifiers", "relatedIdentifier").length).to eq(28)
       expect(datacite.dig("relatedIdentifiers", "relatedIdentifier").first).to eq("relatedIdentifierType"=>"ISSN", "relationType"=>"IsPartOf", "__content__"=>"2050-084X", "resourceTypeGeneral"=>"Collection")
       expect(datacite.dig("relatedIdentifiers", "relatedIdentifier")[1]).to eq("relatedIdentifierType"=>"DOI", "relationType"=>"References", "__content__"=>"10.1038/nature02100")
       expect(datacite.dig("rightsList", "rights")).to eq("rightsURI"=>"https://creativecommons.org/licenses/by/3.0/legalcode", "rightsIdentifier"=>"cc-by-3.0", "rightsIdentifierScheme"=>"SPDX", "schemeURI"=>"https://spdx.org/licenses/", "__content__"=>"Creative Commons Attribution 3.0 Unported")
@@ -169,7 +169,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to eq([{"date"=>"2017-06-28", "dateType"=>"Created"}, {"date"=>"2017-06-28", "dateType"=>"Updated"}, {"date"=>"2017", "dateType"=>"Issued"}])
       expect(subject.publication_year).to eq("2017")
       expect(subject.publisher).to eq("Figshare")
-      expect(subject.subjects).to eq([{"subject"=>"Information Systems"},
+      expect(subject.subjects).to eq([{"subject"=>"information systems"},
        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
         "subject"=>"FOS: Computer and information sciences",
         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
@@ -195,7 +195,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to eq([{"date"=>"2017-06-28", "dateType"=>"Created"}, {"date"=>"2017-06-28", "dateType"=>"Updated"}, {"date"=>"2017", "dateType"=>"Issued"}])
       expect(subject.publication_year).to eq("2017")
       expect(subject.publisher).to eq("Figshare")
-      expect(subject.subjects).to eq([{"subject"=>"Information Systems"},
+      expect(subject.subjects).to eq([{"subject"=>"information systems"},
        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
         "subject"=>"FOS: Computer and information sciences",
         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
@@ -222,7 +222,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publication_year).to eq("2011")
       expect(subject.related_identifiers.length).to eq(1)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.1371/journal.ppat.1000446",
-        "relatedIdentifierType" => "DOI","relationType"=>"Cites")
+        "relatedIdentifierType" => "DOI","relationType"=>"IsCitedBy")
       expect(subject.publisher).to eq("Dryad")
       expect(subject.agency).to eq("datacite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
@@ -255,16 +255,6 @@ describe Briard::Metadata, vcr: true do
       datacite = Maremma.from_xml(subject.datacite).fetch("resource", {})
       expect(datacite.fetch("xsi:schemaLocation", "").split(" ").first).to eq("http://datacite.org/schema/kernel-4")
       expect(datacite.dig("creators", "creator", 0, "affiliation")).to eq(["UC Merced", "NSF"])
-    end
-
-    it "with data citation schema.org" do
-      input = "https://blog.datacite.org/eating-your-own-dog-food/"
-      subject = Briard::Metadata.new(input: input, from: "schema_org")
-      expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch("resource", {})
-      expect(datacite.dig("titles", "title")).to eq("Eating your own Dog Food")
-      expect(datacite.dig("relatedIdentifiers", "relatedIdentifier").count).to eq(3)
-      expect(datacite.dig("relatedIdentifiers", "relatedIdentifier").first).to eq("__content__"=>"10.5438/0000-00ss", "relatedIdentifierType"=>"DOI", "relationType"=>"IsPartOf", "resourceTypeGeneral"=>"Text")
     end
 
     it "DOI not found" do
@@ -302,7 +292,7 @@ describe Briard::Metadata, vcr: true do
       expect(datacite.dig("identifier", "__content__")).to eq("10.5061/DRYAD.8515")
       expect(datacite.dig("resourceType", "resourceTypeGeneral")).to eq("Dataset")
       expect(datacite.dig("titles", "title")).to eq("Data from: Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth")
-      expect(datacite.dig("relatedIdentifiers", "relatedIdentifier").length).to eq(27)
+      expect(datacite.dig("relatedIdentifiers", "relatedIdentifier").length).to eq(28)
       expect(datacite.dig("relatedIdentifiers", "relatedIdentifier").first).to eq("__content__"=>"2050-084X", "relatedIdentifierType"=>"ISSN", "relationType"=>"IsPartOf", "resourceTypeGeneral"=>"Collection")
       expect(datacite.dig("relatedIdentifiers", "relatedIdentifier")[1]).to eq("relatedIdentifierType"=>"DOI", "relationType"=>"References", "__content__"=>"10.1038/nature02100")
       expect(datacite.dig("rightsList", "rights")).to eq("rightsURI"=>"https://creativecommons.org/licenses/by/3.0/legalcode", "rightsIdentifier"=>"cc-by-3.0", "rightsIdentifierScheme"=>"SPDX", "schemeURI"=>"https://spdx.org/licenses/", "__content__"=>"Creative Commons Attribution 3.0 Unported")

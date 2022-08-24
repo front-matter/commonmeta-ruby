@@ -12,7 +12,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["@type"]).to eq("ScholarlyArticle")
       expect(json["isPartOf"]).to eq("@type"=>"Periodical", "issn"=>"2050-084X")
       expect(json["periodical"]).to eq("@type"=>"Journal", "firstPage" => "e01567", "identifier"=>"2050-084X", "identifierType"=>"ISSN", "name"=>"eLife", "volume"=>"3")
-      expect(json["citation"].length).to eq(26)
+      expect(json["citation"].length).to eq(27)
       expect(json["citation"].first).to eq("@id"=>"https://doi.org/10.1038/nature02100", "@type"=>"CreativeWork")
       expect(json["funder"]).to eq([{"name"=>"SystemsX", "@type"=>"Organization"},
                                      {"name"=>"EMBO",
@@ -47,15 +47,14 @@ describe Briard::Metadata, vcr: true do
       expect(json["license"]).to eq(["https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode", "info:eu-repo/semantics/openAccess"])
     end
 
-    it "Schema.org JSON isReferencedBy" do
+    it "Another Schema.org JSON" do
       input = "https://doi.org/10.5061/DRYAD.8515"
       subject = Briard::Metadata.new(input: input, from: "datacite")
       json = JSON.parse(subject.schema_org)
       expect(json["@id"]).to eq("https://doi.org/10.5061/dryad.8515")
       expect(json["@type"]).to eq("Dataset")
-      expect(json["citation"]).to eq("@id"=>"https://doi.org/10.1371/journal.ppat.1000446", "@type"=>"CreativeWork")
       expect(json["license"]).to eq("https://creativecommons.org/publicdomain/zero/1.0/legalcode")
-      expect(json["keywords"]).to eq("Plasmodium, malaria, mitochondrial genome, Parasites")
+      expect(json["keywords"]).to eq("plasmodium, malaria, mitochondrial genome, parasites")
     end
 
     it "Schema.org JSON IsSupplementTo" do
@@ -96,7 +95,7 @@ describe Briard::Metadata, vcr: true do
                                      "affiliation"=>{"@type"=>"Organization", "name"=>"NCEAS"}},
                                     {"name"=>"University Of California, Santa Barbara", "@type"=>"Organization"}])
       expect(json["version"]).to eq("2.0.0")
-      expect(json["keywords"]).to eq("data sharing, data repository, DataONE")
+      expect(json["keywords"]).to eq("data sharing, data repository, dataone")
     end
 
     it "Funding" do
@@ -138,7 +137,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["@id"]).to eq("https://doi.org/10.1594/pangaea.721193")
       expect(json["@type"]).to eq("Dataset")
       expect(json["name"]).to eq("Seawater carbonate chemistry and processes during experiments with Crassostrea gigas, 2007, supplement to: Kurihara, Haruko; Kato, Shoji; Ishimatsu, Atsushi (2007): Effects of increased seawater pCO2 on early development of the oyster Crassostrea gigas. Aquatic Biology, 1(1), 91-98")
-      expect(json["keywords"]).to include("Animalia, Bottles or small containers/Aquaria (&lt;20 L)")
+      expect(json["keywords"]).to include("animalia, bottles or small containers/aquaria (&lt;20 l)")
       expect(json["license"]).to eq("https://creativecommons.org/licenses/by/3.0/legalcode")
     end
 

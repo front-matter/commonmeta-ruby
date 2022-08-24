@@ -115,7 +115,7 @@ describe Briard::Metadata, vcr: true do
       expect(ris[4]).to eq("DO  - 10.5438/4k3m-nyvg")
       expect(ris[5]).to eq("UR  - https://blog.datacite.org/eating-your-own-dog-food")
       expect(ris[6]).to eq("AB  - Eating your own dog food is a slang term to describe that an organization should itself use the products and services it provides. For DataCite this means that we should use DOIs with appropriate metadata and strategies for long-term preservation for...")
-      expect(ris[7]).to eq("KW  - Phylogeny")
+      expect(ris[7]).to eq("KW  - phylogeny")
       expect(ris[14]).to eq("PY  - 2016")
       expect(ris[15]).to eq("PB  - DataCite")
       expect(ris[16]).to eq("ER  - ")
@@ -138,21 +138,21 @@ describe Briard::Metadata, vcr: true do
     end
 
     it "BlogPosting schema.org" do
-      input = "https://blog.datacite.org/eating-your-own-dog-food/"
+      input = "https://blog.front-matter.io/posts/eating-your-own-dog-food/"
       subject = Briard::Metadata.new(input: input, from: "schema_org")
       ris = subject.ris.split("\r\n")
       expect(ris[0]).to eq("TY  - GEN")
       expect(ris[1]).to eq("T1  - Eating your own Dog Food")
-      expect(ris[2]).to eq("T2  - DataCite Blog")
+      expect(ris[2]).to eq("T2  - Front Matter")
       expect(ris[3]).to eq("AU  - Fenner, Martin")
-      expect(ris[4]).to eq("DO  - 10.5438/4k3m-nyvg")
-      expect(ris[5]).to eq("UR  - https://blog.datacite.org/eating-your-own-dog-food")
-      expect(ris[6]).to eq("AB  - Eating your own dog food is a slang term to describe that an organization should itself use the products and services it provides. For DataCite this means that we should use DOIs with appropriate metadata and strategies for long-term preservation for...")
-      expect(ris[7]).to eq("KW  - datacite")
-      expect(ris[11]).to eq("PY  - 2016")
-      expect(ris[12]).to eq("PB  - DataCite")
-      expect(ris[13]).to eq("SN  - 10.5438/0000-00ss")
-      expect(ris[14]).to eq("ER  - ")
+      expect(ris[4]).to eq("DO  - 10.53731/r79vxn1-97aq74v-ag58n")
+      expect(ris[5]).to eq("UR  - https://blog.front-matter.io/posts/eating-your-own-dog-food")
+      expect(ris[6]).to eq("AB  - Eating your own dog food is a slang term to describe that an organization should itself use the products and services it provides. For DataCite this means that we should use DOIs with appropriate metadata and strategies for long-term preservation for the scholarly outputs we produce. For the most part this is not research data, but rather technical documents such as the DataCite Schema and its documentation (2016). These outputs also include the posts on this blog, where we discuss topics relev")
+      expect(ris[7]).to eq("KW  - feature")
+      expect(ris[8]).to eq("PY  - 2016")
+      expect(ris[9]).to eq("PB  - Front Matter")
+      expect(ris[10]).to eq("LA  - en")
+      expect(ris[11]).to eq("ER  - ")
     end
 
     it "Dataset" do
@@ -165,7 +165,7 @@ describe Briard::Metadata, vcr: true do
       expect(ris[2]).to eq("AU  - Ollomo, Benjamin")
       expect(ris[10]).to eq("DO  - 10.5061/dryad.8515")
       expect(ris[11]).to eq("UR  - http://datadryad.org/stash/dataset/doi:10.5061/dryad.8515")
-      expect(ris[13]).to eq("KW  - Plasmodium")
+      expect(ris[13]).to eq("KW  - plasmodium")
       expect(ris[18]).to eq("PB  - Dryad")
       expect(ris[19]).to eq("LA  - en")
       expect(ris[20]).to eq("ER  - ")
@@ -196,8 +196,8 @@ describe Briard::Metadata, vcr: true do
       expect(ris).to include("AU  - Kurihara, Haruko")
       expect(ris).to include("DO  - 10.1594/pangaea.721193")
       expect(ris).to include("UR  - https://doi.pangaea.de/10.1594/PANGAEA.721193")
-      expect(ris).to include("KW  - Animalia")
-      expect(ris).to include("KW  - Bottles or small containers/Aquaria (&lt;20 L)")
+      expect(ris).to include("KW  - animalia")
+      expect(ris).to include("KW  - bottles or small containers/aquaria (&lt;20 l)")
       expect(ris).to include("PY  - 2007")
       expect(ris).to include("PB  - PANGAEA - Data Publisher for Earth & Environmental Science")
       expect(ris).to include("LA  - en")

@@ -55,15 +55,15 @@ describe Briard::Metadata, vcr: true do
     end
 
     it "BlogPosting schema.org" do
-      input = "https://blog.datacite.org/eating-your-own-dog-food/"
+      input = "https://blog.front-matter.io/posts/eating-your-own-dog-food/"
       subject = Briard::Metadata.new(input: input, from: "schema_org")
       json = JSON.parse(subject.citeproc)
-      expect(json["type"]).to eq("post-weblog")
-      expect(json["id"]).to eq("https://doi.org/10.5438/4k3m-nyvg")
-      expect(json["DOI"]).to eq("10.5438/4k3m-nyvg")
+      expect(json["type"]).to eq("article-newspaper")
+      expect(json["id"]).to eq("https://doi.org/10.53731/r79vxn1-97aq74v-ag58n")
+      expect(json["DOI"]).to eq("10.53731/r79vxn1-97aq74v-ag58n")
       expect(json["title"]).to eq("Eating your own Dog Food")
       expect(json["author"]).to eq([{"family"=>"Fenner", "given"=>"Martin"}])
-      expect(json["publisher"]).to eq("DataCite")
+      expect(json["publisher"]).to eq("Front Matter")
       expect(json["issued"]).to eq("date-parts" => [[2016, 12, 20]])
     end
 
@@ -263,7 +263,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["type"]).to eq("dataset")
       expect(json["id"]).to eq("https://doi.org/10.1594/pangaea.721193")
       expect(json["DOI"]).to eq("10.1594/pangaea.721193")
-      expect(json["categories"]).to include("Animalia", "Bottles or small containers/Aquaria (&lt;20 L)")
+      expect(json["categories"]).to include("animalia", "bottles or small containers/aquaria (&lt;20 l)")
       expect(json["copyright"]).to eq("Creative Commons Attribution 3.0 Unported")
     end
 

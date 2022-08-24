@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Accept-Encoding:
@@ -16,14 +16,16 @@ http_interactions:
   response:
     status:
       code: 200
-      message: ''
+      message: OK
     headers:
       Date:
-      - Mon, 06 Dec 2021 07:24:00 GMT
+      - Tue, 23 Aug 2022 10:15:26 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
       Content-Encoding:
       - gzip
       Cf-Cache-Status:
@@ -31,7 +33,7 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jbv8DRx79ewSPTFuD5P%2FUU1QrtYZcKxCm8TE0X1Dyh88%2FLDoR1kX40Oq3yaudixoBxA1ln02YuxVOTeS2YZALcD08H9xkUHS%2BNkQqHc6MbW296Em1pWHyHA%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tw8j5Yo9kDVmBNB3zg0oxADmGbytOFmbeO8v3g5m0zSneOR%2BSN7UPQkB9W3yjuDpLnGcXh4D%2BpjU3BKsUQOBbpLQopqSmopR4%2Byy49OcvFmQhVwFY6Uyn5wm4Rpn91%2B8PBUyAvA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,16 +41,15 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 6b93c5a9bb9005b7-FRA
+      - 73f31646d902b902-AMS
       Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
-        ma=86400
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9I3NjcyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsANdBZKjYAAAA=
     http_version:
-  recorded_at: Mon, 06 Dec 2021 07:24:00 GMT
+  recorded_at: Tue, 23 Aug 2022 10:15:26 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.2737/rds-2018-0001/transform/application/vnd.crossref.unixsd+xml
@@ -57,7 +58,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
       Accept:
       - text/xml;charset=utf-8
       Accept-Encoding:
@@ -68,13 +69,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 06 Dec 2021 07:24:02 GMT
+      - Tue, 23 Aug 2022 10:15:27 GMT
       Content-Length:
-      - '1140'
+      - '1430'
       Set-Cookie:
-      - AWSALB=jDiNnelgbMoNw98pTCC+xX9VgJ7VT9m3XD1yYghg7ccy2KPpmQ/J0wBygZ5nj0uvlzSXY9uo+ooghaVLKA23Hsw/lhCkNOTHpTNw9bHPxSeM86UcORoNhKcfP6C3;
-        Expires=Mon, 13 Dec 2021 07:24:02 GMT; Path=/, AWSALBCORS=jDiNnelgbMoNw98pTCC+xX9VgJ7VT9m3XD1yYghg7ccy2KPpmQ/J0wBygZ5nj0uvlzSXY9uo+ooghaVLKA23Hsw/lhCkNOTHpTNw9bHPxSeM86UcORoNhKcfP6C3;
-        Expires=Mon, 13 Dec 2021 07:24:02 GMT; Path=/; SameSite=None
+      - AWSALB=xnfx6eTrnT2FWBrCxyXskZJqKPHMx+a+eSJJgS1eLvouiOjxO3BXHfq76nZgzq165vtjyzXxlAthO8ZH8P5KW88I91le80Xpbu8xSlw+yp/+Ik6yQILaKc7U89XZ;
+        Expires=Tue, 30 Aug 2022 10:15:27 GMT; Path=/, AWSALBCORS=xnfx6eTrnT2FWBrCxyXskZJqKPHMx+a+eSJJgS1eLvouiOjxO3BXHfq76nZgzq165vtjyzXxlAthO8ZH8P5KW88I91le80Xpbu8xSlw+yp/+Ik6yQILaKc7U89XZ;
+        Expires=Tue, 30 Aug 2022 10:15:27 GMT; Path=/; SameSite=None
       Link:
       - <http://dx.doi.org/10.2737/rds-2018-0001>; rel="canonical", <http://orcid.org/0000-0003-2583-1778>;
         title="Christine A. Ribic"; rel="author", <http://orcid.org/0000-0003-4606-044X>;
@@ -109,7 +110,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        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
+        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
     http_version:
-  recorded_at: Mon, 06 Dec 2021 07:24:01 GMT
+  recorded_at: Tue, 23 Aug 2022 10:15:27 GMT
 recorded_with: VCR 3.0.3

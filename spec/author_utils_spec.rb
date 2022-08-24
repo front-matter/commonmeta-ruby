@@ -127,13 +127,10 @@ describe Briard::Metadata, vcr: true do
       input = "10.14463/GBV:873056442"
       subject = Briard::Metadata.new(input: input, from: "datacite")
       meta = Maremma.from_xml(subject.raw).fetch("resource", {})
-      response = subject.get_one_author(meta.dig("creators", "creator").first)
+      response = subject.get_one_author(meta.dig("creators", "creator"))
       expect(response).to eq("affiliation" => [],
-        "familyName" => "Schumacher",
-        "givenName" => "Heinrich Christian",
-        "name" => "Schumacher, Heinrich Christian",
-        "nameIdentifiers" => [{"nameIdentifier"=>"http://d-nb.info/gnd/118611593", "nameIdentifierScheme"=>"GND", "schemeUri"=>"http://d-nb.info/gnd/"}],
-        "nameType" => "Personal")
+        "name" => "Unknown",
+        "nameIdentifiers" => [])
     end
 
     it "multiple name_identifier" do

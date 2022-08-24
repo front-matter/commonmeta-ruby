@@ -27,7 +27,7 @@ module Briard
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
         url = normalize_id(id)
-        response = Maremma.get(url, accept: "json", raw: true)
+        response = Maremma.get(url, raw: true)
 
         # some responses are returned as a hash
         if response.body["data"].is_a?(Hash)
@@ -36,9 +36,27 @@ module Briard
           doc = Nokogiri::XML(response.body.fetch("data", nil), nil, 'UTF-8')
           
           # workaround for xhtml documents
-          nodeset = doc.css("script")
-          string = nodeset.find { |element| element["type"] == "application/ld+json" }
-          string = string.text if string.present?
+          nodeset = doc.at("script[type='application/ld+json']")
+          hsh = JSON.parse(nodeset || "{}")
+          
+          # workaround for doi as canonical_url but not included with schema.org
+          link = doc.css("link[rel='canonical']")
+          hsh.merge!({ "@id" => link[0]["href"] }) if link.present?
+
+          # workaround if license included but not with schema.org
+          license = doc.at("meta[name='DCTERMS.license']")
+          hsh.merge!({ "license" => license["content"] }) if license.present?
+          
+          # workaround for html language attribute if no language is set via schema.org
+          lang = doc.at('html')['lang']
+          hsh.merge!({ "inLanguage" => lang }) if hsh["inLanguage"].blank?
+
+          # workaround if issn not included with schema.org
+          name = doc.at("meta[property='og:site_name']")
+          issn = doc.at("meta[name='citation_issn']")
+          hsh.merge!({ "isPartOf" => { "name" => name ? name["content"] : nil, "issn" => issn ? issn["content"] : nil }.compact })
+
+          string = hsh.to_json if hsh.present?
         end
 
         { "string" => string }
@@ -63,7 +81,10 @@ module Briard
           end
         end.compact.uniq
 
-        id = normalize_id(options[:doi] || meta.fetch("@id", nil) || meta.fetch("identifier", nil))
+        id = options[:doi]
+        id = meta.fetch("@id", nil) if id.blank? && meta.fetch("@id", nil).to_s.start_with?("https://doi.org")
+        id = meta.fetch("identifier", nil) if id.blank? # && meta.fetch("identifier", nil).to_s.start_with?("https://doi.org")#&& meta.fetch("@", nil).start_with?("https://doi.org")
+        id = normalize_id(id)
 
         schema_org = meta.fetch("@type", nil) && meta.fetch("@type").camelcase
         resource_type_general = Briard::Utils::SO_TO_DC_TRANSLATIONS[schema_org]
@@ -85,7 +106,7 @@ module Briard
 
         ct = (schema_org == "Dataset") ? "includedInDataCatalog" : "Periodical"
         container = if meta.fetch(ct, nil).present?
-          url =  parse_attributes(from_schema_org(meta.fetch(ct, nil)), content: "url", first: true)
+          url = parse_attributes(from_schema_org(meta.fetch(ct, nil)), content: "url", first: true)
 
           {
             "type" => (schema_org == "Dataset") ? "DataRepository" : "Periodical",
@@ -97,7 +118,7 @@ module Briard
             "firstPage" => meta.fetch("pageStart", nil),
             "lastPage" => meta.fetch("pageEnd", nil)
           }.compact
-        elsif schema_org == "BlogPosting"
+        elsif ["BlogPosting", "Article"].include?(schema_org)
           issn = meta.dig("isPartOf", "issn")
 
           {
@@ -179,7 +200,7 @@ module Briard
 
         # handle keywords as array and as comma-separated string
         subjects = meta.fetch("keywords", nil)
-        subjects = subjects.to_s.split(", ") if subjects.is_a?(String)
+        subjects = subjects.to_s.downcase.split(", ") if subjects.is_a?(String)
         subjects = Array.wrap(subjects).reduce([]) do |sum, subject|
           sum += name_to_fos(subject)
           sum
@@ -193,7 +214,7 @@ module Briard
           "content_url" => Array.wrap(meta.fetch("contentUrl", nil)),
           "sizes" => Array.wrap(meta.fetch("contenSize", nil)).presence,
           "formats" => Array.wrap(meta.fetch("encodingFormat", nil) || meta.fetch("fileFormat", nil)),
-          "titles" => meta.fetch("name", nil).present? ? [{ "title" => meta.fetch("name", nil) }] : nil,
+          "titles" => meta.fetch("name", nil).present? ? [{ "title" => meta.fetch("name", nil) }] : [{ "title" => meta.fetch("headline", nil) }],
           "creators" => creators,
           "contributors" => contributors,
           "publisher" => publisher,

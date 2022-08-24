@@ -26,7 +26,7 @@ describe Briard::Metadata, vcr: true do
         {"subject"=>"software sustainability"},
         {"subject"=>"metadata"},
         {"subject"=>"citation file format"},
-        {"subject"=>"CFF"}])
+        {"subject"=>"cff"}])
       expect(subject.version_info).to eq("0.9.0")
       expect(subject.dates).to eq([{"date"=>"2021-08-18", "dateType"=>"Issued"}])
       expect(subject.publication_year).to eq("2021")
@@ -85,14 +85,14 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{"title"=>"cffconvert"}])
       expect(subject.descriptions.first["description"]).to start_with("Command line program to validate and convert CITATION.cff files")
       expect(subject.subjects).to eq([{"subject"=>"bibliography"},
-        {"subject"=>"BibTeX"},
+        {"subject"=>"bibtex"},
         {"subject"=>"cff"},
         {"subject"=>"citation"},
-        {"subject"=>"CITATION.cff"},
-        {"subject"=>"CodeMeta"},
-        {"subject"=>"EndNote"},
-        {"subject"=>"RIS"},
-        {"subject"=>"Citation File Format"}])
+        {"subject"=>"citation.cff"},
+        {"subject"=>"codemeta"},
+        {"subject"=>"endnote"},
+        {"subject"=>"ris"},
+        {"subject"=>"citation file format"}])
       expect(subject.version_info).to eq("2.0.0")
       expect(subject.dates).to eq([{"date"=>"2021-09-22", "dateType"=>"Issued"}])
       expect(subject.publication_year).to eq("2021")
@@ -123,7 +123,7 @@ describe Briard::Metadata, vcr: true do
         {"subject"=>"software sustainability"},
         {"subject"=>"metadata"},
         {"subject"=>"citation file format"},
-        {"subject"=>"CFF"}])
+        {"subject"=>"cff"}])
       expect(subject.version_info).to eq("0.9.0")
       expect(subject.dates).to eq([{"date"=>"2021-08-18", "dateType"=>"Issued"}])
       expect(subject.publication_year).to eq("2021")
@@ -156,7 +156,7 @@ describe Briard::Metadata, vcr: true do
         {"subject"=>"software sustainability"},
         {"subject"=>"metadata"},
         {"subject"=>"citation file format"},
-        {"subject"=>"CFF"}])
+        {"subject"=>"cff"}])
       expect(subject.version_info).to eq("0.9.0")
       expect(subject.dates).to eq([{"date"=>"2021-08-18", "dateType"=>"Issued"}])
       expect(subject.publication_year).to eq("2021")

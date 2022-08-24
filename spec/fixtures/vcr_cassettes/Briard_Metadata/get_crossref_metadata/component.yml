@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Accept-Encoding:
@@ -16,14 +16,16 @@ http_interactions:
   response:
     status:
       code: 200
-      message: ''
+      message: OK
     headers:
       Date:
-      - Mon, 06 Dec 2021 07:24:22 GMT
+      - Tue, 23 Aug 2022 10:15:58 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
       - keep-alive
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
       Content-Encoding:
       - gzip
       Cf-Cache-Status:
@@ -31,7 +33,7 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=i2zsshrX%2FPAajK8qmDMbo8Rc%2BMoGsIyxQ79ssC2z3gQ8iTUwg6yu4uT4fmiTGCjes9NlrZk1m9cfnkZcElSNuBAkPF%2BFgD9%2F%2FkPFQmhDttFffGkHJ5qan%2Fc%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Xrpgk7bUt7VSoGkhraxIBHQeGBK0%2B1j%2Faz%2F6YEAofZKGPveSLtUHf6o3XkySGcr6Sqc0COBHcBpjkyOnD%2F9T5nKstqXEXZlmAKFqEPYH9lIUPfAK5GA5nh3%2F3asJF1BEOY7SJDg%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,16 +41,15 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 6b93c630f84a2bf6-FRA
+      - 73f3170d7c68b903-AMS
       Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400, h3-28=":443"; ma=86400, h3-27=":443";
-        ma=86400
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Q2NzQyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAfpIZsjYAAAA=
     http_version:
-  recorded_at: Mon, 06 Dec 2021 07:24:22 GMT
+  recorded_at: Tue, 23 Aug 2022 10:15:58 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1371/journal.pmed.0030277.g001/transform/application/vnd.crossref.unixsd+xml
@@ -57,7 +58,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
       Accept:
       - text/xml;charset=utf-8
       Accept-Encoding:
@@ -68,13 +69,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Mon, 06 Dec 2021 07:24:23 GMT
+      - Tue, 23 Aug 2022 10:15:59 GMT
       Content-Length:
       - '698'
       Set-Cookie:
-      - AWSALB=LwS4eUv6B5+3HGG0WrUr9ZE8CLxj5k93CszzVuxeOQtU3BvZZdtvcxblnvTYg2xjIzZdHMpbenZcnkSV97F9gsCPq0vdrhP2Bb8eeAfizUorrHbcNraSBp6/QJTP;
-        Expires=Mon, 13 Dec 2021 07:24:23 GMT; Path=/, AWSALBCORS=LwS4eUv6B5+3HGG0WrUr9ZE8CLxj5k93CszzVuxeOQtU3BvZZdtvcxblnvTYg2xjIzZdHMpbenZcnkSV97F9gsCPq0vdrhP2Bb8eeAfizUorrHbcNraSBp6/QJTP;
-        Expires=Mon, 13 Dec 2021 07:24:23 GMT; Path=/; SameSite=None
+      - AWSALB=+AK+QISZRz3BCZUfurDGd6+RJuTJex24ZjVhPDvvxH/Ez36LunBA899LruAcnqpLp86AdLQear+arSusUA6NyZmHde7wDjBh7JjqJDgG2/7bXF0vDxRUfaubF+Wu;
+        Expires=Tue, 30 Aug 2022 10:15:59 GMT; Path=/, AWSALBCORS=+AK+QISZRz3BCZUfurDGd6+RJuTJex24ZjVhPDvvxH/Ez36LunBA899LruAcnqpLp86AdLQear+arSusUA6NyZmHde7wDjBh7JjqJDgG2/7bXF0vDxRUfaubF+Wu;
+        Expires=Tue, 30 Aug 2022 10:15:59 GMT; Path=/; SameSite=None
       Link:
       - <http://dx.doi.org/10.1371/journal.pmed.0030277.g001>; rel="canonical"
       Access-Control-Expose-Headers:
@@ -107,7 +108,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAJVVTW/bMAy9F9h/EHzaDrYkO2nSwHEPBXbKgGLNgGGXQJHVRINtuZLcJP9+9Gfc1Oncm0SKj+QT9RTeH9MEvQptpMqWDvWIg0TGVSyz3dL5tf7uzp376CbkWhmjxfNGC1MkFkFUZpbO3tp8gfHhcPDaE57SO/yiDd+LlOGgBOzgq10Vujga+Sb8EFSBPiEU//6xeqrCXZkZyzIuIMrIRY25UpzZCm5MdnTtUH3E4K6zl0Lo00YVNi8sBHpHEzvRlxuEwtpTd15ZwLYXLG7WsIuV3GyZ5fuNjKNMZSLEb0xNEO5FhVsVn84IVQ4E3doCeIVcKnkVTQHnJMiecrF0uEpzSJJZJ6LEo8GM4r+q0BlLvDwVsUdIQPzZzNsBm1UlfRiuU1dakaKMpYCVF9tEmr3Qbrl3mgzGapgAJ3osvRyt5FYzqE89oycuYUAE+vq4Uk/fQtzCfZQC6JXHz+GPAk5FuoXCZdzCZkVpcKJgQkYBcGmrWRqAmM0n/i3xJ6NwGvaHKqF3wWwURixyZaR1rUwFzEGaX0L5hE4pobeUTIMgmM+m43pUhww4qu/gkv5mekbhJMxYt8hjZrtbrNZlXXOXEpferX26oMFi4v8Zx74WABC/Q5uWaD5Z+2RBAPBuJBqs4+3J5aqAh3HB3TiqtEiqcegqUtJBPGEyBbFh5mHcsxtOVeqBFlzpuGetSqj153+Semw0jXr0c2rYC2zFEGoZFsMik0ewwdGz/PVqNWzTSc+Fr+ykdW1AUN77+yeQFjuX7eChn5bOQ1nJT/F8ma4lThiuZV42ifCVI8AtTA8b9Nb+zwvlG4RSkAvNRVQyaEoKj16eKFOxNwK6ix+sH3/QAEzTdcrxh5yH+OqFhd2/159RPDCkIa6+pu4L676txnH+F8+Yre0flBV1uV4IAAA=
+        H4sIAAAAAAAA/5VVTW/bMAy9F9h/EHzaDrYkO2nSwHEPBXbKgGLNgGGXQJHVRINtuZLcJP9+9Gfc1Oncm0SKj+QT9RTeH9MEvQptpMqWDvWIg0TGVSyz3dL5tf7uzp376CbkWhmjxfNGC1MkFkFUZpbO3tp8gfHhcPDaE57SO/yiDd+LlOGgBOzgq10Vujga+Sb8EFSBPiEU//6xeqrCXZkZyzIuIMrIRY25UpzZCm5MdnTtUH3E4K6zl0Lo00YVNi8sBHpHEzvRlxuEwtpTd15ZwLYXLG7WsIuV3GyZ5fuNjKNMZSLEb0xNEO5FhVsVn84IVQ4E3doCeIVcKnkVTQHnJMiecrF0uEpzSJJZJ6LEo8GM4r+q0BlLvDwVsUdIQPzZzNsBm1UlfRiuU1dakaKMpYCVF9tEmr3Qbrl3mgzGapgAJ3osvRyt5FYzqE89oycuYUAE+vq4Uk/fQtzCfZQC6JXHz+GPAk5FuoXCZdzCZkVpcKJgQkYBcGmrWRqAmM0n/i3xJ6NwGvaHKqF3wWwURixyZaR1rUwFzEGaX0L5hE4pobeUTIMgmM+m43pUhww4qu/gkv5mekbhJMxYt8hjZrtbrNZlXXOXEpferX26oMFi4v8Zx74WABC/Q5uWaD5Z+2RBAPBuJBqs4+3J5aqAh3HB3TiqtEiqcegqUtJBPGEyBbFh5mHcsxtOVeqBFlzpuGetSqj153+Semw0jXr0c2rYC2zFEGoZFsMik0ewwdGz/PVqNWzTSc+Fr+ykdW1AUN77+yeQFjuX7eChn5bOQ1nJT/F8ma4lThiuZV42ifCVI8AtTA8b9Nb+zwvlG4RSkAvNRVQyaEoKj16eKFOxNwK6ix+sH3/QAEzTdcrxh5yH+OqFhd2/159RPDCkIa6+pu4L676txnH+F8+Yre0flBV1uV4IAAA=
     http_version:
-  recorded_at: Mon, 06 Dec 2021 07:24:23 GMT
+  recorded_at: Tue, 23 Aug 2022 10:15:59 GMT
 recorded_with: VCR 3.0.3

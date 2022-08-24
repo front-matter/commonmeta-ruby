@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.6; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Accept-Encoding:
@@ -19,7 +19,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Mon, 06 Dec 2021 07:17:28 GMT
+      - Tue, 23 Aug 2022 10:10:59 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -32,14 +32,26 @@ http_interactions:
       - Accept-Encoding
       Content-Encoding:
       - gzip
-      X-Runtime:
-      - '0.026962'
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
       X-Request-Id:
-      - 0c7519d2-3150-426f-893d-07bd19c6886b
+      - 37d9966c-a9cb-4edb-af24-a041682b1315
+      X-Download-Options:
+      - noopen
+      X-Runtime:
+      - '0.007007'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.12
+      - Phusion Passenger(R) 6.0.14
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.12
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.14
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -51,7 +63,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAi5rWEAAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
+        H4sIALOnBGMAAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
     http_version:
-  recorded_at: Mon, 06 Dec 2021 07:17:28 GMT
+  recorded_at: Tue, 23 Aug 2022 10:10:59 GMT
 recorded_with: VCR 3.0.3

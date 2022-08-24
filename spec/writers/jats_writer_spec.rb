@@ -145,18 +145,19 @@ describe Briard::Metadata, vcr: true do
       expect(jats.dig("pub_id")).to eq("pub_id_type"=>"doi", "__content__"=>"10.5061/dryad.8515")
     end
 
-    it "with data citation schema.org" do
-      input = "https://blog.datacite.org/eating-your-own-dog-food/"
+    it "from schema_org" do
+      input = "https://blog.front-matter.io/posts/eating-your-own-dog-food/"
       subject = Briard::Metadata.new(input: input, from: "schema_org")
       jats = Maremma.from_xml(subject.jats).fetch("element_citation", {})
-      expect(jats.dig("publication_type")).to be_nil
-      expect(jats.dig("source")).to eq("Eating your own Dog Food")
-      expect(jats.dig("publisher_name")).to eq("DataCite")
+      expect(jats.dig("publication_type")).to eq("journal")
+      expect(jats.dig("article_title")).to eq("Eating your own Dog Food")
+      expect(jats.dig("source")).to eq("Front Matter")
+      expect(jats.dig("publisher_name")).to eq("Front Matter")
       expect(jats.dig("person_group", "name")).to eq("surname"=>"Fenner", "given_names"=>"Martin")
-      expect(jats.dig("year")).to eq("iso_8601_date"=>"2016-12-20", "__content__"=>"2016")
+      expect(jats.dig("year")).to eq("iso_8601_date"=>"2016-12-20T00:00:00Z", "__content__"=>"2016")
       expect(jats.dig("month")).to eq("12")
       expect(jats.dig("day")).to eq("20")
-      expect(jats.dig("pub_id")).to eq("pub_id_type"=>"doi", "__content__"=>"10.5438/4k3m-nyvg")
+      expect(jats.dig("pub_id")).to eq("pub_id_type"=>"doi", "__content__"=>"10.53731/r79vxn1-97aq74v-ag58n")
     end
 
     it "interactive resource without dates" do

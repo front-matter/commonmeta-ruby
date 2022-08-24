@@ -30,11 +30,11 @@ describe Briard::Metadata, vcr: true do
         "rightsUri"=>"https://creativecommons.org/licenses/by/3.0/legalcode",
         "schemeUri"=>"https://spdx.org/licenses/"}])
       expect(subject.titles).to eq([{"title"=>"Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth"}])
-      expect(subject.dates).to eq([{"date"=>"2014-02-11", "dateType"=>"Issued"}, {"date"=>"2018-08-23T13:41:49Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"2014-02-11", "dateType"=>"Issued"}, {"date"=>"2022-03-26T09:21:50Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2014")
       expect(subject.publisher).to eq("eLife Sciences Publications, Ltd")
       expect(subject.container).to eq("firstPage" => "e01567", "identifier"=>"2050-084X", "identifierType"=>"ISSN", "title"=>"eLife", "type"=>"Journal", "volume"=>"3")
-      expect(subject.related_identifiers.length).to eq(27)
+      expect(subject.related_identifiers.length).to eq(28)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier"=>"2050-084X", "relatedIdentifierType"=>"ISSN", "relationType"=>"IsPartOf", "resourceTypeGeneral"=>"Collection")
       expect(subject.related_identifiers.last).to eq("relatedIdentifier"=>"10.1038/ncb2764", "relatedIdentifierType"=>"DOI", "relationType"=>"References")
       expect(subject.funding_references).to eq([{"funderName"=>"SystemsX"},
@@ -93,7 +93,7 @@ describe Briard::Metadata, vcr: true do
         "rightsIdentifierScheme"=>"SPDX",
         "rightsUri"=>"https://creativecommons.org/licenses/by/4.0/legalcode",
         "schemeUri"=>"https://spdx.org/licenses/"}])
-      expect(subject.dates).to eq([{"date"=>"2019-07-02", "dateType"=>"Issued"}, {"date"=>"2019-09-22T06:40:23Z", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{"date"=>"2019-07-02", "dateType"=>"Issued"}, {"date"=>"2019-09-22T02:40:23Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2019")
       expect(subject.publisher).to eq("Frontiers Media SA")
       expect(subject.funding_references).to eq([{"awardNumber"=>"CA17111", "funderIdentifier"=>"https://doi.org/10.13039/501100000921", "funderIdentifierType"=>"Crossref Funder ID", "funderName"=>"COST (European Cooperation in Science and Technology)"}])
@@ -116,7 +116,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({"date"=>"2007", "dateType"=>"Issued"})
       expect(subject.publication_year).to eq("2007")
       expect(subject.publisher).to eq("The Japanese Society of Physical Fitness and Sports Medicine")
-      expect(subject.related_identifiers.length).to eq(1)
+      expect(subject.related_identifiers.length).to eq(8)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier"=>"1881-4751", "relatedIdentifierType"=>"ISSN", "relationType"=>"IsPartOf", "resourceTypeGeneral"=>"Collection")
       expect(subject.container).to eq("firstPage"=>"60", "identifier"=>"1881-4751", "identifierType"=>"ISSN", "issue"=>"1", "lastPage"=>"60", "title"=>"Japanese Journal of Physical Fitness and Sports Medicine", "type"=>"Journal", "volume"=>"56")
       expect(subject.agency).to eq("crossref")
@@ -1051,7 +1051,7 @@ describe Briard::Metadata, vcr: true do
       input = "10.1093/oxfordhb/9780198746140.013.5"
       subject = Briard::Metadata.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.url).to eq("http://oxfordhandbooks.com/view/10.1093/oxfordhb/9780198746140.001.0001/oxfordhb-9780198746140-e-5")
+      expect(subject.url).to eq("https://academic.oup.com/edited-volume/28081/chapter/212116415")
       expect(subject.types).to eq("bibtex"=>"book", "citeproc"=>"book", "resourceType"=>"Book", "resourceTypeGeneral"=>"Book", "ris"=>"BOOK", "schemaOrg"=>"Book")
       expect(subject.creators.count).to eq(1)
       expect(subject.creators.first).to eq("familyName"=>"Clayton", "givenName"=>"Barbra R.", "name"=>"Clayton, Barbra R.", "nameType"=>"Personal")
@@ -1089,7 +1089,7 @@ describe Briard::Metadata, vcr: true do
     it "journal issue" do
       input = "https://doi.org/10.6002/ect.2015.0371"
       subject = Briard::Metadata.new(input: input)
-      #expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.6002/ect.2015.0371")
       expect(subject.url).to eq("http://ectrx.org/forms/ectrxcontentshow.php?doi_id=10.6002/ect.2015.0371")
       expect(subject.types).to eq("bibtex"=>"misc", "citeproc"=>"article-journal", "resourceType"=>"JournalIssue", "resourceTypeGeneral"=>"Text", "ris"=>"JOUR", "schemaOrg"=>"PublicationIssue")
@@ -1098,7 +1098,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to eq([{"date"=>"2018-10", "dateType"=>"Issued"}, {"date"=>"2018-10-03T12:09:12Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq("2018")
       expect(subject.publisher).to eq("Baskent University")
-      expect(subject.related_identifiers.length).to eq(1)
+      expect(subject.related_identifiers.length).to eq(2)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier"=>"2146-8427", "relatedIdentifierType"=>"ISSN", "relationType"=>"IsPartOf", "resourceTypeGeneral"=>"Collection")
       expect(subject.container).to eq("identifier"=>"2146-8427", "identifierType"=>"ISSN", "issue"=>"5", "title"=>"Experimental and Clinical Transplantation", "type"=>"Journal", "volume"=>"16")
       expect(subject.agency).to eq("crossref")

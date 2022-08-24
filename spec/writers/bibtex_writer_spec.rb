@@ -130,16 +130,16 @@ describe Briard::Metadata, vcr: true do
     end
 
     it "from schema_org" do
-      input = "https://blog.datacite.org/eating-your-own-dog-food/"
+      input = "https://blog.front-matter.io/posts/eating-your-own-dog-food/"
       subject = Briard::Metadata.new(input: input, from: "schema_org")
       bibtex = BibTeX.parse(subject.bibtex).to_a(quotes: '').first
       expect(bibtex[:bibtex_type].to_s).to eq("article")
-      expect(bibtex[:bibtex_key]).to eq("https://doi.org/10.5438/4k3m-nyvg")
-      expect(bibtex[:doi]).to eq("10.5438/4k3m-nyvg")
+      expect(bibtex[:bibtex_key]).to eq("https://doi.org/10.53731/r79vxn1-97aq74v-ag58n")
+      expect(bibtex[:doi]).to eq("10.53731/r79vxn1-97aq74v-ag58n")
       expect(bibtex[:title]).to eq("Eating your own Dog Food")
       expect(bibtex[:author]).to eq("Fenner, Martin")
-      expect(bibtex[:publisher]).to eq("DataCite")
-      expect(bibtex[:keywords]).to eq("datacite, doi, metadata, featured")
+      expect(bibtex[:publisher]).to eq("Front Matter")
+      expect(bibtex[:keywords]).to eq("feature")
       expect(bibtex[:year]).to eq("2016")
     end
 
@@ -163,7 +163,7 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:bibtex_type].to_s).to eq("misc")
       expect(bibtex[:bibtex_key]).to eq("https://doi.org/10.1594/pangaea.721193")
       expect(bibtex[:doi]).to eq("10.1594/pangaea.721193")
-      expect(bibtex[:keywords]).to start_with("Animalia, Bottles or small containers/Aquaria (&lt;20 L), Calcification/Dissolution")
+      expect(bibtex[:keywords]).to start_with("animalia, bottles or small containers/aquaria (&lt;20 l), calcification/dissolution")
       expect(bibtex[:year]).to eq("2007")
       expect(bibtex[:copyright]).to eq("Creative Commons Attribution 3.0 Unported")
     end
@@ -188,7 +188,7 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:title]).to eq("Single-unit recordings from two auditory areas in male zebra finches")
       expect(bibtex[:author]).to eq("Theunissen, Frederic E. and Hauber, ME and Woolley, Sarah M. N. and Gill, Patrick and Shaevitz, SS and Amin, Noopur and Hsu, A and Singh, NC and Grace, GA and Fremouw, Thane and Zhang, Junli and Cassey, P and Doupe, AJ and David, SV and Vinje, WE")
       expect(bibtex[:publisher]).to eq("CRCNS.org")
-      expect(bibtex[:keywords]).to eq("Neuroscience, Electrophysiology, auditory area, avian (zebra finch)")
+      expect(bibtex[:keywords]).to eq("neuroscience, electrophysiology, auditory area, avian (zebra finch)")
       expect(bibtex[:year]).to eq("2009")
     end
   end

@@ -23,7 +23,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["abstract"]).to eq("<em>PyPinT</em> is a framework for Parallel-in-Time integration routines. The main purpose of <em>PyPinT</em> is to provide a framework for educational use and prototyping new parallel-in-time algorithms. As well it will aid in developing a high-performance C++ implementation for massively parallel computers providing the benefits of parallel-in-time routines to a zoo of time integrators in various applications.")
       expect(json["date-released"]).to eq("2014-05-27")
       expect(json["repository-code"]).to eq("https://zenodo.org/record/10164")
-      expect(json["keywords"]).to eq(["Parallel-in-Time Integration", "Spectral Deferred Corrections", "Multigrid", "Multi-Level Spectral Deferred Corrections", "Python Framework"])
+      expect(json["keywords"]).to eq(["parallel-in-time integration", "spectral deferred corrections", "multigrid", "multi-level spectral deferred corrections", "python framework"])
       expect(json["license"]).to be_nil
       expect(json["references"]).to eq("identifiers"=>[{"type"=>"url", "value"=>"https://github.com/Parallel-in-Time/PyPinT/tree/release-v0.0.4"}])
     end
@@ -70,7 +70,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["abstract"]).to eq("This library provides a Ruby interface to manipulate Citation File Format files")
       expect(json["date-released"]).to eq("2021-08-18")
       expect(json["repository-code"]).to eq("https://github.com/citation-file-format/ruby-cff")
-      expect(json["keywords"]).to eq(["ruby", "credit", "software citation", "research software", "software sustainability", "metadata", "citation file format", "CFF"])
+      expect(json["keywords"]).to eq(["ruby", "credit", "software citation", "research software", "software sustainability", "metadata", "citation file format", "cff"])
       expect(json["license"]).to eq("apache-2.0")
       expect(json["references"]).to eq("identifiers"=>[{"type"=>"doi", "value"=>"10.5281/zenodo.1003149"}])
     end

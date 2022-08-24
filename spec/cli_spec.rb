@@ -51,7 +51,7 @@ describe Briard::CLI do
       let(:input) { "10.5061/dryad.8515" }
 
       it 'default' do
-        expect { subject.convert input }.to output(/Plasmodium, malaria, mitochondrial genome, Parasites/).to_stdout
+        expect { subject.convert input }.to output(/plasmodium, malaria, mitochondrial genome, parasites/).to_stdout
       end
 
       it 'to schema_org' do
@@ -222,5 +222,13 @@ describe Briard::CLI do
     #     expect { subject.convert file }.to output(/datePublished/).to_stderr
     #   end
     # end
+  end
+
+  describe "encode" do
+    let(:input) { "10.53731" }
+
+    it "blog prefix" do
+      expect { subject.encode input }.to output(/https:\/\/doi.org\/10.53731/).to_stdout
+    end
   end
 end

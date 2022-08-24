@@ -11,7 +11,7 @@ describe Briard::Metadata, vcr: true do
       expect(datacite.fetch("url")).to eq("https://elifesciences.org/articles/01567")
       expect(datacite.fetch("types")).to eq("bibtex"=>"article", "citeproc"=>"article-journal", "resourceType"=>"JournalArticle", "resourceTypeGeneral"=>"JournalArticle", "ris"=>"JOUR", "schemaOrg"=>"ScholarlyArticle")
       expect(datacite.fetch("titles")).to eq([{"title"=>"Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth"}])
-      expect(datacite.fetch("relatedIdentifiers").length).to eq(27)
+      expect(datacite.fetch("relatedIdentifiers").length).to eq(28)
       expect(datacite.fetch("relatedIdentifiers").first).to eq("relatedIdentifier"=>"2050-084X", "relatedIdentifierType"=>"ISSN", "relationType"=>"IsPartOf", "resourceTypeGeneral"=>"Collection")
       expect(datacite.fetch("rightsList")).to eq([{"rights"=>"Creative Commons Attribution 3.0 Unported",
         "rightsIdentifier"=>"cc-by-3.0",
@@ -77,14 +77,20 @@ describe Briard::Metadata, vcr: true do
         "nameType"=>"Personal"}])
     end
 
-    it "with data citation schema.org" do
-      input = "https://blog.datacite.org/eating-your-own-dog-food/"
+    it "from schema.org" do
+      input = "https://blog.front-matter.io/posts/eating-your-own-dog-food/"
       subject = Briard::Metadata.new(input: input, from: "schema_org")
       expect(subject.valid?).to be true
       datacite = JSON.parse(subject.datacite_json)
       expect(datacite.fetch("titles")).to eq([{"title"=>"Eating your own Dog Food"}])
-      expect(datacite.fetch("relatedIdentifiers").count).to eq(3)
-      expect(datacite.fetch("relatedIdentifiers").first).to eq("relatedIdentifier"=>"10.5438/0000-00ss", "relatedIdentifierType"=>"DOI", "relationType"=>"IsPartOf", "resourceTypeGeneral"=>"Text")
+      expect(datacite.fetch("creators")).to eq([{"affiliation"=>[],
+      "familyName"=>"Fenner",
+      "givenName"=>"Martin",
+      "name"=>"Fenner, Martin",
+      "nameIdentifiers"=>
+       [{"nameIdentifier"=>"https://orcid.org/0000-0003-1419-2405",
+         "nameIdentifierScheme"=>"ORCID", "schemeUri"=>"https://orcid.org"}],
+      "nameType"=>"Personal"}])
     end
   end
 end
