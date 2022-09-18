@@ -24,7 +24,7 @@ module Briard
 
         identifiers = Array.wrap(meta.fetch("identifier", nil)).map do |r|
           r = normalize_id(r) if r.is_a?(String)
-          if r.is_a?(String) && !r.start_with?("https://doi.org")
+          if r.is_a?(String) && URI(r) != "doi.org"
               { "identifierType" => "URL", "identifier" => r }
           elsif r.is_a?(Hash)
             { "identifierType" => get_identifier_type(r["propertyID"]), "identifier" => r["value"] }
