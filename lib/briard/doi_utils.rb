@@ -23,12 +23,12 @@ module Briard
     end
 
     def doi_resolver(doi, options = {})
-      sandbox = Array(/handle.stage.datacite.org/.match(doi)).last
+      sandbox = Array(/handle\.stage\.datacite\.org/.match(doi)).last
       sandbox.present? || options[:sandbox] ? "https://handle.stage.datacite.org/" : "https://doi.org/"
     end
 
     def doi_api_url(doi, options = {})
-      sandbox = Array(/handle.stage.datacite.org/.match(doi)).last
+      sandbox = Array(/handle\.stage\.datacite.\org/.match(doi)).last
       sandbox.present? || options[:sandbox] ? "https://api.stage.datacite.org/dois/#{doi_from_url(doi)}?include=media,client"  : "https://api.datacite.org/dois/#{doi_from_url(doi)}?include=media,client"
     end
 
