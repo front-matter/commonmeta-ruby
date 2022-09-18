@@ -7,6 +7,7 @@
 **Fixed bugs:**
 
 - Incomplete URL substring sanitization [\#12](https://github.com/front-matter/briard/issues/12)
+- Incomplete URL substring sanitization [\#11](https://github.com/front-matter/briard/issues/11)
 
 ## [v2.4.2](https://github.com/front-matter/briard/tree/v2.4.2) (2022-08-24)
 
