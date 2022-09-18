@@ -86,25 +86,23 @@ module Briard
     # replace DOI in XML if provided in options
     def raw
       r = string.present? ? string.strip : nil
-      return r unless (from == "datacite" && r.present?)
+      return r unless from == 'datacite' && r.present?
 
       doc = Nokogiri::XML(string, nil, 'UTF-8', &:noblanks)
-      node = doc.at_css("identifier")
+      node = doc.at_css('identifier')
       node.content = doi.to_s.upcase if node.present? && doi.present?
       doc.to_xml.strip
     end
 
     def should_passthru
-      (from == "datacite") && regenerate.blank? && raw.present?
+      (from == 'datacite') && regenerate.blank? && raw.present?
     end
 
     def container_title
       if container.present?
-        container["title"]
-      elsif types["citeproc"] == "article-journal"
+        container['title']
+      elsif types['citeproc'] == 'article-journal'
         publisher
-      else
-        nil
       end
     end
 
@@ -114,16 +112,20 @@ module Briard
     end
 
     def reverse
-      { "citation" => Array.wrap(related_identifiers).select { |ri| ri["relationType"] == "IsReferencedBy" }.map do |r|
-        { "@id" => normalize_doi(r["relatedIdentifier"]),
-          "@type" => r["resourceTypeGeneral"] || "ScholarlyArticle",
-          "identifier" => r["relatedIdentifierType"] == "DOI" ? nil : to_identifier(r) }.compact
-        end.unwrap,
-        "isBasedOn" => Array.wrap(related_identifiers).select { |ri| ri["relationType"] == "IsSupplementTo" }.map do |r|
-          { "@id" => normalize_doi(r["relatedIdentifier"]),
-            "@type" => r["resourceTypeGeneral"] || "ScholarlyArticle",
-            "identifier" => r["relatedIdentifierType"] == "DOI" ? nil : to_identifier(r) }.compact
-        end.unwrap }.compact
+      { 'citation' => Array.wrap(related_identifiers).select do |ri|
+                        ri['relationType'] == 'IsReferencedBy'
+                      end.map do |r|
+                        { '@id' => normalize_doi(r['relatedIdentifier']),
+                          '@type' => r['resourceTypeGeneral'] || 'ScholarlyArticle',
+                          'identifier' => r['relatedIdentifierType'] == 'DOI' ? nil : to_identifier(r) }.compact
+                      end.unwrap,
+        'isBasedOn' => Array.wrap(related_identifiers).select do |ri|
+                         ri['relationType'] == 'IsSupplementTo'
+                       end.map do |r|
+                         { '@id' => normalize_doi(r['relatedIdentifier']),
+                           '@type' => r['resourceTypeGeneral'] || 'ScholarlyArticle',
+                           'identifier' => r['relatedIdentifierType'] == 'DOI' ? nil : to_identifier(r) }.compact
+                       end.unwrap }.compact
     end
 
     def graph
@@ -139,81 +141,88 @@ module Briard
     end
 
     def citeproc_hsh
-      page = container.to_h["firstPage"].present? ? [container["firstPage"], container["lastPage"]].compact.join("-") : nil
-      if Array.wrap(creators).size == 1 && Array.wrap(creators).first.fetch("name", nil) == ":(unav)"
-        author = nil
-      else
-        author = to_citeproc(creators)
-      end
+      page = if container.to_h['firstPage'].present?
+               [container['firstPage'], container['lastPage']].compact.join('-')
+             end
+      author = if Array.wrap(creators).size == 1 && Array.wrap(creators).first.fetch('name',
+                                                                                     nil) == ':(unav)'
+                 nil
+               else
+                 to_citeproc(creators)
+               end
 
-      if types["resourceTypeGeneral"] == "Software" && version_info.present?
-        type = "book"
-      else
-        type = types["citeproc"]
-      end
+      type = if types['resourceTypeGeneral'] == 'Software' && version_info.present?
+               'book'
+             else
+               types['citeproc']
+             end
 
       {
-        "type" => type,
-        "id" => normalize_doi(doi),
-        "categories" => Array.wrap(subjects).map { |k| parse_attributes(k, content: "subject", first: true) }.presence,
-        "language" => language,
-        "author" => author,
-        "contributor" => to_citeproc(contributors),
-        "issued" => get_date(dates, "Issued") ? get_date_parts(get_date(dates, "Issued")) : get_date_parts(publication_year.to_s),
-        "submitted" => Array.wrap(dates).find { |d| d["dateType"] == "Submitted" }.to_h.fetch("__content__", nil),
-        "abstract" => parse_attributes(descriptions, content: "description", first: true),
-        "container-title" => container_title,
-        "DOI" => doi,
-        "volume" => container.to_h["volume"],
-        "issue" => container.to_h["issue"],
-        "page" => page,
-        "publisher" => publisher,
-        "title" => parse_attributes(titles, content: "title", first: true),
-        "URL" => url,
-        "copyright" => Array.wrap(rights_list).map { |l| l["rights"] }.first,
-        "version" => version_info
+        'type' => type,
+        'id' => normalize_doi(doi),
+        'categories' => Array.wrap(subjects).map do |k|
+                          parse_attributes(k, content: 'subject', first: true)
+                        end.presence,
+        'language' => language,
+        'author' => author,
+        'contributor' => to_citeproc(contributors),
+        'issued' => get_date_parts(get_date(dates, 'Issued') || publication_year.to_s),
+        'submitted' => Array.wrap(dates).find do |d|
+                         d['dateType'] == 'Submitted'
+                       end.to_h.fetch('__content__', nil),
+        'abstract' => parse_attributes(descriptions, content: 'description', first: true),
+        'container-title' => container_title,
+        'DOI' => doi,
+        'volume' => container.to_h['volume'],
+        'issue' => container.to_h['issue'],
+        'page' => page,
+        'publisher' => publisher,
+        'title' => parse_attributes(titles, content: 'title', first: true),
+        'URL' => url,
+        'copyright' => Array.wrap(rights_list).map { |l| l['rights'] }.first,
+        'version' => version_info
       }.compact.symbolize_keys
     end
 
     def crosscite_hsh
       {
-        "id" => normalize_doi(doi),
-        "doi" => doi,
-        "url" => url,
-        "types" => types,
-        "creators" => creators,
-        "titles" => titles,
-        "publisher" => publisher,
-        "container" => container,
-        "subjects" => subjects,
-        "contributors" => contributors,
-        "dates" => dates,
-        "publication_year" => publication_year,
-        "language" => language,
-        "identifiers" => identifiers,
-        "sizes" => sizes,
-        "formats" => formats,
-        "version" => version_info,
-        "rights_list" => rights_list,
-        "descriptions" => descriptions,
-        "geo_locations" => geo_locations,
-        "funding_references" => funding_references,
-        "related_identifiers" => related_identifiers,
-        "related_items" => related_items,
-        "schema_version" => schema_version,
-        "provider_id" => provider_id,
-        "client_id" => client_id,
-        "agency" => agency,
-        "state" => state
+        'id' => normalize_doi(doi),
+        'doi' => doi,
+        'url' => url,
+        'types' => types,
+        'creators' => creators,
+        'titles' => titles,
+        'publisher' => publisher,
+        'container' => container,
+        'subjects' => subjects,
+        'contributors' => contributors,
+        'dates' => dates,
+        'publication_year' => publication_year,
+        'language' => language,
+        'identifiers' => identifiers,
+        'sizes' => sizes,
+        'formats' => formats,
+        'version' => version_info,
+        'rights_list' => rights_list,
+        'descriptions' => descriptions,
+        'geo_locations' => geo_locations,
+        'funding_references' => funding_references,
+        'related_identifiers' => related_identifiers,
+        'related_items' => related_items,
+        'schema_version' => schema_version,
+        'provider_id' => provider_id,
+        'client_id' => client_id,
+        'agency' => agency,
+        'state' => state
       }.compact
     end
 
     def style
-      @style ||= "apa"
+      @style ||= 'apa'
     end
 
     def locale
-      @locale ||= "en-US"
+      @locale ||= 'en-US'
     end
   end
 end

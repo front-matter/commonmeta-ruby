@@ -3,7 +3,7 @@
 module Briard
   module DataciteUtils
     def datacite_xml
-      @datacite_xml ||= Nokogiri::XML::Builder.new(:encoding => 'UTF-8') do |xml|
+      @datacite_xml ||= Nokogiri::XML::Builder.new(encoding: 'UTF-8') do |xml|
         xml.resource(root_attributes) do
           insert_work(xml)
         end
@@ -13,17 +13,21 @@ module Briard
     def datacite_errors(xml: nil, schema_version: nil)
       if xml.present?
         namespaces = Nokogiri::XML(xml, nil, 'UTF-8').root.namespaces
-        schema_version = namespaces.fetch('xmlns',nil).presence || namespaces.fetch('xmlns:ns0',nil).presence
+        schema_version = namespaces.fetch('xmlns',
+                                          nil).presence || namespaces.fetch('xmlns:ns0',
+                                                                            nil).presence
       end
-      
-      # handle crossref namespace
-      schema_version = schema_version.to_s.start_with?("http://datacite.org/schema/kernel") ? schema_version : "http://datacite.org/schema/kernel-4"
 
-      kernel = schema_version.to_s.split("/").last
+      # handle crossref namespace
+      unless schema_version.to_s.start_with?('http://datacite.org/schema/kernel')
+        schema_version = 'http://datacite.org/schema/kernel-4'
+      end
+
+      kernel = schema_version.to_s.split('/').last
       filepath = File.expand_path("../../../resources/#{kernel}/metadata.xsd", __FILE__)
       schema = Nokogiri::XML::Schema(open(filepath))
 
-      schema.validate(Nokogiri::XML(xml, nil, 'UTF-8')).map { |error| error.to_s }.unwrap
+      schema.validate(Nokogiri::XML(xml, nil, 'UTF-8')).map(&:to_s).unwrap
     rescue Nokogiri::XML::SyntaxError => e
       e.message
     end
@@ -52,14 +56,14 @@ module Briard
     end
 
     def insert_identifier(xml)
-      xml.identifier(doi, 'identifierType' => "DOI")
+      xml.identifier(doi, 'identifierType' => 'DOI')
     end
 
     def insert_creators(xml)
       xml.creators do
         Array.wrap(creators).each do |au|
           xml.creator do
-            insert_person(xml, au, "creator")
+            insert_person(xml, au, 'creator')
           end
         end
       end
@@ -70,25 +74,31 @@ module Briard
 
       xml.contributors do
         Array.wrap(contributors).each do |con|
-          xml.contributor("contributorType" => con["contributorType"] || "Other") do
-            insert_person(xml, con, "contributor")
+          xml.contributor('contributorType' => con['contributorType'] || 'Other') do
+            insert_person(xml, con, 'contributor')
           end
         end
       end
     end
 
     def insert_person(xml, person, type)
-      person_name = person["familyName"].present? ? [person["familyName"], person["givenName"]].compact.join(", ") : person["name"]
-      attributes = { "nameType" => person["nameType"] }.compact
-      xml.send(type + "Name", person_name, attributes)
-      xml.givenName(person["givenName"]) if person["givenName"].present?
-      xml.familyName(person["familyName"]) if person["familyName"].present?
-      Array.wrap(person["nameIdentifiers"]).each do |ni|
-        xml.nameIdentifier(ni["nameIdentifier"], 'nameIdentifierScheme' => ni["nameIdentifierScheme"], 'schemeURI' => ni["schemeUri"])
+      person_name = if person['familyName'].present?
+                      [person['familyName'], person['givenName']].compact.join(', ')
+                    else
+                      person['name']
+                    end
+      attributes = { 'nameType' => person['nameType'] }.compact
+      xml.send("#{type}Name", person_name, attributes)
+      xml.givenName(person['givenName']) if person['givenName'].present?
+      xml.familyName(person['familyName']) if person['familyName'].present?
+      Array.wrap(person['nameIdentifiers']).each do |ni|
+        xml.nameIdentifier(ni['nameIdentifier'],
+                           'nameIdentifierScheme' => ni['nameIdentifierScheme'], 'schemeURI' => ni['schemeUri'])
       end
-      Array.wrap(person["affiliation"]).each do |affiliation|
-        attributes = { "affiliationIdentifier" => affiliation["affiliationIdentifier"], "affiliationIdentifierScheme" => affiliation["affiliationIdentifierScheme"], "schemeURI" => affiliation["schemeUri"] }.compact
-        xml.affiliation(affiliation["name"], attributes)
+      Array.wrap(person['affiliation']).each do |affiliation|
+        attributes = { 'affiliationIdentifier' => affiliation['affiliationIdentifier'],
+                       'affiliationIdentifierScheme' => affiliation['affiliationIdentifierScheme'], 'schemeURI' => affiliation['schemeUri'] }.compact
+        xml.affiliation(affiliation['name'], attributes)
       end
     end
 
@@ -99,17 +109,17 @@ module Briard
             t = title
           else
             t = {}
-            t["title"] = title
+            t['title'] = title
           end
 
-          attributes = { 'titleType' => t["titleType"], 'xml:lang' => t["lang"] }.compact
-          xml.title(t["title"], attributes)
+          attributes = { 'titleType' => t['titleType'], 'xml:lang' => t['lang'] }.compact
+          xml.title(t['title'], attributes)
         end
       end
     end
 
     def insert_publisher(xml)
-      xml.publisher(publisher || container && container["title"])
+      xml.publisher(publisher || (container && container['title']))
     end
 
     def insert_publication_year(xml)
@@ -117,19 +127,22 @@ module Briard
     end
 
     def insert_resource_type(xml)
-      return xml unless types.is_a?(Hash) && (types["schemaOrg"].present? || types["resourceTypeGeneral"])
+      unless types.is_a?(Hash) && (types['schemaOrg'].present? || types['resourceTypeGeneral'])
+        return xml
+      end
 
-      xml.resourceType(types["resourceType"] || types["schemaOrg"],
-        'resourceTypeGeneral' => types["resourceTypeGeneral"] || Metadata::SO_TO_DC_TRANSLATIONS[types["schemaOrg"]] || "Other")
+      xml.resourceType(types['resourceType'] || types['schemaOrg'],
+                       'resourceTypeGeneral' => types['resourceTypeGeneral'] || Metadata::SO_TO_DC_TRANSLATIONS[types['schemaOrg']] || 'Other')
     end
 
     def insert_alternate_identifiers(xml)
-      alternate_identifiers = Array.wrap(identifiers).select { |r| r["identifierType"] != "DOI" }
+      alternate_identifiers = Array.wrap(identifiers).reject { |r| r['identifierType'] == 'DOI' }
       return xml unless alternate_identifiers.present?
 
       xml.alternateIdentifiers do
         Array.wrap(alternate_identifiers).each do |alternate_identifier|
-          xml.alternateIdentifier(alternate_identifier["identifier"], 'alternateIdentifierType' => alternate_identifier["identifierType"])
+          xml.alternateIdentifier(alternate_identifier['identifier'],
+                                  'alternateIdentifierType' => alternate_identifier['identifierType'])
         end
       end
     end
@@ -139,8 +152,9 @@ module Briard
 
       xml.dates do
         Array.wrap(dates).each do |date|
-          attributes = { 'dateType' => date["dateType"] || "Issued", 'dateInformation' => date["dateInformation"] }.compact
-          xml.date(date["date"], attributes)
+          attributes = { 'dateType' => date['dateType'] || 'Issued',
+                         'dateInformation' => date['dateInformation'] }.compact
+          xml.date(date['date'], attributes)
         end
       end
     end
@@ -151,10 +165,18 @@ module Briard
       xml.fundingReferences do
         Array.wrap(funding_references).each do |funding_reference|
           xml.fundingReference do
-            xml.funderName(funding_reference["funderName"])
-            xml.funderIdentifier(funding_reference["funderIdentifier"], { "funderIdentifierType" => funding_reference["funderIdentifierType"] }.compact) if funding_reference["funderIdentifier"].present?
-            xml.awardNumber(funding_reference["awardNumber"], { "awardURI" => funding_reference["awardUri"] }.compact) if funding_reference["awardNumber"].present? || funding_reference["awardUri"].present?
-            xml.awardTitle(funding_reference["awardTitle"]) if funding_reference["awardTitle"].present?
+            xml.funderName(funding_reference['funderName'])
+            if funding_reference['funderIdentifier'].present?
+              xml.funderIdentifier(funding_reference['funderIdentifier'],
+                                   { 'funderIdentifierType' => funding_reference['funderIdentifierType'] }.compact)
+            end
+            if funding_reference['awardNumber'].present? || funding_reference['awardUri'].present?
+              xml.awardNumber(funding_reference['awardNumber'],
+                              { 'awardURI' => funding_reference['awardUri'] }.compact)
+            end
+            if funding_reference['awardTitle'].present?
+              xml.awardTitle(funding_reference['awardTitle'])
+            end
           end
         end
       end
@@ -169,12 +191,13 @@ module Briard
             s = subject
           else
             s = {}
-            s["subject"] = subject
+            s['subject'] = subject
           end
 
-          attributes = { "subjectScheme" => s["subjectScheme"], "schemeURI" => s["schemeUri"], "valueURI" => s["valueUri"], "xml:lang" => s["lang"] }.compact
+          attributes = { 'subjectScheme' => s['subjectScheme'], 'schemeURI' => s['schemeUri'],
+                         'valueURI' => s['valueUri'], 'xml:lang' => s['lang'] }.compact
 
-          xml.subject(s["subject"], attributes)
+          xml.subject(s['subject'], attributes)
         end
       end
     end
@@ -184,7 +207,6 @@ module Briard
 
       xml.version(version_info)
     end
-
 
     def insert_language(xml)
       return xml unless language.present?
@@ -198,15 +220,18 @@ module Briard
       xml.relatedIdentifiers do
         related_identifiers.each do |related_identifier|
           attributes = {
-            'relatedIdentifierType' => related_identifier["relatedIdentifierType"],
-            'relationType' => related_identifier["relationType"],
-            'resourceTypeGeneral' => related_identifier["resourceTypeGeneral"] }.compact
+            'relatedIdentifierType' => related_identifier['relatedIdentifierType'],
+            'relationType' => related_identifier['relationType'],
+            'resourceTypeGeneral' => related_identifier['resourceTypeGeneral']
+          }.compact
 
-          attributes.merge({ 'relatedMetadataScheme' => related_identifier["relatedMetadataSchema"],
-            'schemeURI' => related_identifier["schemeUri"],
-            'schemeType' => related_identifier["schemeType"]}.compact) if %w(HasMetadata IsMetadataFor).include?(related_identifier["relationType"])
+          if %w[HasMetadata IsMetadataFor].include?(related_identifier['relationType'])
+            attributes.merge({ 'relatedMetadataScheme' => related_identifier['relatedMetadataSchema'],
+                               'schemeURI' => related_identifier['schemeUri'],
+                               'schemeType' => related_identifier['schemeType'] }.compact)
+          end
 
-          xml.relatedIdentifier(related_identifier["relatedIdentifier"], attributes)
+          xml.relatedIdentifier(related_identifier['relatedIdentifier'], attributes)
         end
       end
     end
@@ -217,25 +242,23 @@ module Briard
       xml.relatedItems do
         related_items.each do |related_item|
           attributes = {
-            'relatedItemType' => related_item["relatedItemType"],
-            'relationType' => related_item["relationType"],
+            'relatedItemType' => related_item['relatedItemType'],
+            'relationType' => related_item['relationType']
           }.compact
 
-          xml.relatedItem(related_item["relatedItem"], attributes) do
-
-            xml.relatedItemIdentifier(related_item["relatedItemIdentifier"]['relatedItemIdentifier'],
-              {
-                'relatedItemIdentifierType' => related_item["relatedItemIdentifier"]["relatedItemIdentifierType"],
-                'relatedMetadataScheme' => related_item["relatedItemIdentifier"]["relatedMetadataScheme"],
-                'schemeURI' => related_item["relatedItemIdentifier"]["schemeURI"],
-                'schemeType' => related_item["relatedItemIdentifier"]["schemeType"],
-              }.compact
-            )
+          xml.relatedItem(related_item['relatedItem'], attributes) do
+            xml.relatedItemIdentifier(related_item['relatedItemIdentifier']['relatedItemIdentifier'],
+                                      {
+                                        'relatedItemIdentifierType' => related_item['relatedItemIdentifier']['relatedItemIdentifierType'],
+                                        'relatedMetadataScheme' => related_item['relatedItemIdentifier']['relatedMetadataScheme'],
+                                        'schemeURI' => related_item['relatedItemIdentifier']['schemeURI'],
+                                        'schemeType' => related_item['relatedItemIdentifier']['schemeType']
+                                      }.compact)
 
             xml.creators do
               Array.wrap(related_item['creators']).each do |au|
                 xml.creator do
-                  insert_person(xml, au, "creator")
+                  insert_person(xml, au, 'creator')
                 end
               end
             end
@@ -246,31 +269,31 @@ module Briard
                   t = title
                 else
                   t = {}
-                  t["title"] = title
+                  t['title'] = title
                 end
 
-                attributes = { 'titleType' => t["titleType"], 'xml:lang' => t["lang"] }.compact
-                xml.title(t["title"], attributes)
+                attributes = { 'titleType' => t['titleType'], 'xml:lang' => t['lang'] }.compact
+                xml.title(t['title'], attributes)
               end
             end
 
             xml.publicationYear(related_item['publicationYear'])
             xml.volume(related_item['volume'])
             xml.issue(related_item['issue'])
-            xml.number(related_item['number'], {'numberType' => related_item['numberType']}.compact)
+            xml.number(related_item['number'],
+                       { 'numberType' => related_item['numberType'] }.compact)
             xml.firstPage(related_item['firstPage'])
             xml.lastPage(related_item['lastPage'])
             xml.publisher(related_item['publisher'])
             xml.edition(related_item['edition'])
 
             xml.contributors do
-              Array.wrap(related_item["contributors"]).each do |con|
-                xml.contributor("contributorType" => con["contributorType"] || "Other") do
-                  insert_person(xml, con, "contributor")
+              Array.wrap(related_item['contributors']).each do |con|
+                xml.contributor('contributorType' => con['contributorType'] || 'Other') do
+                  insert_person(xml, con, 'contributor')
                 end
               end
             end
-
           end
         end
       end
@@ -301,33 +324,35 @@ module Briard
             r = rights
           else
             r = {}
-            r["rights"] = rights
-            r["rightsUri"] = normalize_id(rights)
+            r['rights'] = rights
+            r['rightsUri'] = normalize_id(rights)
           end
 
           attributes = {
-            "rightsURI" => r["rightsUri"],
-            "rightsIdentifier" => r["rightsIdentifier"],
-            "rightsIdentifierScheme" => r["rightsIdentifierScheme"],
-            "schemeURI" => r["schemeUri"],
-            "xml:lang" => r["lang"]
+            'rightsURI' => r['rightsUri'],
+            'rightsIdentifier' => r['rightsIdentifier'],
+            'rightsIdentifierScheme' => r['rightsIdentifierScheme'],
+            'schemeURI' => r['schemeUri'],
+            'xml:lang' => r['lang']
           }.compact
 
-          xml.rights(r["rights"], attributes)
+          xml.rights(r['rights'], attributes)
         end
       end
     end
 
     def insert_descriptions(xml)
-      return xml unless descriptions.present? || container && container["title"].present?
+      return xml unless descriptions.present? || (container && container['title'].present?)
 
       xml.descriptions do
-        if container && container["title"].present?
-          issue = container["issue"].present? ? "(#{container["issue"]})" : nil
-          volume_issue = container["volume"].present? ? [container["volume"], issue].join("") : nil
-          pages = [container["firstPage"], container["lastPage"]].compact.join("-") if container["firstPage"].present?
-          series_information = [container["title"], volume_issue, pages].compact.join(", ")
-          xml.description(series_information, 'descriptionType' => "SeriesInformation")
+        if container && container['title'].present?
+          issue = container['issue'].present? ? "(#{container['issue']})" : nil
+          volume_issue = container['volume'].present? ? [container['volume'], issue].join : nil
+          if container['firstPage'].present?
+            pages = [container['firstPage'], container['lastPage']].compact.join('-')
+          end
+          series_information = [container['title'], volume_issue, pages].compact.join(', ')
+          xml.description(series_information, 'descriptionType' => 'SeriesInformation')
         end
 
         Array.wrap(descriptions).each do |description|
@@ -335,13 +360,14 @@ module Briard
             d = description
           else
             d = {}
-            d["description"] = description
-            d["descriptionType"] = "Abstract"
+            d['description'] = description
+            d['descriptionType'] = 'Abstract'
           end
 
-          attributes = { 'xml:lang' => d["lang"], 'descriptionType' => d["descriptionType"] || "Abstract" }.compact
+          attributes = { 'xml:lang' => d['lang'],
+                         'descriptionType' => d['descriptionType'] || 'Abstract' }.compact
 
-          xml.description(d["description"], attributes)
+          xml.description(d['description'], attributes)
         end
       end
     end
@@ -352,31 +378,31 @@ module Briard
       xml.geoLocations do
         geo_locations.each do |geo_location|
           xml.geoLocation do
-            xml.geoLocationPlace(geo_location["geoLocationPlace"]) if geo_location["geoLocationPlace"]
+            if geo_location['geoLocationPlace']
+              xml.geoLocationPlace(geo_location['geoLocationPlace'])
+            end
 
-            if geo_location["geoLocationPoint"]
+            if geo_location['geoLocationPoint']
               xml.geoLocationPoint do
-                xml.pointLatitude(geo_location.dig("geoLocationPoint", "pointLatitude"))
-                xml.pointLongitude(geo_location.dig("geoLocationPoint", "pointLongitude"))
+                xml.pointLatitude(geo_location.dig('geoLocationPoint', 'pointLatitude'))
+                xml.pointLongitude(geo_location.dig('geoLocationPoint', 'pointLongitude'))
               end
             end
 
-            if geo_location["geoLocationBox"]
+            if geo_location['geoLocationBox']
               xml.geoLocationBox do
-                xml.westBoundLongitude(geo_location.dig("geoLocationBox", "westBoundLongitude"))
-                xml.eastBoundLongitude(geo_location.dig("geoLocationBox", "eastBoundLongitude"))
-                xml.southBoundLatitude(geo_location.dig("geoLocationBox", "southBoundLatitude"))
-                xml.northBoundLatitude(geo_location.dig("geoLocationBox", "northBoundLatitude"))
+                xml.westBoundLongitude(geo_location.dig('geoLocationBox', 'westBoundLongitude'))
+                xml.eastBoundLongitude(geo_location.dig('geoLocationBox', 'eastBoundLongitude'))
+                xml.southBoundLatitude(geo_location.dig('geoLocationBox', 'southBoundLatitude'))
+                xml.northBoundLatitude(geo_location.dig('geoLocationBox', 'northBoundLatitude'))
               end
             end
-            if geo_location["geoLocationPolygon"]
-              geo_location["geoLocationPolygon"].each do |geo_location_polygon|
-                xml.geoLocationPolygon do
-                  geo_location_polygon.each do |polygon_point|
-                    xml.polygonPoint do
-                      xml.pointLatitude(polygon_point.dig("polygonPoint", "pointLatitude"))
-                      xml.pointLongitude(polygon_point.dig("polygonPoint", "pointLongitude"))
-                    end
+            geo_location['geoLocationPolygon']&.each do |geo_location_polygon|
+              xml.geoLocationPolygon do
+                geo_location_polygon.each do |polygon_point|
+                  xml.polygonPoint do
+                    xml.pointLatitude(polygon_point.dig('polygonPoint', 'pointLatitude'))
+                    xml.pointLongitude(polygon_point.dig('polygonPoint', 'pointLongitude'))
                   end
                 end
               end
@@ -387,9 +413,9 @@ module Briard
     end
 
     def root_attributes
-      { :'xmlns:xsi' => 'http://www.w3.org/2001/XMLSchema-instance',
-        :'xsi:schemaLocation' => 'http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd',
-        :'xmlns' => 'http://datacite.org/schema/kernel-4' }
+      { 'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
+        'xsi:schemaLocation': 'http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd',
+        xmlns: 'http://datacite.org/schema/kernel-4' }
     end
   end
 end

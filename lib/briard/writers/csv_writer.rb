@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Briard
   module Writers
     module CsvWriter
-      require "csv"
+      require 'csv'
 
       def csv
         return nil unless valid?
@@ -11,9 +13,9 @@ module Briard
           url: url,
           registered: get_iso8601_date(date_registered),
           state: state,
-          resource_type_general: types["resourceTypeGeneral"],
-          resource_type: types["resourceType"],
-          title: parse_attributes(titles, content: "title", first: true),
+          resource_type_general: types['resourceTypeGeneral'],
+          resource_type: types['resourceType'],
+          title: parse_attributes(titles, content: 'title', first: true),
           author: authors_as_string(creators),
           publisher: publisher,
           publication_year: publication_year

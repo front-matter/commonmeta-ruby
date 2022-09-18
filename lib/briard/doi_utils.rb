@@ -3,13 +3,13 @@
 module Briard
   module DoiUtils
     def validate_doi(doi)
-      doi = Array(/\A(?:(http|https):\/(\/)?(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)\/)?(doi:)?(10\.\d{4,5}\/.+)\z/.match(doi)).last
+      doi = Array(%r{\A(?:(http|https):/(/)?(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}/.+)\z}.match(doi)).last
       # remove non-printing whitespace and downcase
       doi.delete("\u200B").downcase if doi.present?
     end
 
     def validate_funder_doi(doi)
-      doi = Array(/\A(?:(http|https):\/(\/)?(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)\/)?(doi:)?(10\.13039\/)?([1-9]\d+)\z/.match(doi)).last
+      doi = Array(%r{\A(?:(http|https):/(/)?(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.13039/)?([1-9]\d+)\z}.match(doi)).last
 
       # remove non-printing whitespace and downcase
       if doi.present?
@@ -19,17 +19,17 @@ module Briard
     end
 
     def validate_prefix(doi)
-      Array(/\A(?:(http|https):\/(\/)?(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)\/)?(doi:)?(10\.\d{4,5}).*\z/.match(doi)).last
+      Array(%r{\A(?:(http|https):/(/)?(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}).*\z}.match(doi)).last
     end
 
     def doi_resolver(doi, options = {})
       sandbox = Array(/handle\.stage\.datacite\.org/.match(doi)).last
-      sandbox.present? || options[:sandbox] ? "https://handle.stage.datacite.org/" : "https://doi.org/"
+      sandbox.present? || options[:sandbox] ? 'https://handle.stage.datacite.org/' : 'https://doi.org/'
     end
 
     def doi_api_url(doi, options = {})
       sandbox = Array(/handle\.stage\.datacite.\org/.match(doi)).last
-      sandbox.present? || options[:sandbox] ? "https://api.stage.datacite.org/dois/#{doi_from_url(doi)}?include=media,client"  : "https://api.datacite.org/dois/#{doi_from_url(doi)}?include=media,client"
+      sandbox.present? || options[:sandbox] ? "https://api.stage.datacite.org/dois/#{doi_from_url(doi)}?include=media,client" : "https://api.datacite.org/dois/#{doi_from_url(doi)}?include=media,client"
     end
 
     def normalize_doi(doi, options = {})
@@ -41,9 +41,9 @@ module Briard
     end
 
     def doi_from_url(url)
-      if /\A(?:(http|https):\/\/(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)\/)?(doi:)?(10\.\d{4,5}\/.+)\z/.match(url)
+      if %r{\A(?:(http|https)://(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}/.+)\z}.match?(url)
         uri = Addressable::URI.parse(url)
-        uri.path.gsub(/^\//, '').downcase
+        uri.path.gsub(%r{^/}, '').downcase
       end
     end
 
@@ -59,7 +59,7 @@ module Briard
       url = "https://doi.org/ra/#{prefix}"
       result = Maremma.get(url)
 
-      result.body.dig("data", 0, "RA")
+      result.body.dig('data', 0, 'RA')
     end
   end
 end

@@ -4,9 +4,9 @@
 # Reverses Array.wrap, but uses self to allow chaining with Array.wrap
 class Array
   def unwrap
-    case self.length
+    case length
     when 0 then nil
-    when 1 then self.first
+    when 1 then first
     else self
     end
   end

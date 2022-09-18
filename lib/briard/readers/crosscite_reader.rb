@@ -3,9 +3,9 @@
 module Briard
   module Readers
     module CrossciteReader
-      def read_crosscite(string: nil, **options)
+      def read_crosscite(string: nil, **_options)
         errors = jsonlint(string)
-        return { "errors" => errors } if errors.present?
+        return { 'errors' => errors } if errors.present?
 
         string.present? ? Maremma.from_json(string) : {}
       end

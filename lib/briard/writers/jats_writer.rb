@@ -4,8 +4,8 @@ module Briard
   module Writers
     module JatsWriter
       def jats
-        @jats ||= Nokogiri::XML::Builder.new(:encoding => 'UTF-8') do |xml|
-          xml.send("element-citation", publication_type) do
+        @jats ||= Nokogiri::XML::Builder.new(encoding: 'UTF-8') do |xml|
+          xml.send(:'element-citation', publication_type) do
             insert_citation(xml)
           end
         end.to_xml
@@ -18,29 +18,29 @@ module Briard
         insert_source(xml)
         insert_publisher_name(xml) if publisher.present? && !is_data?
         insert_publication_date(xml)
-        insert_volume(xml) if container.to_h["volume"].present?
-        insert_issue(xml) if container.to_h["issue"].present?
-        insert_fpage(xml) if container.to_h["firstPage"].present?
-        insert_lpage(xml) if container.to_h["lastPage"].present?
+        insert_volume(xml) if container.to_h['volume'].present?
+        insert_issue(xml) if container.to_h['issue'].present?
+        insert_fpage(xml) if container.to_h['firstPage'].present?
+        insert_lpage(xml) if container.to_h['lastPage'].present?
         insert_version(xml) if version_info.present?
         insert_pub_id(xml)
       end
 
       def is_article?
-        publication_type.fetch('publication-type', nil) == "journal"
+        publication_type.fetch('publication-type', nil) == 'journal'
       end
 
       def is_data?
-        publication_type.fetch('publication-type', nil) == "data"
+        publication_type.fetch('publication-type', nil) == 'data'
       end
 
       def is_chapter?
-        publication_type.fetch('publication-type', nil) == "chapter"
+        publication_type.fetch('publication-type', nil) == 'chapter'
       end
 
       def insert_authors(xml)
         if creators.present?
-          xml.send("person-group", "person-group-type" => "author") do
+          xml.send(:'person-group', 'person-group-type' => 'author') do
             Array.wrap(creators).each do |au|
               xml.name do
                 insert_contributor(xml, au)
@@ -52,7 +52,7 @@ module Briard
 
       def insert_editors(xml)
         if contributors.present?
-          xml.send("person-group", "person-group-type" => "editor") do
+          xml.send(:'person-group', 'person-group-type' => 'editor') do
             Array.wrap(contributors).each do |con|
               xml.name do
                 insert_contributor(xml, con)
@@ -63,15 +63,18 @@ module Briard
       end
 
       def insert_contributor(xml, person)
-        xml.surname(person["familyName"]) if person["familyName"].present?
-        xml.send("given-names", person["givenName"]) if person["givenName"].present?
+        xml.surname(person['familyName']) if person['familyName'].present?
+        xml.send(:'given-names', person['givenName']) if person['givenName'].present?
       end
 
       def insert_citation_title(xml)
         case publication_type.fetch('publication-type', nil)
-        when "data" then xml.send("data-title", parse_attributes(titles, content: "title", first: true))
-        when "journal" then xml.send("article-title", parse_attributes(titles, content: "title", first: true))
-        when "chapter" then xml.send("chapter-title", parse_attributes(titles, content: "title", first: true))
+        when 'data' then xml.send(:'data-title',
+                                  parse_attributes(titles, content: 'title', first: true))
+        when 'journal' then xml.send(:'article-title',
+                                     parse_attributes(titles, content: 'title', first: true))
+        when 'chapter' then xml.send(:'chapter-title',
+                                     parse_attributes(titles, content: 'title', first: true))
         end
       end
 
@@ -79,38 +82,39 @@ module Briard
         if is_chapter?
           xml.source(publisher)
         elsif is_article? || is_data?
-          xml.source(container && container["title"] || publisher)
+          xml.source((container && container['title']) || publisher)
         else
-          xml.source(parse_attributes(titles, content: "title", first: true))
+          xml.source(parse_attributes(titles, content: 'title', first: true))
         end
       end
 
       def insert_publisher_name(xml)
-        xml.send("publisher-name", publisher)
+        xml.send(:'publisher-name', publisher)
       end
 
       def insert_publication_date(xml)
-        year, month, day = get_date_parts(get_date(dates, "Issued")).to_h.fetch("date-parts", []).first
+        year, month, day = get_date_parts(get_date(dates, 'Issued')).to_h.fetch('date-parts',
+                                                                                []).first
 
-        xml.year(year, "iso-8601-date" => get_date(dates, "Issued"))
+        xml.year(year, 'iso-8601-date' => get_date(dates, 'Issued'))
         xml.month(month.to_s.rjust(2, '0')) if month.present?
         xml.day(day.to_s.rjust(2, '0')) if day.present?
       end
 
       def insert_volume(xml)
-        xml.volume(container["volume"])
+        xml.volume(container['volume'])
       end
 
       def insert_issue(xml)
-        xml.issue(container["issue"])
+        xml.issue(container['issue'])
       end
 
       def insert_fpage(xml)
-        xml.fpage(container["firstPage"])
+        xml.fpage(container['firstPage'])
       end
 
       def insert_lpage(xml)
-        xml.lpage(container["lastPage"])
+        xml.lpage(container['lastPage'])
       end
 
       def insert_version(xml)
@@ -119,15 +123,16 @@ module Briard
 
       def insert_pub_id(xml)
         return nil unless doi.present?
-        xml.send("pub-id", doi, "pub-id-type" => "doi")
+
+        xml.send(:'pub-id', doi, 'pub-id-type' => 'doi')
       end
 
       def date
-        get_date(dates, "Issued") ? get_date_parts(get_date(dates, "Issued")) : get_date_parts(publication_year)
+        get_date_parts(get_date(dates, 'Issued') || publication_year)
       end
 
       def publication_type
-        { 'publication-type' => Briard::Utils::CR_TO_JATS_TRANSLATIONS[types["resourceType"]] || Briard::Utils::SO_TO_JATS_TRANSLATIONS[types["schemaOrg"]] }.compact
+        { 'publication-type' => Briard::Utils::CR_TO_JATS_TRANSLATIONS[types['resourceType']] || Briard::Utils::SO_TO_JATS_TRANSLATIONS[types['schemaOrg']] }.compact
       end
     end
   end

@@ -3,11 +3,11 @@
 module Briard
   module Readers
     module DataciteJsonReader
-      def read_datacite_json(string: nil, **options)
+      def read_datacite_json(string: nil, **_options)
         errors = jsonlint(string)
-        return { "errors" => errors } if errors.present?
+        return { 'errors' => errors } if errors.present?
 
-        string.present? ? Maremma.from_json(string).transform_keys! { |key| key.underscore } : {}
+        string.present? ? Maremma.from_json(string).transform_keys!(&:underscore) : {}
       end
     end
   end

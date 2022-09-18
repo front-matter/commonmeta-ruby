@@ -34,7 +34,7 @@ RSpec.configure do |config|
 end
 
 def fixture_path
-  File.expand_path("../fixtures", __FILE__) + '/'
+  "#{File.expand_path('fixtures', __dir__)}/"
 end
 
 # This code was adapted from Thor, available under MIT-LICENSE
@@ -52,7 +52,7 @@ def capture(stream)
   result
 end
 
-def capture_stdout(&block)
+def capture_stdout
   original_stdout = $stdout
   $stdout = fake = StringIO.new
   begin
@@ -63,7 +63,7 @@ def capture_stdout(&block)
   fake.string
 end
 
-def capture_stderr(&block)
+def capture_stderr
   original_stderr = $stderr
   $stderr = fake = StringIO.new
   begin
@@ -77,7 +77,8 @@ end
 # This code was adapted from Ruby on Rails, available under MIT-LICENSE
 # Copyright (c) 2004-2013 David Heinemeier Hansson
 def silence_warnings
-  old_verbose, $VERBOSE = $VERBOSE, nil
+  old_verbose = $VERBOSE
+  $VERBOSE = nil
   yield
 ensure
   $VERBOSE = old_verbose
@@ -86,7 +87,7 @@ end
 alias silence capture
 
 VCR.configure do |c|
-  c.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   c.hook_into :webmock
   c.ignore_localhost = true
   c.ignore_hosts 'codeclimate.com'

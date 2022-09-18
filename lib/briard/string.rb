@@ -2,6 +2,6 @@
 
 class String
   def my_titleize
-    self.gsub(/\b(['’]?[a-z])/) { "#{$1.capitalize}" }
+    gsub(/\b(['’]?[a-z])/) { ::Regexp.last_match(1).capitalize.to_s }
   end
 end
