@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/front-matter/briard/tree/HEAD)
+## [v2.5.0](https://github.com/front-matter/briard/tree/v2.5.0) (2022-09-18)
 
-[Full Changelog](https://github.com/front-matter/briard/compare/v2.4.2...HEAD)
+[Full Changelog](https://github.com/front-matter/briard/compare/v2.4.2...v2.5.0)
 
 **Fixed bugs:**
 
