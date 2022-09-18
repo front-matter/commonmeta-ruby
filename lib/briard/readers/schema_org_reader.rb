@@ -82,7 +82,7 @@ module Briard
         end.compact.uniq
 
         id = options[:doi]
-        id = meta.fetch("@id", nil) if id.blank? && meta.fetch("@id", nil).to_s.start_with?("https://doi.org")
+        id = meta.fetch("@id", nil) if id.blank? && URI(meta.fetch("@id", "")).host == "doi.org"
         id = meta.fetch("identifier", nil) if id.blank? # && meta.fetch("identifier", nil).to_s.start_with?("https://doi.org")#&& meta.fetch("@", nil).start_with?("https://doi.org")
         id = normalize_id(id)
 
