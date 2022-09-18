@@ -940,7 +940,7 @@ module Briard
         end
 
         # alternatively find the nameIdentifier in the sameAs attribute
-        c["@id"] = c["sameAs"].first if Array(c["sameAs"]).find { |item| item.start_with?("https://orcid.org") }
+        c["@id"] = c["sameAs"].first if Array(c["sameAs"]).find { |item| URI(item).host == "orcid.org" }
 
         c["nameIdentifier"] = [{ "__content__" => c["@id"], "nameIdentifierScheme" => "ORCID", "schemeUri" => "https://orcid.org" }] if normalize_orcid(c["@id"])
         c["@type"] = c["@type"].find { |t| %w(Person Organization).include?(t) } if c["@type"].is_a?(Array)
