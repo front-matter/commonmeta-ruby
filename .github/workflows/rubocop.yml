@@ -32,6 +32,9 @@ jobs:
       with:
         ruby-version: 2.7
 
+    - name: Install dependencies
+      run: bundle install
+
     - name: Rubocop run
       run: bundle exec rubocop --require code_scanning --format CodeScanning::SarifFormatter -o rubocop.sarif
 
