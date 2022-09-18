@@ -22,11 +22,11 @@ require 'csl/styles'
 require 'edtf'
 require 'base32/url'
 
-require "briard/version"
-require "briard/metadata"
-require "briard/cli"
-require "briard/string"
-require "briard/array"
-require "briard/whitelist_scrubber"
+require 'briard/version'
+require 'briard/metadata'
+require 'briard/cli'
+require 'briard/string'
+require 'briard/array'
+require 'briard/whitelist_scrubber'
 
 ENV['USER_AGENT'] ||= "Mozilla/5.0 (compatible; Maremma/#{Maremma::VERSION}; mailto:info@front-matter.io)"
