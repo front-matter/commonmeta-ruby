@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    briard (2.6.1)
+    briard (2.6.2)
       activesupport (>= 4.2.5)
       base32-url (>= 0.5.0, < 1)
       benchmark_methods (~> 0.7)
@@ -256,6 +256,7 @@ DEPENDENCIES
   rubocop-rake (~> 0.6.0)
   rubocop-rspec (~> 2.13)
   simplecov (= 0.21.2)
+  simplecov_json_formatter (~> 0.1.2)
   vcr (~> 3.0, >= 3.0.3)
   webmock (~> 3.0, >= 3.0.1)
 
