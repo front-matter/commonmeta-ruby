@@ -1,6 +1,5 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5785519.svg)](https://doi.org/10.5281/zenodo.5785519)
 [![Gem Version](https://badge.fury.io/rb/briard.svg)](https://badge.fury.io/rb/briard)
-![Build Ruby Gem](https://github.com/front-matter/briard/workflows/Build%20Ruby%20Gem/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/42577c8858b5ab71a801/maintainability)](https://codeclimate.com/github/front-matter/briard/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/42577c8858b5ab71a801/test_coverage)](https://codeclimate.com/github/front-matter/briard/test_coverage)
 
