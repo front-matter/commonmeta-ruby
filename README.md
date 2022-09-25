@@ -1,3 +1,4 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2fbe51815b1048928956309e4ec965b9)](https://app.codacy.com/gh/front-matter/briard?utm_source=github.com&utm_medium=referral&utm_content=front-matter/briard&utm_campaign=Badge_Grade_Settings)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5785519.svg)](https://doi.org/10.5281/zenodo.5785519)
 [![Gem Version](https://badge.fury.io/rb/briard.svg)](https://badge.fury.io/rb/briard)
 ![Build Ruby Gem](https://github.com/front-matter/briard/workflows/Build%20Ruby%20Gem/badge.svg)
