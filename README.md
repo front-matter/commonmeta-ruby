@@ -1,7 +1,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5785519.svg)](https://doi.org/10.5281/zenodo.5785519)
 [![Gem Version](https://badge.fury.io/rb/briard.svg)](https://badge.fury.io/rb/briard)
-[![Maintainability](https://api.codeclimate.com/v1/badges/42577c8858b5ab71a801/maintainability)](https://codeclimate.com/github/front-matter/briard/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/42577c8858b5ab71a801/test_coverage)](https://codeclimate.com/github/front-matter/briard/test_coverage)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=front-matter_briard&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=front-matter_briard)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=front-matter_briard&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=front-matter_briard)
 
 # Briard: a Ruby library for conversion of DOI Metadata
 
