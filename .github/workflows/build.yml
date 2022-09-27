@@ -22,14 +22,12 @@ jobs:
         bundle install
         bundle exec rspec
 
-    - name: Publish code coverage
-      uses: paambaati/codeclimate-action@v3.0.0
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
       env:
-        CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-      with:
-          coverageCommand: bundle exec rspec
-          coverageLocations: ${{ github.workspace }}/coverage/coverage.json:simplecov
-
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        
     - name: Notify Slack
       uses: adamkdean/simple-slack-notify@1.0.4
       with:
