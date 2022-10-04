@@ -57,6 +57,11 @@ module Briard
       puts encode_doi(prefix)
     end
 
+    desc '', 'decode'
+    def decode(doi)
+      puts decode_doi(doi)
+    end
+
     default_task :convert
   end
 end

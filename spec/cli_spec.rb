@@ -231,4 +231,12 @@ describe Briard::CLI do
       expect { subject.encode input }.to output(/https:\/\/doi.org\/10.53731/).to_stdout
     end
   end
+
+  describe "decode" do
+    let(:input) { "10.53731/cjx855h-hn5jtq8" }
+
+    it "blog post" do
+      expect { subject.decode input }.to output(/464528469187255429864\n/).to_stdout
+    end
+  end
 end
