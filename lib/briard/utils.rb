@@ -1170,6 +1170,8 @@ module Briard
     # strip milliseconds if there is a time, as it interferes with edtc parsing
     # keep dates unchanged
     def strip_milliseconds(iso8601_time)
+      return iso8601_time.split(" ").first if iso8601_time.to_s.include? " "
+
       return iso8601_time.split(".").first + "Z" if iso8601_time.to_s.include? "."
 
       return iso8601_time

@@ -48,7 +48,7 @@ module Briard
     def insert_journal(xml)
       xml.journal do
         if language.present?
-          xml.journal_metadata('language' => language) do
+          xml.journal_metadata('language' => language[0..1]) do
             xml.full_title(container['title'])
           end
         else
@@ -71,7 +71,7 @@ module Briard
     end
 
     def insert_posted_content(xml)
-      posted_content = { 'type' => 'other', 'language' => language }.compact
+      posted_content = { 'type' => 'other', 'language' => language ? language[0..1] : nil }.compact
 
       xml.posted_content(posted_content) do
         insert_group_title(xml)
@@ -165,7 +165,7 @@ module Briard
 
     def insert_crossref_alternate_identifiers(xml)
       alternate_identifier = Array.wrap(identifiers).reject do |r|
-        r['identifierType'] == 'DOI'
+        %w[DOI, URL].include?(r['identifierType'])
       end.first
       return xml if alternate_identifier.blank?
 

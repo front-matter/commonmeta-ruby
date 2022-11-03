@@ -143,6 +143,9 @@ describe Briard::Metadata, vcr: true do
       expect(subject.subjects).to eq([])
       expect(subject.container).to eq('type' => 'Blog')
       expect(subject.language).to eq('en-US')
+      expect(subject.dates).to eq([{"date"=>"2022-10-21", "dateType"=>"Issued"},
+        {"date"=>"2022-10-21", "dateType"=>"Created"},
+        {"date"=>"2022-10-21", "dateType"=>"Updated"}])
       expect(subject.rights_list).to eq([{
                                           'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
