@@ -119,5 +119,35 @@ describe Briard::Metadata, vcr: true do
       expect(crossref.dig('titles',
                           'title')).to eq('Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health')
     end
+
+    it 'schema.org from another science blog' do
+      input = 'https://donnywinston.com/posts/implementing-the-fair-principles-through-fair-enabling-artifacts-and-services/'
+      subject = described_class.new(input: input, from: 'schema_org')
+      expect(subject.valid?).to be true
+      expect(subject.doi).to eq('10.57099/11h5yt3819')
+      expect(subject.url).to eq('https://donnywinston.com/posts/implementing-the-fair-principles-through-fair-enabling-artifacts-and-services')
+      expect(subject.types['schemaOrg']).to eq('BlogPosting')
+      expect(subject.types['resourceTypeGeneral']).to eq('Preprint')
+      expect(subject.types['ris']).to eq('GEN')
+      expect(subject.types['citeproc']).to eq('post-weblog')
+      expect(subject.titles).to eq([{"title"=>"Implementing the FAIR Principles Through FAIR-Enabling Artifacts and Services"}])
+      expect(subject.creators).to eq([{"affiliation"=>[],
+        "familyName"=>"Winston",
+        "givenName"=>"Donny",
+        "name"=>"Winston, Donny",
+        "nameIdentifiers"=>
+          [{"nameIdentifier"=>"https://orcid.org/0000-0002-8424-0604",
+            "nameIdentifierScheme"=>"ORCID",
+            "schemeUri"=>"https://orcid.org"}],
+        "nameType"=>"Personal"}])
+      expect(subject.subjects).to eq([])
+      expect(subject.container).to eq('type' => 'Blog')
+      expect(subject.language).to eq('en-US')
+      expect(subject.rights_list).to eq([{
+                                          'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
+                                        }])
+      crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
+      expect(crossref.dig('titles', 'title')).to eq('Implementing the FAIR Principles Through FAIR-Enabling Artifacts and Services')
+    end
   end
 end

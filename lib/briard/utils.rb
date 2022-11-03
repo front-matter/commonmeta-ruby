@@ -939,6 +939,9 @@ module Briard
           scheme_uri = nil
         end
 
+        # alternatively find the nameIdentifier in the identifer attribute
+        c["@id"] = c["identifier"] if c["identifier"].present? && c["@id"].blank?
+
         # alternatively find the nameIdentifier in the sameAs attribute
         c["@id"] = c["sameAs"].first if Array(c["sameAs"]).find { |item| URI(item).host == "orcid.org" }
 

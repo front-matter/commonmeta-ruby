@@ -33,7 +33,7 @@ module Briard
         if response.body['data'].is_a?(Hash)
           string = response.body.dig('data', 'html', 'head', 'script', 1, '__content__')
         else
-          doc = Nokogiri::XML(response.body.fetch('data', nil), nil, 'UTF-8')
+          doc = Nokogiri::HTML(response.body.fetch('data', nil), nil, 'UTF-8')
 
           # workaround for xhtml documents
           nodeset = doc.at("script[type='application/ld+json']")
@@ -50,7 +50,7 @@ module Briard
           # workaround for html language attribute if no language is set via schema.org
           lang = doc.at('html')['lang']
           hsh['inLanguage'] = lang if hsh['inLanguage'].blank?
-
+          
           # workaround if issn not included with schema.org
           name = doc.at("meta[property='og:site_name']")
           issn = doc.at("meta[name='citation_issn']")
@@ -186,6 +186,8 @@ module Briard
         language = case meta.fetch('inLanguage', nil)
                    when String
                      meta.fetch('inLanguage')
+                   when Array
+                     meta.fetch('inLanguage').first
                    when Object
                      meta.dig('inLanguage', 'alternateName') || meta.dig('inLanguage', 'name')
                    end
