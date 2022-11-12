@@ -23,8 +23,8 @@ module Briard
         schema_version = 'http://datacite.org/schema/kernel-4'
       end
 
-      kernel = schema_version.to_s.split('/').last
-      filepath = File.expand_path("../../../resources/#{kernel}/metadata.xsd", __FILE__)
+      k = schema_version.to_s.split('/').last
+      filepath = File.expand_path("../../../resources/#{k}/metadata.xsd", __FILE__)
       schema = Nokogiri::XML::Schema(open(filepath))
 
       schema.validate(Nokogiri::XML(xml, nil, 'UTF-8')).map(&:to_s).unwrap

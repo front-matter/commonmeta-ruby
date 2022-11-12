@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'csl-styles', '~> 1.0', '>= 1.0.1.10'
   s.add_dependency 'dotenv', '~> 2.1', '>= 2.1.1'
   s.add_dependency 'edtf', '~> 3.0', '>= 3.0.4'
-  s.add_dependency 'faraday', '~> 0.17.3'
+  s.add_dependency 'faraday', '~> 2.6.0'
   s.add_dependency 'faraday-multipart', '~> 1.0.4'
   s.add_dependency 'gender_detector', '~> 0.1.2'
   s.add_dependency 'iso8601', '~> 0.9.1'
