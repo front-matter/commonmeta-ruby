@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'thor', '~> 1.1', '>= 1.1.0'
   s.add_development_dependency 'bundler', '~> 2.3', '>= 2.3.1'
   s.add_development_dependency 'code-scanning-rubocop', '~> 0.6.1'
-  s.add_development_dependency 'hashdiff', ['>= 1.0.0.beta1', '< 2.0.0']
+  s.add_development_dependency 'hashdiff', '~> 1.0.1'
   s.add_development_dependency 'rack-test', '~> 2.0'
   s.add_development_dependency 'rake', '~> 12.0'
   s.add_development_dependency 'rspec', '~> 3.4'
