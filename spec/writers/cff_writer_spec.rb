@@ -71,7 +71,7 @@ describe Briard::Metadata, vcr: true do
                                      { 'name' => 'The Ruby Citation File Format Developers' }])
       expect(json['title']).to eq('Ruby CFF Library')
       expect(json['abstract']).to eq('This library provides a Ruby interface to manipulate Citation File Format files')
-      expect(json['date-released']).to eq('2021-08-18')
+      expect(json['date-released']).to eq('2022-11-05')
       expect(json['repository-code']).to eq('https://github.com/citation-file-format/ruby-cff')
       expect(json['keywords']).to eq(['ruby', 'credit', 'software citation', 'research software',
                                       'software sustainability', 'metadata', 'citation file format', 'cff'])

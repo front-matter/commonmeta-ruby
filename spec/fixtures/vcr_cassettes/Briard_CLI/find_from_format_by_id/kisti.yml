@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Accept-Encoding:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Aug 2022 10:16:25 GMT
+      - Sat, 12 Nov 2022 18:00:54 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -30,10 +30,8 @@ http_interactions:
       - gzip
       Cf-Cache-Status:
       - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=v7WDl%2FlaeEebim%2BUTNg3T1RW4Mx0tl1a6Mox%2FNK067OGRneByrVh%2FLV8akEpwddaPBABJex%2Bwths46WwKeQ3%2FfG3ULdRY7hhkHCTM7oxYeYPbTyr2mL2AkVNDVQaFF7eGfcNj2k%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=R9WwKwbdebh15TFFNlpc0oLBiGtEW1TbnYFr9bKFzUAudmM9BwqylHLMn9zPtmZ8iRFR5WntBOInVspbqSgkQhFkrkqhFHj27fsGPdG%2FIQz6JHXzF4qkY%2BGD9RFsm6dY%2FICUPVU%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -41,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 73f317b7dbfc0c0d-AMS
+      - 76912b7b4d050ea8-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -49,5 +47,5 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9UwNDIyUdiGiQI0jQ2zM4xFMJKFLLFQsAjMx0pDMAAAA=
     http_version:
-  recorded_at: Tue, 23 Aug 2022 10:16:25 GMT
+  recorded_at: Sat, 12 Nov 2022 18:00:54 GMT
 recorded_with: VCR 3.0.3

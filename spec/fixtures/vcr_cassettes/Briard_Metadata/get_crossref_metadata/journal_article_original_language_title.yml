@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Accept-Encoding:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Aug 2022 10:16:04 GMT
+      - Sat, 12 Nov 2022 18:04:56 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -30,10 +30,8 @@ http_interactions:
       - gzip
       Cf-Cache-Status:
       - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yq2isg7vVPhqFSdfuSPcWMCQ6AovEd9OtXcoD4sX%2F1MY4pwy1BQYPpJfk7VkbQyc8UtkJQh555yhHv9BogdTKZWq3Mb4Qv5oJEv3gv6oxYVlo9CkSab5PWURit6EE6NMqMHOh4k%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=UuXtHpoOcPLy3nGjPs9gdJZFt91RMwqvcwvo3hld7b2opprd7nRgYY0iNmxgx6SCxTSzfrLZ0rpcNKSpP4TbhUdZo90iMlCQeJBGdddvAHj6QJO1UuT%2B1iA4XDuvATRSF%2FTgZrU%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -41,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 73f31731da71b74f-AMS
+      - 769131653eb1b785-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -49,7 +47,7 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9czMDAyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA65axkDYAAAA=
     http_version:
-  recorded_at: Tue, 23 Aug 2022 10:16:04 GMT
+  recorded_at: Sat, 12 Nov 2022 18:04:56 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.7600/jspfsm.56.60/transform/application/vnd.crossref.unixsd+xml
@@ -58,7 +56,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
       Accept:
       - text/xml;charset=utf-8
       Accept-Encoding:
@@ -69,13 +67,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Aug 2022 10:16:04 GMT
+      - Sat, 12 Nov 2022 18:04:57 GMT
       Content-Length:
       - '1521'
       Set-Cookie:
-      - AWSALB=1v5qls6pUZTP860WPcJKVJ3Df0CSP3xdJKUpwNj27Egmgvoj9q9gRrwvSRYKc6A/PXiL5dxF1Pf4C7uXtiCaiJV02j68k1w2aERi1txxrJigS0ePzspLj28hatJp;
-        Expires=Tue, 30 Aug 2022 10:16:04 GMT; Path=/, AWSALBCORS=1v5qls6pUZTP860WPcJKVJ3Df0CSP3xdJKUpwNj27Egmgvoj9q9gRrwvSRYKc6A/PXiL5dxF1Pf4C7uXtiCaiJV02j68k1w2aERi1txxrJigS0ePzspLj28hatJp;
-        Expires=Tue, 30 Aug 2022 10:16:04 GMT; Path=/; SameSite=None
+      - AWSALB=g+foddOYmMGlpgfzeprMewJs9L9cUn8U0+g8C68FErSPKCp3dYxoBYcemk9bARGJ8KFZa6wfLvUigAtxvobThILZOlm+fIZfM6QjXeLnf0DiAI/mQqzAam5Hwafi;
+        Expires=Sat, 19 Nov 2022 18:04:57 GMT; Path=/, AWSALBCORS=g+foddOYmMGlpgfzeprMewJs9L9cUn8U0+g8C68FErSPKCp3dYxoBYcemk9bARGJ8KFZa6wfLvUigAtxvobThILZOlm+fIZfM6QjXeLnf0DiAI/mQqzAam5Hwafi;
+        Expires=Sat, 19 Nov 2022 18:04:57 GMT; Path=/; SameSite=None
       Link:
       - <http://dx.doi.org/10.7600/jspfsm.56.60>; rel="canonical", <https://www.jstage.jst.go.jp/article/jspfsm/56/1/56_1_60/_pdf>;
         version="vor"; rel="item"
@@ -111,5 +109,5 @@ http_interactions:
       string: !binary |-
         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
     http_version:
-  recorded_at: Tue, 23 Aug 2022 10:16:05 GMT
+  recorded_at: Sat, 12 Nov 2022 18:04:57 GMT
 recorded_with: VCR 3.0.3

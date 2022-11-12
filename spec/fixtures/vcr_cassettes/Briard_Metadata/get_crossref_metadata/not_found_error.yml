@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Accept-Encoding:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Aug 2022 10:15:43 GMT
+      - Sat, 12 Nov 2022 18:05:24 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -30,10 +30,8 @@ http_interactions:
       - gzip
       Cf-Cache-Status:
       - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yGPGoL5CJZYXpd53ZFWMdVvXd6HaIW0HGdB%2Fr43pOrp4xwvPATxfjqxnaWHhH%2FRULgUga8%2FIIIKkqgIjejUMk5ORYQbbluY9vltx2XknZVM6iZlbdPGtnmvHooC31k7x%2BFPY9CM%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0Jsju9c9PjDcMHk0pStSYGQhUMWXkdY7Zr%2Fy6wr0CSTomlP3VhVLZo2QO4%2FL9Fjj0eg7ze%2FATsi0FinCVOpUfBSbjSiwzBaEqWmzFup%2BQLT9Zkd8D0jtxgiBCUvBVdXtzzEUNkI%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -41,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 73f316aeafd3b995-AMS
+      - 76913212ce031afd-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -49,7 +47,7 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9c1NTEyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA4VlVnTYAAAA=
     http_version:
-  recorded_at: Tue, 23 Aug 2022 10:15:43 GMT
+  recorded_at: Sat, 12 Nov 2022 18:05:24 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.7554/elife.01567x/transform/application/vnd.crossref.unixsd+xml
@@ -58,7 +56,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
       Accept:
       - text/xml;charset=utf-8
       Accept-Encoding:
@@ -69,13 +67,13 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 23 Aug 2022 10:15:44 GMT
+      - Sat, 12 Nov 2022 18:05:24 GMT
       Content-Type:
       - text/plain;charset=utf-8
       Set-Cookie:
-      - AWSALB=gin+G3VeJCNr6G9eoJ9x/Xy7uJoc1PXim65l8tTytoTpGZhDDB+RnzwLwo+WEnWXTunCfQ+wnc+bYCAJFg8LSfVLqhOZfjc0trxGzOJWoA22+EEk1smhbGiyfegS;
-        Expires=Tue, 30 Aug 2022 10:15:44 GMT; Path=/, AWSALBCORS=gin+G3VeJCNr6G9eoJ9x/Xy7uJoc1PXim65l8tTytoTpGZhDDB+RnzwLwo+WEnWXTunCfQ+wnc+bYCAJFg8LSfVLqhOZfjc0trxGzOJWoA22+EEk1smhbGiyfegS;
-        Expires=Tue, 30 Aug 2022 10:15:44 GMT; Path=/; SameSite=None
+      - AWSALB=GJ2cGyJi/CGqRr9xRMYWWv2snvVjFqxmQbCkEhamyzvmQWFBa20bASarcGt85BBN5UzbY7bJSrZ3pQHHYEIm2VgczVaybdYakRnY2x8/BTk+QjCLKWhQLGdT8ILS;
+        Expires=Sat, 19 Nov 2022 18:05:24 GMT; Path=/, AWSALBCORS=GJ2cGyJi/CGqRr9xRMYWWv2snvVjFqxmQbCkEhamyzvmQWFBa20bASarcGt85BBN5UzbY7bJSrZ3pQHHYEIm2VgczVaybdYakRnY2x8/BTk+QjCLKWhQLGdT8ILS;
+        Expires=Sat, 19 Nov 2022 18:05:24 GMT; Path=/; SameSite=None
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -103,5 +101,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version:
-  recorded_at: Tue, 23 Aug 2022 10:15:44 GMT
+  recorded_at: Sat, 12 Nov 2022 18:05:24 GMT
 recorded_with: VCR 3.0.3

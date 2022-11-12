@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Accept-Encoding:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 23 Aug 2022 10:10:34 GMT
+      - Sat, 12 Nov 2022 18:06:37 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -30,10 +30,8 @@ http_interactions:
       - gzip
       Cf-Cache-Status:
       - DYNAMIC
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4mmNY6IlZuj2VAO7MftPMLJjJA%2FngbrOeQ5%2Bp8uXOuwvTE2825I%2BiydZWAS2sUJHuX58WXjzXhQnjHhdtqlDYpfRT1LlMSLGqkYr%2BobNqd0ks%2BXrBg8P%2BlOb4Fw4qInwdIsXRC4%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dyodXb%2F26slPvIjXMfbBAkecZ%2FcMTC1NyEjVza%2F286kIf8uZpzQKgzpR808n1%2FZw4eUKOFoY%2BruBW6FbfKTSeQGY%2BSj%2Fhyy7DQe%2Bi0l5oQGluzBWRDWH9%2FL%2FsQ3U8ZtliXSQ%2B5M%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -41,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 73f30f21fa9fb6f4-AMS
+      - 769133d9c9980a5d-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -49,7 +47,7 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9E0MjEyUdiGiQI0jQJbEk0TmzJFUJKFjLFQsAjHRQbzYAAAA=
     http_version:
-  recorded_at: Tue, 23 Aug 2022 10:10:34 GMT
+  recorded_at: Sat, 12 Nov 2022 18:06:37 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1?include=media,client
@@ -58,7 +56,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.8; mailto:info@front-matter.io)
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
       Accept:
       - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
       Accept-Encoding:
@@ -69,7 +67,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 23 Aug 2022 10:10:34 GMT
+      - Sat, 12 Nov 2022 18:06:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -89,19 +87,19 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - a5709378-919d-476c-988c-bf796ff4febd
+      - 11213787-f1f5-43ce-b8b1-6dd55db71fc7
       X-Download-Options:
       - noopen
       X-Runtime:
-      - '0.007456'
+      - '0.004622'
       X-Frame-Options:
       - SAMEORIGIN
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.14
+      - Phusion Passenger(R) 6.0.15
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.14
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.15
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -113,7 +111,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAJqnBGMAAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
+        H4sIAK3gb2MAAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
     http_version:
-  recorded_at: Tue, 23 Aug 2022 10:10:34 GMT
+  recorded_at: Sat, 12 Nov 2022 18:06:37 GMT
 recorded_with: VCR 3.0.3
