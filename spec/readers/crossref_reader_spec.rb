@@ -113,7 +113,7 @@ describe Briard::Metadata, vcr: true do
                                            'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode',
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
       expect(subject.dates).to eq([{ 'date' => '2019-07-02', 'dateType' => 'Issued' },
-                                   {"date"=>"2019-09-22T06:40:23Z", "dateType"=>"Updated"}])
+                                   { 'date' => '2019-09-22T06:40:23Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2019')
       expect(subject.publisher).to eq('Frontiers Media SA')
       expect(subject.funding_references).to eq([{ 'awardNumber' => 'CA17111',
@@ -285,7 +285,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.rights_list).to eq([{ 'rightsUri' => 'http://doi.wiley.com/10.1002/tdm_license_1.1' }])
       expect(subject.titles).to eq([{ 'title' => 'THE IMPACT OF PARASITE MANIPULATION AND PREDATOR FORAGING BEHAVIOR ON PREDATOR???PREY COMMUNITIES' }])
       expect(subject.dates).to eq([{ 'date' => '2006-11', 'dateType' => 'Issued' },
-                                   {"date"=>"2019-04-28T17:51:50Z", "dateType"=>"Updated"}])
+                                   { 'date' => '2019-04-28T17:51:50Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2006')
       expect(subject.publisher).to eq('Wiley')
       expect(subject.related_identifiers.length).to eq(35)
@@ -667,7 +667,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ 'title' => ':(unav)' }])
       expect(subject.descriptions.empty?).to be(true)
       expect(subject.dates).to eq([{ 'date' => '2015-10-20', 'dateType' => 'Issued' },
-                                   {"date"=>"2018-10-19T17:13:42Z", "dateType"=>"Updated"}])
+                                   { 'date' => '2018-10-19T17:13:42Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2015')
       expect(subject.publisher).to eq('Public Library of Science (PLoS)')
       expect(subject.agency).to eq('crossref')
@@ -751,7 +751,7 @@ describe Briard::Metadata, vcr: true do
                                         'familyName' => 'Bichot', 'givenName' => 'Charles-Edmond', 'name' => 'Bichot, Charles-Edmond', 'nameType' => 'Personal' }])
       expect(subject.titles).to eq([{ 'title' => 'Unsupervised and Supervised Image Segmentation Using Graph Partitioning' }])
       expect(subject.dates).to eq([{ 'date' => '2012-08-08', 'dateType' => 'Issued' },
-                                   { "date"=>"2019-07-02T17:17:21Z", "dateType"=>"Updated"}])
+                                   { 'date' => '2019-07-02T17:17:21Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2012')
       expect(subject.publisher).to eq('IGI Global')
       expect(subject.agency).to eq('crossref')
@@ -809,7 +809,7 @@ describe Briard::Metadata, vcr: true do
                                         'name' => 'Leung, Vincent S.', 'nameType' => 'Personal' }])
       expect(subject.titles).to eq([{ 'title' => 'The Politics of the Past in Early China' }])
       expect(subject.dates).to eq([{ 'date' => '2019-07-01', 'dateType' => 'Issued' },
-                                   { "date"=>"2022-09-22T13:22:42Z", "dateType"=>"Updated"}])
+                                   { 'date' => '2022-09-22T13:22:42Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2019')
       expect(subject.publisher).to eq('Cambridge University Press (CUP)')
       expect(subject.agency).to eq('crossref')

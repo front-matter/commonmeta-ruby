@@ -12,10 +12,10 @@ module Briard
       doi = Array(%r{\A(?:(http|https):/(/)?(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.13039/)?([1-9]\d+)\z}.match(doi)).last
 
       # remove non-printing whitespace and downcase
-      if doi.present?
-        doi.delete("\u200B").downcase
-        "https://doi.org/10.13039/#{doi}"
-      end
+      return unless doi.present?
+
+      doi.delete("\u200B").downcase
+      "https://doi.org/10.13039/#{doi}"
     end
 
     def validate_prefix(doi)
@@ -41,10 +41,12 @@ module Briard
     end
 
     def doi_from_url(url)
-      if %r{\A(?:(http|https)://(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}/.+)\z}.match?(url)
-        uri = Addressable::URI.parse(url)
-        uri.path.gsub(%r{^/}, '').downcase
+      unless %r{\A(?:(http|https)://(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}/.+)\z}.match?(url)
+        return
       end
+
+      uri = Addressable::URI.parse(url)
+      uri.path.gsub(%r{^/}, '').downcase
     end
 
     def doi_as_url(doi)

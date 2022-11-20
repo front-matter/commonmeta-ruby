@@ -50,7 +50,7 @@ module Briard
           # workaround for html language attribute if no language is set via schema.org
           lang = doc.at('html')['lang']
           hsh['inLanguage'] = lang if hsh['inLanguage'].blank?
-          
+
           # workaround if issn not included with schema.org
           name = doc.at("meta[property='og:site_name']")
           issn = doc.at("meta[name='citation_issn']")

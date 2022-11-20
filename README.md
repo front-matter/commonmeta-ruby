@@ -134,7 +134,7 @@ Briard reads and/or writes these metadata formats:
 
 ## Installation
 
-Requires Ruby 2.3 or later. Then add the following to your `Gemfile` to install the
+Requires Ruby 2.7 or later. Then add the following to your `Gemfile` to install the
 latest version:
 
 ```ruby

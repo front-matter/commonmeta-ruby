@@ -168,7 +168,7 @@ describe Briard::Metadata, vcr: true do
                                       { 'subject' => 'citation file format' },
                                       { 'subject' => 'cff' }])
       expect(subject.version_info).to eq('1.0.1')
-      expect(subject.dates).to eq([{"date"=>"2022-11-05", "dateType"=>"Issued"}])
+      expect(subject.dates).to eq([{ 'date' => '2022-11-05', 'dateType' => 'Issued' }])
       expect(subject.publication_year).to eq('2022')
       expect(subject.publisher).to eq('GitHub')
       expect(subject.rights_list).to eq([{ 'rights' => 'Apache License 2.0',

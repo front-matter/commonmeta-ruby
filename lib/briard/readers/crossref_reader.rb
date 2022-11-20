@@ -373,10 +373,9 @@ module Briard
       def crossref_date_published(bibliographic_metadata)
         pub_date = Array.wrap(bibliographic_metadata.fetch('publication_date', nil)).presence ||
                    Array.wrap(bibliographic_metadata.fetch('acceptance_date', nil))
-        if pub_date.present?
-          get_date_from_parts(pub_date.first['year'], pub_date.first['month'],
-                              pub_date.first['day'])
-        end
+        return unless pub_date.present?
+
+        get_date_from_parts(pub_date.first['year'], pub_date.first['month'], pub_date.first['day'])
       end
 
       def crossref_is_part_of(model_metadata)

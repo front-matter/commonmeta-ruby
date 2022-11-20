@@ -80,7 +80,7 @@ describe Briard::Metadata, vcr: true do
                                     'resourceTypeGeneral' => 'Preprint', 'ris' => 'GEN', 'schemaOrg' => 'Article')
         expect(subject.creators).to eq([{ 'affiliation' => [],
                                           'familyName' => 'Fenner', 'givenName' => 'Martin', 'name' => 'Fenner, Martin', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'nameType' => 'Personal' }])
-        expect(subject.titles).to eq([{ 'title' => "A step forward for software citation: GitHub&#x27;s enhanced software citation support" }])
+        expect(subject.titles).to eq([{ 'title' => 'A step forward for software citation: GitHub&#x27;s enhanced software citation support' }])
         expect(subject.descriptions.first['description']).to start_with('On August 19, GitHub announced software citation')
         expect(subject.subjects).to eq([{ 'subject' => 'news' }])
         expect(subject.dates).to eq([{ 'date' => '2021-08-24T16:57:24Z', 'dateType' => 'Issued' },

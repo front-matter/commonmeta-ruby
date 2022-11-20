@@ -39,24 +39,24 @@ module Briard
       end
 
       def insert_authors(xml)
-        if creators.present?
-          xml.send(:'person-group', 'person-group-type' => 'author') do
-            Array.wrap(creators).each do |au|
-              xml.name do
-                insert_contributor(xml, au)
-              end
+        return unless creators.present?
+
+        xml.send(:'person-group', 'person-group-type' => 'author') do
+          Array.wrap(creators).each do |au|
+            xml.name do
+              insert_contributor(xml, au)
             end
           end
         end
       end
 
       def insert_editors(xml)
-        if contributors.present?
-          xml.send(:'person-group', 'person-group-type' => 'editor') do
-            Array.wrap(contributors).each do |con|
-              xml.name do
-                insert_contributor(xml, con)
-              end
+        return unless contributors.present?
+
+        xml.send(:'person-group', 'person-group-type' => 'editor') do
+          Array.wrap(contributors).each do |con|
+            xml.name do
+              insert_contributor(xml, con)
             end
           end
         end

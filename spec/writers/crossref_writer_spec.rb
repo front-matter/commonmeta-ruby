@@ -130,27 +130,28 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceTypeGeneral']).to eq('Preprint')
       expect(subject.types['ris']).to eq('GEN')
       expect(subject.types['citeproc']).to eq('post-weblog')
-      expect(subject.titles).to eq([{"title"=>"Implementing the FAIR Principles Through FAIR-Enabling Artifacts and Services"}])
-      expect(subject.creators).to eq([{"affiliation"=>[],
-        "familyName"=>"Winston",
-        "givenName"=>"Donny",
-        "name"=>"Winston, Donny",
-        "nameIdentifiers"=>
-          [{"nameIdentifier"=>"https://orcid.org/0000-0002-8424-0604",
-            "nameIdentifierScheme"=>"ORCID",
-            "schemeUri"=>"https://orcid.org"}],
-        "nameType"=>"Personal"}])
+      expect(subject.titles).to eq([{ 'title' => 'Implementing the FAIR Principles Through FAIR-Enabling Artifacts and Services' }])
+      expect(subject.creators).to eq([{ 'affiliation' => [],
+                                        'familyName' => 'Winston',
+                                        'givenName' => 'Donny',
+                                        'name' => 'Winston, Donny',
+                                        'nameIdentifiers' =>
+          [{ 'nameIdentifier' => 'https://orcid.org/0000-0002-8424-0604',
+             'nameIdentifierScheme' => 'ORCID',
+             'schemeUri' => 'https://orcid.org' }],
+                                        'nameType' => 'Personal' }])
       expect(subject.subjects).to eq([])
       expect(subject.container).to eq('type' => 'Blog')
       expect(subject.language).to eq('en-US')
-      expect(subject.dates).to eq([{"date"=>"2022-10-21", "dateType"=>"Issued"},
-        {"date"=>"2022-10-21", "dateType"=>"Created"},
-        {"date"=>"2022-10-21", "dateType"=>"Updated"}])
+      expect(subject.dates).to eq([{ 'date' => '2022-10-21', 'dateType' => 'Issued' },
+                                   { 'date' => '2022-10-21', 'dateType' => 'Created' },
+                                   { 'date' => '2022-10-21', 'dateType' => 'Updated' }])
       expect(subject.rights_list).to eq([{
                                           'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
       crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
-      expect(crossref.dig('titles', 'title')).to eq('Implementing the FAIR Principles Through FAIR-Enabling Artifacts and Services')
+      expect(crossref.dig('titles',
+                          'title')).to eq('Implementing the FAIR Principles Through FAIR-Enabling Artifacts and Services')
     end
   end
 end
