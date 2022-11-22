@@ -18,26 +18,7 @@ module Briard
       id = normalize_id(options[:input], options)
       ra = nil
 
-      if id.present?
-        @from = options[:from] || find_from_format(id: id)
-
-        # mEDRA, KISTI, JaLC and OP DOIs are found in the Crossref index
-        case @from
-        when 'medra'
-          ra = 'mEDRA'
-        when 'kisti'
-          ra = 'KISTI'
-        when 'jalc'
-          ra = 'JaLC'
-        when 'op'
-          ra = 'OP'
-        end
-
-        # generate name for method to call dynamically
-        hsh = @from.present? ? send("get_#{@from}", id: id, **options) : {}
-        string = hsh.fetch('string', nil)
-
-      elsif options[:input].present? && File.exist?(options[:input])
+      if options[:input].present? && File.exist?(options[:input])
         filename = File.basename(options[:input])
         ext = File.extname(options[:input])
         if %w[.bib .ris .xml .json .cff].include?(ext)
@@ -59,6 +40,24 @@ module Briard
           warn "File type #{ext} not supported"
           exit 1
         end
+      elsif id.present?
+        @from = options[:from] || find_from_format(id: id)
+
+        # mEDRA, KISTI, JaLC and OP DOIs are found in the Crossref index
+        case @from
+        when 'medra'
+          ra = 'mEDRA'
+        when 'kisti'
+          ra = 'KISTI'
+        when 'jalc'
+          ra = 'JaLC'
+        when 'op'
+          ra = 'OP'
+        end
+
+        # generate name for method to call dynamically
+        hsh = @from.present? ? send("get_#{@from}", id: id, **options) : {}
+        string = hsh.fetch('string', nil)
       else
         hsh = {
           'url' => options[:url],
