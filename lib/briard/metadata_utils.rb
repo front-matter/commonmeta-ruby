@@ -25,7 +25,6 @@ require_relative 'writers/citeproc_writer'
 require_relative 'writers/cff_writer'
 require_relative 'writers/codemeta_writer'
 require_relative 'writers/crosscite_writer'
-require_relative 'writers/crossref_json_writer'
 require_relative 'writers/crossref_writer'
 require_relative 'writers/csv_writer'
 require_relative 'writers/datacite_writer'
@@ -64,7 +63,6 @@ module Briard
     include Briard::Writers::CffWriter
     include Briard::Writers::CodemetaWriter
     include Briard::Writers::CrossciteWriter
-    include Briard::Writers::CrossrefJsonWriter
     include Briard::Writers::CrossrefWriter
     include Briard::Writers::CsvWriter
     include Briard::Writers::DataciteWriter
