@@ -42,9 +42,9 @@ jobs:
           [[ $? -ne 2 ]]
         "
 
-    # - name: Upload Sarif output
-    #   if: steps.check_files.outputs.files_exists == 'true'
-    #   uses: github/codeql-action/upload-sarif@v2
-    #   with:
-    #     # Path to SARIF file relative to the root of the repository
-    #     sarif_file: rubocop.sarif
+    - name: Upload Sarif output
+      if: steps.check_files.outputs.files_exists == 'true'
+      uses: github/codeql-action/upload-sarif@v2
+      with:
+        # Path to SARIF file relative to the root of the repository
+        sarif_file: rubocop.sarif
