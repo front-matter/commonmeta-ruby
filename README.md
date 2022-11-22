@@ -30,6 +30,13 @@ Briard reads and/or writes these metadata formats:
       <td>Yes</td>
    </tr>
     <tr>
+      <td><a href='https://api.crossref.org'>CrossRef JSON</a></td>
+      <td>crossref_json</td>
+      <td>application/vnd.crossref+json</td>
+      <td>Yes</td>
+      <td>No</td>
+   </tr>
+    <tr>
       <td><a href='https://schema.datacite.org/'>DataCite XML</a></td>
       <td>datacite</td>
       <td>application/vnd.datacite.datacite+xml</td>

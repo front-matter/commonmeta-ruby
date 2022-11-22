@@ -34,7 +34,7 @@ module Briard
         end
 
         # generate name for method to call dynamically
-        hsh = @from.present? ? send("get_#{@from}", id: id, sandbox: options[:sandbox]) : {}
+        hsh = @from.present? ? send("get_#{@from}", id: id, **options) : {}
         string = hsh.fetch('string', nil)
 
       elsif options[:input].present? && File.exist?(options[:input])

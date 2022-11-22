@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1103/physrevlett.120.117701
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 Nov 2022 15:23:54 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2000'
+      Set-Cookie:
+      - AWSALB=2n4DD9VQK160IS+yGb4u2fKHZ2n/WVYsgYY9UugfL94VN2/Vtq5+6EKzA2KmwOQSz0GPj2UGU6ACeS5LqiMcqzZYQHK+TG29gJlG/C2J459/U5HLrkAXaseQEtuk;
+        Expires=Sun, 27 Nov 2022 15:23:54 GMT; Path=/, AWSALBCORS=2n4DD9VQK160IS+yGb4u2fKHZ2n/WVYsgYY9UugfL94VN2/Vtq5+6EKzA2KmwOQSz0GPj2UGU6ACeS5LqiMcqzZYQHK+TG29gJlG/C2J459/U5HLrkAXaseQEtuk;
+        Expires=Sun, 27 Nov 2022 15:23:54 GMT; Path=/; SameSite=None
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - polite
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+    http_version:
+  recorded_at: Sun, 20 Nov 2022 15:23:54 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1103
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 Nov 2022 15:23:55 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Content-Encoding:
+      - gzip
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sBElvUsMp90IeYvAGfKf3qRsQjfSrXouxiuz2r5LWTg4aFcW4P9TWSA77ElR553J%2B%2B%2FjJQViuxRaTmbicVLpxmi18D9vCXZasS%2FD26wzMmpOyGarBtV8Ydx%2FjREvRmg1nxQzjV4%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 76d230847a00b766-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Q0MDYyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsATMOq2jYAAAA=
+    http_version:
+  recorded_at: Sun, 20 Nov 2022 15:23:55 GMT
+recorded_with: VCR 3.0.3

@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'iso8601', '~> 0.9.1'
   s.add_dependency 'json-ld-preloaded', '~> 3.1', '>= 3.1.3'
   s.add_dependency 'jsonlint', '~> 0.3.0'
-  s.add_dependency 'loofah', '~> 2.0', '>= 2.0.3'
+  s.add_dependency 'loofah', '~> 2.19'
   s.add_dependency 'maremma', '>= 4.9.7', '< 5'
   s.add_dependency 'namae', '~> 1.0'
   s.add_dependency 'nokogiri', '~> 1.13.1'

@@ -105,14 +105,14 @@ module Briard
         end
 
         resource_type = (resource_type || model).to_s.underscore.camelcase.presence
-        schema_org = Briard::Utils::CR_TO_SO_TRANSLATIONS[resource_type] || 'ScholarlyArticle'
+        schema_org = Briard::Utils::CR_TO_SO_TRANSLATIONS[resource_type] || 'CreativeWork'
         types = {
           'resourceTypeGeneral' => Briard::Utils::CR_TO_DC_TRANSLATIONS[resource_type],
           'resourceType' => resource_type,
           'schemaOrg' => schema_org,
           'citeproc' => Briard::Utils::CR_TO_CP_TRANSLATIONS[resource_type] || 'article-journal',
           'bibtex' => Briard::Utils::CR_TO_BIB_TRANSLATIONS[resource_type] || 'misc',
-          'ris' => Briard::Utils::CR_TO_RIS_TRANSLATIONS[resource_type] || 'JOUR'
+          'ris' => Briard::Utils::CR_TO_RIS_TRANSLATIONS[resource_type] || 'GEN'
         }.compact
 
         titles = if bibliographic_metadata['titles'].present?
@@ -221,7 +221,7 @@ module Briard
           'funding_references' => crossref_funding_reference(program_metadata),
           'publisher' => publisher,
           'container' => container,
-          'agency' => agency = options[:ra] || 'crossref',
+          'agency' => agency = options[:ra] || 'Crossref',
           'related_identifiers' => related_identifiers,
           'dates' => dates,
           'publication_year' => publication_year,

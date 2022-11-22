@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.4000/dms.865
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 Nov 2022 15:24:14 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '1007'
+      Set-Cookie:
+      - AWSALB=NLXYey9Tao6ivCewEYkkxM38WkbB4mgZiNmM5JG0r3RJmlnLKPe9Kc6JbWf4F1a1X4zLPJZu+nUMqY4/h5EoVSZr0NDawSMpYJ8isWWhcT0TEKPInfsQoGPe2Q7t;
+        Expires=Sun, 27 Nov 2022 15:24:14 GMT; Path=/, AWSALBCORS=NLXYey9Tao6ivCewEYkkxM38WkbB4mgZiNmM5JG0r3RJmlnLKPe9Kc6JbWf4F1a1X4zLPJZu+nUMqY4/h5EoVSZr0NDawSMpYJ8isWWhcT0TEKPInfsQoGPe2Q7t;
+        Expires=Sun, 27 Nov 2022 15:24:14 GMT; Path=/; SameSite=None
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - polite
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAA/51WTW/jNhD9K4bOkkxS1Ad1W2wKNEC7GzTppZYPtETb3EiiSlJuDMP/vUPJiR3FRde5UUPycebxcZ4OnrHc9sbLPfXs+V4jjOEbEdh9JyD2j9KX0Z3QRqoWJnCIQnSe8fKDJ9tKvIjKDStuRdBxbQF3sSCIEB8jn5Dl0h/nrGwcvJsJMAoIeUJZHuM8Sv8CUDcLaTWdl+MkSSjJEpZmLD36nhZroUVbiqBUfWthAfW9rl/V0myFBsjvnWh/qaR1afqeNKZ3B2UwLlVrRWuDSjVctkOap9EC0iq1Mqbh+jnQcLaW5YCQr3ltBJxrtkrbwEHADqGhAFsD8MKrGuPB9rvv944VFFKEUDGHaJglsatlJPKH6nXL6wA4kSXsdAcKYOIqXTj2gbCPZOE4QCRA+AnRPI7yiE3JooSkwBdmkIRLGg4t3davrjigbmAkeOOwClb7Nx6RgzoVdScBERYYf8ZXxi31Z51WL7KRtugREszMhIXQ6cOtMG7MUT6rhJkBUaXoLKxqZ9W4qKt5KRq4AEdXBznIlzNjkNhO1f1YJ3zw3gLhkMrB28idcIq7460UNcyteSPrPUQehOZ7DhEj/u5dChBbS22sA1ivZS35eImL5XHppNqsBomQiDHvrJoqUG0Nl3r1JqiP4SrocnmpvSGvZ+FygJhLvlIy4MYIbQdSYeKsyQtxRCBnEIcJGQyjIIqQd/QvoPAnoGhIExZQlryHIjdAMZwW865fh+WW6zqEsuFx4/d40c/jEUwiyO3L3RdMMpZNaqQ/D4QxYsX81/uvj48hZoyFaUrSaWLxrYVWqz7c9FJDnYh8qDO5IT0apXEx//YQQnciKUaYJCmZlJvekB5FQJted67YKMQRit9jZZ+QRwywOIiSiTzYp0QbJ3EQs6lob3gA5+6YsnQCc4P4Rxh49MY9cFOJUjVN38pyePBh8jHHG54DhVss5gRRUswxZVk0gbrhJdCI0GIO6kAEwW0SRuFGl6MVTXzkreW6xtqMLbMaG5gZWqrhOwXNzXVPpeVGOjd53e2cQnTKyP8wFPBfsJSr7oucpzwhlkcoj5IP7htjmkVZlJwMpVQadmLXC1/N5QDNXIJx7t3wzz9+A+CttV1ezIv5yfVMqMCVxejKodKbQQLF3Dnk0cH2q4tKRqu9CAwmft0or7Znc/lv8Gq8pz+Bw7tfghstAA6ZFFi9hCCFsaQr5q9FfbKgA+y9f3z85q6akIQGKSGZNxbXnv62wFR2vB6SOy95+4MQtSitViDyQULA2Q8IOLwHsy+3IBW9n/G2mv0OHsvr2Vbw2m4Hs32t8v/KO/4LnHETnw4KAAA=
+    http_version:
+  recorded_at: Sun, 20 Nov 2022 15:24:14 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.4000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 Nov 2022 15:24:15 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Content-Encoding:
+      - gzip
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=C2rW7vP0yIQsoKzholF8TMDyABptfU0jp5SvAG6zCzeIOUrnQxun5ovyydcKf0SiEiy0qVCC3Iaod%2B9ac40VLwCN%2Bhp2m9EEO7HqBbr6YCx%2B14kuorgRJB6Mlo8SMNZYNXxUkcU%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 76d231031a6fb75e-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9EwMDAyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAwTDpgjYAAAA=
+    http_version:
+  recorded_at: Sun, 20 Nov 2022 15:24:15 GMT
+recorded_with: VCR 3.0.3

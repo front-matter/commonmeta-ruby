@@ -22,7 +22,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.url).to eq('https://blog.front-matter.io/posts/eating-your-own-dog-food')
       expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-newspaper',
                                   'resourceTypeGeneral' => 'Preprint', 'ris' => 'GEN', 'schemaOrg' => 'Article')
-      expect(subject.creators).to eq([{ 'affiliation' => [], 'familyName' => 'Fenner',
+      expect(subject.creators).to eq([{ 'familyName' => 'Fenner',
                                         'givenName' => 'Martin', 'name' => 'Fenner, Martin', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'nameType' => 'Personal' }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.descriptions.first['description']).to start_with('Eating your own dog food')
@@ -78,8 +78,7 @@ describe Briard::Metadata, vcr: true do
         expect(subject.url).to eq('https://blog.front-matter.io/posts/step-forward-for-software-citation')
         expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-newspaper',
                                     'resourceTypeGeneral' => 'Preprint', 'ris' => 'GEN', 'schemaOrg' => 'Article')
-        expect(subject.creators).to eq([{ 'affiliation' => [],
-                                          'familyName' => 'Fenner', 'givenName' => 'Martin', 'name' => 'Fenner, Martin', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'nameType' => 'Personal' }])
+        expect(subject.creators).to eq([{ 'familyName' => 'Fenner', 'givenName' => 'Martin', 'name' => 'Fenner, Martin', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'nameType' => 'Personal' }])
         expect(subject.titles).to eq([{ 'title' => 'A step forward for software citation: GitHub&#x27;s enhanced software citation support' }])
         expect(subject.descriptions.first['description']).to start_with('On August 19, GitHub announced software citation')
         expect(subject.subjects).to eq([{ 'subject' => 'news' }])
@@ -168,7 +167,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.container).to eq('identifier' => 'https://dataverse.harvard.edu',
                                       'identifierType' => 'URL', 'title' => 'Harvard Dataverse', 'type' => 'DataRepository')
       expect(subject.creators).to eq([{
-                                       'name' => 'International Genetics Of Ankylosing Spondylitis Consortium (IGAS)', 'nameIdentifiers' => [], 'affiliation' => []
+                                       'name' => 'International Genetics of Ankylosing Spondylitis Consortium (IGAS)'
                                      }])
       expect(subject.subjects).to eq([{ 'subject' => 'medicine, health and life sciences' },
                                       { 'subject' => 'genome-wide association studies' },
@@ -227,8 +226,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.content_url).to eq(['https://storage.googleapis.com/gtex_analysis_v7/single_tissue_eqtl_data/GTEx_Analysis_v7_eQTL_expression_matrices.tar.gz'])
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'dataset',
                                   'resourceType' => 'Gene expression matrices', 'resourceTypeGeneral' => 'Dataset', 'ris' => 'DATA', 'schemaOrg' => 'Dataset')
-      expect(subject.creators).to eq([{ 'name' => 'The GTEx Consortium', 'nameType' => 'Organizational',
-                                        'nameIdentifiers' => [], 'affiliation' => [] }])
+      expect(subject.creators).to eq([{ 'name' => 'The GTEx Consortium', 'nameType' => 'Organizational'}])
       expect(subject.titles).to eq([{ 'title' => 'Fully processed, filtered and normalized gene expression matrices (in BED format) for each tissue, which were used as input into FastQTL for eQTL discovery' }])
       expect(subject.version_info).to eq('v7')
       expect(subject.subjects).to eq([{ 'subject' => 'gtex' }, { 'subject' => 'annotation' },
@@ -258,8 +256,7 @@ describe Briard::Metadata, vcr: true do
                                         ])
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'dataset',
                                   'resourceType' => 'CRAM file', 'resourceTypeGeneral' => 'Dataset', 'ris' => 'DATA', 'schemaOrg' => 'Dataset')
-      expect(subject.creators).to eq([{ 'name' => 'TOPMed IRC', 'nameType' => 'Organizational',
-                                        'nameIdentifiers' => [], 'affiliation' => [] }])
+      expect(subject.creators).to eq([{ 'name' => 'TOPMed IRC', 'nameType' => 'Organizational' }])
       expect(subject.titles).to eq([{ 'title' => 'NWD165827.recab.cram' }])
       expect(subject.subjects).to eq([{ 'subject' => 'topmed' },
                                       { 'subject' => 'whole genome sequencing' }])
@@ -322,8 +319,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'dataset',
                                   'resourceTypeGeneral' => 'Dataset', 'ris' => 'DATA', 'schemaOrg' => 'Dataset')
       expect(subject.creators.length).to eq(2)
-      expect(subject.creators.first).to eq('name' => 'Tara Oceans Consortium, Coordinators',
-                                           'nameType' => 'Organizational', 'nameIdentifiers' => [], 'affiliation' => [])
+      expect(subject.creators.first).to eq('name' => 'Tara Oceans Consortium, Coordinators', 'nameType' => 'Organizational')
       expect(subject.titles).to eq([{ 'title' => 'Registry of all stations from the Tara Oceans Expedition (2009-2013)' }])
       expect(subject.dates).to eq([{ 'date' => '2015-02-03', 'dateType' => 'Issued' }])
       expect(subject.publication_year).to eq('2015')
@@ -349,8 +345,7 @@ describe Briard::Metadata, vcr: true do
                                         ])
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'dataset',
                                   'resourceType' => 'CRAM file', 'resourceTypeGeneral' => 'Dataset', 'ris' => 'DATA', 'schemaOrg' => 'Dataset')
-      expect(subject.creators).to eq([{ 'name' => 'TOPMed', 'nameType' => 'Organizational',
-                                        'nameIdentifiers' => [], 'affiliation' => [] }])
+      expect(subject.creators).to eq([{ 'name' => 'TOPMed', 'nameType' => 'Organizational' }])
       expect(subject.titles).to eq([{ 'title' => 'NWD100953.recab.cram' }])
       expect(subject.subjects).to eq([{ 'subject' => 'topmed' },
                                       { 'subject' => 'whole genome sequencing' }])

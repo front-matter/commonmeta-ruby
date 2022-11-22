@@ -51,46 +51,46 @@ describe Briard::Metadata, vcr: true do
     end
   end
 
-  context 'doi_api_url' do
+  context 'datacite_api_url' do
     it 'doi' do
       doi = '10.5061/DRYAD.8515'
-      response = subject.doi_api_url(doi)
+      response = subject.datacite_api_url(doi)
       expect(response).to eq('https://api.datacite.org/dois/10.5061/dryad.8515?include=media,client')
     end
 
     it 'doi with protocol' do
       doi = 'doi:10.5061/DRYAD.8515'
-      response = subject.doi_api_url(doi)
+      response = subject.datacite_api_url(doi)
       expect(response).to eq('https://api.datacite.org/dois/10.5061/dryad.8515?include=media,client')
     end
 
     it 'https url' do
       doi = 'https://doi.org/10.5061/dryad.8515'
-      response = subject.doi_api_url(doi)
+      response = subject.datacite_api_url(doi)
       expect(response).to eq('https://api.datacite.org/dois/10.5061/dryad.8515?include=media,client')
     end
 
     it 'dx.doi.org url' do
       doi = 'http://dx.doi.org/10.5061/dryad.8515'
-      response = subject.doi_api_url(doi)
+      response = subject.datacite_api_url(doi)
       expect(response).to eq('https://api.datacite.org/dois/10.5061/dryad.8515?include=media,client')
     end
 
     it 'test resolver' do
       doi = 'https://handle.stage.datacite.org/10.5061/dryad.8515'
-      response = subject.doi_api_url(doi)
+      response = subject.datacite_api_url(doi)
       expect(response).to eq('https://api.stage.datacite.org/dois/10.5061/dryad.8515?include=media,client')
     end
 
     it 'test resolver http' do
       doi = 'http://handle.stage.datacite.org/10.5061/dryad.8515'
-      response = subject.doi_api_url(doi)
+      response = subject.datacite_api_url(doi)
       expect(response).to eq('https://api.stage.datacite.org/dois/10.5061/dryad.8515?include=media,client')
     end
 
     it 'force test resolver' do
       doi = 'https://doi.org/10.5061/dryad.8515'
-      response = subject.doi_api_url(doi, sandbox: true)
+      response = subject.datacite_api_url(doi, sandbox: true)
       expect(response).to eq('https://api.stage.datacite.org/dois/10.5061/dryad.8515?include=media,client')
     end
   end

@@ -74,7 +74,7 @@ describe Briard::Metadata, vcr: true do
                                   'resourceTypeGeneral' => 'Software', 'ris' => 'COMP', 'schemaOrg' => 'SoftwareSourceCode')
       expect(subject.creators.length).to eq(2)
       expect(subject.creators.first).to eq('affiliation' => [{ 'name' => 'University of Washington' }],
-                                           'familyName' => 'Vanderplas', 'givenName' => 'Jake', 'name' => 'Vanderplas, Jake', 'nameIdentifiers' => [], 'nameType' => 'Personal')
+                                           'familyName' => 'Vanderplas', 'givenName' => 'Jake', 'name' => 'Vanderplas, Jake', 'nameType' => 'Personal')
       expect(subject.titles).to eq([{ 'title' => 'Supersmoother: Minor Bug Fix Release' }])
       expect(subject.id).to eq('https://doi.org/10.5281/zenodo.28518')
       expect(subject.identifiers).to eq([{ 'identifier' => 'https://zenodo.org/record/28518',

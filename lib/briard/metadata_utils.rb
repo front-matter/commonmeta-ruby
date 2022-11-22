@@ -11,6 +11,7 @@ require_relative 'readers/citeproc_reader'
 require_relative 'readers/cff_reader'
 require_relative 'readers/codemeta_reader'
 require_relative 'readers/crosscite_reader'
+require_relative 'readers/crossref_json_reader'
 require_relative 'readers/crossref_reader'
 require_relative 'readers/datacite_json_reader'
 require_relative 'readers/datacite_reader'
@@ -24,6 +25,7 @@ require_relative 'writers/citeproc_writer'
 require_relative 'writers/cff_writer'
 require_relative 'writers/codemeta_writer'
 require_relative 'writers/crosscite_writer'
+require_relative 'writers/crossref_json_writer'
 require_relative 'writers/crossref_writer'
 require_relative 'writers/csv_writer'
 require_relative 'writers/datacite_writer'
@@ -48,6 +50,7 @@ module Briard
     include Briard::Readers::CffReader
     include Briard::Readers::CodemetaReader
     include Briard::Readers::CrossciteReader
+    include Briard::Readers::CrossrefJsonReader
     include Briard::Readers::CrossrefReader
     include Briard::Readers::DataciteReader
     include Briard::Readers::DataciteJsonReader
@@ -61,6 +64,7 @@ module Briard
     include Briard::Writers::CffWriter
     include Briard::Writers::CodemetaWriter
     include Briard::Writers::CrossciteWriter
+    include Briard::Writers::CrossrefJsonWriter
     include Briard::Writers::CrossrefWriter
     include Briard::Writers::CsvWriter
     include Briard::Writers::DataciteWriter

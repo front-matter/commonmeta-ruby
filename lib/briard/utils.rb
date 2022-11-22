@@ -110,12 +110,13 @@ module Briard
     CR_TO_CP_TRANSLATIONS = {
       'Proceedings' => nil,
       'ReferenceBook' => nil,
-      'JournalIssue' => nil,
+      'JournalIssue' => 'article-journal',
       'ProceedingsArticle' => 'paper-conference',
       'Other' => nil,
       'Dissertation' => 'thesis',
       'Dataset' => 'dataset',
       'EditedBook' => 'book',
+      'PostedContent' => 'article-journal',
       'JournalArticle' => 'article-journal',
       'Journal' => nil,
       'Report' => 'report',
@@ -252,7 +253,7 @@ module Briard
       'BookChapter' => 'BookChapter',
       'SaComponent' => 'Text',
       'StandardSeries' => 'Standard',
-      'Monograph' => 'book',
+      'Monograph' => 'Book',
       'Component' => nil,
       'ReferenceEntry' => nil,
       'JournalVolume' => nil,
@@ -355,8 +356,9 @@ module Briard
 
     CR_TO_RIS_TRANSLATIONS = {
       'Proceedings' => 'CONF',
+      'PostedContent' => 'JOUR',
       'ReferenceBook' => 'BOOK',
-      'JournalIssue' => nil,
+      'JournalIssue' => 'JOUR',
       'ProceedingsArticle' => 'CPAPER',
       'Other' => 'GEN',
       'Dissertation' => 'THES',
@@ -544,6 +546,8 @@ module Briard
       elsif options[:ext] == '.json' && URI(Maremma.from_json(string).to_h.fetch('@context',
                                                                                  '')).host == 'schema.org'
         'schema_org'
+      elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('source') == 'Crossref'
+        'crossref_json'
       elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('@context') == ('https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld')
         'codemeta'
       elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('schemaVersion').to_s.start_with?('http://datacite.org/schema/kernel')
@@ -1049,6 +1053,8 @@ module Briard
         if a['literal'].present?
           a['@type'] = 'Organization'
           a['name'] = a['literal']
+        elsif a['name'].present?
+          a['@type'] = 'Organization'
         else
           a['@type'] = 'Person'
           a['name'] = [a['given'], a['family']].compact.join(' ')
@@ -1168,10 +1174,14 @@ module Briard
 
     def get_date_from_date_parts(date_as_parts)
       date_parts = date_as_parts.fetch('date-parts', []).first
+      return nil if date_parts == [nil]
+
       year = date_parts[0]
       month = date_parts[1]
       day = date_parts[2]
       get_date_from_parts(year, month, day)
+    rescue NoMethodError # if date_parts is nil
+      nil
     end
 
     def get_date_from_parts(year, month = nil, day = nil)

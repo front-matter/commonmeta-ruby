@@ -93,8 +93,7 @@ describe Briard::Metadata, vcr: true do
       expect(datacite.dig('descriptions', 'description', 1,
                           '__content__')).to start_with('Eating your own dog food')
       expect(datacite.dig('creators',
-                          'creator')).to eq('creatorName' => 'Fenner, Martin',
-                                            'familyName' => 'Fenner', 'givenName' => 'Martin')
+                          'creator')).to eq("creatorName"=>{"__content__"=>"Fenner, Martin", "nameType"=>"Personal"}, "familyName"=>"Fenner", "givenName"=>"Martin")
     end
 
     it 'rdataone' do
@@ -119,7 +118,7 @@ describe Briard::Metadata, vcr: true do
                                                'schemeURI' => 'https://orcid.org',
                                                '__content__' => 'https://orcid.org/0000-0002-2192-403X' } },
                                              { 'creatorName' => {
-                                               '__content__' => 'University Of California, Santa Barbara', 'nameType' => 'Organizational'
+                                               '__content__' => 'University of California, Santa Barbara', 'nameType' => 'Organizational'
                                              } }])
       expect(datacite.fetch('version')).to eq('2.0.0')
     end
@@ -146,7 +145,7 @@ describe Briard::Metadata, vcr: true do
                                                'schemeURI' => 'https://orcid.org',
                                                '__content__' => 'https://orcid.org/0000-0002-2192-403X' } },
                                              { 'creatorName' => {
-                                               '__content__' => 'University Of California, Santa Barbara', 'nameType' => 'Organizational'
+                                               '__content__' => 'University of California, Santa Barbara', 'nameType' => 'Organizational'
                                              } }])
       expect(datacite.fetch('version')).to eq('2.0.0')
     end
@@ -180,7 +179,6 @@ describe Briard::Metadata, vcr: true do
                                            'familyName' => 'Vanderplas',
                                            'givenName' => 'Jake',
                                            'name' => 'Vanderplas, Jake',
-                                           'nameIdentifiers' => [],
                                            'nameType' => 'Personal')
       expect(subject.titles).to eq([{ 'title' => 'Supersmoother: Minor Bug Fix Release' }])
       expect(subject.rights_list).to eq([{ 'rights' => 'Open Access',
@@ -203,7 +201,7 @@ describe Briard::Metadata, vcr: true do
                                   'resourceType' => 'Paper', 'resourceTypeGeneral' => 'Text', 'ris' => 'RPRT', 'schemaOrg' => 'ScholarlyArticle')
       expect(subject.creators.length).to eq(20)
       expect(subject.creators.first).to eq('nameType' => 'Personal', 'familyName' => 'Paglione',
-                                           'givenName' => 'Laura', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-3188-6273', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Paglione, Laura', 'affiliation' => [])
+                                           'givenName' => 'Laura', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-3188-6273', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Paglione, Laura')
       expect(subject.titles).to eq([{ 'title' => 'Recommendation of: ORCID Works Metadata Working Group' }])
       expect(subject.rights_list).to eq([{ 'rights' => 'Creative Commons Zero v1.0 Universal',
                                            'rightsIdentifier' => 'cc0-1.0',
@@ -232,7 +230,7 @@ describe Briard::Metadata, vcr: true do
                                   'resourceType' => 'Paper', 'resourceTypeGeneral' => 'Text', 'ris' => 'RPRT', 'schemaOrg' => 'ScholarlyArticle')
       expect(subject.creators.length).to eq(20)
       expect(subject.creators.first).to eq('nameType' => 'Personal', 'familyName' => 'Paglione',
-                                           'givenName' => 'Laura', 'name' => 'Paglione, Laura', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-3188-6273', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'affiliation' => [])
+                                           'givenName' => 'Laura', 'name' => 'Paglione, Laura', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-3188-6273', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }])
       expect(subject.titles).to eq([{ 'title' => 'Recommendation of: ORCID Works Metadata Working Group' }])
       expect(subject.rights_list).to eq([{ 'rights' => 'Creative Commons Zero v1.0 Universal',
                                            'rightsIdentifier' => 'cc0-1.0',
@@ -260,7 +258,7 @@ describe Briard::Metadata, vcr: true do
                                   'resourceType' => 'dataset', 'resourceTypeGeneral' => 'Dataset', 'ris' => 'DATA', 'schemaOrg' => 'Dataset')
       expect(subject.creators.length).to eq(8)
       expect(subject.creators.first).to eq('nameType' => 'Personal', 'name' => 'Ollomo, Benjamin',
-                                           'givenName' => 'Benjamin', 'familyName' => 'Ollomo', 'nameIdentifiers' => [], 'affiliation' => [{ 'affiliationIdentifier' => 'https://ror.org/01wyqb997', 'affiliationIdentifierScheme' => 'ROR', 'name' => 'Centre International de Recherches Médicales de Franceville' }])
+                                           'givenName' => 'Benjamin', 'familyName' => 'Ollomo', 'affiliation' => [{ 'affiliationIdentifier' => 'https://ror.org/01wyqb997', 'affiliationIdentifierScheme' => 'ROR', 'name' => 'Centre International de Recherches Médicales de Franceville' }])
       expect(subject.titles).to eq([{ 'title' => 'Data from: A new malaria agent in African hominids.' }])
       expect(subject.id).to eq('https://doi.org/10.5061/dryad.8515')
       expect(subject.rights_list).to eq([{ 'rights' => 'Creative Commons Zero v1.0 Universal',
@@ -291,7 +289,7 @@ describe Briard::Metadata, vcr: true do
                                   'resourceType' => 'dataset', 'resourceTypeGeneral' => 'Dataset', 'ris' => 'DATA', 'schemaOrg' => 'Dataset')
       expect(subject.creators.length).to eq(6)
       expect(subject.creators.first).to eq('affiliation' => [{ 'name' => 'UC Merced' }, { 'name' => 'NSF' }],
-                                           'familyName' => 'Bales', 'givenName' => 'Roger', 'name' => 'Bales, Roger', 'nameType' => 'Personal', 'nameIdentifiers' => [])
+                                           'familyName' => 'Bales', 'givenName' => 'Roger', 'name' => 'Bales, Roger', 'nameType' => 'Personal')
       expect(subject.titles).to eq([{ 'title' => 'Southern Sierra Critical Zone Observatory (SSCZO), Providence Creek meteorological data, soil moisture and temperature, snow depth and air temperature' }])
       expect(subject.id).to eq('https://doi.org/10.6071/z7wc73')
       expect(subject.rights_list).to eq([{ 'rights' => 'Creative Commons Attribution 4.0 International',

@@ -11,38 +11,38 @@ describe Briard::Metadata, vcr: true do
     it 'has type organization' do
       author = { 'email' => 'info@ucop.edu', 'name' => 'University of California, Santa Barbara',
                  'role' => { 'namespace' => 'http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_RoleCode', 'roleCode' => 'copyrightHolder' }, 'nameType' => 'Organizational' }
-      expect(subject.is_personal_name?(author)).to be false
+      expect(subject.is_personal_name?(name: author['name'])).to be false
     end
 
     it 'has id' do
       author = { 'id' => 'http://orcid.org/0000-0003-1419-2405', 'givenName' => 'Martin', 'familyName' => 'Fenner', 'name' => 'Martin Fenner' }
-      expect(subject.is_personal_name?(author)).to be true
+      expect(subject.is_personal_name?(given_name: author['given_name'], name: author['name'])).to be true
     end
 
     it 'has orcid id' do
       author = { 'creatorName' => 'Fenner, Martin', 'givenName' => 'Martin', 'familyName' => 'Fenner',
                  'nameIdentifier' => { 'schemeURI' => 'http://orcid.org/', 'nameIdentifierScheme' => 'ORCID', '__content__' => '0000-0003-1419-2405' } }
-      expect(subject.is_personal_name?(author)).to be true
+      expect(subject.is_personal_name?(given_name: author['givenName'], name: author['creatorName'])).to be true
     end
 
     it 'has family name' do
       author = { 'givenName' => 'Martin', 'familyName' => 'Fenner', 'name' => 'Martin Fenner' }
-      expect(subject.is_personal_name?(author)).to be true
+      expect(subject.is_personal_name?(given_name: author['givenName'], name: author['name'])).to be true
     end
 
     it 'has comma' do
       author = { 'name' => 'Fenner, Martin' }
-      expect(subject.is_personal_name?(author)).to be true
+      expect(subject.is_personal_name?(name: author['name'])).to be true
     end
 
     it 'has known given name' do
       author = { 'name' => 'Martin Fenner' }
-      expect(subject.is_personal_name?(author)).to be true
+      expect(subject.is_personal_name?(name: author['name'])).to be true
     end
 
     it 'has no info' do
       author = { 'name' => 'M Fenner' }
-      expect(subject.is_personal_name?(author)).to be false
+      expect(subject.is_personal_name?(name: author['name'])).to be false
     end
   end
 
@@ -54,8 +54,9 @@ describe Briard::Metadata, vcr: true do
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq(
         'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405',
-                                'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Fenner, Martin', 'givenName' => 'Martin', 'familyName' => 'Fenner'
-      )
+                                'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 
+                                'name' => 'Fenner, Martin', 'givenName' => 'Martin', 'familyName' => 'Fenner',
+                                "nameType" => "Personal")
     end
 
     it 'has name in sort-order' do
@@ -64,7 +65,7 @@ describe Briard::Metadata, vcr: true do
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator').first)
       expect(response).to eq('nameType' => 'Personal', 'name' => 'Ollomo, Benjamin',
-                             'givenName' => 'Benjamin', 'familyName' => 'Ollomo', 'nameIdentifiers' => [], 'affiliation' => [{ 'affiliationIdentifier' => 'https://ror.org/01wyqb997', 'affiliationIdentifierScheme' => 'ROR', 'name' => 'Centre International de Recherches Médicales de Franceville' }])
+                             'givenName' => 'Benjamin', 'familyName' => 'Ollomo', 'affiliation' => [{ 'affiliationIdentifier' => 'https://ror.org/01wyqb997', 'affiliationIdentifierScheme' => 'ROR', 'name' => 'Centre International de Recherches Médicales de Franceville' }])
     end
 
     it 'has name in display-order' do
@@ -73,7 +74,7 @@ describe Briard::Metadata, vcr: true do
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq('nameType' => 'Personal', 'name' => 'Garza, Kristian',
-                             'givenName' => 'Kristian', 'familyName' => 'Garza', 'nameIdentifiers' => [], 'affiliation' => [])
+                             'givenName' => 'Kristian', 'familyName' => 'Garza')
     end
 
     it 'has name in display-order with ORCID' do
@@ -82,7 +83,7 @@ describe Briard::Metadata, vcr: true do
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq('nameType' => 'Personal',
-                             'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-4881-1606', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Bedini, Andrea', 'givenName' => 'Andrea', 'familyName' => 'Bedini', 'affiliation' => [])
+                             'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-4881-1606', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Bedini, Andrea', 'givenName' => 'Andrea', 'familyName' => 'Bedini')
     end
 
     it 'has name in Thai' do
@@ -90,8 +91,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq('name' => 'กัญจนา แซ่เตียว', 'nameIdentifiers' => [],
-                             'affiliation' => [])
+      expect(response).to eq("name"=>"กัญจนา แซ่เตียว")
     end
 
     it 'multiple author names in one field' do
@@ -99,9 +99,8 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_authors(meta.dig('creators', 'creator'))
-      expect(response).to eq([{
-                               'name' => 'Enos, Ryan (Harvard University); Fowler, Anthony (University Of Chicago); Vavreck, Lynn (UCLA)', 'nameIdentifiers' => [], 'affiliation' => []
-                             }])
+      expect(response).to eq([{"name"=>
+        "Enos, Ryan (Harvard University); Fowler, Anthony (University of Chicago); Vavreck, Lynn (UCLA)" }])
     end
 
     it 'hyper-authorship' do
@@ -109,16 +108,14 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_authors(meta.dig('creators', 'creator'))
-      expect(response).to eq([{ 'affiliation' => [], 'name' => 'ALICE Collaboration',
-                                'nameIdentifiers' => [], 'nameType' => 'Organizational' }])
+      expect(response).to eq([{ 'name' => 'ALICE Collaboration', "nameType"=>"Organizational" }])
     end
 
     it 'is organization' do
       author = { 'email' => 'info@ucop.edu',
                  'creatorName' => { '__content__' => 'University of California, Santa Barbara', 'nameType' => 'Organizational' }, 'role' => { 'namespace' => 'http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_RoleCode', 'roleCode' => 'copyrightHolder' } }
       response = subject.get_one_author(author)
-      expect(response).to eq('nameType' => 'Organizational',
-                             'name' => 'University Of California, Santa Barbara', 'nameIdentifiers' => [], 'affiliation' => [])
+      expect(response).to eq('name' => 'University of California, Santa Barbara', "nameType"=>"Organizational")
     end
 
     it 'name with affiliation' do
@@ -126,17 +123,25 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq('nameType' => 'Organizational', 'name' => 'Dr. Störi, Kunstsalon',
-                             'nameIdentifiers' => [], 'affiliation' => [])
+      expect(response).to eq('name' => 'Dr. Störi, Kunstsalon', "nameType"=>"Organizational")
     end
 
-    it 'name with affiliation and country' do
-      input = '10.16910/jemr.9.1.2'
-      subject = described_class.new(input: input, from: 'crossref')
+    # it 'name with affiliation and country' do
+    #   input = '10.16910/jemr.9.1.2'
+    #   subject = described_class.new(input: input, from: 'crossref')
+    #   response = subject.get_one_author(subject.creators.first)
+    #   expect(response).to eq('familyName' => 'Eraslan',
+    #                          'givenName' => 'Sukru',
+    #                          'name' => 'Eraslan, Sukru')
+    # end
+
+    it 'name with affiliation crossref' do
+      input = '10.7554/elife.01567'
+      subject = described_class.new(input: input, from: 'crossref_json')
       response = subject.get_one_author(subject.creators.first)
-      expect(response).to eq('familyName' => 'Eraslan',
-                             'givenName' => 'Sukru',
-                             'name' => 'Eraslan, Sukru')
+      expect(response).to eq('affiliation' => [{"name"=>"Department of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland"}],'familyName' => 'Sankar',
+                             'givenName' => 'Martial',
+                             'name' => 'Sankar, Martial', "nameType" => "Personal")
     end
 
     it 'name with role' do
@@ -144,7 +149,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq('affiliation' => [], 'name' => 'Unknown', 'nameIdentifiers' => [])
+      expect(response).to eq("name"=>"Unknown")
     end
 
     it 'multiple name_identifier' do
@@ -161,8 +166,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq('nameType' => 'Organizational', 'name' => 'The GTEx Consortium',
-                             'nameIdentifiers' => [], 'affiliation' => [])
+      expect(response).to eq('nameType' => 'Organizational', 'name' => 'The GTEx Consortium')
     end
 
     it 'only familyName and givenName' do

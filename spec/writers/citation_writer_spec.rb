@@ -25,7 +25,7 @@ describe Briard::Metadata, vcr: true do
       input = 'https://doi.org/10.5061/DRYAD.8515'
       subject = described_class.new(input: input, from: 'datacite')
 
-      expect(subject.citation).to eq('Ollomo, B., Durand, P., Prugnolle, F., Douzery, E. J. P., Arnathau, C., Nkoghe, D., Leroy, E., &amp; Renaud, F. (2011). <i>Data from: A new malaria agent in African hominids.</i> (Version 1) [Data set]. Dryad. https://doi.org/10.5061/dryad.8515')
+      expect(subject.citation).to eq('Ollomo, B., Durand, P., Prugnolle, F., Douzery, Emmanuel J. P., Arnathau, C., Nkoghe, D., Leroy, E., &amp; Renaud, F. (2011). <i>Data from: A new malaria agent in African hominids.</i> (Version 1) [Data set]. Dryad. https://doi.org/10.5061/dryad.8515')
     end
 
     it 'Missing author' do
@@ -39,7 +39,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       expect(subject.style).to eq('apa')
       expect(subject.locale).to eq('en-US')
-      expect(subject.citation).to eq('Lab For Exosphere And Near Space Environment Studies. (2019). <i>lenses-lab/LYAO_RT-2018JA026426: Original Release</i> (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.2598836')
+      expect(subject.citation).to eq('Lab for Exosphere and Near Space Environment Studies. (2019). <i>lenses-lab/LYAO_RT-2018JA026426: Original Release</i> (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.2598836')
     end
 
     it 'interactive resource without dates' do

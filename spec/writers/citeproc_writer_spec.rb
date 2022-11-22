@@ -16,7 +16,7 @@ describe Briard::Metadata, vcr: true do
       expect(json['author']).to eq([{ 'family' => 'Ollomo', 'given' => 'Benjamin' },
                                     { 'family' => 'Durand', 'given' => 'Patrick' },
                                     { 'family' => 'Prugnolle', 'given' => 'Franck' },
-                                    { 'family' => 'Douzery', 'given' => 'Emmanuel J. P.' },
+                                    { "literal"=>"Douzery, Emmanuel J. P."},
                                     { 'family' => 'Arnathau', 'given' => 'Céline' },
                                     { 'family' => 'Nkoghe', 'given' => 'Dieudonné' },
                                     { 'family' => 'Leroy', 'given' => 'Eric' },

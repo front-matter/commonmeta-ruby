@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.2172/972169
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 Nov 2022 15:24:32 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '759'
+      Set-Cookie:
+      - AWSALB=R1F3FMjP4nmhw1roKRg+woI/b3xBShqYPZGKahcK4+W1JG+GYQzR5gUstaiQGSbAobXZ7c5y13vVqpeIW5bp0NyxnVNV1iduxjaEaYMiDwKRXoMYth7I0MOgsD/K;
+        Expires=Sun, 27 Nov 2022 15:24:32 GMT; Path=/, AWSALBCORS=R1F3FMjP4nmhw1roKRg+woI/b3xBShqYPZGKahcK4+W1JG+GYQzR5gUstaiQGSbAobXZ7c5y13vVqpeIW5bp0NyxnVNV1iduxjaEaYMiDwKRXoMYth7I0MOgsD/K;
+        Expires=Sun, 27 Nov 2022 15:24:32 GMT; Path=/; SameSite=None
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - polite
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAA/6VU32/aMBD+VyI/tRKBOJRQ8rgWVdXasQGVpgEPJrmAVcfObAcaIf73nQO00F/SNskPydn33d13392GGMtsaUhM1CNpkByMYQvwbVUA2tZKH1tXoA1XEi9oM2gGLzck3hAujeW2tPWDyYZIljuIb8xZmPCGIGHN5gK8vgS9qLw7NleaWaUr7+zbsH93jngs0UpWOQIQZyKzBikES8AZbpRIQTa8q4F39iC5hdQbYfJgzsls23gO+DC6HvTJFj25TOEJUpdciu/8gmmLlU4mYRCGDUrxzPBZfWd57exufErxjIPL+AIP/YVpuVskKi9ITKPoknaiTkgvut1tg2jIQINMwE9UKS2JA0y5nAtulqARcZBlPAFPZd4o4SAtx1+PydQbQ7KUPEFmbmWmdF7z5J0NRuNbx0SipMXnfqpyxmVdw/5rgjkjTcbkTD/6GhPTPNnRnjFhAJMyS6Wt7yDQAzRWZwXsPK8Ht65/QTOk3XDa6nVDGvVcibuOayjQ1cXXgLy8Sx4NGkhf7y13NPADpK83DtpxJ4qD9mvuwijqdGg3agdBgGmyotBq9VmQy9nMlaNK7TRArlzZyDjCcuM/U5/68+pAf9juuZi7eslQiZr7veRGqDaUq7fmdnksSAGJI5HbyrtBq657UYsPY/CnF8KcREuL7NYSX/AVuGn43kR7xnIuKvy7BrlUIkeTgd+lyw+NGdfG0cpQDoKz/ZTUuj2g9E9Q+oKdIrA05btR+hzmywnMV67n1b8B3Z8A3XMh+ILJv8Cauf2Qz+sx6EVuXRwGI/WVFKjMDxqPk1n3/V0BK80XHAMe21JUreH/K9fOR3Lt7ORqEqXRk7qhP0hygxLhOIiV+3wY3iHw0toinramrfV63VS4FJsLtZq2DOiVAGumraLU4jB5Pv3xczi4n7bI1kUo50dV7ab4yMCNKT+s8UDa81SYo430KrP0qZkq3lR6MW29XQUaxL6Jm+1Rzz6Nu93+AZG8X2lLBgAA
+    http_version:
+  recorded_at: Sun, 20 Nov 2022 15:24:32 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.2172
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
+      Accept:
+      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 20 Nov 2022 15:24:33 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Connection:
+      - keep-alive
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Content-Encoding:
+      - gzip
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ld7GThN620qafw7ahd5Wh4gcW7JL8tTx%2BimCbfawDfg2nGtqFaVR9Jp%2BfZKRLsBMel4N6a3DInRoXRK1tuNi5tjsnT6Tj1Kg2SfCjE8g3JJSzStYWiEaShJ082XsSnctBYmkqVM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 76d23173b9291c88-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9I0NzIyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAZgtqlTYAAAA=
+    http_version:
+  recorded_at: Sun, 20 Nov 2022 15:24:33 GMT
+recorded_with: VCR 3.0.3

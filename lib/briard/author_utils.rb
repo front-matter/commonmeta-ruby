@@ -18,17 +18,18 @@ module Briard
       return nil if author.fetch('creatorName', nil).is_a?(Array)
 
       name = parse_attributes(author.fetch('creatorName', nil)) ||
-             parse_attributes(author.fetch('contributorName', nil))
-      given_name = parse_attributes(author.fetch('givenName', nil))
-      family_name = parse_attributes(author.fetch('familyName', nil))
+             parse_attributes(author.fetch('contributorName', nil)) ||
+             parse_attributes(author.fetch('name', nil))
+      given_name = parse_attributes(author.fetch('givenName', nil)) ||
+                   parse_attributes(author.fetch('given', nil))
+      family_name = parse_attributes(author.fetch('familyName', nil)) ||
+                    parse_attributes(author.fetch('family', nil))
       name = cleanup_author(name)
       name = [family_name, given_name].join(', ') if family_name.present? && given_name.present?
       contributor_type = parse_attributes(author.fetch('contributorType', nil))
 
       name_type = parse_attributes(author.fetch('creatorName', nil), content: 'nameType',
-                                                                     first: true) || parse_attributes(author.fetch('contributorName', nil), content: 'nameType',
-                                                                                                                                            first: true)
-
+                                                                     first: true) || parse_attributes(author.fetch('contributorName', nil), content: 'nameType',                                                                             first: true)
       name_identifiers = Array.wrap(author.fetch('nameIdentifier', nil)).map do |ni|
         if ni['nameIdentifierScheme'] == 'ORCID'
           {
@@ -51,21 +52,38 @@ module Briard
         end
       end.presence
 
-      author = { 'nameType' => name_type,
-                 'name' => name,
-                 'givenName' => given_name,
-                 'familyName' => family_name,
-                 'nameIdentifiers' => name_identifiers,
-                 'affiliation' => get_affiliations(author.fetch('affiliation', nil)),
-                 'contributorType' => contributor_type }.compact
+      # Crossref metadata
+      if name_identifiers.blank? && author['ORCID'].present?
+        name_identifiers = [{
+          'nameIdentifier' => normalize_orcid(author.fetch('ORCID')),
+          'schemeUri' => 'https://orcid.org',
+          'nameIdentifierScheme' => 'ORCID' }]
+      end
+
+      if name_type.blank? && Array.wrap(name_identifiers).find { |ni| ni['nameIdentifierScheme'] == 'ORCID' }.present?
+        name_type = 'Personal'
+      elsif name_type.blank? && Array.wrap(name_identifiers).find { |ni| %w(ISNI ROR).include? ni['nameIdentifierScheme'] }.present?
+        name_type = 'Organizational'
+      elsif name_type.blank? && is_personal_name?(given_name: given_name, name: name) && name.to_s.exclude?(';')
+        name_type = 'Personal'
+      end
+
+      author = { 
+        'nameType' => name_type,
+        'name' => name,
+        'givenName' => given_name,
+        'familyName' => family_name,
+        'nameIdentifiers' => name_identifiers,
+        'affiliation' => get_affiliations(author.fetch('affiliation', nil)),
+        'contributorType' => contributor_type }.compact
 
       return author if family_name.present?
 
-      if is_personal_name?(author)
+      if name_type == 'Personal'
         Namae.options[:include_particle_in_family] = true
         names = Namae.parse(name)
         parsed_name = names.first
-
+        
         if parsed_name.present?
           given_name = parsed_name.given
           family_name = parsed_name.family
@@ -79,14 +97,14 @@ module Briard
           'name' => name,
           'givenName' => given_name,
           'familyName' => family_name,
-          'nameIdentifiers' => Array.wrap(name_identifiers),
-          'affiliation' => Array.wrap(author.fetch('affiliation', nil)),
+          'nameIdentifiers' => name_identifiers,
+          'affiliation' => get_affiliations(author.fetch('affiliation', nil)),
           'contributorType' => contributor_type }.compact
       else
         { 'nameType' => name_type,
           'name' => name,
-          'nameIdentifiers' => Array.wrap(name_identifiers),
-          'affiliation' => Array.wrap(author.fetch('affiliation', nil)),
+          'nameIdentifiers' => name_identifiers,
+          'affiliation' => get_affiliations(author.fetch('affiliation', nil)),
           'contributorType' => contributor_type }.compact
       end
     end
@@ -102,21 +120,16 @@ module Briard
       # remove spaces around hyphens
       author = author.gsub(' - ', '-')
 
-      # titleize strings
       # remove non-standard space characters
-      author.my_titleize.gsub(/[[:space:]]/, ' ')
+      author.gsub(/[[:space:]]/, ' ')
     end
 
-    def is_personal_name?(author)
-      return false if author.fetch('nameType', nil) == 'Organizational'
-      return true if Array.wrap(author.fetch('nameIdentifiers', nil)).find do |a|
-                       a['nameIdentifierScheme'] == 'ORCID'
-                     end.present? ||
-                     author.fetch('familyName', '').present? ||
-                     (author.fetch('name', '').include?(',') &&
-                     author.fetch('name', '').exclude?(';')) ||
-                     name_exists?(author.fetch('name', '').split.first)
-
+    # check if given name is in the database of known given names:
+    # https://github.com/bmuller/gender_detector
+    def is_personal_name?(given_name: nil, name: nil)
+      return true if name_exists?(given_name.to_s) ||
+                     name_exists?(name.to_s.split.first) ||
+                     name_exists?(name.to_s.split(', ').last)
       false
     end
 
@@ -145,6 +158,8 @@ module Briard
     end
 
     def get_affiliations(affiliations)
+      return nil unless affiliations.present?
+
       Array.wrap(affiliations).map do |a|
         affiliation_identifier = nil
         if a.is_a?(String)
@@ -159,16 +174,18 @@ module Briard
             end
             affiliation_identifier = !affiliation_identifier.to_s.start_with?('https://') && schemeURI.present? ? normalize_id(schemeURI + affiliation_identifier) : normalize_id(affiliation_identifier)
           end
-          name = a['__content__'].to_s.squish.presence
+          name = (a['name'] || a['__content__']).to_s.squish.presence
           affiliation_identifier_scheme = a['affiliationIdentifierScheme']
           scheme_uri = a['SchemeURI']
         end
+
+        next unless name.present?
 
         { 'name' => name,
           'affiliationIdentifier' => affiliation_identifier,
           'affiliationIdentifierScheme' => affiliation_identifier_scheme,
           'schemeUri' => scheme_uri }.compact
-      end.presence
+      end.compact.presence
     end
   end
 end

@@ -71,9 +71,8 @@ describe Briard::Metadata, vcr: true do
                                             'nameIdentifierScheme' => 'ORCID',
                                             'schemeUri' => 'https://orcid.org' }],
                                         'nameType' => 'Personal' },
-                                      { 'name' => 'University Of California, Santa Barbara',
-                                        'nameType' => 'Organizational',
-                                        'nameIdentifiers' => [], 'affiliation' => [] }])
+                                      { 'name' => 'University of California, Santa Barbara',
+                                        'nameType' => 'Organizational' }])
       expect(subject.titles).to eq([{ 'title' => 'R Interface to the DataONE REST API' }])
       expect(subject.descriptions.first['description']).to start_with('Provides read and write access to data and metadata')
       expect(subject.subjects).to eq([{ 'subject' => 'data sharing' }, { 'subject' => 'data repository' },
@@ -132,7 +131,7 @@ describe Briard::Metadata, vcr: true do
                                   'resourceTypeGeneral' => 'Software', 'ris' => 'COMP', 'schemaOrg' => 'SoftwareSourceCode')
       expect(subject.creators.size).to eq(4)
       expect(subject.creators.last).to eq('familyName' => 'Nielsen', 'givenName' => 'Lars Holm',
-                                          'name' => 'Nielsen, Lars Holm', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0001-8135-3489', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'nameType' => 'Personal', 'affiliation' => [])
+                                          'name' => 'Nielsen, Lars Holm', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0001-8135-3489', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'nameType' => 'Personal')
       expect(subject.titles).to eq([{ 'title' => 'DOI Registrations for Software' }])
       expect(subject.descriptions.first['description']).to start_with('Analysis of DataCite DOIs registered for software')
       expect(subject.subjects).to eq([{ 'subject' => 'doi' }, { 'subject' => 'software' },

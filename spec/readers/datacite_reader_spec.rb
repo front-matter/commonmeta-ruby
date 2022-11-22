@@ -26,7 +26,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['citeproc']).to eq('dataset')
       expect(subject.creators.length).to eq(8)
       expect(subject.creators.first).to eq('nameType' => 'Personal', 'name' => 'Ollomo, Benjamin',
-                                           'givenName' => 'Benjamin', 'familyName' => 'Ollomo', 'nameIdentifiers' => [], 'affiliation' => [{ 'affiliationIdentifier' => 'https://ror.org/01wyqb997', 'affiliationIdentifierScheme' => 'ROR', 'name' => 'Centre International de Recherches Médicales de Franceville' }])
+                                           'givenName' => 'Benjamin', 'familyName' => 'Ollomo', 'affiliation' => [{ 'affiliationIdentifier' => 'https://ror.org/01wyqb997', 'affiliationIdentifierScheme' => 'ROR', 'name' => 'Centre International de Recherches Médicales de Franceville' }])
       expect(subject.titles).to eq([{ 'title' => 'Data from: A new malaria agent in African hominids.' }])
       expect(subject.id).to eq('https://doi.org/10.5061/dryad.8515')
       expect(subject.rights_list).to eq([{ 'rights' => 'Creative Commons Zero v1.0 Universal',
@@ -59,7 +59,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['citeproc']).to eq('article-journal')
       expect(subject.creators).to eq([{
                                        'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405',
-                                                               'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Fenner, Martin', 'givenName' => 'Martin', 'familyName' => 'Fenner'
+                                                               'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Fenner, Martin', 'givenName' => 'Martin', 'familyName' => 'Fenner', 'nameType' => 'Personal'
                                      }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.id).to eq('https://doi.org/10.5438/4k3m-nyvg')
@@ -90,7 +90,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceType']).to eq('ConferencePaper')
       expect(subject.types['resourceTypeGeneral']).to eq('Text')
       expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Johnston, Nathaniel',
-                                        'givenName' => 'Nathaniel', 'familyName' => 'Johnston', 'nameIdentifiers' => [], 'affiliation' => [] }])
+                                        'givenName' => 'Nathaniel', 'familyName' => 'Johnston' }])
       expect(subject.titles).to eq([{ 'title' => 'The Minimum Size of Qubit Unextendible Product Bases' }])
       expect(subject.id).to eq('https://doi.org/10.4230/lipics.tqc.2013.93')
       expect(subject.descriptions.first['description']).to start_with('We investigate the problem of constructing unextendible product bases in the qubit case')
@@ -141,7 +141,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.contributors).to eq([{ 'name' => 'Starr, Joan', 'givenName' => 'Joan', 'familyName' => 'Starr', 'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0002-7285-027X', 'schemeUri' => 'https://orcid.org', 'nameIdentifierScheme' => 'ORCID' }], 'affiliation' =>
         [{ 'affiliationIdentifier' => 'https://ror.org/03yrm5c26',
            'affiliationIdentifierScheme' => 'ROR',
-           'name' => 'California Digital Library' }], 'contributorType' => 'ProjectLeader' }])
+           'name' => 'California Digital Library' }], 'contributorType' => 'ProjectLeader', "nameType"=>"Personal" }])
       expect(subject.subjects).to eq([{ 'lang' => 'en-US', 'schemeUri' => 'http://dewey.info/',
                                         'subject' => '000 computer science', 'subjectScheme' => 'dewey' }])
       expect(subject.dates).to eq([
@@ -195,8 +195,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceType'].nil?).to be(true)
       expect(subject.types['resourceTypeGeneral']).to eq('Dataset')
       expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq('affiliation' => [], 'name' => 'EvK2 CNR Committee',
-                                           'nameIdentifiers' => [])
+      expect(subject.creators.first).to eq('name' => 'EvK2 CNR Committee')
       expect(subject.titles).to eq([
                                      { 'title' => 'SHARE (Stations at High Altitude for Research on the Environment) Network' }, {
                                        'title' => 'Urdukas (Baltoro Glacier, Baltistan - Pakistan)', 'titleType' => 'Subtitle'
@@ -223,7 +222,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['ris']).to eq('COMP')
       expect(subject.types['citeproc']).to eq('article')
       expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Garza, Kristian',
-                                        'givenName' => 'Kristian', 'familyName' => 'Garza', 'nameIdentifiers' => [], 'affiliation' => [] }])
+                                        'givenName' => 'Kristian', 'familyName' => 'Garza' }])
       expect(subject.titles).to eq([{ 'title' => 'Analysis Tools For Crossover Experiment Of Ui Using Choice Architecture' }])
       expect(subject.descriptions.first['description']).to start_with('This tools are used to analyse the data produced by the Crosssover Experiment')
       expect(subject.rights_list).to eq([{ 'rights' =>
@@ -258,7 +257,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceTypeGeneral']).to eq('Dataset')
       expect(subject.creators.count).to eq(11)
       expect(subject.creators.first).to eq('nameType' => 'Personal',
-                                           'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0002-2410-9671', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Junge, Alexander', 'givenName' => 'Alexander', 'familyName' => 'Junge', 'affiliation' => [])
+                                           'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0002-2410-9671', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Junge, Alexander', 'givenName' => 'Alexander', 'familyName' => 'Junge')
       expect(subject.titles).to eq([{ 'title' => 'RAIN v1' }])
       expect(subject.descriptions.first['description']).to start_with('<b>RAIN: RNA–protein Association and Interaction Networks')
       expect(subject.rights_list).to eq([{ 'rights' => 'Creative Commons Attribution 4.0 International',
@@ -307,7 +306,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.first).to eq('nameType' => 'Personal', 'familyName' => 'Dworkin',
                                            'givenName' => 'Ian',
                                            'name' => 'Dworkin, Ian',
-                                           'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0002-2874-287X', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'affiliation' => [])
+                                           'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0002-2874-287X', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }])
       expect(subject.titles).to eq([{ 'title' => 'Drosophila melanogaster wing images from low and high altitude populations in Ethiopia and Zambia.' }])
       expect(subject.descriptions.first['description']).to start_with('These are raw wing images from <i>Drosophila melanogaster</i>')
       expect(subject.rights_list).to eq([{ 'rights' => 'Creative Commons Attribution 4.0 International',
@@ -543,7 +542,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceTypeGeneral']).to eq('Dataset')
       expect(subject.creators.length).to eq(6)
       expect(subject.creators.first).to eq('familyName' => 'Bales', 'givenName' => 'Roger',
-                                           'name' => 'Bales, Roger', 'nameType' => 'Personal', 'affiliation' => [{ 'name' => 'UC Merced' }], 'nameIdentifiers' => [])
+                                           'name' => 'Bales, Roger', 'nameType' => 'Personal', 'affiliation' => [{ 'name' => 'UC Merced' }])
       expect(subject.subjects).to eq([{ 'subject' => 'earth sciences' },
                                       { 'subject' => 'soil moisture' },
                                       { 'subject' => 'soil temperature' },
@@ -562,7 +561,7 @@ describe Briard::Metadata, vcr: true do
                                            'identifierType' => 'Local accession number' }])
       expect(subject.creators.length).to eq(1)
       expect(subject.creators.first).to eq('familyName' => 'Fenner', 'givenName' => 'Martin',
-                                           'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Fenner, Martin')
+                                           'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Fenner, Martin', "nameType" => "Personal")
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.publisher).to eq('DataCite')
       expect(subject.publication_year).to eq('2016')
@@ -594,7 +593,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.doi).to eq('10.5072/geopointexample')
       expect(subject.creators.length).to eq(3)
       expect(subject.creators.first).to eq('familyName' => 'Schumann', 'givenName' => 'Kai',
-                                           'name' => 'Schumann, Kai', 'nameType' => 'Personal', 'nameIdentifiers' => [], 'affiliation' => [])
+                                           'name' => 'Schumann, Kai', 'nameType' => 'Personal')
       expect(subject.titles).to eq([{ 'title' => 'Gridded results of swath bathymetric mapping of Disko Bay, Western Greenland, 2007-2008' }])
       expect(subject.publisher).to eq('PANGAEA - Data Publisher for Earth & Environmental Science')
       expect(subject.publication_year).to eq('2011')
@@ -616,7 +615,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.doi).to eq('10.6071/z7wc73')
       expect(subject.creators.length).to eq(6)
       expect(subject.creators.first).to eq('familyName' => 'Bales', 'givenName' => 'Roger',
-                                           'name' => 'Bales, Roger', 'nameType' => 'Personal', 'affiliation' => [{ 'name' => 'UC Merced' }, { 'name' => 'NSF' }], 'nameIdentifiers' => [])
+                                           'name' => 'Bales, Roger', 'nameType' => 'Personal', 'affiliation' => [{ 'name' => 'UC Merced' }, { 'name' => 'NSF' }])
       expect(subject.titles).to eq([{ 'title' => 'Southern Sierra Critical Zone Observatory (SSCZO), Providence Creek meteorological data, soil moisture and temperature, snow depth and air temperature' }])
       expect(subject.publisher).to eq('UC Merced')
       expect(subject.dates).to eq([{ 'date' => '2014-10-17', 'dateType' => 'Updated' },
@@ -646,8 +645,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq('https://doi.org/10.14457/kmitl.res.2006.17')
       expect(subject.types['schemaOrg']).to eq('Dataset')
       expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq('name' => 'กัญจนา แซ่เตียว', 'nameIdentifiers' => [],
-                                           'affiliation' => [])
+      expect(subject.creators.first).to eq('name' => 'กัญจนา แซ่เตียว')
     end
 
     it 'multiple author names in one creatorsName' do
@@ -657,7 +655,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq('https://doi.org/10.7910/dvn/eqtqyo')
       expect(subject.types['schemaOrg']).to eq('Dataset')
       expect(subject.creators).to eq([{
-                                       'name' => 'Enos, Ryan (Harvard University); Fowler, Anthony (University Of Chicago); Vavreck, Lynn (UCLA)', 'nameIdentifiers' => [], 'affiliation' => []
+                                       'name' => 'Enos, Ryan (Harvard University); Fowler, Anthony (University of Chicago); Vavreck, Lynn (UCLA)' 
                                      }])
     end
 
@@ -705,7 +703,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.length).to eq(2)
       expect(subject.creators.first).to eq(
         'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0001-8740-8284',
-                                'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Bimbo, Nuno', 'givenName' => 'Nuno', 'familyName' => 'Bimbo'
+                                'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Bimbo, Nuno', 'givenName' => 'Nuno', 'familyName' => 'Bimbo', 'nameType' => 'Personal'
       )
       expect(subject.titles).to eq([{ 'title' => 'Dataset for "Direct Evidence for Solid-Like Hydrogen in a Nanoporous Carbon Hydrogen Storage Material at Supercritical Temperatures"' }])
       expect(subject.descriptions.first['description']).to start_with('Dataset for Direct Evidence for Solid-Like Hydrogen')
@@ -742,7 +740,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.length).to eq(24)
       expect(subject.creators.first).to eq(
         'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0001-5331-6592',
-                                'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Farquhar, Adam', 'givenName' => 'Adam', 'familyName' => 'Farquhar', 'affiliation' => [{ 'name' => 'British Library' }]
+                                'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Farquhar, Adam', 'givenName' => 'Adam', 'familyName' => 'Farquhar', 'affiliation' => [{ 'name' => 'British Library' }], 'nameType' => 'Personal'
       )
       expect(subject.titles).to eq([{ 'title' => 'Technical and Human Infrastructure for Open Research (THOR)' }])
       expect(subject.descriptions.first['description']).to start_with('Five years ago, a global infrastructure')
@@ -768,7 +766,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceTypeGeneral']).to eq('Text')
       expect(subject.creators.length).to eq(2)
       expect(subject.creators.first).to eq(
-        'affiliation' => [{ 'name' => 'Тверская государственная сельскохозяйственная академия' }], 'familyName' => 'Ганичева', 'givenName' => 'А.В.', 'name' => 'Ганичева, А.В.', 'nameType' => 'Personal', 'nameIdentifiers' => []
+        'affiliation' => [{ 'name' => 'Тверская государственная сельскохозяйственная академия' }], 'name' => 'Ганичева, А.В.'
       )
       expect(subject.titles).to eq([{ 'title' => 'МОДЕЛЬ СИСТЕМНОЙ ДИНАМИКИ ПРОЦЕССА ОБУЧЕНИЯ' },
                                     { 'title' => 'MODEL OF SYSTEM DYNAMICS OF PROCESS OF TRAINING',
@@ -794,8 +792,8 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['citeproc']).to eq('article-journal')
       expect(subject.creators).to eq([{
                                        'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405',
-                                                               'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Fenner, Martin', 'givenName' => 'Martin', 'familyName' => 'Fenner'
-                                     }])
+                                                               'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Fenner, Martin', 'givenName' => 'Martin', 'familyName' => 'Fenner',
+                                                               "nameType"=>"Personal"}])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.id).to eq('https://doi.org/10.5438/4k3m-nyvg')
       expect(subject.identifiers).to eq([{ 'identifier' => 'MS-49-3632-5083',
@@ -818,11 +816,10 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceTypeGeneral']).to eq('Text')
       expect(subject.types['ris']).to eq('BOOK')
       expect(subject.types['citeproc']).to eq('book')
-      expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John', 'familyName' => 'Smith', 'nameIdentifiers' => [], 'affiliation' => [] }, { 'name' => 'つまらないものですが', 'nameIdentifiers' =>
+      expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John', 'familyName' => 'Smith' }, { 'name' => 'つまらないものですが', 'nameIdentifiers' =>
         [{ 'nameIdentifier' => 'http://isni.org/isni/0000000134596520',
            'nameIdentifierScheme' => 'ISNI',
-           'schemeUri' => 'http://isni.org/isni/' }],
-                                                                                                                                                                                             'affiliation' => [] }])
+           'schemeUri' => 'http://isni.org/isni/' }], "nameType"=>"Organizational"}])
       expect(subject.titles).to eq([{ 'title' => 'Właściwości rzutowań podprzestrzeniowych' },
                                     { 'title' => 'Translation of Polish titles',
                                       'titleType' => 'TranslatedTitle' }])
@@ -856,11 +853,10 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceTypeGeneral']).to eq('Text')
       expect(subject.types['ris']).to eq('BOOK')
       expect(subject.types['citeproc']).to eq('book')
-      expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John', 'familyName' => 'Smith', 'nameIdentifiers' => [], 'affiliation' => [] }, { 'name' => 'つまらないものですが', 'nameIdentifiers' =>
+      expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John', 'familyName' => 'Smith' }, { 'name' => 'つまらないものですが', 'nameIdentifiers' =>
         [{ 'nameIdentifier' => 'http://isni.org/isni/0000000134596520',
            'nameIdentifierScheme' => 'ISNI',
-           'schemeUri' => 'http://isni.org/isni/' }],
-                                                                                                                                                                                             'affiliation' => [] }])
+           'schemeUri' => 'http://isni.org/isni/' }], 'nameType' => 'Organizational' }])
       expect(subject.titles).to eq([{ 'title' => 'Właściwości rzutowań podprzestrzeniowych' },
                                     { 'title' => 'Translation of Polish titles',
                                       'titleType' => 'TranslatedTitle' }])
@@ -892,7 +888,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['citeproc']).to eq('dataset')
       expect(subject.creators.length).to eq(8)
       expect(subject.creators.last).to eq('familyName' => 'Renaud', 'givenName' => 'François',
-                                          'name' => 'Renaud, François', 'nameType' => 'Personal', 'nameIdentifiers' => [], 'affiliation' => [])
+                                          'name' => 'Renaud, François', 'nameType' => 'Personal')
       expect(subject.titles).to eq([{ 'title' => 'Data from: A new malaria agent in African hominids.' }])
       expect(subject.id).to eq('https://doi.org/10.5061/dryad.8515')
       expect(subject.identifiers).to eq([{ 'identifier' =>
@@ -921,11 +917,10 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceTypeGeneral']).to eq('Text')
       expect(subject.types['ris']).to eq('BOOK')
       expect(subject.types['citeproc']).to eq('book')
-      expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John', 'familyName' => 'Smith', 'nameIdentifiers' => [], 'affiliation' => [] }, { 'name' => 'つまらないものですが', 'nameIdentifiers' =>
+      expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John', 'familyName' => 'Smith' }, { 'name' => 'つまらないものですが', 'nameIdentifiers' =>
         [{ 'nameIdentifier' => 'http://isni.org/isni/0000000134596520',
            'nameIdentifierScheme' => 'ISNI',
-           'schemeUri' => 'http://isni.org/isni/' }],
-                                                                                                                                                                                             'affiliation' => [] }])
+           'schemeUri' => 'http://isni.org/isni/' }], "nameType"=>"Organizational" }])
       expect(subject.titles).to eq([{ 'title' => 'Właściwości rzutowań podprzestrzeniowych' },
                                     { 'title' => 'Translation of Polish titles',
                                       'titleType' => 'TranslatedTitle' }])
@@ -955,10 +950,9 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceTypeGeneral']).to eq('Text')
       expect(subject.types['ris']).to eq('BOOK')
       expect(subject.types['citeproc']).to eq('book')
-      expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John', 'familyName' => 'Smith', 'nameIdentifiers' => [], 'affiliation' => [] }, { 'name' => 'つまらないものですが', 'nameIdentifiers' =>
+      expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John', 'familyName' => 'Smith' }, { 'name' => 'つまらないものですが', 'nameIdentifiers' =>
         [{ 'nameIdentifier' => 'abc123',
-           'nameIdentifierScheme' => 'ISNI' }],
-                                                                                                                                                                                             'affiliation' => [] }])
+           'nameIdentifierScheme' => 'ISNI' }], "nameType"=>"Organizational"}])
       expect(subject.titles).to eq([{ 'title' => 'Właściwości rzutowań podprzestrzeniowych' },
                                     { 'title' => 'Translation of Polish titles',
                                       'titleType' => 'TranslatedTitle' }])
@@ -982,11 +976,10 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['schemaOrg']).to eq('Book')
       expect(subject.types['resourceType']).to eq('Monograph')
       expect(subject.types['resourceTypeGeneral']).to eq('Text')
-      expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John', 'familyName' => 'Smith', 'nameIdentifiers' => [], 'affiliation' => [] }, { 'name' => 'つまらないものですが', 'nameIdentifiers' =>
+      expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John', 'familyName' => 'Smith' }, { 'name' => 'つまらないものですが', 'nameIdentifiers' =>
         [{ 'nameIdentifier' => 'http://isni.org/isni/0000000134596520',
            'nameIdentifierScheme' => 'ISNI',
-           'schemeUri' => 'http://isni.org/isni/' }],
-                                                                                                                                                                                             'affiliation' => [] }])
+           'schemeUri' => 'http://isni.org/isni/' }], 'nameType' => 'Organizational' }])
       expect(subject.titles).to eq([{ 'title' => 'Właściwości rzutowań podprzestrzeniowych' },
                                     { 'title' => 'Translation of Polish titles',
                                       'titleType' => 'TranslatedTitle' }])
@@ -1024,8 +1017,8 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceType']).to eq('Simulation Tool')
       expect(subject.types['resourceTypeGeneral']).to eq('Software')
       expect(subject.creators.length).to eq(5)
-      expect(subject.creators.first).to eq('nameType' => 'Personal', 'name' => 'PatiÃ±O, Carlos',
-                                           'givenName' => 'Carlos', 'familyName' => 'PatiÃ±O', 'nameIdentifiers' => [], 'affiliation' => [])
+      expect(subject.creators.first).to eq('nameType' => 'Personal', 'name' => 'PatiÃ±o, Carlos',
+                                           'givenName' => 'Carlos', 'familyName' => 'PatiÃ±o')
       expect(subject.titles).to eq([{ 'title' => 'LAMMPS Data-File Generator' }])
       expect(subject.dates).to eq([{ 'date' => '2018-07-18', 'dateType' => 'Valid' },
                                    { 'date' => '2018-07-18', 'dateType' => 'Accepted' }, { 'date' => '2018', 'dateType' => 'Issued' }])
@@ -1047,9 +1040,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['bibtex']).to eq('misc')
       expect(subject.creators.length).to eq(1)
       expect(subject.creators.first).to eq('affiliation' => [{ 'affiliationIdentifier' => 'https://ror.org/04zt3wx35', 'affiliationIdentifierScheme' => 'ROR', 'name' => 'Canada Mortgage and Housing Corporation' }],
-                                           'name' => 'Statistique Canada',
-                                           'nameIdentifiers' => [],
-                                           'nameType' => 'Organizational')
+                                           'name' => 'Statistique Canada', "nameType" => "Organizational")
     end
 
     it 'doi with + sign' do
@@ -1078,11 +1069,10 @@ describe Briard::Metadata, vcr: true do
                                            'identifierType' => 'FDZ' }])
       expect(subject.types['schemaOrg']).to eq('Dataset')
       expect(subject.types['resourceTypeGeneral']).to eq('Dataset')
-      expect(subject.creators).to eq([{ 'nameType' => 'Organizational',
-                                        'name' => 'Europäische Kommission', 'nameIdentifiers' => [], 'affiliation' => [] }])
+      expect(subject.creators).to eq([{ 'name' => 'Europäische Kommission', "nameType"=>"Organizational" }])
       expect(subject.contributors.length).to eq(18)
       expect(subject.contributors.first).to eq(
-        'affiliation' => [{ 'name' => 'Europäische Kommission, Brüssel' }], 'contributorType' => 'Researcher', 'familyName' => 'Reif', 'givenName' => 'Karlheinz', 'name' => 'Reif, Karlheinz', 'nameType' => 'Personal', 'nameIdentifiers' => []
+        'affiliation' => [{ 'name' => 'Europäische Kommission, Brüssel' }], 'contributorType' => 'Researcher', 'familyName' => 'Reif', 'givenName' => 'Karlheinz', 'name' => 'Reif, Karlheinz', 'nameType' => 'Personal'
       )
       expect(subject.titles).to eq([
                                      { 'lang' => 'de',
@@ -1128,8 +1118,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['resourceType']).to eq('Article')
       expect(subject.types['resourceTypeGeneral']).to eq('Text')
       expect(subject.creators.length).to eq(3)
-      expect(subject.creators.first).to eq('nameType' => 'Personal', 'name' => 'Llamas, P.',
-                                           'givenName' => 'P.', 'familyName' => 'Llamas', 'nameIdentifiers' => [], 'affiliation' => [])
+      expect(subject.creators.first).to eq("name"=>"Llamas, P.")
       expect(subject.titles).to eq([{ 'title' => 'Rural Electrification With Hybrid Power Systems Based on Renewables - Technical System Configurations From the Point of View of the European Industry' }])
       expect(subject.dates).to eq([{ 'date' => '2008-11-01', 'dateType' => 'Valid' },
                                    { 'date' => '2008', 'dateType' => 'Issued' }])
@@ -1171,8 +1160,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['schemaOrg']).to eq('Dataset')
       expect(subject.types['resourceType']).to eq('Disclosure')
       expect(subject.types['resourceTypeGeneral']).to eq('Dataset')
-      expect(subject.creators).to eq([{ 'name' => 'Anonymous', 'nameIdentifiers' => [],
-                                        'affiliation' => [] }])
+      expect(subject.creators).to eq([{ 'name' => 'anonymous' }])
       expect(subject.titles).to eq([{ 'title' => 'Messung der Bildunschaerfe in H.264-codierten Bildern und Videosequenzen' }])
       expect(subject.dates).to eq([{ 'date' => '2017', 'dateType' => 'Issued' }])
       expect(subject.publication_year).to eq('2017')
@@ -1196,16 +1184,15 @@ describe Briard::Metadata, vcr: true do
                                         'nameIdentifiers' =>
                                          [{ 'nameIdentifier' => 'https://orcid.org/0000-0002-0077-5338',
                                             'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }],
-                                        'name' => 'Van Der A, Ronald',
+                                        'name' => 'Van der A, Ronald',
                                         'givenName' => 'Ronald',
-                                        'familyName' => 'Van Der A',
+                                        'familyName' => 'Van der A',
                                         'affiliation' => [{ 'name' => 'Royal Netherlands Meteorological Institute (KNMI)' }] },
                                       { 'nameType' => 'Personal',
                                         'name' => 'Allaart, Marc',
                                         'givenName' => 'Marc',
                                         'familyName' => 'Allaart',
-                                        'affiliation' => [{ 'name' => 'Royal Netherlands Meteorological Institute (KNMI)' }],
-                                        'nameIdentifiers' => [] },
+                                        'affiliation' => [{ 'name' => 'Royal Netherlands Meteorological Institute (KNMI)' }] },
                                       { 'nameType' => 'Personal',
                                         'name' => 'Eskes, Henk',
                                         'givenName' => 'Henk',
@@ -1241,8 +1228,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq('https://handle.stage.datacite.org/10.22002/d1.694')
       expect(subject.types['schemaOrg']).to eq('Dataset')
       expect(subject.types['resourceTypeGeneral']).to eq('Dataset')
-      expect(subject.creators).to eq([{ 'affiliation' => [{ 'name' => 'Caltech' }], 'name' => 'Tester',
-                                        'nameIdentifiers' => [] }])
+      expect(subject.creators).to eq([{ 'affiliation' => [{ 'name' => 'Caltech' }], 'name' => 'Tester' }])
       expect(subject.titles).to eq([{ 'title' => 'Test license' }])
       expect(subject.dates).to eq([{ 'date' => '2018-01-12', 'dateType' => 'Issued' }])
       expect(subject.publication_year).to eq('2018')
@@ -1259,8 +1245,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq('https://handle.stage.datacite.org/10.21956/wellcomeopenres.25947.r17364')
       expect(subject.types['schemaOrg']).to eq('ScholarlyArticle')
       expect(subject.types['resourceTypeGeneral']).to eq('Text')
-      expect(subject.creators).to eq([{ 'name' => 'Fran2 Levy', 'nameIdentifiers' => [],
-                                        'affiliation' => [] }])
+      expect(subject.creators).to eq([{ 'name' => 'Fran2 Levy' }])
       expect(subject.titles).to eq([{ 'title' => 'Referee report. For: FL Regression Wellcome [version 1; referees: retracted]' }])
       expect(subject.dates).to eq([{ 'date' => '2018', 'dateType' => 'Issued' }])
       expect(subject.publication_year).to eq('2018')
@@ -1280,8 +1265,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['ris']).to eq('RPRT')
       expect(subject.types['citeproc']).to eq('article-journal')
       expect(subject.creators.length).to eq(5)
-      expect(subject.creators.first).to eq('nameType' => 'Personal', 'name' => 'Patel, Lina',
-                                           'givenName' => 'Lina', 'familyName' => 'Patel', 'nameIdentifiers' => [], 'affiliation' => [])
+      expect(subject.creators.first).to eq("name"=>"lina patel")
       expect(subject.titles).to eq([{ 'title' => 'Referee report. For: Gates - add article keywords to the metatags [version 2; referees: 1 approved]' }])
       expect(subject.publication_year).to eq('2018')
       expect(subject.publisher).to eq('Gates Open Research')
@@ -1380,7 +1364,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['bibtex']).to eq('phdthesis')
       expect(subject.types['citeproc']).to eq('thesis')
       expect(subject.creators).to eq([{ 'nameType' => 'Personal', 'name' => 'Conrad, Heiko',
-                                        'givenName' => 'Heiko', 'familyName' => 'Conrad', 'nameIdentifiers' => [], 'affiliation' => [] }])
+                                        'givenName' => 'Heiko', 'familyName' => 'Conrad' }])
       expect(subject.titles).to eq([{ 'title' => 'Dynamics of colloids in molecular glass forming liquids studied via X-ray photon correlation spectroscopy' }])
       expect(subject.dates).to eq([{ 'date' => '2014', 'dateType' => 'Issued' },
                                    { 'date' => '2014', 'dateType' => 'Copyrighted' },
@@ -1403,11 +1387,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['citeproc']).to eq('article-journal')
       expect(subject.creators.length).to eq(2)
       expect(subject.creators.first).to eq('affiliation' => [{ 'name' => 'Тверская государственная сельскохозяйственная академия' }],
-                                           'familyName' => 'Ганичева',
-                                           'givenName' => 'А.В.',
-                                           'name' => 'Ганичева, А.В.',
-                                           'nameIdentifiers' => [],
-                                           'nameType' => 'Personal')
+                                           'name' => 'Ганичева, А.В.')
       expect(subject.titles.last).to eq('title' => 'MODEL OF SYSTEM DYNAMICS OF PROCESS OF TRAINING',
                                         'titleType' => 'TranslatedTitle')
       expect(subject.dates).to eq([{ 'date' => '2019-02-09', 'dateType' => 'Issued' }])
@@ -1469,7 +1449,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.doi).to eq('10.5061/dryad.8515')
       expect(subject.creators).to eq([{
                                        'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405',
-                                                               'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Fenner, Martin', 'givenName' => 'Martin', 'familyName' => 'Fenner'
+                                                               'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Fenner, Martin', 'givenName' => 'Martin', 'familyName' => 'Fenner', 'nameType' => 'Personal'
                                      }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.publisher).to eq('DataCite')
@@ -1490,8 +1470,7 @@ describe Briard::Metadata, vcr: true do
     expect(subject.content_url).to eq('https://storage.googleapis.com/gtex_analysis_v7/single_tissue_eqtl_data/GTEx_Analysis_v7_eQTL_expression_matrices.tar.gz')
     expect(subject.types['schemaOrg']).to eq('Dataset')
     expect(subject.types['resourceType']).to eq('DroNc-seq data')
-    expect(subject.creators).to eq([{ 'name' => 'The GTEx Consortium', 'nameType' => 'Organizational',
-                                      'nameIdentifiers' => [], 'affiliation' => [] }])
+    expect(subject.creators).to eq([{ 'name' => 'The GTEx Consortium', 'nameType' => 'Organizational' }])
     expect(subject.titles).to eq([{ 'title' => 'DroNc-seq data' }])
     expect(subject.subjects).to eq([{ 'subject' => 'gtex' }, { 'subject' => 'annotation' },
                                     { 'subject' => 'phenotype' }, { 'subject' => 'gene regulation' }, { 'subject' => 'transcriptomics' }])
@@ -1522,8 +1501,8 @@ describe Briard::Metadata, vcr: true do
     expect(subject.types['resourceTypeGeneral']).to eq('Dataset')
     expect(subject.types['ris']).to eq('DATA')
     expect(subject.types['citeproc']).to eq('dataset')
-    expect(subject.creators.first).to eq('familyName' => 'Den Heijer', 'givenName' => 'C',
-                                         'name' => 'Den Heijer, C', 'nameType' => 'Personal', 'nameIdentifiers' => [], 'affiliation' => [])
+    expect(subject.creators.first).to eq('familyName' => 'den Heijer', 'givenName' => 'C',
+                                         'name' => 'den Heijer, C', 'nameType' => 'Personal')
     expect(subject.titles).to eq([{ 'lang' => 'en',
                                     'title' => 'Meteo measurements at the Sand Motor' }])
     expect(subject.publication_year).to eq('2017')
@@ -1644,8 +1623,8 @@ describe Briard::Metadata, vcr: true do
         },
         'creators' =>
         [
-          { 'nameType' => 'Personal', 'name' => 'Smith, John', 'givenName' => 'John',
-            'familyName' => 'Smith' }
+          { 'name' => 'Smith, John', 'givenName' => 'John',
+            'familyName' => 'Smith', 'nameType' => 'Personal' }
         ],
         'titles' =>
         [
@@ -1664,7 +1643,7 @@ describe Briard::Metadata, vcr: true do
         'contributors' =>
         [
           { 'name' => 'Hallett, Richard', 'givenName' => 'Richard', 'familyName' => 'Hallett',
-            'contributorType' => 'ProjectLeader' }
+            'contributorType' => 'ProjectLeader', 'nameType' => 'Personal' }
         ]
       }
     )
@@ -1706,7 +1685,7 @@ describe Briard::Metadata, vcr: true do
         'contributors' =>
         [
           { 'name' => 'Hallett, Richard', 'givenName' => 'Richard', 'familyName' => 'Hallett',
-            'contributorType' => 'ProjectLeader' }
+            'contributorType' => 'ProjectLeader', 'nameType' => 'Personal' }
         ]
       }
     )
@@ -1727,32 +1706,24 @@ describe Briard::Metadata, vcr: true do
           'name' => 'Luo, R',
           'familyName' => 'Luo',
           'givenName' => 'R',
-          'nameIdentifiers' => [],
-          'affiliation' => [],
           'nameType' => 'Personal'
         },
         {
           'name' => 'Liu, B',
           'familyName' => 'Liu',
           'givenName' => 'B',
-          'nameIdentifiers' => [],
-          'affiliation' => [],
           'nameType' => 'Personal'
         },
         {
           'name' => 'Xie, Y',
           'familyName' => 'Xie',
           'givenName' => 'Y',
-          'nameIdentifiers' => [],
-          'affiliation' => [],
           'nameType' => 'Personal'
         },
         {
           'name' => 'Li, Z',
           'familyName' => 'Li',
           'givenName' => 'Z',
-          'nameIdentifiers' => [],
-          'affiliation' => [],
           'nameType' => 'Personal'
         }
       ]

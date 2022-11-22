@@ -57,8 +57,7 @@ describe Briard::Metadata, vcr: true do
       expect(datacite.fetch('titles')).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(datacite.dig('descriptions', 0,
                           'description')).to start_with('Eating your own dog food')
-      expect(datacite.fetch('creators')).to eq([{ 'familyName' => 'Fenner', 'givenName' => 'Martin',
-                                                  'name' => 'Fenner, Martin' }])
+      expect(datacite.fetch('creators')).to eq([{"familyName"=>"Fenner", "givenName"=>"Martin", "name"=>"Fenner, Martin", "nameType"=>"Personal"}])
     end
 
     it 'rdataone' do
@@ -93,8 +92,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.valid?).to be true
       datacite = JSON.parse(subject.datacite_json)
       expect(datacite.fetch('titles')).to eq([{ 'title' => 'Eating your own Dog Food' }])
-      expect(datacite.fetch('creators')).to eq([{ 'affiliation' => [],
-                                                  'familyName' => 'Fenner',
+      expect(datacite.fetch('creators')).to eq([{ 'familyName' => 'Fenner',
                                                   'givenName' => 'Martin',
                                                   'name' => 'Fenner, Martin',
                                                   'nameIdentifiers' =>

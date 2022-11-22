@@ -52,8 +52,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['ris']).to eq('GEN')
       expect(subject.types['citeproc']).to eq('article-newspaper')
       expect(subject.titles).to eq([{ 'title' => 'Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health' }])
-      expect(subject.creators).to eq([{ 'affiliation' => [],
-                                        'familyName' => 'Fenner',
+      expect(subject.creators).to eq([{ 'familyName' => 'Fenner',
                                         'givenName' => 'Martin',
                                         'name' => 'Fenner, Martin',
                                         'nameIdentifiers' =>
@@ -82,8 +81,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['ris']).to eq('GEN')
       expect(subject.types['citeproc']).to eq('article-newspaper')
       expect(subject.titles).to eq([{ 'title' => 'Dryad: Interview with Jen Gibson' }])
-      expect(subject.creators).to eq([{ 'affiliation' => [],
-                                        'familyName' => 'Fenner',
+      expect(subject.creators).to eq([{ 'familyName' => 'Fenner',
                                         'givenName' => 'Martin',
                                         'name' => 'Fenner, Martin',
                                         'nameIdentifiers' =>
@@ -131,8 +129,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types['ris']).to eq('GEN')
       expect(subject.types['citeproc']).to eq('post-weblog')
       expect(subject.titles).to eq([{ 'title' => 'Implementing the FAIR Principles Through FAIR-Enabling Artifacts and Services' }])
-      expect(subject.creators).to eq([{ 'affiliation' => [],
-                                        'familyName' => 'Winston',
+      expect(subject.creators).to eq([{ 'familyName' => 'Winston',
                                         'givenName' => 'Donny',
                                         'name' => 'Winston, Donny',
                                         'nameIdentifiers' =>

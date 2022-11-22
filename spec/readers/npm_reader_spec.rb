@@ -57,8 +57,8 @@ describe Briard::Metadata, vcr: true do
       # expect(subject.url).to eq("https://blog.datacite.org/eating-your-own-dog-food")
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'article',
                                   'reourceType' => 'NPM Package', 'resourceTypeGeneral' => 'Software', 'ris' => 'GEN', 'schemaOrg' => 'SoftwareSourceCode')
-      expect(subject.creators).to eq([{ 'affiliation' => [], 'familyName' => 'Brancotte',
-                                        'givenName' => 'Bryan', 'name' => 'Brancotte, Bryan', 'nameIdentifiers' => [], 'nameType' => 'Personal' }])
+      expect(subject.creators).to eq([{ 'familyName' => 'Brancotte',
+                                        'givenName' => 'Bryan', 'name' => 'Brancotte, Bryan', 'nameType' => 'Personal' }])
       expect(subject.titles).to eq([{ 'title' => 'edam-browser' }])
       expect(subject.descriptions).to eq([{ 'description' =>
         + 'The EDAM Browser is a client-side web-based visualization javascript widget. Its goals are to help describing bio-related resources and service with EDAM, and to facilitate and foster community contributions to EDAM.',

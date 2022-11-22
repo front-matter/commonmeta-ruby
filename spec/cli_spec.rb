@@ -76,7 +76,7 @@ describe Briard::CLI do
 
       it 'to citation' do
         subject.options = { to: "citation", style: "vancouver" }
-        expect { subject.convert input }.to output(/Ollomo B, Durand P, Prugnolle F, Douzery EJP/).to_stdout
+        expect { subject.convert input }.to output(/Ollomo B, Durand P, Prugnolle F/).to_stdout
       end
 
       it 'to jats' do

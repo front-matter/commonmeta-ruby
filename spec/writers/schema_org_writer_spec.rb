@@ -101,8 +101,8 @@ describe Briard::Metadata, vcr: true do
                                       '@id' => 'https://orcid.org/0000-0002-2192-403X',
                                       'affiliation' => { '@type' => 'Organization',
                                                          'name' => 'NCEAS' } },
-                                    { 'name' => 'University Of California, Santa Barbara',
-                                      '@type' => 'Organization' }])
+                                    { "@type"=>"Organization", 
+                                      "name"=>"University of California, Santa Barbara" }])
       expect(json['version']).to eq('2.0.0')
       expect(json['keywords']).to eq('data sharing, data repository, dataone')
     end
@@ -182,8 +182,7 @@ describe Briard::Metadata, vcr: true do
       expect(json['@type']).to eq('ScholarlyArticle')
       expect(json['name']).to eq('Rural Electrification With Hybrid Power Systems Based on Renewables - Technical System Configurations From the Point of View of the European Industry')
       expect(json['author'].count).to eq(3)
-      expect(json['author'].first).to eq('@type' => 'Person', 'name' => 'P. Llamas', 'givenName' => 'P.',
-                                         'familyName' => 'Llamas')
+      expect(json['author'].first).to eq("name"=>"Llamas, P.")
       expect(json['periodical']).to eq('@type' => 'Series', 'firstPage' => 'Spain; 3353',
                                        'lastPage' => '3356', 'name' => '23rd European Photovoltaic Solar Energy Conference and Exhibition', 'volume' => '1-5 September 2008')
     end
@@ -209,7 +208,7 @@ describe Briard::Metadata, vcr: true do
       expect(json['@id']).to eq('https://doi.org/10.23725/8na3-9s47')
       expect(json['@type']).to eq('Dataset')
       expect(json['name']).to eq('NWD165827.recab.cram')
-      expect(json['author']).to eq('name' => 'TOPMed')
+      expect(json['author']).to eq("name"=>"TOPMed")
       expect(json['includedInDataCatalog'].nil?).to be(true)
       expect(json['identifier']).to eq(
         [{ '@type' => 'PropertyValue',
@@ -283,10 +282,10 @@ describe Briard::Metadata, vcr: true do
       expect(json['@id']).to eq('https://doi.org/10.1594/pangaea.842237')
       expect(json['@type']).to eq('Dataset')
       expect(json['name']).to eq('Registry of all stations from the Tara Oceans Expedition (2009-2013)')
-      expect(json['author']).to eq([{ 'familyName' => 'Tara Oceans Consortium',
+      expect(json['author']).to eq([{ "@type"=>"Person", 'familyName' => 'Tara Oceans Consortium',
                                       'givenName' => 'Coordinators',
                                       'name' => 'Coordinators Tara Oceans Consortium' },
-                                    { 'familyName' => 'Tara Oceans Expedition',
+                                    { "@type"=>"Person", 'familyName' => 'Tara Oceans Expedition',
                                       'givenName' => 'Participants',
                                       'name' => 'Participants Tara Oceans Expedition' }])
       expect(json['includedInDataCatalog'].nil?).to be(true)
@@ -304,8 +303,8 @@ describe Briard::Metadata, vcr: true do
       expect(json['@id']).to eq('https://doi.org/10.5072/example-polygon')
       expect(json['@type']).to eq('Dataset')
       expect(json['name']).to eq('Meteo measurements at the Sand Motor')
-      expect(json['author']).to eq('@type' => 'Person', 'familyName' => 'Den Heijer', 'givenName' => 'C',
-                                   'name' => 'C Den Heijer')
+      expect(json['author']).to eq('@type' => 'Person', 'familyName' => 'den Heijer', 'givenName' => 'C',
+                                   'name' => 'C den Heijer')
       expect(json['includedInDataCatalog'].nil?).to be(true)
       expect(json['spatialCoverage'].dig('geo', 'polygon').length).to eq(34)
       expect(json['spatialCoverage'].dig('geo',

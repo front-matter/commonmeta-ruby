@@ -54,32 +54,29 @@ describe Briard::Metadata, vcr: true do
                                                 { 'funderIdentifier' => 'https://doi.org/10.13039/501100006390',
                                                   'funderIdentifierType' => 'Crossref Funder ID',
                                                   'funderName' => 'University of Lausanne' }])
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'journal article' do
       input = 'https://doi.org/10.1371/journal.pone.0000030'
-      subject = described_class.new(input: input)
+      subject = described_class.new(input: input, from: 'crossref_json')
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.1371/journal.pone.0000030')
-      expect(subject.identifiers).to eq([{ 'identifier' => '10.1371/journal.pone.0000030',
-                                           'identifierType' => 'Publisher ID' }])
       expect(subject.url).to eq('https://dx.plos.org/10.1371/journal.pone.0000030')
       expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-journal',
                                   'resourceType' => 'JournalArticle', 'resourceTypeGeneral' => 'JournalArticle', 'ris' => 'JOUR', 'schemaOrg' => 'ScholarlyArticle')
       expect(subject.creators.length).to eq(5)
-      expect(subject.creators.first).to eq('nameType' => 'Personal', 'name' => 'Ralser, Markus',
-                                           'givenName' => 'Markus', 'familyName' => 'Ralser')
+      expect(subject.creators.first).to eq('name' => 'Ralser, Markus', 'givenName' => 'Markus', 'familyName' => 'Ralser', 'nameType' => 'Personal')
       expect(subject.contributors).to eq([{ 'contributorType' => 'Editor', 'familyName' => 'Janbon',
-                                            'givenName' => 'Guilhem', 'name' => 'Janbon, Guilhem', 'nameType' => 'Personal' }])
-      expect(subject.titles).to eq([{ 'title' => 'Triose Phosphate Isomerase Deficiency Is Caused by Altered Dimerization???Not Catalytic Inactivity???of the Mutant Enzymes' }])
+                                            'givenName' => 'Guilhem', 'name' => 'Janbon, Guilhem', "nameType"=>"Personal" }])
+      expect(subject.titles).to eq([{ 'title' => "Triose Phosphate Isomerase Deficiency Is Caused by Altered Dimerization–Not Catalytic Inactivity–of the Mutant Enzymes"}])
       expect(subject.rights_list).to eq([{ 'rights' => 'Creative Commons Attribution 4.0 International',
                                            'rightsIdentifier' => 'cc-by-4.0',
                                            'rightsIdentifierScheme' => 'SPDX',
                                            'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode',
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
       expect(subject.dates).to eq([{ 'date' => '2006-12-20', 'dateType' => 'Issued' },
-                                   { 'date' => '2021-08-06T23:49:55Z', 'dateType' => 'Updated' }])
+                                   { 'date' => '2021-08-06', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2006')
       expect(subject.publisher).to eq('Public Library of Science (PLoS)')
       expect(subject.related_identifiers.length).to eq(68)
@@ -90,22 +87,19 @@ describe Briard::Metadata, vcr: true do
       )
       expect(subject.container).to eq('firstPage' => 'e30', 'identifier' => '1932-6203',
                                       'identifierType' => 'ISSN', 'issue' => '1', 'title' => 'PLoS ONE', 'type' => 'Journal', 'volume' => '1')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'journal article with funding' do
       input = 'https://doi.org/10.3389/fpls.2019.00816'
-      subject = described_class.new(input: input)
+      subject = described_class.new(input: input, from: 'crossref_json')
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.3389/fpls.2019.00816')
-      expect(subject.identifiers).to eq([{ 'identifier' => '816',
-                                           'identifierType' => 'article_number' }])
       expect(subject.url).to eq('https://www.frontiersin.org/article/10.3389/fpls.2019.00816/full')
       expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-journal',
                                   'resourceType' => 'JournalArticle', 'resourceTypeGeneral' => 'JournalArticle', 'ris' => 'JOUR', 'schemaOrg' => 'ScholarlyArticle')
       expect(subject.creators.length).to eq(4)
-      expect(subject.creators.first).to eq('familyName' => 'Fortes', 'givenName' => 'Ana Margarida',
-                                           'name' => 'Fortes, Ana Margarida', 'nameType' => 'Personal')
+      expect(subject.creators.first).to eq('familyName' => 'Fortes', 'givenName' => 'Ana Margarida', 'name' => 'Fortes, Ana Margarida')
       expect(subject.titles).to eq([{ 'title' => 'Transcriptional Modulation of Polyamine Metabolism in Fruit Species Under Abiotic and Biotic Stress' }])
       expect(subject.rights_list).to eq([{ 'rights' => 'Creative Commons Attribution 4.0 International',
                                            'rightsIdentifier' => 'cc-by-4.0',
@@ -113,7 +107,7 @@ describe Briard::Metadata, vcr: true do
                                            'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode',
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
       expect(subject.dates).to eq([{ 'date' => '2019-07-02', 'dateType' => 'Issued' },
-                                   { 'date' => '2019-09-22T06:40:23Z', 'dateType' => 'Updated' }])
+                                   { 'date' => '2019-09-22', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2019')
       expect(subject.publisher).to eq('Frontiers Media SA')
       expect(subject.funding_references).to eq([{ 'awardNumber' => 'CA17111',
@@ -124,22 +118,21 @@ describe Briard::Metadata, vcr: true do
       expect(subject.related_identifiers.last).to eq(
         'relatedIdentifier' => '10.17660/actahortic.2004.632.41', 'relatedIdentifierType' => 'DOI', 'relationType' => 'References'
       )
-      expect(subject.container).to eq('firstPage' => '816', 'identifier' => '1664-462X',
+      expect(subject.container).to eq('identifier' => '1664-462X',
                                       'identifierType' => 'ISSN', 'title' => 'Frontiers in Plant Science', 'type' => 'Journal', 'volume' => '10')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'journal article original language title' do
       input = 'https://doi.org/10.7600/jspfsm.56.60'
-      subject = described_class.new(input: input)
+      subject = described_class.new(input: input, from: 'crossref_json')
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.7600/jspfsm.56.60')
-      expect(subject.url).to eq('https://www.jstage.jst.go.jp/article/jspfsm/56/1/56_1_60/_article/-char/ja/')
+      expect(subject.url).to eq('https://www.jstage.jst.go.jp/article/jspfsm/56/1/56_1_60/_article/-char/ja')
       expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-journal',
                                   'resourceType' => 'JournalArticle', 'resourceTypeGeneral' => 'JournalArticle', 'ris' => 'JOUR', 'schemaOrg' => 'ScholarlyArticle')
       expect(subject.creators).to eq([{ 'name' => ':(unav)', 'nameType' => 'Organizational' }])
-      expect(subject.titles).to eq([{ 'lang' => 'ja',
-                                      'title' => '??????????????????????????????' }])
+      expect(subject.titles).to eq([{"title"=>":(unav)"}])
       expect(subject.dates).to include({ 'date' => '2007', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2007')
       expect(subject.publisher).to eq('The Japanese Society of Physical Fitness and Sports Medicine')
@@ -148,7 +141,7 @@ describe Briard::Metadata, vcr: true do
                                                       'relatedIdentifierType' => 'ISSN', 'relationType' => 'IsPartOf', 'resourceTypeGeneral' => 'Collection')
       expect(subject.container).to eq('firstPage' => '60', 'identifier' => '1881-4751',
                                       'identifierType' => 'ISSN', 'issue' => '1', 'lastPage' => '60', 'title' => 'Japanese Journal of Physical Fitness and Sports Medicine', 'type' => 'Journal', 'volume' => '56')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'journal article with RDF for container' do
@@ -173,7 +166,7 @@ describe Briard::Metadata, vcr: true do
                                                      'relatedIdentifierType' => 'DOI', 'relationType' => 'References')
       expect(subject.container).to eq('firstPage' => '949', 'identifier' => '1937-240X',
                                       'identifierType' => 'ISSN', 'issue' => '6', 'lastPage' => '961', 'title' => 'Journal of Crustacean Biology', 'type' => 'Journal', 'volume' => '32')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'book chapter with RDF for container' do
@@ -198,7 +191,7 @@ describe Briard::Metadata, vcr: true do
       )
       expect(subject.container).to eq('identifier' => '1611-3349', 'identifierType' => 'ISSN',
                                       'title' => 'Lecture Notes in Computer Science', 'type' => 'Book Series')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'posted_content' do
@@ -219,7 +212,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2017-10-09', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2017')
       expect(subject.publisher).to eq('Cold Spring Harbor Laboratory')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'peer review' do
@@ -228,7 +221,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.valid?).to be true
       expect(subject.url).to eq('https://elifesciences.org/articles/55167#sa2')
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'article-journal',
-                                  'resourceType' => 'PeerReview', 'resourceTypeGeneral' => 'PeerReview', 'ris' => 'JOUR', 'schemaOrg' => 'Review')
+                                  'resourceType' => 'PeerReview', 'resourceTypeGeneral' => 'PeerReview', 'ris' => 'GEN', 'schemaOrg' => 'Review')
       expect(subject.creators.count).to eq(8)
       expect(subject.creators.last).to eq('affiliation' => [{ 'name' => 'Center for Computational Mathematics, Flatiron Institute, New York, United States' }],
                                           'familyName' => 'Barnett',
@@ -242,7 +235,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2020-05-19', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2020')
       expect(subject.publisher).to eq('eLife Sciences Publications, Ltd')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'dissertation' do
@@ -264,10 +257,10 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq('https://doi.org/10.14264/uql.2020.791')
       expect(subject.identifiers.empty?).to be(true)
       expect(subject.descriptions.empty?).to be(true)
-      expect(subject.dates).to include({ 'date' => '2020-06-08', 'dateType' => 'Issued' })
+      expect(subject.dates).to eq([{"date"=>"2020-06-08", "dateType"=>"Issued"}, {"date"=>"2020-06-08T05:08:59Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq('2020')
       expect(subject.publisher).to eq('University of Queensland Library')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'DOI with SICI DOI' do
@@ -295,7 +288,7 @@ describe Briard::Metadata, vcr: true do
                                                      'relatedIdentifierType' => 'DOI', 'relationType' => 'References')
       expect(subject.container).to eq('firstPage' => '2832', 'identifier' => '0012-9658',
                                       'identifierType' => 'ISSN', 'issue' => '11', 'lastPage' => '2841', 'title' => 'Ecology', 'type' => 'Journal', 'volume' => '87')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'DOI with ORCID ID' do
@@ -325,7 +318,7 @@ describe Briard::Metadata, vcr: true do
                                                      'relatedIdentifierType' => 'DOI', 'relationType' => 'References')
       expect(subject.container).to eq('firstPage' => '1', 'identifier' => '2090-1844',
                                       'identifierType' => 'ISSN', 'lastPage' => '7', 'title' => 'Pulmonary Medicine', 'type' => 'Journal', 'volume' => '2012')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'date in future' do
@@ -609,7 +602,7 @@ describe Briard::Metadata, vcr: true do
                                                    'relationType' => 'References' }])
       expect(subject.container).to eq('firstPage' => '303', 'identifier' => '0014-2999',
                                       'identifierType' => 'ISSN', 'lastPage' => '312', 'title' => 'European Journal of Pharmacology', 'type' => 'Journal', 'volume' => '759')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'vor with url' do
@@ -632,7 +625,7 @@ describe Briard::Metadata, vcr: true do
                                                       'relatedIdentifierType' => 'ISSN', 'relationType' => 'IsPartOf', 'resourceTypeGeneral' => 'Collection')
       expect(subject.container).to eq('firstPage' => '122', 'identifier' => '1365-2540',
                                       'identifierType' => 'ISSN', 'issue' => '2', 'lastPage' => '130', 'title' => 'Heredity', 'type' => 'Journal', 'volume' => '111')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'dataset' do
@@ -642,7 +635,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq('https://doi.org/10.2210/pdb4hhb/pdb')
       expect(subject.url).to eq('https://www.wwpdb.org/pdb?id=pdb_00004hhb')
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'article-journal',
-                                  'resourceType' => 'SaComponent', 'resourceTypeGeneral' => 'Text', 'ris' => 'JOUR', 'schemaOrg' => 'ScholarlyArticle')
+                                  'resourceType' => 'SaComponent', 'resourceTypeGeneral' => 'Text', 'ris' => 'GEN', 'schemaOrg' => 'CreativeWork')
       expect(subject.creators.length).to eq(2)
       expect(subject.creators.first).to eq('nameType' => 'Personal', 'name' => 'Fermi, G.',
                                            'givenName' => 'G.', 'familyName' => 'Fermi')
@@ -652,7 +645,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '1984-07-17', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('1984')
       expect(subject.publisher).to eq('Worldwide Protein Data Bank')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'component' do
@@ -662,15 +655,15 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq('https://doi.org/10.1371/journal.pmed.0030277.g001')
       expect(subject.url).to eq('https://dx.plos.org/10.1371/journal.pmed.0030277.g001')
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'article-journal',
-                                  'resourceType' => 'SaComponent', 'resourceTypeGeneral' => 'Text', 'ris' => 'JOUR', 'schemaOrg' => 'ScholarlyArticle')
+                                  'resourceType' => 'SaComponent', 'resourceTypeGeneral' => 'Text', 'ris' => 'GEN', 'schemaOrg' => 'CreativeWork')
       expect(subject.creators).to eq([{ 'name' => ':(unav)', 'nameType' => 'Organizational' }])
       expect(subject.titles).to eq([{ 'title' => ':(unav)' }])
       expect(subject.descriptions.empty?).to be(true)
       expect(subject.dates).to eq([{ 'date' => '2015-10-20', 'dateType' => 'Issued' },
-                                   { 'date' => '2018-10-19T17:13:42Z', 'dateType' => 'Updated' }])
+                                   {"date"=>"2018-10-19T21:13:42Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq('2015')
       expect(subject.publisher).to eq('Public Library of Science (PLoS)')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'dataset usda' do
@@ -690,7 +683,7 @@ describe Briard::Metadata, vcr: true do
                                    { 'date' => '2021-07-01T22:10:21Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2017')
       expect(subject.publisher).to eq('USDA Forest Service')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'book chapter' do
@@ -706,10 +699,10 @@ describe Briard::Metadata, vcr: true do
                                            'givenName' => 'Ronald L.', 'familyName' => 'Diercks')
       expect(subject.titles).to eq([{ 'title' => 'Clinical Symptoms and Physical Examinations' }])
       expect(subject.dates).to eq([{ 'date' => '2015', 'dateType' => 'Issued' },
-                                   { 'date' => '2015-04-14T02:31:13Z', 'dateType' => 'Updated' }])
+                                   { 'date' => '2015-04-13T22:31:13Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2015')
       expect(subject.publisher).to eq('Springer Science and Business Media LLC')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.container['type']).to eq('Book')
       expect(subject.container['title']).to eq('Shoulder Stiffness')
       expect(subject.container['firstPage']).to eq('155')
@@ -732,7 +725,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2018', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2018')
       expect(subject.publisher).to eq('Springer Science and Business Media LLC')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.container['type']).to eq('Book Series')
       expect(subject.container['title']).to eq('SpringerBriefs in Medical Earth Sciences')
       expect(subject.container['identifier']).to eq('2523-3629')
@@ -751,10 +744,10 @@ describe Briard::Metadata, vcr: true do
                                         'familyName' => 'Bichot', 'givenName' => 'Charles-Edmond', 'name' => 'Bichot, Charles-Edmond', 'nameType' => 'Personal' }])
       expect(subject.titles).to eq([{ 'title' => 'Unsupervised and Supervised Image Segmentation Using Graph Partitioning' }])
       expect(subject.dates).to eq([{ 'date' => '2012-08-08', 'dateType' => 'Issued' },
-                                   { 'date' => '2019-07-02T17:17:21Z', 'dateType' => 'Updated' }])
+                                   {"date"=>"2019-07-02T13:17:21Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq('2012')
       expect(subject.publisher).to eq('IGI Global')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.container['type']).to eq('Book')
       expect(subject.container['title']).to eq('Graph-Based Methods in Computer Vision')
       expect(subject.container['firstPage']).to eq('72')
@@ -792,7 +785,7 @@ describe Briard::Metadata, vcr: true do
                                    { 'date' => '2021-07-22T10:05:05Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2018')
       expect(subject.publisher).to eq('MDPI AG')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'book' do
@@ -812,7 +805,7 @@ describe Briard::Metadata, vcr: true do
                                    { 'date' => '2022-09-22T13:22:42Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2019')
       expect(subject.publisher).to eq('Cambridge University Press (CUP)')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered).to eq('2019-07-06T10:19:22Z')
     end
 
@@ -833,7 +826,7 @@ describe Briard::Metadata, vcr: true do
                                    { 'date' => '2009-02-02T21:19:43Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2000')
       expect(subject.publisher).to eq('International Ocean Discovery Program (IODP)')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered).to eq('2006-10-17T20:17:44Z')
     end
 
@@ -860,7 +853,7 @@ describe Briard::Metadata, vcr: true do
       )
       expect(subject.container).to eq('identifier' => '0066-4634', 'identifierType' => 'ISSN',
                                       'title' => 'Antarctic Research Series', 'type' => 'Book Series', 'volume' => '35')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered.nil?).to be(true)
     end
 
@@ -881,7 +874,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2018-05', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2018')
       expect(subject.publisher).to eq('Franco Angeli')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'KISTI' do
@@ -899,7 +892,7 @@ describe Briard::Metadata, vcr: true do
                                            'name' => 'Huang, Guimei', 'nameType' => 'Personal')
       expect(subject.titles).to eq([{ 'title' => 'Synthesis, Crystal Structure and Theoretical Calculation of a Novel Nickel(II) Complex with Dibromotyrosine and 1,10-Phenanthroline' }])
       expect(subject.dates).to eq([{ 'date' => '2013-10-20', 'dateType' => 'Issued' },
-                                   { 'date' => '2016-12-14T21:40:52Z', 'dateType' => 'Updated' }])
+                                   { 'date' => '2016-12-15T02:40:52Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2013')
       expect(subject.publisher).to eq('Korean Chemical Society')
       expect(subject.agency).to eq('KISTI')
@@ -957,7 +950,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2014-12-14', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2014')
       expect(subject.publisher).to eq('OpenEdition')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered.nil?).to be(true)
     end
 
@@ -993,7 +986,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2006-07-25', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2006')
       expect(subject.publisher).to eq('Springer Science and Business Media LLC')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered).to eq('2021-08-31T17:31:49Z')
     end
 
@@ -1015,7 +1008,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2017-05-24', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2017')
       expect(subject.publisher).to eq('The Royal Society')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered).to eq('2021-02-14T10:36:45Z')
     end
 
@@ -1088,7 +1081,7 @@ describe Briard::Metadata, vcr: true do
                                                      'relatedIdentifierType' => 'DOI', 'relationType' => 'References')
       expect(subject.container).to eq('firstPage' => '929', 'identifier' => '0028-646X',
                                       'identifierType' => 'ISSN', 'issue' => '3', 'lastPage' => '935', 'title' => 'New Phytologist', 'type' => 'Journal', 'volume' => '218')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered).to eq('2018-08-03T11:45:49Z')
     end
 
@@ -1107,7 +1100,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2017-04-03', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2017')
       expect(subject.publisher).to eq('Springer Science and Business Media LLC')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered).to eq('2019-11-02T09:30:06Z')
     end
 
@@ -1126,7 +1119,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2011-12-22', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2011')
       expect(subject.publisher).to eq('SAGE Publications')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered).to eq('2021-05-16T02:02:38Z')
     end
 
@@ -1147,7 +1140,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publisher).to eq('Springer Science and Business Media LLC')
       expect(subject.container).to eq('identifier' => '1860-0808', 'identifierType' => 'ISSN',
                                       'title' => 'Studies in Fuzziness and Soft Computing', 'type' => 'Book Series')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered).to eq('2012-10-31T16:15:44Z')
     end
 
@@ -1168,7 +1161,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publisher).to eq('American Physical Society (APS)')
       expect(subject.container).to eq('firstPage' => '117701', 'identifier' => '1079-7114',
                                       'identifierType' => 'ISSN', 'issue' => '11', 'title' => 'Physical Review Letters', 'type' => 'Journal', 'volume' => '120')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.date_registered).to eq('2018-03-13T15:18:48Z')
     end
 
@@ -1191,7 +1184,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2020-07-28', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2020')
       expect(subject.publisher).to eq('Copernicus GmbH')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'book oup' do
@@ -1214,7 +1207,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2018-04-05', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2018')
       expect(subject.publisher).to eq('Oxford University Press (OUP)')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'report osti' do
@@ -1238,7 +1231,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to include({ 'date' => '2010-01-01', 'dateType' => 'Issued' })
       expect(subject.publication_year).to eq('2010')
       expect(subject.publisher).to eq('Office of Scientific and Technical Information (OSTI)')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'journal issue' do
@@ -1260,7 +1253,7 @@ describe Briard::Metadata, vcr: true do
                                                       'relatedIdentifierType' => 'ISSN', 'relationType' => 'IsPartOf', 'resourceTypeGeneral' => 'Collection')
       expect(subject.container).to eq('identifier' => '2146-8427', 'identifierType' => 'ISSN',
                                       'issue' => '5', 'title' => 'Experimental and Clinical Transplantation', 'type' => 'Journal', 'volume' => '16')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
     end
 
     it 'not found error' do
@@ -1269,7 +1262,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.valid?).to be false
       expect(subject.id).to eq('https://doi.org/10.7554/elife.01567x')
       expect(subject.doi).to eq('10.7554/elife.01567x')
-      expect(subject.agency).to eq('crossref')
+      expect(subject.agency).to eq('Crossref')
       expect(subject.state).to eq('not_found')
     end
   end

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 12 Nov 2022 18:06:37 GMT
+      - Mon, 21 Nov 2022 12:36:07 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dyodXb%2F26slPvIjXMfbBAkecZ%2FcMTC1NyEjVza%2F286kIf8uZpzQKgzpR808n1%2FZw4eUKOFoY%2BruBW6FbfKTSeQGY%2BSj%2Fhyy7DQe%2Bi0l5oQGluzBWRDWH9%2FL%2FsQ3U8ZtliXSQ%2B5M%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=J567ogVZH%2Brr5syt1OvrZI6Nqd83rN7eLaQoHdTAo8nXgEzelEV7K4WUcCflfTVWw8vYrPT%2FNnhhIA8nK695IXS1UQFFbhaSju4DUE0uOoChdC0sRWcFgx%2FbS3bxk0MmCM3biPA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 769133d9c9980a5d-AMS
+      - 76d97817e9fd0c19-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -47,7 +47,7 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9E0MjEyUdiGiQI0jQJbEk0TmzJFUJKFjLFQsAjHRQbzYAAAA=
     http_version:
-  recorded_at: Sat, 12 Nov 2022 18:06:37 GMT
+  recorded_at: Mon, 21 Nov 2022 12:36:07 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1?include=media,client
@@ -67,7 +67,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Sat, 12 Nov 2022 18:06:37 GMT
+      - Mon, 21 Nov 2022 12:36:07 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -87,11 +87,11 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 11213787-f1f5-43ce-b8b1-6dd55db71fc7
+      - 0a97e2c0-b7f1-467a-9846-071cfd0d03a1
       X-Download-Options:
       - noopen
       X-Runtime:
-      - '0.004622'
+      - '0.008307'
       X-Frame-Options:
       - SAMEORIGIN
       X-Content-Type-Options:
@@ -111,7 +111,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAK3gb2MAAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
+        H4sIALdwe2MAAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
     http_version:
-  recorded_at: Sat, 12 Nov 2022 18:06:37 GMT
+  recorded_at: Mon, 21 Nov 2022 12:36:07 GMT
 recorded_with: VCR 3.0.3

@@ -67,8 +67,7 @@ describe Briard::Metadata, vcr: true do
       expect(crosscite.fetch('titles')).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(crosscite.dig('descriptions', 0,
                            'description')).to start_with('Eating your own dog food')
-      expect(crosscite.fetch('creators')).to eq([{ 'familyName' => 'Fenner', 'givenName' => 'Martin',
-                                                   'name' => 'Fenner, Martin' }])
+      expect(crosscite.fetch('creators')).to eq([{"familyName"=>"Fenner", "givenName"=>"Martin", "name"=>"Fenner, Martin", "nameType"=>"Personal"}])
     end
 
     it 'rdataone' do
@@ -78,7 +77,7 @@ describe Briard::Metadata, vcr: true do
       expect(crosscite['titles']).to eq([{ 'title' => 'R Interface to the DataONE REST API' }])
       expect(crosscite['creators'].length).to eq(3)
       expect(crosscite['creators'].last).to eq('nameType' => 'Organizational',
-                                               'name' => 'University Of California, Santa Barbara', 'nameIdentifiers' => [], 'affiliation' => [])
+                                               'name' => 'University of California, Santa Barbara')
       expect(crosscite['version']).to eq('2.0.0')
     end
 
@@ -89,7 +88,7 @@ describe Briard::Metadata, vcr: true do
       expect(crosscite['titles']).to eq([{ 'title' => 'R Interface to the DataONE REST API' }])
       expect(crosscite['creators'].length).to eq(3)
       expect(crosscite['creators'].last).to eq('nameType' => 'Organizational',
-                                               'name' => 'University Of California, Santa Barbara', 'nameIdentifiers' => [], 'affiliation' => [])
+                                               'name' => 'University of California, Santa Barbara')
       expect(crosscite['version']).to eq('2.0.0')
     end
 
@@ -101,7 +100,7 @@ describe Briard::Metadata, vcr: true do
       expect(crosscite.fetch('titles')).to eq([{ 'title' => 'Data from: A new malaria agent in African hominids.' }])
       expect(crosscite.fetch('creators').length).to eq(8)
       expect(crosscite.fetch('creators').first).to eq('familyName' => 'Ollomo',
-                                                      'givenName' => 'Benjamin', 'name' => 'Ollomo, Benjamin', 'nameType' => 'Personal', 'nameIdentifiers' => [], 'affiliation' => [{ 'affiliationIdentifier' => 'https://ror.org/01wyqb997', 'affiliationIdentifierScheme' => 'ROR', 'name' => 'Centre International de Recherches Médicales de Franceville' }])
+                                                      'givenName' => 'Benjamin', 'name' => 'Ollomo, Benjamin', 'nameType' => 'Personal', 'affiliation' => [{ 'affiliationIdentifier' => 'https://ror.org/01wyqb997', 'affiliationIdentifierScheme' => 'ROR', 'name' => 'Centre International de Recherches Médicales de Franceville' }])
       expect(crosscite.fetch('dates')).to eq([
                                                { 'date' => '2011-02-01T17:22:41Z',
                                                  'dateType' => 'Available' }, { 'date' => '2011', 'dateType' => 'Issued' }

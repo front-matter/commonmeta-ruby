@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 12 Nov 2022 18:05:24 GMT
+      - Sun, 20 Nov 2022 20:14:42 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0Jsju9c9PjDcMHk0pStSYGQhUMWXkdY7Zr%2Fy6wr0CSTomlP3VhVLZo2QO4%2FL9Fjj0eg7ze%2FATsi0FinCVOpUfBSbjSiwzBaEqWmzFup%2BQLT9Zkd8D0jtxgiBCUvBVdXtzzEUNkI%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=90rCvzooQjWJ8bbMISCdDIFPMo%2FplNnqwlOVKb5PkLOnJ28GLs95QLYZ8bglUbuHccfJXTFPm0q%2Fzq%2F6A%2B8bFvarf9nWucX%2Bo14e1vQrGCJLRS%2F6Qzg4BySJfZeScwPzVGt3kWo%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 76913212ce031afd-AMS
+      - 76d3da7e1905b81c-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -47,7 +47,7 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9c1NTEyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA4VlVnTYAAAA=
     http_version:
-  recorded_at: Sat, 12 Nov 2022 18:05:24 GMT
+  recorded_at: Sun, 20 Nov 2022 20:14:42 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.7554/elife.01567x/transform/application/vnd.crossref.unixsd+xml
@@ -67,13 +67,13 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Sat, 12 Nov 2022 18:05:24 GMT
+      - Sun, 20 Nov 2022 20:14:43 GMT
       Content-Type:
       - text/plain;charset=utf-8
       Set-Cookie:
-      - AWSALB=GJ2cGyJi/CGqRr9xRMYWWv2snvVjFqxmQbCkEhamyzvmQWFBa20bASarcGt85BBN5UzbY7bJSrZ3pQHHYEIm2VgczVaybdYakRnY2x8/BTk+QjCLKWhQLGdT8ILS;
-        Expires=Sat, 19 Nov 2022 18:05:24 GMT; Path=/, AWSALBCORS=GJ2cGyJi/CGqRr9xRMYWWv2snvVjFqxmQbCkEhamyzvmQWFBa20bASarcGt85BBN5UzbY7bJSrZ3pQHHYEIm2VgczVaybdYakRnY2x8/BTk+QjCLKWhQLGdT8ILS;
-        Expires=Sat, 19 Nov 2022 18:05:24 GMT; Path=/; SameSite=None
+      - AWSALB=q2EeBRW7dOeRB9pj6WaUbnQNqh4xR2nvouNNVJBaYxQCY16IrvMNhdo1Qt4UUx98r6iDqaQp56YA/+pTQQrPGaxHNRGpuGVwuS67TY0o47Qkd+jgOzzSVfMfu1n6;
+        Expires=Sun, 27 Nov 2022 20:14:43 GMT; Path=/, AWSALBCORS=q2EeBRW7dOeRB9pj6WaUbnQNqh4xR2nvouNNVJBaYxQCY16IrvMNhdo1Qt4UUx98r6iDqaQp56YA/+pTQQrPGaxHNRGpuGVwuS67TY0o47Qkd+jgOzzSVfMfu1n6;
+        Expires=Sun, 27 Nov 2022 20:14:43 GMT; Path=/; SameSite=None
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -101,5 +101,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version:
-  recorded_at: Sat, 12 Nov 2022 18:05:24 GMT
+  recorded_at: Sun, 20 Nov 2022 20:14:43 GMT
 recorded_with: VCR 3.0.3
