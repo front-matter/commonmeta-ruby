@@ -3,14 +3,12 @@
 require 'spec_helper'
 
 describe Briard::Metadata, vcr: true do
-  subject { described_class.new(input: input, from: 'crossref_json') }
+  subject { described_class.new(input: input) }
 
-  let(:input) { '10.7554/eLife.01567' }
+  let(:input) { "#{fixture_path}crossref.json" }
 
   context 'get crossref_json raw' do
     it 'journal article' do
-      input = "#{fixture_path}crossref.json"
-      subject = described_class.new(input: input, from: 'crossref_json')
       expect(subject.raw).to eq(File.read(input).strip)
     end
   end
