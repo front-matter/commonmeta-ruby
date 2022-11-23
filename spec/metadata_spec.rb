@@ -87,6 +87,14 @@ describe Briard::Metadata, vcr: true do
       expect(subject.find_from_format(string: string, ext: ext)).to eq('crossref')
     end
 
+    it 'crossref_json' do
+      file = "#{fixture_path}crossref.json"
+      string = File.read(file)
+      ext = File.extname(file)
+      expect(subject.find_from_format(string: string, ext: ext)).to eq('crossref_json')
+    end
+
+
     it 'datacite' do
       file = "#{fixture_path}datacite.xml"
       string = File.read(file)
@@ -135,6 +143,24 @@ describe Briard::Metadata, vcr: true do
       file = "#{fixture_path}crosscite.json"
       string = File.read(file)
       expect(subject.find_from_format(string: string)).to eq('crosscite')
+    end
+
+    it 'crossref' do
+      file = "#{fixture_path}crossref.xml"
+      string = File.read(file)
+      expect(subject.find_from_format(string: string)).to eq('crossref')
+    end
+
+    it 'crossref_json' do
+      file = "#{fixture_path}crossref.json"
+      string = File.read(file)
+      expect(subject.find_from_format(string: string)).to eq('crossref_json')
+    end
+
+    it 'datacite' do
+      file = "#{fixture_path}datacite.xml"
+      string = File.read(file)
+      expect(subject.find_from_format(string: string)).to eq('datacite')
     end
   end
 

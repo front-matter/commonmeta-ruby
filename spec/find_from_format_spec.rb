@@ -81,6 +81,27 @@ describe Briard::CLI do
     end
   end
 
+  context 'find_from_format_by_ext' do
+    let(:subject) do
+      described_class.new
+    end
+
+    it 'crossref' do
+      string = File.read("#{fixture_path}crossref.xml").strip
+      expect(subject.find_from_format_by_ext(string, ext: '.xml')).to eq('crossref')
+    end
+
+    it 'crossref_json' do
+      string = File.read("#{fixture_path}crossref.json").strip
+      expect(subject.find_from_format_by_ext(string, ext: '.json')).to eq('crossref_json')
+    end
+
+    it 'ris' do
+      string = File.read("#{fixture_path}crossref.ris").strip
+      expect(subject.find_from_format_by_ext(string, ext: '.ris')).to eq('ris')
+    end
+  end
+
   context 'find_from_format_by_string' do
     let(:subject) do
       described_class.new
@@ -90,6 +111,12 @@ describe Briard::CLI do
       string = File.read("#{fixture_path}crossref.xml").strip
       expect(subject.find_from_format_by_string(string)).to eq('crossref')
     end
+
+    it 'crossref_json' do
+      string = File.read("#{fixture_path}crossref.json").strip
+      expect(subject.find_from_format_by_string(string)).to eq('crossref_json')
+    end
+
 
     it 'datacite' do
       string = File.read("#{fixture_path}datacite.xml").strip
