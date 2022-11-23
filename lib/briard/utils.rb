@@ -488,10 +488,6 @@ module Briard
     }
 
     def find_from_format(id: nil, string: nil, ext: nil, filename: nil)
-      puts id
-      puts string
-      puts ext
-      puts filename
       if id.present?
         find_from_format_by_id(id)
       elsif string.present? && ext.present?

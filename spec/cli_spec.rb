@@ -9,6 +9,39 @@ describe Briard::CLI do
   end
 
   describe "convert from id", vcr: true do
+    context "crossref_json" do
+      let(:input) { "10.7554/eLife.01567" }
+
+      it 'default' do
+        expect { subject.convert input }.to output(/additionalType/).to_stdout
+      end
+
+      it 'to schema_org' do
+        subject.options = { from: "crossref_json", to: "schema_org" }
+        expect { subject.convert input }.to output(/additionalType/).to_stdout
+      end
+
+      it 'to crossref' do
+        subject.options = { from: "crossref_json", to: "crossref" }
+        expect { subject.convert input }.to output(/journal_metadata/).to_stdout
+      end
+
+      it 'to datacite' do
+        subject.options = { from: "crossref_json", to: "datacite" }
+        expect { subject.convert input }.to output(/http:\/\/datacite.org\/schema\/kernel-4/).to_stdout
+      end
+
+      it 'to bibtex' do
+        subject.options = { from: "crossref_json", to: "bibtex" }
+        expect { subject.convert input }.to output(/@article{https:\/\/doi.org\/10.7554\/elife.01567/).to_stdout
+      end
+
+      it 'to citation' do
+        subject.options = { from: "crossref_json", to: "citation", style: "vancouver" }
+        expect { subject.convert input }.to output(/Sankar M, Nieminen K, Ragni L, Xenarios I/).to_stdout
+      end
+    end
+
     context "crossref" do
       let(:input) { "10.7554/eLife.01567" }
 
@@ -133,7 +166,7 @@ describe Briard::CLI do
       let(:file) { fixture_path + "crossref.xml" }
 
       it 'default' do
-        expect { subject.convert file }.to output(/datePublished/).to_stdout
+        expect { subject.convert file }.to output(/"@id": "https:\/\/doi.org\/10.7554\/elife.01567"/).to_stdout
       end
 
       it 'to schema_org' do
@@ -148,7 +181,35 @@ describe Briard::CLI do
 
       it 'to datacite' do
         subject.options = { to: "datacite" }
-        expect { subject.convert file }.to output(/http:\/\/datacite.org\/schema\/kernel-4/).to_stdout
+        expect { subject.convert file }.to output(/<publisher>/).to_stdout
+      end
+
+      it 'to bibtex' do
+        subject.options = { to: "bibtex" }
+        expect { subject.convert file }.to output(/@article{https:\/\/doi.org\/10.7554\/elife.01567/).to_stdout
+      end
+    end
+
+    context "crossref_json", vcr: true do
+      let(:file) { fixture_path + "crossref.json" }
+
+      it 'default' do
+        expect { subject.convert file }.to output(/"@id": "https:\/\/doi.org\/10.7554\/elife.01567"/).to_stdout
+      end
+
+      it 'to schema_org' do
+        subject.options = { to: "schema_org" }
+        expect { subject.convert file }.to output(/"@context": "http:\/\/schema.org"/).to_stdout
+      end
+
+      it 'to crossref' do
+        subject.options = { to: "crossref" }
+        expect { subject.convert file }.to output(/journal_metadata/).to_stdout
+      end
+
+      it 'to datacite' do
+        subject.options = { to: "datacite" }
+        expect { subject.convert file }.to output(/<publisher>/).to_stdout
       end
 
       it 'to bibtex' do
@@ -171,7 +232,7 @@ describe Briard::CLI do
 
       it 'to datacite' do
         subject.options = { to: "datacite" }
-        expect { subject.convert file }.to output(/http:\/\/datacite.org\/schema\/kernel-4/).to_stdout
+        expect { subject.convert file }.to output(/<publisher>/).to_stdout
       end
 
       it 'to bibtex' do

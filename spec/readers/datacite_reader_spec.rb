@@ -190,7 +190,6 @@ describe Briard::Metadata, vcr: true do
     it 'empty sizes and dates attributes' do
       input = "#{fixture_path}datacite-empty-sizes.xml"
       subject = described_class.new(input: input)
-      puts subject.errors.inspect
       expect(subject.valid?).to be true
       expect(subject.types['schemaOrg']).to eq('Dataset')
       expect(subject.types['resourceType'].nil?).to be(true)
