@@ -1,0 +1,367 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Briard Schema",
+  "definitions": {
+    "affiliations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "affiliation": {
+            "type": "string"
+          }
+        },
+        "required": ["affiliation"]
+      },
+      "uniqueItems": true
+    },
+    "contributorType": {
+      "type": "string",
+      "enum": [
+        "ContactPerson",
+        "DataCollector",
+        "DataCurator",
+        "DataManager",
+        "Distributor",
+        "Editor",
+        "HostingInstitution",
+        "Producer",
+        "ProjectLeader",
+        "ProjectManager",
+        "ProjectMember",
+        "RegistrationAgency",
+        "RegistrationAuthority",
+        "RelatedPerson",
+        "Researcher",
+        "ResearchGroup",
+        "RightsHolder",
+        "Sponsor",
+        "Supervisor",
+        "WorkPackageLeader",
+        "Other"
+      ]
+    },
+    "descriptionType": {
+      "type": "string",
+      "enum": [
+        "Abstract",
+        "Methods",
+        "SeriesInformation",
+        "TableOfContents",
+        "TechnicalInfo",
+        "Other"
+      ]
+    },
+    "funderIdentifierType": {
+      "type": "string",
+      "enum": ["ISNI", "GRID", "Crossref Funder ID", "Other"]
+    },
+    "nameIdentifiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nameIdentifier": {
+            "type": "string"
+          },
+          "nameIdentifierScheme": {
+            "type": "string"
+          },
+          "schemeURI": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": ["nameIdentifier", "nameIdentifierScheme"]
+      },
+      "uniqueItems": true
+    },
+    "nameType": {
+      "type": "string",
+      "enum": ["Organizational", "Personal"]
+    },
+    "noEmptyString": {
+        "type": "string",
+        "minLength": 1
+    },
+    "resourceTypeGeneral": {
+      "type": "string",
+      "enum": [
+        "Audiovisual",
+        "Collection",
+        "DataPaper",
+        "Dataset",
+        "Event",
+        "Image",
+        "InteractiveResource",
+        "Model",
+        "PhysicalObject",
+        "Service",
+        "Software",
+        "Sound",
+        "Text",
+        "Workflow",
+        "Other"
+      ]
+    },
+    "titleType": {
+      "type": "string",
+      "enum": ["AlternativeTitle", "Subtitle", "TranslatedTitle", "Other"]
+    }
+  },
+  "prefixItems": {
+    "id": {
+      "type": "string",
+      "format": "uri"
+    },
+    "types": {
+      "type": "object",
+      "properties": {
+        "resourceType": {
+          "type": "string"
+        },
+        "resourceTypeGeneral": {
+          "$ref": "#/definitions/resourceTypeGeneral"
+        },
+        "schemaOrg": {
+          "type": "string"
+        },
+        "citeproc": {
+          "type": "string"
+        },
+        "bibtex": {
+          "type": "string"
+        },
+        "ris": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "resourceType",
+        "resourceTypeGeneral",
+        "schemaOrg",
+        "citeproc",
+        "bibtex",
+        "ris"
+      ]
+    },
+    "doi": {
+      "type": "string",
+      "format": "uri"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "titles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "titleType": {
+            "$ref": "#/definitions/titleType"
+          },
+          "lang": {
+            "type": "string"
+          }
+        },
+        "required": ["title"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "creators": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "nameType": {
+            "$ref": "#/definitions/nameType"
+          },
+          "givenName": {
+            "type": "string"
+          },
+          "familyName": {
+            "type": "string"
+          },
+          "nameIdentifiers": {
+            "$ref": "#/definitions/nameIdentifiers"
+          },
+          "affiliations": {
+            "$ref": "#/definitions/affiliations"
+          },
+          "lang": {
+            "type": "string"
+          }
+        },
+        "required": ["name"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "contributorType": {
+            "$ref": "#/definitions/contributorType"
+          },
+          "name": {
+            "type": "string"
+          },
+          "nameType": {
+            "$ref": "#/definitions/nameType"
+          },
+          "givenName": {
+            "type": "string"
+          },
+          "familyName": {
+            "type": "string"
+          },
+          "nameIdentifiers": {
+            "$ref": "#/definitions/nameIdentifiers"
+          },
+          "affiliations": {
+            "$ref": "#/definitions/affiliations"
+          },
+          "lang": {
+            "type": "string"
+          }
+        },
+        "required": ["contributorType", "name"]
+      },
+      "uniqueItems": true
+    },
+    "funding_references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "funderName": {
+            "type": "string"
+          },
+          "funderIdentifier": {
+            "type": "string"
+          },
+          "funderIdentifierType": {
+            "$ref": "#/definitions/funderIdentifierType"
+          },
+          "awardNumber": {
+            "type": "string"
+          },
+          "awardURI": {
+            "type": "string",
+            "format": "uri"
+          },
+          "awardTitle": {
+            "type": "string"
+          }
+        },
+        "required": ["funderName"]
+      },
+      "uniqueItems": true
+    },
+    "publisher": {
+      "$ref": "#/definitions/noEmptyString"
+    },
+    "publication_year": {
+      "$ref": "#/definitions/noEmptyString"
+    },
+    "language": {
+      "type": "string",
+      "$comment": "Primary language of the resource. Allowed values are taken from  IETF BCP 47, ISO 639-1 language codes."
+    },
+    "sizes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "formats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "version_info": {
+      "type": "string"
+    },
+    "rights_list": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rights": {
+            "type": "string"
+          },
+          "rightsURI": {
+            "type": "string",
+            "format": "uri"
+          },
+          "rightsIdentifier": {
+            "type": "string"
+          },
+          "rightsIdentifierScheme": {
+            "type": "string"
+          },
+          "schemeURI": {
+            "type": "string",
+            "format": "uri"
+          },
+          "lang": {
+            "type": "string"
+          }
+        }
+      },
+      "uniqueItems": true
+    },
+    "descriptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "$ref": "#/definitions/noEmptyString"
+          },
+          "descriptionType": {
+            "$ref": "#/definitions/descriptionType"
+          },
+          "lang": {
+            "type": "string"
+          }
+        },
+        "required": ["description", "descriptionType"]
+      },
+      "uniqueItems": true
+    },
+    "agency": {
+      "type": "string",
+      "enum": [ "Crossref", "DataCite", "JaLC", "KISTI", "mEDRA", "OP"]
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "http://datacite.org/schema/kernel-4"
+    },
+    "state": {
+      "type": "string",
+      "enum": [ "draft", "findable", "registered", "not_found"]
+    }
+  },
+  "required": [
+    "id",
+    "creators",
+    "titles",
+    "publisher",
+    "publication_year",
+    "types"
+  ]
+}

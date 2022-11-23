@@ -33,7 +33,7 @@ describe Briard::Metadata, vcr: true do
                                                       'relatedIdentifierType' => 'DOI', 'relationType' => 'IsPartOf')
       expect(subject.related_identifiers.last).to eq('relatedIdentifier' => '10.5438/55e5-t5c0',
                                                      'relatedIdentifierType' => 'DOI', 'relationType' => 'References')
-      expect(subject.agency).to eq('datacite')
+      expect(subject.agency).to eq('DataCite')
     end
 
     # it "SoftwareSourceCode" do
@@ -87,7 +87,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.related_identifiers.first).to eq(
         'relatedIdentifier' => 'https://github.com/jakevdp/supersmoother/tree/v0.3.2', 'relatedIdentifierType' => 'URL', 'relationType' => 'IsSupplementTo'
       )
-      expect(subject.agency).to eq('datacite')
+      expect(subject.agency).to eq('DataCite')
     end
   end
 end

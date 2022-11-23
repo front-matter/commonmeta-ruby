@@ -163,9 +163,11 @@ module Briard
       exists? && errors.nil?
     end
 
-    # validate against DataCite schema, unless already errors in the reader
+    # Catch errors in the reader
+    # Then validate against JSON schema for internal metadata format
+    # Then validate against DataCite schema, unless already errors in the reader
     def errors
-      meta.fetch('errors', nil) || datacite_errors(xml: datacite, schema_version: schema_version)
+      meta.fetch('errors', nil) || json_schema_errors || datacite_errors(xml: datacite, schema_version: schema_version)
     end
 
     def descriptions

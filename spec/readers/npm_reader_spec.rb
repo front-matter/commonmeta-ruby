@@ -16,7 +16,7 @@ describe Briard::Metadata, vcr: true do
   context 'get npm metadata' do
     it 'minimal' do
       expect(subject.valid?).to be false
-      expect(subject.errors.first).to start_with("3:0: ERROR: Element '{http://datacite.org/schema/kernel-4}identifier'")
+      expect(subject.errors.first).to eq("root is missing required keys: id, publisher, publication_year")
       # expect(subject.identifiers).to eq([{"identifier"=>"https://doi.org/10.5438/4k3m-nyvg", "identifierType"=>"DOI"}])
       # expect(subject.url).to eq("https://blog.datacite.org/eating-your-own-dog-food")
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'article',
@@ -34,7 +34,7 @@ describe Briard::Metadata, vcr: true do
       input = "#{fixture_path}cit_package.json"
       subject = described_class.new(input: input, from: 'npm')
       expect(subject.valid?).to be false
-      expect(subject.errors.first).to start_with("3:0: ERROR: Element '{http://datacite.org/schema/kernel-4}identifier'")
+      expect(subject.errors.first).to eq("root is missing required keys: id, publisher, publication_year")
       # expect(subject.identifiers).to eq([{"identifier"=>"https://doi.org/10.5438/4k3m-nyvg", "identifierType"=>"DOI"}])
       # expect(subject.url).to eq("https://blog.datacite.org/eating-your-own-dog-food")
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'article',
@@ -52,7 +52,7 @@ describe Briard::Metadata, vcr: true do
       input = "#{fixture_path}edam_package.json"
       subject = described_class.new(input: input, from: 'npm')
       expect(subject.valid?).to be false
-      expect(subject.errors.first).to start_with("3:0: ERROR: Element '{http://datacite.org/schema/kernel-4}identifier'")
+      expect(subject.errors.first).to eq("root is missing required keys: id, publisher, publication_year")
       # expect(subject.identifiers).to eq([{"identifier"=>"https://doi.org/10.5438/4k3m-nyvg", "identifierType"=>"DOI"}])
       # expect(subject.url).to eq("https://blog.datacite.org/eating-your-own-dog-food")
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'article',

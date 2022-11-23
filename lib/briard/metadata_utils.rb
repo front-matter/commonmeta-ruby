@@ -4,6 +4,7 @@ require_relative 'doi_utils'
 require_relative 'author_utils'
 require_relative 'crossref_utils'
 require_relative 'datacite_utils'
+require_relative 'schema_utils'
 require_relative 'utils'
 
 require_relative 'readers/bibtex_reader'
@@ -42,6 +43,7 @@ module Briard
     include Briard::AuthorUtils
     include Briard::CrossrefUtils
     include Briard::DataciteUtils
+    include Briard::SchemaUtils
     include Briard::Utils
 
     include Briard::Readers::BibtexReader

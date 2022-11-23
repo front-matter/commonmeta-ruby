@@ -11,6 +11,7 @@ describe Briard::Metadata, vcr: true do
     it 'unknown DOI prefix' do
       input = 'http://doi.org/10.0137/14802'
       subject = described_class.new(input: input)
+      expect(subject.errors).to eq(["root is missing required keys: id, creators, titles, publisher, publication_year, types"])
       expect(subject.valid?).to be false
       expect(subject.bibtex.nil?).to be(true)
     end
