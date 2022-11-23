@@ -699,7 +699,7 @@ describe Briard::Metadata, vcr: true do
                                            'givenName' => 'Ronald L.', 'familyName' => 'Diercks')
       expect(subject.titles).to eq([{ 'title' => 'Clinical Symptoms and Physical Examinations' }])
       expect(subject.dates).to eq([{ 'date' => '2015', 'dateType' => 'Issued' },
-                                   { 'date' => '2015-04-13T22:31:13Z', 'dateType' => 'Updated' }])
+                                   { 'date' => '2015-04-14T02:31:13Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq('2015')
       expect(subject.publisher).to eq('Springer Science and Business Media LLC')
       expect(subject.agency).to eq('Crossref')
@@ -744,7 +744,7 @@ describe Briard::Metadata, vcr: true do
                                         'familyName' => 'Bichot', 'givenName' => 'Charles-Edmond', 'name' => 'Bichot, Charles-Edmond', 'nameType' => 'Personal' }])
       expect(subject.titles).to eq([{ 'title' => 'Unsupervised and Supervised Image Segmentation Using Graph Partitioning' }])
       expect(subject.dates).to eq([{ 'date' => '2012-08-08', 'dateType' => 'Issued' },
-                                   {"date"=>"2019-07-02T13:17:21Z", "dateType"=>"Updated"}])
+                                   {"date"=>"2019-07-02T17:17:21Z", "dateType"=>"Updated"}])
       expect(subject.publication_year).to eq('2012')
       expect(subject.publisher).to eq('IGI Global')
       expect(subject.agency).to eq('Crossref')
