@@ -19,15 +19,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 Nov 2022 15:24:25 GMT
+      - Wed, 23 Nov 2022 08:31:53 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '678'
       Set-Cookie:
-      - AWSALB=+6BVI5Vbd0tW26gwbusnkxXqNeu+M6PBCEMfcLr0oJD6AOvtMBS6vx0HPBVDVWhIjESVVYdC7ULAtsl3aG3ZJwLGSHBXUeXB8PaL5vGQvrrDqgeLk3d8W4uWwkuA;
-        Expires=Sun, 27 Nov 2022 15:24:24 GMT; Path=/, AWSALBCORS=+6BVI5Vbd0tW26gwbusnkxXqNeu+M6PBCEMfcLr0oJD6AOvtMBS6vx0HPBVDVWhIjESVVYdC7ULAtsl3aG3ZJwLGSHBXUeXB8PaL5vGQvrrDqgeLk3d8W4uWwkuA;
-        Expires=Sun, 27 Nov 2022 15:24:24 GMT; Path=/; SameSite=None
+      - AWSALB=Ekfm4i6TQZ5dlrDJ3I5prdAJAsb1dBXizaR7l3BHGL+aTPMirjlADXZ+TSGGAt31AGfR5hflnKwpEtgRfEyC75VqMQwtS+5XpozDkSZEoyUCQhixcvEbqfujgRgg;
+        Expires=Wed, 30 Nov 2022 08:31:53 GMT; Path=/, AWSALBCORS=Ekfm4i6TQZ5dlrDJ3I5prdAJAsb1dBXizaR7l3BHGL+aTPMirjlADXZ+TSGGAt31AGfR5hflnKwpEtgRfEyC75VqMQwtS+5XpozDkSZEoyUCQhixcvEbqfujgRgg;
+        Expires=Wed, 30 Nov 2022 08:31:53 GMT; Path=/; SameSite=None
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -60,7 +60,7 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAA/5WUTXPaMBCG/4pHZ8tINh+xb21ySKbtJJOhlwDTEfYaNLElV5JDGIb/3pUhAVKSNidrJO277z678oZYJ1xrSUb0IwlJDdaKBVC3bgD3Vtoc7z6BsVIrPOARi9jhhGQbIlUBz1D4ZSEc0EYYh7qTScziOExDnsxm4e7Iydqr+wPKUsqTcZxkcZoN+g+o6U/RVd2QjA+HCed8lPbj/mgbEgMlGFA50Fy3ypGMhaRp55W0SzCoeJuDUMGVkVUl1SK4M3phRI2auVYOlKOFroVUncf9aoKmcqOtrYV5pAYzG5m7rspSVBYwq11q46iXwAgwaN9VsIu8ur3xNFgUp6Nk2tNFEzVG55E0Eb/AXcY8pT3NWivvp1l6QwaQxFlabBhyFvLR37jYkHJG+WjMB9mAZcnoLS4+5JyxOBlhXm9ctyb3oZe+QISH16WlrxQLOl+/kOTcS+0KIwguByiQoQ10GbglBOfRhgGWGdwo6aSogntotC8DjTeYRD4f2HSzUs+7LnEWp+TQuIJqhZpwlgUL47A/m213LTzl//82vSNt5EIqUR23r0DDVr7XhxRzx2e6kFKGcxuP+TDjadZP3nYhTpJBygcXyb4LuTYYyf34vnRkg4AkTtzaL3/ef0fhpXNNNu1Ne6vVivpBQrU2gqKd9jpSufBTaac9JP7r5r77jm8vo+vxD7L1adr5UWVIxWmEPdmQhXwC/2a/RuizFLWsMCsZi3WFFzAOfrd+GHCvlMY63BJlKSspdq9ggvAPIncnItdtvsQ7JyKiwNQYKaqPlb6cKH2rBP6FPiWkRNcQcIGook+Ezl5e9BEuaW37zhQcJvD13dij38+b5hXPUaFlpM0CG/SP34KBau9qsz16Dh+62G7/AJrwkoezBQAA
     http_version:
-  recorded_at: Sun, 20 Nov 2022 15:24:25 GMT
+  recorded_at: Wed, 23 Nov 2022 08:31:53 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.2973
@@ -80,7 +80,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 Nov 2022 15:24:25 GMT
+      - Wed, 23 Nov 2022 08:31:53 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -92,7 +92,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ck188N3jfkB3CK%2BBkETQyeBaxY1J%2FleOjIacPO9gM9mRnFsfWh5Kr7BUkMbzGg9StQyvhrYai0zyHdKx3pyOX2WnnPMKTT473%2F3%2F%2BFgyHf8TrQ4VwbncOi5AS06bxS%2BTKQbY0X4%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MSTkN%2BbM8Y2ayz3SBs34qfLWwIdpYvszBFUxLKekJXkTBkCl3D6IioQO%2BvFbE7gTAGSfDQwQ2AFPNRDNuZpuqnMQT9FuPNgg9DLRiSn%2BKZ7VlQ89dCGGVqWzNukCr7JFsfW9tTA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -100,7 +100,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 76d23143adb4b76a-AMS
+      - 76e88d17184c0a57-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -108,5 +108,5 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9I0tzYyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAOtweSjYAAAA=
     http_version:
-  recorded_at: Sun, 20 Nov 2022 15:24:25 GMT
+  recorded_at: Wed, 23 Nov 2022 08:31:53 GMT
 recorded_with: VCR 3.0.3

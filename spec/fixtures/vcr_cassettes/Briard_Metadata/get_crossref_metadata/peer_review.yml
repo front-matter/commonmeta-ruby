@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 Nov 2022 20:14:41 GMT
+      - Wed, 23 Nov 2022 08:31:12 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=npAE%2BCuuuPtOGIRc6R%2BsSCyKWiVxLJsoqlxRNJXEucl7ThBng7dTfIyd9apvy5yrcgw6jPjNmMz636ftInDZjU%2Fv0bgGqW4CP3zXPrJyR6QDBcOQj57ArH8GMJzWx%2Bc9jh0dvqs%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gELATJGj%2BHL%2Fy%2B3tnkqV6%2BqU9dYEqCKylEocJexaBT9Gx9Hmrndt7rYjg7%2FW9%2BUes9fOfBX6d8S9dnUg0QqTGqli12HgzfdwtgDLXkcDKHDSTWiVW0jweiNANKKdNaLUhCDTYN8%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 76d3da72bdce0ae1-AMS
+      - 76e88c1539e20ae0-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -47,7 +47,7 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9c1NTEyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA4VlVnTYAAAA=
     http_version:
-  recorded_at: Sun, 20 Nov 2022 20:14:41 GMT
+  recorded_at: Wed, 23 Nov 2022 08:31:12 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.7554/elife.55167.sa2/transform/application/vnd.crossref.unixsd+xml
@@ -67,13 +67,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 Nov 2022 20:14:41 GMT
+      - Wed, 23 Nov 2022 08:31:12 GMT
       Content-Length:
       - '1500'
       Set-Cookie:
-      - AWSALB=LdGD0n7cK+csyHS45yi27d4gieZBfXWlRLd2CMMTHwnC6mgdo4voQWHmmMJ3UV3Dbh0iyA4xI7ix/+M0793bmnRKDXSId4pFiR8roS8MF/S5HpycvZ9DFR1SP6Ei;
-        Expires=Sun, 27 Nov 2022 20:14:41 GMT; Path=/, AWSALBCORS=LdGD0n7cK+csyHS45yi27d4gieZBfXWlRLd2CMMTHwnC6mgdo4voQWHmmMJ3UV3Dbh0iyA4xI7ix/+M0793bmnRKDXSId4pFiR8roS8MF/S5HpycvZ9DFR1SP6Ei;
-        Expires=Sun, 27 Nov 2022 20:14:41 GMT; Path=/; SameSite=None
+      - AWSALB=ga6l+g1JUj2vncaRwysqDUvkCpl8kckoN3grvcl8aJfarT3iMWQLQhnyeKql/in2h83HjKPnv7DkrJTzRSxb/wP1cln8bzMuAMIPeLjiOun1f8V5WUBCwZQmusUm;
+        Expires=Wed, 30 Nov 2022 08:31:12 GMT; Path=/, AWSALBCORS=ga6l+g1JUj2vncaRwysqDUvkCpl8kckoN3grvcl8aJfarT3iMWQLQhnyeKql/in2h83HjKPnv7DkrJTzRSxb/wP1cln8bzMuAMIPeLjiOun1f8V5WUBCwZQmusUm;
+        Expires=Wed, 30 Nov 2022 08:31:12 GMT; Path=/; SameSite=None
       Link:
       - <http://dx.doi.org/10.7554/elife.55167.sa2>; rel="canonical", <http://creativecommons.org/licenses/by/4.0/>;
         rel="license", <http://orcid.org/0000-0002-5286-4375>; title="Jeremy Magland";
@@ -113,5 +113,5 @@ http_interactions:
       string: !binary |-
         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
     http_version:
-  recorded_at: Sun, 20 Nov 2022 20:14:41 GMT
+  recorded_at: Wed, 23 Nov 2022 08:31:12 GMT
 recorded_with: VCR 3.0.3

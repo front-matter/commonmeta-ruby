@@ -19,13 +19,13 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Sun, 20 Nov 2022 17:28:31 GMT
+      - Wed, 23 Nov 2022 08:31:34 GMT
       Content-Type:
       - application/json
       Set-Cookie:
-      - AWSALB=4fXG/x/ygL1JOgyM42+qaWm48nIOWlV5a1eNCLHZTzKkl6UyJqsqTvka2iZuVzuslpt5UihkpXuSyDMt1CZFFdSFSz+P/Lky+YtmlA1aHkDBcqg9le4Ub4LpoCaB;
-        Expires=Sun, 27 Nov 2022 17:28:31 GMT; Path=/, AWSALBCORS=4fXG/x/ygL1JOgyM42+qaWm48nIOWlV5a1eNCLHZTzKkl6UyJqsqTvka2iZuVzuslpt5UihkpXuSyDMt1CZFFdSFSz+P/Lky+YtmlA1aHkDBcqg9le4Ub4LpoCaB;
-        Expires=Sun, 27 Nov 2022 17:28:31 GMT; Path=/; SameSite=None
+      - AWSALB=XOBN5ADxSzn6U2pnHvHWiEk/4HKBNfqjPrPT7Slem5S/hKbmqxLtsan7aw5RnYhHoPl9F/Eozr33bNi2ywMkKJEZpDftSiUrBo5l9tmlfDak8qIDUvdo3gcIPdDa;
+        Expires=Wed, 30 Nov 2022 08:31:34 GMT; Path=/, AWSALBCORS=XOBN5ADxSzn6U2pnHvHWiEk/4HKBNfqjPrPT7Slem5S/hKbmqxLtsan7aw5RnYhHoPl9F/Eozr33bNi2ywMkKJEZpDftSiUrBo5l9tmlfDak8qIDUvdo3gcIPdDa;
+        Expires=Wed, 30 Nov 2022 08:31:34 GMT; Path=/; SameSite=None
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -53,7 +53,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: Resource not found.
     http_version:
-  recorded_at: Sun, 20 Nov 2022 17:28:31 GMT
+  recorded_at: Wed, 23 Nov 2022 08:31:34 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.7554
@@ -73,7 +73,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 Nov 2022 17:28:32 GMT
+      - Wed, 23 Nov 2022 08:31:34 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -85,7 +85,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=GcaYXpSP4wXnVJ7LXqq8MuQV%2FaC6y9c9j5CuP9jspXSj2M%2FSNEzreRQj8Hqe%2FCASTDMjIn9HMbI59HplEvscHbJM0f9PTXhHDLjGsKvQQ5LbODWCiHEFMXzh5o%2B2UjqhIcjF%2BGY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=o9pUrYsvp9Ayeccqleair%2BzsadTNtgtGIti7LODeO%2Bu79LGvkp8rde%2F8Ky%2FOgZ1eBx5A%2BazRVvl8QVWb1DAZJ91gJSU%2FDAMkRgx6Z2z69FEKzmqPzR4mNWG%2FlM36HjeGsmyFnSw%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -93,7 +93,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 76d2e7112d21b891-AMS
+      - 76e88ca18fa0b8ba-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -101,5 +101,5 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9c1NTEyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA4VlVnTYAAAA=
     http_version:
-  recorded_at: Sun, 20 Nov 2022 17:28:32 GMT
+  recorded_at: Wed, 23 Nov 2022 08:31:34 GMT
 recorded_with: VCR 3.0.3

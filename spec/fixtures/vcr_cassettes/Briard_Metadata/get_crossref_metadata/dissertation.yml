@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 Nov 2022 20:14:50 GMT
+      - Wed, 23 Nov 2022 08:30:58 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6K5Y%2BpxzYyndqbM5d51NYhzTlQ%2BGfHu3PrLBR%2BZByhOIudFJdt7WDim9L1u7oUtsqqciSePO7%2FLPFVLb6cm64poZvUQddweBq1wnhJJCmUfMNNLG7KGMcSWh3mg1MBlTFfMkENw%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=PdqmOLPY3LWY727gg0mDTFHcLBI%2BCu32QVjFkgjLNTVDuicXUNSKbJimt9ZN%2FDaC783kwS01lD3QtJFOyg0DHhhg7WVSNvTO75tAtx64hWFEjedk2Jp8dTssIg2I8muX2BYYXnA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 76d3daabc81ab915-AMS
+      - 76e88bc0afac0ea8-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
@@ -47,7 +47,7 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9QxMjMxMlHYhwkCNI1Lkov7i4KDVNCShYyxULAMUR8AA3AAAA
     http_version:
-  recorded_at: Sun, 20 Nov 2022 20:14:50 GMT
+  recorded_at: Wed, 23 Nov 2022 08:30:58 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.14264/uql.2020.791/transform/application/vnd.crossref.unixsd+xml
@@ -67,13 +67,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 20 Nov 2022 20:14:50 GMT
+      - Wed, 23 Nov 2022 08:30:59 GMT
       Content-Length:
       - '973'
       Set-Cookie:
-      - AWSALB=7qq7f5BTICBxv1OexZI22a47g5TcGDOBLoqn9Hcx1+jUoq6dDCwaAWdAc788pEvyX+JdJ4tjecvdvNXr6hSqDpXAuK3iCrHXqalkKHASizMyqFLeCE1bkAmE3yDX;
-        Expires=Sun, 27 Nov 2022 20:14:50 GMT; Path=/, AWSALBCORS=7qq7f5BTICBxv1OexZI22a47g5TcGDOBLoqn9Hcx1+jUoq6dDCwaAWdAc788pEvyX+JdJ4tjecvdvNXr6hSqDpXAuK3iCrHXqalkKHASizMyqFLeCE1bkAmE3yDX;
-        Expires=Sun, 27 Nov 2022 20:14:50 GMT; Path=/; SameSite=None
+      - AWSALB=dCLAUat/Mxi1l5V3BRlLhdZQi09Cb7aLMBdQ50YCCO7DFtK2/5lpQ7tni86oEMpMxwn76LWsO1EsnRaoVRDWx49EcvuIaRylOAN71YP3Ez0uDdlTVX1azHItF8nj;
+        Expires=Wed, 30 Nov 2022 08:30:59 GMT; Path=/, AWSALBCORS=dCLAUat/Mxi1l5V3BRlLhdZQi09Cb7aLMBdQ50YCCO7DFtK2/5lpQ7tni86oEMpMxwn76LWsO1EsnRaoVRDWx49EcvuIaRylOAN71YP3Ez0uDdlTVX1azHItF8nj;
+        Expires=Wed, 30 Nov 2022 08:30:59 GMT; Path=/; SameSite=None
       Link:
       - <http://dx.doi.org/10.14264/uql.2020.791>; rel="canonical", <http://orcid.org/0000-0003-3086-4443>;
         title="Patricia Maree Collingwood"; rel="author"
@@ -109,5 +109,5 @@ http_interactions:
       string: !binary |-
         H4sIAAAAAAAA/7VWS4/iOBC+j7T/wco9cUKABhQyhxmttFKPdma6W1rtBZnYEGsTO+1HQ/79lh0e6SZ0M4dBEByX63PVV+UqZ5/3dYVemNJcimWQRHGAmCgk5WK7DJ4e/wxnwef8U1YoqbVim5Vi2lYGgZbQy6A0pllgvNvtouOKSKotfla6KFlNcOoAT/D+zasu9pq/Ut+lXnEUxwn+59v9g1cPudCGiIKBluaLDvNeFsR4uFt2R9cWdUs0Pnn2bJlqV9KaxhpQjPaaBvkfnxDKOknnuZ+BuZIRehjDG5V8tSamKFec5kIKluFXUwcl3NPK1pK2ZwS/BwJvjQVeYS9ZvbCDAedNkGkbtgwo15op42kI8iSOkvFoOsb2uYpG8SiO7uaJN6CvXag65IbVSJAaIBq7rrgumQrde3AA1kZB4IP8SXAfNNMiuUE/LGNCV0RQdM/Xiqg2w0e497YAVvn+9+HXrF6D/Zwe0YV1E0E+SWd3NyEUvONwACNJpvP0bpxObwJaS/nfEEg6nsLnJgjKGgmEhIbXDNKgbi7AJnP4juZpehOe3Akgp4vBW/qPGXMTUEW0CW1DiTmF0Y9zl2phPA3j2WM8WcSzxWT+7220KwYA9CO02Y1oMKbrNiykFeYtafEwhDucihVS0d6sh+6KwUf1bX8oMEmU/Fpp6ikeKxPYMlyZrOB7mIOl51rUs7VfBN7IQNrA8ZJi5ShCmkF1gSq6DDZcaeCokAIyYW2NVCslKxAQa0qp3u7hkbZwVDug/DsBtYIT9I0oBjWuJxpQ1FZ50RdZVZB2Oylpho+TA+v//vnlr6/IWcKE4YVLkWVglIXkcFRp4EqqglNPUgyfEH5pmMazaTgej+FYeIRLLnCPjEup4aZiesggL8mhFUlZITAEOlGLXJXacAFjTirEBZxbBg+gF1HrjhdiNVNbNyAUGgYo0wUiqJJiy42FxgpqBB6t5tpVP8hDxhvjhg5bsYq7loekQAXRJWxMhN6ABxnuDLr074oLGWkaJV9ItXJHbMjDGhKhzONJhrvRwBJK2nwEC9z/gLhlRPmzm2E/vDTufSMy1+KBl8Esfi3u4vdYMnStfWT4YvkHkBA9okwNCXeMMwA+SB/bh4K7sL4G7SlcuvqeLxllWzg0+ffyKwIfIPjAaTd1uRTKE7BFBuMBbf2mjn/ScJcJqwqWHwoO0w0pWFR1rTayzxGjNiIWv3C2w08/FqOUJOwOusNJ89LVKyaC4FpZyk5XrX4lxgOlOMP+NnS6NZ1uSgfB+Sp2xjzO/Q8n44jB0QoAAA==
     http_version:
-  recorded_at: Sun, 20 Nov 2022 20:14:50 GMT
+  recorded_at: Wed, 23 Nov 2022 08:30:59 GMT
 recorded_with: VCR 3.0.3
