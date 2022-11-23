@@ -191,6 +191,12 @@ describe Briard::Metadata, vcr: true do
       expect(response.nil?).to be(true)
     end
 
+    it 'filename' do
+      url = 'crossref.xml'
+      response = subject.normalize_id(url)
+      expect(response.nil?).to be(true)
+    end
+
     it 'sandbox via url' do
       url = 'https://handle.stage.datacite.org/10.20375/0000-0001-ddb8-7'
       response = subject.normalize_id(url)

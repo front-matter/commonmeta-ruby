@@ -488,12 +488,18 @@ module Briard
     }
 
     def find_from_format(id: nil, string: nil, ext: nil, filename: nil)
+      puts id
+      puts string
+      puts ext
+      puts filename
       if id.present?
         find_from_format_by_id(id)
-      elsif ext.present?
-        find_from_format_by_filename(filename) || find_from_format_by_ext(string, ext: ext)
+      elsif string.present? && ext.present?
+        find_from_format_by_ext(string, ext: ext)
       elsif string.present?
         find_from_format_by_string(string)
+      elsif filename.present?
+        find_from_format_by_filename(filename)
       else
         'datacite'
       end
@@ -574,6 +580,8 @@ module Briard
         'codemeta'
       elsif Maremma.from_json(string).to_h.dig('schema-version').to_s.start_with?('http://datacite.org/schema/kernel')
         'datacite_json'
+      elsif Maremma.from_json(string).to_h.dig('source') == ('Crossref')
+        'crossref_json'
       elsif Maremma.from_json(string).to_h.dig('types').present? && Maremma.from_json(string).to_h.dig('publication_year').present?
         'crosscite'
       elsif Maremma.from_json(string).to_h.dig('issued', 'date-parts').present?
