@@ -18,29 +18,7 @@ module Briard
       id = normalize_id(options[:input], options)
       ra = nil
 
-      if options[:input].present? && File.exist?(options[:input])
-        filename = File.basename(options[:input])
-        ext = File.extname(options[:input])
-        if %w[.bib .ris .xml .json .cff].include?(ext)
-          hsh = {
-            'url' => options[:url],
-            'state' => options[:state],
-            'date_registered' => options[:date_registered],
-            'date_updated' => options[:date_updated],
-            'provider_id' => options[:provider_id],
-            'client_id' => options[:client_id],
-            'depositor' => options[:depositor],
-            'email' => options[:email],
-            'registrant' => options[:registrant],
-            'content_url' => options[:content_url]
-          }
-          string = File.read(options[:input])
-          @from = options[:from] || find_from_format(string: string, filename: filename, ext: ext)
-        else
-          warn "File type #{ext} not supported"
-          exit 1
-        end
-      elsif id.present?
+      if id.present?
         @from = options[:from] || find_from_format(id: id)
 
         # mEDRA, KISTI, JaLC and OP DOIs are found in the Crossref index
@@ -58,6 +36,29 @@ module Briard
         # generate name for method to call dynamically
         hsh = @from.present? ? send("get_#{@from}", id: id, **options) : {}
         string = hsh.fetch('string', nil)
+
+      elsif options[:input].present? && File.exist?(options[:input])
+        filename = File.basename(options[:input])
+        ext = File.extname(options[:input])
+        if %w[.bib .ris .xml .json .cff].include?(ext)
+          hsh = {
+            'url' => options[:url],
+            'state' => options[:state],
+            'date_registered' => options[:date_registered],
+            'date_updated' => options[:date_updated],
+            'provider_id' => options[:provider_id],
+            'client_id' => options[:client_id],
+            'depositor' => options[:depositor],
+            'email' => options[:email],
+            'registrant' => options[:registrant],
+            'content_url' => options[:content_url]
+          }
+          string = File.read(options[:input])
+          @from = options[:from] || find_from_format(string: string, ext: ext)
+        else
+          warn "File type #{ext} not supported"
+          exit 1
+        end
       else
         hsh = {
           'url' => options[:url],
