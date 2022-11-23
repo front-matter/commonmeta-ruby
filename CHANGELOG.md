@@ -1,5 +1,9 @@
 # Changelog
 
+## [v2.9.0](https://github.com/front-matter/briard/tree/v2.9.0) (2022-11-23)
+
+[Full Changelog](https://github.com/front-matter/briard/compare/v2.8.2...v2.9.0)
+
 ## [v2.8.2](https://github.com/front-matter/briard/tree/v2.8.2) (2022-11-23)
 
 [Full Changelog](https://github.com/front-matter/briard/compare/v2.8.0...v2.8.2)
