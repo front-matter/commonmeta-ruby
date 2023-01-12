@@ -41,6 +41,51 @@
         "Other"
       ]
     },
+    "date": {
+      "type": "string",
+      "anyOf": [
+        {
+          "format": "year"
+        },
+        {
+          "format": "yearmonth"
+        },
+        {
+          "format": "date"
+        },
+        {
+          "format": "datetime"
+        },
+        {
+          "format": "year-range"
+        },
+        {
+          "format": "yearmonth-range"
+        },
+        {
+          "format": "date-range"
+        },
+        {
+          "format": "datetime-range"
+        }
+      ]
+    },
+    "dateType": {
+      "type": "string",
+      "enum": [
+        "Accepted",
+        "Available",
+        "Copyrighted",
+        "Collected",
+        "Created",
+        "Issued",
+        "Submitted",
+        "Updated",
+        "Valid",
+        "Withdrawn",
+        "Other"
+      ]
+    },
     "descriptionType": {
       "type": "string",
       "enum": [
@@ -81,8 +126,8 @@
       "enum": ["Organizational", "Personal"]
     },
     "noEmptyString": {
-        "type": "string",
-        "minLength": 1
+      "type": "string",
+      "minLength": 1
     },
     "resourceTypeGeneral": {
       "type": "string",
@@ -271,9 +316,7 @@
     "publisher": {
       "$ref": "#/definitions/noEmptyString"
     },
-    "publication_year": {
-      "$ref": "#/definitions/noEmptyString"
-    },
+
     "language": {
       "type": "string",
       "$comment": "Primary language of the resource. Allowed values are taken from  IETF BCP 47, ISO 639-1 language codes."
@@ -292,8 +335,46 @@
       },
       "uniqueItems": true
     },
-    "version_info": {
-      "type": "string"
+    "dates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "$ref": "#/definitions/date"
+          },
+          "dateType": {
+            "$ref": "#/definitions/dateType"
+          },
+          "dateInformation": {
+            "type": "string"
+          }
+        },
+        "required": ["date", "dateType"]
+      },
+      "uniqueItems": true
+    },
+    "publication_year": {
+      "$ref": "#/definitions/noEmptyString"
+    },
+    "descriptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "$ref": "#/definitions/noEmptyString"
+          },
+          "descriptionType": {
+            "$ref": "#/definitions/descriptionType"
+          },
+          "lang": {
+            "type": "string"
+          }
+        },
+        "required": ["description", "descriptionType"]
+      },
+      "uniqueItems": true
     },
     "rights_list": {
       "type": "array",
@@ -324,28 +405,39 @@
       },
       "uniqueItems": true
     },
-    "descriptions": {
+    "version_info": {
+      "type": "string"
+    },
+    "subjects": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "description": {
-            "$ref": "#/definitions/noEmptyString"
+          "subject": {
+            "type": "string"
           },
-          "descriptionType": {
-            "$ref": "#/definitions/descriptionType"
+          "subjectScheme": {
+            "type": "string"
+          },
+          "schemeURI": {
+            "type": "string",
+            "format": "uri"
+          },
+          "valueURI": {
+            "type": "string",
+            "format": "uri"
           },
           "lang": {
             "type": "string"
           }
         },
-        "required": ["description", "descriptionType"]
+        "required": ["subject"]
       },
       "uniqueItems": true
     },
     "agency": {
       "type": "string",
-      "enum": [ "Crossref", "DataCite", "JaLC", "KISTI", "mEDRA", "OP"]
+      "enum": ["Crossref", "DataCite", "JaLC", "KISTI", "mEDRA", "OP"]
     },
     "schema_version": {
       "type": "string",
@@ -353,7 +445,10 @@
     },
     "state": {
       "type": "string",
-      "enum": [ "draft", "findable", "registered", "not_found"]
+      "enum": ["draft", "findable", "registered", "not_found"]
+    },
+    "date_registered": {
+      "type": "string"
     }
   },
   "required": [

@@ -96,7 +96,7 @@ describe Briard::Metadata, vcr: true do
     it 'journal article with funding' do
       input = '10.3389/fpls.2019.00816'
       subject = described_class.new(input: input, from: 'crossref_json')
-      # expect(subject.errors).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.3389/fpls.2019.00816')
       expect(subject.url).to eq('https://www.frontiersin.org/article/10.3389/fpls.2019.00816/full')
       expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-journal',

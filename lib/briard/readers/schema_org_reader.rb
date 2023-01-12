@@ -43,12 +43,14 @@ module Briard
           link = doc.css("link[rel='canonical']")
           hsh['@id'] = link[0]['href'] if link.present?
 
-          # workaround if license included but not with schema.org
-          license = doc.at("meta[name='DCTERMS.license']")
+          # workaround if license not included with schema.org
+          license = doc.at("meta[name='dc.rights']")
           hsh['license'] = license['content'] if license.present?
 
           # workaround for html language attribute if no language is set via schema.org
-          lang = doc.at('html')['lang']
+          lang = doc.at("meta[name='dc.language']") || doc.at("meta[name='citation_language']")
+          lang = lang['content'] if lang.present?
+          lang = doc.at('html')['lang'] if lang.blank?
           hsh['inLanguage'] = lang if hsh['inLanguage'].blank?
 
           # workaround if issn not included with schema.org
@@ -56,6 +58,21 @@ module Briard
           issn = doc.at("meta[name='citation_issn']")
           hsh['isPartOf'] = { 'name' => name ? name['content'] : nil,
                               'issn' => issn ? issn['content'] : nil }.compact
+
+          # workaround if not all authors are included with schema.org (e.g. in Ghost metadata)
+          authors = doc.css("meta[name='citation_author']").map do |author|
+            { 'name' => author['content'] }
+          end
+
+          hsh['author'] = hsh['creator'] if hsh['author'].blank? && hsh['creator'].present?
+          hsh['author'] = authors if authors.length > Array.wrap(hsh['author']).length
+
+          # workaround if publisher not included with schema.org (e.g. Zenodo)
+          if hsh['publisher'].blank?
+            publisher = doc.at("meta[property='og:site_name']")
+            publisher = publisher['content'] if publisher.present?
+            hsh['publisher'] = { 'name' => publisher } 
+          end
 
           string = hsh.to_json if hsh.present?
         end
@@ -106,7 +123,7 @@ module Briard
         contributors = get_authors(from_schema_org_contributors(Array.wrap(meta.fetch('editor',
                                                                                       nil))))
         publisher = parse_attributes(meta.fetch('publisher', nil), content: 'name', first: true)
-
+        
         ct = schema_org == 'Dataset' ? 'includedInDataCatalog' : 'Periodical'
         container = if meta.fetch(ct, nil).present?
                       url = parse_attributes(from_schema_org(meta.fetch(ct, nil)), content: 'url',
@@ -125,12 +142,13 @@ module Briard
                       }.compact
                     elsif %w[BlogPosting Article].include?(schema_org)
                       issn = meta.dig('isPartOf', 'issn')
+                      url = meta.dig('publisher', 'url')
 
                       {
                         'type' => 'Blog',
                         'title' => meta.dig('isPartOf', 'name'),
-                        'identifier' => issn,
-                        'identifierType' => issn.present? ? 'ISSN' : nil
+                        'identifier' => issn.presence || url.presence,
+                        'identifierType' => issn.present? ? 'ISSN' : 'URL'
                       }.compact
                     else
                       {}
@@ -249,7 +267,7 @@ module Briard
                               [{ 'description' => sanitize(meta.fetch('description')),
                                  'descriptionType' => 'Abstract' }]
                             end,
-          'rights_list' => rights_list,
+          'rights_list' => rights_list.presence,
           'version_info' => meta.fetch('version', nil).to_s.presence,
           'subjects' => subjects,
           'language' => language,

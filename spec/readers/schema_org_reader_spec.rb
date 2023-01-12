@@ -95,9 +95,8 @@ describe Briard::Metadata, vcr: true do
     it 'zenodo' do
       input = 'https://www.zenodo.org/record/1196821'
       subject = described_class.new(input: input, from: 'schema_org')
-      expect(subject.valid?).to be false
+      expect(subject.valid?).to be true
       expect(subject.language).to eq('eng')
-      expect(subject.errors).to eq("49:0: ERROR: Element '{http://datacite.org/schema/kernel-4}publisher': [facet 'minLength'] The value has a length of '0'; this underruns the allowed minimum length of '1'.")
       expect(subject.id).to eq('https://doi.org/10.5281/zenodo.1196821')
       expect(subject.doi).to eq('10.5281/zenodo.1196821')
       expect(subject.url).to eq('https://zenodo.org/record/1196821')
@@ -108,7 +107,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.first).to eq('name' => 'Staib, Matthias',
                                            'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0001-9688-838X', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }],
                                            'nameType' => 'Personal', 'givenName' => 'Matthias', 'familyName' => 'Staib', 'affiliation' => [{ 'name' => 'University of Zurich, Zurich, Switzerland' }])
-      expect(subject.publisher.nil?).to be(true)
+      expect(subject.publisher).to eq('Zenodo')
       expect(subject.publication_year).to eq('2018')
       expect(subject.subjects).to eq([{ 'subject' => 'pupil size response' },
                                       { 'subject' => 'skin conductance response' },
@@ -172,6 +171,30 @@ describe Briard::Metadata, vcr: true do
       expect(subject.subjects).to eq([{ 'subject' => 'medicine, health and life sciences' },
                                       { 'subject' => 'genome-wide association studies' },
                                       { 'subject' => 'ankylosing spondylitis' }])
+    end
+
+    it 'upstream blog' do
+      input = 'https://upstream.force11.org/elife-reviewed-preprints-interview-with-fiona-hutton'
+      subject = described_class.new(input: input, from: 'schema_org')
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq('https://doi.org/10.54900/8d7emer-rm2pg72')
+      expect(subject.doi).to eq('10.54900/8d7emer-rm2pg72')
+      expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-newspaper',
+                                  'resourceTypeGeneral' => 'Preprint', 'ris' => 'GEN', 'schemaOrg' => 'Article')
+      expect(subject.titles).to eq([{ 'title' => 'eLife Reviewed Preprints: Interview with Fiona Hutton' }])
+      expect(subject.container).to eq('identifier' => 'https://upstream.force11.org/',
+                                      'identifierType' => 'URL', 'title' => 'Upstream', 'type' => 'Blog')
+      expect(subject.creators.size).to eq(2)
+      expect(subject.creators.first).to eq("familyName"=>"Hutton",
+        "givenName" => "Fiona",
+        "name" => "Hutton, Fiona",
+        "nameType" => "Personal")
+      expect(subject.subjects).to eq([{ 'subject' => 'interviews' }])
+      expect(subject.publisher).to eq('Upstream')
+      expect(subject.dates).to eq([{ 'date' => '2022-11-15T10:29:38Z', 'dateType' => 'Issued' },
+        { 'date' => '2023-01-11T22:58:48Z', 'dateType' => 'Updated' }])
+      expect(subject.publication_year).to eq('2022')
+      expect(subject.rights_list).to eq([{"rights"=>"Creative Commons Attribution 4.0 International", "rightsUri"=>"https://creativecommons.org/licenses/by/4.0/legalcode", "rightsIdentifier"=>"cc-by-4.0", "rightsIdentifierScheme"=>"SPDX", "schemeUri"=>"https://spdx.org/licenses/"}])
     end
 
     # TODO: check 403 status in DOI resolver

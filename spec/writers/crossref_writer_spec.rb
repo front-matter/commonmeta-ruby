@@ -138,7 +138,7 @@ describe Briard::Metadata, vcr: true do
              'schemeUri' => 'https://orcid.org' }],
                                         'nameType' => 'Personal' }])
       expect(subject.subjects).to eq([])
-      expect(subject.container).to eq('type' => 'Blog')
+      expect(subject.container).to eq("identifier"=>"https://www.polyneme.xyz", "identifierType"=>"URL", "type"=>"Blog")
       expect(subject.language).to eq('en-US')
       expect(subject.dates).to eq([{ 'date' => '2022-10-21', 'dateType' => 'Issued' },
                                    { 'date' => '2022-10-21', 'dateType' => 'Created' },
@@ -149,6 +149,33 @@ describe Briard::Metadata, vcr: true do
       crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
       expect(crossref.dig('titles',
                           'title')).to eq('Implementing the FAIR Principles Through FAIR-Enabling Artifacts and Services')
+    end
+
+    it 'schema.org from upstream blog' do
+      input = 'https://upstream.force11.org/deep-dive-into-ethics-of-contributor-roles/'
+      subject = described_class.new(input: input, from: 'schema_org')
+
+      expect(subject.valid?).to be true
+      expect(subject.doi).to eq('10.54900/rf84ag3-98f00rt-0phta')
+      expect(subject.url).to eq('https://upstream.force11.org/deep-dive-into-ethics-of-contributor-roles')
+      expect(subject.types['schemaOrg']).to eq('Article')
+      expect(subject.types['resourceTypeGeneral']).to eq('Preprint')
+      expect(subject.types['ris']).to eq('GEN')
+      expect(subject.types['citeproc']).to eq('article-newspaper')
+      expect(subject.titles).to eq([{ 'title' => 'Deep dive into ethics of Contributor Roles: report of a FORCE11 workshop' }])
+      expect(subject.creators.length).to eq(4)
+      expect(subject.creators.first).to eq("familyName" => "Hosseini",
+        "givenName" => "Mohammad",
+        "name" => "Hosseini, Mohammad",
+        "nameType" => "Personal")
+      expect(subject.subjects).to eq([{ 'subject' => 'news' }])
+      expect(subject.language).to eq('en')
+      expect(subject.rights_list).to eq([{
+                                          'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
+                                        }])
+      crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
+      expect(crossref.dig('titles',
+                          'title')).to eq('Deep dive into ethics of Contributor Roles: report of a FORCE11 workshop')
     end
   end
 end
