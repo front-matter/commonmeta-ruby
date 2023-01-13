@@ -95,21 +95,16 @@ module Briard
 
     def insert_crossref_creators(xml)
       xml.contributors do
-        Array.wrap(creators).each_with_index do |au, index|
+        Array.wrap(creators).each_with_index do |person, index|
           xml.person_name('contributor_role' => 'author',
                           'sequence' => index.zero? ? 'first' : 'additional') do
-            insert_crossref_person(xml, au, 'author')
+            insert_crossref_person(xml, person)
           end
         end
       end
     end
 
-    def insert_crossref_person(xml, person, _type)
-      person_name = if person['familyName'].present?
-                      [person['familyName'], person['givenName']].compact.join(', ')
-                    else
-                      person['name']
-                    end
+    def insert_crossref_person(xml, person)
       xml.given_name(person['givenName']) if person['givenName'].present?
       xml.surname(person['familyName']) if person['familyName'].present?
       if person.dig('nameIdentifiers', 0, 'nameIdentifierScheme') == 'ORCID'

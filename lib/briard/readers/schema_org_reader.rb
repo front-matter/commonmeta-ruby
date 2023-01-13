@@ -61,7 +61,7 @@ module Briard
 
           # workaround if not all authors are included with schema.org (e.g. in Ghost metadata)
           authors = doc.css("meta[name='citation_author']").map do |author|
-            { 'name' => author['content'] }
+            { '@type' => 'Person', 'name' => author['content'] }
           end
 
           hsh['author'] = hsh['creator'] if hsh['author'].blank? && hsh['creator'].present?

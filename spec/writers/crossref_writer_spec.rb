@@ -114,6 +114,8 @@ describe Briard::Metadata, vcr: true do
                                       'title' => 'Front Matter', 'type' => 'Blog')
       expect(subject.titles).to eq([{ 'title' => 'Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health' }])
       crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
+      expect(Array.wrap(crossref.dig('contributors', 'person_name')).length).to eq(1)
+      expect(Array.wrap(crossref.dig('contributors', 'person_name')).first).to eq("ORCID"=>"https://orcid.org/0000-0003-1419-2405", "contributor_role"=>"author", "given_name"=>"Martin", "sequence"=>"first", "surname"=>"Fenner")
       expect(crossref.dig('titles',
                           'title')).to eq('Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health')
     end
@@ -174,6 +176,8 @@ describe Briard::Metadata, vcr: true do
                                           'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
       crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
+      expect(Array.wrap(crossref.dig('contributors', 'person_name')).length).to eq(4)
+      expect(Array.wrap(crossref.dig('contributors', 'person_name')).first).to eq("contributor_role"=>"author", "given_name"=>"Mohammad", "sequence"=>"first", "surname"=>"Hosseini")
       expect(crossref.dig('titles',
                           'title')).to eq('Deep dive into ethics of Contributor Roles: report of a FORCE11 workshop')
     end
