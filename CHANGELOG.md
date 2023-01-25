@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/front-matter/briard/tree/HEAD)
+
+[Full Changelog](https://github.com/front-matter/briard/compare/v2.9.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump rack from 2.2.5 to 2.2.6.2 [\#21](https://github.com/front-matter/briard/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump activesupport from 7.0.4 to 7.0.4.1 [\#20](https://github.com/front-matter/briard/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v2.9.0](https://github.com/front-matter/briard/tree/v2.9.0) (2022-11-23)
 
 [Full Changelog](https://github.com/front-matter/briard/compare/v2.8.2...v2.9.0)
