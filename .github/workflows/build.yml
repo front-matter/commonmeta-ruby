@@ -1,38 +1,39 @@
-name: Build Ruby Gem
-
+name: Build
 on:
   push:
     branches:
-      - "master"
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
-  build:
+  sonarcloud:
+    name: SonarCloud
     runs-on: ubuntu-latest
-    env:
-      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby 2.7
-      uses: actions/setup-ruby@v1
-      with:
-        ruby-version: 2.7.x
-
-    - name: Build and test
-      run: |
-        gem install bundler
-        bundle install
-        bundle exec rspec
-
-    # - name: SonarCloud Scan
-    #   uses: sonarsource/sonarcloud-github-action@master
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        
-    - name: Notify Slack
-      uses: adamkdean/simple-slack-notify@1.0.4
-      with:
-        channel: '#ops'
-        username: 'GitHub Actions'
-        color: 'good'
-        text: 'A new version of the briard gem has been built.'
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Set up Ruby 2.7
+        uses: actions/setup-ruby@v2
+        with:
+          ruby-version: 2.7.x
+      - name: Build and test
+        run: |
+          gem install bundler
+          bundle install
+          bundle exec rspec
+      #- name: Override Coverage Source Path for Sonar
+      #  run: sed -i 's/\/home\/runner\/work\/talbot\/talbot\//\/github\/workspace\//g' coverage.xml
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}      
+      - name: Notify Slack
+        uses: adamkdean/simple-slack-notify@1.0.4
+        with:
+          channel: '#ops'
+          username: 'GitHub Actions'
+          color: 'good'
+          text: 'A new version of the briard gem has been built.'
 
