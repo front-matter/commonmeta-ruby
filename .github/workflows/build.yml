@@ -22,6 +22,11 @@ jobs:
           gem install bundler
           bundle install
           bundle exec rspec
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage-report
+          path: coverage/.resultset.json
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
