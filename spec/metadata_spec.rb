@@ -182,7 +182,7 @@ describe Briard::Metadata, vcr: true do
     it 'missing_comma' do
       json = File.read("#{fixture_path}datacite_software_missing_comma.json")
       response = subject.jsonlint(json)
-      expect(response).to eq(['expected comma, not a string (after doi) at line 4, column 11 [parse.c:430]'])
+      expect(response).to eq(['expected comma, not a string (after doi) at line 4, column 11 [parse.c:433]'])
     end
 
     it 'overlapping_keys' do
