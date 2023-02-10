@@ -1,5 +1,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5785519.svg)](https://doi.org/10.5281/zenodo.5785519)
 [![Gem Version](https://badge.fury.io/rb/briard.svg)](https://badge.fury.io/rb/briard)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=front-matter_briard&metric=coverage)](https://sonarcloud.io/summary/new_code?id=front-matter_briard)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=front-matter_briard&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=front-matter_briard)
 ![GitHub](https://img.shields.io/github/license/front-matter/talbot?logo=MIT)
 
 # Briard: a Ruby library for conversion of DOI Metadata
