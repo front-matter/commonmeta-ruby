@@ -40,7 +40,7 @@ module Briard
         ris_type = meta.fetch('TY', nil) || 'GEN'
         schema_org = RIS_TO_SO_TRANSLATIONS[ris_type] || 'CreativeWork'
         types = {
-          'resourceTypeGeneral' => Metadata::RIS_TO_DC_TRANSLATIONS[ris_type],
+          'resourceTypeGeneral' => Metadata::RIS_TO_DC_TRANSLATIONS[ris_type] || 'Other',
           'schemaOrg' => schema_org,
           'citeproc' => RIS_TO_CP_TRANSLATIONS[schema_org] || 'misc',
           'ris' => ris_type
@@ -101,7 +101,7 @@ module Briard
                             end,
           'subjects' => subjects,
           'language' => meta.fetch('LA', nil),
-          'state' => state }.merge(read_options)
+          'state' => state }.compact.merge(read_options)
       end
 
       def ris_meta(string: nil)

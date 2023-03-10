@@ -40,7 +40,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'BlogPosting DataCite JSON' do
       input = "#{fixture_path}datacite.json"
-      subject = described_class.new(input: input, from: 'datacite_json')
+      subject = described_class.new(input: input, from: 'datacite')
       ttl = subject.turtle.split("\n")
       expect(ttl[0]).to eq('@prefix schema: <http://schema.org/> .')
       expect(ttl[2]).to eq('<https://doi.org/10.5438/4k3m-nyvg> a schema:ScholarlyArticle;')

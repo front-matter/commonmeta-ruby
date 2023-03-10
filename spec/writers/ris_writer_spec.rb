@@ -123,7 +123,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'BlogPosting DataCite JSON' do
       input = "#{fixture_path}datacite.json"
-      subject = described_class.new(input: input, from: 'datacite_json')
+      subject = described_class.new(input: input, from: 'datacite')
       ris = subject.ris.split("\r\n")
       expect(ris[0]).to eq('TY  - RPRT')
       expect(ris[1]).to eq('T1  - Eating your own Dog Food')

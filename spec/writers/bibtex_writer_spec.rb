@@ -20,10 +20,9 @@ describe Briard::Metadata, vcr: true do
     end
 
     it 'with schema_3' do
-      # input = fixture_path + "datacite_kernel_3.json"
       input = "#{fixture_path}datacite_schema_3.xml"
-      json = described_class.new(input: input, from: 'datacite')
-      subject = described_class.new(input: json.meta.to_json, from: 'datacite_json')
+      json = described_class.new(input: input, from: 'datacite_xml')
+      subject = described_class.new(input: json.meta.to_json, from: 'datacite')
       bibtex = BibTeX.parse(subject.bibtex).to_a(quotes: '').first
       expect(bibtex[:bibtex_type].to_s).to eq('misc')
       expect(bibtex[:bibtex_key]).to eq('https://doi.org/10.5061/dryad.8515')
@@ -90,7 +89,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'BlogPosting from string' do
       input = "#{fixture_path}datacite.json"
-      subject = described_class.new(input: input, from: 'datacite_json')
+      subject = described_class.new(input: input, from: 'datacite')
       expect(subject.valid?).to be true
       bibtex = BibTeX.parse(subject.bibtex).to_a(quotes: '').first
       expect(bibtex[:bibtex_type].to_s).to eq('article')

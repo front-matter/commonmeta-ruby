@@ -9,7 +9,7 @@ describe Briard::CLI do
   end
 
   describe "convert from id", vcr: true do
-    context "crossref_json" do
+    context "crossref" do
       let(:input) { "10.7554/eLife.01567" }
 
       it 'default' do
@@ -17,27 +17,27 @@ describe Briard::CLI do
       end
 
       it 'to schema_org' do
-        subject.options = { from: "crossref_json", to: "schema_org" }
+        subject.options = { from: "crossref", to: "schema_org" }
         expect { subject.convert input }.to output(/additionalType/).to_stdout
       end
 
       it 'to crossref' do
-        subject.options = { from: "crossref_json", to: "crossref" }
+        subject.options = { from: "crossref", to: "crossref" }
         expect { subject.convert input }.to output(/journal_metadata/).to_stdout
       end
 
       it 'to datacite' do
-        subject.options = { from: "crossref_json", to: "datacite" }
+        subject.options = { from: "crossref", to: "datacite" }
         expect { subject.convert input }.to output(/http:\/\/datacite.org\/schema\/kernel-4/).to_stdout
       end
 
       it 'to bibtex' do
-        subject.options = { from: "crossref_json", to: "bibtex" }
+        subject.options = { from: "crossref", to: "bibtex" }
         expect { subject.convert input }.to output(/@article{https:\/\/doi.org\/10.7554\/elife.01567/).to_stdout
       end
 
       it 'to citation' do
-        subject.options = { from: "crossref_json", to: "citation", style: "vancouver" }
+        subject.options = { from: "crossref", to: "citation", style: "vancouver" }
         expect { subject.convert input }.to output(/Sankar M, Nieminen K, Ragni L, Xenarios I/).to_stdout
       end
     end
@@ -102,8 +102,8 @@ describe Briard::CLI do
         expect { subject.convert input }.to output(/http:\/\/datacite.org\/schema\/kernel-4/).to_stdout
       end
 
-      it 'to datacite_json' do
-        subject.options = { to: "datacite_json" }
+      it 'to datacite' do
+        subject.options = { to: "datacite" }
         expect { subject.convert input }.to output(/Renaud, François/).to_stdout
       end
 
@@ -190,7 +190,7 @@ describe Briard::CLI do
       end
     end
 
-    context "crossref_json", vcr: true do
+    context "crossref", vcr: true do
       let(:file) { fixture_path + "crossref.json" }
 
       it 'default' do

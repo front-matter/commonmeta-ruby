@@ -8,28 +8,26 @@ require_relative 'schema_utils'
 require_relative 'utils'
 
 require_relative 'readers/bibtex_reader'
-require_relative 'readers/citeproc_reader'
+require_relative 'readers/csl_reader'
 require_relative 'readers/cff_reader'
 require_relative 'readers/codemeta_reader'
-require_relative 'readers/crosscite_reader'
-require_relative 'readers/crossref_json_reader'
 require_relative 'readers/crossref_reader'
-require_relative 'readers/datacite_json_reader'
+require_relative 'readers/crossref_xml_reader'
 require_relative 'readers/datacite_reader'
+require_relative 'readers/datacite_xml_reader'
 require_relative 'readers/npm_reader'
 require_relative 'readers/ris_reader'
 require_relative 'readers/schema_org_reader'
 
 require_relative 'writers/bibtex_writer'
 require_relative 'writers/citation_writer'
-require_relative 'writers/citeproc_writer'
+require_relative 'writers/csl_writer'
 require_relative 'writers/cff_writer'
 require_relative 'writers/codemeta_writer'
-require_relative 'writers/crosscite_writer'
-require_relative 'writers/crossref_writer'
+require_relative 'writers/crossref_xml_writer'
 require_relative 'writers/csv_writer'
 require_relative 'writers/datacite_writer'
-require_relative 'writers/datacite_json_writer'
+require_relative 'writers/datacite_xml_writer'
 require_relative 'writers/jats_writer'
 require_relative 'writers/rdf_xml_writer'
 require_relative 'writers/ris_writer'
@@ -47,28 +45,26 @@ module Briard
     include Briard::Utils
 
     include Briard::Readers::BibtexReader
-    include Briard::Readers::CiteprocReader
+    include Briard::Readers::CslReader
     include Briard::Readers::CffReader
     include Briard::Readers::CodemetaReader
-    include Briard::Readers::CrossciteReader
-    include Briard::Readers::CrossrefJsonReader
     include Briard::Readers::CrossrefReader
+    include Briard::Readers::CrossrefXmlReader
     include Briard::Readers::DataciteReader
-    include Briard::Readers::DataciteJsonReader
+    include Briard::Readers::DataciteXmlReader
     include Briard::Readers::NpmReader
     include Briard::Readers::RisReader
     include Briard::Readers::SchemaOrgReader
 
     include Briard::Writers::BibtexWriter
     include Briard::Writers::CitationWriter
-    include Briard::Writers::CiteprocWriter
+    include Briard::Writers::CslWriter
     include Briard::Writers::CffWriter
     include Briard::Writers::CodemetaWriter
-    include Briard::Writers::CrossciteWriter
-    include Briard::Writers::CrossrefWriter
+    include Briard::Writers::CrossrefXmlWriter
     include Briard::Writers::CsvWriter
     include Briard::Writers::DataciteWriter
-    include Briard::Writers::DataciteJsonWriter
+    include Briard::Writers::DataciteXmlWriter
     include Briard::Writers::JatsWriter
     include Briard::Writers::RdfXmlWriter
     include Briard::Writers::RisWriter
@@ -90,7 +86,7 @@ module Briard
     # replace DOI in XML if provided in options
     def raw
       r = string.present? ? string.strip : nil
-      return r unless from == 'datacite' && r.present?
+      return r unless from == 'datacite_xml' && r.present?
 
       doc = Nokogiri::XML(string, nil, 'UTF-8', &:noblanks)
       node = doc.at_css('identifier')
@@ -99,13 +95,13 @@ module Briard
     end
 
     def should_passthru
-      (from == 'datacite') && regenerate.blank? && raw.present?
+      (from == 'datacite_xml') && regenerate.blank? && raw.present?
     end
 
     def container_title
       if container.present?
         container['title']
-      elsif types['citeproc'] == 'article-journal'
+      elsif types['csl'] == 'article-journal'
         publisher
       end
     end
@@ -144,7 +140,7 @@ module Briard
       nil
     end
 
-    def citeproc_hsh
+    def csl_hsh
       page = if container.to_h['firstPage'].present?
                [container['firstPage'], container['lastPage']].compact.join('-')
              end

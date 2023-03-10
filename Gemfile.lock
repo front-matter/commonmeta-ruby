@@ -256,7 +256,7 @@ GEM
     unicode-types (1.8.0)
     unicode_utils (1.4.0)
     uri_template (0.7.0)
-    vcr (3.0.3)
+    vcr (6.1.0)
     webmock (3.18.1)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -281,7 +281,7 @@ DEPENDENCIES
   rubocop-rspec (~> 2.13)
   simplecov (= 0.22.0)
   simplecov_json_formatter (~> 0.1.4)
-  vcr (~> 3.0, >= 3.0.3)
+  vcr (~> 6.0, >= 6.1.0)
   webmock (~> 3.0, >= 3.0.1)
 
 BUNDLED WITH

@@ -82,33 +82,33 @@ describe Briard::Metadata, vcr: true do
       expect(subject.find_from_format(string: string, ext: ext)).to eq('ris')
     end
 
-    it 'crossref' do
+    it 'crossref_xml' do
       file = "#{fixture_path}crossref.xml"
+      string = File.read(file)
+      ext = File.extname(file)
+      expect(subject.find_from_format(string: string, ext: ext)).to eq('crossref_xml')
+    end
+
+    it 'crossref' do
+      file = "#{fixture_path}crossref.json"
       string = File.read(file)
       ext = File.extname(file)
       expect(subject.find_from_format(string: string, ext: ext)).to eq('crossref')
     end
 
-    it 'crossref_json' do
-      file = "#{fixture_path}crossref.json"
-      string = File.read(file)
-      ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('crossref_json')
-    end
 
-
-    it 'datacite' do
+    it 'datacite_xml' do
       file = "#{fixture_path}datacite.xml"
       string = File.read(file)
       ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('datacite')
+      expect(subject.find_from_format(string: string, ext: ext)).to eq('datacite_xml')
     end
 
-    it 'datacite_json' do
+    it 'datacite' do
       file = "#{fixture_path}datacite.json"
       string = File.read(file)
       ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('datacite_json')
+      expect(subject.find_from_format(string: string, ext: ext)).to eq('datacite')
     end
 
     it 'schema_org' do
@@ -118,18 +118,11 @@ describe Briard::Metadata, vcr: true do
       expect(subject.find_from_format(string: string, ext: ext)).to eq('schema_org')
     end
 
-    it 'citeproc' do
+    it 'csl' do
       file = "#{fixture_path}citeproc.json"
       string = File.read(file)
       ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('citeproc')
-    end
-
-    it 'crosscite' do
-      file = "#{fixture_path}crosscite.json"
-      string = File.read(file)
-      ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('crosscite')
+      expect(subject.find_from_format(string: string, ext: ext)).to eq('csl')
     end
 
     it 'codemeta' do
@@ -141,22 +134,16 @@ describe Briard::Metadata, vcr: true do
   end
 
   context 'find from format from string' do
-    it 'crosscite' do
-      file = "#{fixture_path}crosscite.json"
+    it 'crossref_xml' do
+      file = "#{fixture_path}crossref.xml"
       string = File.read(file)
-      expect(subject.find_from_format(string: string)).to eq('crosscite')
+      expect(subject.find_from_format(string: string)).to eq('crossref_xml')
     end
 
     it 'crossref' do
-      file = "#{fixture_path}crossref.xml"
-      string = File.read(file)
-      expect(subject.find_from_format(string: string)).to eq('crossref')
-    end
-
-    it 'crossref_json' do
       file = "#{fixture_path}crossref.json"
       string = File.read(file)
-      expect(subject.find_from_format(string: string)).to eq('crossref_json')
+      expect(subject.find_from_format(string: string)).to eq('crossref')
     end
 
     it 'datacite' do
@@ -182,7 +169,7 @@ describe Briard::Metadata, vcr: true do
     it 'missing_comma' do
       json = File.read("#{fixture_path}datacite_software_missing_comma.json")
       response = subject.jsonlint(json)
-      expect(response).to eq(['expected comma, not a string (after doi) at line 4, column 11 [parse.c:433]'])
+      expect(response).to eq(['expected comma, not a string (after doi) at line 4, column 11 [parse.c:435]'])
     end
 
     it 'overlapping_keys' do

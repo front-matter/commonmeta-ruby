@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
 module Briard
+  # frozen_string_literal: true
+
   module Writers
     module DataciteWriter
-      # generate new DataCite XML version 4.0 if regenerate (!should_passthru) option is provided
       def datacite
-        should_passthru ? raw : datacite_xml
+        return unless crosscite_hsh.present?
+
+        JSON.pretty_generate crosscite_hsh.transform_keys! { |key|
+                               key.camelcase(uppercase_first_letter = :lower)
+                             }
       end
     end
   end

@@ -2,54 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doi.org/ra/10.4124
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 23 Nov 2022 08:32:30 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Connection:
-      - keep-alive
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fuiWO8h9Y%2FMn6URblo%2FZcVEdI63pTkR4ZFHt%2Bp27HzdgswUE0Hu0bWK0cb%2FG19pNFo%2BumoAft0L1FdsvriTcug5VZnZGPcyUcorFqmZdFDTciLUWUlIba%2Bapi3oHA9QvxbrN%2Bd4%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 76e88dfe3d240e18-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9E0MjEyUdiGiQI0jQJbEk0TmzJFUJKFjLFQsAjHRQbzYAAAA=
-    http_version:
-  recorded_at: Wed, 23 Nov 2022 08:32:30 GMT
-- request:
-    method: get
     uri: https://api.datacite.org/dois/10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1?include=media,client
     body:
       encoding: US-ASCII
@@ -67,7 +19,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Wed, 23 Nov 2022 08:32:30 GMT
+      - Fri, 10 Mar 2023 21:16:58 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -87,19 +39,19 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 580ab89f-e214-4e8e-912b-9f33a37d13ef
+      - c26e66a0-4f61-4ae7-9315-e6b3913f106b
       X-Download-Options:
       - noopen
       X-Runtime:
-      - '0.005575'
+      - '0.005673'
       X-Frame-Options:
       - SAMEORIGIN
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.15
+      - Phusion Passenger(R) 6.0.17
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.15
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -111,7 +63,6 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAJ7afWMAAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
-    http_version:
-  recorded_at: Wed, 23 Nov 2022 08:32:30 GMT
-recorded_with: VCR 3.0.3
+        H4sIAEqeC2QAAwzHMQqAMAwF0KuELC4iDp08h5s4FP1qsTSQpKCId9ftvYehKmo8TA+bR68/OfSBW/bkGf/GA6QwqbqAbqkUFZRFzlR22kRpFVhpnHAl847f+f0AAAD//wMArpOW4VcAAAA=
+  recorded_at: Fri, 10 Mar 2023 21:16:58 GMT
+recorded_with: VCR 6.1.0

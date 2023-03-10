@@ -537,51 +537,47 @@ module Briard
         'ris'
       elsif options[:ext] == '.xml' && Maremma.from_xml(string).to_h.dig('crossref_result',
                                                                          'query_result', 'body', 'query', 'doi_record', 'crossref')
-        'crossref'
+        'crossref_xml'
       elsif options[:ext] == '.xml' && Nokogiri::XML(string, nil, 'UTF-8',
                                                      &:noblanks).collect_namespaces.find do |_k, v|
               v.start_with?('http://datacite.org/schema/kernel')
             end
-        'datacite'
+        'datacite_xml'
       elsif options[:ext] == '.cff'
         'cff'
       elsif options[:ext] == '.json' && URI(Maremma.from_json(string).to_h.fetch('@context',
                                                                                  '')).host == 'schema.org'
         'schema_org'
       elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('source') == 'Crossref'
-        'crossref_json'
+        'crossref'
       elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('@context') == ('https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld')
         'codemeta'
       elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('schemaVersion').to_s.start_with?('http://datacite.org/schema/kernel')
-        'datacite_json'
-      elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('types') && Maremma.from_json(string).to_h.dig('publication_year').present?
-        'crosscite'
+        'datacite'
       elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('issued',
                                                                            'date-parts').present?
-        'citeproc'
+        'csl'
       end
     end
 
     def find_from_format_by_string(string)
       if Maremma.from_xml(string).to_h.dig('crossref_result', 'query_result', 'body', 'query',
                                            'doi_record', 'crossref').present?
-        'crossref'
+        'crossref_xml'
       elsif Nokogiri::XML(string, nil, 'UTF-8', &:noblanks).collect_namespaces.find do |_k, v|
               v.start_with?('http://datacite.org/schema/kernel')
             end
-        'datacite'
+        'datacite_xml'
       elsif URI(Maremma.from_json(string).to_h.fetch('@context', '')).host == 'schema.org'
         'schema_org'
       elsif Maremma.from_json(string).to_h.dig('@context') == ('https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld')
         'codemeta'
       elsif Maremma.from_json(string).to_h.dig('schema-version').to_s.start_with?('http://datacite.org/schema/kernel')
-        'datacite_json'
+        'datacite'
       elsif Maremma.from_json(string).to_h.dig('source') == ('Crossref')
-        'crossref_json'
-      elsif Maremma.from_json(string).to_h.dig('types').present? && Maremma.from_json(string).to_h.dig('publication_year').present?
-        'crosscite'
+        'crossref'
       elsif Maremma.from_json(string).to_h.dig('issued', 'date-parts').present?
-        'citeproc'
+        'csl'
       elsif string.start_with?('TY  - ')
         'ris'
       elsif YAML.load(string).to_h.fetch('cff-version', nil).present?
@@ -763,7 +759,7 @@ module Briard
       nil
     end
 
-    def to_datacite_json(element, options = {})
+    def to_datacite(element, options = {})
       a = Array.wrap(element).map do |e|
         e.each_with_object({}) do |(k, v), h|
           h[k.dasherize] = v
@@ -772,7 +768,7 @@ module Briard
       options[:first] ? a.unwrap : a.presence
     end
 
-    def from_datacite_json(element)
+    def from_datacite(element)
       Array.wrap(element).map do |e|
         e.each_with_object({}) do |(k, v), h|
           h[k.underscore] = v

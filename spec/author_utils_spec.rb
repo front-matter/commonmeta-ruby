@@ -137,7 +137,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'name with affiliation crossref' do
       input = '10.7554/elife.01567'
-      subject = described_class.new(input: input, from: 'crossref_json')
+      subject = described_class.new(input: input, from: 'crossref')
       response = subject.get_one_author(subject.creators.first)
       expect(response).to eq('affiliation' => [{"name"=>"Department of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland"}],'familyName' => 'Sankar',
                              'givenName' => 'Martial',
@@ -192,7 +192,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'author' do
       response = subject.authors_as_string(subject.creators)
-      expect(response).to eq('Fenner, Martin and Crosas, Merc?? and Grethe, Jeffrey and Kennedy, David and Hermjakob, Henning and Rocca-Serra, Philippe and Durand, Gustavo and Berjon, Robin and Karcher, Sebastian and Martone, Maryann and Clark, Timothy')
+      expect(response).to eq('Fenner, Martin and Crosas, Mercè and Grethe, Jeffrey and Kennedy, David and Hermjakob, Henning and Rocca-Serra, Philippe and Durand, Gustavo and Berjon, Robin and Karcher, Sebastian and Martone, Maryann and Clark, Timothy')
     end
 
     it 'single author' do

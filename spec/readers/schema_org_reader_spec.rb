@@ -412,7 +412,7 @@ describe Briard::Metadata, vcr: true do
                                     creators: [{ 'type' => 'Person', 'name' => 'Jahn, Najko', 'givenName' => 'Najko',
                                                  'familyName' => 'Jahn' }],
                                     titles: [{ 'title' => 'Publication Fp7 Funding Acknowledgment - Plos Openaire' }],
-                                    descriptions: [{ 'description' => 'The dataset contains a sample of metadata describing papers' }],
+                                    descriptions: [{ 'description' => 'The dataset contains a sample of metadata describing papers', 'descriptionType' => 'Abstract' }],
                                     publisher: 'Zenodo',
                                     publication_year: '2013',
                                     dates: [{ 'date' => '2013-04-03',

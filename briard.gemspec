@@ -60,7 +60,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop-rspec', '~> 2.13'
   s.add_development_dependency 'simplecov', '0.22.0'
   s.add_development_dependency 'simplecov_json_formatter', '~> 0.1.4'
-  s.add_development_dependency 'vcr', '~> 3.0', '>= 3.0.3'
+  s.add_development_dependency 'vcr', '~> 6.0', '>= 6.1.0'
   s.add_development_dependency 'webmock', '~> 3.0', '>= 3.0.1'
 
   s.require_paths = ['lib']

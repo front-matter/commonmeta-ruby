@@ -2,34 +2,12 @@
 
 module Briard
   module DataciteUtils
-    def datacite_xml
-      @datacite_xml ||= Nokogiri::XML::Builder.new(encoding: 'UTF-8') do |xml|
+    def write_datacite_xml
+      @write_datacite_xml ||= Nokogiri::XML::Builder.new(encoding: 'UTF-8') do |xml|
         xml.resource(root_attributes) do
           insert_work(xml)
         end
       end.to_xml
-    end
-
-    def datacite_errors(xml: nil, schema_version: nil)
-      if xml.present?
-        namespaces = Nokogiri::XML(xml, nil, 'UTF-8').root.namespaces
-        schema_version = namespaces.fetch('xmlns',
-                                          nil).presence || namespaces.fetch('xmlns:ns0',
-                                                                            nil).presence
-      end
-
-      # handle crossref namespace
-      unless schema_version.to_s.start_with?('http://datacite.org/schema/kernel')
-        schema_version = 'http://datacite.org/schema/kernel-4'
-      end
-
-      k = schema_version.to_s.split('/').last
-      filepath = File.expand_path("../../../resources/#{k}/metadata.xsd", __FILE__)
-      schema = Nokogiri::XML::Schema(open(filepath))
-
-      schema.validate(Nokogiri::XML(xml, nil, 'UTF-8')).map(&:to_s).unwrap
-    rescue Nokogiri::XML::SyntaxError => e
-      e.message
     end
 
     def insert_work(xml)

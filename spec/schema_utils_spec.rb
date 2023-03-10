@@ -10,6 +10,7 @@ describe Briard::Metadata, vcr: true do
   context 'json_schema_errors' do
     it 'is_valid' do
       response = subject.json_schema_errors
+      puts response
       expect(response).to be_nil
     end
 
