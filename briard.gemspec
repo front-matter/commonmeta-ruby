@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.version       = Briard::VERSION
   s.extra_rdoc_files = ['README.md']
   s.license = 'MIT'
-  s.required_ruby_version = '>= 2.7.0'
+  s.required_ruby_version = '>= 3.0.0'
 
   # Declare dependencies here, rather than in the Gemfile
   s.add_dependency 'activesupport', '>= 4.2.5', '< 8.0'
