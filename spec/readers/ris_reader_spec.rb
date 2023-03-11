@@ -27,7 +27,6 @@ describe Briard::Metadata, vcr: true do
 
   context 'get ris metadata' do
     it 'Crossref DOI' do
-      puts subject.json_schema_errors
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.7554/elife.01567')
       expect(subject.types).to eq('citeproc' => 'misc', 'resourceTypeGeneral' => 'JournalArticle',

@@ -84,7 +84,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'BlogPosting Citeproc JSON' do
       input = "#{fixture_path}citeproc.json"
-      subject = described_class.new(input: input, from: 'citeproc')
+      subject = described_class.new(input: input, from: 'csl')
       jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type'].nil?).to be(true)
       expect(jats['source']).to eq('Eating your own Dog Food')

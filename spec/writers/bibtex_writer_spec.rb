@@ -37,7 +37,7 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:bibtex_type].to_s).to eq('article')
       expect(bibtex[:bibtex_key]).to eq('https://doi.org/10.1155/2012/291294')
       expect(bibtex[:doi]).to eq('10.1155/2012/291294')
-      expect(bibtex[:url]).to eq('http://www.hindawi.com/journals/pm/2012/291294/')
+      expect(bibtex[:url]).to eq('http://www.hindawi.com/journals/pm/2012/291294')
       expect(bibtex[:title]).to eq('Delineating a Retesting Zone Using Receiver Operating Characteristic Analysis on Serial QuantiFERON Tuberculosis Test Results in US Healthcare Workers')
       expect(bibtex[:author]).to eq('Thanassi, Wendy and Noda, Art and Hernandez, Beatriz and Newell, Jeffery and Terpeluk, Paul and Marder, David and Yesavage, Jerome A.')
       expect(bibtex[:journal]).to eq('Pulmonary Medicine')

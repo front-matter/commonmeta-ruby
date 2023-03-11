@@ -2,6 +2,71 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api.crossref.org/works/10.7554/elife.55167.sa2/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
+      Accept:
+      - text/xml;charset=utf-8
+      Accept-Encoding:
+      - gzip,deflate
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 11 Mar 2023 08:09:34 GMT
+      Content-Length:
+      - '1500'
+      Set-Cookie:
+      - AWSALB=/PYZydc8VCNUbwQ7obcC3e9tryH+dCxkwq7qqAYA1hOd8BQYZ3gjAD9B9UodgIC7xpp7p9fwgFJ28n+9Y5j9HL98Njmrtc/2ScF71td+o1ls2T21J1tcoE4FoveG;
+        Expires=Sat, 18 Mar 2023 08:09:34 GMT; Path=/, AWSALBCORS=/PYZydc8VCNUbwQ7obcC3e9tryH+dCxkwq7qqAYA1hOd8BQYZ3gjAD9B9UodgIC7xpp7p9fwgFJ28n+9Y5j9HL98Njmrtc/2ScF71td+o1ls2T21J1tcoE4FoveG;
+        Expires=Sat, 18 Mar 2023 08:09:34 GMT; Path=/; SameSite=None
+      Link:
+      - <http://dx.doi.org/10.7554/elife.55167.sa2>; rel="canonical", <http://creativecommons.org/licenses/by/4.0/>;
+        rel="license", <http://orcid.org/0000-0002-5286-4375>; title="Jeremy Magland";
+        rel="author", <http://orcid.org/0000-0002-2642-603X>; title="Elizabeth Lovero";
+        rel="author", <http://orcid.org/0000-0002-4997-4063>; title="Alexander J Morley";
+        rel="author", <http://orcid.org/0000-0002-2023-1653>; title="Cole Lincoln
+        Hurwitz"; rel="author"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Encoding:
+      - gzip
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - polite
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        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
+  recorded_at: Sat, 11 Mar 2023 08:09:34 GMT
+- request:
+    method: get
     uri: https://doi.org/ra/10.7554
     body:
       encoding: US-ASCII
@@ -19,7 +84,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 10 Mar 2023 21:16:22 GMT
+      - Sat, 11 Mar 2023 08:09:34 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Connection:
@@ -31,7 +96,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2rZbhjMuFqvAaEG%2FaMo8wF%2FOZFLW28Ij1TS4VpsDttRADCRTphXhZj%2FR7jeUvdNBaLDYqr%2BY4sd3UWLPZ4UJpnCF70USM7dBJ4n8voFr2kC8R%2BnksAAMQ8pQEQcCMlNQ3lHnwzY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=SLL%2BQ%2B%2BnL4m%2FbZdMjWo5CaJQspRTTPmbfQ%2F5zkelmUrNNNFBu3NB5s%2BARHeJb01A2orCHAKl4q6N3nJWzO0whfwWbfTz58tq0CdWdEO4Btir0xn9mADyJ9B6WyYVfXbtDqVMJPM%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,14 +104,14 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a5e94105dfa0e9c-AMS
+      - 7a6250e848040baa-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9c1NTEyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA4VlVnTYAAAA=
-  recorded_at: Fri, 10 Mar 2023 21:16:22 GMT
+  recorded_at: Sat, 11 Mar 2023 08:09:34 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.7554/elife.55167.sa2
@@ -66,15 +131,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 10 Mar 2023 21:16:23 GMT
+      - Sat, 11 Mar 2023 08:54:31 GMT
       Content-Type:
       - application/json
       Content-Length:
       - '1231'
       Set-Cookie:
-      - AWSALB=+FUcOzH7NfD4tGllPdwXQU8yHbo+VMnXjaxGO4rjyHCRkcdkZkmVMNpYXuaaNiGXyer+PVSmBHgiUSFyvzLlorMPzRJzKY/NqOrjVlh8m5+lLaytcvMLdzKkgGxl;
-        Expires=Fri, 17 Mar 2023 21:16:22 GMT; Path=/, AWSALBCORS=+FUcOzH7NfD4tGllPdwXQU8yHbo+VMnXjaxGO4rjyHCRkcdkZkmVMNpYXuaaNiGXyer+PVSmBHgiUSFyvzLlorMPzRJzKY/NqOrjVlh8m5+lLaytcvMLdzKkgGxl;
-        Expires=Fri, 17 Mar 2023 21:16:22 GMT; Path=/; SameSite=None
+      - AWSALB=Bba8ewOVDIDJLfc+flh0xzPvmTPXMB0B4RUJq8d0O/8ziDT0r4NKKouJvfpWCkWsmDhnd+h66tgXmJlW8bRg3lEnFG3BSWeSaKAzKKRR9mWZNKPML3Wf7QVqnLjr;
+        Expires=Sat, 18 Mar 2023 08:54:31 GMT; Path=/, AWSALBCORS=Bba8ewOVDIDJLfc+flh0xzPvmTPXMB0B4RUJq8d0O/8ziDT0r4NKKouJvfpWCkWsmDhnd+h66tgXmJlW8bRg3lEnFG3BSWeSaKAzKKRR9mWZNKPML3Wf7QVqnLjr;
+        Expires=Sat, 18 Mar 2023 08:54:31 GMT; Path=/; SameSite=None
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -106,52 +171,5 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         H4sIAAAAAAAA/81X227jNhT8FUJ9aQHRlmXLt7ess+lm61yQZIG2cR5o8dhhVyZVkoqjDfzve0gptnJFskWLBo4jkBQ5M2dITu4CY5ktTDAO1NcgDFZgDFsCtWUO2LZWutl6A9oIJbGj04pa0a4nGN8FQnK4Be4eObNAc6Ytznt5GUdxHHbDeHh1FVZdVqzc7K6DRl0aDy/izriHn8GfOKfrRVSrPBh3+r1hEnUH0WCQ9DdhoGEBGmQKNFWFtME4CoO8mGfCXIPGGWEqFkDOU+HGGHLqulJmEbMJydRynB0bQBpc/vLOcdf2WcBR2Avj0TOAIxr1aDy6iKKx/zwGnAyHnc6wF7kfBJwqaUHahnKFNDmkYiHAoeGQsZIKSTkrjafz5WyKo66tzcez9qydakD8N5Cq1QpZtJRezto1BzNrz8tZu9eKZu1gc7VbjasVE9ITq58urxCMuVbaUjcI20AjK5s5Ia52InKaayFf1wRn2j85dCaIWoMk6c3akKHsrSTp9Actw2InSeWfHHAZDTcC1tjoubzgkChMws4Lgie0M7qIo3G3O+4mTwUfjeKo10kqwY0qdOpenWhlDPoFhwtDt8bhdF7em6fjZqokCPYKi+oQDSZHmWFMznPxFQ4UNtgQm3OteJGKeQZkDXO6YKmQS7LUOBOnVuPb5IZlgnuzEbUgrLCoPdIlEgrNMmLchMRgCdALgdMcQYnbnY6IlHkU3psnZ5PD/aYTlE4Fr+rvzEXxN6ZJPOzTXneQ1C9j9Z3hkaYfHowRGoTBEh3kzPcZRViVOHbBViIrseWILTMmnRUN/F04hbBxIbSxbsbFQmTCU/KYJPNVmeAqoMkC9ZqoVV5YPwIpHjFEgKRFitvtIMMHjWIcSoMyFxZCcgxr8geeKSH5IoXT5hzfBYPm3YR3O5S4jCGfmzA/F/IhRMa5qFb973G+rTRxvxfTftT9/W2l+ZiJb2wO9rpJe6rw4FDvZ+5PQIuHTFozd2adoJn/Pbq90WhAe1G/+za6exncou+wPA/qfKR0BuX7CR8Bx9UycgYGmE6vkWwhU5GRDxrPOiRo3VVG9kscj1X3PD1bfzDb0u3Yk1t0Cg+3f2stfkPt8Bh9X+2juEs7/eSNYkwUHitTIVOVyaYanwq9Fvbb++XY1tabf4+z3N0hBAVHKfxp1NgQ6AQcdb8dHmrykQs5L/TyOmw+PqtMo7IG7zpyylSmmmw+FCkemj/gZrePdUXlEHf0Uvsb0RFRecaQaerQ/jw5PD6d7v3ypKwmU2H9faz0mpWPAJ+zVQFZE+mvaCHBfhgoB/RhiokEfwlIL7kyVShxndNSyQbKWRFFMNp1VN8HmrmFn2h7Sz49EJVpCdb+Tw7HK5cIV3OfxfBWclfas3GjjgQYBOqgUF181KUcxOXYWB8r3SVJ812MC/CKV1osBSJtTsghV0b803DxJH7eh4tBHS5SPEJ9bsBYUAeNO4QoVkyX7nEX3ow/HHwwqitfZzeEJdLMZTefl35yeWnj5i7mDT5VVGs0CGOKF9ltc9k25phGQH6UKPltiytRgXklwWnIas/cVQHKVYyqhfeQ4Pf/IeBULmHxB3Fwup3M+c8Y0NYHLxyENP+C1Hpf71Ln67w2m+9e8FHkpwwAAA==
-  recorded_at: Fri, 10 Mar 2023 21:16:23 GMT
-- request:
-    method: get
-    uri: https://doi.org/ra/10.7554
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Fri, 10 Mar 2023 21:16:23 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Connection:
-      - keep-alive
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dmH8taduSJBb4lOakzaJDya5UstRE%2BTOJTUkgNCkGqgq2%2BFydhHU0lk33JlLOvI6XTFN2nJGhY13RculHUNynyQUtYRC9tQFEjImdKPjcjsqfjKx1yQr1zrPFPNq3Ld5yNSZGFI%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7a5e94157ce30e68-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9c1NTEyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA4VlVnTYAAAA=
-  recorded_at: Fri, 10 Mar 2023 21:16:23 GMT
+  recorded_at: Sat, 11 Mar 2023 08:54:31 GMT
 recorded_with: VCR 6.1.0

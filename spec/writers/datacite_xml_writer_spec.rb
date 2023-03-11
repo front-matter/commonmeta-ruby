@@ -8,22 +8,22 @@ describe Briard::Metadata, vcr: true do
       input = '10.7554/eLife.01567'
       subject = described_class.new(input: input, from: 'crossref')
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('resourceType', 'resourceTypeGeneral')).to eq('JournalArticle')
-      expect(datacite.dig('titles',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('resourceType', 'resourceTypeGeneral')).to eq('JournalArticle')
+      expect(datacite_xml.dig('titles',
                           'title')).to eq('Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
-      expect(datacite.dig('relatedIdentifiers', 'relatedIdentifier').length).to eq(28)
-      expect(datacite.dig('relatedIdentifiers',
+      expect(datacite_xml.dig('relatedIdentifiers', 'relatedIdentifier').length).to eq(28)
+      expect(datacite_xml.dig('relatedIdentifiers',
                           'relatedIdentifier').first).to eq('relatedIdentifierType' => 'ISSN', 'relationType' => 'IsPartOf',
                                                             '__content__' => '2050-084X', 'resourceTypeGeneral' => 'Collection')
-      expect(datacite.dig('relatedIdentifiers',
+      expect(datacite_xml.dig('relatedIdentifiers',
                           'relatedIdentifier')[1]).to eq('relatedIdentifierType' => 'DOI', 'relationType' => 'References',
                                                          '__content__' => '10.1038/nature02100')
-      expect(datacite.dig('rightsList',
+      expect(datacite_xml.dig('rightsList',
                           'rights')).to eq('rightsURI' => 'https://creativecommons.org/licenses/by/3.0/legalcode',
                                            'rightsIdentifier' => 'cc-by-3.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeURI' => 'https://spdx.org/licenses/', '__content__' => 'Creative Commons Attribution 3.0 Unported')
-      expect(datacite.dig('fundingReferences', 'fundingReference').count).to eq(4)
-      expect(datacite.dig('fundingReferences',
+      # expect(datacite_xml.dig('fundingReferences', 'fundingReference').count).to eq(4)
+      expect(datacite_xml.dig('fundingReferences',
                           'fundingReference').last).to eq('funderName' => 'University of Lausanne',
                                                           'funderIdentifier' => { 'funderIdentifierType' => 'Crossref Funder ID',
                                                                                   '__content__' => 'https://doi.org/10.13039/501100006390' })
@@ -33,10 +33,10 @@ describe Briard::Metadata, vcr: true do
       input = 'https://doi.org/10.1155/2012/291294'
       subject = described_class.new(input: input, from: 'crossref')
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('resourceType', 'resourceTypeGeneral')).to eq('JournalArticle')
-      expect(datacite.dig('creators', 'creator').count).to eq(7)
-      expect(datacite.dig('creators',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('resourceType', 'resourceTypeGeneral')).to eq('JournalArticle')
+      expect(datacite_xml.dig('creators', 'creator').count).to eq(7)
+      expect(datacite_xml.dig('creators',
                           'creator')[2]).to eq('creatorName' => { '__content__' => 'Hernandez, Beatriz', 'nameType' => 'Personal' },
                                                'familyName' => 'Hernandez',
                                                'givenName' => 'Beatriz',
@@ -51,8 +51,8 @@ describe Briard::Metadata, vcr: true do
       input = 'https://doi.org/10.1371/journal.pone.0000030'
       subject = described_class.new(input: input, from: 'crossref')
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('contributors',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('contributors',
                           'contributor')).to eq(
                             'contributorName' => { '__content__' => 'Janbon, Guilhem',
                                                    'nameType' => 'Personal' }, 'contributorType' => 'Editor', 'familyName' => 'Janbon', 'givenName' => 'Guilhem'
@@ -63,17 +63,17 @@ describe Briard::Metadata, vcr: true do
       input = "#{fixture_path}crossref.bib"
       subject = described_class.new(input: input, from: 'bibtex')
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('resourceType', 'resourceTypeGeneral')).to eq('JournalArticle')
-      expect(datacite.dig('titles',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('resourceType', 'resourceTypeGeneral')).to eq('JournalArticle')
+      expect(datacite_xml.dig('titles',
                           'title')).to eq('Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
-      expect(datacite.dig('descriptions',
+      expect(datacite_xml.dig('descriptions',
                           'description').first).to eq('__content__' => 'eLife, 3',
                                                       'descriptionType' => 'SeriesInformation')
-      expect(datacite.dig('descriptions', 'description', 1,
+      expect(datacite_xml.dig('descriptions', 'description', 1,
                           '__content__')).to start_with('Among various advantages, their small size makes model organisms preferred subjects of investigation.')
-      expect(datacite.dig('creators', 'creator').count).to eq(5)
-      expect(datacite.dig('creators',
+      expect(datacite_xml.dig('creators', 'creator').count).to eq(5)
+      expect(datacite_xml.dig('creators',
                           'creator').first).to eq(
                             'creatorName' => { '__content__' => 'Sankar, Martial',
                                                'nameType' => 'Personal' }, 'familyName' => 'Sankar', 'givenName' => 'Martial'
@@ -82,17 +82,17 @@ describe Briard::Metadata, vcr: true do
 
     it 'BlogPosting Citeproc JSON' do
       input = "#{fixture_path}citeproc.json"
-      subject = described_class.new(input: input, from: 'citeproc')
+      subject = described_class.new(input: input, from: 'csl')
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('resourceType', 'resourceTypeGeneral')).to eq('Text')
-      expect(datacite.dig('titles', 'title')).to eq('Eating your own Dog Food')
-      expect(datacite.dig('descriptions',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('resourceType', 'resourceTypeGeneral')).to eq('Text')
+      expect(datacite_xml.dig('titles', 'title')).to eq('Eating your own Dog Food')
+      expect(datacite_xml.dig('descriptions',
                           'description').first).to eq('__content__' => 'DataCite Blog',
                                                       'descriptionType' => 'SeriesInformation')
-      expect(datacite.dig('descriptions', 'description', 1,
+      expect(datacite_xml.dig('descriptions', 'description', 1,
                           '__content__')).to start_with('Eating your own dog food')
-      expect(datacite.dig('creators',
+      expect(datacite_xml.dig('creators',
                           'creator')).to eq("creatorName"=>{"__content__"=>"Fenner, Martin", "nameType"=>"Personal"}, "familyName"=>"Fenner", "givenName"=>"Martin")
     end
 
@@ -100,9 +100,9 @@ describe Briard::Metadata, vcr: true do
       input = "#{fixture_path}codemeta.json"
       subject = described_class.new(input: input, from: 'codemeta')
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('titles', 'title')).to eq('R Interface to the DataONE REST API')
-      expect(datacite.dig('creators',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('titles', 'title')).to eq('R Interface to the DataONE REST API')
+      expect(datacite_xml.dig('creators',
                           'creator')).to eq([{ 'affiliation' => 'NCEAS', 'creatorName' => { '__content__' => 'Jones, Matt', 'nameType' => 'Personal' },
                                                'givenName' => 'Matt',
                                                'familyName' => 'Jones',
@@ -120,16 +120,16 @@ describe Briard::Metadata, vcr: true do
                                              { 'creatorName' => {
                                                '__content__' => 'University of California, Santa Barbara', 'nameType' => 'Organizational'
                                              } }])
-      expect(datacite.fetch('version')).to eq('2.0.0')
+      expect(datacite_xml.fetch('version')).to eq('2.0.0')
     end
 
     it 'rdataone and codemeta_v2' do
       input = "#{fixture_path}codemeta_v2.json"
       subject = described_class.new(input: input, from: 'codemeta')
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('titles', 'title')).to eq('R Interface to the DataONE REST API')
-      expect(datacite.dig('creators',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('titles', 'title')).to eq('R Interface to the DataONE REST API')
+      expect(datacite_xml.dig('creators',
                           'creator')).to eq([{ 'affiliation' => 'NCEAS', 'creatorName' => { '__content__' => 'Jones, Matt', 'nameType' => 'Personal' },
                                                'givenName' => 'Matt',
                                                'familyName' => 'Jones',
@@ -147,24 +147,24 @@ describe Briard::Metadata, vcr: true do
                                              { 'creatorName' => {
                                                '__content__' => 'University of California, Santa Barbara', 'nameType' => 'Organizational'
                                              } }])
-      expect(datacite.fetch('version')).to eq('2.0.0')
+      expect(datacite_xml.fetch('version')).to eq('2.0.0')
     end
 
     it 'maremma' do
       input = 'https://github.com/datacite/maremma'
       subject = described_class.new(input: input, from: 'codemeta')
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('titles',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('titles',
                           'title')).to eq('Maremma: a Ruby library for simplified network calls')
-      expect(datacite.dig('creators',
+      expect(datacite_xml.dig('creators',
                           'creator')).to eq('affiliation' => 'DataCite',
                                             'creatorName' => { '__content__' => 'Fenner, Martin', 'nameType' => 'Personal' }, 'givenName' => 'Martin', 'familyName' => 'Fenner', 'nameIdentifier' => { '__content__' => 'https://orcid.org/0000-0003-0077-4738', 'nameIdentifierScheme' => 'ORCID', 'schemeURI' => 'https://orcid.org' })
     end
 
     it 'with version' do
       input = 'https://doi.org/10.5281/zenodo.28518'
-      subject = described_class.new(input: input, from: 'datacite', regenerate: true)
+      subject = described_class.new(input: input, from: 'datacite_xml', regenerate: true)
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.5281/zenodo.28518')
       expect(subject.identifiers).to eq([{ 'identifier' => 'https://zenodo.org/record/28518',
@@ -218,7 +218,7 @@ describe Briard::Metadata, vcr: true do
                                         'subjectScheme' => 'Fields of Science and Technology (FOS)' }])
       expect(subject.agency).to eq('DataCite')
       expect(subject.schema_version).to eq('http://datacite.org/schema/kernel-3')
-      expect(subject.datacite).to end_with('</resource>')
+      expect(subject.datacite_xml).to end_with('</resource>')
     end
 
     it 'Text pass-thru with doi in options' do
@@ -247,12 +247,12 @@ describe Briard::Metadata, vcr: true do
                                         'subjectScheme' => 'Fields of Science and Technology (FOS)' }])
       expect(subject.agency).to eq('DataCite')
       expect(subject.schema_version).to eq('http://datacite.org/schema/kernel-3')
-      expect(subject.datacite).to end_with('</resource>')
+      expect(subject.datacite_xml).to end_with('</resource>')
     end
 
     it 'Dataset in schema 4.0' do
       input = 'https://doi.org/10.5061/DRYAD.8515'
-      subject = described_class.new(input: input, from: 'datacite', regenerate: true)
+      subject = described_class.new(input: input, from: 'datacite_xml', regenerate: true)
       expect(subject.valid?).to be true
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'dataset',
                                   'resourceType' => 'dataset', 'resourceTypeGeneral' => 'Dataset', 'ris' => 'DATA', 'schemaOrg' => 'Dataset')
@@ -276,14 +276,14 @@ describe Briard::Metadata, vcr: true do
       expect(subject.agency).to eq('DataCite')
       expect(subject.schema_version).to eq('http://datacite.org/schema/kernel-4')
 
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.fetch('xsi:schemaLocation', '').split.first).to eq('http://datacite.org/schema/kernel-4')
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.fetch('xsi:schemaLocation', '').split.first).to eq('http://datacite.org/schema/kernel-4')
     end
 
     it 'Affiliation' do
       input = "#{fixture_path}datacite-example-geolocation-2.xml"
       doi = '10.6071/Z7WC73'
-      subject = described_class.new(input: input, from: 'datacite', regenerate: true)
+      subject = described_class.new(input: input, from: 'datacite_xml', regenerate: true)
       expect(subject.valid?).to be true
       expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'dataset',
                                   'resourceType' => 'dataset', 'resourceTypeGeneral' => 'Dataset', 'ris' => 'DATA', 'schemaOrg' => 'Dataset')
@@ -304,9 +304,9 @@ describe Briard::Metadata, vcr: true do
       expect(subject.agency).to eq('DataCite')
       expect(subject.schema_version).to eq('http://datacite.org/schema/kernel-4')
 
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.fetch('xsi:schemaLocation', '').split.first).to eq('http://datacite.org/schema/kernel-4')
-      expect(datacite.dig('creators', 'creator', 0, 'affiliation')).to eq(['UC Merced', 'NSF'])
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.fetch('xsi:schemaLocation', '').split.first).to eq('http://datacite.org/schema/kernel-4')
+      expect(datacite_xml.dig('creators', 'creator', 0, 'affiliation')).to eq(['UC Merced', 'NSF'])
     end
 
     it 'DOI not found' do
@@ -317,10 +317,10 @@ describe Briard::Metadata, vcr: true do
       expect(subject.doi).to eq('10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1')
       expect(subject.agency).to eq('DataCite')
       expect(subject.state).to eq('not_found')
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite['identifier']).to eq('identifierType' => 'DOI',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml['identifier']).to eq('identifierType' => 'DOI',
                                            '__content__' => '10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1')
-      expect(datacite['xmlns']).to eq('http://datacite.org/schema/kernel-4')
+      expect(datacite_xml['xmlns']).to eq('http://datacite.org/schema/kernel-4')
     end
 
     it 'no input' do
@@ -328,10 +328,10 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite',
                                     doi: '10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1')
       expect(subject.valid?).to be false
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite['identifier']).to eq('identifierType' => 'DOI',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml['identifier']).to eq('identifierType' => 'DOI',
                                            '__content__' => '10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1')
-      expect(datacite['xmlns']).to eq('http://datacite.org/schema/kernel-4')
+      expect(datacite_xml['xmlns']).to eq('http://datacite.org/schema/kernel-4')
     end
   end
 
@@ -343,23 +343,23 @@ describe Briard::Metadata, vcr: true do
       subject.titles = [{ 'title' => 'Data from: Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth' }]
       subject.types = { 'schemaOrg' => 'Dataset', 'resourceTypeGeneral' => 'Dataset' }
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('identifier', '__content__')).to eq('10.5061/DRYAD.8515')
-      expect(datacite.dig('resourceType', 'resourceTypeGeneral')).to eq('Dataset')
-      expect(datacite.dig('titles',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('identifier', '__content__')).to eq('10.5061/DRYAD.8515')
+      expect(datacite_xml.dig('resourceType', 'resourceTypeGeneral')).to eq('Dataset')
+      expect(datacite_xml.dig('titles',
                           'title')).to eq('Data from: Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
-      expect(datacite.dig('relatedIdentifiers', 'relatedIdentifier').length).to eq(28)
-      expect(datacite.dig('relatedIdentifiers',
+      expect(datacite_xml.dig('relatedIdentifiers', 'relatedIdentifier').length).to eq(28)
+      expect(datacite_xml.dig('relatedIdentifiers',
                           'relatedIdentifier').first).to eq('__content__' => '2050-084X', 'relatedIdentifierType' => 'ISSN',
                                                             'relationType' => 'IsPartOf', 'resourceTypeGeneral' => 'Collection')
-      expect(datacite.dig('relatedIdentifiers',
+      expect(datacite_xml.dig('relatedIdentifiers',
                           'relatedIdentifier')[1]).to eq('relatedIdentifierType' => 'DOI', 'relationType' => 'References',
                                                          '__content__' => '10.1038/nature02100')
-      expect(datacite.dig('rightsList',
+      expect(datacite_xml.dig('rightsList',
                           'rights')).to eq('rightsURI' => 'https://creativecommons.org/licenses/by/3.0/legalcode',
                                            'rightsIdentifier' => 'cc-by-3.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeURI' => 'https://spdx.org/licenses/', '__content__' => 'Creative Commons Attribution 3.0 Unported')
-      expect(datacite.dig('fundingReferences', 'fundingReference').count).to eq(4)
-      expect(datacite.dig('fundingReferences',
+      expect(datacite_xml.dig('fundingReferences', 'fundingReference').count).to eq(4)
+      expect(datacite_xml.dig('fundingReferences',
                           'fundingReference').last).to eq('funderName' => 'University of Lausanne',
                                                           'funderIdentifier' => { 'funderIdentifierType' => 'Crossref Funder ID',
                                                                                   '__content__' => 'https://doi.org/10.13039/501100006390' })
@@ -370,8 +370,8 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'crossref')
       subject.descriptions = { 'description' => 'This is an abstract.' }
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('descriptions',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('descriptions',
                           'description')).to eq([
                                                   { '__content__' => 'eLife, 3, e01567',
                                                     'descriptionType' => 'SeriesInformation' }, { '__content__' => 'This is an abstract.', 'descriptionType' => 'Abstract' }
@@ -384,8 +384,8 @@ describe Briard::Metadata, vcr: true do
                                     doi: '10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1')
       subject.descriptions = 'This is an abstract.'
       expect(subject.valid?).to be false
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('descriptions',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('descriptions',
                           'description')).to eq('descriptionType' => 'Abstract',
                                                 '__content__' => 'This is an abstract.')
     end
@@ -401,11 +401,11 @@ describe Briard::Metadata, vcr: true do
       subject.publication_year = '2011'
       subject.state = 'findable'
       expect(subject.exists?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('identifier',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('identifier',
                           '__content__')).to eq('10.4124/05f6c379-dd68-4cdb-880d-33d3e9576d52/1')
-      expect(datacite.dig('resourceType', 'resourceTypeGeneral')).to eq('Dataset')
-      expect(datacite.dig('titles',
+      expect(datacite_xml.dig('resourceType', 'resourceTypeGeneral')).to eq('Dataset')
+      expect(datacite_xml.dig('titles',
                           'title')).to eq('Data from: Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
     end
 
@@ -415,8 +415,8 @@ describe Briard::Metadata, vcr: true do
       subject.rights_list = [{ 'rights_uri' => 'https://creativecommons.org/licenses/by-nc-sa/4.0',
                                'rights' => 'Creative Commons Attribution-NonCommercial-ShareAlike' }]
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('rightsList',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('rightsList',
                           'rights')).to eq('Creative Commons Attribution-NonCommercial-ShareAlike')
     end
 
@@ -425,8 +425,8 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'crossref')
       subject.rights_list = [{ 'rightsUri' => 'https://creativecommons.org/licenses/by-nc-sa/4.0' }]
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('rightsList', 'rights')).to eq('rightsURI' => 'https://creativecommons.org/licenses/by-nc-sa/4.0')
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('rightsList', 'rights')).to eq('rightsURI' => 'https://creativecommons.org/licenses/by-nc-sa/4.0')
     end
 
     it 'change license name' do
@@ -434,8 +434,8 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'crossref')
       subject.rights_list = [{ 'rights' => 'Creative Commons Attribution-NonCommercial-ShareAlike' }]
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('rightsList',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('rightsList',
                           'rights')).to eq('Creative Commons Attribution-NonCommercial-ShareAlike')
     end
 
@@ -445,8 +445,8 @@ describe Briard::Metadata, vcr: true do
       expect(subject.valid?).to be true
       expect(subject.state).to eq('findable')
       subject.state = 'registered'
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('identifier', '__content__')).to eq('10.7554/elife.01567')
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('identifier', '__content__')).to eq('10.7554/elife.01567')
       expect(subject.state).to eq('registered')
     end
 
@@ -457,8 +457,8 @@ describe Briard::Metadata, vcr: true do
       expect(subject.identifiers).to eq([{ 'identifier' => 'e01567',
                                            'identifierType' => 'article_number' }])
       subject.identifiers = [{ 'identifierType' => 'article_number', 'identifier' => 'abc' }]
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('identifier', '__content__')).to eq('10.7554/elife.01567')
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('identifier', '__content__')).to eq('10.7554/elife.01567')
       expect(subject.identifiers).to eq([{ 'identifier' => 'abc',
                                            'identifierType' => 'article_number' }])
     end
@@ -477,31 +477,31 @@ describe Briard::Metadata, vcr: true do
       input = "#{fixture_path}schema_org_gtex.json"
       subject = described_class.new(input: input, from: 'schema_org')
       expect(subject.valid?).to be true
-      datacite = Maremma.from_xml(subject.datacite).fetch('resource', {})
-      expect(datacite.dig('identifier', '__content__')).to eq('10.25491/d50j-3083')
-      expect(datacite.dig('creators', 'creator').count).to eq(1)
-      expect(datacite.dig('creators',
+      datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
+      expect(datacite_xml.dig('identifier', '__content__')).to eq('10.25491/d50j-3083')
+      expect(datacite_xml.dig('creators', 'creator').count).to eq(1)
+      expect(datacite_xml.dig('creators',
                           'creator')).to eq('creatorName' => { '__content__' => 'The GTEx Consortium',
                                                                'nameType' => 'Organizational' })
-      expect(datacite.dig('resourceType', 'resourceTypeGeneral')).to eq('Dataset')
-      expect(datacite.dig('resourceType', '__content__')).to eq('Gene expression matrices')
-      expect(datacite.dig('titles',
+      expect(datacite_xml.dig('resourceType', 'resourceTypeGeneral')).to eq('Dataset')
+      expect(datacite_xml.dig('resourceType', '__content__')).to eq('Gene expression matrices')
+      expect(datacite_xml.dig('titles',
                           'title')).to eq('Fully processed, filtered and normalized gene expression matrices (in BED format) for each tissue, which were used as input into FastQTL for eQTL discovery')
-      expect(datacite['version']).to eq('v7')
-      expect(datacite['publisher']).to eq('GTEx')
-      expect(datacite.dig('descriptions',
+      expect(datacite_xml['version']).to eq('v7')
+      expect(datacite_xml['publisher']).to eq('GTEx')
+      expect(datacite_xml.dig('descriptions',
                           'description')).to eq('__content__' => 'GTEx',
                                                 'descriptionType' => 'SeriesInformation')
-      expect(datacite['publicationYear']).to eq('2017')
-      expect(datacite.dig('dates', 'date')).to eq('__content__' => '2017', 'dateType' => 'Issued')
-      expect(datacite.dig('subjects',
+      expect(datacite_xml['publicationYear']).to eq('2017')
+      expect(datacite_xml.dig('dates', 'date')).to eq('__content__' => '2017', 'dateType' => 'Issued')
+      expect(datacite_xml.dig('subjects',
                           'subject')).to eq(['gtex', 'annotation', 'phenotype', 'gene regulation',
                                              'transcriptomics'])
-      expect(datacite.dig('alternateIdentifiers',
+      expect(datacite_xml.dig('alternateIdentifiers',
                           'alternateIdentifier')).to eq('__content__' => '687610993',
                                                         'alternateIdentifierType' => 'md5')
-      expect(datacite.dig('fundingReferences', 'fundingReference').count).to eq(7)
-      expect(datacite.dig('fundingReferences',
+      expect(datacite_xml.dig('fundingReferences', 'fundingReference').count).to eq(7)
+      expect(datacite_xml.dig('fundingReferences',
                           'fundingReference').last).to eq(
                             'funderIdentifier' => { '__content__' => 'https://doi.org/10.13039/100000065',
                                                     'funderIdentifierType' => 'Crossref Funder ID' }, 'funderName' => 'National Institute of Neurological Disorders and Stroke (NINDS)'

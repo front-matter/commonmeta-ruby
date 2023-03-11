@@ -49,7 +49,7 @@ describe Briard::Metadata, vcr: true do
   context 'get_one_author' do
     it 'has familyName' do
       input = 'https://doi.org/10.5438/4K3M-NYVG'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq(
@@ -61,7 +61,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'has name in sort-order' do
       input = 'https://doi.org/10.5061/dryad.8515'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator').first)
       expect(response).to eq('nameType' => 'Personal', 'name' => 'Ollomo, Benjamin',
@@ -70,7 +70,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'has name in display-order' do
       input = 'https://doi.org/10.5281/ZENODO.48440'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq('nameType' => 'Personal', 'name' => 'Garza, Kristian',
@@ -79,7 +79,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'has name in display-order with ORCID' do
       input = 'https://doi.org/10.6084/M9.FIGSHARE.4700788'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq('nameType' => 'Personal',
@@ -88,7 +88,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'has name in Thai' do
       input = 'https://doi.org/10.14457/KMITL.res.2006.17'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq("name"=>"กัญจนา แซ่เตียว")
@@ -96,7 +96,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'multiple author names in one field' do
       input = 'https://doi.org/10.7910/dvn/eqtqyo'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_authors(meta.dig('creators', 'creator'))
       expect(response).to eq([{"name"=>
@@ -105,7 +105,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'hyper-authorship' do
       input = 'https://doi.org/10.17182/HEPDATA.77274.V1'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_authors(meta.dig('creators', 'creator'))
       expect(response).to eq([{ 'name' => 'ALICE Collaboration', "nameType"=>"Organizational" }])
@@ -120,10 +120,10 @@ describe Briard::Metadata, vcr: true do
 
     it 'name with affiliation' do
       input = '10.11588/DIGLIT.6130'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq('name' => 'Dr. Störi, Kunstsalon', "nameType"=>"Organizational")
+      expect(response).to eq("name"=>"Dr. Störi, Kunstsalon <Zürich>", "nameIdentifiers"=>[{"nameIdentifier"=>"10113301-7", "nameIdentifierScheme"=>"GND"}])
     end
 
     # it 'name with affiliation and country' do
@@ -146,7 +146,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'name with role' do
       input = '10.14463/GBV:873056442'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq("name"=>"Unknown")
@@ -154,7 +154,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'multiple name_identifier' do
       input = '10.24350/CIRM.V.19028803'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq('nameType' => 'Personal', 'name' => 'Dubos, Thomas',
@@ -163,7 +163,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'nameType organizational' do
       input = "#{fixture_path}gtex.xml"
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       meta = Maremma.from_xml(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq('nameType' => 'Organizational', 'name' => 'The GTEx Consortium')

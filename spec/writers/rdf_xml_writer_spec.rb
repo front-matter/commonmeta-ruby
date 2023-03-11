@@ -55,7 +55,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'BlogPosting Citeproc JSON' do
       input = "#{fixture_path}citeproc.json"
-      subject = described_class.new(input: input, from: 'citeproc')
+      subject = described_class.new(input: input, from: 'csl')
       rdf_xml = Maremma.from_xml(subject.rdf_xml).fetch('RDF', {})
       expect(rdf_xml.dig('BlogPosting', 'rdf:about')).to eq('https://doi.org/10.5438/4k3m-nyvg')
       expect(rdf_xml.dig('BlogPosting', 'name')).to eq('Eating your own Dog Food')

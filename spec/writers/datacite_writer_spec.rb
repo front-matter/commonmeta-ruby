@@ -50,7 +50,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'BlogPosting Citeproc JSON' do
       input = "#{fixture_path}citeproc.json"
-      subject = described_class.new(input: input, from: 'citeproc')
+      subject = described_class.new(input: input, from: 'csl')
       datacite = JSON.parse(subject.datacite)
       expect(datacite.fetch('types')).to eq('bibtex' => 'article', 'citeproc' => 'post-weblog',
                                             'resourceTypeGeneral' => 'Text', 'ris' => 'GEN', 'schemaOrg' => 'BlogPosting')

@@ -11,7 +11,7 @@ describe Briard::Metadata, vcr: true do
 
       expect(csv[0]).to eq('10.7554/elife.01567')
       expect(csv[1]).to eq('https://elifesciences.org/articles/01567')
-      expect(csv[2]).to eq('2018-08-23')
+      expect(csv[2]).to eq('2014-02-11')
       expect(csv[3]).to eq('findable')
       expect(csv[4]).to eq('JournalArticle')
       expect(csv[5]).to eq('JournalArticle')
@@ -27,8 +27,8 @@ describe Briard::Metadata, vcr: true do
       csv = subject.csv.parse_csv
 
       expect(csv[0]).to eq('10.1155/2012/291294')
-      expect(csv[1]).to eq('http://www.hindawi.com/journals/pm/2012/291294/')
-      expect(csv[2]).to eq('2016-08-02')
+      expect(csv[1]).to eq('http://www.hindawi.com/journals/pm/2012/291294')
+      expect(csv[2]).to eq('2012-12-30')
       expect(csv[3]).to eq('findable')
       expect(csv[4]).to eq('JournalArticle')
       expect(csv[5]).to eq('JournalArticle')
@@ -41,7 +41,6 @@ describe Briard::Metadata, vcr: true do
     it 'text' do
       input = 'https://doi.org/10.3204/desy-2014-01645'
       subject = described_class.new(input: input, from: 'datacite')
-
       expect(subject.valid?).to be true
       csv = subject.csv.parse_csv
 
@@ -61,7 +60,6 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       expect(subject.valid?).to be true
       csv = subject.csv.parse_csv
-
       expect(csv[0]).to eq('10.5067/altcy-tj122')
       expect(csv[1]).to eq('http://podaac.jpl.nasa.gov/dataset/MERGED_TP_J1_OSTM_OST_CYCLES_V2')
       expect(csv[2]).to eq('2014-01-15')

@@ -32,7 +32,7 @@ Briard reads and/or writes these metadata formats:
 
 ## Installation
 
-Requires Ruby 2.7 or later. Then add the following to your `Gemfile` to install the
+Requires Ruby 3.0 or later. Then add the following to your `Gemfile` to install the
 latest version:
 
 ```ruby
@@ -80,7 +80,7 @@ Commands:
 
 Errors are returned to STDOUT.
 
-All DataCite XML input is validated against the corresponding schema version (kernel 2.1, 2.2, 3, or 4).
+All DataCite XML input is validated against the corresponding schema version (kernel 3 or 4).
 
 ## Examples
 

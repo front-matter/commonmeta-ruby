@@ -86,14 +86,9 @@ describe Briard::CLI do
       described_class.new
     end
 
-    it 'crossref_xml' do
-      string = File.read("#{fixture_path}crossref.xml").strip
-      expect(subject.find_from_format_by_ext(string, ext: '.xml')).to eq('crossref_xml')
-    end
-
-    it 'crossref' do
-      string = File.read("#{fixture_path}crossref.json").strip
-      expect(subject.find_from_format_by_ext(string, ext: '.json')).to eq('crossref')
+    it 'bibtex' do
+      string = File.read("#{fixture_path}crossref.bib").strip
+      expect(subject.find_from_format_by_ext(string, ext: '.bib')).to eq('bibtex')
     end
 
     it 'ris' do
@@ -120,11 +115,6 @@ describe Briard::CLI do
 
     it 'datacite_xml' do
       string = File.read("#{fixture_path}datacite.xml").strip
-      expect(subject.find_from_format_by_string(string)).to eq('datacite_xml')
-    end
-
-    it 'datacite_xml namespaced' do
-      string = File.read("#{fixture_path}ns0.xml").strip
       expect(subject.find_from_format_by_string(string)).to eq('datacite_xml')
     end
 

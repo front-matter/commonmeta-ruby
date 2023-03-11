@@ -5,7 +5,7 @@ module Briard
     # To configure the writing of Crossref metadata, use environmental
     # variables CROSSREF_DEPOSITOR_NAME, CROSSREF_DEPOSITOR_EMAIL and CROSSREF_REGISTRANT,
     # e.g. in a .env file
-    def crossref_xml
+    def write_crossref_xml
       @crossref_xml ||= Nokogiri::XML::Builder.new(encoding: 'UTF-8') do |xml|
         xml.doi_batch(crossref_root_attributes) do
           xml.head do

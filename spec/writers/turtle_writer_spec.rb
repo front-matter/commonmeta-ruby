@@ -32,7 +32,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'BlogPosting Citeproc JSON' do
       input = "#{fixture_path}citeproc.json"
-      subject = described_class.new(input: input, from: 'citeproc')
+      subject = described_class.new(input: input, from: 'csl')
       ttl = subject.turtle.split("\n")
       expect(ttl[0]).to eq('@prefix schema: <http://schema.org/> .')
       expect(ttl[2]).to eq('<https://doi.org/10.5438/4k3m-nyvg> a schema:BlogPosting;')

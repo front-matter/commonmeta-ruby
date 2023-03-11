@@ -3,9 +3,9 @@
 require 'spec_helper'
 
 describe Briard::Metadata, vcr: true do
-  subject { described_class.new(input: input) }
-
-  let(:input) { 'http://doi.org/10.5438/4K3M-NYVG' }
+  let(:subject) do
+    described_class.new
+  end
 
   context 'handle input' do
     it 'unknown DOI prefix' do
@@ -81,56 +81,6 @@ describe Briard::Metadata, vcr: true do
       ext = File.extname(file)
       expect(subject.find_from_format(string: string, ext: ext)).to eq('ris')
     end
-
-    it 'crossref_xml' do
-      file = "#{fixture_path}crossref.xml"
-      string = File.read(file)
-      ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('crossref_xml')
-    end
-
-    it 'crossref' do
-      file = "#{fixture_path}crossref.json"
-      string = File.read(file)
-      ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('crossref')
-    end
-
-
-    it 'datacite_xml' do
-      file = "#{fixture_path}datacite.xml"
-      string = File.read(file)
-      ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('datacite_xml')
-    end
-
-    it 'datacite' do
-      file = "#{fixture_path}datacite.json"
-      string = File.read(file)
-      ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('datacite')
-    end
-
-    it 'schema_org' do
-      file = "#{fixture_path}schema_org.json"
-      string = File.read(file)
-      ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('schema_org')
-    end
-
-    it 'csl' do
-      file = "#{fixture_path}citeproc.json"
-      string = File.read(file)
-      ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('csl')
-    end
-
-    it 'codemeta' do
-      file = "#{fixture_path}codemeta.json"
-      string = File.read(file)
-      ext = File.extname(file)
-      expect(subject.find_from_format(string: string, ext: ext)).to eq('codemeta')
-    end
   end
 
   context 'find from format from string' do
@@ -146,10 +96,34 @@ describe Briard::Metadata, vcr: true do
       expect(subject.find_from_format(string: string)).to eq('crossref')
     end
 
-    it 'datacite' do
+    it 'datacite_xml' do
       file = "#{fixture_path}datacite.xml"
       string = File.read(file)
+      expect(subject.find_from_format(string: string)).to eq('datacite_xml')
+    end
+
+    it 'datacite' do
+      file = "#{fixture_path}datacite.json"
+      string = File.read(file)
       expect(subject.find_from_format(string: string)).to eq('datacite')
+    end
+
+    it 'schema_org' do
+      file = "#{fixture_path}schema_org.json"
+      string = File.read(file)
+      expect(subject.find_from_format(string: string)).to eq('schema_org')
+    end
+
+    it 'csl' do
+      file = "#{fixture_path}citeproc.json"
+      string = File.read(file)
+      expect(subject.find_from_format(string: string)).to eq('csl')
+    end
+
+    it 'codemeta' do
+      file = "#{fixture_path}codemeta.json"
+      string = File.read(file)
+      expect(subject.find_from_format(string: string)).to eq('codemeta')
     end
   end
 

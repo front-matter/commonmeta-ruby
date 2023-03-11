@@ -531,64 +531,63 @@ module Briard
     end
 
     def find_from_format_by_ext(string, options = {})
-      if options[:ext] == '.bib'
+      case options[:ext]
+      when '.bib'
         'bibtex'
-      elsif options[:ext] == '.ris'
+      when '.ris'
         'ris'
-      elsif options[:ext] == '.xml' && Maremma.from_xml(string).to_h.dig('crossref_result',
-                                                                         'query_result', 'body', 'query', 'doi_record', 'crossref')
-        'crossref_xml'
-      elsif options[:ext] == '.xml' && Nokogiri::XML(string, nil, 'UTF-8',
-                                                     &:noblanks).collect_namespaces.find do |_k, v|
-              v.start_with?('http://datacite.org/schema/kernel')
-            end
-        'datacite_xml'
-      elsif options[:ext] == '.cff'
-        'cff'
-      elsif options[:ext] == '.json' && URI(Maremma.from_json(string).to_h.fetch('@context',
-                                                                                 '')).host == 'schema.org'
-        'schema_org'
-      elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('source') == 'Crossref'
-        'crossref'
-      elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('@context') == ('https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld')
-        'codemeta'
-      elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('schemaVersion').to_s.start_with?('http://datacite.org/schema/kernel')
-        'datacite'
-      elsif options[:ext] == '.json' && Maremma.from_json(string).to_h.dig('issued',
-                                                                           'date-parts').present?
-        'csl'
+      when '.xml', '.json'
+        find_from_format_by_string(string)
       end
     end
 
     def find_from_format_by_string(string)
-      if Maremma.from_xml(string).to_h.dig('crossref_result', 'query_result', 'body', 'query',
-                                           'doi_record', 'crossref').present?
-        'crossref_xml'
-      elsif Nokogiri::XML(string, nil, 'UTF-8', &:noblanks).collect_namespaces.find do |_k, v|
-              v.start_with?('http://datacite.org/schema/kernel')
-            end
-        'datacite_xml'
-      elsif URI(Maremma.from_json(string).to_h.fetch('@context', '')).host == 'schema.org'
-        'schema_org'
-      elsif Maremma.from_json(string).to_h.dig('@context') == ('https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld')
-        'codemeta'
-      elsif Maremma.from_json(string).to_h.dig('schema-version').to_s.start_with?('http://datacite.org/schema/kernel')
-        'datacite'
-      elsif Maremma.from_json(string).to_h.dig('source') == ('Crossref')
-        'crossref'
-      elsif Maremma.from_json(string).to_h.dig('issued', 'date-parts').present?
-        'csl'
-      elsif string.start_with?('TY  - ')
-        'ris'
-      elsif YAML.load(string).to_h.fetch('cff-version', nil).present?
-        'cff'
-      elsif BibTeX.parse(string).first
-        'bibtex'
+      XmlHasher.configure do |config|
+        config.snakecase = true
+        config.ignore_namespaces = false
+        config.string_keys = true
       end
-    rescue Psych::SyntaxError => e
-      'bibtex'
-    rescue BibTeX::ParseError => e
-      nil
+
+      begin # try to parse as JSON
+        hsh = MultiJson.load(string).to_h
+        if URI.parse(hsh.dig('@context')).host == 'schema.org'
+          return 'schema_org'
+        elsif hsh.dig('schemaVersion').to_s.start_with?('http://datacite.org/schema/kernel')
+          return 'datacite'
+        elsif hsh.dig('source') == 'Crossref'
+          return 'crossref'
+        elsif hsh.dig('issued', 'date-parts').present?
+          return 'csl'
+        elsif URI.parse(hsh.dig('@context')).to_s == 'https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld'
+          return 'codemeta'
+        end
+
+      rescue MultiJson::ParseError
+      end
+
+      begin # try to parse as XML
+        hsh = XmlHasher.parse(string)
+        if hsh.to_h.dig('crossref_result').present?
+          return 'crossref_xml'
+        elsif hsh.to_h.dig('resource', 'xmlns').start_with?('http://datacite.org/schema/kernel')
+          return 'datacite_xml'
+        end
+      rescue NoMethodError
+      end
+
+      begin # try to parse as YAML
+        hsh = YAML.load(string, permitted_classes: [Date])
+        if hsh.is_a?(Hash) && hsh.fetch('cff-version', nil).present?
+          return 'cff'
+        end
+      rescue Psych::SyntaxError
+      end
+
+      if string.start_with?('TY  - ')
+        return 'ris'
+      elsif BibTeX.parse(string).first
+        return 'bibtex'
+      end
     end
 
     def orcid_from_url(url)
@@ -1195,9 +1194,16 @@ module Briard
     end
 
     def get_iso8601_date(iso8601_time)
-      return nil if iso8601_time.nil?
+      return nil if iso8601_time.nil? || iso8601_time.length < 4
 
-      iso8601_time[0..9]
+      case iso8601_time.length
+      when 4
+        iso8601_time[0..3]
+      when 7
+        iso8601_time[0..6]
+      else
+        iso8601_time[0..9]
+      end
     end
 
     def get_year_month(iso8601_time)

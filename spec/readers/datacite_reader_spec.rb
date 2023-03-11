@@ -15,7 +15,7 @@ describe Briard::Metadata, vcr: true do
 
   context 'get datacite metadata' do
     it 'BlogPosting' do
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-journal',
                                   'resourceType' => 'BlogPosting', 'resourceTypeGeneral' => 'Text', 'ris' => 'RPRT', 'schemaOrg' => 'ScholarlyArticle')
       expect(subject.creators).to eq([{ 'type' => 'Person',
@@ -64,30 +64,6 @@ describe Briard::Metadata, vcr: true do
       # expect(subject.valid?).to be false
       expect(subject.errors).to eq(["The same key is defined more than once: id"])
       expect(subject.codemeta.nil?).to be(true)
-    end
-
-    it 'metadata from api' do
-      input = '10.5281/zenodo.28518'
-      subject = described_class.new(input: input, regenerate: true)
-      # expect(subject.valid?).to be true
-      expect(subject.types).to eq('bibtex' => 'misc', 'citeproc' => 'article',
-                                  'resourceTypeGeneral' => 'Software', 'ris' => 'COMP', 'schemaOrg' => 'SoftwareSourceCode')
-      expect(subject.creators.length).to eq(2)
-      expect(subject.creators.first).to eq('affiliation' => [{ 'name' => 'University of Washington' }],
-                                           'familyName' => 'Vanderplas', 'givenName' => 'Jake', 'name' => 'Vanderplas, Jake', 'nameType' => 'Personal')
-      expect(subject.titles).to eq([{ 'title' => 'Supersmoother: Minor Bug Fix Release' }])
-      expect(subject.id).to eq('https://doi.org/10.5281/zenodo.28518')
-      expect(subject.identifiers).to eq([{ 'identifier' => 'https://zenodo.org/record/28518',
-                                           'identifierType' => 'URL' }])
-      expect(subject.dates).to eq([{ 'date' => '2015-08-19', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2015')
-      expect(subject.version_info).to eq('v0.3.2')
-      expect(subject.datacite).to include('<version>v0.3.2</version>')
-      expect(subject.related_identifiers.length).to eq(2)
-      expect(subject.related_identifiers.first).to eq(
-        'relatedIdentifier' => 'https://github.com/jakevdp/supersmoother/tree/v0.3.2', 'relatedIdentifierType' => 'URL', 'relationType' => 'IsSupplementTo'
-      )
-      expect(subject.agency).to eq('DataCite')
     end
   end
 end

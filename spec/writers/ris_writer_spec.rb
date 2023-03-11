@@ -6,7 +6,7 @@ describe Briard::Metadata, vcr: true do
   context 'write metadata as ris' do
     it 'journal article' do
       input = '10.7554/eLife.01567'
-      subject = described_class.new(input: input, from: 'crossref')
+      subject = described_class.new(input: input, from: 'crossref_xml')
       expect(subject.valid?).to be true
       ris = subject.ris.split("\r\n")
       expect(ris[0]).to eq('TY  - JOUR')
@@ -26,7 +26,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'with pages' do
       input = 'https://doi.org/10.1155/2012/291294'
-      subject = described_class.new(input: input, from: 'crossref')
+      subject = described_class.new(input: input, from: 'crossref_xml')
       # expect(subject.valid?).to be true
       ris = subject.ris.split("\r\n")
       expect(ris[0]).to eq('TY  - JOUR')
@@ -34,7 +34,7 @@ describe Briard::Metadata, vcr: true do
       expect(ris[2]).to eq('T2  - Pulmonary Medicine')
       expect(ris[3]).to eq('AU  - Thanassi, Wendy')
       expect(ris[10]).to eq('DO  - 10.1155/2012/291294')
-      expect(ris[11]).to eq('UR  - http://www.hindawi.com/journals/pm/2012/291294/')
+      expect(ris[11]).to eq('UR  - http://www.hindawi.com/journals/pm/2012/291294')
       expect(ris[12]).to start_with('AB  - . To find a statistically significant separation point for the QuantiFERON')
       expect(ris[13]).to eq('PY  - 2012')
       expect(ris[14]).to eq('PB  - Hindawi Limited')
@@ -106,7 +106,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'BlogPosting Citeproc JSON' do
       input = "#{fixture_path}citeproc.json"
-      subject = described_class.new(input: input, from: 'citeproc')
+      subject = described_class.new(input: input, from: 'csl')
       ris = subject.ris.split("\r\n")
       expect(ris[0]).to eq('TY  - GEN')
       expect(ris[1]).to eq('T1  - Eating your own Dog Food')

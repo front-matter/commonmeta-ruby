@@ -38,6 +38,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'json_schemer', '~> 0.2.23'
   s.add_dependency 'loofah', '~> 2.19'
   s.add_dependency 'maremma', '>= 4.9.7', '< 5'
+  s.add_dependency 'xmlhasher', '~> 1.0', '>= 1.0.2'
   s.add_dependency 'namae', '~> 1.0'
   s.add_dependency 'nokogiri', '~> 1.13.1'
   s.add_dependency 'oj', '~> 3.10'

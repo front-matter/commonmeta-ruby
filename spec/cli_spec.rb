@@ -21,8 +21,8 @@ describe Briard::CLI do
         expect { subject.convert input }.to output(/additionalType/).to_stdout
       end
 
-      it 'to crossref' do
-        subject.options = { from: "crossref", to: "crossref" }
+      it 'to crossref_xml' do
+        subject.options = { from: "crossref", to: "crossref_xml" }
         expect { subject.convert input }.to output(/journal_metadata/).to_stdout
       end
 
@@ -54,14 +54,14 @@ describe Briard::CLI do
         expect { subject.convert input }.to output(/additionalType/).to_stdout
       end
 
-      it 'to crossref' do
-        subject.options = { to: "crossref" }
+      it 'to crossref_xml' do
+        subject.options = { to: "crossref_xml" }
         expect { subject.convert input }.to output(/journal_metadata/).to_stdout
       end
 
       it 'to datacite' do
         subject.options = { to: "datacite" }
-        expect { subject.convert input }.to output(/http:\/\/datacite.org\/schema\/kernel-4/).to_stdout
+        expect { subject.convert input }.to output(/publicationYear/).to_stdout
       end
 
       it 'to bibtex' do
@@ -99,11 +99,11 @@ describe Briard::CLI do
 
       it 'to datacite' do
         subject.options = { to: "datacite" }
-        expect { subject.convert input }.to output(/http:\/\/datacite.org\/schema\/kernel-4/).to_stdout
+        expect { subject.convert input }.to output(/publicationYear/).to_stdout
       end
 
-      it 'to datacite' do
-        subject.options = { to: "datacite" }
+      it 'to datacite_xml' do
+        subject.options = { to: "datacite_xml" }
         expect { subject.convert input }.to output(/Renaud, François/).to_stdout
       end
 
@@ -132,7 +132,7 @@ describe Briard::CLI do
 
       it 'to datacite' do
         subject.options = { to: "datacite" }
-        expect { subject.convert id }.to output(/http:\/\/datacite.org\/schema\/kernel-4/).to_stdout
+        expect { subject.convert id }.to output(/publicationYear/).to_stdout
       end
 
       # TODO
@@ -158,11 +158,11 @@ describe Briard::CLI do
 
       it 'to datacite' do
         subject.options = { to: "datacite" }
-        expect { subject.convert file }.to output(/http:\/\/datacite.org\/schema\/kernel-4/).to_stdout
+        expect { subject.convert file }.to output(/publicationYear/).to_stdout
       end
     end
 
-    context "crossref", vcr: true do
+    context "crossref_xml", vcr: true do
       let(:file) { fixture_path + "crossref.xml" }
 
       it 'default' do
@@ -174,14 +174,14 @@ describe Briard::CLI do
         expect { subject.convert file }.to output(/datePublished/).to_stdout
       end
 
-      it 'to crossref' do
-        subject.options = { to: "crossref" }
+      it 'to crossref_xml' do
+        subject.options = { to: "crossref_xml" }
         expect { subject.convert file }.to output(/journal_metadata/).to_stdout
       end
 
       it 'to datacite' do
         subject.options = { to: "datacite" }
-        expect { subject.convert file }.to output(/<publisher>/).to_stdout
+        expect { subject.convert file }.to output(/publicationYear/).to_stdout
       end
 
       it 'to bibtex' do
@@ -202,14 +202,14 @@ describe Briard::CLI do
         expect { subject.convert file }.to output(/"@context": "http:\/\/schema.org"/).to_stdout
       end
 
-      it 'to crossref' do
-        subject.options = { to: "crossref" }
+      it 'to crossref_xml' do
+        subject.options = { to: "crossref_xml" }
         expect { subject.convert file }.to output(/journal_metadata/).to_stdout
       end
 
       it 'to datacite' do
-        subject.options = { to: "datacite" }
-        expect { subject.convert file }.to output(/<publisher>/).to_stdout
+        subject.options = { to: "datacite_xml" }
+        expect { subject.convert file }.to output(/publicationYear/).to_stdout
       end
 
       it 'to bibtex' do
@@ -218,7 +218,7 @@ describe Briard::CLI do
       end
     end
 
-    context "datacite", vcr: true do
+    context "datacite_xml", vcr: true do
       let(:file) { fixture_path + "datacite.xml" }
 
       it 'default' do
@@ -232,7 +232,7 @@ describe Briard::CLI do
 
       it 'to datacite' do
         subject.options = { to: "datacite" }
-        expect { subject.convert file }.to output(/<publisher>/).to_stdout
+        expect { subject.convert file }.to output(/publicationYear/).to_stdout
       end
 
       it 'to bibtex' do
@@ -243,7 +243,7 @@ describe Briard::CLI do
       it 'to datacite invalid' do
         file = fixture_path + "datacite_missing_creator.xml"
         subject.options = { to: "datacite", show_errors: "true" }
-        expect { subject.convert file }.to output("4:0: ERROR: Element '{http://datacite.org/schema/kernel-4}creators': Missing child element(s). Expected is ( {http://datacite.org/schema/kernel-4}creator ).\n").to_stderr
+        expect { subject.convert file }.to output("property '/creators' is invalid: error_type=minItems").to_stderr
       end
 
       it 'to datacite invalid ignore errors' do
@@ -267,7 +267,7 @@ describe Briard::CLI do
 
       it 'to datacite' do
         subject.options = { to: "datacite" }
-        expect { subject.convert file }.to output(/http:\/\/datacite.org\/schema\/kernel-4/).to_stdout
+        expect { subject.convert file }.to output(/publicationYear/).to_stdout
       end
 
       it 'to bibtex' do

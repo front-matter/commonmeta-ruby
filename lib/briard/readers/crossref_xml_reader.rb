@@ -159,6 +159,10 @@ module Briard
         date_published = nil unless Date.edtf(date_published.to_h['date']).present?
         date_updated = nil unless Date.edtf(date_updated.to_h['date']).present?
 
+        # TODO: fix timestamp. Until then, remove time as this is not always stable with Crossref (different server timezones)
+        date_published['date'] = get_iso8601_date(date_published['date']) if date_published.present?
+        date_updated['date'] = get_iso8601_date(date_updated['date']) if date_updated.present?
+
         dates = [date_published, date_updated].compact
         publication_year = date_published.to_h.fetch('date', '')[0..3].presence
 
@@ -221,7 +225,7 @@ module Briard
           'funding_references' => crossref_funding_reference(program_metadata),
           'publisher' => publisher,
           'container' => container,
-          'agency' => agency = options[:ra] || 'Crossref',
+          'agency' => agency = options[:ra] || get_doi_ra(id) || 'Crossref',
           'related_identifiers' => related_identifiers,
           'dates' => dates,
           'publication_year' => publication_year,
@@ -233,7 +237,7 @@ module Briard
           'sizes' => nil,
           'schema_version' => 'http://datacite.org/schema/kernel-4',
           'state' => state,
-          'date_registered' => date_registered }.merge(read_options)
+          'date_registered' => date_registered }.compact.merge(read_options)
       end
 
       def crossref_alternate_identifiers(bibliographic_metadata)
@@ -329,7 +333,8 @@ module Briard
               'contributorType' => contributor_role == 'editor' ? 'Editor' : nil }.compact
           else
             { 'nameType' => 'Organizational',
-              'name' => a['name'] || a['__content__'] }
+              'name' => a['name'] || a['__content__'],
+              'contributorType' => contributor_role == 'editor' ? 'Editor' : nil }.compact
           end
         end
       end

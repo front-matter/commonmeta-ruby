@@ -10,7 +10,6 @@ describe Briard::Metadata, vcr: true do
   context 'json_schema_errors' do
     it 'is_valid' do
       response = subject.json_schema_errors
-      puts response
       expect(response).to be_nil
     end
 
@@ -19,7 +18,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, regenerate: true)
       expect(subject.creators).to be_empty
       expect(subject.valid?).to be false
-      expect(subject.json_schema_errors).to be nil
+      expect(subject.json_schema_errors).to eq(["property '/creators' is invalid: error_type=minItems"])
     end
   end
 end
