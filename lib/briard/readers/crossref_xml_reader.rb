@@ -8,11 +8,15 @@ module Briard
         return { 'string' => nil, 'state' => 'not_found' } unless id.present?
 
         doi = doi_from_url(id)
-        url = "https://api.crossref.org/works/#{doi}/transform/application/vnd.crossref.unixsd+xml"
-        response = Maremma.get(url, accept: 'text/xml;charset=utf-8', raw: true)
+        api_url = "https://api.crossref.org/works/#{doi}/transform/application/vnd.crossref.unixsd+xml"
+        conn = Faraday.new(api_url, request: { timeout: 5 }) do |f|
+          f.request :json
+          # f.response :json
+        end
+        response = conn.get(api_url)
+        
         string = response.body.fetch('data', nil)
-        string = Nokogiri::XML(string, nil, 'UTF-8', &:noblanks).to_s if string.present?
-
+        
         { 'string' => string }
       end
 
@@ -21,12 +25,12 @@ module Briard
                                                                                    :sandbox, :validate, :ra))
 
         if string.present?
-          m = Maremma.from_xml(string).dig('crossref_result', 'query_result', 'body', 'query',
+          m = XmlHasher.parse(string).dig('crossref_result', 'query_result', 'body', 'query',
                                            'doi_record') || {}
           meta = m.dig('doi_record', 'crossref', 'error').nil? ? m : {}
 
           # query contains information from outside metadata schema, e.g. publisher name
-          query = Maremma.from_xml(string).dig('crossref_result', 'query_result', 'body',
+          query = XmlHasher.parse(string).dig('crossref_result', 'query_result', 'body',
                                                'query') || {}
         else
           meta = {}

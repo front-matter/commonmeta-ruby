@@ -2,34 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1007/978-3-319-75889-3_1/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1007/978-3-319-75889-3_1
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:36 GMT
+      - Sun, 12 Mar 2023 19:21:07 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '7602'
-      Set-Cookie:
-      - AWSALB=5iutTVkeJTOMfgD48SFQp8QHkeE5tm2J0R5A5I3TI/CZpTwiWbzBnjzXwXtEv7jaioIRiYSHas9jaihKXzJz6Jfcoad5L0DBDSj9isgkCrpf+Gu17BOoxGgKi628;
-        Expires=Sat, 18 Mar 2023 08:09:36 GMT; Path=/, AWSALBCORS=5iutTVkeJTOMfgD48SFQp8QHkeE5tm2J0R5A5I3TI/CZpTwiWbzBnjzXwXtEv7jaioIRiYSHas9jaihKXzJz6Jfcoad5L0DBDSj9isgkCrpf+Gu17BOoxGgKi628;
-        Expires=Sat, 18 Mar 2023 08:09:36 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1007/978-3-319-75889-3_1>; rel="canonical", <http://link.springer.com/content/pdf/10.1007/978-3-319-75889-3_1>;
-        version="vor"; rel="item", <http://www.springer.com/tdm>; rel="license", <http://www.springer.com/tdm>;
-        rel="license"
+      - '18779'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -39,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -48,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -59,9 +51,172 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:36 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,4,3]],"date-time":"2022-04-03T17:17:23Z","timestamp":1649006243690},"publisher-location":"Cham","reference-count":44,"publisher":"Springer
+        International Publishing","isbn-type":[{"value":"9783319758886","type":"print"},{"value":"9783319758893","type":"electronic"}],"license":[{"start":{"date-parts":[[2018,1,1]],"date-time":"2018-01-01T00:00:00Z","timestamp":1514764800000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/www.springer.com\/tdm"},{"start":{"date-parts":[[2018,1,1]],"date-time":"2018-01-01T00:00:00Z","timestamp":1514764800000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/www.springer.com\/tdm"}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2018]]},"DOI":"10.1007\/978-3-319-75889-3_1","type":"book-chapter","created":{"date-parts":[[2018,4,17]],"date-time":"2018-04-17T09:24:17Z","timestamp":1523957057000},"page":"1-13","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":1,"title":["Climate
+        Change and Increasing Risk of Extreme Heat"],"prefix":"10.1007","author":[{"given":"Hunter
+        M.","family":"Jones","sequence":"first","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2018,4,18]]},"reference":[{"key":"1_CR1","unstructured":"Associated
+        Press First heat, now fog dogging Olympic event planning in Sochi (2014) The
+        National [Internet]. 2014 Feb 17; Available from: https:\/\/www.thenational.ae\/sport\/first-heat-now-fog-dogging-olympic-event-planning-in-sochi-1.280874"},{"key":"1_CR2","unstructured":"Styles
+        R, Bhatia S (2016) Call this the Summer Olympics? Torrential rain and high
+        winds leave tennis delayed, rowing canceled - and spectators drenched. Daily
+        Mail [Internet]. Rio de Janeiro; 2016 Aug 10; Available from: http:\/\/www.dailymail.co.uk\/news\/article-3733434\/It-s-washout-Olympics-battered-torrential-rain-high-winds-latest-misfortune-hit-Rio.html"},{"key":"1_CR3","unstructured":"Coonan
+        C (2008) Beijing losing battle against Olympic smog. The Independent [Internet].
+        Beijing; 2008 Jul 28; Available from: http:\/\/www.independent.co.uk\/sport\/olympics\/beijing-losing-battle-against-olympic-smog-879421.html"},{"key":"1_CR4","unstructured":"Davey
+        M. (2007) Death, Havoc and Heat Mar Chicago Race. The New York Times [Internet].
+        Chicago, IL; 2007 Oct 8; Available from: http:\/\/www.nytimes.com\/2007\/10\/08\/us\/08chicago.html"},{"key":"1_CR5","unstructured":"National
+        Weather Service. Weather Fatalities 2016 [Internet]. Natural Hazard Statistics.
+        2016 [cited 2017 Aug 22]. Available from: http:\/\/www.nws.noaa.gov\/om\/hazstats.shtml"},{"issue":"13","key":"1_CR6","first-page":"1","volume":"63","author":"E
+        Choudhary","year":"2014","unstructured":"Choudhary E, Vaidyanathan A (2014)
+        Heat stress illness hospitalizations \u2014 environmental public health tracking
+        program, 20 states, 2001\u20132010. MMWR Surveill Summ 63(13):1\u201310. Available
+        from: https:\/\/www.cdc.gov\/mmwr\/pdf\/ss\/ss6313.pdf","journal-title":"MMWR
+        Surveill Summ"},{"issue":"1","key":"1_CR7","doi-asserted-by":"publisher","first-page":"57","DOI":"10.1007\/s10900-015-0064-7","volume":"41","author":"ED
+        Fechter-Leggett","year":"2016","unstructured":"Fechter-Leggett ED, Vaidyanathan
+        A, Choudhary E (2016) Heat stress illness emergency department visits in National
+        Environmental Public Health Tracking States, 2005\u20132010. J Community Health
+        41(1):57\u201369. Available from: http:\/\/link.springer.com\/10.1007\/s10900-015-0064-7","journal-title":"J
+        Community Health"},{"issue":"11","key":"1_CR8","doi-asserted-by":"publisher","first-page":"2854","DOI":"10.1073\/pnas.1614453114","volume":"114","author":"JL
+        Schnell","year":"2017","unstructured":"Schnell JL, Prather MJ (2017) Co-occurrence
+        of extremes in surface ozone, particulate matter, and temperature over eastern
+        North America. Proc Natl Acad Sci 114(11):2854\u20132859. Available from:
+        http:\/\/www.pnas.org\/lookup\/doi\/10.1073\/pnas.1614453114","journal-title":"Proc
+        Natl Acad Sci"},{"issue":"5","key":"1_CR9","doi-asserted-by":"publisher","first-page":"345","DOI":"10.1038\/ngeo2141","volume":"7","author":"DG
+        Miralles","year":"2014","unstructured":"Miralles DG, Teuling AJ, van Heerwaarden
+        CC, Vil\u00e0-Guerau de Arellano J (2014) Mega-heatwave temperatures due to
+        combined soil desiccation and atmospheric heat accumulation. Nat Geosci 7(5):345\u2013349.
+        Available from: http:\/\/www.nature.com\/doifinder\/10.1038\/ngeo2141","journal-title":"Nat
+        Geosci"},{"issue":"2","key":"1_CR10","doi-asserted-by":"publisher","first-page":"171","DOI":"10.1016\/j.crvi.2007.12.001","volume":"331","author":"J-M
+        Robine","year":"2008","unstructured":"Robine J-M, Cheung SLK, Le Roy S, Van
+        Oyen H, Griffiths C, Michel J-P et al (2008) Death toll exceeded 70,000 in
+        Europe during the summer of 2003. C R Biol 331(2):171\u2013178. Available
+        from: http:\/\/linkinghub.elsevier.com\/retrieve\/pii\/S1631069107003770","journal-title":"C
+        R Biol"},{"key":"1_CR11","unstructured":"Gutterman S (2010) Heat, smoke sent
+        Russia deaths soaring in 2010: govt. Reuters [Internet]. Moscow; 2010 Oct
+        25; Available from: https:\/\/www.reuters.com\/article\/us-russia-heat-deaths-idUSTRE69O4LB20101025"},{"key":"1_CR12","doi-asserted-by":"crossref","unstructured":"Klinenberg
+        E (2015) Heat wave: a social autopsy of disaster in Chicago. University of
+        Chicago Press, 328 p","DOI":"10.7208\/chicago\/9780226276212.001.0001"},{"key":"1_CR13","unstructured":"Sullivan
+        KD, Auciello EP, Kremkau, Linda S, Adams, Christopher R, Feldt J, Franjevic
+        M, et al (1995) July 1995 Heat Wave Natural Disaster Survey Report"},{"issue":"7","key":"1_CR14","doi-asserted-by":"publisher","first-page":"1507","DOI":"10.1175\/1520-0477(1996)077<1507:TJHWIT>2.0.CO;2","volume":"77","author":"KE
+        Kunkel","year":"1996","unstructured":"Kunkel KE, Changnon SA, Reinke BC, Arritt
+        RW (1996) The July 1995 heat wave in the Midwest: a climatic perspective and
+        critical weather factors. Bull Am Meteorol Soc [Internet] 77(7):1507\u20131518.
+        Available from: http:\/\/journals.ametsoc.org\/doi\/abs\/10.1175\/1520-0477%281996%29077%3C1507%3ATJHWIT%3E2.0.CO%3B2","journal-title":"Bull
+        Am Meteorol Soc [Internet]"},{"issue":"3","key":"1_CR15","doi-asserted-by":"publisher","first-page":"243","DOI":"10.3354\/cr024243","volume":"24","author":"D
+        Changnon","year":"2003","unstructured":"Changnon D, Sandstrom M, Schaffer
+        C (2003) Relating changes in agricultural practices to increasing dew points
+        in extreme Chicago heat waves. Clim Res 24(3):243\u2013254","journal-title":"Clim
+        Res"},{"key":"1_CR16","doi-asserted-by":"crossref","volume-title":"Climate
+        change impacts in the United States: the third National Climate Assessment","author":"JM
+        Melillo","year":"2014","unstructured":"Melillo JM, Richmond TT, Yohe G (2014)
+        Climate change impacts in the United States: the third National Climate Assessment.
+        Government Printing Office, Third National Climate Assessment. U.S","DOI":"10.7930\/J0Z31WJ2"},{"issue":"5686","key":"1_CR17","doi-asserted-by":"publisher","first-page":"994","DOI":"10.1126\/science.1098704","volume":"305","author":"GA
+        Meehl","year":"2004","unstructured":"Meehl GA, Tebaldi C (2004) More intense,
+        more frequent, and longer lasting heat waves in the 21st century. Science
+        (80- ) 305(5686):994\u2013997. Available from: http:\/\/www.sciencemag.org\/cgi\/doi\/10.1126\/science.1098704","journal-title":"Science
+        (80- )"},{"issue":"12","key":"1_CR18","doi-asserted-by":"publisher","first-page":"4623","DOI":"10.3390\/ijerph8124623","volume":"8","author":"D
+        Lowe","year":"2011","unstructured":"Lowe D, Ebi KL, Forsberg B (2011) Heatwave
+        early warning systems and adaptation advice to reduce human health consequences
+        of heatwaves. Int J Environ Res Public Health 8(12):4623\u20134648. Available
+        from: http:\/\/www.mdpi.com\/1660-4601\/8\/12\/4623\/","journal-title":"Int
+        J Environ Res Public Health"},{"issue":"D15","key":"1_CR19","doi-asserted-by":"publisher","first-page":"D15103","DOI":"10.1029\/2007JD008510","volume":"112","author":"PM
+        Della-Marta","year":"2007","unstructured":"Della-Marta PM, Haylock MR, Luterbacher
+        J, Wanner H (2007) Doubled length of western European summer heat waves since
+        1880. J Geophys Res 112(D15):D15103. Available from: http:\/\/doi.wiley.com\/10.1029\/2007JD008510","journal-title":"J
+        Geophys Res"},{"key":"1_CR20","doi-asserted-by":"crossref","unstructured":"Beniston
+        M (2004) The 2003 heat wave in Europe: A shape of things to come? An analysis
+        based on Swiss climatological data and model simulations. Geophys Res Lett
+        [Internet] 31(2). Available from: http:\/\/doi.wiley.com\/10.1029\/2003GL018857","DOI":"10.1029\/2003GL018857"},{"issue":"3","key":"1_CR21","doi-asserted-by":"publisher","first-page":"185","DOI":"10.1007\/s10584-006-9051-4","volume":"79","author":"C
+        Tebaldi","year":"2006","unstructured":"Tebaldi C, Hayhoe K, Arblaster JM,
+        Meehl GA (2006) Going to the extremes. Clim Change 79(3):185\u2013211. Available
+        from: https:\/\/doi.org\/10.1007\/s10584-006-9051-4","journal-title":"Clim
+        Change"},{"issue":"6026","key":"1_CR22","doi-asserted-by":"publisher","first-page":"220","DOI":"10.1126\/science.1201224","volume":"332","author":"D
+        Barriopedro","year":"2011","unstructured":"Barriopedro D, Fischer EM, Luterbacher
+        J, Trigo RM, Garcia-Herrera R (2011) The hot summer of 2010: redrawing the
+        temperature record map of Europe. Science (80- ) 332(6026):220\u2013224. Available
+        from: http:\/\/www.sciencemag.org\/cgi\/doi\/10.1126\/science.1201224","journal-title":"Science
+        (80- )"},{"issue":"6","key":"1_CR23","doi-asserted-by":"publisher","first-page":"398","DOI":"10.1038\/ngeo866","volume":"3","author":"EM
+        Fischer","year":"2010","unstructured":"Fischer EM, Sch\u00e4r C (2010) Consistent
+        geographical patterns of changes in high-impact European heatwaves. Nat Geosci
+        3(6):398\u2013403. Available from: http:\/\/www.nature.com\/doifinder\/10.1038\/ngeo866","journal-title":"Nat
+        Geosci"},{"key":"1_CR24","doi-asserted-by":"crossref","unstructured":"Gershunov
+        A, Guirguis K (2012) California heat waves in the present and future. Geophys
+        Res Lett [Internet] 39(18). Available from: http:\/\/doi.wiley.com\/10.1029\/2012GL052979","DOI":"10.1029\/2012GL052979"},{"key":"1_CR25","unstructured":"IPCC
+        (2014) Climate change 2014: impacts, adaptation, and vulnerability. Part B:
+        regional aspects. Contribution of working group II to the Fifth Assessment
+        Report of the Intergovernmental Panel on Climate Change [Barros, V.R., C.B.
+        Field, D.J. Dokken, M.D. Mastrandrea, K.J. Mach, T.E. Bilir, M. Chatterjee,
+        K.L. Ebi, Y.O. Estrada, R.C. Genova, B. Girma, E.S. Kissel, A.N. Levy, S.
+        MacCracken, P.R. Mastrandrea, and L.L.White (eds.)]. Cambridge University
+        Press, Cambridge, United Kingdom and New York, NY, USA, pp. 688"},{"key":"1_CR26","doi-asserted-by":"publisher","unstructured":"Vose,
+        R.S., D.R. Easterling, K.E. Kunkel, A.N. LeGrande, and M.F. Wehner (2017)
+        Temperature changes in the United States. In: Climate Science Special Report:
+        Fourth National Climate Assessment, Volume I [Wuebbles, D.J., D.W. Fahey,
+        K.A. Hibbard, D.J. Dokken, B.C. Stewart, and T.K. Maycock (eds.)]. U.S. Global
+        Change Research Program, Washington, DC, USA, pp. 185\u2013206, doi: https:\/\/doi.org\/10.7930\/J0N29V45","DOI":"10.7930\/J0N29V45"},{"key":"1_CR27","doi-asserted-by":"crossref","unstructured":"Mauritsen
+        T, Pincus R (2017) Committed warming inferred from observations. Nat Clim
+        Chang [Internet] Available from: http:\/\/www.nature.com\/doifinder\/10.1038\/nclimate3357","DOI":"10.1038\/nclimate3357"},{"key":"1_CR28","doi-asserted-by":"crossref","unstructured":"Raftery
+        AE, Zimmer A, Frierson DMW, Startz R, Liu P (2017) Less than 2 \u00b0C warming
+        by 2100 unlikely. Nat Clim Chang [Internet] Available from: http:\/\/www.nature.com\/doifinder\/10.1038\/nclimate3352","DOI":"10.1038\/nclimate3352"},{"key":"1_CR29","doi-asserted-by":"publisher","unstructured":"USGCRP
+        (2016) The impacts of climate change on human health in the United States:
+        a scientific assessment. Crimmins, A., J. Balbus, J.L. Gamble, C.B. Beard,
+        J.E. Bell, D. Dodgen, R.J. Eisen, N. Fann, M.D. Hawkins, S.C. Herring, L.
+        Jantarasami, D.M. Mills, S. Saha, M.C. Sarofim, J. Trtanj, and L. Ziska, Eds.
+        U.S. Global Change Research Program, Washington, DC, 312 pp. https:\/\/doi.org\/10.7930\/J0R49NQX","DOI":"10.7930\/J0R49NQX"},{"issue":"21","key":"1_CR30","doi-asserted-by":"publisher","first-page":"9552","DOI":"10.1073\/pnas.0913352107","volume":"107","author":"SC
+        Sherwood","year":"2010","unstructured":"Sherwood SC, Huber M (2010) An adaptability
+        limit to climate change due to heat stress. Proc Natl Acad Sci 107(21):9552\u20139555.
+        Available from: http:\/\/www.pnas.org\/cgi\/doi\/10.1073\/pnas.0913352107","journal-title":"Proc
+        Natl Acad Sci"},{"issue":"10045","key":"1_CR31","doi-asserted-by":"publisher","first-page":"642","DOI":"10.1016\/S0140-6736(16)31335-6","volume":"388","author":"KR
+        Smith","year":"2016","unstructured":"Smith KR, Woodward A, Lemke B, Otto M,
+        Chang CJ, Mance AA et al (2016) The last summer Olympics? Climate change,
+        health, and work outdoors. Lancet 388(10045):642\u2013644","journal-title":"Lancet"},{"key":"1_CR32","unstructured":"Pal
+        JS, Eltahir EAB (2015) Future temperature in southwest Asia projected to exceed
+        a threshold for human adaptability. Nat Clim Chang [Internet] Available from:
+        http:\/\/www.nature.com\/doifinder\/10.1038\/nclimate2833"},{"key":"1_CR33","doi-asserted-by":"publisher","volume-title":"Next
+        generation earth system prediction: strategies for subseasonal to seasonal
+        forecasts","author":"National Academies of Sciences, Engineering, and Medicine","year":"2016","unstructured":"National
+        Academies of Sciences, Engineering, and Medicine (2016) Next generation earth
+        system prediction: strategies for subseasonal to seasonal forecasts. The National
+        Academies Press, Washington, DC. https:\/\/doi.org\/10.17226\/21873","DOI":"10.17226\/21873"},{"issue":"1","key":"1_CR34","doi-asserted-by":"publisher","first-page":"12504","DOI":"10.1117\/1.2642347","volume":"1","author":"G
+        Davis","year":"2007","unstructured":"Davis G (2007) History of the NOAA satellite
+        program. J Appl Remote Sens 1(1):12504. Available from: http:\/\/remotesensing.spiedigitallibrary.org\/article.aspx?doi=10.1117\/1.2642347","journal-title":"J
+        Appl Remote Sens"},{"issue":"August 2017","key":"1_CR35","doi-asserted-by":"publisher","first-page":"s189","DOI":"10.1080\/1755876X.2015.1049883","volume":"8","author":"DM
+        Legler","year":"2015","unstructured":"Legler DM, Freeland HJ, Lumpkin R, Ball
+        G, McPhaden MJ, North S et al (2015) The current status of the real-time in
+        situ global ocean observing system for operational oceanography. J Oper Oceanogr
+        8(August 2017):s189\u2013s200","journal-title":"J Oper Oceanogr"},{"key":"1_CR36","doi-asserted-by":"crossref","unstructured":"Fleming
+        JR (2016) Inventing atmospheric science: Bjerknes, Rossby, Wexler, and the
+        Foundations of Modern Meteorology [Internet]. MIT Press. (Inventing Atmospheric
+        Science). Available from: https:\/\/books.google.com\/books?id=S0GNCwAAQBAJ","DOI":"10.7551\/mitpress\/10250.001.0001"},{"key":"1_CR37","unstructured":"Edwards
+        PN (2010) A vast machine: computer models, climate data, and the politics
+        of global warming [Internet]. MIT Press. (Infrastructures). Available from:
+        https:\/\/books.google.com\/books?id=K9_LsJBCqWMC"},{"key":"1_CR38","unstructured":"Miller
+        PA, Barth MF, Benjamin LA, Artz RS, Pendergrass WR (2005) The Meteorological
+        Assimilation and Data Ingest System (MADIS): Providing value-added observations
+        to the meteorological community. In: 21st Conference on Weather Analysis and
+        Forecasting"},{"issue":"10","key":"1_CR39","doi-asserted-by":"publisher","first-page":"1831","DOI":"10.1175\/BAMS-D-14-00213.1","volume":"97","author":"HW
+        Reges","year":"2016","unstructured":"Reges HW, Doesken N, Turner J, Newman
+        N, Bergantino A, Schwalbe Z (2016) CoCoRaHS: the evolution and accomplishments
+        of a volunteer rain gauge network. Bull Am Meteorol Soc 97(10):1831\u20131846.
+        Available from: https:\/\/doi.org\/10.1175\/bams-d-14-00213.1","journal-title":"Bull
+        Am Meteorol Soc"},{"key":"1_CR40","unstructured":"Powner DA (2015) Launch
+        Delayed; NOAA Faces Key Decisions on Timing of Future Satellites [Internet].
+        Available from: http:\/\/www.gao.gov\/assets\/680\/674090.pdf"},{"issue":"12","key":"1_CR41","doi-asserted-by":"publisher","first-page":"1871","DOI":"10.1175\/BAMS-D-12-00157.1","volume":"94","author":"K
+        Yoneyama","year":"2013","unstructured":"Yoneyama K, Zhang C, Long CN (2013)
+        Tracking pulses of the madden\u2013Julian oscillation. Bull Am Meteorol Soc
+        94(12):1871\u20131891. Available from: http:\/\/journals.ametsoc.org\/doi\/abs\/10.1175\/BAMS-D-12-00157.1","journal-title":"Bull
+        Am Meteorol Soc"},{"key":"1_CR42","doi-asserted-by":"crossref","unstructured":"Quesada
+        B, Vautard R, Yiou P, Hirschi M, Seneviratne SI (2012) Asymmetric European
+        summer heat predictability from wet and dry southern winters and springs.
+        Nat Clim Chang [Internet]. Nature Publishing Group; ;2(10):736\u2013741. Available
+        from: http:\/\/www.nature.com\/doifinder\/10.1038\/nclimate1536","DOI":"10.1038\/nclimate1536"},{"key":"1_CR43","unstructured":"National
+        Academies of Sciences, Engineering and M (2016) Next generation earth system
+        prediction: strategies for subseasonal to seasonal forecasts [Internet]. Washington,
+        DC: The National Academies Press. Available from: https:\/\/www.nap.edu\/catalog\/21873\/next-generation-earth-system-prediction-strategies-for-subseasonal-to-seasonal"},{"key":"1_CR44","unstructured":"Tokyo
+        monitors heatstroke risk for 2020 Olympics [Internet]. BBC News. 2016 [cited
+        2017 Aug 22]. Available from: http:\/\/www.bbc.com\/news\/blogs-news-from-elsewhere-37105873"}],"container-title":["SpringerBriefs
+        in Medical Earth Sciences","Human Health and Physical Activity During Heat
+        Exposure"],"original-title":[],"link":[{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1007\/978-3-319-75889-3_1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,10,16]],"date-time":"2019-10-16T02:02:05Z","timestamp":1571191325000},"score":1,"resource":{"primary":{"URL":"http:\/\/link.springer.com\/10.1007\/978-3-319-75889-3_1"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2018]]},"ISBN":["9783319758886","9783319758893"],"references-count":44,"URL":"http:\/\/dx.doi.org\/10.1007\/978-3-319-75889-3_1","relation":{},"ISSN":["2523-3610","2523-3629"],"issn-type":[{"value":"2523-3610","type":"print"},{"value":"2523-3629","type":"electronic"}],"published":{"date-parts":[[2018]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:07 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1007
@@ -70,30 +225,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:36 GMT
+      - Sun, 12 Mar 2023 19:21:07 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=esBwY39ERSgUjjj5alGJDE%2FR2eOFe%2BoX9C2suS1fQnl0c33DlkBcz5n2iy4gr9aFNG5LoM8t6q5Fs22NDMEvlW47So4XN1KsUs0gO9Adl%2B8ZDGrMkBlBD0s3G%2FpHu4iFSVFVF1g%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=C8Szd9n0vtS1hYHLZITGKI63LBklX0%2BhHkz6Cu2%2BdE0k83%2FYe%2FM9Udb2zxWDctAUCcV9ChvJG%2FDok9pt%2FiMWGaZZvea6Tn7Qd1wOUne%2BgWf4KUlVZwERmlcplfE2Oi3R3tggn64%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -101,72 +256,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6250f4ce9fb960-AMS
+      - 7a6e65fe9a47b731-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9QwMDcyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAxkrz2jYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:36 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1007/978-3-319-75889-3_1
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:34 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '6817'
-      Set-Cookie:
-      - AWSALB=slRSd0BypAd6QIbJwQnsL9HHytNl6n/ovCrISknfIIYX14LK579+Y/cVHyxPRXwgzUNYTY5sl3I88SQAh3wzmwCPqWFkhe6k9dQ52zt3We8x5KTd6Dk0oeex0OTY;
-        Expires=Sat, 18 Mar 2023 08:54:34 GMT; Path=/, AWSALBCORS=slRSd0BypAd6QIbJwQnsL9HHytNl6n/ovCrISknfIIYX14LK579+Y/cVHyxPRXwgzUNYTY5sl3I88SQAh3wzmwCPqWFkhe6k9dQ52zt3We8x5KTd6Dk0oeex0OTY;
-        Expires=Sat, 18 Mar 2023 08:54:34 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:34 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1007",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:07 GMT
 recorded_with: VCR 6.1.0

@@ -2,35 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1016/j.ejphar.2015.03.018/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1016/j.ejphar.2015.03.018
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:37 GMT
+      - Sun, 12 Mar 2023 19:21:08 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '10340'
-      Set-Cookie:
-      - AWSALB=BH6N9h6Bj5GFwU+5oQONLBl/wy9+YDrSE1mCVS/WB6CugXdcxB2bllznFaQr+sDLGGiRG1ocshWmXzE/W3h8Tb3XewrBiWtdsO0RB0sHDA3/KcGrQgq0bzTxV68b;
-        Expires=Sat, 18 Mar 2023 08:09:37 GMT; Path=/, AWSALBCORS=BH6N9h6Bj5GFwU+5oQONLBl/wy9+YDrSE1mCVS/WB6CugXdcxB2bllznFaQr+sDLGGiRG1ocshWmXzE/W3h8Tb3XewrBiWtdsO0RB0sHDA3/KcGrQgq0bzTxV68b;
-        Expires=Sat, 18 Mar 2023 08:09:37 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1016/j.ejphar.2015.03.018>; rel="canonical", <https://api.elsevier.com/content/article/PII:S0014299915002332?httpAccept=text/xml>;
-        version="vor"; type="text/xml"; rel="item", <https://api.elsevier.com/content/article/PII:S0014299915002332?httpAccept=text/plain>;
-        version="vor"; type="text/plain"; rel="item", <https://www.elsevier.com/tdm/userlicense/1.0/>;
-        version="tdm"; rel="license"
+      - '36385'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -40,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -49,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -60,9 +51,275 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:37 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,2,6]],"date-time":"2023-02-06T21:32:31Z","timestamp":1675719151664},"reference-count":98,"publisher":"Elsevier
+        BV","license":[{"start":{"date-parts":[[2015,7,1]],"date-time":"2015-07-01T00:00:00Z","timestamp":1435708800000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"funder":[{"DOI":"10.13039\/100000002","name":"NIH","doi-asserted-by":"publisher","award":["R01
+        NS089482","R01 NS077869","P01 MH070306","P40 OD013117","T32 OD011089"]}],"content-domain":{"domain":["elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"short-container-title":["European
+        Journal of Pharmacology"],"published-print":{"date-parts":[[2015,7]]},"DOI":"10.1016\/j.ejphar.2015.03.018","type":"journal-article","created":{"date-parts":[[2015,4,6]],"date-time":"2015-04-06T07:31:19Z","timestamp":1428305479000},"page":"303-312","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":23,"title":["Paving
+        the path to HIV neurotherapy: Predicting SIV CNS disease"],"prefix":"10.1016","volume":"759","author":[{"given":"Sarah
+        E.","family":"Beck","sequence":"first","affiliation":[]},{"given":"Suzanne
+        E.","family":"Queen","sequence":"additional","affiliation":[]},{"given":"Kenneth
+        W.","family":"Witwer","sequence":"additional","affiliation":[]},{"given":"Kelly
+        A.","family":"Metcalf Pate","sequence":"additional","affiliation":[]},{"given":"Lisa
+        M.","family":"Mangus","sequence":"additional","affiliation":[]},{"given":"Lucio","family":"Gama","sequence":"additional","affiliation":[]},{"given":"Robert
+        J.","family":"Adams","sequence":"additional","affiliation":[]},{"given":"Janice
+        E.","family":"Clements","sequence":"additional","affiliation":[]},{"given":"M.","family":"Christine
+        Zink","sequence":"additional","affiliation":[]},{"given":"Joseph L.","family":"Mankowski","sequence":"additional","affiliation":[]}],"member":"78","reference":[{"key":"10.1016\/j.ejphar.2015.03.018_bib1","first-page":"6062","article-title":"Characterization
+        of the peptide binding motif of a rhesus MHC class I molecule (Mamu-A*01)
+        that binds an immunodominant CTL epitope from simianimmunodeficiency virus.","volume":"160","author":"Allen","year":"1998","journal-title":"J.
+        Immunol"},{"key":"10.1016\/j.ejphar.2015.03.018_bib2","doi-asserted-by":"crossref","first-page":"1789","DOI":"10.1212\/01.WNL.0000287431.88658.8b","article-title":"Updated
+        research nosology for HIV-associated neurocognitive disorders","volume":"69","author":"Antinori","year":"2007","journal-title":"Neurology"},{"key":"10.1016\/j.ejphar.2015.03.018_bib3","doi-asserted-by":"crossref","first-page":"3140","DOI":"10.1182\/blood-2010-09-308684","article-title":"Identification
+        of microRNAs in the cerebrospinal fluid as marker for primary diffuse large
+        B-cell lymphoma of the central nervous system","volume":"117","author":"Baraniskin","year":"2011","journal-title":"Blood"},{"key":"10.1016\/j.ejphar.2015.03.018_bib100","doi-asserted-by":"crossref","first-page":"148","DOI":"10.1007\/s13365-015-0313-7","article-title":"Macaque
+        species susceptibility to simian immunodeficiency virus: increased incidence
+        of SIV central nervous system disease in pigtailed macaques versus rhesus
+        macaques","volume":"21","author":"Beck","year":"2015","journal-title":"J.
+        Neurovirol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib4","doi-asserted-by":"crossref","first-page":"85","DOI":"10.1016\/j.jneuroim.2006.04.017","article-title":"Longitudinal
+        analysis of activation markers on monocyte subsets during the development
+        of simian immunodeficiency virus encephalitis","volume":"177","author":"Bissel","year":"2006","journal-title":"J.
+        Neuroimmunol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib5","first-page":"130","article-title":"YKL-40,
+        a marker of simian immunodeficiency virus encephalitis, modulates the biological
+        activity of basic fibroblast growth factor","volume":"173","author":"Bonneh-Barkay","year":"2008"},{"key":"10.1016\/j.ejphar.2015.03.018_bib6","doi-asserted-by":"crossref","first-page":"963","DOI":"10.1086\/514001","article-title":"Levels
+        of human immunodeficiency virus type 1 RNA in cerebrospinal fluid correlate
+        with AIDS dementia stage","volume":"175","author":"Brew","year":"1997","journal-title":"J.
+        Infect. Dis."},{"key":"10.1016\/j.ejphar.2015.03.018_bib7","doi-asserted-by":"crossref","first-page":"361","DOI":"10.1002\/ana.410310403","article-title":"Human
+        immunodeficiency virus infection in microglia: correlation between cells infected
+        in the brain and cells cultured from infectious brain tissue","volume":"31","author":"Brinkmann","year":"1992","journal-title":"Ann.
+        Neurol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib8","doi-asserted-by":"crossref","first-page":"154","DOI":"10.1093\/infdis\/jir214","article-title":"Soluble
+        CD163 made by monocyte\/macrophages is a novel marker of HIV activity in early
+        and chronic infection prior to and after anti-retroviral therapy","volume":"204","author":"Burdo","year":"2011","journal-title":"J.
+        Infect. Dis."},{"key":"10.1016\/j.ejphar.2015.03.018_bib9","doi-asserted-by":"crossref","first-page":"1387","DOI":"10.1097\/QAD.0b013e32836010bd","article-title":"Elevated
+        sCD163 in plasma but not cerebrospinal fluid is a marker of neurocognitive
+        impairment in HIV infection","volume":"27","author":"Burdo","year":"2013","journal-title":"AIDS"},{"key":"10.1016\/j.ejphar.2015.03.018_bib10","doi-asserted-by":"crossref","first-page":"712","DOI":"10.1261\/rna.036863.112","article-title":"Identification
+        of extracellular miRNA in human cerebrospinal fluid by next-generation sequencing","volume":"19","author":"Burgos","year":"2013","journal-title":"RNA"},{"key":"10.1016\/j.ejphar.2015.03.018_bib11","first-page":"1273","article-title":"Early
+        viral replication in the brain of SIV-infected rhesus monkeys","volume":"139","author":"Chakrabarti","year":"1991","journal-title":"Am.
+        J. Pathol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib12","doi-asserted-by":"crossref","first-page":"286","DOI":"10.4103\/0019-5359.107389","article-title":"Usefulness
+        of hemoglobin and albumin as prognostic markers for highly active antiretroviral
+        therapy for HIV-1 infection","volume":"65","author":"Chauhan","year":"2011","journal-title":"Indian
+        J. Med. Sci."},{"key":"10.1016\/j.ejphar.2015.03.018_bib13","doi-asserted-by":"crossref","first-page":"27","DOI":"10.3233\/JAD-2008-14103","article-title":"Identification
+        of miRNA changes in Alzheimer\u2019s disease brain and CSF yields putative
+        biomarkers and insights into disease pathways","volume":"14","author":"Cogswell","year":"2008","journal-title":"J
+        Alzheimers Dis"},{"key":"10.1016\/j.ejphar.2015.03.018_bib14","doi-asserted-by":"crossref","first-page":"959","DOI":"10.1126\/science.287.5455.959","article-title":"AIDS
+        research. Vaccine studies stymied by shortage of animals","volume":"287","author":"Cohen","year":"2000","journal-title":"Science"},{"key":"10.1016\/j.ejphar.2015.03.018_bib15","doi-asserted-by":"crossref","first-page":"426","DOI":"10.1097\/01.qai.0000165799.59322.f5","article-title":"Undetectable
+        cerebrospinal fluid HIV RNA and beta-2 microglobulin do not indicate inactive
+        AIDS dementia complex in highly active antiretroviral therapy-treated patients","volume":"39","author":"Cysique","year":"2005","journal-title":"J.
+        Acquir. Immune. Defic. Syndr."},{"key":"10.1016\/j.ejphar.2015.03.018_bib16","doi-asserted-by":"crossref","first-page":"679","DOI":"10.1002\/ana.410420503","article-title":"Cerebrospinal
+        fluid human immunodeficiency virus type 1 RNA levels are elevated in neurocognitively
+        impaired individuals with acquired immunodeficiency syndrome. HIV Neurobehavioral
+        Research Center Group","volume":"42","author":"Ellis","year":"1997","journal-title":"Ann.
+        Neurol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib17","doi-asserted-by":"crossref","first-page":"2352","DOI":"10.1089\/ars.2012.4834","article-title":"CD163
+        and inflammation: biological, diagnostic, and therapeutic aspects","volume":"18","author":"Etzerodt","year":"2013","journal-title":"Antioxid.
+        Redox Signal."},{"key":"10.1016\/j.ejphar.2015.03.018_bib18","doi-asserted-by":"crossref","first-page":"352","DOI":"10.1111\/j.1600-0404.1987.tb05458.x","article-title":"CSF
+        neopterin as marker of disease activity in multiple sclerosis","volume":"75","author":"Fredrikson","year":"1987","journal-title":"Acta
+        Neurol. Scand."},{"key":"10.1016\/j.ejphar.2015.03.018_bib19","doi-asserted-by":"crossref","first-page":"285","DOI":"10.1097\/00002030-198905000-00006","article-title":"Neopterin
+        concentrations in cerebrospinal fluid and serum of individuals infected with
+        HIV-1","volume":"3","author":"Fuchs","year":"1989","journal-title":"AIDS"},{"key":"10.1016\/j.ejphar.2015.03.018_bib20","doi-asserted-by":"crossref","first-page":"289","DOI":"10.1002\/ana.410200304","article-title":"Immunohistochemical
+        identification of HTLV-III antigen in brains of patients with AIDS","volume":"20","author":"Gabuzda","year":"1986","journal-title":"Ann.
+        Neurol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib21","doi-asserted-by":"crossref","first-page":"6","DOI":"10.1186\/1742-6405-2-6","article-title":"Cerebrospinal
+        fluid signs of neuronal damage after antiretroviral treatment interruption
+        in HIV-1 infection","volume":"2","author":"Gisslen","year":"2005","journal-title":"AIDS
+        Res. Ther."},{"key":"10.1016\/j.ejphar.2015.03.018_bib22","doi-asserted-by":"crossref","first-page":"119","DOI":"10.1111\/j.1600-0684.1993.tb00649.x","article-title":"Cytotoxic
+        T lymphocyte epitopes shared between HIV-1, HIV-2, and SIV","volume":"22","author":"Gotch","year":"1993","journal-title":"J.
+        Med. Primatol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib23","doi-asserted-by":"crossref","first-page":"15","DOI":"10.1186\/1742-6405-7-15","article-title":"Cerebrospinal
+        fluid neopterin: an informative biomarker of central nervous system immune
+        activation in HIV-1 infection","volume":"7","author":"Hagberg","year":"2010","journal-title":"AIDS
+        Res. Ther."},{"key":"10.1016\/j.ejphar.2015.03.018_bib24","doi-asserted-by":"crossref","first-page":"2087","DOI":"10.1212\/WNL.0b013e318200d727","article-title":"HIV-associated
+        neurocognitive disorders persist in the era of potent antiretroviral therapy:
+        CHARTER study","volume":"75","author":"Heaton","year":"2010","journal-title":"Neurology"},{"key":"10.1016\/j.ejphar.2015.03.018_bib25","first-page":"55","article-title":"Biomarkers
+        predicting progression of human immunodeficiency virus-related disease","volume":"2","author":"Kanekar","year":"2010","journal-title":"J.
+        Clin. Med. Res."},{"key":"10.1016\/j.ejphar.2015.03.018_bib26","doi-asserted-by":"crossref","first-page":"1183","DOI":"10.1089\/aid.2006.0292","article-title":"Current
+        hemoglobin levels are more predictive of disease progression than hemoglobin
+        measured at baseline in patients receiving antiretroviral treatment for HIV
+        type 1 infection","volume":"23","author":"Kowalska","year":"2007","journal-title":"AIDS
+        Res. Hum. Retroviruses"},{"key":"10.1016\/j.ejphar.2015.03.018_bib27","doi-asserted-by":"crossref","first-page":"819","DOI":"10.1126\/science.3646751","article-title":"Dual
+        infection of the central nervous system by AIDS viruses with distinct cellular
+        tropisms","volume":"236","author":"Koyanagi","year":"1987","journal-title":"Science"},{"key":"10.1016\/j.ejphar.2015.03.018_bib28","first-page":"1023","article-title":"Immunologic
+        and pathologic manifestations of the infection of rhesus monkeys with simian
+        immunodeficiency virus of macaques","volume":"3","author":"Letvin","year":"1990","journal-title":"J.
+        Acquir. Immune. Defic. Syndr."},{"key":"10.1016\/j.ejphar.2015.03.018_bib29","doi-asserted-by":"crossref","first-page":"669","DOI":"10.1002\/ajmg.b.32071","article-title":"Genome-wide
+        association study of neurocognitive impairment and dementia in HIV-infected
+        adults","volume":"159B","author":"Levine","year":"2012","journal-title":"Am.
+        J. Med. Genet. Part B: Neuropsychiatr. Genet."},{"key":"10.1016\/j.ejphar.2015.03.018_bib30","doi-asserted-by":"crossref","first-page":"40","DOI":"10.1186\/1756-6606-6-40","article-title":"Tristetraprolin
+        expression and microRNA-mediated regulation during simian immunodeficiency
+        virus infection of the central nervous system","volume":"6","author":"Liu","year":"2013","journal-title":"Mol.
+        Brain"},{"issue":"2","key":"10.1016\/j.ejphar.2015.03.018_bib31","doi-asserted-by":"crossref","first-page":"S199","DOI":"10.1086\/344938","article-title":"Searching
+        for clues: tracking the pathogenesis of human immunodeficiency virus central
+        nervous system disease by use of an accelerated, consistent simian immunodeficiency
+        virus macaque model","volume":"186","author":"Mankowski","year":"2002","journal-title":"J.
+        Infect. Dis."},{"key":"10.1016\/j.ejphar.2015.03.018_bib32","doi-asserted-by":"crossref","first-page":"6055","DOI":"10.1128\/JVI.71.8.6055-6060.1997","article-title":"Pathogenesis
+        of simian immunodeficiency virus encephalitis: viral determinants of neurovirulence","volume":"71","author":"Mankowski","year":"1997","journal-title":"J.
+        Virol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib33","doi-asserted-by":"crossref","first-page":"66","DOI":"10.1016\/j.jneuroim.2004.08.031","article-title":"Cerebrospinal
+        fluid markers that predict SIV CNS disease","volume":"157","author":"Mankowski","year":"2004","journal-title":"J.
+        Neuroimmunol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib34","doi-asserted-by":"crossref","first-page":"e3603","DOI":"10.1371\/journal.pone.0003603","article-title":"Natural
+        host genetic resistance to lentiviral CNS disease: a neuroprotective MHC class
+        I allele in SIV-infected macaques","volume":"3","author":"Mankowski","year":"2008","journal-title":"PLoS
+        One"},{"key":"10.1016\/j.ejphar.2015.03.018_bib35","doi-asserted-by":"crossref","first-page":"85","DOI":"10.1093\/jnen\/61.1.85","article-title":"Accumulation
+        of beta-amyloid precursor protein in axons correlates with CNS expression
+        of SIV gp41","volume":"61","author":"Mankowski","year":"2002","journal-title":"J.
+        Neuropathol. Exp. Neurol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib36","doi-asserted-by":"crossref","first-page":"1187","DOI":"10.1097\/QAD.0b013e32832c4af0","article-title":"Early
+        antiretroviral treatment prevents the development of central nervous system
+        abnormalities in simian immunodeficiency virus-infected rhesus monkeys","volume":"23","author":"Marcondes","year":"2009","journal-title":"AIDS"},{"key":"10.1016\/j.ejphar.2015.03.018_bib37","doi-asserted-by":"crossref","first-page":"83","DOI":"10.3389\/fgene.2013.00083","article-title":"Comparison
+        of methods for miRNA extraction from plasma and quantitative recovery of RNA
+        from cerebrospinal fluid","volume":"4","author":"McAlexander","year":"2013","journal-title":"Front.
+        Genet."},{"key":"10.1016\/j.ejphar.2015.03.018_bib38","doi-asserted-by":"crossref","first-page":"205","DOI":"10.1080\/13550280390194109","article-title":"Human
+        immunodeficiency virus-associated dementia: an evolving disease","volume":"9","author":"McArthur","year":"2003","journal-title":"J.
+        Neurovirol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib39","doi-asserted-by":"crossref","first-page":"689","DOI":"10.1002\/ana.410420504","article-title":"Relationship
+        between human immunodeficiency virus-associated dementia and viral load in
+        cerebrospinal fluid and brain","volume":"42","author":"McArthur","year":"1997","journal-title":"Ann.
+        Neurol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib40","doi-asserted-by":"crossref","first-page":"1687","DOI":"10.1001\/archneur.61.11.1687","article-title":"Attenuated
+        central nervous system infection in advanced HIV\/AIDS with combination antiretroviral
+        therapy","volume":"61","author":"McArthur","year":"2004","journal-title":"Arch.
+        Neurol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib41","doi-asserted-by":"crossref","first-page":"1536","DOI":"10.1212\/01.wnl.0000277635.05973.55","article-title":"Antiretroviral
+        treatment reduces increased CSF neurofilament protein (NFL) in HIV-1 infection","volume":"69","author":"Mellgren","year":"2007","journal-title":"Neurology"},{"key":"10.1016\/j.ejphar.2015.03.018_bib42","doi-asserted-by":"crossref","first-page":"809","DOI":"10.1038\/nmeth.3014","article-title":"Evaluation
+        of quantitative miRNA expression platforms in the microRNA quality control
+        (miRQC) study","volume":"11","author":"Mestdagh","year":"2014","journal-title":"Nat.
+        Methods"},{"key":"10.1016\/j.ejphar.2015.03.018_bib200","doi-asserted-by":"crossref","first-page":"510","DOI":"10.1097\/QAI.0000000000000048","article-title":"TGFbeta-mediated
+        downregulation of thrombopoietin is associated with platelet decline in asymptomatic
+        SIV infection","volume":"65","author":"Metcalf Pate","year":"2014","journal-title":"J.
+        Acquir. Immune Defic. Syndr."},{"key":"10.1016\/j.ejphar.2015.03.018_bib300","doi-asserted-by":"crossref","first-page":"874","DOI":"10.1093\/infdis\/jit278","article-title":"Platelet
+        activation and platelet-monocyte aggregate formation contribute to decreased
+        platelet count during acute simian immunodeficiency virus infection in pig-tailed
+        macaques","volume":"208","author":"Metcalf Pate","year":"2013","journal-title":"J.
+        Infect. Dis."},{"key":"10.1016\/j.ejphar.2015.03.018_bib43","doi-asserted-by":"crossref","unstructured":"Meulendyke,
+        K.A., Queen, S.E., Engle, E.L., Shirk, E.N., Liu, J., Steiner, J.P., Nath,
+        A., Tarwater, P.M., Graham, D.R., Mankowski, J.L., Zink, M.C., 2014. Combination
+        fluconazole\/paroxetine treatment is neuroprotective despite ongoing neuroinflammation
+        and viral replication in an SIV model of HIV neurological disease. J. Neurovirol.","DOI":"10.1007\/s13365-014-0283-1"},{"key":"10.1016\/j.ejphar.2015.03.018_bib44","first-page":"320","article-title":"Definition
+        of an epitope and MHC class I molecule recognized by gag-specific cytotoxic
+        T lymphocytes in SIVmac-infected rhesus monkeys","volume":"147","author":"Miller","year":"1991","journal-title":"J.
+        Immunol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib45","doi-asserted-by":"crossref","first-page":"943","DOI":"10.1097\/00002030-199905280-00010","article-title":"Anaemia
+        is an independent predictive marker for clinical prognosis in HIV-infected
+        patients from across Europe. EuroSIDA study group","volume":"13","author":"Mocroft","year":"1999","journal-title":"AIDS"},{"key":"10.1016\/j.ejphar.2015.03.018_bib46","doi-asserted-by":"crossref","first-page":"4","DOI":"10.1097\/QCO.0b013e32834ef586","article-title":"Neurocognitive
+        dysfunction in the highly active antiretroviral therapy era","volume":"25","author":"Mothobi","year":"2012","journal-title":"Curr.
+        Opin. Infect. Dis."},{"key":"10.1016\/j.ejphar.2015.03.018_bib47","doi-asserted-by":"crossref","first-page":"3438","DOI":"10.4049\/jimmunol.169.6.3438","article-title":"MHC
+        class I alleles influence set-point viral load and survival time in simian
+        immunodeficiency virus-infected rhesus monkeys","volume":"169","author":"Muhl","year":"2002","journal-title":"J.
+        Immunol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib48","doi-asserted-by":"crossref","first-page":"175","DOI":"10.2174\/1389200024605082","article-title":"Neopterin
+        as a marker for immune system activation","volume":"3","author":"Murr","year":"2002","journal-title":"Curr.
+        Drug Metab."},{"key":"10.1016\/j.ejphar.2015.03.018_bib49","doi-asserted-by":"crossref","first-page":"1246","DOI":"10.1126\/science.1546323","article-title":"Cognitive
+        and motor impairments associated with SIV infection in rhesus monkeys","volume":"255","author":"Murray","year":"1992","journal-title":"Science"},{"key":"10.1016\/j.ejphar.2015.03.018_bib50","doi-asserted-by":"crossref","first-page":"1139","DOI":"10.1016\/S1474-4422(14)70137-1","article-title":"Controversies
+        in HIV-associated neurocognitive disorders","volume":"13","author":"Nightingale","year":"2014","journal-title":"Lancet
+        Neurol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib51","doi-asserted-by":"crossref","first-page":"149","DOI":"10.1016\/j.jns.2009.06.043","article-title":"Risk
+        factors for HIV-associated neurocognitive disorders (HAND) in sub-Saharan
+        Africa: the case of Yaounde-Cameroon","volume":"285","author":"Njamnshi","year":"2009","journal-title":"J.
+        Neurol. Sci."},{"key":"10.1016\/j.ejphar.2015.03.018_bib52","doi-asserted-by":"crossref","first-page":"9029","DOI":"10.1128\/JVI.77.16.9029-9040.2003","article-title":"Major
+        histocompatibility complex class I alleles associated with slow simian immunodeficiency
+        virus disease progression bind epitopes recognized by dominant acute-phase
+        cytotoxic-T-lymphocyte responses","volume":"77","author":"O\u2019Connor","year":"2003","journal-title":"J.
+        Virol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib53","doi-asserted-by":"crossref","first-page":"1070","DOI":"10.1002\/jcp.24254","article-title":"Cerebrospinal
+        fluid miRNA profile in HIV-encephalitis","volume":"228","author":"Pacifici","year":"2013","journal-title":"J.
+        Cell. Physiol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib54","doi-asserted-by":"crossref","first-page":"292","DOI":"10.1128\/JVI.76.1.292-302.2002","article-title":"ALVAC-SIV-gag-pol-env-based
+        vaccination and macaque major histocompatibility complex class I (A*LVAC-SIV-gag-pol-env-based
+        vaccination and macaque major histocompatibi","volume":"76","author":"Pal","year":"2002","journal-title":"J.
+        Virol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib55","doi-asserted-by":"crossref","first-page":"1357","DOI":"10.1182\/blood-2012-03-414706","article-title":"Coagulation
+        biomarkers predict disease progression in SIV-infected nonhuman primates","volume":"120","author":"Pandrea","year":"2012","journal-title":"Blood"},{"key":"10.1016\/j.ejphar.2015.03.018_bib56","doi-asserted-by":"crossref","first-page":"75","DOI":"10.1016\/j.jneuroim.2013.11.004","article-title":"CSF
+        neurofilament light chain is elevated in OMS (decreasing with immunotherapy)
+        and other pediatric neuroinflammatory disorders","volume":"266","author":"Pranzatelli","year":"2014","journal-title":"J.
+        Neuroimmunol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib57","doi-asserted-by":"crossref","first-page":"358","DOI":"10.1038\/nrg3198","article-title":"MicroRNA
+        profiling: approaches and considerations","volume":"13","author":"Pritchard","year":"2012","journal-title":"Nat.
+        Rev. Genet."},{"key":"10.1016\/j.ejphar.2015.03.018_bib58","doi-asserted-by":"crossref","first-page":"692","DOI":"10.1016\/S0140-6736(96)10178-1","article-title":"Unique
+        monocyte subset in patients with AIDS dementia","volume":"349","author":"Pulliam","year":"1997","journal-title":"Lancet"},{"key":"10.1016\/j.ejphar.2015.03.018_bib59","doi-asserted-by":"crossref","first-page":"9167","DOI":"10.1128\/JVI.00366-11","article-title":"Replication-competent
+        simian immunodeficiency virus (SIV) Gag escape mutations archived in latent
+        reservoirs during antiretroviral treatment of SIV-infected macaques","volume":"85","author":"Queen","year":"2011","journal-title":"J.
+        Virol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib150","doi-asserted-by":"crossref","first-page":"487","DOI":"10.1007\/s13365-011-0053-2","article-title":"Platelet
+        decline as a predictor of brain injury in HIV infection","volume":"17","author":"Ragin","year":"2011","journal-title":"J.
+        neurovirol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib60","doi-asserted-by":"crossref","first-page":"373","DOI":"10.1083\/jcb.201211138","article-title":"Extracellular
+        vesicles: exosomes, microvesicles, and friends","volume":"200","author":"Raposo","year":"2013","journal-title":"J.
+        Cell Biol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib61","doi-asserted-by":"crossref","first-page":"300","DOI":"10.1111\/j.1600-0684.2011.00475.x","article-title":"CD8+
+        lymphocyte depletion without SIV infection does not produce metabolic changes
+        or pathological abnormalities in the rhesus macaque brain","volume":"40","author":"Ratai","year":"2011","journal-title":"J.
+        Med. Primatol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib62","doi-asserted-by":"crossref","first-page":"5915","DOI":"10.1038\/srep05915","article-title":"MicroRNAs
+        differentially present in the plasma of HIV elite controllers reduce HIV infection
+        in vitro","volume":"4","author":"Reynoso","year":"2014","journal-title":"Sci.
+        Rep."},{"key":"10.1016\/j.ejphar.2015.03.018_bib63","doi-asserted-by":"crossref","first-page":"2292","DOI":"10.1096\/fj.09-143503","article-title":"CCL8\/MCP-2
+        is a target for mir-146a in HIV-1-infected human microglial cells","volume":"24","author":"Rom","year":"2010","journal-title":"FASEB
+        J."},{"key":"10.1016\/j.ejphar.2015.03.018_bib64","doi-asserted-by":"crossref","first-page":"E168","DOI":"10.1542\/peds.111.2.e168","article-title":"Low
+        blood CD8+ T-lymphocytes and high circulating monocytes are predictors of
+        HIV-1-associated progressive encephalopathy in children","volume":"111","author":"Sanchez-Ramon","year":"2003","journal-title":"Pediatrics"},{"key":"10.1016\/j.ejphar.2015.03.018_bib65","doi-asserted-by":"crossref","first-page":"515","DOI":"10.2174\/1566524013363555","article-title":"Making
+        the animal model for AIDS research more precise: the impact of major histocompatibility
+        complex (MHC) genes on pathogenesis and disease progression in SIV-infected
+        monkeys","volume":"1","author":"Sauermann","year":"2001","journal-title":"Curr.
+        Mol. Med."},{"key":"10.1016\/j.ejphar.2015.03.018_bib66","doi-asserted-by":"crossref","first-page":"857","DOI":"10.1126\/science.283.5403.857","article-title":"Control
+        of viremia in simian immunodeficiency virus infection by CD8+ lymphocytes","volume":"283","author":"Schmitz","year":"1999","journal-title":"Science"},{"key":"10.1016\/j.ejphar.2015.03.018_bib67","doi-asserted-by":"crossref","first-page":"2084","DOI":"10.1212\/01.WNL.0000145763.68284.15","article-title":"Evaluation
+        of HIV RNA and markers of immune activation as predictors of HIV-associated
+        dementia","volume":"63","author":"Sevigny","year":"2004","journal-title":"Neurology"},{"key":"10.1016\/j.ejphar.2015.03.018_bib68","doi-asserted-by":"crossref","unstructured":"Sharer,
+        L.R., Baskin, G.B., Cho, E.S., Murphey-Corb, M., Blumberg, B.M., Epstein,
+        L.G., 1988. Comparison of simian immunodeficiency virus and human immunodeficiency
+        virus encephalitides in the immature host. Ann. Neurol. 23 Suppl, S108-112.","DOI":"10.1002\/ana.410230727"},{"key":"10.1016\/j.ejphar.2015.03.018_bib69","doi-asserted-by":"crossref","first-page":"95","DOI":"10.1186\/1742-4690-10-95","article-title":"SIV
+        replication is directly downregulated by four antiviral miRNAs","volume":"10","author":"Sisk","year":"2013","journal-title":"Retrovirology"},{"key":"10.1016\/j.ejphar.2015.03.018_bib70","doi-asserted-by":"crossref","first-page":"684","DOI":"10.1128\/JVI.79.2.684-695.2005","article-title":"Analysis
+        of pigtail macaque major histocompatibility complex class I molecules presenting
+        immunodominant simian immunodeficiency virus epitopes","volume":"79","author":"Smith","year":"2005","journal-title":"J.
+        Virol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib71","doi-asserted-by":"crossref","first-page":"282","DOI":"10.1111\/j.1600-0684.2005.00126.x","article-title":"The
+        pigtail macaque MHC class I allele Mane-A*he pigtail macaque MHC class I allel
+        epitope: identification, tetramer development and implications of immune escape
+        and reversion","volume":"34","author":"Smith","year":"2005","journal-title":"J.
+        Med. Primatol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib72","doi-asserted-by":"crossref","first-page":"6","DOI":"10.1186\/1756-8722-6-6","article-title":"Diverse
+        functions of miR-125 family in different cell contexts","volume":"6","author":"Sun","year":"2013","journal-title":"J.
+        Hematol. Oncol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib73","doi-asserted-by":"crossref","first-page":"1178","DOI":"10.1016\/j.jmb.2013.12.017","article-title":"MicroRNAs
+        and HIV-1 infection: antiviral activities and beyond","volume":"426","author":"Swaminathan","year":"2014","journal-title":"J.
+        Mol. Biol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib74","doi-asserted-by":"crossref","first-page":"663","DOI":"10.1590\/S0037-86822012000600002","article-title":"Immunovirological
+        parameters and cytokines in HIV infection","volume":"45","author":"Tasca","year":"2012","journal-title":"Rev.
+        Soc. Bras. Med. Trop."},{"key":"10.1016\/j.ejphar.2015.03.018_bib75","doi-asserted-by":"crossref","first-page":"442","DOI":"10.1080\/13550280390218715","article-title":"Decreased
+        neurotropism of nef long terminal repeat (nef\/LTR)-deleted simian immunodeficiency
+        virus","volume":"9","author":"Thompson","year":"2003","journal-title":"J.
+        Neurovirol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib76","article-title":"Cerebrospinal
+        fluid neurofilament light chain levels: marker of progression to generalized
+        amyotrophic lateral sclerosis","author":"Tortelli","year":"2014","journal-title":"Eur.
+        J. Neurol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib77","doi-asserted-by":"crossref","first-page":"1561","DOI":"10.1111\/j.1468-1331.2012.03777.x","article-title":"Elevated
+        cerebrospinal fluid neurofilament light levels in patients with amyotrophic
+        lateral sclerosis: a possible marker of disease severity and progression","volume":"19","author":"Tortelli","year":"2012","journal-title":"Eur.
+        J. Neurol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib78","doi-asserted-by":"crossref","first-page":"569","DOI":"10.3233\/JAD-2010-090649","article-title":"CSF
+        neurofilament proteins levels are elevated in sporadic Creutzfeldt\u2013Jakob
+        disease","volume":"21","author":"van Eijk","year":"2010","journal-title":"J.
+        Alzheimer\u2019s Dis.: JAD"},{"key":"10.1016\/j.ejphar.2015.03.018_bib79","doi-asserted-by":"crossref","first-page":"25","DOI":"10.1080\/13550280500516484","article-title":"Platelet
+        decline: an early predictive hematologic marker of simian immunodeficiency
+        virus central nervous system disease","volume":"12","author":"Wachtman","year":"2006","journal-title":"J.
+        Neurovirol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib80","article-title":"Do
+        platform-specific factors explain microRNA profiling disparities?","author":"Watson","year":"2011","journal-title":"Clin.
+        Chem."},{"key":"10.1016\/j.ejphar.2015.03.018_bib81","doi-asserted-by":"crossref","first-page":"452","DOI":"10.1080\/13550280390218751","article-title":"Central
+        nervous system correlates of behavioral deficits following simian immunodeficiency
+        virus infection","volume":"9","author":"Weed","year":"2003","journal-title":"J.
+        Neurovirol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib82","doi-asserted-by":"crossref","first-page":"401","DOI":"10.1189\/jlb.0811394","article-title":"Monocyte
+        maturation, HIV susceptibility, and transmigration across the blood brain
+        barrier are critical in HIV neuropathogenesis","volume":"91","author":"Williams","year":"2012","journal-title":"J.
+        Leukocyte Biol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib83","doi-asserted-by":"crossref","first-page":"363","DOI":"10.1007\/s11481-011-9330-3","article-title":"Monocyte
+        mobilization, activation markers, and unique macrophage populations in the
+        brain: observations from SIV infected monkeys are informative with regard
+        to pathogenic mechanisms of HIV infection in humans","volume":"7","author":"Williams","year":"2012","journal-title":"J.
+        Neuroimmune Pharmacol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib84","doi-asserted-by":"crossref","first-page":"292","DOI":"10.1080\/13550280802074539","article-title":"Nonhuman
+        primate models of NeuroAIDS","volume":"14","author":"Williams","year":"2008","journal-title":"J.
+        Neurovirol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib85","doi-asserted-by":"crossref","first-page":"920","DOI":"10.1086\/650743","article-title":"Does
+        choice of combination antiretroviral therapy (cART) alter changes in cerebral
+        function testing after 48 weeks in treatment-naive, HIV-1-infected individuals
+        commencing cART? A randomized, controlled study","volume":"50","author":"Winston","year":"2010","journal-title":"Clin.
+        Infect. Dis."},{"key":"10.1016\/j.ejphar.2015.03.018_bib86","article-title":"Circulating
+        microRNA biomarker studies: pitfalls and potential solutions","author":"Witwer","year":"2014","journal-title":"Clin.
+        Chem."},{"key":"10.1016\/j.ejphar.2015.03.018_bib87","doi-asserted-by":"crossref","first-page":"e8129","DOI":"10.1371\/journal.pone.0008129","article-title":"Coordinated
+        regulation of SIV replication and immune responses in the CNS","volume":"4","author":"Witwer","year":"2009","journal-title":"PLoS
+        One"},{"key":"10.1016\/j.ejphar.2015.03.018_bib88","first-page":"1104","article-title":"A
+        plasma microRNA signature of acute lentiviral infection: biomarkers of CNS
+        disease","volume":"204","author":"Witwer","year":"2011","journal-title":"AIDS"},{"key":"10.1016\/j.ejphar.2015.03.018_bib89","doi-asserted-by":"crossref","first-page":"5074","DOI":"10.1128\/JVI.80.10.5074-5077.2006","article-title":"The
+        high-frequency major histocompatibility complex class I allele Mamu-B*he high-frequency
+        major histocompatibiliimmunodeficiency virus SIVmac239 replication","volume":"80","author":"Yant","year":"2006","journal-title":"J.
+        Virol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib90","doi-asserted-by":"crossref","first-page":"62","DOI":"10.1186\/1742-2094-10-62","article-title":"Cerebrospinal
+        fluid neopterin decay characteristics after initiation of antiretroviral therapy","volume":"10","author":"Yilmaz","year":"2013","journal-title":"J.
+        Neuroinflammation"},{"key":"10.1016\/j.ejphar.2015.03.018_bib91","first-page":"793","article-title":"Pathogenesis
+        of SIV encephalitis. Selection and replication of neurovirulent SIV.","volume":"151","author":"Zink","year":"1997","journal-title":"Am.
+        J. Pathol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib92","doi-asserted-by":"crossref","first-page":"1015","DOI":"10.1086\/323478","article-title":"Increased
+        macrophage chemoattractant protein-1 in cerebrospinal fluid precedes and predicts
+        simian immunodeficiency virus encephalitis","volume":"184","author":"Zink","year":"2001","journal-title":"J.
+        Infect. Dis."},{"key":"10.1016\/j.ejphar.2015.03.018_bib93","doi-asserted-by":"crossref","first-page":"10480","DOI":"10.1128\/JVI.73.12.10480-10488.1999","article-title":"High
+        viral load in the cerebrospinal fluid and brain correlates with severity of
+        simian immunodeficiency virus encephalitis","volume":"73","author":"Zink","year":"1999","journal-title":"J.
+        Virol."},{"key":"10.1016\/j.ejphar.2015.03.018_bib94","doi-asserted-by":"crossref","first-page":"449","DOI":"10.1111\/hiv.12134","article-title":"Immune
+        activation despite suppressive highly active antiretroviral therapy is associated
+        with higher risk of viral blips in HIV-1-infected individuals","volume":"15","author":"Zoufaly","year":"2014","journal-title":"HIV
+        Med."}],"container-title":["European Journal of Pharmacology"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0014299915002332?httpAccept=text\/xml","content-type":"text\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/api.elsevier.com\/content\/article\/PII:S0014299915002332?httpAccept=text\/plain","content-type":"text\/plain","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2020,8,31]],"date-time":"2020-08-31T14:03:39Z","timestamp":1598882619000},"score":1,"resource":{"primary":{"URL":"https:\/\/linkinghub.elsevier.com\/retrieve\/pii\/S0014299915002332"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,7]]},"references-count":98,"alternative-id":["S0014299915002332"],"URL":"http:\/\/dx.doi.org\/10.1016\/j.ejphar.2015.03.018","relation":{"has-review":[{"id-type":"doi","id":"10.3410\/f.725411277.793529613","asserted-by":"object"}]},"ISSN":["0014-2999"],"issn-type":[{"value":"0014-2999","type":"print"}],"subject":["Pharmacology"],"published":{"date-parts":[[2015,7]]},"assertion":[{"value":"Elsevier","name":"publisher","label":"This
+        article is maintained by"},{"value":"Paving the path to HIV neurotherapy:
+        Predicting SIV CNS disease","name":"articletitle","label":"Article Title"},{"value":"European
+        Journal of Pharmacology","name":"journaltitle","label":"Journal Title"},{"value":"https:\/\/doi.org\/10.1016\/j.ejphar.2015.03.018","name":"articlelink","label":"CrossRef
+        DOI link to publisher maintained version"},{"value":"article","name":"content_type","label":"Content
+        Type"},{"value":"Copyright \u00a9 2015 Elsevier B.V. All rights reserved.","name":"copyright","label":"Copyright"}]}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:08 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1016
@@ -71,30 +328,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:37 GMT
+      - Sun, 12 Mar 2023 19:21:08 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FkdamdIX1ma8dEaedpWwN%2BE1AQjlmg%2Bzd%2FzjnDuEK5tEHCmqG3tX9yG8D6smgdkZdzQ7NU%2BGY0Migwa3aDgdpV4dGMVNRf3vJuf7AFY05I%2BS70mRE3ceCGPGnlBTsEzva3Qc%2BpM%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Tph1wHC0ciJCqRVDPyfbizP%2BCxdOBVQhPGFSP5uKrLrCJEr%2BH8ThTT5RT69hl%2FAc7ASba3mx9qTw5dXF%2BP7BcD6w7S%2Fc9djLJUE5qbpQCXS8Ik0rgUgkv9XcZCFnBfpQR%2FbnI%2FQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -102,72 +359,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6250fb0ce21c90-AMS
+      - 7a6e66059a3db8b4-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9QwNDMyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAH0F06DYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:37 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1016/j.ejphar.2015.03.018
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:26 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '9433'
-      Set-Cookie:
-      - AWSALB=ETjnWtvoVTJl0/SsGkENu2c7xjosGpKGrvEeKgXWDXJ6729FJcauP8lvVQIBOkHd06LIMQrTGiT33QKyPpGa+ea19cSSWGzYFJmjoRD2Ne5yS13JjR1kM7ZKztWv;
-        Expires=Sat, 18 Mar 2023 08:54:26 GMT; Path=/, AWSALBCORS=ETjnWtvoVTJl0/SsGkENu2c7xjosGpKGrvEeKgXWDXJ6729FJcauP8lvVQIBOkHd06LIMQrTGiT33QKyPpGa+ea19cSSWGzYFJmjoRD2Ne5yS13JjR1kM7ZKztWv;
-        Expires=Sat, 18 Mar 2023 08:54:26 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:26 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1016",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:08 GMT
 recorded_with: VCR 6.1.0

@@ -569,8 +569,6 @@ module Briard
         hsh = XmlHasher.parse(string)
         if hsh.to_h.dig('crossref_result').present?
           return 'crossref_xml'
-        elsif hsh.to_h.dig('resource', 'xmlns').start_with?('http://datacite.org/schema/kernel')
-          return 'datacite_xml'
         end
       rescue NoMethodError
       end
@@ -1350,8 +1348,9 @@ module Briard
     def hsh_to_spdx(hsh)
       spdx = JSON.load(File.read(File.expand_path('../../resources/spdx/licenses.json',
                                                   __dir__))).fetch('licenses')
+      hsh['rightsUri'] = hsh.delete('rightsURI') if hsh['rightsUri'].blank?
       license = spdx.find do |l|
-        l['licenseId'].casecmp?(hsh['rightsIdentifier']) || l['seeAlso'].first == normalize_cc_url(hsh['rightsURI']) || l['name'] == hsh['rights'] || l['seeAlso'].first == normalize_cc_url(hsh['rights'])
+        l['licenseId'].casecmp?(hsh['rightsIdentifier']) || l['seeAlso'].first == normalize_cc_url(hsh['rightsUri']) || l['name'] == hsh['rights'] || l['seeAlso'].first == normalize_cc_url(hsh['rights'])
       end
 
       if license

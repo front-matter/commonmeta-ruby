@@ -2,37 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1155/2012/291294/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1155/2012/291294
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:40 GMT
+      - Sun, 12 Mar 2023 19:20:56 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '3358'
-      Set-Cookie:
-      - AWSALB=66lRXfJ9tzWWiC+c/JCm+VSbUfwFEztIS78zp5vQQGfcRwPhCSJ8+g/wK2Zq02pkOyNh1Jy4NJzdCSxj5wCrr0iNPBHD1RPjDQkf+nnpIpAcfQJL3HfhjvwF7ZNc;
-        Expires=Sat, 18 Mar 2023 08:09:40 GMT; Path=/, AWSALBCORS=66lRXfJ9tzWWiC+c/JCm+VSbUfwFEztIS78zp5vQQGfcRwPhCSJ8+g/wK2Zq02pkOyNh1Jy4NJzdCSxj5wCrr0iNPBHD1RPjDQkf+nnpIpAcfQJL3HfhjvwF7ZNc;
-        Expires=Sat, 18 Mar 2023 08:09:40 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1155/2012/291294>; rel="canonical", <http://downloads.hindawi.com/journals/pm/2012/291294.pdf>;
-        version="vor"; type="application/pdf"; rel="item", <http://downloads.hindawi.com/journals/pm/2012/291294.xml>;
-        version="vor"; type="application/xml"; rel="item", <http://downloads.hindawi.com/journals/pm/2012/291294.pdf>;
-        version="vor"; rel="item", <http://creativecommons.org/licenses/by/3.0/>;
-        rel="license", <http://orcid.org/0000-0003-2043-4925>; title="Beatriz Hernandez";
-        rel="author"
+      - '8691'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -42,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -51,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -62,9 +51,66 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAA/+1bbXPbNhL+3pn7DxjN3J0zY4ovevfJ6rhK2jiN49R2mmu/eCASkpCQhAqQlpVP/Xr/4e7P9ZfcA5CSaIe0pERpk+vN1A0J7C4Wu88uFiDU//o2CskNk4qL+Ljm1p0aYbEvAh5Pjmuvrr61urWvB1/1fSmUkmx8LZlKw4SAK1bHtWmSzI5sez6f15cUdSEn9i9S+VMWUbuhBa7EmzfDenSr+B32ecMweo7j2v88e35p2C0eq4TGPgOX4keZzOfCp4kRt83opIooI1H2ama/pEwurkWazNIEjPVbFdQGf/mKkH7Wk83ctKBtymiQP+MtEPx6RBN/es2DQSxi1rfvNOVMdoGrPxLBYi3BjEEw2ySFXTGWCG9YrsB6EJIsZuy49kakMqbhNZUJ90NWG7hO3XVbLZjP9Wyv53q9ptGgyO7LyOIJi0hMI8iYpaOQqymTln6v5ZJVIuH52uApjwM65+Q5j8AT9O0l90MSYUV+uzdxEYtG0I4HS2Fxqhtqg153K36fJwYnJRJaPa/Xc9rbycmNXSLGdRqu19pKSMBmQvHESnjE4ORodl8WPNd2uo7nNJrbyhTzGPbJrH7f4DkgtpITUpVY6Sygycpv5tnoZDldy/Gu3OZR0ztquj9vZ3rJICB4T5pn4b+Gc+W2j5zWkbOtNA2Z0cLyRRon9+3WcMpl6PCTzBcyKLQa2Vm4b8pgt3kKcevubsmnwLjMPdClPPekMb9FG0jX2aaga468e83rjuuIJRTGpSSk8SSlE9iFxffFGI5xGobXCU9CNniZhpGIKbLNGQu4z3WyKnSXMNPRSLKbB9jvEJQI4ErFJAI5vc68NwNKEw2JnmO53Ua7b2uSrVhZyPxEipj7K/5ms4K/b9+3VLUtISAtVd4kyszr1xrJZRN5nw2MC0alQX3fNo8lsu37wsuIlhreiDCNyihAk/dlo1USru1RQbImKDdH/97KQ4r6ZxbJoMRuS63SNxBR5XPI4POYhcAUJMYTQskFS5Av9fPPWFXJK6UfL5jPOIoKcj5jMqMcTqmkfsIkB7VPTqDjQnFFREwu0UhD8kNK44R/++Ti/AW5SpE7/DQUmuQKA0CkXtwV4TF5dUmeMhomU59KRl4L+RblS9+uBLddOae+L2Lk41GaCFkxZ0xAwXQ60RHFUASg2IENuVTIdAX2aylCdNA0mQpZjjdIm8AqmbDBaxYHi75daKngUdqh6L6a0pgqxfv2sqWCgY7HPOTG5XDWDEiIWJwQMV4lhEPyI9wmaazIyXhMMRnykoaCnISJyG1Lhtq4lwuFtH1IGl3HJWccHAElJ9A4ZeRsaB2u2Q7J8IT0mg2niSXE6RzCSyfIOwVVttD23PfTmXkEHnI9LhMgiE2AmaJi30mRzg7JOZh9pqf20uA8pynML2c6CSIeA3rSSD8kr6maApaJfn48JKhqnfaH6fyY33BdPGslnkRMToCQRcHSl6iPx1jlyKuYmzo7WRAUz0KEdz2ypFsb8sP0eU0lgiXUyzs5DcOYKUXgNnIav0mxJlwmabAgQwAC4Xnw+uL09HL4yBCcoQ1mX/Ig4JAT/Sl5EqRZ/jBUQwQ/8km4EnF2evFkOHwEM96B2n2AlUJlyxkiC6+jcJcwpUHAMzR9XKyeyGSXSH0hArpTlP4P+uzBPPRSLfwpejA3rd83bEpvuJDQ8NLn2nXqd4ibPxxV32ARlfzdLsh6yvBvHLB3/4fX5w4vaHh+MTx9TDQgoJguwlhwXEtkir1WvvEQ0ueB2XFgAXIs/DUsz2k2rGZP7zGNgM8TvM/YeMzkTgXMCzZnYfhnR+4f7rmXNA13qjuZnLEwffsRdWdJXXdIrqYMDmA3cO/KFYfrFhR3T0mz6fZaX4phHyPLBLtY9ozKgMmd7FrIVsv6mMkbblJaoQ82B/R5LLB9Gk4B8YkG6vLh9DlpO23X+1IM+4xJAcEn9V2M+xNT9IZO2J8933z+K+UmfPXtDdv0/huaqCM60ts7P//0caTb7hwCxv6I1+Mwqsd8Wp+IG/vZydWlW3E0ZCTOqgxqejkczv3B+egN8xNYpm8Xm8s56+RKkDGHqan5lGAOQ2gYLojik5hjM0vhGKV9lKFmJjgaYFaCIuLOEcl3ItS4tPRRCTn44durR4RrUGFVBt+ERhElkoWMKkaoUnQBCTRBHKbgCxiUQDt2rbOER/D3b7/+W66Oct6JmP3263/MuCn4eQyd9CENFNU0iI5QzC3J1VtoOEtDo6wi86kgQBAzRJnI/NOSMuIQxpCFnGAkmQN3rqkFUekoyxsJOmI2oaYj+6Kj6lu44YwhmwTb+SA7pJLLQyqxOqTy7x5S0eUh1cHFOeIcapqWd1qxRAo1yxxPzAmvL0J98AnTmGk2SETfwHxTkGl1EEhznRt1VtA06JpJHTsa0zqQVqYiKXwc7gAP2J1JZgTQkAV1cqKz7ZjLiEL4Ah0TGFJlSSif0ZwqgmlDjQjamB6yTtdE0WgWsm3snp/LbWf405i0Oq0yCLy6JNP1md48O9MjB0+HrxWyY8NxyEHLq3t/fQR8BWtbaatOeciIB7EHzU69m1Mkc5EvRHqkAtQATFU3tUckgNFqKx98T2cz+tuv/zrGn1Nvdg8BD26pX1JomDe7DbfuHFZYKYrCI3hgmucjvJZ9T3V7va59BjLzv7PnNcKxSTiryEtrwVLMKymWNHzwsm/nT5toxeBvYfKPnFxsJI8HTt1x3Jy+auXRuXuDtjkB5l5B8Oj9dMgD7dYxB3JHC5MYEZ/FkMrCexlPGuuaKCkeKutEOmExiXicKitGwB1cfUMn+ukRuaFhiuyYELfuukBtorfdeWhgFUxM7IAVJVbIzUJ++sqOnj/KgKUYwi94X22tx1ikOvknZDmYfnbqHQ9oMjLu485tl+CuW/c+Ceq8LwF1vwvolikiYKHxGxDBA1MW5ogrS6rI4l63A//otLVN8hyK2A9TLWS7/HmxwnTI37KQowgLkE3111zFgOkM52tozWZSUKw3WXtE43SM5S2VTP5dET9NrAyY0NupN1pLCG6VHt9D94glc4aAwjKMikFXAqYIkGxmPjUXk70uNddkJlAR1MpE21qJrFjmugxWU1O1ZAXKuvRAHcWx5UqxupI5B+bzhYWgGlrWDpCnIaaTdVF6eR1aWfXlXcsS87P8CjnDZqfiI5b5XHWtCQaInsJbKbW+bpB1d/r2+qVUr4ox+6vLK9f3vvsXaFZpXCL7LA3FeW2wvB+zJthegADS5ZYicrs+pGaf8iME0UTSKM+olFdfLTjxsWNSp4Clr0svZS4N5Jck7vdVoAHjwdMsVuwaUpfnhOa+BkLHF1GEqscMlpMpe7TQ96hsbLTu8pZNeD2dsm59J6P0I/yyd5t7TAWO1WWa927PrHtKGfX1qlT6bFCw9DS7olSHDZYfwZU9i4qqwAYrzlK5eZFuspbUdX+yOK7pb+GW/jwYT2rIa8locfoYPs6GqzyfqMT1nQmgSIhYDk2k42UQ27NgvDoEDsQ8DgUN1DZTrINzwyy1nx/Q7iM1RxR8oObg/BjN9THA0ns7eNeXdB4yaY2wRAY7+pfkzMe1iRATfY9vo9n+SKeu1Y1U6S2jz1JX7ProDYoM+sVovKAovL4YbZXPZVqx3HyG6vKXqCsDPok+W5U3JKLsZnHFMtpfXnq9Rt1RVkcWSMhbhvxVeRKwuuqVXXw6iZjUpTl5ljXrqv6CqRmX2SmQOX+WPMnOn/Upy/p64F1JFcPlN9LcTu+BC2zZBH7KSloHlNlzhRnziW5jhsqt6bos8br28MdTfSzR7lp67Mq6ZKeRG5tHbjdt6ftRHVNuO02r2fHOh/savrlp+Far27X5myQMoEndabQfqsh2Grq1vc1bTqtrue6+Rm5vHNlxOrZynKbnWI6Lv1bHtW73NXxn8/Ddtt3qNXrt1r7G7G4cs9Hp2nozn9SdnuU1Ws6+hu5tmWLuHoQV8szV3ZO1gDxP4wl5zJU+l9gxvTx0PdYQZhdfNdaqbgQbsuKeF8bauO0t5q3u/vKW62zGUqttv3jy7ExRp+G22519udWtXjrehxQiua5PSNp7G706Yy/trH29NztXp+m78DsTcsQD/RHTfLcVUh+54e01Y2/DBZbMmdC3/XbBbGvjipghtbUDZHfBq+vs0Y7V681qOHePw1WvMZ9kuOqF5ZMMV72QfJLhqteQTxFyXnVqy4Zwe719DrexBGx4TssOJm+nDmrAZndfmczbXAEW8qiL0lNPe09jbyz/XBeliNtE+eM1Gk0LtZDn7a0y8LYoAfXwnWbLwsrVsDrW3hYQb3MVti75Gz2U/HtbOb3NxVih5kct2obTO839Ff1edUm2UqDRtpPprRm/7jYbbndvXm9srlmKhYOFMvxDy+B1Z/mGeL0Q5z9oukex6r/T3l/9aLjQnO3L7/3ksG+b3/Xm73179ZvfvGP9o+K1zGXbfwH/T6yImz0AAA==
-  recorded_at: Sat, 11 Mar 2023 08:09:40 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,1,4]],"date-time":"2023-01-04T21:53:57Z","timestamp":1672869237883},"reference-count":27,"publisher":"Hindawi
+        Limited","license":[{"start":{"date-parts":[[2012,1,1]],"date-time":"2012-01-01T00:00:00Z","timestamp":1325376000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Pulmonary
+        Medicine"],"published-print":{"date-parts":[[2012]]},"abstract":"<jats:p><jats:italic>Objective<\/jats:italic>.
+        To find a statistically significant separation point for the QuantiFERON Gold
+        In-Tube (QFT) interferon gamma release assay that could define an optimal
+        \u201cretesting zone\u201d for use in serially tested low-risk populations
+        who have test \u201creversions\u201d from initially positive to subsequently
+        negative results.<jats:italic>Method<\/jats:italic>. Using receiver operating
+        characteristic analysis (ROC) to analyze retrospective data collected from
+        3 major hospitals, we searched for predictors of reversion until statistically
+        significant separation points were revealed. A confirmatory regression analysis
+        was performed on an additional sample.<jats:italic>Results<\/jats:italic>.
+        In 575 initially positive US healthcare workers (HCWs), 300 (52.2%) had reversions,
+        while 275 (47.8%) had two sequential positive tests. The most statistically
+        significant (Kappa\u2009=\u20090.48, chi-square\u2009=\u2009131.0,<mml:math
+        xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\" id=\"M1\"><mml:mrow><mml:mi>P<\/mml:mi><mml:mo>&lt;<\/mml:mo><mml:mn>0.001<\/mml:mn><\/mml:mrow><\/mml:math>)
+        separation point identified by the ROC for predicting reversion was the tuberculosis
+        antigen minus-nil (TBag-nil) value at 1.11 International Units per milliliter
+        (IU\/mL). The second separation point was found at TBag-nil at 0.72\u2009IU\/mL
+        (Kappa\u2009=\u20090.16, chi-square\u2009=\u20098.2,<mml:math xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"
+        id=\"M2\"><mml:mrow><mml:mi>P<\/mml:mi><mml:mo>&lt;<\/mml:mo><mml:mn>0.01<\/mml:mn><\/mml:mrow><\/mml:math>).
+        The model was validated by the regression analysis of 287\u2009HCWs.<jats:italic>Conclusion<\/jats:italic>.
+        Reversion likelihood increases as the TBag-nil approaches the manufacturer''s
+        cut-point of 0.35\u2009IU\/mL. The most statistically significant separation
+        point between those who test repeatedly positive and those who revert is 1.11\u2009IU\/mL.
+        Clinicians should retest low-risk individuals with initial QFT results\u2009&lt;\u20091.11\u2009IU\/mL.<\/jats:p>","DOI":"10.1155\/2012\/291294","type":"journal-article","created":{"date-parts":[[2012,12,30]],"date-time":"2012-12-30T21:05:01Z","timestamp":1356901501000},"page":"1-7","source":"Crossref","is-referenced-by-count":30,"title":["Delineating
+        a Retesting Zone Using Receiver Operating Characteristic Analysis on Serial
+        QuantiFERON Tuberculosis Test Results in US Healthcare Workers"],"prefix":"10.1155","volume":"2012","author":[{"given":"Wendy","family":"Thanassi","sequence":"first","affiliation":[{"name":"Department
+        of Medicine, Veterans Affairs Palo Alto Health Care System, 3801 Miranda Avenue
+        MC-, Palo Alto, CA 94304-1207, USA"},{"name":"Occupational Health Strategic
+        Health Care Group, Office of Public Health, Veterans Health Administration,
+        Washington, DC 20006, USA"},{"name":"Division of Emergency Medicine, Stanford
+        University School of Medicine, Stanford, CA 94304, USA"},{"name":"War Related
+        Illness and Injury Study Center (WRIISC) and Mental Illness Research Education
+        and Clinical Center (MIRECC), Department of Veterans Affairs, Palo Alto, CA
+        94304, USA"}]},{"given":"Art","family":"Noda","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"},{"name":"Department of Psychiatry and Behavioral Sciences,
+        Stanford University School of Medicine, Stanford, CA 94304, USA"}]},{"ORCID":"http:\/\/orcid.org\/0000-0003-2043-4925","authenticated-orcid":true,"given":"Beatriz","family":"Hernandez","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"},{"name":"Department of Psychiatry and Behavioral Sciences,
+        Stanford University School of Medicine, Stanford, CA 94304, USA"}]},{"given":"Jeffery","family":"Newell","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"}]},{"given":"Paul","family":"Terpeluk","sequence":"additional","affiliation":[{"name":"Department
+        of Occupational Health, The Cleveland Clinic, Cleveland, OH 44195, USA"}]},{"given":"David","family":"Marder","sequence":"additional","affiliation":[{"name":"University
+        Health Services, University of Illinois Chicago, Chicago, IL 60612, USA"}]},{"given":"Jerome
+        A.","family":"Yesavage","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"},{"name":"Department of Psychiatry and Behavioral Sciences,
+        Stanford University School of Medicine, Stanford, CA 94304, USA"}]}],"member":"98","reference":[{"key":"1","volume":"179","year":"2009","journal-title":"American
+        Journal of Respiratory and Critical Care Medicine"},{"key":"2","doi-asserted-by":"publisher","DOI":"10.1128\/CVI.00168-09"},{"key":"3","doi-asserted-by":"publisher","DOI":"10.1164\/rccm.200604-472OC"},{"key":"4","doi-asserted-by":"publisher","DOI":"10.5588\/ijtld.11.0364"},{"key":"5","doi-asserted-by":"publisher","DOI":"10.1128\/CVI.05058-11"},{"key":"6","doi-asserted-by":"publisher","DOI":"10.1007\/s00420-010-0571-x"},{"key":"7","doi-asserted-by":"publisher","DOI":"10.1086\/593965"},{"key":"8","doi-asserted-by":"publisher","DOI":"10.1378\/chest.09-2350"},{"issue":"11","key":"9","first-page":"1235","volume":"12","year":"2008","journal-title":"International
+        Journal of Tuberculosis and Lung Disease"},{"key":"10","doi-asserted-by":"publisher","DOI":"10.1056\/NEJMsa031667"},{"key":"11","doi-asserted-by":"publisher","DOI":"10.1378\/chest.128.1.116"},{"key":"12","year":"2012"},{"issue":"5","key":"13","first-page":"1","volume":"59","year":"2010","journal-title":"Morbidity
+        and Mortality Weekly Report"},{"key":"14","year":"2011"},{"key":"15","year":"2011"},{"key":"16","year":"2011"},{"key":"17","year":"2011"},{"key":"18","year":"2012"},{"key":"20","year":"1992"},{"key":"22","doi-asserted-by":"publisher","DOI":"10.3205\/dgkh000148"},{"key":"23","doi-asserted-by":"publisher","DOI":"10.1378\/chest.11-0992"},{"key":"24","doi-asserted-by":"publisher","DOI":"10.1186\/1471-2334-10-220"},{"key":"25","doi-asserted-by":"publisher","DOI":"10.1186\/1745-6673-7-6"},{"key":"27","doi-asserted-by":"publisher","DOI":"10.1128\/CVI.00398-07"},{"key":"28","doi-asserted-by":"publisher","DOI":"10.1164\/rccm.201006-0974OC"},{"key":"29","doi-asserted-by":"publisher","DOI":"10.1136\/thx.2010.143180"},{"key":"30","doi-asserted-by":"publisher","DOI":"10.1378\/chest.12-0045"}],"container-title":["Pulmonary
+        Medicine"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/pm\/2012\/291294.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/pm\/2012\/291294.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/pm\/2012\/291294.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,2]],"date-time":"2016-08-02T18:42:41Z","timestamp":1470163361000},"score":1,"resource":{"primary":{"URL":"http:\/\/www.hindawi.com\/journals\/pm\/2012\/291294\/"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2012]]},"references-count":27,"alternative-id":["291294","291294"],"URL":"http:\/\/dx.doi.org\/10.1155\/2012\/291294","relation":{},"ISSN":["2090-1836","2090-1844"],"issn-type":[{"value":"2090-1836","type":"print"},{"value":"2090-1844","type":"electronic"}],"subject":["Pulmonary
+        and Respiratory Medicine","General Medicine"],"published":{"date-parts":[[2012]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:20:56 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1155
@@ -73,30 +119,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:41 GMT
+      - Sun, 12 Mar 2023 19:20:56 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gqcmXbG6RGoRYINXgTFIhI%2Bb3cbAkVgjzFL%2FutUxy18MzGbNs6cnaCI0nC3vlRHLFBNuIC%2FmdG1VZJrE%2BuYzTR%2FkZHgrejtIyFOcfGTaarshUGch1tzUYVSQz98e%2FBfa00c%2BMcE%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3ZWI9%2F%2FRv6M8%2FVeK8HasuvSk92%2FkD17yID7LGas3ncm96h6Iyt8rYvem4rYybO5eSNsmXBGtUwXK5cyp6j4MbmUj%2F2osZo2bfKlCKgiLapExdGi%2FPz4H1bbL%2BNp7UzJHRL2a8uQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -104,72 +150,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a62510ebc47b98c-AMS
+      - 7a6e65b9bd54b8b4-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Q0NTUyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA6cKQZjYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:41 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1155/2012/291294
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:33 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '2886'
-      Set-Cookie:
-      - AWSALB=AtD9dTuS08pRTi3VPS38SHZku8ltWUvofrICAqZ/ITClRQj+yRhoJeBOJgz0BwfaOnksoPPKRxLao86nzcJohk0L17WTIIjCYmgCkhvwhaOkLjT2o0BIO3FoDONf;
-        Expires=Sat, 18 Mar 2023 08:54:32 GMT; Path=/, AWSALBCORS=AtD9dTuS08pRTi3VPS38SHZku8ltWUvofrICAqZ/ITClRQj+yRhoJeBOJgz0BwfaOnksoPPKRxLao86nzcJohk0L17WTIIjCYmgCkhvwhaOkLjT2o0BIO3FoDONf;
-        Expires=Sat, 18 Mar 2023 08:54:32 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:33 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1155",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:20:56 GMT
 recorded_with: VCR 6.1.0

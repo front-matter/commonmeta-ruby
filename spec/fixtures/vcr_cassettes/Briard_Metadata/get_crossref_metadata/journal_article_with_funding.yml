@@ -2,34 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.3389/fpls.2019.00816/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.3389/fpls.2019.00816
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:47 GMT
+      - Sun, 12 Mar 2023 19:21:14 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '7727'
-      Set-Cookie:
-      - AWSALB=G9ehWTk41SJy59u0Mq5+BjfltLI/kC3PyEgt7LNkGpi3b+/WAk2bBWyeEDS3Xjc0OOtNo0t+K08zEjurhAcTxqG8fI9bo3oQxQWvoc61tvMASr2gaF05jwf3TqoA;
-        Expires=Sat, 18 Mar 2023 08:09:47 GMT; Path=/, AWSALBCORS=G9ehWTk41SJy59u0Mq5+BjfltLI/kC3PyEgt7LNkGpi3b+/WAk2bBWyeEDS3Xjc0OOtNo0t+K08zEjurhAcTxqG8fI9bo3oQxQWvoc61tvMASr2gaF05jwf3TqoA;
-        Expires=Sat, 18 Mar 2023 08:09:47 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.3389/fpls.2019.00816>; rel="canonical", <https://www.frontiersin.org/article/10.3389/fpls.2019.00816/full>;
-        version="vor"; rel="item", <https://creativecommons.org/licenses/by/4.0/>;
-        version="vor"; rel="license"
+      - '24361'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -39,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -48,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -59,9 +51,198 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:47 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,3,9]],"date-time":"2023-03-09T10:17:58Z","timestamp":1678357078191},"reference-count":70,"publisher":"Frontiers
+        Media SA","license":[{"start":{"date-parts":[[2019,7,2]],"date-time":"2019-07-02T00:00:00Z","timestamp":1562025600000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"funder":[{"award":["UID\/MULTI\/04046\/2019"]},{},{"DOI":"10.13039\/501100000921","name":"COST
+        (European Cooperation in Science and Technology)","doi-asserted-by":"publisher","award":["CA17111"]}],"content-domain":{"domain":["frontiersin.org"],"crossmark-restriction":true},"short-container-title":["Front.
+        Plant Sci."],"DOI":"10.3389\/fpls.2019.00816","type":"journal-article","created":{"date-parts":[[2019,7,2]],"date-time":"2019-07-02T07:08:29Z","timestamp":1562051309000},"update-policy":"http:\/\/dx.doi.org\/10.3389\/crossmark-policy","source":"Crossref","is-referenced-by-count":14,"title":["Transcriptional
+        Modulation of Polyamine Metabolism in Fruit Species Under Abiotic and Biotic
+        Stress"],"prefix":"10.3389","volume":"10","author":[{"given":"Ana Margarida","family":"Fortes","sequence":"first","affiliation":[]},{"given":"Patricia","family":"Agudelo-Romero","sequence":"additional","affiliation":[]},{"given":"Diana","family":"Pimentel","sequence":"additional","affiliation":[]},{"given":"Noam","family":"Alkan","sequence":"additional","affiliation":[]}],"member":"1965","published-online":{"date-parts":[[2019,7,2]]},"reference":[{"key":"ref1","doi-asserted-by":"publisher","first-page":"141","DOI":"10.1016\/j.plaphy.2013.11.002","article-title":"Perturbation
+        of polyamine catabolism affects grape ripening of Vitis vinifera cv. Trincadeira","volume":"74","author":"Agudelo-Romero","year":"2014","journal-title":"Plant
+        Physiol. Biochem."},{"key":"ref2","doi-asserted-by":"publisher","first-page":"105","DOI":"10.1016\/j.plaphy.2013.02.024","article-title":"Study
+        of polyamines during grape ripening indicate an important role of polyamine
+        catabolism","volume":"67","author":"Agudelo-Romero","year":"2013","journal-title":"Plant
+        Physiol. Biochem."},{"key":"ref3","doi-asserted-by":"publisher","first-page":"1769","DOI":"10.1093\/jxb\/eru517","article-title":"Transcriptome
+        and metabolome reprogramming in Vitis vinifera cv. Trincadeira berries upon
+        infection with Botrytis cinerea","volume":"66","author":"Agudelo-Romero","year":"2015","journal-title":"J.
+        Exp. Bot."},{"key":"ref4","doi-asserted-by":"publisher","first-page":"1237","DOI":"10.1007\/s00425-010-1130-0","article-title":"Polyamines:
+        molecules with regulatory functions in plant abiotic stress tolerance","volume":"231","author":"Alc\u00e1zar","year":"2010","journal-title":"Planta"},{"key":"ref5","doi-asserted-by":"publisher","first-page":"1484","DOI":"10.1094\/MPMI-22-12-1484","article-title":"Ammonium
+        secretion by Colletotrichum coccodes activates host NADPH oxidase activity
+        enhancing host cell death and fungal virulence in tomato fruits","volume":"22","author":"Alkan","year":"2009","journal-title":"MPMI"},{"key":"ref6","doi-asserted-by":"publisher","first-page":"85","DOI":"10.1094\/MPMI-01-11-0020","article-title":"Ammonium
+        secretion during Colletotrichum coccodes infection modulates salicylic and
+        jasmonic acid pathways of ripe and unripe tomato fruit","volume":"25","author":"Alkan","year":"2012","journal-title":"MPMI"},{"key":"ref7","doi-asserted-by":"publisher","first-page":"889","DOI":"10.3389\/fpls.2015.00889","article-title":"Insights
+        into molecular and metabolic events associated with fruit response to post-harvest
+        fungal pathogens","volume":"6","author":"Alkan","year":"2015","journal-title":"Front.
+        Plant Sci."},{"key":"ref8","doi-asserted-by":"publisher","first-page":"314","DOI":"10.1034\/j.1399-3054.2000.108003314.x","article-title":"A
+        role for spermidine in the bolting and flowering of Arabidopsis","volume":"108","author":"Applewhite","year":"2000","journal-title":"Physiol.
+        Plant."},{"key":"ref9","doi-asserted-by":"publisher","first-page":"83","DOI":"10.1016\/S0168-9452(99)00071-0","article-title":"Salt
+        stress-induced proline accumulation and changes in tyramine and polyamine
+        levels are linked to ionic adjustment in tomato leaf discs","volume":"145","author":"Aziz","year":"1999","journal-title":"Plant
+        Sci."},{"key":"ref10","doi-asserted-by":"publisher","first-page":"795","DOI":"10.1016\/j.scienta.2011.09.005","article-title":"Putrescine
+        and carnauba wax pretreatments alleviate chilling injury, enhance shelf life
+        and preserve pomegranate fruit quality during cold storage","volume":"130","author":"Barman","year":"2011","journal-title":"Sci.
+        Hortic."},{"key":"ref11","doi-asserted-by":"publisher","first-page":"472","DOI":"10.1034\/j.1399-3054.2002.1140317.x","article-title":"Peach
+        (Prunus persica) fruit ripening: aminoethoxyvinylglycine (AVG) and exogenous
+        polyamines affect ethylene emission and flesh firmness","volume":"114","author":"Bregoli","year":"2002","journal-title":"Physiol.
+        Plant."},{"key":"ref12","doi-asserted-by":"publisher","first-page":"610","DOI":"10.1016\/j.tplants.2008.09.002","article-title":"Strangers
+        in the matrix: plant cell walls and pathogen susceptibility","volume":"13","author":"Cantu","year":"2008","journal-title":"Trends
+        Plant Sci."},{"key":"ref13","doi-asserted-by":"publisher","first-page":"80","DOI":"10.1016\/j.tplants.2005.12.009","article-title":"Functions
+        of amine oxidases in plant development and defence","volume":"11","author":"Cona","year":"2006","journal-title":"Trends
+        Plant Sci."},{"key":"ref14","doi-asserted-by":"publisher","first-page":"1094","DOI":"10.1104\/pp.108.122945","article-title":"Putrescine
+        is involved in Arabidopsis freezing tolerance and cold acclimation by regulating
+        abscisic acid levels in response to low temperature","volume":"148","author":"Cuevas","year":"2008","journal-title":"Plant
+        Physiol."},{"key":"ref15","doi-asserted-by":"publisher","first-page":"6777","DOI":"10.1093\/jxb\/erv382","article-title":"NH4+
+        protects tomato plants against Pseudomonas syringae by activation of systemic
+        acquired acclimation","volume":"66","author":"Fern\u00e1ndez-Crespo","year":"2015","journal-title":"J.
+        Exp. Bot."},{"key":"ref16","doi-asserted-by":"crossref","first-page":"433","DOI":"10.1007\/978-1-4939-7398-9_36","article-title":"Polyamine
+        metabolism in climacteric and non-climacteric fruit ripening","volume-title":"Polyamines","author":"Fortes","year":"2018"},{"key":"ref17","doi-asserted-by":"publisher","first-page":"149","DOI":"10.1186\/1471-2229-11-149","article-title":"Transcript
+        and metabolite analysis in Trincadeira cultivar reveals novel information
+        regarding the dynamics of grape ripening","volume":"11","author":"Fortes","year":"2011","journal-title":"BMC
+        Plant Biol."},{"key":"ref18","doi-asserted-by":"publisher","first-page":"583691","DOI":"10.1155\/2010\/583691","article-title":"Organogenic
+        nodule formation in hop: a tool to study morphogenesis in plants with biotechnological
+        and medicinal applications","volume":"2010","author":"Fortes","year":"2010","journal-title":"Biomed.
+        Res. Int."},{"key":"ref19","doi-asserted-by":"publisher","first-page":"2266","DOI":"10.1104\/pp.110.171413","article-title":"Perturbation
+        of spermine synthase gene expression and transcript profiling provide new
+        insights on the role of the tetraamine spermine in Arabidopsis defense against
+        Pseudomonas viridiflava","volume":"156","author":"Gonzalez","year":"2011","journal-title":"Plant
+        Physiol."},{"key":"ref20","doi-asserted-by":"publisher","first-page":"19","DOI":"10.1016\/S0925-5214(99)00054-X","article-title":"Polyamines
+        induced by hot water treatments reduce chilling injury and decay in pepper
+        fruit","volume":"18","author":"Gonz\u00e1lez-Aguilar","year":"2000","journal-title":"Postharvest
+        Biol. Technol."},{"key":"ref21","doi-asserted-by":"publisher","first-page":"775","DOI":"10.1093\/jxb\/eru436","article-title":"Drought
+        stress tolerance in grapevine involves activation of polyamine oxidation contributing
+        to improved immune response and low susceptibility to Botrytis cinerea","volume":"66","author":"Hatmi","year":"2015","journal-title":"J.
+        Exp. Bot."},{"key":"ref22","doi-asserted-by":"publisher","first-page":"75","DOI":"10.1093\/jxb\/ert351","article-title":"Osmotic
+        stress-induced polyamine oxidation mediates defence responses and reduces
+        stress-enhanced grapevine susceptibility to Botrytis cinerea","volume":"65","author":"Hatmi","year":"2014","journal-title":"J.
+        Exp. Bot."},{"key":"ref23","doi-asserted-by":"publisher","first-page":"1010","DOI":"10.3389\/fpls.2018.01010","article-title":"Osmotic
+        stress and ABA affect immune response and susceptibility of grapevine berries
+        to gray mold by priming polyamine accumulation","volume":"9","author":"Hatmi","year":"2018","journal-title":"Front.
+        Plant Sci."},{"key":"ref24","doi-asserted-by":"publisher","first-page":"115","DOI":"10.1007\/s12298-011-0053-y","article-title":"Biotic
+        and abiotic stress tolerance in transgenic tomatoes by constitutive expression
+        of S-adenosylmethionine decarboxylase gene","volume":"17","author":"Hazarika","year":"2011","journal-title":"Physiol.
+        Mol. Biol. Plants"},{"key":"ref25","doi-asserted-by":"publisher","first-page":"870","DOI":"10.3389\/fpls.2016.00870","article-title":"Cadaverine\u2019s
+        functional role in plant development and environmental response","volume":"7","author":"Jancewicz","year":"2016","journal-title":"Front.
+        Plant Sci."},{"key":"ref26","doi-asserted-by":"publisher","first-page":"95","DOI":"10.3389\/fpls.2014.00095","article-title":"Physiological
+        and molecular implications of plant polyamine metabolism during biotic interactions","volume":"5","author":"Jim\u00e9nez-Bremont","year":"2014","journal-title":"Front.
+        Plant Sci."},{"key":"ref27","doi-asserted-by":"publisher","first-page":"36","DOI":"10.1016\/j.postharvbio.2007.03.018","article-title":"Pre-storage
+        putrescine application suppresses ethylene biosynthesis and retards fruit
+        softening during low temperature storage in \u2018Angelino\u2019 plum","volume":"46","author":"Khan","year":"2007","journal-title":"Postharvest
+        Biol. Technol."},{"key":"ref28","doi-asserted-by":"publisher","first-page":"27","DOI":"10.1016\/j.scienta.2007.05.006","article-title":"Effect
+        of exogenous putrescine on post-harvest life of strawberry (Fragaria ananassa
+        Duch.) fruit, cultivar Selva","volume":"114","author":"Khosroshahi","year":"2007","journal-title":"Sci.
+        Hortic."},{"key":"ref29","doi-asserted-by":"publisher","first-page":"2067","DOI":"10.1104\/pp.113.217372","article-title":"Pepper
+        arginine decarboxylase is required for polyamine and \u03b3-aminobutyric acid
+        signaling in cell death and defense response","volume":"162","author":"Kim","year":"2013","journal-title":"Plant
+        Physiol."},{"key":"ref30","doi-asserted-by":"publisher","first-page":"8947","DOI":"10.1021\/jf302088e","article-title":"Postharvest
+        polyamine application alleviates chilling injury and affects apricot storage
+        ability","volume":"60","author":"Koushesh saba","year":"2012","journal-title":"J.
+        Agric. Food Chem."},{"key":"ref31","doi-asserted-by":"crossref","first-page":"813","DOI":"10.21273\/JASHS.116.5.813","article-title":"Inhibition
+        of softening by polyamine application in \u2018Golden Delicious\u2019 and
+        \u2018McIntosh\u2019 apples","volume":"116","author":"Kramer","year":"1991","journal-title":"J.
+        Am. Soc. Hortic. Sci."},{"key":"ref32","doi-asserted-by":"publisher","first-page":"51","DOI":"10.6090\/jarq.40.51","article-title":"Involvement
+        of polyamine in floral and fruit development","volume":"40","author":"Liu","year":"2006","journal-title":"JARQ"},{"key":"ref33","doi-asserted-by":"publisher","first-page":"264","DOI":"10.1186\/s12870-017-1208-y","article-title":"Polyamines
+        in the life of Arabidopsis: profiling the expression of S-adenosylmethionine
+        decarboxylase (SAMDC) gene family during its life cycle","volume":"17","author":"Majumdar","year":"2017","journal-title":"BMC
+        Plant Biol."},{"key":"ref34","doi-asserted-by":"publisher","first-page":"363","DOI":"10.1080\/14620316.2005.11511945","article-title":"Pre-storage
+        application of polyamines improves shelf-life and fruit quality of mango","volume":"80","author":"Malik","year":"2005","journal-title":"J.
+        Hortic. Sci. Biotechnol."},{"key":"ref35","doi-asserted-by":"publisher","first-page":"2164","DOI":"10.1104\/pp.108.122614","article-title":"Apoplastic
+        polyamine oxidation plays different roles in local responses of tobacco to
+        infection by the necrotrophic fungus Sclerotinia sclerotiorum and the biotrophic
+        bacterium Pseudomonas viridiflava","volume":"147","author":"Marina","year":"2008","journal-title":"Plant
+        Physiol."},{"key":"ref36","doi-asserted-by":"publisher","first-page":"1706","DOI":"10.1111\/j.1365-2621.2002.tb08710.x","article-title":"Effects
+        of postharvest putrescine treatment on extending shelf life and reducing mechanical
+        damage in apricot","volume":"67","author":"Mart\u00ednez-Romero","year":"2002","journal-title":"J.
+        Food Sci."},{"key":"ref37","doi-asserted-by":"publisher","first-page":"288","DOI":"10.1111\/j.1365-2621.2000.tb15995.x","article-title":"Exogenous
+        polyamines and gibberellic acid effects on peach (Prunus persica L.) storability
+        improvement","volume":"65","author":"Mart\u00ednez-Romero","year":"2000","journal-title":"J.
+        Food Sci."},{"key":"ref38","doi-asserted-by":"publisher","first-page":"1589","DOI":"10.1002\/(SICI)1097-0010(199909)79:12<1589::AID-JSFA403>3.0.CO;2-J","article-title":"Effects
+        of post-harvest putrescine and calcium treatments on reducing mechanical damage
+        and polyamines and abscisic acid levels during lemon storage","volume":"79","author":"Mart\u00ednez-Romero","year":"1999","journal-title":"J.
+        Sci. Food Agric."},{"key":"ref39","doi-asserted-by":"publisher","first-page":"386","DOI":"10.1016\/j.plantsci.2008.01.011","article-title":"Higher
+        polyamines restore and enhance metabolic memory in ripening fruit","volume":"174","author":"Mattoo","year":"2008","journal-title":"Plant
+        Sci."},{"key":"ref40","doi-asserted-by":"publisher","first-page":"405","DOI":"10.1007\/s00726-009-0399-4","article-title":"Polyamines
+        and cellular metabolism in plants: transgenic approaches reveal different
+        responses to diamine putrescine versus higher polyamines spermidine and spermine","volume":"38","author":"Mattoo","year":"2010","journal-title":"Amino
+        Acids"},{"key":"ref41","doi-asserted-by":"publisher","first-page":"175","DOI":"10.3389\/fpls.2014.00175","article-title":"Polyamines
+        and abiotic stress in plants: a complex relationship1","volume":"5","author":"Minocha","year":"2014","journal-title":"Front.
+        Plant Sci."},{"key":"ref42","doi-asserted-by":"publisher","first-page":"26","DOI":"10.1016\/j.postharvbio.2006.11.010","article-title":"Pre-storage
+        application of polyamines by pressure or immersion improves shelf-life of
+        pomegranate stored at chilling temperature by increasing endogenous polyamine
+        levels","volume":"44","author":"Mirdehghan","year":"2007","journal-title":"Postharvest
+        Biol. Technol."},{"key":"ref43","doi-asserted-by":"publisher","first-page":"1061","DOI":"10.4161\/psb.3.12.7172","article-title":"Plant
+        polyamine catabolism: the state of the art","volume":"3","author":"Moschou","year":"2008","journal-title":"Plant
+        Signal. Behav."},{"key":"ref44","doi-asserted-by":"publisher","first-page":"1034","DOI":"10.1104\/pp.111.188698","article-title":"Polyamines
+        attenuate ethylene-mediated defense responses to abrogate resistance to Botrytis
+        cinerea in tomato","volume":"158","author":"Nambeesan","year":"2012","journal-title":"Plant
+        Physiol."},{"key":"ref45","doi-asserted-by":"publisher","first-page":"836","DOI":"10.1111\/j.1365-313X.2010.04286.x","article-title":"Overexpression
+        of yeast spermidine synthase impacts ripening, senescence and decay symptoms
+        in tomato","volume":"63","author":"Nambeesan","year":"2010","journal-title":"Plant
+        J."},{"key":"ref46","doi-asserted-by":"publisher","first-page":"16","DOI":"10.1016\/j.plantsci.2015.05.003","article-title":"Speculation:
+        polyamines are important in abiotic stress signaling","volume":"237","author":"P\u00e1l","year":"2015","journal-title":"Plant
+        Sci."},{"key":"ref47","doi-asserted-by":"publisher","first-page":"291","DOI":"10.1007\/BF02703938","article-title":"Role
+        of polyamines and ethylene as modulators of plant senescence","volume":"25","author":"Pandey","year":"2000","journal-title":"J.
+        Biosci."},{"key":"ref48","doi-asserted-by":"publisher","first-page":"25","DOI":"10.1016\/S0925-5214(01)00146-6","article-title":"Role
+        of polyamines in extending shelf life and the reduction of mechanical damage
+        during plum (Prunus salicina Lindl.) storage","volume":"25","author":"P\u00e9rez-Vicente","year":"2002","journal-title":"Postharvest
+        Biol. Technol."},{"key":"ref49","doi-asserted-by":"publisher","first-page":"977","DOI":"10.1080\/14620316.2004.11511876","article-title":"Effects
+        of polyamines on ethylene production, respiration and ripening of kiwifruit","volume":"79","author":"Petkou","year":"2004","journal-title":"J.
+        Hortic. Sci. Biotechnol."},{"key":"ref50","doi-asserted-by":"publisher","first-page":"361","DOI":"10.1111\/j.1365-2621.1993.tb04275.x","article-title":"Vacuum
+        infiltration of polyamines increases firmness of strawberry slices under various
+        storage conditions","volume":"58","author":"Ponappa","year":"1993","journal-title":"J.
+        Food Sci."},{"key":"ref51","doi-asserted-by":"publisher","first-page":"1271","DOI":"10.1093\/jxb\/ert423","article-title":"Cross-talk
+        between reactive oxygen species and polyamines in regulation of ion transport
+        across the plasma membrane: implications for plant adaptive responses","volume":"65","author":"Pottosin","year":"2014","journal-title":"J.
+        Exp. Bot."},{"key":"ref52","doi-asserted-by":"publisher","first-page":"273","DOI":"10.5511\/plantbiotechnology.24.273","article-title":"Polyamine
+        accumulation in transgenic eggplant enhances tolerance to multiple abiotic
+        stresses and fungal resistance","volume":"24","author":"Prabhavathi","year":"2007","journal-title":"Plant
+        Biotechnol."},{"key":"ref53","doi-asserted-by":"publisher","first-page":"22","DOI":"10.1007\/s00344-012-9274-8","article-title":"Spermine
+        promotes acclimation to osmotic stress by modifying antioxidant, abscisic
+        acid, and jasmonic acid signals in soybean","volume":"32","author":"Radhakrishnan","year":"2013","journal-title":"J.
+        Plant Growth Regul."},{"key":"ref54","doi-asserted-by":"publisher","first-page":"4700","DOI":"10.1021\/jf0001031","article-title":"Effect
+        of different treatments on the evolution of polyamines during refrigerated
+        storage of eggplants","volume":"49","author":"Rodriguez","year":"2001","journal-title":"J.
+        Agric. Food Chem."},{"key":"ref55","doi-asserted-by":"publisher","first-page":"117","DOI":"10.3389\/fpls.2019.00117","article-title":"Spermine
+        differentially refines plant defense responses against biotic and abiotic
+        stresses","volume":"10","author":"Seifi","year":"2019","journal-title":"Front.
+        Plant Sci."},{"key":"ref56","doi-asserted-by":"publisher","first-page":"1668","DOI":"10.1021\/jf960866h","article-title":"Modified
+        atmosphere packaging minimizes increases in putrescine and abscisic acid levels
+        caused by chilling injury in pepper fruit","volume":"45","author":"Serrano","year":"1997","journal-title":"J.
+        Agric. Food Chem."},{"key":"ref57","doi-asserted-by":"publisher","first-page":"259","DOI":"10.1016\/S0925-5214(03)00113-3","article-title":"Effects
+        of exogenous putrescine on improving shelf life of four plum cultivars","volume":"30","author":"Serrano","year":"2003","journal-title":"Postharvest
+        Biol. Technol."},{"key":"ref58","doi-asserted-by":"publisher","first-page":"2465","DOI":"10.1021\/jf970864c","article-title":"CO2
+        treatment of zucchini squash reduces chilling-induced physiological changes","volume":"46","author":"Serrano","year":"1998","journal-title":"J.
+        Agric. Food Chem."},{"key":"ref59","doi-asserted-by":"publisher","first-page":"49","DOI":"10.1007\/s00726-016-2377-y","article-title":"Polyamine
+        catabolism adds fuel to leaf senescence","volume":"49","author":"Sobieszczuk-Nowicka","year":"2017","journal-title":"Amino
+        Acids"},{"key":"ref60","doi-asserted-by":"publisher","first-page":"864","DOI":"10.1111\/pce.12204","article-title":"Polyamines
+        reprogram oxidative and nitrosative status and the proteome of citrus plants
+        exposed to salinity stress","volume":"37","author":"Tanou","year":"2014","journal-title":"Plant
+        Cell Environ."},{"key":"ref61","doi-asserted-by":"publisher","first-page":"824","DOI":"10.3389\/fpls.2016.00824","article-title":"Copper-containing
+        amine oxidases and FAD-dependent polyamine oxidases are key players in plant
+        tissue differentiation and organ development","volume":"7","author":"Tavladoraki","year":"2016","journal-title":"Front.
+        Plant Sci."},{"key":"ref62","doi-asserted-by":"publisher","first-page":"1","DOI":"10.1007\/s00425-014-2055-9","article-title":"The
+        roles of polyamines during the lifespan of plants: from development to stress","volume":"240","author":"Tiburcio","year":"2014","journal-title":"Planta"},{"key":"ref63","doi-asserted-by":"publisher","first-page":"293","DOI":"10.1016\/j.postharvbio.2004.03.008","article-title":"Pre-harvest
+        polyamine and aminoethoxyvinylglycine (AVG) applications modulate fruit ripening
+        in stark red gold nectarines (Prunus persica L. Batsch)","volume":"33","author":"Torrigiani","year":"2004","journal-title":"Postharvest
+        Biol. Technol."},{"key":"ref64","doi-asserted-by":"publisher","first-page":"519","DOI":"10.1016\/j.jplph.2009.10.022","article-title":"Abscisic
+        acid signals reorientation of polyamine metabolism to orchestrate stress responses
+        via the polyamine exodus pathway in grapevine","volume":"167","author":"Toumi","year":"2010","journal-title":"J.
+        Plant Physiol."},{"key":"ref65","doi-asserted-by":"publisher","first-page":"228","DOI":"10.1016\/S0924-2244(02)00134-6","article-title":"The
+        role of polyamines in the improvement of the shelf life of fruit","volume":"13","author":"Valero","year":"2002","journal-title":"Trends
+        Food Sci. Technol."},{"key":"ref66","doi-asserted-by":"publisher","first-page":"2102","DOI":"10.1021\/jf970866x","article-title":"Influence
+        of postharvest treatment with putrescine and calcium on endogenous polyamines,
+        firmness, and abscisic acid in lemon (citrus lemon L. Burm cv. Verna)","volume":"46","author":"Valero","year":"1998","journal-title":"J.
+        Agric. Food Chem."},{"key":"ref67","first-page":"39","article-title":"Polyamine
+        roles on the post-harvest of fruits: a review","volume-title":"Recent research
+        developments in agricultural and food chemistry","author":"Valero","year":"1999"},{"key":"ref68","doi-asserted-by":"publisher","first-page":"109","DOI":"10.1046\/j.1469-8137.2003.00802.x","article-title":"Resistance
+        to plant pathogens: possible roles for free polyamines and polyamine catabolism","volume":"159","author":"Walters","year":"2003","journal-title":"New
+        Phytol."},{"key":"ref69","doi-asserted-by":"publisher","first-page":"103","DOI":"10.1007\/s11103-009-9459-0","article-title":"Polyamines
+        as a common source of hydrogen peroxide in host- and nonhost hypersensitive
+        response during pathogen infection","volume":"70","author":"Yoda","year":"2009","journal-title":"Plant
+        Mol. Biol."},{"key":"ref70","doi-asserted-by":"publisher","first-page":"317","DOI":"10.17660\/ActaHortic.2004.632.41","article-title":"Effects
+        of polyamines and salicylic acid on postharvest storage of \u201cPonkan\u201d
+        mandarin","volume":"632","author":"Zheng","year":"2004","journal-title":"Acta
+        Hortic."}],"container-title":["Frontiers in Plant Science"],"original-title":[],"link":[{"URL":"https:\/\/www.frontiersin.org\/article\/10.3389\/fpls.2019.00816\/full","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,9,22]],"date-time":"2019-09-22T02:40:23Z","timestamp":1569120023000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.frontiersin.org\/article\/10.3389\/fpls.2019.00816\/full"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2019,7,2]]},"references-count":70,"alternative-id":["10.3389\/fpls.2019.00816"],"URL":"http:\/\/dx.doi.org\/10.3389\/fpls.2019.00816","relation":{},"ISSN":["1664-462X"],"issn-type":[{"value":"1664-462X","type":"electronic"}],"subject":["Plant
+        Science"],"published":{"date-parts":[[2019,7,2]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:14 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.3389
@@ -70,30 +251,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:47 GMT
+      - Sun, 12 Mar 2023 19:21:14 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bh1oAQ%2FKpQj6YOWWFbCd8%2B21lgdW1zCrVZZx5wMDnvYGk0BJ7YeC%2FEAsQ2HheoSufbQz9dsV%2FqoD7nwcEZSmbqgTsKw4TFatnNgsIH%2BMbA1lS3CpHD47KFpm4LvgN0mD%2F%2BK597E%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mDS1RElP9Ygv1SK3umCjftNwIlcqro9n9x9Ag2C4AtIbpbLzk6tfFSJWDcAqcK2ZXjgC6PkZVBvJ0Ps6t3QtUhxR71zcuer54SNgypEMTSmWaHCNTrmTgF%2F0JN8a%2FQ%2FUtCYI4eQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -101,72 +282,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a625139fc111caa-AMS
+      - 7a6e66289a5ab915-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Y2MLSyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAJnECuDYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:47 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.3389/fpls.2019.00816
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:32 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '6821'
-      Set-Cookie:
-      - AWSALB=ug/6aM7iap2PEramt95w+GBOWvuinehHfiOaZPy6ysyeUXWm3bcfU6s1kXfqky+8RKVtKOFLeAkjoQFg63srO44Evc0EpwuJUzA1VamrDylEfrodPtfvw612mwz8;
-        Expires=Sat, 18 Mar 2023 08:54:32 GMT; Path=/, AWSALBCORS=ug/6aM7iap2PEramt95w+GBOWvuinehHfiOaZPy6ysyeUXWm3bcfU6s1kXfqky+8RKVtKOFLeAkjoQFg63srO44Evc0EpwuJUzA1VamrDylEfrodPtfvw612mwz8;
-        Expires=Sat, 18 Mar 2023 08:54:32 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:32 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.3389",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:14 GMT
 recorded_with: VCR 6.1.0

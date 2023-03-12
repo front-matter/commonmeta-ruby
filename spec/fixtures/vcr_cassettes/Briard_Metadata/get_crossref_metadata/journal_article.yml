@@ -2,34 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1371/journal.pone.0000030/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1371/journal.pone.0000030
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:54 GMT
+      - Sun, 12 Mar 2023 19:21:08 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '8211'
-      Set-Cookie:
-      - AWSALB=Td9bST+Ch5O9qyxfo4KTgqba3R+3hFPGS4pPYNsTd8taDzoEuT7BmcVfLgZT+iK0094c+IrceGthWTj6meg2zhpKWfqTEj1Zx78/iVgsDENrZII9Q/KiVT5fTNkN;
-        Expires=Sat, 18 Mar 2023 08:09:54 GMT; Path=/, AWSALBCORS=Td9bST+Ch5O9qyxfo4KTgqba3R+3hFPGS4pPYNsTd8taDzoEuT7BmcVfLgZT+iK0094c+IrceGthWTj6meg2zhpKWfqTEj1Zx78/iVgsDENrZII9Q/KiVT5fTNkN;
-        Expires=Sat, 18 Mar 2023 08:09:54 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1371/journal.pone.0000030>; rel="canonical", <http://dx.plos.org/10.1371/journal.pone.0000030>;
-        version="vor"; rel="item", <http://creativecommons.org/licenses/by/4.0/>;
-        rel="license"
+      - '24404'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -39,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -48,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -59,9 +51,201 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:54 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,2,9]],"date-time":"2023-02-09T05:42:36Z","timestamp":1675921356418},"reference-count":73,"publisher":"Public
+        Library of Science (PLoS)","issue":"1","license":[{"start":{"date-parts":[[2006,12,20]],"date-time":"2006-12-20T00:00:00Z","timestamp":1166572800000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"content-domain":{"domain":["www.plosone.org"],"crossmark-restriction":false},"short-container-title":["PLoS
+        ONE"],"DOI":"10.1371\/journal.pone.0000030","type":"journal-article","created":{"date-parts":[[2006,12,20]],"date-time":"2006-12-20T19:38:57Z","timestamp":1166643537000},"page":"e30","update-policy":"http:\/\/dx.doi.org\/10.1371\/journal.pone.corrections_policy","source":"Crossref","is-referenced-by-count":62,"title":["Triose
+        Phosphate Isomerase Deficiency Is Caused by Altered Dimerization\u2013Not
+        Catalytic Inactivity\u2013of the Mutant Enzymes"],"prefix":"10.1371","volume":"1","author":[{"given":"Markus","family":"Ralser","sequence":"first","affiliation":[]},{"given":"Gino","family":"Heeren","sequence":"additional","affiliation":[]},{"given":"Michael","family":"Breitenbach","sequence":"additional","affiliation":[]},{"given":"Hans","family":"Lehrach","sequence":"additional","affiliation":[]},{"given":"Sylvia","family":"Krobitsch","sequence":"additional","affiliation":[]}],"member":"340","published-online":{"date-parts":[[2006,12,20]]},"reference":[{"key":"ref1","doi-asserted-by":"crossref","first-page":"229","DOI":"10.1056\/NEJM196502042720503","article-title":"Hereditary
+        Hemolytic Anemia with Triosephosphate Isomerase Deficiency.","volume":"272","author":"AS
+        Schneider","year":"1965","journal-title":"N Engl J Med"},{"key":"ref2","doi-asserted-by":"crossref","first-page":"119","DOI":"10.1053\/beha.2000.0061","article-title":"Triosephosphate
+        isomerase deficiency: historical perspectives and molecular aspects.","volume":"13","author":"AS
+        Schneider","year":"2000","journal-title":"Baillieres Best Pract Res Clin Haematol"},{"key":"ref3","doi-asserted-by":"crossref","first-page":"82","DOI":"10.1006\/bcmd.1996.0011","article-title":"Hematologically
+        important mutations: triosephosphate isomerase.","volume":"22","author":"A
+        Schneider","year":"1996","journal-title":"Blood Cells Mol Dis"},{"key":"ref4","doi-asserted-by":"crossref","first-page":"30","DOI":"10.1042\/bst0300030","article-title":"Triosephosphate
+        isomerase deficiency: a neurodegenerative misfolding disease.","volume":"30","author":"J
+        Olah","year":"2002","journal-title":"Biochem Soc Trans"},{"key":"ref5","first-page":"308","article-title":"Molecular
+        analysis of a series of alleles in humans with reduced activity at the triosephosphate
+        isomerase locus.","volume":"58","author":"M Watanabe","year":"1996","journal-title":"Am
+        J Hum Genet"},{"key":"ref6","doi-asserted-by":"crossref","first-page":"303","DOI":"10.1111\/j.1469-1809.1987.tb01065.x","article-title":"Frequency
+        and distribution of rare electrophoretic mobility variants in a population
+        of human newborns in Ann Arbor, Michigan.","volume":"51 ( Pt 4)","author":"HW
+        Mohrenweiser","year":"1987","journal-title":"Ann Hum Genet"},{"key":"ref7","doi-asserted-by":"crossref","first-page":"960","DOI":"10.1203\/00006450-198211000-00012","article-title":"Elevated
+        frequency of carriers for triosephosphate isomerase deficiency in newborn
+        infants.","volume":"16","author":"HW Mohrenweiser","year":"1982","journal-title":"Pediatr
+        Res"},{"key":"ref8","doi-asserted-by":"crossref","first-page":"336","DOI":"10.1007\/BF00291364","article-title":"Prevalence
+        of partial deficiency of red cell triosephosphate isomerase in Germany\u2013a
+        study of 3000 people.","volume":"67","author":"SW Eber","year":"1984","journal-title":"Hum
+        Genet"},{"key":"ref9","first-page":"663","article-title":"Search for mutations
+        altering protein charge and\/or function in children of atomic bomb survivors:
+        final report.","volume":"42","author":"JV Neel","year":"1988","journal-title":"Am
+        J Hum Genet"},{"key":"ref10","doi-asserted-by":"crossref","first-page":"5046","DOI":"10.1073\/pnas.78.8.5046","article-title":"Frequency
+        of enzyme deficiency variants in erythrocytes of newborn infants.","volume":"78","author":"HW
+        Mohrenweiser","year":"1981","journal-title":"Proc Natl Acad Sci U S A"},{"key":"ref11","doi-asserted-by":"crossref","first-page":"195","DOI":"10.1111\/j.1365-2362.1979.tb00923.x","article-title":"Hereditary
+        deficiency of triosephosphate isomerase in four unrelated families.","volume":"9","author":"SW
+        Eber","year":"1979","journal-title":"Eur J Clin Invest"},{"key":"ref12","doi-asserted-by":"crossref","first-page":"837","DOI":"10.1093\/genetics\/123.4.837","article-title":"Characterization
+        of triosephosphate isomerase mutants with reduced enzyme activity in Mus musculus.","volume":"123","author":"S
+        Merkle","year":"1989","journal-title":"Genetics"},{"key":"ref13","doi-asserted-by":"crossref","first-page":"437","DOI":"10.1006\/jtbi.1996.0184","article-title":"Triosephosphate
+        isomerase deficiency: predictions and facts.","volume":"182","author":"F Orosz","year":"1996","journal-title":"J
+        Theor Biol"},{"key":"ref14","doi-asserted-by":"crossref","first-page":"7903","DOI":"10.1073\/pnas.83.20.7903","article-title":"Human
+        triose-phosphate isomerase deficiency: a single amino acid substitution results
+        in a thermolabile enzyme.","volume":"83","author":"IO Daar","year":"1986","journal-title":"Proc
+        Natl Acad Sci U S A"},{"key":"ref15","doi-asserted-by":"crossref","first-page":"290","DOI":"10.1002\/(SICI)1098-1004(1997)10:4<290::AID-HUMU4>3.0.CO;2-L","article-title":"Evidence
+        for founder effect of the Glu104Asp substitution and identification of new
+        mutations in triosephosphate isomerase deficiency.","volume":"10","author":"R
+        Arya","year":"1997","journal-title":"Hum Mutat"},{"key":"ref16","doi-asserted-by":"crossref","first-page":"634","DOI":"10.1007\/BF02265287","article-title":"Human
+        triosephosphate isomerase: substitution of Arg for Gly at position 122 in
+        a thermolabile electromorph variant, TPI-Manchester.","volume":"88","author":"BA
+        Perry","year":"1992","journal-title":"Hum Genet"},{"key":"ref17","first-page":"1130","article-title":"Triose
+        phosphate isomerase deficiency in 3 French families: two novel null alleles,
+        a frameshift mutation (TPI Alfortville) and an alteration in the initiation
+        codon (TPI Paris).","volume":"96","author":"C Valentin","year":"2000","journal-title":"Blood"},{"key":"ref18","first-page":"1260","article-title":"Human
+        triosephosphate isomerase deficiency resulting from mutation of Phe-240.","volume":"52","author":"ML
+        Chang","year":"1993","journal-title":"Am J Hum Genet"},{"key":"ref19","doi-asserted-by":"crossref","first-page":"486","DOI":"10.1007\/BF00216456","article-title":"Hereditary
+        triosephosphate isomerase (TPI) deficiency: two severely affected brothers
+        one with and one without neurological symptoms.","volume":"92","author":"S
+        Hollan","year":"1993","journal-title":"Hum Genet"},{"key":"ref20","first-page":"929","article-title":"[Glycolytic
+        enzyme defects and neurodegeneration].","volume":"192","author":"S Hollan","year":"1998","journal-title":"C
+        R Seances Soc Biol Fil"},{"key":"ref21","doi-asserted-by":"crossref","first-page":"10362","DOI":"10.1073\/pnas.94.19.10362","article-title":"Search
+        for the pathogenesis of the differing phenotype in two compound heterozygote
+        Hungarian brothers with the same genotypic triosephosphate isomerase deficiency.","volume":"94","author":"S
+        Hollan","year":"1997","journal-title":"Proc Natl Acad Sci U S A"},{"key":"ref22","doi-asserted-by":"crossref","first-page":"268","DOI":"10.1073\/pnas.92.1.268","article-title":"Erythrocyte
+        lipids in triose-phosphate isomerase deficiency.","volume":"92","author":"S
+        Hollan","year":"1995","journal-title":"Proc Natl Acad Sci U S A"},{"key":"ref23","doi-asserted-by":"crossref","first-page":"1026","DOI":"10.1073\/pnas.97.3.1026","article-title":"Enhanced
+        association of mutant triosephosphate isomerase to red cell membranes and
+        to brain microtubules.","volume":"97","author":"F Orosz","year":"2000","journal-title":"Proc
+        Natl Acad Sci U S A"},{"key":"ref24","doi-asserted-by":"crossref","first-page":"119","DOI":"10.1016\/0378-1119(95)00037-7","article-title":"Yeast
+        vectors for the controlled expression of heterologous proteins in different
+        genetic backgrounds.","volume":"156","author":"D Mumberg","year":"1995","journal-title":"Gene"},{"key":"ref25","doi-asserted-by":"crossref","first-page":"747","DOI":"10.1016\/j.bbrc.2006.06.151","article-title":"An
+        efficient and economic enhancer mix for PCR.","volume":"347","author":"M Ralser","year":"2006","journal-title":"Biochem
+        Biophys Res Commun"},{"key":"ref26","doi-asserted-by":"crossref","first-page":"115","DOI":"10.1002\/(SICI)1097-0061(19980130)14:2<115::AID-YEA204>3.0.CO;2-2","article-title":"Designer
+        deletion strains derived from <italic>Saccharomyces cerevisiae<\/italic> S288C:
+        a useful set of strains and plasmids for PCR-mediated gene disruption and
+        other applications.","volume":"14","author":"CB Brachmann","year":"1998","journal-title":"Yeast"},{"key":"ref27","doi-asserted-by":"crossref","first-page":"853","DOI":"10.1016\/j.molcel.2004.09.016","article-title":"A
+        protein interaction network links GIT1, an enhancer of huntingtin aggregation,
+        to Huntington&apos;s disease.","volume":"15","author":"H Goehler","year":"2004","journal-title":"Mol
+        Cell"},{"key":"ref28","doi-asserted-by":"crossref","first-page":"339","DOI":"10.1007\/BF00340712","article-title":"High
+        efficiency transformation of intact yeast cells using single stranded nucleic
+        acids as a carrier.","volume":"16","author":"RH Schiestl","year":"1989","journal-title":"Curr
+        Genet"},{"key":"ref29","doi-asserted-by":"crossref","first-page":"591","DOI":"10.1021\/bp960043c","article-title":"Glycerol
+        production in a triose phosphate isomerase deficient mutant of <italic>Saccharomyces
+        cerevisiae<\/italic>.","volume":"12","author":"C Compagno","year":"1996","journal-title":"Biotechnol
+        Prog"},{"key":"ref30","doi-asserted-by":"crossref","first-page":"2814","DOI":"10.1128\/AEM.68.6.2814-2821.2002","article-title":"Metabolic
+        engineering of glycerol production in <italic>Saccharomyces cerevisiae<\/italic>.","volume":"68","author":"KM
+        Overkamp","year":"2002","journal-title":"Appl Environ Microbiol"},{"key":"ref31","doi-asserted-by":"crossref","first-page":"152","DOI":"10.1128\/JB.139.1.152-160.1979","article-title":"Physiological
+        effects of seven different blocks in glycolysis in <italic>Saccharomyces cerevisiae<\/italic>.","volume":"139","author":"M
+        Ciriacy","year":"1979","journal-title":"J Bacteriol"},{"key":"ref32","doi-asserted-by":"crossref","first-page":"332","DOI":"10.1016\/j.abb.2004.01.003","article-title":"Hypoxic
+        up-regulation of triosephosphate isomerase expression in mouse brain capillary
+        endothelial cells.","volume":"423","author":"R Yamaji","year":"2004","journal-title":"Arch
+        Biochem Biophys"},{"key":"ref33","doi-asserted-by":"crossref","first-page":"8","DOI":"10.1186\/1472-6750-4-8","article-title":"Rapid
+        isolation of yeast genomic DNA: Bust n&apos; Grab.","volume":"4","author":"S
+        Harju","year":"2004","journal-title":"BMC Biotechnol"},{"key":"ref34","doi-asserted-by":"crossref","first-page":"2893","DOI":"10.1093\/hmg\/ddi321","article-title":"Ataxin-2
+        and huntingtin interact with endophilin-A complexes to function in plastin-associated
+        pathways.","volume":"14","author":"M Ralser","year":"2005","journal-title":"Hum
+        Mol Genet"},{"key":"ref35","doi-asserted-by":"crossref","first-page":"157","DOI":"10.1016\/j.femsyr.2004.05.008","article-title":"The
+        role of respiration, reactive oxygen species and oxidative stress in mother
+        cell-specific ageing of yeast strains defective in the RAS signalling pathway.","volume":"5","author":"G
+        Heeren","year":"2004","journal-title":"FEMS Yeast Res"},{"key":"ref36","doi-asserted-by":"crossref","first-page":"165","DOI":"10.2144\/05392BM01","article-title":"Generation
+        of a yeast two-hybrid strain suitable for competitive protein binding analysis.","volume":"39","author":"M
+        Ralser","year":"2005","journal-title":"Biotechniques"},{"key":"ref37","doi-asserted-by":"crossref","first-page":"475","DOI":"10.1016\/S0021-9258(18)62514-1","article-title":"A
+        kinetic study of glycolytic enzyme synthesis in yeast.","volume":"246","author":"PK
+        Maitra","year":"1971","journal-title":"J Biol Chem"},{"key":"ref38","doi-asserted-by":"crossref","first-page":"346","DOI":"10.1107\/S1744309105008341","article-title":"Structure
+        of a high-resolution crystal form of human triosephosphate isomerase: improvement
+        of crystals using the gel-tube method.","volume":"61","author":"T Kinoshita","year":"2005","journal-title":"Acta
+        Crystallograph Sect F Struct Biol Cryst Commun"},{"key":"ref39","doi-asserted-by":"crossref","first-page":"41805","DOI":"10.1074\/jbc.M505181200","article-title":"Genetic
+        perturbation of glycolysis results in inhibition of de novo inositol biosynthesis.","volume":"280","author":"Y
+        Shi","year":"2005","journal-title":"J Biol Chem"},{"key":"ref40","doi-asserted-by":"crossref","first-page":"3106","DOI":"10.1182\/blood.V98.10.3106","article-title":"Distinct
+        behavior of mutant triosephosphate isomerase in hemolysate and in isolated
+        form: molecular basis of enzyme deficiency.","volume":"98","author":"F Orosz","year":"2001","journal-title":"Blood"},{"key":"ref41","doi-asserted-by":"crossref","first-page":"442","DOI":"10.1007\/s00438-003-0941-0","article-title":"Interrelations
+        between the efficiency of translation start sites and other sequence features
+        of yeast mRNAs.","volume":"270","author":"AV Kochetov","year":"2003","journal-title":"Mol
+        Genet Genomics"},{"key":"ref42","doi-asserted-by":"crossref","first-page":"2662","DOI":"10.1073\/pnas.92.7.2662","article-title":"Adherence
+        to the first-AUG rule when a second AUG codon follows closely upon the first.","volume":"92","author":"M
+        Kozak","year":"1995","journal-title":"Proc Natl Acad Sci U S A"},{"key":"ref43","doi-asserted-by":"crossref","first-page":"491","DOI":"10.1007\/s00438-005-1152-7","article-title":"The
+        role of alternative translation start sites in the generation of human protein
+        diversity.","volume":"273","author":"AV Kochetov","year":"2005","journal-title":"Mol
+        Genet Genomics"},{"key":"ref44","first-page":"226","article-title":"Neural
+        network prediction of translation initiation sites in eukaryotes: perspectives
+        for EST and genome analysis.","volume":"5","author":"AG Pedersen","year":"1997","journal-title":"Proc
+        Int Conf Intell Syst Mol Biol"},{"key":"ref45","doi-asserted-by":"crossref","first-page":"15","DOI":"10.1016\/S0378-1119(01)00552-2","article-title":"Nonsense-mediated
+        mRNA decay in <italic>Saccharomyces cerevisiae<\/italic>.","volume":"274","author":"CI
+        Gonzalez","year":"2001","journal-title":"Gene"},{"key":"ref46","doi-asserted-by":"crossref","first-page":"5820","DOI":"10.1128\/MCB.15.10.5820","article-title":"Correlation
+        of two-hybrid affinity data with in vitro measurements.","volume":"15","author":"J
+        Estojak","year":"1995","journal-title":"Mol Cell Biol"},{"key":"ref47","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1006\/abio.2000.4672","article-title":"Uses
+        of lacZ to study gene function: evaluation of beta-galactosidase assays employed
+        in the yeast two-hybrid system.","volume":"285","author":"IG Serebriiskii","year":"2000","journal-title":"Anal
+        Biochem"},{"key":"ref48","doi-asserted-by":"crossref","first-page":"1166","DOI":"10.1111\/j.1365-2958.2001.02317.x","article-title":"Aged
+        mother cells of <italic>Saccharomyces cerevisiae<\/italic> show markers of
+        oxidative stress and apoptosis.","volume":"39","author":"P Laun","year":"2001","journal-title":"Mol
+        Microbiol"},{"key":"ref49","doi-asserted-by":"crossref","first-page":"757","DOI":"10.1083\/jcb.145.4.757","article-title":"Oxygen
+        stress: a regulator of apoptosis in yeast.","volume":"145","author":"F Madeo","year":"1999","journal-title":"J
+        Cell Biol"},{"key":"ref50","doi-asserted-by":"crossref","first-page":"236","DOI":"10.1046\/j.1525-1373.1999.d01-140.x","article-title":"Antioxidants,
+        oxidative stress, and degenerative neurological disorders.","volume":"222","author":"RA
+        Floyd","year":"1999","journal-title":"Proc Soc Exp Biol Med"},{"key":"ref51","doi-asserted-by":"crossref","first-page":"761","DOI":"10.1007\/BF02026706","article-title":"Triosephosphate
+        isomerase deficiency: haemolytic anaemia, myopathy with altered mitochondria
+        and mental retardation due to a new variant with accelerated enzyme catabolism
+        and diminished specific activity.","volume":"150","author":"SW Eber","year":"1991","journal-title":"Eur
+        J Pediatr"},{"key":"ref52","doi-asserted-by":"crossref","first-page":"48931","DOI":"10.1074\/jbc.M208806200","article-title":"Interaction
+        of cofilin with triose-phosphate isomerase contributes glycolytic fuel for
+        Na,K-ATPase via Rho-mediated signaling pathway.","volume":"277","author":"J
+        Jung","year":"2002","journal-title":"J Biol Chem"},{"key":"ref53","doi-asserted-by":"crossref","first-page":"6499","DOI":"10.1016\/S0021-9258(19)44720-0","article-title":"Studies
+        on human triosephosphate isomerase. II. Nature of the electrophoretic multiplicity
+        in erythrocytes.","volume":"247","author":"TH Sawyer","year":"1972","journal-title":"J
+        Biol Chem"},{"key":"ref54","doi-asserted-by":"crossref","first-page":"733","DOI":"10.1016\/0305-0491(74)90259-4","article-title":"Comparison
+        of the electrophoretic properties of triosephosphate isomerases of various
+        tissues and species.","volume":"49","author":"RM Snapka","year":"1974","journal-title":"Comp
+        Biochem Physiol B"},{"key":"ref55","doi-asserted-by":"crossref","first-page":"D46","DOI":"10.1093\/nar\/gkj031","article-title":"ASD:
+        a bioinformatics resource on alternative splicing.","volume":"34","author":"S
+        Stamm","year":"2006","journal-title":"Nucleic Acids Res"},{"key":"ref56","doi-asserted-by":"crossref","first-page":"114","DOI":"10.1111\/j.1471-4159.2004.02854.x","article-title":"Pathogenic
+        mutations inactivate parkin by distinct mechanisms.","volume":"92","author":"IH
+        Henn","year":"2005","journal-title":"J Neurochem"},{"key":"ref57","doi-asserted-by":"crossref","first-page":"865","DOI":"10.1016\/j.mehy.2005.06.006","article-title":"The
+        codon for the methionine at position 129 (M129) in the human prion protein
+        provides an alternative initiation site for translation and renders individuals
+        homozygous for M129 more susceptible to prion disease.","volume":"65","author":"GP
+        Concepcion","year":"2005","journal-title":"Med Hypotheses"},{"key":"ref58","doi-asserted-by":"crossref","first-page":"2767","DOI":"10.1038\/sj.onc.1203599","article-title":"Initiation
+        of translation from a downstream in-frame AUG codon on BRCA1 can generate
+        the novel isoform protein DeltaBRCA1(17aa).","volume":"19","author":"J Liu","year":"2000","journal-title":"Oncogene"},{"key":"ref59","doi-asserted-by":"crossref","first-page":"618","DOI":"10.1016\/j.tibs.2004.09.006","article-title":"The
+        power of two: protein dimerization in biology.","volume":"29","author":"NJ
+        Marianayagam","year":"2004","journal-title":"Trends Biochem Sci"},{"key":"ref60","doi-asserted-by":"crossref","first-page":"675","DOI":"10.1042\/BJ20050993","article-title":"Triosephosphate
+        isomerase deficiency: consequences of an inherited mutation at mRNA, protein
+        and metabolic levels.","volume":"392","author":"J Olah","year":"2005","journal-title":"Biochem
+        J"},{"key":"ref61","doi-asserted-by":"crossref","first-page":"593","DOI":"10.1016\/0006-291X(69)90850-X","article-title":"Diamide,
+        a new reagent for the intracellular oxidation of glutathione to the disulfide.","volume":"37","author":"NS
+        Kosower","year":"1969","journal-title":"Biochem Biophys Res Commun"},{"key":"ref62","doi-asserted-by":"crossref","first-page":"123","DOI":"10.1016\/0076-6879(95)51116-4","article-title":"Diamide:
+        an oxidant probe for thiols.","volume":"251","author":"NS Kosower","year":"1995","journal-title":"Methods
+        Enzymol"},{"key":"ref63","doi-asserted-by":"crossref","first-page":"6564","DOI":"10.1073\/pnas.0305888101","article-title":"Cells
+        have distinct mechanisms to maintain protection against different reactive
+        oxygen species: oxidative-stress-response genes.","volume":"101","author":"GW
+        Thorpe","year":"2004","journal-title":"Proc Natl Acad Sci U S A"},{"key":"ref64","doi-asserted-by":"crossref","first-page":"513","DOI":"10.1042\/bj20030414","article-title":"Protein
+        S-thiolation targets glycolysis and protein synthesis in response to oxidative
+        stress in the yeast <italic>Saccharomyces cerevisiae<\/italic>.","volume":"374","author":"D
+        Shenton","year":"2003","journal-title":"Biochem J"},{"key":"ref65","doi-asserted-by":"crossref","first-page":"2266","DOI":"10.1096\/fj.00-0074com","article-title":"H2O2-induced
+        block of glycolysis as an active ADP-ribosylation reaction protecting cells
+        from apoptosis.","volume":"14","author":"C Colussi","year":"2000","journal-title":"Faseb
+        J"},{"key":"ref66","doi-asserted-by":"crossref","first-page":"1507","DOI":"10.1016\/S0891-5849(02)01086-9","article-title":"Hydrogen
+        peroxide-induced carbonylation of key metabolic enzymes in <italic>Saccharomyces
+        cerevisiae<\/italic>: the involvement of the oxidative stress response regulators
+        Yap1 and Skn7.","volume":"33","author":"VM Costa","year":"2002","journal-title":"Free
+        Radic Biol Med"},{"key":"ref67","doi-asserted-by":"crossref","first-page":"2650","DOI":"10.1128\/MCB.19.4.2650","article-title":"Differential
+        protein S-thiolation of glyceraldehyde-3-phosphate dehydrogenase isoenzymes
+        influences sensitivity to oxidative stress.","volume":"19","author":"CM Grant","year":"1999","journal-title":"Mol
+        Cell Biol"},{"key":"ref68","doi-asserted-by":"crossref","first-page":"1033","DOI":"10.1111\/j.1432-1033.1994.tb18821.x","article-title":"S-thiolation
+        of human endothelial cell glyceraldehyde-3-phosphate dehydrogenase after hydrogen
+        peroxide treatment.","volume":"221","author":"I Schuppe-Koistinen","year":"1994","journal-title":"Eur
+        J Biochem"},{"key":"ref69","doi-asserted-by":"crossref","first-page":"25010","DOI":"10.1016\/S0021-9258(17)31491-6","article-title":"S-thiolation
+        of glyceraldehyde-3-phosphate dehydrogenase induced by the phagocytosis-associated
+        respiratory burst in blood monocytes.","volume":"269","author":"V Ravichandran","year":"1994","journal-title":"J
+        Biol Chem"},{"key":"ref70","doi-asserted-by":"crossref","first-page":"427","DOI":"10.1007\/BF00311211","article-title":"Mutants
+        of <italic>Saccharomyces cerevisiae<\/italic> sensitive to oxidative and osmotic
+        stress.","volume":"27","author":"B Krems","year":"1995","journal-title":"Curr
+        Genet"},{"key":"ref71","doi-asserted-by":"crossref","first-page":"187","DOI":"10.1146\/annurev.arplant.56.032604.144246","article-title":"Redox
+        regulation: a broadening horizon.","volume":"56","author":"BB Buchanan","year":"2005","journal-title":"Annu
+        Rev Plant Biol"},{"key":"ref72","doi-asserted-by":"crossref","first-page":"811","DOI":"10.1089\/ars.2000.2.4-811","article-title":"Antioxidant
+        function of thioredoxin and glutaredoxin systems.","volume":"2","author":"A
+        Holmgren","year":"2000","journal-title":"Antioxid Redox Signal"},{"key":"ref73","doi-asserted-by":"crossref","first-page":"769","DOI":"10.1056\/NEJM199109123251104","article-title":"Efficacy
+        of statewide neonatal screening for cystic fibrosis by assay of trypsinogen
+        concentrations.","volume":"325","author":"KB Hammond","year":"1991","journal-title":"N
+        Engl J Med"}],"container-title":["PLoS ONE"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/dx.plos.org\/10.1371\/journal.pone.0000030","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,8,6]],"date-time":"2021-08-06T23:49:55Z","timestamp":1628293795000},"score":1,"resource":{"primary":{"URL":"https:\/\/dx.plos.org\/10.1371\/journal.pone.0000030"}},"subtitle":[],"editor":[{"given":"Guilhem","family":"Janbon","sequence":"first","affiliation":[]}],"short-title":[],"issued":{"date-parts":[[2006,12,20]]},"references-count":73,"journal-issue":{"issue":"1","published-online":{"date-parts":[[2006,12,20]]}},"URL":"http:\/\/dx.doi.org\/10.1371\/journal.pone.0000030","relation":{},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}],"subject":["Multidisciplinary"],"published":{"date-parts":[[2006,12,20]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:08 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1371
@@ -70,30 +254,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:55 GMT
+      - Sun, 12 Mar 2023 19:21:08 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DLenRRK22%2F5%2B6X4dvijkjrZCsTaIHx4KuxZWhrB3b3CwFNJYuzmDYoZx1QhKTeiOLYit2OZ2mg8%2FKpesXr4wQvh43Z0Wn0B9SvYOm6Axp2wKtCvi4J9sGQtGoue2k0asOVNnanA%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=02%2FjowxSzonA3BOYSX%2BAscl00B3iGIvf8ADGzVK2FiyFkXCibSnrw%2BLIej%2B0xk7VT2iSKFZhC5nZWZq6SZQ9mV4gtYPCkM9fv3Ot%2FU57dF6h9dMX1PiDfVGVMFmIW0wI4j4O4go%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -101,72 +285,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a625166880d1b03-AMS
+      - 7a6e6602194f0bae-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Q2NzQyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAfpIZsjYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:55 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1371/journal.pone.0000030
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:40 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '7210'
-      Set-Cookie:
-      - AWSALB=PiSlBzuW2BxicJCYR6VM1AfSBzPt7jqaCeEToS4c9Wa+KiNnv9vE5OL1StSrzwgQVaMOVctVEF/bUvOrQ2zmndh7OXZ5pZUiMLegGocnNKjkg5Q824YehQrsElq6;
-        Expires=Sat, 18 Mar 2023 08:54:40 GMT; Path=/, AWSALBCORS=PiSlBzuW2BxicJCYR6VM1AfSBzPt7jqaCeEToS4c9Wa+KiNnv9vE5OL1StSrzwgQVaMOVctVEF/bUvOrQ2zmndh7OXZ5pZUiMLegGocnNKjkg5Q824YehQrsElq6;
-        Expires=Sat, 18 Mar 2023 08:54:40 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:40 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1371",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:08 GMT
 recorded_with: VCR 6.1.0

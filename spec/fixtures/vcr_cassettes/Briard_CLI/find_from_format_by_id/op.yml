@@ -8,30 +8,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 10 Mar 2023 21:19:01 GMT
+      - Sun, 12 Mar 2023 19:21:39 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=EaToCAuvUXzETpeukxutjiFkk98h0gxXDMw8DDtzldbrQzALKCyPSLxFsJkQ5o39jZjkIhs3GK1YUJHU%2BkWMfTHokvKOdsIJ3ACe5jKuuPOG%2F9S%2F4cZp%2B3E9xmK56WNT2ME7gCw%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=E0qRGbI9pn2lzhbtlw7a8%2BSRaMpy2QhdzvLbDZeAxMZ5bKtu%2FmjkzlCqsIsyOknIFMh59Wyw16KTFiUH8pFxyW4kcDQL48QN8eIvkoPIkaaN1IlJ5ASC7vtAddpQKZPQDaOF%2BhE%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,12 +39,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a5e97f2de8eb7df-AMS
+      - 7a6e66c68892b92a-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9I3NLQyUdiGiQI0jQP0AJyK3ligUAIFLYdzAAAAA=
-  recorded_at: Fri, 10 Mar 2023 21:19:01 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.2791",
+            "RA": "OP"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:39 GMT
 recorded_with: VCR 6.1.0

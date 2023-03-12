@@ -1,39 +1,41 @@
 # frozen_string_literal: true
 
-require 'spec_helper'
+require "spec_helper"
 
 describe Briard::Metadata, vcr: true do
   subject { described_class.new(input: input) }
 
   let(:input) { "#{fixture_path}datacite.json" }
 
-  context 'get datacite raw' do
-    it 'BlogPosting' do
+  context "get datacite raw" do
+    it "BlogPosting" do
       expect(subject.raw).to eq(File.read(input).strip)
     end
   end
 
-  context 'get datacite metadata' do
-    it 'BlogPosting' do
+  context "get datacite metadata" do
+    it "BlogPosting" do
       expect(subject.valid?).to be true
-      expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-journal',
-                                  'resourceType' => 'BlogPosting', 'resourceTypeGeneral' => 'Text', 'ris' => 'RPRT', 'schemaOrg' => 'ScholarlyArticle')
-      expect(subject.creators).to eq([{ 'type' => 'Person',
-                                        'id' => 'http://orcid.org/0000-0003-1419-2405', 'name' => 'Fenner, Martin', 'givenName' => 'Martin', 'familyName' => 'Fenner' }])
-      expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
+      expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
+                                  "resourceType" => "BlogPosting", "resourceTypeGeneral" => "Text", "ris" => "RPRT", "schemaOrg" => "ScholarlyArticle")
+      expect(subject.creators).to eq([{ "nameType" => "Personal", "name" => "Fenner, Martin", "givenName" => "Martin", "familyName" => "Fenner",
+                                       "nameIdentifiers" => [{ "nameIdentifier" => "https://orcid.org/0000-0003-1419-2405",
+                                                               "nameIdentifierScheme" => "ORCID",
+                                                               "schemeUri" => "https://orcid.org" }] }])
+      expect(subject.titles).to eq([{ "title" => "Eating your own Dog Food" }])
       expect(subject.identifiers).to eq([
-                                          { 'identifier' => 'https://doi.org/10.5438/4k3m-nyvg',
-                                            'identifierType' => 'DOI' }, { 'identifier' => 'MS-49-3632-5083', 'identifierType' => 'Local accession number' }
+                                          { "identifier" => "https://doi.org/10.5438/4k3m-nyvg",
+                                            "identifierType" => "DOI" }, { "identifier" => "MS-49-3632-5083", "identifierType" => "Local accession number" },
                                         ])
-      expect(subject.dates).to eq([{ 'date' => '2016-12-20', 'dateType' => 'Created' },
-                                   { 'date' => '2016-12-20', 'dateType' => 'Issued' }, { 'date' => '2016-12-20', 'dateType' => 'Updated' }])
+      expect(subject.dates).to eq([{ "date" => "2016-12-20", "dateType" => "Created" },
+                                   { "date" => "2016-12-20", "dateType" => "Issued" }, { "date" => "2016-12-20", "dateType" => "Updated" }])
       expect(subject.publication_year).to eq(2016)
       expect(subject.related_identifiers.length).to eq(3)
-      expect(subject.related_identifiers.first).to eq('relatedIdentifier' => '10.5438/0000-00ss',
-                                                      'relatedIdentifierType' => 'DOI', 'relationType' => 'IsPartOf')
-      expect(subject.related_identifiers.last).to eq('relatedIdentifier' => '10.5438/55e5-t5c0',
-                                                     'relatedIdentifierType' => 'DOI', 'relationType' => 'References')
-      expect(subject.agency).to eq('DataCite')
+      expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "10.5438/0000-00ss",
+                                                      "relatedIdentifierType" => "DOI", "relationType" => "IsPartOf")
+      expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.5438/55e5-t5c0",
+                                                     "relatedIdentifierType" => "DOI", "relationType" => "References")
+      expect(subject.agency).to eq("DataCite")
     end
 
     # it "SoftwareSourceCode" do
@@ -50,19 +52,19 @@ describe Briard::Metadata, vcr: true do
     #   expect(subject.agency).to eq("DataCite")
     # end
 
-    it 'SoftwareSourceCode missing_comma' do
+    it "SoftwareSourceCode missing_comma" do
       input = "#{fixture_path}datacite_software_missing_comma.json"
-      subject = described_class.new(input: input, from: 'datacite', show_errors: true)
+      subject = described_class.new(input: input, from: "datacite", show_errors: true)
       # expect(subject.valid?).to be false
-      expect(subject.errors).to eq(['expected comma, not a string (after doi) at line 4, column 11 [parse.c:435]'])
+      expect(subject.errors).to eq(["expected comma, not a string (after doi) at line 4, column 11 [parse.c:435]"])
       expect(subject.codemeta.nil?).to be(true)
     end
 
-    it 'SoftwareSourceCode overlapping_keys' do
+    it "SoftwareSourceCode overlapping_keys" do
       input = "#{fixture_path}datacite_software_overlapping_keys.json"
-      subject = described_class.new(input: input, from: 'datacite', show_errors: true)
+      subject = described_class.new(input: input, from: "datacite", show_errors: true)
       expect(subject.valid?).to be false
-      expect(subject.errors).to eq(["root is missing required keys: id, titles, types", "property '/creators' is invalid: error_type=minItems"])
+      expect(subject.errors).to eq(["The same key is defined more than once: id"])
       expect(subject.codemeta.nil?).to be(true)
     end
 
@@ -99,8 +101,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types["bibtex"]).to eq("article")
       expect(subject.types["citeproc"]).to eq("article-journal")
       expect(subject.creators.length).to eq(2)
-      expect(subject.creators.first).to eq("affiliation" => [{ "name" => "Тверская государственная сельскохозяйственная академия" }],
-                                           "name" => "Ганичева, А.В.")
+      expect(subject.creators.first).to eq("affiliation" => [{ "name" => "Тверская государственная сельскохозяйственная академия" }], "familyName" => "Ганичева", "givenName" => "А.В.", "name" => "Ганичева, А.В.", "nameType" => "Personal")
       expect(subject.titles.last).to eq("title" => "MODEL OF SYSTEM DYNAMICS OF PROCESS OF TRAINING",
                                         "titleType" => "TranslatedTitle")
       expect(subject.dates).to eq([{ "date" => "2019-02-09", "dateType" => "Issued" }])
@@ -149,7 +150,7 @@ describe Briard::Metadata, vcr: true do
                                         "subjectScheme" => "CESSDA Topic Classification" }])
       expect(subject.dates).to eq([{ "date" => "1995-12", "dateType" => "Collected" },
                                    { "date" => "1996", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("1996")
+      expect(subject.publication_year).to eq(1996)
       expect(subject.publisher).to eq("GESIS Data Archive")
       expect(subject.agency).to eq("DataCite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")

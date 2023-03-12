@@ -3,10 +3,10 @@
 require 'spec_helper'
 
 describe Briard::Metadata, vcr: true do
-  subject { described_class.new(input: input, from: 'crossref') }
-
-  let(:input) { 'https://doi.org/10.1101/097196' }
-
+  let(:subject) do
+    described_class.new
+  end
+  
   context 'doi resolver' do
     it 'doi' do
       doi = '10.5061/DRYAD.8515'

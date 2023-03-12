@@ -6,10 +6,15 @@ module Briard
       def get_npm(id: nil, **_options)
         return { 'string' => nil, 'state' => 'not_found' } unless id.present?
 
-        id = normalize_id(id)
-        response = Maremma.get(id, accept: 'json', raw: true)
-        string = response.body.fetch('data', nil)
-
+        url = normalize_id(id)
+        conn = Faraday.new(url, request: { timeout: 5 }) do |f|
+          f.request :gzip
+          f.request :json
+          # f.response :json
+        end
+        response = conn.get(url)
+        string = JSON.parse(response.body)
+        
         { 'string' => string }
       end
 
@@ -22,7 +27,7 @@ module Briard
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
 
-        meta = string.present? ? Maremma.from_json(string) : {}
+        meta = string.present? ? JSON.parse(string) : {}
 
         types = {
           'resourceTypeGeneral' => 'Software',

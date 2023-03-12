@@ -2,35 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1007/978-3-642-34922-5_19/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1007/978-3-642-34922-5_19
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:42 GMT
+      - Sun, 12 Mar 2023 19:21:13 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '4780'
-      Set-Cookie:
-      - AWSALB=scj4YCQFqPIHtgMhUTK/MY+1znrE/6C3qfo9Xl2AZoPQshewG+EU4z8rkglGgzDADg673PF/OwcUEmnthl6Lzpbe6YFUDz1MRCPYiNXNP2YAFExMLQb8nlzdLjfx;
-        Expires=Sat, 18 Mar 2023 08:09:42 GMT; Path=/, AWSALBCORS=scj4YCQFqPIHtgMhUTK/MY+1znrE/6C3qfo9Xl2AZoPQshewG+EU4z8rkglGgzDADg673PF/OwcUEmnthl6Lzpbe6YFUDz1MRCPYiNXNP2YAFExMLQb8nlzdLjfx;
-        Expires=Sat, 18 Mar 2023 08:09:42 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1007/978-3-642-34922-5_19>; rel="canonical", <https://link.springer.com/content/pdf/10.1007/978-3-642-34922-5_19>;
-        version="vor"; rel="item", <https://www.springernature.com/gp/researchers/text-and-data-mining>;
-        version="tdm"; rel="license", <https://www.springernature.com/gp/researchers/text-and-data-mining>;
-        version="vor"; rel="license"
+      - '11142'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -40,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -49,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -60,9 +51,99 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:42 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T21:40:19Z","timestamp":1676670019237},"publisher-location":"Berlin,
+        Heidelberg","reference-count":29,"publisher":"Springer Berlin Heidelberg","isbn-type":[{"value":"9783642349218","type":"print"},{"value":"9783642349225","type":"electronic"}],"license":[{"start":{"date-parts":[[2013,1,1]],"date-time":"2013-01-01T00:00:00Z","timestamp":1356998400000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.springernature.com\/gp\/researchers\/text-and-data-mining"},{"start":{"date-parts":[[2013,1,1]],"date-time":"2013-01-01T00:00:00Z","timestamp":1356998400000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/www.springernature.com\/gp\/researchers\/text-and-data-mining"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2013]]},"DOI":"10.1007\/978-3-642-34922-5_19","type":"book-chapter","created":{"date-parts":[[2012,10,31]],"date-time":"2012-10-31T15:15:48Z","timestamp":1351696548000},"page":"269-287","source":"Crossref","is-referenced-by-count":1,"title":["Log-Domain
+        Arithmetic for High-Speed Fuzzy Control on a Field-Programmable Gate Array"],"prefix":"10.1007","author":[{"given":"Ali","family":"Razib","sequence":"first","affiliation":[]},{"given":"Scott","family":"Dick","sequence":"additional","affiliation":[]},{"given":"Vincent","family":"Gaudet","sequence":"additional","affiliation":[]}],"member":"297","reference":[{"issue":"3","key":"19_CR1","doi-asserted-by":"publisher","first-page":"338","DOI":"10.1016\/S0019-9958(65)90241-X","volume":"8","author":"L.
+        Zadeh","year":"1965","unstructured":"Zadeh, L.: Fuzzy Sets. Information and
+        Control\u00a08(3), 338\u2013353 (1965)","journal-title":"Information and Control"},{"key":"19_CR2","doi-asserted-by":"publisher","first-page":"1182","DOI":"10.1109\/TC.1977.1674779","volume":"26","author":"E.H.
+        Mamdani","year":"1977","unstructured":"Mamdani, E.H.: Application of Fuzzy
+        Logic to Approximate Reasoning. IEEE Trans. Computers\u00a0(26), 1182\u20131191
+        (1977)","journal-title":"IEEE Trans. Computers"},{"key":"19_CR3","doi-asserted-by":"crossref","unstructured":"Han,
+        I.S.: Membership Function Circuit for Neural\/Fuzzy Hardware of Analog-Mixed
+        Operation Based on the Programmable Conductance. In: IEEE Int. Fuzzy Systems
+        Conf., pp. 1\u20134 (2007)","DOI":"10.1109\/FUZZY.2007.4295669"},{"issue":"8","key":"19_CR4","doi-asserted-by":"publisher","first-page":"642","DOI":"10.1049\/el:20030434","volume":"39","author":"L.
+        Tigaeru","year":"2003","unstructured":"Tigaeru, L.: Programmable analogue
+        membership function circuit for hybrid-mode fuzzy systems. Electronics Letters\u00a039(8),
+        642\u2013644 (2003)","journal-title":"Electronics Letters"},{"key":"19_CR5","unstructured":"Kalaykov,
+        I., Tolt, G.: Fast fuzzy signal and image processing hardware. In: Annual
+        Meeting of the North American Fuzzy Information Processing Society, pp. 7\u201312
+        (2002)"},{"key":"19_CR6","doi-asserted-by":"crossref","unstructured":"Dick,
+        S., Gaudet, V., Bai, H.: Bit-serial arithmetic: A novel approach to fuzzy
+        hardware implementation. In: Annual Meeting of the North American Fuzzy Information
+        Processing Society, pp. 1\u20136 (2008)","DOI":"10.1109\/NAFIPS.2008.4531258"},{"issue":"6","key":"19_CR7","doi-asserted-by":"publisher","first-page":"731","DOI":"10.1109\/3468.983430","volume":"31","author":"Z.
+        Salcic","year":"2001","unstructured":"Salcic, Z.: High-speed customizable
+        fuzzy-logic processor: architecture and implementation. IEEE Transactions
+        on Systems, Man and Cybernetics, Part A\u00a031(6), 731\u2013737 (2001)","journal-title":"IEEE
+        Transactions on Systems, Man and Cybernetics, Part A"},{"key":"19_CR8","volume-title":"Set
+        Theory and Logic","author":"R.R. Stoll","year":"1979","unstructured":"Stoll,
+        R.R.: Set Theory and Logic. Dover Publications, New York (1979)"},{"key":"19_CR9","volume-title":"Essentials
+        of Fuzzy Modeling and Control","author":"D.P. Filev","year":"1994","unstructured":"Filev,
+        D.P., Yager, R.R.: Essentials of Fuzzy Modeling and Control. Wiley, New York
+        (1994)"},{"key":"19_CR10","doi-asserted-by":"publisher","volume-title":"Foundations
+        of Fuzzy Control","author":"J. Jantzen","year":"2007","unstructured":"Jantzen,
+        J.: Foundations of Fuzzy Control. Wiley, New York (2007)","DOI":"10.1002\/9780470061176"},{"key":"19_CR11","doi-asserted-by":"crossref","unstructured":"Ibrahim,
+        A.: Fuzzy Logic for Embedded Systems Applications. Elsevier (2004)","DOI":"10.1016\/B978-075067605-2\/50006-5"},{"issue":"1","key":"19_CR12","doi-asserted-by":"publisher","first-page":"45","DOI":"10.1109\/3468.553224","volume":"27","author":"Y.D.
+        Kim","year":"1997","unstructured":"Kim, Y.D.: High Speed Flexible Fuzzy Hardware
+        for Fuzzy Information Processing. IEEE Trans. on Systems, Man, and Cybernetics
+        \u2013 Part A\u00a027(1), 45\u201356 (1997)","journal-title":"IEEE Trans.
+        on Systems, Man, and Cybernetics \u2013 Part A"},{"key":"19_CR13","volume-title":"Neural
+        Fuzzy Systems: A Neuro-Fuzzy Synergism to Intelligent Systems","author":"C.S.
+        Lee","year":"1996","unstructured":"Lee, C.S., Lin, C.: Neural Fuzzy Systems:
+        A Neuro-Fuzzy Synergism to Intelligent Systems. Prentice Hall, Alexandria
+        (1996)"},{"key":"19_CR14","unstructured":"Ginart, A., Sanchez, G.: Fast Defuzzification
+        Method Based on Centroid Estimation. Applied Modelling and Simulation (2002)"},{"key":"19_CR15","doi-asserted-by":"crossref","unstructured":"Runkler,
+        T., Glesner, M.: DECADE\u2014fast centroid approximation defuzzification for
+        real time fuzzy control applications. In: Proceedings of the 1994 ACM Symposium
+        on Applied Computing, pp. 161\u2013165 (1994)","DOI":"10.1145\/326619.326688"},{"key":"19_CR16","unstructured":"Eisele,
+        M., Hentschel, K., Kunemund, T.: Hardware realization of fast defuzzification
+        by adaptive integration. In: Proceedings of the Fourth International Conference
+        on Microelectronics for Neural Networks and Fuzzy Systems, pp. 318\u2013323
+        (1994)"},{"issue":"7","key":"19_CR17","doi-asserted-by":"publisher","first-page":"904","DOI":"10.1016\/j.fss.2005.11.005","volume":"157","author":"E.
+        Broekhoven","year":"2006","unstructured":"Broekhoven, E., Baets, B.: Fast
+        and accurate center of gravity defuzzification of fuzzy system outputs defined
+        on trapezoidal fuzzy partitions. Fuzzy Sets and Systems\u00a0157(7), 904\u2013918
+        (2006)","journal-title":"Fuzzy Sets and Systems"},{"issue":"3","key":"19_CR18","first-page":"115","volume":"2","author":"A.
+        Patel","year":"2004","unstructured":"Patel, A.: Transformation functions for
+        trapezoidal membership functions. International Journal of Computational Cognition\u00a02(3),
+        115\u2013135 (2004)","journal-title":"International Journal of Computational
+        Cognition"},{"key":"19_CR19","series-title":"Lecture Notes in Artificial Intelligence","doi-asserted-by":"publisher","first-page":"93","DOI":"10.1007\/978-3-540-74819-9_12","volume-title":"Knowledge-Based
+        Intelligent Information and Engineering Systems","author":"S.-G. Lee","year":"2007","unstructured":"Lee,
+        S.-G., Miyazaki, M., Kim, J.-I.: Design of Very High-Speed Integer Fuzzy Controller
+        Without Multiplications by Using VHDL. In: Apolloni, B., Howlett, R.J., Jain,
+        L. (eds.) KES 2007, Part I. LNCS (LNAI), vol.\u00a04692, pp. 93\u2013100.
+        Springer, Heidelberg (2007)"},{"key":"19_CR20","unstructured":"Robertson,
+        P., Villebrun, E., Hoeher, P.: A Comparison of Optimal and Sub-Optimal MAP
+        Decoding Algorithms Operating in the Log Domain. In: IEEE Int. Conf. Communications,
+        Seattle, WA, pp. 1009\u20131013 (1995)"},{"key":"19_CR21","unstructured":"Erfanian,
+        J., Pasupathy, S., Gulak, G.: Reduced Complexity Symbol Detectors with Parallel
+        Structures. In: IEEE GLOBECOM, pp. 704\u2013708 (1990)"},{"key":"19_CR22","unstructured":"Kawaji,
+        S., Maeda, T., Matsunaga, N.: Fuzzy Control Using Knowledge Acquired from
+        PD Control. Industrial Electronics, Control and Instrumentation\u00a02, 1549\u20131554
+        (1991)"},{"key":"19_CR23","unstructured":"Gwaltney, D., King, K., Smith, K.,
+        Ormsby, J.: Implementation of Adaptive Digital Controllers on Programmable
+        Logic Devices (2002), \n                    https:\/\/www.researchgate.net\/publication\/23892297_Implementation_of_Adaptive_Digital_Controllers_on_Programmable_Logic_Devices"},{"issue":"3","key":"19_CR24","doi-asserted-by":"publisher","first-page":"526","DOI":"10.1109\/3477.584960","volume":"27","author":"J.
+        Taur","year":"1997","unstructured":"Taur, J., Tao, C.: Design and Analysis
+        of Region-Wise Linear Fuzzy Controllers. IEEE Trans. on Systems, Man and Cybernetics\u00a027(3),
+        526\u2013532 (1997)","journal-title":"IEEE Trans. on Systems, Man and Cybernetics"},{"key":"19_CR25","volume-title":"Modeling
+        and Control of Dynamic Systems","author":"N.F. Macia","year":"2004","unstructured":"Macia,
+        N.F., Thaler, G.J.: Modeling and Control of Dynamic Systems. Delmar Cengage
+        Learning, Albany (2004)"},{"key":"19_CR26","unstructured":"Barolli, L., et
+        al.: A CAC scheme for multimedia applications based on fuzzy logic. In: Proc.
+        Int. C. Advanced Inf. Networking & Apps., Taipei, Taiwan (2005)"},{"issue":"2","key":"19_CR27","doi-asserted-by":"publisher","first-page":"262","DOI":"10.1109\/TNET.2005.845543","volume":"13","author":"G.
+        Ascia","year":"2005","unstructured":"Ascia, G., Catania, V., Panno, D.: An
+        evolutionary management scheme in high-performance packet switches. IEEE\/ACM
+        Trans. Networking\u00a013(2), 262\u2013275 (2005)","journal-title":"IEEE\/ACM
+        Trans. Networking"},{"issue":"5","key":"19_CR28","doi-asserted-by":"publisher","first-page":"530","DOI":"10.1109\/TMC.2005.70","volume":"4","author":"H.-P.
+        Lin","year":"2005","unstructured":"Lin, H.-P., Juang, R.-T., Lin, D.-B.: Validation
+        of an improved location-based handover algorithm using GSM measurement data.
+        IEEE Trans. Mobile Comput.\u00a04(5), 530\u2013536 (2005)","journal-title":"IEEE
+        Trans. Mobile Comput."},{"key":"19_CR29","doi-asserted-by":"crossref","unstructured":"Razib,
+        A., Dick, S., Gaudet, V.: Design of a High-Speed Fuzzy Logic Controller Based
+        on Log-Domain Arithmetic. In: Proceedings, ISMVL 2009, Naha, Okinawa, Japan,
+        May 21-23, pp. 139\u2013144 (2009)","DOI":"10.1109\/ISMVL.2009.40"}],"container-title":["Soft
+        Computing: State of the Art Theory and Novel Applications","Studies in Fuzziness
+        and Soft Computing"],"original-title":[],"link":[{"URL":"https:\/\/link.springer.com\/content\/pdf\/10.1007\/978-3-642-34922-5_19","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2023,2,17]],"date-time":"2023-02-17T21:26:15Z","timestamp":1676669175000},"score":1,"resource":{"primary":{"URL":"https:\/\/link.springer.com\/10.1007\/978-3-642-34922-5_19"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2013]]},"ISBN":["9783642349218","9783642349225"],"references-count":29,"URL":"http:\/\/dx.doi.org\/10.1007\/978-3-642-34922-5_19","relation":{},"ISSN":["1434-9922","1860-0808"],"issn-type":[{"value":"1434-9922","type":"print"},{"value":"1860-0808","type":"electronic"}],"published":{"date-parts":[[2013]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:13 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1007
@@ -71,30 +152,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:43 GMT
+      - Sun, 12 Mar 2023 19:21:13 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=I7KDjyYjaBQyrxySBjDjigD2oTsDJKTa6mSInitHbaeRcBWOfBhEq8eKNQNXizi4eRQUEMFcX7Crn3Psoexwj2%2F4rdIAeFjRw6XWWqh5IexU9p0fzwaqAidM0mDLFpYyrgFC1qI%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bUOOvdgOODO6c7eMDTIKdBgHgdiz%2FWaBh4jchHnPtUYKZ8%2BZVq15t7VXRT20FTKcfF54PoxzqURA9hmlzB87qYmVGGJy3v7%2BlYNXRSo%2BQ9N0yzDUoCY7WD0P%2BAm%2FfZmosNwI4tQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -102,72 +183,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a62511b88b0b76a-AMS
+      - 7a6e66255d05b894-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9QwMDcyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAxkrz2jYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:43 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1007/978-3-642-34922-5_19
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:34 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '4024'
-      Set-Cookie:
-      - AWSALB=HQtXsmEr8L1O/nqVMe1PFas/hwBGgqUtP75m65LVuTUixJibQ2gFxJyMsZWpbXITJhQUfTN6zkYodPAkTqN0Ki9em+kp/jDm+L/pjASJKWRr9SPBiKc5Ess+si7M;
-        Expires=Sat, 18 Mar 2023 08:54:34 GMT; Path=/, AWSALBCORS=HQtXsmEr8L1O/nqVMe1PFas/hwBGgqUtP75m65LVuTUixJibQ2gFxJyMsZWpbXITJhQUfTN6zkYodPAkTqN0Ki9em+kp/jDm+L/pjASJKWRr9SPBiKc5Ess+si7M;
-        Expires=Sat, 18 Mar 2023 08:54:34 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAA/8Vaa2/bOhL9K4Q/LFLAUvSW5W9OnKZp4zSIc3u3bYqAlmibN3r4SlRSt+h/3xlSsiVLaZvFPooCsS1qxDnzOjPi90EhqCiLwXiQPQyGg4QVBV0xTWw3DH57yvLmr48sL3iWwgVTN3Rjf2Uw/j7gacS+sgg/RlQwbUNzAXI/f7YMyx5aQ9P/8mWoLgmeoHS8oBmWZvq3ljl2jLHpfQKZeBV2lWwG8IPveb5hmJ5jWD+Gg025iHmxZrkWZyEVai8nLI95OiRvGI9YvGD5CoTkbMlyloZMC7MyFYOxFTRuh7vmm5ynK5YTdXv7bl4s0gqDz98HjzQucb+BP7I9x7KdwDJHuFEFEgoSgx/D3oWWu1/IYhaKPEt5OPgBUMQ8ZGmhHgH65qIPOtMemkOzi5wJyJnw/9YwxvL/IXK26wXByDHwHyAXZqlgqWiYUEQJ3AI6063GUy2iW3ikMRz8cXMJV9dCbIrx3fHd8dPTk15UYKXgKznTwyy5O15t7o5zVjCah4BocXcs2Feh0TQCUYJqCU/hFgnL/0G5xyz/Xyj3Zf/sKEsoT6WW1afPeDXPiiKh+YMG0kTOQ+WzSxoXDDZerLNcaCgC7gCvFlzETN1Z+2qkKf/qhe/LFxAyfX+BEWnopmH4d8fgfJqtgftp0v80994M9j64yLIHLVzTjWCIUJgzENobtCaErDG0+8wDIWtotnlrumP474y65jG9wHOdkTLPRmaIgeUFmjXyYW2RlXmIP50iPBCqMuS0XcxG2mJbx62JohUqg8tspU0lumSSc7FOmOAhWWY5ecNXa22+YSwir8tv37bkFDDNs5hkKaHkNWdxpF3n2SqnSUIXMSPnoBEIyel2gGDDo/nXPYqwH1oKMI4MzhV/ZOhUk5jDhSVNeLyFrzf0G1+gNuzvEncNPy15Xgi8ebnkMa8S1OcvGAS1kHmYCdEUM+XhQ1sKjSKOt9L456I+cFiftoSd0zJi4gXivmAOTxYyJVqB38ycUndeFDKl2XDlgeEjzOD+9MbE6Mq4RouC5UIaDDPhLr8OFRRaZXrbxnzZcFTTuzueQ14PtCBwR0ee+yowLMfU/gnLHrO4lJ42aphhcKmTTzRia/htC2EpN+Jhci1TCKwyxNgFPx7IRUNyqY8rT5gzUejkIgU3SaTeBMK49o+70jCoMTqyXw0JbPKuxKiyXZscofRXIP4v8FWArg7NwTOCZKJrAGS9DCDTHFkthEwjuDu+PdXNwPd1KIOO7wdNbCyvCc6Z/kYnM5pENOVNgHy/C1C1bEjwpjGZbDZQiJQ+2bLCDAINAktkeDXPvvIEo+WG0SLDvAdonp2dkducpoDsaZZsSoFJUmJ5ZHmAJeqjwDTNwEQ0fb8XzT5Bh1javViG+9xxoOEbCmzgQp+DdjPp28Wab0CzVGZfcsrzsORC5o0rVuY0vjtWar+hefREc4ZATGCbkG5mHDgNeb9huYLohBbwHT6INSOtjAKOEMEeKEQOuttYgXSRCr12xG0hWFLgwqU+JJuNTkyFkUOOLMg6r7oe8PqPT58+6nhRd6zA9bxAglNH5agdlc7LnA5qRDsqHXgii8fwONtwbKfpb3ZwEIy3fEVZXu69De/q2qJapgKyhReVAJeMJHsbLWsbhQ0brbeLnEdakkUMFiCShUJSJ2c7RlWQSyb2XmgHRyNwQ9BQIew5CmO7zwl7pBy6YE+ieUeBXDxkj+hqQ3KbxWJIzjHr0ELU++QreI5MExBCK0YgmEJgzBBDZF35mvKVSZqWsHLGoKLBRfA/9K8rYAdrMkkYEAeaVm7UTEDXe3nzLORMbJVf+VXsWVJp69WhOt4LIwpr1JDMQU9VYIbkA3w+oZBFMIeccKGBII667uoyKEXS7JHBb5hEaLjGhKKAqZUHWDYxS6CISX3+K1hUMeZJKEY9MXY1eX1xPccgG+mOC6C5o1aQee0g818WZL5tdh9pO95ID0a2YxutIDObQfZJJ3Mah9AtNGPM7FpHrRqST2AKSYQKSYTCshBZwr/JaJO4Q9eEeb3ywiwfE+S3XDApqvLTA4PsEjSVkVlg7qsy2RBKTlUEtxDBKVodfrwGDkkmVRyaR1gOAARlBd/2pR3MnxeDFz7r0L1HO1B3soEFkNs1y/KtFCILXBPsG/0G4BZZHLfqZ9CDNi4aErxhTPrE6mQKbp+Ta3QJVVlhp1fsiXyEdlrWwqATkUF3y2fgYKmAoCr2hXkGSTBGF29Sj4YaU/0ayg2P2WNTjcDpqiEXDQneMCQfwVfzWqfffa5O/gQZ27ZqgdNRzTR+GTEHmr8G6h/RygWWbUbf1PatTt7SVHwDNtwMkR7SUy0bkreYoX8ivkepbmmGlCr7LMPxDcMzTd/r6NxPkJ/PsBeLnK55MiSTHXFVJAwr4BkUyCiCkK4pRIO0ySpYsEcOHodbdQ62ikz7BHtCw3cNz/cMV4PNu9CZeZrbynPmAcV/IYV13GfynOvaltUiE1azwRp81Kc6eceTlsf22PAdwoOLVZYjVbsXs68cM9wBhUPcflYk2iT2INEMDzMNUemrldss/8iE3Oa46prrSf//Jc192aM6jmV3w0WR2DbLxOqLv2da/XPK8hUvEizCQEpZHPMVhHm9vmmQU6DOQIRYyyBe1yCwZEhwMbA7HMCdgmX+E3vRwUyYgUIG5sRcOwEbA0pAMCTEXjfF9CS4c54CghhQwFyAla/ZtwZBmzKsiHxZtz4zBspHe3p/yjAd8AiyoeBJVQxl2MF1mQ136XDOkzJWUvrZlum+MBnclOlDjAn5FhlXzIoUv8xg79Oz08n0THqIs0Q9wnqfdNep4UaiA/UwGnIGhsExTUXCwmpEQlvJBBmYjBIWgYJFTb8ws5PJ6QxslGyygpcJolQDolo3WF9RLq8q96bn1kWhlRsgZo5ty/PMQMc/o1EHsh53O+MFixnigLPeVBRgUnCOd/D1XZmyBJI6Ijbe5wDUGPhP3dtKwA6RWUDljuhG8Edgo+CLq7xBRXuAgOKBRBTdFieGcq4iWzo1NEFUZhxMyxpNxb7ThD8Ch+qF9JxWlCjobLMeQlh2s57WSdo/SNIvZKOB4XTLw1/6siiQ/7pgGh3+NHO16baS9ZlOTkC5h3X2eFB1eyy2X4nTBmwYmAA9T+ogRAxoGAIwgklPhhoGMIMJHrnYdkyFJmz0fyQrBXhdget4WnXlOd2wbxAPALVaixNNXvn2fiCkAlcBr7I56HnkQzoHhJQBAnMk49nrS+j9klqWOpyYjboznxbQVhPmCeRAACVuIdyT5OQiRRpkedlXurqVVt7XxKWn35Zx33Tot0pfhFzF9t7TV6mEs6qBcnIGmlTxbrt7EtKdnL3sCZ2cEMi5Zs5ZsZN5WbUuV5lgBZFzYYEOg63ovrKE7IVRYg+eGau7jqH5zgjnlveSIB2U4ndp9hSzaMU0VUma1e1wcniWrsBtWS471m4Vnuva+UEZ7ue2sgzL1ZAb+ZZ+ow9cZUnJmN7q2gVWDobTCIT7A4NupTEwxz3ii7AWD4byA0wYtlIKMitjwfc1AlPmH7LP/vBmeln17Bu4JcOp4glmZwRBCGwo3sLXtxTZAaw8YlGhvyLvzuYEVanatwvQ8up0To4uryYX4E0Aqa68y/ECS6XFwK4czDCgTate2DRf+dU0/XAMa/RU1wxuEEUGe8Le5wMHZRd5WeWoNxlbo+hrnI1K16Q5L1T2eb9BLqAGOvNyodXfZ5NrwDfMsFAAWVllcghS1GND+JGrgSFQeqJeYByOCOVQEB8HZWzfNM4ZFQJr3p+TqrIaQKsrJExVINyu0j0zgrN8SVNOZQeEuBflhor1thrqAH95UOTohkVlWFV0ZNYC61OyAJowZTgnyPKCPIF2aDrgZiyGprl6TNHQ6fzy/cnZ6ftZNY6qc6pvjOSeje6erb4J2xP9i6stziiLqCJEMyqKMqUr+Hq1a5bq9z3KMXdhSCbh3yUHcWSZZwm5nu77vIs0KvGVHNivMQAc7iShkS/khnbjkCrnQcJzndoMrutIlcyuSj3j0PMnGosU+8upjE9kTEhg5glgqj6+z5NisVWd6kVrGiPH0jVXmfIVF4p6VPEqxyWtEavqIKfQHELTU5HTIblLSc+/9jvR+t3nCuqLDn3J3fFmP824O7bsUWBZgX/f3uB9tryvN3hfbfC+scF7WNLc4L3c4H21wZ9VT+uFo21Xvh/pdKO+r7sjJ/BaU7d2N/pWJ7e0zH/VjOIaFUu3NFOtT5Vh0W/w5cG24JI03rAVQKP9CewV2yQQ2sm0xU+b0cMGcdd9YukFRav207b+rf7zUHrHi91uleubBqGq021KE/C4nmp2pb/GN1RQmH9FaeQiDO3XCO6aykboXMdw+M3n6mCKOAGcoYlb4dj9Ep6XylibxAuabmuOcqhqH4WlaCKO5WtIGFDWWNWFySnB/iNRg4YEK2QCjQJtdVNkUbeTiovGajxYdxZ6lfqhsYwe8b0RJhyoAlWPgIr+A1usQnoZ3zAu/z5R1Wi67c7AOoiYF3YGltf3AvLq7FY1BiMHEp3dDBs5idjZF6jKpDi0bs9bE7kI7QkxQwWWJPUu4ZqmaYZZEef/hOFTJB8EqpJQSPYyydSQQzVdI3+B8iopFfZdGxo+gH0KKE6wqIqou2NsWSvH38NaMX77CNMhKK4iyPLdGtf+CHpGWssK7oEVRi/MW/KFwKEVZqfKCH4rbzlN/N/o2rWO+eVXBpCTGrka0ldJMShudO22nuFMdQ3bsw/QOEe7ogMOx5NNDo1cROqDV5ry7TWEopx205r2kFKW4PP5DDoN4Bm5Mh2em2mnuVm24PK9KbL/mvEduZjUbKNOat7PTdIvqxPYwUsHMHi0Q42O+l59Ndk07Z49UWW3QaR3U6XeAyydUcOQXMxnHy6RIweQCOkaYuQ9eBrQISTTG2RxM7ollqlZdsUL7ZqPVC86g54XXVIqelKgO8bu8FL75NFgni3Ffp4zBnqHzXk1/IDuqvm640q+3msOo+Ghc1FGXDVjCAdIL6omuSUZj92Aw0ALtDfpZ3kqLn2QJ08Oj2rhhd1ZLXVKqzp7BeQkWt4d/+oEVH1SqzoJBSbfsBCaRbD480fIcCSURuAxjbwOFwue8BjfdW41yDbhQ30aLGI4HHvmRNVvHYO0vLHp9h2D9ALTd9WBqiLMciaPRgFPq85SfcdziFD0tvjxN7D7OVo/8CnlomEXdVSt8YPMeP0nx9S5tIv5yRV61OGxyfbpyC+NE0dF87DmXgepQvRVhwjWs3z1a0vnLK4M9V3uYy73YTq2owWB7DTMkWdoxsgYDZQmPac9m8ufPem5l/PcKc/dOb5nkfrx419FQsXLhisAAA==
-  recorded_at: Sat, 11 Mar 2023 08:54:34 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1007",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:13 GMT
 recorded_with: VCR 6.1.0

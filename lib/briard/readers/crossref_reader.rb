@@ -6,11 +6,16 @@ module Briard
       def get_crossref(id: nil, **options)
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
-        url = crossref_api_url(id, options)
-        response = Maremma.get(url)
-        return { "string" => nil, "state" => "not_found" } if response.body.dig("data", "status") != "ok"
+        api_url = crossref_api_url(id, options)
+        conn = Faraday.new(api_url, request: { timeout: 5 }) do |f|
+          f.request :json
+          # f.response :json
+        end
+        response = conn.get(api_url)
+        body = JSON.parse(response.body)
+        return { "string" => nil, "state" => "not_found" } if body.dig("data", "status") != "ok"
 
-        string = response.body.dig("data", "message").to_json
+        string = body.dig("message").to_json
 
         { "string" => string }
       end
@@ -23,7 +28,7 @@ module Briard
 
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
-        meta = string.present? ? Maremma.from_json(string) : {}
+        meta = string.present? ? JSON.parse(string) : {}
 
         resource_type = meta.fetch("type", nil)
         resource_type = resource_type.present? ? resource_type.underscore.camelcase : nil

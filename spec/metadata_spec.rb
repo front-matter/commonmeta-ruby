@@ -96,12 +96,6 @@ describe Briard::Metadata, vcr: true do
       expect(subject.find_from_format(string: string)).to eq('crossref')
     end
 
-    it 'datacite_xml' do
-      file = "#{fixture_path}datacite.xml"
-      string = File.read(file)
-      expect(subject.find_from_format(string: string)).to eq('datacite_xml')
-    end
-
     it 'datacite' do
       file = "#{fixture_path}datacite.json"
       string = File.read(file)

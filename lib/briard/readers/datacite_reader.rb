@@ -7,13 +7,22 @@ module Briard
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
         api_url = datacite_api_url(id, options)
-        response = Maremma.get(api_url)
-        attributes = response.body.dig("data", "attributes")
+        conn = Faraday.new(api_url, request: { timeout: 5 }) do |f|
+          f.request :gzip
+          f.request :json
+          # f.response :json
+        end
+        response = conn.get(api_url)
+        body = JSON.parse(response.body)
+        attributes = body.dig("data", "attributes")
         return { "string" => nil, "state" => "not_found" } unless attributes.present?
 
+        # remove the base64 encoded xml
+        attributes.delete("xml")
+        # convert the attributes to json for consitency with other readers
         string = attributes.to_json
 
-        client = Array.wrap(response.body.fetch("included", nil)).find do |m|
+        client = Array.wrap(body.fetch("included", nil)).find do |m|
           m["type"] == "clients"
         end
         client_id = client.to_h.fetch("id", nil)
@@ -22,8 +31,8 @@ module Briard
         end.to_h.dig("provider", "data", "id")
 
         content_url = attributes.fetch("contentUrl",
-                                       nil) || Array.wrap(response.body.fetch("included",
-                                                                              nil)).select do |m|
+                                       nil) || Array.wrap(body.fetch("included",
+                                                                     nil)).select do |m|
           m["type"] == "media"
         end.map do |m|
           m.dig("attributes", "url")
@@ -40,30 +49,24 @@ module Briard
       end
 
       def read_datacite(string: nil, **_options)
-        # errors = jsonlint(string)
-        # return { 'errors' => errors } if errors.present?
-        # read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
-        #   :sandbox, :validate, :ra))
-        read_options = {}
-
-        meta = string.present? ? Maremma.from_json(string).transform_keys!(&:underscore) : {}
-
+        errors = jsonlint(string)
+        return { "errors" => errors } if errors.present?
+        read_options = ActiveSupport::HashWithIndifferentAccess.new(_options.except(:doi, :id, :url,
+                                                                                   :sandbox, :validate, :ra))
+        meta = string.present? ? JSON.parse(string).transform_keys!(&:underscore) : {}
+        
         id = normalize_doi(meta.fetch("doi", nil))
         types = meta.fetch("types", nil)
         identifiers = meta.fetch("identifiers", nil)
         url = meta.fetch("url", nil)
-        titles = Array.wrap(meta.fetch("titles", nil)). map do |title|
+        titles = Array.wrap(meta.fetch("titles", nil)).map do |title|
           title.compact
         end
-        creators = Array.wrap(meta.fetch("creators", nil)).map do |creator|
-          format_contributor(creator)
-        end
+        creators = get_authors(meta.fetch("creators", nil))
         publisher = meta.fetch("publisher", nil)
-        publication_year = meta.fetch("publication_year", '').to_i
+        publication_year = meta.fetch("publication_year", "").to_i
 
-        contributors = Array.wrap(meta.fetch("contributors", nil)).map do |contributor|
-          format_contributor(contributor)
-        end
+        contributors = get_authors(meta.fetch("contributors", nil))
         container = meta.fetch("container", nil)
         funding_references = meta.fetch("funding_references", nil)
         dates = Array.wrap(meta.fetch("dates", nil)).map do |date|
@@ -72,7 +75,15 @@ module Briard
         descriptions = Array.wrap(meta.fetch("descriptions", nil)).map do |description|
           description.compact
         end
-        rights_list = meta.fetch("rights_list", nil)
+        rights_list = Array.wrap(meta.dig("rights_list")).map do |r|
+          if r.blank?
+            nil
+          elsif r.is_a?(String)
+            name_to_spdx(r)
+          elsif r.is_a?(Hash)
+            hsh_to_spdx(r)
+          end
+        end.compact
         version_info = meta.fetch("version", nil)
         subjects = meta.fetch("subjects", nil)
         language = meta.fetch("language", nil)

@@ -2,36 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1890/0012-9658(2006)87%5B2832:tiopma%5D2.0.co;2/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1890/0012-9658(2006)87%5B2832:tiopma%5D2.0.co;2
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:10:04 GMT
+      - Sun, 12 Mar 2023 19:21:09 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '2632'
-      Set-Cookie:
-      - AWSALB=ihex/UTRfRvgymdHJfKl8dbGPP1jezFnS7+0BSiqcQxMST/EX/VfakmH7CWXwItcnbQySPfbFGHmp6UTgf4OAkENrAS4gpoCYcm35H3ITjFpG8dVlHRDOqAtDiia;
-        Expires=Sat, 18 Mar 2023 08:10:04 GMT; Path=/, AWSALBCORS=ihex/UTRfRvgymdHJfKl8dbGPP1jezFnS7+0BSiqcQxMST/EX/VfakmH7CWXwItcnbQySPfbFGHmp6UTgf4OAkENrAS4gpoCYcm35H3ITjFpG8dVlHRDOqAtDiia;
-        Expires=Sat, 18 Mar 2023 08:10:04 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1890/0012-9658(2006)87[2832:tiopma]2.0.co;2>; rel="canonical",
-        <https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1890%2F0012-9658(2006)87%5B2832:TIOPMA%5D2.0.CO;2>;
-        version="vor"; rel="item", <https://onlinelibrary.wiley.com/doi/full/10.1890/0012-9658(2006)87%5B2832:TIOPMA%5D2.0.CO;2>;
-        version="vor"; rel="item", <http://doi.wiley.com/10.1002/tdm_license_1.1>;
-        version="tdm"; rel="license"
+      - '7094'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -41,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -50,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -61,9 +51,27 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:10:04 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,2,23]],"date-time":"2023-02-23T03:30:17Z","timestamp":1677123017103},"reference-count":39,"publisher":"Wiley","issue":"11","license":[{"start":{"date-parts":[[2015,9,1]],"date-time":"2015-09-01T00:00:00Z","timestamp":1441065600000},"content-version":"tdm","delay-in-days":3226,"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1.1"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Ecology"],"published-print":{"date-parts":[[2006,11]]},"DOI":"10.1890\/0012-9658(2006)87[2832:tiopma]2.0.co;2","type":"journal-article","created":{"date-parts":[[2007,6,4]],"date-time":"2007-06-04T19:36:12Z","timestamp":1180985772000},"page":"2832-2841","source":"Crossref","is-referenced-by-count":70,"title":["THE
+        IMPACT OF PARASITE MANIPULATION AND PREDATOR FORAGING BEHAVIOR ON PREDATOR\u2013PREY
+        COMMUNITIES"],"prefix":"10.1002","volume":"87","author":[{"given":"A.","family":"Fenton","sequence":"first","affiliation":[]},{"given":"S.
+        A.","family":"Rands","sequence":"additional","affiliation":[]}],"member":"311","reference":[{"key":"i0012-9658-87-11-2832-anderson1","doi-asserted-by":"publisher","DOI":"10.2307\/3933"},{"key":"i0012-9658-87-11-2832-anderson2","doi-asserted-by":"publisher","DOI":"10.1098\/rstb.1981.0005"},{"key":"i0012-9658-87-11-2832-bethel1","doi-asserted-by":"publisher","DOI":"10.2307\/3278623"},{"key":"i0012-9658-87-11-2832-bowers1","doi-asserted-by":"publisher","DOI":"10.1016\/S0022-5193(05)80240-1"},{"key":"i0012-9658-87-11-2832-brown1","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.1999.0864"},{"key":"i0012-9658-87-11-2832-brown2","doi-asserted-by":"publisher","DOI":"10.1017\/S0031182001008678"},{"key":"i0012-9658-87-11-2832-brown3","doi-asserted-by":"publisher","DOI":"10.1016\/S0020-7519(02)00013-9"},{"key":"i0012-9658-87-11-2832-damsgaard1","doi-asserted-by":"publisher","DOI":"10.1016\/j.seares.2005.04.001"},{"key":"i0012-9658-87-11-2832-dobson2","doi-asserted-by":"publisher","DOI":"10.1086\/415837"},{"key":"i0012-9658-87-11-2832-dobson1","doi-asserted-by":"publisher","DOI":"10.1086\/424681"},{"key":"i0012-9658-87-11-2832-dobson3","doi-asserted-by":"publisher","DOI":"10.2307\/5339"},{"key":"i0012-9658-87-11-2832-dobson4","unstructured":"A.
+        P. Dobson, and A. E. Keymer .1985 .Life history models .Pages347 -384inD.
+        W. T. Crompton and B. B. Nickol, editorsBiology of the Acanthocephala Cambridge
+        University Press, Cambridge, UK."},{"key":"i0012-9658-87-11-2832-fenton1","doi-asserted-by":"publisher","DOI":"10.1016\/j.ijpara.2004.02.003"},{"key":"i0012-9658-87-11-2832-franz1","doi-asserted-by":"publisher","DOI":"10.1017\/S0031182002001932"},{"key":"i0012-9658-87-11-2832-getz1","doi-asserted-by":"publisher","DOI":"10.1086\/284112"},{"key":"i0012-9658-87-11-2832-holling1","doi-asserted-by":"publisher","DOI":"10.4039\/Ent91385-7"},{"key":"i0012-9658-87-11-2832-holt1","doi-asserted-by":"publisher","DOI":"10.1086\/284153"},{"key":"i0012-9658-87-11-2832-holt2","doi-asserted-by":"publisher","DOI":"10.1086\/284409"},{"key":"i0012-9658-87-11-2832-hudson1","doi-asserted-by":"publisher","DOI":"10.1126\/science.282.5397.2256"},{"key":"i0012-9658-87-11-2832-hudson2","unstructured":"P.
+        J. Hudson, A. Rizzoli, B. T. Grenfell, H. Heesterbeek, and A. P. Dobson .2002
+        .The ecology of wildlife diseases Oxford University Press, Oxford, UK."},{"key":"i0012-9658-87-11-2832-keeling1","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.1999.0716"},{"key":"i0012-9658-87-11-2832-lacroix1","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pbio.0030298"},{"key":"i0012-9658-87-11-2832-lafferty1","doi-asserted-by":"publisher","DOI":"10.1086\/285444"},{"key":"i0012-9658-87-11-2832-mccallum1","doi-asserted-by":"publisher","DOI":"10.1016\/S0169-5347(01)02144-9"},{"key":"i0012-9658-87-11-2832-moore1","doi-asserted-by":"publisher","DOI":"10.2307\/1937807"},{"key":"i0012-9658-87-11-2832-moore2","doi-asserted-by":"publisher","DOI":"10.1086\/284224"},{"key":"i0012-9658-87-11-2832-moore3","unstructured":"J.
+        Moore, 2002 .Parasites and the behavior of animals Oxford University Press,
+        New York, New York, USA."},{"key":"i0012-9658-87-11-2832-morand1","doi-asserted-by":"publisher","DOI":"10.1016\/S0304-3800(96)00028-2"},{"key":"i0012-9658-87-11-2832-poulin1","doi-asserted-by":"crossref","unstructured":"R.
+        Poulin, 1994 .The evolution of parasite manipulation of host behaviour: a
+        theoretical analysis .Parasitology,109:S109 -S118 .","DOI":"10.1017\/S0031182000085127"},{"key":"i0012-9658-87-11-2832-rands1","doi-asserted-by":"publisher","DOI":"10.1006\/jtbi.1999.1048"},{"key":"i0012-9658-87-11-2832-seppala1","doi-asserted-by":"publisher","DOI":"10.1016\/j.anbehav.2005.01.020"},{"key":"i0012-9658-87-11-2832-stephens1","unstructured":"D.
+        W. Stephens, and J. R. Krebs .1986 .Foraging theory Princeton University Press,
+        Princeton, New Jersey, USA."},{"key":"i0012-9658-87-11-2832-swinton1","doi-asserted-by":"publisher","DOI":"10.1046\/j.1365-2656.1998.00176.x"},{"key":"i0012-9658-87-11-2832-thomas1","doi-asserted-by":"publisher","DOI":"10.1016\/j.beproc.2004.06.010"},{"key":"i0012-9658-87-11-2832-thomas2","doi-asserted-by":"publisher","DOI":"10.1016\/S1471-4922(02)02339-5"},{"key":"i0012-9658-87-11-2832-thomas3","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.1998.0403"},{"key":"i0012-9658-87-11-2832-tompkins1","doi-asserted-by":"publisher","DOI":"10.1111\/j.1420-9101.2003.00688.x"},{"key":"i0012-9658-87-11-2832-turner1","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.2002.2213"},{"key":"i0012-9658-87-11-2832-ydenberg1","unstructured":"R.
+        C. Ydenberg, 1998 .Behavioral decisions about foraging and predator avoidance
+        .Pages343 -378inR. Dukas, editorCognitive ecology: the evolutionary ecology
+        of information processing and decision making University of Chicago Press,
+        Chicago, Illinois, USA."}],"container-title":["Ecology"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/api.wiley.com\/onlinelibrary\/tdm\/v1\/articles\/10.1890%2F0012-9658(2006)87%5B2832:TIOPMA%5D2.0.CO;2","content-type":"unspecified","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/onlinelibrary.wiley.com\/doi\/full\/10.1890\/0012-9658(2006)87%5B2832:TIOPMA%5D2.0.CO;2","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,4,28]],"date-time":"2019-04-28T13:51:50Z","timestamp":1556459510000},"score":1,"resource":{"primary":{"URL":"http:\/\/doi.wiley.com\/10.1890\/0012-9658(2006)87[2832:TIOPMA]2.0.CO;2"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2006,11]]},"references-count":39,"journal-issue":{"issue":"11","published-print":{"date-parts":[[2006,11]]}},"alternative-id":["10.1890\/0012-9658(2006)87[2832:TIOPMA]2.0.CO;2"],"URL":"http:\/\/dx.doi.org\/10.1890\/0012-9658(2006)87[2832:tiopma]2.0.co;2","relation":{},"ISSN":["0012-9658"],"issn-type":[{"value":"0012-9658","type":"print"}],"subject":["Ecology,
+        Evolution, Behavior and Systematics"],"published":{"date-parts":[[2006,11]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:09 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1890
@@ -72,30 +80,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:10:04 GMT
+      - Sun, 12 Mar 2023 19:21:10 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ceT0PiRM1pS6ab14sRB%2BiAikLphsWprw9y464bUGpWzKkpkdEG%2Buzb426TJ9UG%2FxQrGYr%2BhEEcc2RBCcJ8LK0Jp8KjqVEofEdh1ByVekb4ADhJzHE7TNudGRGgwcj631IrVPGHg%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=U3gNCCUbrDhYZ8dkVzCaQYbihIhbVZUyfobf3RgYjD5a1K1fu1ugTlUKCRVi8vqTAI1AVob%2FpkUx0%2FJMIrAHtDT5Ym%2B57lNnZFIEugxzNoD33Yg8D4op6GGDTlTfwAiRmwLXqT8%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -103,72 +111,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6251a41b6a1c8a-AMS
+      - 7a6e660d08c90ea8-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9QwtLAyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA83kd9TYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:10:04 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1890/0012-9658(2006)87%5B2832:tiopma%5D2.0.co;2
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:30 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '2270'
-      Set-Cookie:
-      - AWSALB=vY33bhq4l5fpiAIbpEzXj3RzGm2a3iq/OvRxD5+37Dkfz9VWdl3XaAHYolOVXnNfKekscrLVD9x6IjoSVeWxzr+01WYXoupSiPXmsFBEzc89avjOn8tGMotAqNDx;
-        Expires=Sat, 18 Mar 2023 08:54:30 GMT; Path=/, AWSALBCORS=vY33bhq4l5fpiAIbpEzXj3RzGm2a3iq/OvRxD5+37Dkfz9VWdl3XaAHYolOVXnNfKekscrLVD9x6IjoSVeWxzr+01WYXoupSiPXmsFBEzc89avjOn8tGMotAqNDx;
-        Expires=Sat, 18 Mar 2023 08:54:30 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:30 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1890",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:10 GMT
 recorded_with: VCR 6.1.0

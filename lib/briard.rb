@@ -3,7 +3,8 @@
 require 'dotenv/load'
 require 'active_support/all'
 require 'nokogiri'
-require 'maremma'
+require 'faraday'
+require 'faraday/gzip'
 require 'multi_json'
 require 'xmlhasher'
 require 'postrank-uri'
@@ -31,4 +32,4 @@ require 'briard/string'
 require 'briard/array'
 require 'briard/whitelist_scrubber'
 
-ENV['USER_AGENT'] ||= "Mozilla/5.0 (compatible; Maremma/#{Maremma::VERSION}; mailto:info@front-matter.io)"
+ENV['USER_AGENT'] ||= "Mozilla/5.0 (compatible; mailto:info@front-matter.io)"

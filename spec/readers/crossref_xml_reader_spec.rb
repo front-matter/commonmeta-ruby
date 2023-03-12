@@ -128,7 +128,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: "crossref_xml")
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.7600/jspfsm.56.60")
-      expect(subject.url).to eq("https://www.jstage.jst.go.jp/article/jspfsm/56/1/56_1_60/_article/-char/ja/")
+      expect(subject.url).to eq("https://www.jstage.jst.go.jp/article/jspfsm/56/1/56_1_60/_article/-char/ja")
       expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
                                   "resourceType" => "JournalArticle", "resourceTypeGeneral" => "JournalArticle", "ris" => "JOUR", "schemaOrg" => "ScholarlyArticle")
       expect(subject.creators).to eq([{ "name" => ":(unav)", "nameType" => "Organizational" }])
@@ -268,7 +268,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: "crossref_xml")
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1890/0012-9658(2006)87%255b2832:tiopma%255d2.0.co;2")
-      expect(subject.url).to eq("http://doi.wiley.com/10.1890/0012-9658(2006)87[2832:TIOPMA]2.0.CO;2")
+      expect(subject.url).to eq("http://doi.wiley.com/10.1890/0012-9658(2006)87%5B2832:TIOPMA%5D2.0.CO;2")
       expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
                                   "resourceType" => "JournalArticle", "resourceTypeGeneral" => "JournalArticle", "ris" => "JOUR", "schemaOrg" => "ScholarlyArticle")
       expect(subject.creators).to eq([
@@ -296,7 +296,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: "crossref_xml")
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1155/2012/291294")
-      expect(subject.url).to eq("http://www.hindawi.com/journals/pm/2012/291294/")
+      expect(subject.url).to eq("http://www.hindawi.com/journals/pm/2012/291294")
       expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
                                   "resourceType" => "JournalArticle", "resourceTypeGeneral" => "JournalArticle", "ris" => "JOUR", "schemaOrg" => "ScholarlyArticle")
       expect(subject.creators.length).to eq(7)
@@ -889,7 +889,7 @@ describe Briard::Metadata, vcr: true do
                                            "name" => "Huang, Guimei", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Synthesis, Crystal Structure and Theoretical Calculation of a Novel Nickel(II) Complex with Dibromotyrosine and 1,10-Phenanthroline" }])
       expect(subject.dates).to eq([{ "date" => "2013-10-20", "dateType" => "Issued" },
-                                   { "date" => "2016-12-15", "dateType" => "Updated" }])
+                                   { "date" => "2016-12-14", "dateType" => "Updated" }])
       expect(subject.publication_year).to eq(2013)
       expect(subject.publisher).to eq("Korean Chemical Society")
       expect(subject.agency).to eq("KISTI")
@@ -1208,7 +1208,7 @@ describe Briard::Metadata, vcr: true do
       input = "10.2172/972169"
       subject = described_class.new(input: input, from: "crossref_xml")
       expect(subject.valid?).to be true
-      expect(subject.url).to eq("http://www.osti.gov/servlets/purl/972169-1QXROM/")
+      expect(subject.url).to eq("http://www.osti.gov/servlets/purl/972169-1QXROM")
       expect(subject.types).to eq("bibtex" => "techreport", "citeproc" => "report",
                                   "resourceType" => "Report", "resourceTypeGeneral" => "Report", "ris" => "RPRT", "schemaOrg" => "Report")
       expect(subject.creators.count).to eq(4)

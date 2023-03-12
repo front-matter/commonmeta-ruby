@@ -3,7 +3,6 @@
 require_relative 'doi_utils'
 require_relative 'author_utils'
 require_relative 'crossref_utils'
-require_relative 'datacite_utils'
 require_relative 'schema_utils'
 require_relative 'utils'
 
@@ -14,7 +13,6 @@ require_relative 'readers/codemeta_reader'
 require_relative 'readers/crossref_reader'
 require_relative 'readers/crossref_xml_reader'
 require_relative 'readers/datacite_reader'
-require_relative 'readers/datacite_xml_reader'
 require_relative 'readers/npm_reader'
 require_relative 'readers/ris_reader'
 require_relative 'readers/schema_org_reader'
@@ -27,7 +25,6 @@ require_relative 'writers/codemeta_writer'
 require_relative 'writers/crossref_xml_writer'
 require_relative 'writers/csv_writer'
 require_relative 'writers/datacite_writer'
-require_relative 'writers/datacite_xml_writer'
 require_relative 'writers/jats_writer'
 require_relative 'writers/rdf_xml_writer'
 require_relative 'writers/ris_writer'
@@ -40,7 +37,6 @@ module Briard
     include Briard::DoiUtils
     include Briard::AuthorUtils
     include Briard::CrossrefUtils
-    include Briard::DataciteUtils
     include Briard::SchemaUtils
     include Briard::Utils
 
@@ -51,7 +47,6 @@ module Briard
     include Briard::Readers::CrossrefReader
     include Briard::Readers::CrossrefXmlReader
     include Briard::Readers::DataciteReader
-    include Briard::Readers::DataciteXmlReader
     include Briard::Readers::NpmReader
     include Briard::Readers::RisReader
     include Briard::Readers::SchemaOrgReader
@@ -64,7 +59,6 @@ module Briard
     include Briard::Writers::CrossrefXmlWriter
     include Briard::Writers::CsvWriter
     include Briard::Writers::DataciteWriter
-    include Briard::Writers::DataciteXmlWriter
     include Briard::Writers::JatsWriter
     include Briard::Writers::RdfXmlWriter
     include Briard::Writers::RisWriter
@@ -83,19 +77,8 @@ module Briard
     alias get_op get_crossref
     alias read_op read_crossref
 
-    # replace DOI in XML if provided in options
-    def raw
-      r = string.present? ? string.strip : nil
-      return r unless from == 'datacite_xml' && r.present?
-
-      doc = Nokogiri::XML(string, nil, 'UTF-8', &:noblanks)
-      node = doc.at_css('identifier')
-      node.content = doi.to_s.upcase if node.present? && doi.present?
-      doc.to_xml.strip
-    end
-
     def should_passthru
-      (from == 'datacite_xml') && regenerate.blank? && raw.present?
+      (from == 'crossref_xml') && regenerate.blank? && raw.present?
     end
 
     def container_title

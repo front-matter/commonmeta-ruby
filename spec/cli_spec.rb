@@ -102,11 +102,6 @@ describe Briard::CLI do
         expect { subject.convert input }.to output(/publicationYear/).to_stdout
       end
 
-      it 'to datacite_xml' do
-        subject.options = { to: "datacite_xml" }
-        expect { subject.convert input }.to output(/Renaud, François/).to_stdout
-      end
-
       it 'to citation' do
         subject.options = { to: "citation", style: "vancouver" }
         expect { subject.convert input }.to output(/Ollomo B, Durand P, Prugnolle F/).to_stdout
@@ -208,7 +203,7 @@ describe Briard::CLI do
       end
 
       it 'to datacite' do
-        subject.options = { to: "datacite_xml" }
+        subject.options = { to: "datacite" }
         expect { subject.convert file }.to output(/publicationYear/).to_stdout
       end
 
@@ -218,8 +213,8 @@ describe Briard::CLI do
       end
     end
 
-    context "datacite_xml", vcr: true do
-      let(:file) { fixture_path + "datacite.xml" }
+    context "datacite", vcr: true do
+      let(:file) { fixture_path + "datacite.json" }
 
       it 'default' do
         expect { subject.convert file }.to output(/datePublished/).to_stdout

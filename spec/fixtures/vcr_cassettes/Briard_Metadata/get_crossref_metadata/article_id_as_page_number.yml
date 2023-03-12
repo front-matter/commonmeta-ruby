@@ -2,35 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1103/physrevlett.120.117701/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1103/physrevlett.120.117701
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:44 GMT
+      - Sun, 12 Mar 2023 19:21:11 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '2537'
-      Set-Cookie:
-      - AWSALB=6QMsSlh6FrED9nIjp3yCbgUDRSGjzgC9wk3EzueyJHfwUrBb598rCe+2p8JuajmPRUM9f2Pl2UukqMT/avUS6kG9ckzHMpIt3vdMMJvaS2kpw6ek+D+ZesiKyda6;
-        Expires=Sat, 18 Mar 2023 08:09:44 GMT; Path=/, AWSALBCORS=6QMsSlh6FrED9nIjp3yCbgUDRSGjzgC9wk3EzueyJHfwUrBb598rCe+2p8JuajmPRUM9f2Pl2UukqMT/avUS6kG9ckzHMpIt3vdMMJvaS2kpw6ek+D+ZesiKyda6;
-        Expires=Sat, 18 Mar 2023 08:09:44 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1103/physrevlett.120.117701>; rel="canonical", <https://link.aps.org/article/10.1103/PhysRevLett.120.117701>;
-        version="vor"; rel="item", <http://harvest.aps.org/v2/journals/articles/10.1103/PhysRevLett.120.117701/fulltext>;
-        version="vor"; rel="item", <https://link.aps.org/licenses/aps-default-license>;
-        version="vor"; rel="license"
+      - '8516'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -40,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -49,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -60,9 +51,16 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:44 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,3,8]],"date-time":"2023-03-08T15:26:53Z","timestamp":1678289213641},"reference-count":53,"publisher":"American
+        Physical Society (APS)","issue":"11","license":[{"start":{"date-parts":[[2018,3,13]],"date-time":"2018-03-13T00:00:00Z","timestamp":1520899200000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/link.aps.org\/licenses\/aps-default-license"}],"funder":[{"DOI":"10.13039\/501100001711","name":"Schweizerischer
+        Nationalfonds zur F\u00f6rderung der Wissenschaftlichen Forschung","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100010661","name":"Horizon
+        2020 Framework Programme","doi-asserted-by":"publisher"}],"content-domain":{"domain":["journals.aps.org"],"crossmark-restriction":true},"short-container-title":["Phys.
+        Rev. Lett."],"DOI":"10.1103\/physrevlett.120.117701","type":"journal-article","created":{"date-parts":[[2018,3,13]],"date-time":"2018-03-13T11:18:56Z","timestamp":1520939936000},"update-policy":"http:\/\/dx.doi.org\/10.1103\/crossmark-policy","source":"Crossref","is-referenced-by-count":62,"title":["Prediction
+        of a Large-Gap and Switchable Kane-Mele Quantum Spin Hall Insulator"],"prefix":"10.1103","volume":"120","author":[{"given":"Antimo","family":"Marrazzo","sequence":"first","affiliation":[]},{"given":"Marco","family":"Gibertini","sequence":"additional","affiliation":[]},{"given":"Davide","family":"Campi","sequence":"additional","affiliation":[]},{"given":"Nicolas","family":"Mounet","sequence":"additional","affiliation":[]},{"given":"Nicola","family":"Marzari","sequence":"additional","affiliation":[]}],"member":"16","published-online":{"date-parts":[[2018,3,13]]},"reference":[{"key":"PhysRevLett.120.117701Cc1R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.61.2015"},{"key":"PhysRevLett.120.117701Cc2R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.95.226801"},{"key":"PhysRevLett.120.117701Cc3R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.95.146802"},{"key":"PhysRevLett.120.117701Cc4R1","doi-asserted-by":"crossref","volume-title":"Topological
+        Insulators and Topological Superconductors","author":"B.\u2009A. Bernevig","year":"2013","DOI":"10.1515\/9781400846733"},{"key":"PhysRevLett.120.117701Cc5R1","doi-asserted-by":"publisher","DOI":"10.1126\/science.1148047"},{"key":"PhysRevLett.120.117701Cc6R1","doi-asserted-by":"publisher","DOI":"10.1126\/science.1133734"},{"key":"PhysRevLett.120.117701Cc7R1","doi-asserted-by":"publisher","DOI":"10.1038\/nmat5012"},{"key":"PhysRevLett.120.117701Cc8R1","doi-asserted-by":"publisher","DOI":"10.1126\/science.aai8142"},{"key":"PhysRevLett.120.117701Cc9R1","doi-asserted-by":"publisher","DOI":"10.1111\/j.1365-3121.2007.00783.x"},{"key":"PhysRevLett.120.117701Cc10R1","doi-asserted-by":"publisher","DOI":"10.3749\/canmin.50.2.431"},{"key":"PhysRevLett.120.117701Cc13R1","doi-asserted-by":"publisher","DOI":"10.1088\/0953-8984\/21\/39\/395502"},{"key":"PhysRevLett.120.117701Cc14R1","doi-asserted-by":"publisher","DOI":"10.1088\/1361-648X\/aa8f79"},{"key":"PhysRevLett.120.117701Cc15R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.82.081101"},{"key":"PhysRevLett.120.117701Cc16R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.81.161104"},{"key":"PhysRevLett.120.117701Cc17R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.103.063004"},{"key":"PhysRevLett.120.117701Cc18R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.87.041108"},{"key":"PhysRevLett.120.117701Cc19R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.102.073005"},{"key":"PhysRevLett.120.117701Cc20R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.77.3865"},{"key":"PhysRevLett.120.117701Cc21R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.88.085117"},{"key":"PhysRevLett.120.117701Cc24R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.commatsci.2013.08.053"},{"key":"PhysRevLett.120.117701Cc26R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.commatsci.2014.07.043"},{"key":"PhysRevLett.120.117701Cc27R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.cpc.2015.05.011"},{"key":"PhysRevLett.120.117701Cc28R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.cpc.2009.02.003"},{"key":"PhysRevLett.120.117701Cc29R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.cpc.2014.05.003"},{"key":"PhysRevLett.120.117701Cc30R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.commatsci.2015.09.013"},{"key":"PhysRevLett.120.117701Cc31R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.108.235502"},{"key":"PhysRevLett.120.117701Cc33R1","doi-asserted-by":"publisher","DOI":"10.1103\/RevModPhys.84.1419"},{"key":"PhysRevLett.120.117701Cc34R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.84.195430"},{"key":"PhysRevLett.120.117701Cc36R1","doi-asserted-by":"publisher","DOI":"10.1016\/j.cpc.2017.09.033"},{"key":"PhysRevLett.120.117701Cc37R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.83.235401"},{"key":"PhysRevLett.120.117701Cc38R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.95.075146"},{"key":"PhysRevLett.120.117701Cc39R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.64.115202"},{"key":"PhysRevLett.120.117701Cc40R1","doi-asserted-by":"publisher","DOI":"10.1038\/nphys4091"},{"key":"PhysRevLett.120.117701Cc41R1","doi-asserted-by":"publisher","DOI":"10.1038\/nphys4174"},{"key":"PhysRevLett.120.117701Cc42R1","doi-asserted-by":"publisher","DOI":"10.1126\/science.aan6003"},{"key":"PhysRevLett.120.117701Cc43R1","doi-asserted-by":"publisher","DOI":"10.1088\/0305-4608\/15\/4\/009"},{"key":"PhysRevLett.120.117701Cc44R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.95.076804"},{"key":"PhysRevLett.120.117701Cc45R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.69.035108"},{"key":"PhysRevLett.120.117701Cc46R1","doi-asserted-by":"publisher","DOI":"10.1103\/RevModPhys.73.515"},{"key":"PhysRevLett.120.117701Cc47R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.96.075448"},{"key":"PhysRevLett.120.117701Cc48R1","doi-asserted-by":"publisher","DOI":"10.1021\/acs.nanolett.7b01090"},{"key":"PhysRevLett.120.117701Cc49R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.19.3593"},{"key":"PhysRevLett.120.117701Cc50R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.53.5047"},{"key":"PhysRevLett.120.117701Cc54R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.117.226801"},{"key":"PhysRevLett.120.117701Cc55R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevLett.117.246401"},{"key":"PhysRevLett.120.117701Cc56R1","doi-asserted-by":"publisher","DOI":"10.1038\/ncomms8315"},{"key":"PhysRevLett.120.117701Cc57R1","doi-asserted-by":"publisher","DOI":"10.1038\/nature23905"},{"key":"PhysRevLett.120.117701Cc59R1","doi-asserted-by":"publisher","DOI":"10.1002\/wcms.1280"},{"key":"PhysRevLett.120.117701Cc60R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.68.045407"},{"key":"PhysRevLett.120.117701Cc61R1","doi-asserted-by":"publisher","DOI":"10.1021\/nl4007479"},{"key":"PhysRevLett.120.117701Cc62R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.91.125304"},{"key":"PhysRevLett.120.117701Cc63R1","doi-asserted-by":"publisher","DOI":"10.1103\/PhysRevB.89.205417"},{"key":"PhysRevLett.120.117701Cc64R1","doi-asserted-by":"publisher","DOI":"10.1063\/1.4824893"}],"container-title":["Physical
+        Review Letters"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/link.aps.org\/article\/10.1103\/PhysRevLett.120.117701","content-type":"unspecified","content-version":"vor","intended-application":"syndication"},{"URL":"http:\/\/harvest.aps.org\/v2\/journals\/articles\/10.1103\/PhysRevLett.120.117701\/fulltext","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2018,3,13]],"date-time":"2018-03-13T11:19:02Z","timestamp":1520939942000},"score":1,"resource":{"primary":{"URL":"https:\/\/link.aps.org\/doi\/10.1103\/PhysRevLett.120.117701"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2018,3,13]]},"references-count":53,"journal-issue":{"issue":"11","published-print":{"date-parts":[[2018,3]]}},"URL":"http:\/\/dx.doi.org\/10.1103\/physrevlett.120.117701","relation":{},"ISSN":["0031-9007","1079-7114"],"issn-type":[{"value":"0031-9007","type":"print"},{"value":"1079-7114","type":"electronic"}],"subject":["General
+        Physics and Astronomy"],"published":{"date-parts":[[2018,3,13]]},"article-number":"117701"}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:11 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1103
@@ -71,30 +69,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:44 GMT
+      - Sun, 12 Mar 2023 19:21:11 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=q9uhoppMvtvwl1rMX6Tck5%2BBY3nyZU0nw026Yy2bJpnwyWGhpqEVrZrd1bYYpWGCV0ak78ZVpqp08X2Du7hgvEnW4CGCPbKR268g40DRg0y%2B8dpDuOkx9IQqcS0%2BgS2%2BAhOMsXQ%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fOqZSyxLu8zaKldF6vL36lhMkzZrkoeqPxfbqmdenugxX%2FzxXF1Xff5OgJ6%2BFJHbgP1YihZc1nxZiJMTuRf7U93gkxMdkU7ewm%2FSZeqmZHONkXXZV%2BO4j6FTHEqsUpVMW9GfjdM%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -102,72 +100,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6251270ceab890-AMS
+      - 7a6e6618e94c0e86-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Q0MDYyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsATMOq2jYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:44 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1103/physrevlett.120.117701
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:36 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '1999'
-      Set-Cookie:
-      - AWSALB=GlQ7YoGlcjpufhl9utfwDaqQIoON4fTdhTW6p3jLHkdXtcXMBAOr0K6P4frggb9ojN4ApWQX0APA5edrT/zkvi7UmxpfbwFAS+AtIMuR4IreuvO+j4UoVY8cZoVh;
-        Expires=Sat, 18 Mar 2023 08:54:36 GMT; Path=/, AWSALBCORS=GlQ7YoGlcjpufhl9utfwDaqQIoON4fTdhTW6p3jLHkdXtcXMBAOr0K6P4frggb9ojN4ApWQX0APA5edrT/zkvi7UmxpfbwFAS+AtIMuR4IreuvO+j4UoVY8cZoVh;
-        Expires=Sat, 18 Mar 2023 08:54:36 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:36 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1103",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:11 GMT
 recorded_with: VCR 6.1.0

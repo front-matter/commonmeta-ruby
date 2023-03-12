@@ -2,32 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.2973/odp.proc.ir.180.2000/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.2973/odp.proc.ir.180.2000
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:33 GMT
+      - Sun, 12 Mar 2023 19:21:00 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '996'
-      Set-Cookie:
-      - AWSALB=zCFeCqNQN7mE7ikI0k6WRCkR/WJ7oVhYbTNxY1FPcqeD9O5+I9vnhhTyaol/TpQM8yM4Ov2oUexRomfMnxYd6kiIDZR5Gv9I755ovcIPLNwdd2u0VokYI/CyMjlm;
-        Expires=Sat, 18 Mar 2023 08:09:33 GMT; Path=/, AWSALBCORS=zCFeCqNQN7mE7ikI0k6WRCkR/WJ7oVhYbTNxY1FPcqeD9O5+I9vnhhTyaol/TpQM8yM4Ov2oUexRomfMnxYd6kiIDZR5Gv9I755ovcIPLNwdd2u0VokYI/CyMjlm;
-        Expires=Sat, 18 Mar 2023 08:09:33 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.2973/odp.proc.ir.180.2000>; rel="canonical"
+      - '1459'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -37,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -46,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -57,9 +51,12 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAA/81XbW/bNhD+XmD/gdCnDZhESU7rF8gqthVDg7ZI0HnAsC8CLTEWMYlUScov/fU9UrKtOFIiI18GJDBf7p57jjzenaL3+7JAWyoVE3zpBJ7vIMpTkTG+WTp/r/50Z877+E2USqGUpA+JpKouNAItrpZOrnW1wHi323lHCU/IDf4mVZrTkuCJATzB25lVXewVe6S+m1jF0PcD/M+Xz39ZdZdxpQlPKWgptmgwP4uUaAs3xjoaEmpEFD559q2m8pCIWle1BkVvrzIn/ukNQlGz03huV2AtpyRrxzDLBEvWRKd5wrKYC04j/GipVcIdrWgtssMZwdpA4K2u4VzBlii2tCVwNoL0oaJLZy3Ef4lmuqBOHPheOJ9OsMgqr5Ii9Zj0ghks+r5vWXQhUlm6TNMScVICTlWvC6ZyKl0zd1p0pSXcvhPfck0lt2dNCnSXUsLRB6ZSsTVU76XYSFKin2/vPtz/EuEj9HPm4JjZ/hW2VnRP1ChTJS3X4BbLjoZ4bRbMcYXzUQgp05ZOD0Y4mfnTcPZ2FI65qz6M2Y0/H8dEUcmo6sWYTMLpKIyMVkIx7WpWUgiysnqC5fvvAj+YhvB/czMKU+w4HHFzqZf32UblKJyCKO3WVUb0KSzs2HCau34If6swWATzxc3k33F3JykAZE/Q3rmB7wbTFUC99ReT6Ug0GGfrg5uKmusn8RT0Y5jnL2kqZNZZtdhNunkpg+7bFGYz8jXJr6N4zH3ApT/31ZztYS3oZrsOVxO6qMk11udScPMOq/xSspVNSqoJHDZBBeGbmmxAh/KnwuYYBIdIWddaSNWzDxIVFA3BE3MFSFFIj1AGls4DkwruoKOeSFEYOxmDSZ8ti7ZhW9qAxb97Ee5MBxRULe32ihwKISN8nPdyxR2y13hDMmBtU97rXLq/yqWPdZoL/j936berXPpUkFq92iN4GoSz7/aBXe0S1YgUQLoL0hf5+IXQj2xdH3gUdi+GcphSalo0hcQD0jk9VkzJigKWjwXzVwSdALrlQB+q6leoAVLDMTUofdwGbUdNETq98Gfo9VO/nvwwz+eZ4pepRltR1BAFcDoRbsc9UrY9avJtYmoIKoE3aZOh4ECW9odyBJlS57EfRrgZ9Qpl5BD7UGrNb6/AgRIZN32cHfY5e8lx0A/T5g085ON28zSGbuNCbJDMgCFbEYdDxzSq17SyHVXTLNcypfG5JLoGAtqc2qNZ3T0jhQEwuf1qflZ3f3gfV18ifALo82mQdoQf1bzL4ml3H9f+07dGt1HAPZ1ChO3nwOmz4fSp0G6cv0XOmMe1HzcyGvzSDQAA
-  recorded_at: Sat, 11 Mar 2023 08:09:33 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,9,13]],"date-time":"2022-09-13T23:30:27Z","timestamp":1663111827500},"reference-count":0,"publisher":"Ocean
+        Drilling Program","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.2973\/odp.proc.ir.180.2000","type":"monograph","created":{"date-parts":[[2006,10,17]],"date-time":"2006-10-17T15:50:37Z","timestamp":1161100237000},"source":"Crossref","is-referenced-by-count":11,"title":["Proceedings
+        of the Ocean Drilling Program, 180 Initial Reports"],"prefix":"10.2973","member":"1029","published-online":{"date-parts":[[2000,2,4]]},"container-title":["Proceedings
+        of the Ocean Drilling Program"],"original-title":[],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T16:19:43Z","timestamp":1233591583000},"score":1,"resource":{"primary":{"URL":"http:\/\/www-odp.tamu.edu\/publications\/180_IR\/180TOC.HTM"}},"subtitle":[],"editor":[{"given":"B.","family":"Taylor","sequence":"first","affiliation":[]},{"given":"P.","family":"Huchon","sequence":"additional","affiliation":[]},{"given":"A.","family":"Klaus","sequence":"additional","affiliation":[]},{"name":"et
+        al.","sequence":"additional","affiliation":[]}],"short-title":[],"issued":{"date-parts":[[2000,2,4]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.2973\/odp.proc.ir.180.2000","relation":{},"published":{"date-parts":[[2000,2,4]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:00 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.2973
@@ -68,30 +65,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:33 GMT
+      - Sun, 12 Mar 2023 19:21:01 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=k4THwjrmrrSS1HPcD%2Bsk0xFH3v2%2BbCpzmu3DTnCfs4J5%2Bf8veBL7nVJGG%2BaNGphdc03EkLwH4qDoN2TdcVeiHQOvAKnHK3mWI7MLQ%2F4L4Vx65ZbGDsb6QVt02qL6h8%2FkcVSOb0I%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=QEuUfOsQyxUYJkFOI25RbwmdFO%2FMq7wQM05AKP3YVIQ4cKwn2mkjj%2BuTS5M%2BIhrePuPv82W%2BysE6MKkHyn285bKjOIQlbZeb1Ni7FcVGVhs8FvDBZbvOjpyoyu8cKrJl9KmFVcA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -99,72 +96,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6250e27c41b906-AMS
+      - 7a6e65d49aa1b8cc-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9I0tzYyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAOtweSjYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:33 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.2973/odp.proc.ir.180.2000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:42 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '678'
-      Set-Cookie:
-      - AWSALB=xuEv/eIOQYsa0x8qGeRCELebeWVFRl0b1tDhIr/EkKoAmSpk0moezf4vQIOqFa0JcxXGE4t5o0+l334/LiEvrWLQxr9Tex1BZStm7AZ8qfnfNtgcHyzMuf1ldryK;
-        Expires=Sat, 18 Mar 2023 08:54:42 GMT; Path=/, AWSALBCORS=xuEv/eIOQYsa0x8qGeRCELebeWVFRl0b1tDhIr/EkKoAmSpk0moezf4vQIOqFa0JcxXGE4t5o0+l334/LiEvrWLQxr9Tex1BZStm7AZ8qfnfNtgcHyzMuf1ldryK;
-        Expires=Sat, 18 Mar 2023 08:54:42 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAA/5WUTXPaMBCG/4pHZ8tINh+xb21ySKbtJJOhlwDTEfYaNLElV5JDGIb/3pUhAVKSNidrJO277z678oZYJ1xrSUb0IwlJDdaKBVC3bgD3Vtoc7z6BsVIrPOARi9jhhGQbIlUBz1D4ZSEc0EYYh7qTScziOExDnsxm4e7Iydqr+wPKUsqTcZxkcZoN+g+o6U/RVd2QjA+HCed8lPbj/mgbEgMlGFA50Fy3ypGMhaRp55W0SzCoeJuDUMGVkVUl1SK4M3phRI2auVYOlKOFroVUncf9aoKmcqOtrYV5pAYzG5m7rspSVBYwq11q46iXwAgwaN9VsIu8ur3xNFgUp6Nk2tNFEzVG55E0Eb/AXcY8pT3NWivvp1l6QwaQxFlabBhyFvLR37jYkHJG+WjMB9mAZcnoLS4+5JyxOBlhXm9ctyb3oZe+QISH16WlrxQLOl+/kOTcS+0KIwguByiQoQ10GbglBOfRhgGWGdwo6aSogntotC8DjTeYRD4f2HSzUs+7LnEWp+TQuIJqhZpwlgUL47A/m213LTzl//82vSNt5EIqUR23r0DDVr7XhxRzx2e6kFKGcxuP+TDjadZP3nYhTpJBygcXyb4LuTYYyf34vnRkg4AkTtzaL3/ef0fhpXNNNu1Ne6vVivpBQrU2gqKd9jpSufBTaac9JP7r5r77jm8vo+vxD7L1adr5UWVIxWmEPdmQhXwC/2a/RuizFLWsMCsZi3WFFzAOfrd+GHCvlMY63BJlKSspdq9ggvAPIncnItdtvsQ7JyKiwNQYKaqPlb6cKH2rBP6FPiWkRNcQcIGook+Ezl5e9BEuaW37zhQcJvD13dij38+b5hXPUaFlpM0CG/SP34KBau9qsz16Dh+62G7/AJrwkoezBQAA
-  recorded_at: Sat, 11 Mar 2023 08:54:42 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.2973",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:01 GMT
 recorded_with: VCR 6.1.0

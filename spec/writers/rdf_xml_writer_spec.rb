@@ -8,7 +8,7 @@ describe Briard::Metadata, vcr: true do
       input = '10.7554/eLife.01567'
       subject = described_class.new(input: input, from: 'crossref')
       expect(subject.valid?).to be true
-      rdf_xml = Maremma.from_xml(subject.rdf_xml).fetch('RDF', {})
+      rdf_xml = XmlHasher.parse(subject.rdf_xml).fetch('RDF', {})
       expect(rdf_xml.dig('ScholarlyArticle', 'rdf:about')).to eq('https://doi.org/10.7554/elife.01567')
       expect(rdf_xml.dig('ScholarlyArticle',
                          'name')).to eq('Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
@@ -19,7 +19,7 @@ describe Briard::Metadata, vcr: true do
       input = 'https://doi.org/10.1155/2012/291294'
       subject = described_class.new(input: input, from: 'crossref')
       expect(subject.valid?).to be true
-      rdf_xml = Maremma.from_xml(subject.rdf_xml).fetch('RDF', {})
+      rdf_xml = XmlHasher.parse(subject.rdf_xml).fetch('RDF', {})
       expect(rdf_xml.dig('ScholarlyArticle', 'rdf:about')).to eq('https://doi.org/10.1155/2012/291294')
       expect(rdf_xml.dig('ScholarlyArticle',
                          'name')).to eq('Delineating a Retesting Zone Using Receiver Operating Characteristic Analysis on Serial QuantiFERON Tuberculosis Test Results in US Healthcare Workers')
@@ -32,7 +32,7 @@ describe Briard::Metadata, vcr: true do
       input = "#{fixture_path}crossref.bib"
       subject = described_class.new(input: input, from: 'bibtex')
       expect(subject.valid?).to be true
-      rdf_xml = Maremma.from_xml(subject.rdf_xml).fetch('RDF', {})
+      rdf_xml = XmlHasher.parse(subject.rdf_xml).fetch('RDF', {})
 
       expect(rdf_xml.dig('ScholarlyArticle', 'rdf:about')).to eq('https://doi.org/10.7554/elife.01567')
       expect(rdf_xml.dig('ScholarlyArticle',
@@ -45,7 +45,7 @@ describe Briard::Metadata, vcr: true do
       input = 'https://doi.org/10.5438/4K3M-NYVG'
       subject = described_class.new(input: input, from: 'datacite')
       expect(subject.valid?).to be true
-      rdf_xml = Maremma.from_xml(subject.rdf_xml).fetch('RDF', {})
+      rdf_xml = XmlHasher.parse(subject.rdf_xml).fetch('RDF', {})
       expect(rdf_xml.dig('ScholarlyArticle', 'rdf:about')).to eq('https://doi.org/10.5438/4k3m-nyvg')
       expect(rdf_xml.dig('ScholarlyArticle', 'name')).to eq('Eating your own Dog Food')
       expect(rdf_xml.dig('ScholarlyArticle',
@@ -56,7 +56,7 @@ describe Briard::Metadata, vcr: true do
     it 'BlogPosting Citeproc JSON' do
       input = "#{fixture_path}citeproc.json"
       subject = described_class.new(input: input, from: 'csl')
-      rdf_xml = Maremma.from_xml(subject.rdf_xml).fetch('RDF', {})
+      rdf_xml = XmlHasher.parse(subject.rdf_xml).fetch('RDF', {})
       expect(rdf_xml.dig('BlogPosting', 'rdf:about')).to eq('https://doi.org/10.5438/4k3m-nyvg')
       expect(rdf_xml.dig('BlogPosting', 'name')).to eq('Eating your own Dog Food')
       expect(rdf_xml.dig('BlogPosting', 'datePublished', '__content__')).to eq('2016-12-20')
@@ -65,7 +65,7 @@ describe Briard::Metadata, vcr: true do
     it 'maremma' do
       input = 'https://github.com/datacite/maremma'
       subject = described_class.new(input: input, from: 'codemeta')
-      rdf_xml = Maremma.from_xml(subject.rdf_xml).fetch('RDF', {})
+      rdf_xml = XmlHasher.parse(subject.rdf_xml).fetch('RDF', {})
       expect(rdf_xml.dig('SoftwareSourceCode', 'rdf:about')).to eq('https://doi.org/10.5438/qeg0-3gm3')
       expect(rdf_xml.dig('SoftwareSourceCode', 'author', 'Person', 'rdf:about')).to eq('https://orcid.org/0000-0003-0077-4738')
       expect(rdf_xml.dig('SoftwareSourceCode', 'author', 'Person', 'name')).to eq('Martin Fenner')
@@ -79,7 +79,7 @@ describe Briard::Metadata, vcr: true do
       input = 'https://blog.front-matter.io/posts/eating-your-own-dog-food/'
       subject = described_class.new(input: input, from: 'schema_org')
       expect(subject.valid?).to be true
-      rdf_xml = Maremma.from_xml(subject.rdf_xml).fetch('RDF', {})
+      rdf_xml = XmlHasher.parse(subject.rdf_xml).fetch('RDF', {})
       expect(rdf_xml.dig('Article', 'rdf:about')).to eq('https://doi.org/10.53731/r79vxn1-97aq74v-ag58n')
       expect(rdf_xml.dig('Article', 'author', 'Person', 'rdf:about')).to eq('https://orcid.org/0000-0003-1419-2405')
       expect(rdf_xml.dig('Article', 'author', 'Person', 'name')).to eq('Martin Fenner')

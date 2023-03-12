@@ -2,36 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.5194/cp-2020-95/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.5194/cp-2020-95
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:39 GMT
+      - Sun, 12 Mar 2023 19:21:16 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '2489'
-      Set-Cookie:
-      - AWSALB=w6xi0ac7ljZ+JgAKcrpo0C6QQZZx210V+mX5otLkLlkm1V3zSQOHWIG6g+ewQu3Bufy2inA3WufTdGct+Mrz0KJb2vbIfPxiiVPaO15sf6kFmaVnH8YvhUWc/cG9;
-        Expires=Sat, 18 Mar 2023 08:09:39 GMT; Path=/, AWSALBCORS=w6xi0ac7ljZ+JgAKcrpo0C6QQZZx210V+mX5otLkLlkm1V3zSQOHWIG6g+ewQu3Bufy2inA3WufTdGct+Mrz0KJb2vbIfPxiiVPaO15sf6kFmaVnH8YvhUWc/cG9;
-        Expires=Sat, 18 Mar 2023 08:09:39 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.5194/cp-2020-95>; rel="canonical", <https://creativecommons.org/licenses/by/4.0/>;
-        version="vor"; rel="license", <http://orcid.org/0000-0001-6130-6474>; title="Jun
-        Shao"; rel="author", <http://orcid.org/0000-0002-5068-1591>; title="Laurie
-        Menviel"; rel="author", <http://orcid.org/0000-0003-3306-0969>; title="Mayhar
-        Mohtadi"; rel="author"
+      - '4805'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -41,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -50,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -61,9 +51,36 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:39 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,4,5]],"date-time":"2022-04-05T22:57:11Z","timestamp":1649199431318},"posted":{"date-parts":[[2020,7,28]]},"group-title":"Carbon
+        Cycle\/Modelling only\/Millenial\/D-O","reference-count":0,"publisher":"Copernicus
+        GmbH","license":[{"start":{"date-parts":[[2020,7,28]],"date-time":"2020-07-28T00:00:00Z","timestamp":1595894400000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"funder":[{"DOI":"10.13039\/100000141","name":"Division
+        of Ocean Sciences","doi-asserted-by":"publisher","award":["1558990","1736771"]},{"DOI":"10.13039\/501100000923","name":"Australian
+        Research Council","doi-asserted-by":"publisher","award":["FT180100606","DP180100048"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"abstract":"<jats:p>Abstract.
+        During the early last glacial termination (17.2\u201315\u2009ka) atmospheric
+        \u03b413C declined sharply by 0.3\u20130.4\u2009\u2030 as atmospheric pCO2
+        rose. This was the initial part of the atmospheric \u03b413C excursion that
+        lasted for multiple thousand years. A similar \u03b413C decline has been documented
+        in marine proxy records from both surface and thermocline-dwelling planktic
+        foraminifera. The foraminiferal \u03b413C decline has previously been attributed
+        to a flux of respired carbon from the deep ocean that was subsequently transported
+        within the upper ocean (i.e. bottom up transport) to sites where the signal
+        is recorded. Here, we provide modeling evidence that when respired carbon
+        upwells in the Southern Ocean, negative \u03b413C anomalies in the global
+        upper ocean were instead transferred from the atmosphere (i.e. top down transport).
+        Due to this efficient atmospheric bridge, the pathway of \u03b413C transport
+        was likely to be different from nutrient transport during the early deglaciation.
+        This implies that the usage of planktic \u03b413C records for identifying
+        the carbon source(s) responsible for the atmospheric pCO2 rise during the
+        early deglaciation is limited. The model results also suggest that thermocline
+        waters in upwelling systems like the eastern equatorial Pacific, and even
+        upper deep waters above 2000\u2009m, can be affected by this atmospheric bridge
+        during the early deglaciation. Our results imply that caution must be applied
+        when interpreting early deglacial marine \u03b413C records from depths that
+        are potentially affected by the atmosphere.\n                        <\/jats:p>","DOI":"10.5194\/cp-2020-95","type":"posted-content","created":{"date-parts":[[2020,7,28]],"date-time":"2020-07-28T09:16:10Z","timestamp":1595927770000},"source":"Crossref","is-referenced-by-count":0,"title":["The
+        Atmospheric Bridge Communicated the \u03b4&amp;lt;sup&amp;gt;13&amp;lt;\/sup&amp;gt;C
+        Decline during the Last Deglaciation to the Global Upper Ocean"],"prefix":"10.5194","author":[{"ORCID":"http:\/\/orcid.org\/0000-0001-6130-6474","authenticated-orcid":false,"given":"Jun","family":"Shao","sequence":"first","affiliation":[]},{"given":"Lowell
+        D","family":"Stott","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-5068-1591","authenticated-orcid":false,"given":"Laurie","family":"Menviel","sequence":"additional","affiliation":[]},{"given":"Andy","family":"Ridgwell","sequence":"additional","affiliation":[]},{"given":"Malin","family":"\u00d6dalen","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-3306-0969","authenticated-orcid":false,"given":"Mayhar","family":"Mohtadi","sequence":"additional","affiliation":[]}],"member":"3145","container-title":[],"original-title":[],"deposited":{"date-parts":[[2022,3,17]],"date-time":"2022-03-17T12:01:09Z","timestamp":1647518469000},"score":1,"resource":{"primary":{"URL":"https:\/\/cp.copernicus.org\/preprints\/cp-2020-95\/cp-2020-95.pdf"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2020,7,28]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.5194\/cp-2020-95","relation":{"is-supplemented-by":[{"id-type":"doi","id":"10.5194\/cp-2020-95-supplement","asserted-by":"subject"}],"has-review":[{"id-type":"doi","id":"10.5194\/cp-2020-95-RC1","asserted-by":"subject"},{"id-type":"doi","id":"10.5194\/cp-2020-95-RC2","asserted-by":"subject"},{"id-type":"doi","id":"10.5194\/cp-2020-95-EC1","asserted-by":"subject"}],"has-comment":[{"id-type":"doi","id":"10.5194\/cp-2020-95-AC1","asserted-by":"subject"},{"id-type":"doi","id":"10.5194\/cp-2020-95-AC2","asserted-by":"subject"},{"id-type":"doi","id":"10.5194\/cp-2020-95-AC3","asserted-by":"subject"}],"is-preprint-of":[{"id-type":"doi","id":"10.5194\/cp-17-1507-2021","asserted-by":"subject"}]},"published":{"date-parts":[[2020,7,28]]},"subtype":"preprint"}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:16 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.5194
@@ -72,30 +89,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:40 GMT
+      - Sun, 12 Mar 2023 19:21:17 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=DJmkWCGqEUI%2BJPnp5%2B9uV6rwk5mSiTi2fhwuDlPdx0r7VXgS7FFltbnwx%2FJFbu2s5HxznJGaxOzHOlVDgBldC%2BUXnMNbhA544H0ksCzIJTXjWJKqwss90tCpIsRQZPpeyFj0U78%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zo3G1XHL0H3Eh3J9bDB7cr1Lg7UO9zJdHvCDuDZZOzepmiZyZ8b6OKHOfb0mJZ8m7QiFu6HFSq6oywyptwDZ5HCvnwVjcOBTdSqmbR22eYRR%2BwvBKAykE3B0EjQ%2BvJz61ahEHos%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -103,72 +120,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a625108eb480a61-AMS
+      - 7a6e66398feb0ea7-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9U0NLEyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA4YeazTYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:40 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.5194/cp-2020-95
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:37 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '1894'
-      Set-Cookie:
-      - AWSALB=zzbdtIGVnGgXsOKhW36mdMKjkEOKn6ZdTAqZaIP3tBp9RQzC4+deoEY1qHXYqlWaGXIeLGPRtQpn19zCoqstgknnu+Vi2kBUFnTcQzFPJXJJvHd/LAYKLJzWPGAY;
-        Expires=Sat, 18 Mar 2023 08:54:37 GMT; Path=/, AWSALBCORS=zzbdtIGVnGgXsOKhW36mdMKjkEOKn6ZdTAqZaIP3tBp9RQzC4+deoEY1qHXYqlWaGXIeLGPRtQpn19zCoqstgknnu+Vi2kBUFnTcQzFPJXJJvHd/LAYKLJzWPGAY;
-        Expires=Sat, 18 Mar 2023 08:54:37 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:37 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.5194",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:17 GMT
 recorded_with: VCR 6.1.0

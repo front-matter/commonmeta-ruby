@@ -27,10 +27,9 @@ module Briard
       name = cleanup_author(name)
       name = [family_name, given_name].join(', ') if family_name.present? && given_name.present?
       contributor_type = parse_attributes(author.fetch('contributorType', nil))
-
-      name_type = parse_attributes(author.fetch('creatorName', nil), content: 'nameType',
-                                                                     first: true) || parse_attributes(author.fetch('contributorName', nil), content: 'nameType',                                                                             first: true)
-      name_identifiers = Array.wrap(author.fetch('nameIdentifier', nil)).map do |ni|
+      name_type = author.fetch('nameType', nil)
+                     
+      name_identifiers = author.fetch('nameIdentifiers', nil) || Array.wrap(author.fetch('nameIdentifier', nil)).map do |ni|
         if ni['nameIdentifierScheme'] == 'ORCID'
           {
             'nameIdentifier' => normalize_orcid(ni['__content__']),
@@ -66,6 +65,8 @@ module Briard
         name_type = 'Organizational'
       elsif name_type.blank? && is_personal_name?(given_name: given_name, name: name) && name.to_s.exclude?(';')
         name_type = 'Personal'
+      elsif name_type.blank? && (given_name.present? || family_name.present?)
+        name_type = 'Personal'
       end
 
       author = { 
@@ -73,7 +74,7 @@ module Briard
         'name' => name,
         'givenName' => given_name,
         'familyName' => family_name,
-        'nameIdentifiers' => name_identifiers,
+        'nameIdentifiers' => name_identifiers.presence,
         'affiliation' => get_affiliations(author.fetch('affiliation', nil)),
         'contributorType' => contributor_type }.compact
 
@@ -103,7 +104,7 @@ module Briard
       else
         { 'nameType' => name_type,
           'name' => name,
-          'nameIdentifiers' => name_identifiers,
+          'nameIdentifiers' => name_identifiers.presence,
           'affiliation' => get_affiliations(author.fetch('affiliation', nil)),
           'contributorType' => contributor_type }.compact
       end

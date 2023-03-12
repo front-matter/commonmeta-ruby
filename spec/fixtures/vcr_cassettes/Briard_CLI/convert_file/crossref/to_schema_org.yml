@@ -8,30 +8,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 10 Mar 2023 21:15:28 GMT
+      - Sun, 12 Mar 2023 19:21:23 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rx5JMPU%2F2%2B5UeV4G2Jk0GnfOGtwALHBalOoZAwZfUhQNU5Xc5W1D%2FqYVArXa528OeyyJMiAixJ7W3CGWvepRT6UEQC54m2ksiF0TIJg2ROrIozJfwBntmeLLSPgX%2BXR65Y2puF8%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1KSOGaK2g9GtGGrgXQ5n8Hmar7XzdT8Q4sqspYrA%2Fne5nA9hyUeh1hh4ANLGp%2FzgwUPnsURELXDT3vjVqRCEkjXXEQw9DetoXfcbuIa3CSAd9gk9N%2B4LS%2BcydRCE2WC79Lgitmk%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,12 +39,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a5e92bf79860a48-AMS
+      - 7a6e666239a3b969-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9c1NTEyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA4VlVnTYAAAA=
-  recorded_at: Fri, 10 Mar 2023 21:15:28 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.7554",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:23 GMT
 recorded_with: VCR 6.1.0

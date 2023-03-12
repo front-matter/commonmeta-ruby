@@ -2,33 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1163/1937240x-00002096/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1163/1937240x-00002096
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:31 GMT
+      - Sun, 12 Mar 2023 19:21:04 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '10659'
-      Set-Cookie:
-      - AWSALB=DmA8KfxT5pA2lCz91aMMFLIWCiMBkEbOak0wK3Vk38zQ9ePgmLvB7gw+LU9pOG9O0AfuRUK+mi0iJ6fKyvRSCsSA6vja51RkMuLxnor2IIlEfMrKcSP4tGxe4t5r;
-        Expires=Sat, 18 Mar 2023 08:09:31 GMT; Path=/, AWSALBCORS=DmA8KfxT5pA2lCz91aMMFLIWCiMBkEbOak0wK3Vk38zQ9ePgmLvB7gw+LU9pOG9O0AfuRUK+mi0iJ6fKyvRSCsSA6vja51RkMuLxnor2IIlEfMrKcSP4tGxe4t5r;
-        Expires=Sat, 18 Mar 2023 08:09:31 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1163/1937240x-00002096>; rel="canonical", <http://academic.oup.com/jcb/article-pdf/32/6/949/10336473/jcb0949.pdf>;
-        version="vor"; rel="item"
+      - '31439'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -38,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -47,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -58,9 +51,257 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:31 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,3,2]],"date-time":"2023-03-02T11:29:45Z","timestamp":1677756585932},"reference-count":111,"publisher":"Oxford
+        University Press (OUP)","issue":"6","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2012,1,1]]},"DOI":"10.1163\/1937240x-00002096","type":"journal-article","created":{"date-parts":[[2012,11,20]],"date-time":"2012-11-20T13:22:49Z","timestamp":1353417769000},"page":"949-961","source":"Crossref","is-referenced-by-count":18,"title":["Global
+        distribution of Fabaeformiscandona subacuta: an\u00a0exotic\u00a0invasive
+        Ostracoda on the Iberian Peninsula?"],"prefix":"10.1093","volume":"32","author":[{"given":"Andreu","family":"Escriv\u00e0","sequence":"first","affiliation":[]},{"given":"Francesc","family":"Mesquita-Joanes","sequence":"additional","affiliation":[]},{"given":"Josep
+        A.","family":"Aguilar-Alberola","sequence":"additional","affiliation":[]},{"given":"Eugene
+        I.","family":"Schornikov","sequence":"additional","affiliation":[]},{"given":"Juan","family":"Rueda","sequence":"additional","affiliation":[]},{"given":"Robin
+        J.","family":"Smith","sequence":"additional","affiliation":[]},{"given":"Takahiro","family":"Kamiya","sequence":"additional","affiliation":[]},{"given":"Ivana","family":"Karanovic","sequence":"additional","affiliation":[]}],"member":"286","reference":[{"issue":"5","key":"bibr1","first-page":"1","article-title":"Die
+        Gattung Candonaim Quartar von Europa","volume":"88","author":"Absolon","year":"1978","journal-title":"Rozpravy
+        Ceskoslovenske Akademie Ved, Rada Matematickych A Prirodnich Ved"},{"key":"bibr2","first-page":"3","article-title":"Los
+        crust\u00e1ceos del plancton de los embalses espa\u00f1oles","volume":"3","author":"Armengol","year":"1978","journal-title":"Oecologia
+        aquatica"},{"key":"bibr3","first-page":"419","article-title":"A contribution
+        to the knowledge of cypridid ostracode fauna (Crustacea, Ostracoda, Cyprididae)
+        on the Iberian peninsula, and a comparison with adjacent areas","volume":"90","author":"Baltan\u00e1s","year":"1992","journal-title":"Archiv
+        f\u00fcr Hydrobiologie\/Suppl."},{"key":"bibr4","series-title":"Listas de
+        la Flora y Fauna de las Aguas Continentales de la Pen\u00ednsula Ib\u00e9rica,
+        N\u00b0\u00a012","volume-title":"Lista faun\u00edstica y Bibliogr\u00e1fica
+        de los ostr\u00e1codos no marinos (Crustacea, Ostracoda) de la Pen\u00ednsula
+        Ib\u00e9rica, Islas Baleares e Islas Canarias","author":"Baltan\u00e1s","year":"1996"},{"key":"bibr5","doi-asserted-by":"crossref","first-page":"193","DOI":"10.1080\/08927014.2001.9522785","article-title":"The
+        elusive model of a biological invasion process: time to take differences among
+        aquatic and terrestrial ecosystems into account?","volume":"13","author":"Beisel","year":"2001","journal-title":"Ethology
+        Ecology and Evolution"},{"key":"bibr6","doi-asserted-by":"crossref","first-page":"159","DOI":"10.1146\/annurev.ecolsys.32.081501.114016","article-title":"Dispersal
+        in freshwater invertebrates","volume":"32","author":"Bilton","year":"2001","journal-title":"Annual
+        Review of Ecology and Systematics"},{"key":"bibr7","series-title":"Russian
+        Translations Series 64","volume-title":"Freshwater Ostracoda. Fauna of the
+        USSR, Crustacea","volume":"Vol. II","author":"Bronshtein","year":"1947"},{"key":"bibr8","doi-asserted-by":"crossref","first-page":"402","DOI":"10.1007\/s00442-002-0897-5","article-title":"Blowing
+        in the wind: a field test of overland dispersal and colonization by aquatic
+        invertebrates","volume":"131","author":"C\u00e1ceres","year":"2002","journal-title":"Oecologia"},{"key":"bibr9","doi-asserted-by":"crossref","first-page":"1","DOI":"10.11646\/zootaxa.3161.1.1","article-title":"Nonmarine
+        ostracods (Crustacea) from South Korea, including a description of a new species
+        of TanycyprisTriebel (Cyprididae, Cypricercinae)","volume":"3161","author":"Chang","year":"2012","journal-title":"Zootaxa"},{"key":"bibr10","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1007\/BF00039679","article-title":"A
+        review of the freshwater ostracods of New Zealand","volume":"22","author":"Chapman","year":"1963","journal-title":"Hydrobiologia"},{"key":"bibr11","first-page":"48","volume-title":"Atlas
+        of Animals in China, Crustacea, Subclass, Ostracoda","author":"Chen","year":"1982"},{"key":"bibr12","first-page":"43","article-title":"Agua
+        de lastre como v\u00eda de introducci\u00f3n de especies a nivel global","volume-title":"Bio-invasi\u00f3n
+        del Mejill\u00f3n Dorado en el Continente Americano","author":"Costa Fernandes","year":"2006"},{"key":"bibr13","article-title":"Crustacea.
+        Part I","volume-title":"United States Exploring Expedition During the Years
+        1838, 1839, 1840, 1841, 1842, Under the Command of Charles Wilkes, U.S.N.","volume":"Vol.\u00a013","author":"Dana","year":"1852"},{"key":"bibr14","first-page":"269","article-title":"Bemerkungen
+        \u00fcber einige Ostracoden des Sewerny-Donetz-Bassins","volume":"65","author":"Dubowsky","year":"1926","journal-title":"Zoologischer
+        Anzeiger"},{"key":"bibr15","first-page":"358","article-title":"Mytilacea nova
+        collectionis Cumingianae","volume":"24","author":"Dunker","year":"1856","journal-title":"Proceedings
+        of the Zoological Society of London"},{"key":"bibr16","doi-asserted-by":"crossref","first-page":"103","DOI":"10.1111\/j.1365-2427.1995.tb00390.x","article-title":"Native
+        and exotic freshwater fishes in Spanish river basins","volume":"33","author":"Elvira","year":"1995","journal-title":"Freshwater
+        Biology"},{"key":"bibr17","doi-asserted-by":"crossref","first-page":"323","DOI":"10.1111\/j.1095-8649.2001.tb01393.x","article-title":"Freshwater
+        fish introductions in Spain: facts and figures at the beginning of the 21st
+        century","volume":"59","author":"Elvira","year":"2001","journal-title":"Journal
+        of Fish Biology"},{"key":"bibr18","volume-title":"Biodiversitat del Zoopl\u00e0ncton
+        i Microzoobentos a les Aig\u00fces Continentals de Vinar\u00f2s i el Baix
+        Maestrat","author":"Escriv\u00e0","year":"2011"},{"issue":"4\/3","key":"bibr19","first-page":"1","article-title":"Kagyl\u00f3sr\u00e1kok
+        (Ostracoda)","volume":"39","author":"Farkas","year":"1958","journal-title":"Fauna
+        Hungariae, Magyarorsz\u00e1g \u00c1llatvil\u00e1ga"},{"key":"bibr20","doi-asserted-by":"crossref","first-page":"483","DOI":"10.1046\/j.1365-2427.2002.00829.x","article-title":"Dispersal
+        of aquatic organisms by waterbirds: a review of past research and priorities
+        for future studies","volume":"47","author":"Figuerola","year":"2002","journal-title":"Freshwater
+        Biology"},{"key":"bibr21","doi-asserted-by":"crossref","first-page":"568","DOI":"10.1007\/s00027-007-0915-0","article-title":"High
+        dispersal capacity of a broad spectrum of aquatic invertebrates via waterbirds","volume":"69","author":"Frisch","year":"2007","journal-title":"Aquatic
+        Sciences"},{"key":"bibr22","series-title":"Ver\u00f6ffentlichungen des Landesmuseums
+        f\u00fcr Vorgeschichte 43","first-page":"161","article-title":"Die Aussage
+        der Ostrakodenfauna zum Sedimentationsablauf im Intergalzialbecken, zur klimatischen
+        Entwicklung und zur stratigraphischen Stellung des Interglazials von Neumark-Nord
+        (Geiseltal)","volume-title":"Neumark-Gr\u00f6bern. Beitr\u00e4ge zur Jagd
+        des mittlepal\u00e4olithischen Menschen","author":"Fuhrmann","year":"1990"},{"key":"bibr23","doi-asserted-by":"crossref","first-page":"123","DOI":"10.1007\/978-1-4020-6029-8_6","article-title":"Non-indigenous
+        animal species naturalized in Iberian inland waters","volume-title":"Biological
+        Invaders in Inland Waters: Profiles, Distribution and Threats","author":"Garc\u00eda-Berthou","year":"2007"},{"key":"bibr24","doi-asserted-by":"crossref","first-page":"49","DOI":"10.1007\/s10530-004-9635-8","article-title":"Impacts
+        of an introduced Crustacean on the trophic webs of Mediterranean wetlands","volume":"7","author":"Geiger","year":"2005","journal-title":"Biological
+        Invasions"},{"key":"bibr25","doi-asserted-by":"crossref","first-page":"3","DOI":"10.1007\/978-1-4020-6029-8_1","article-title":"Biological
+        invasions in inland waters: an overview","volume-title":"Biological Invaders
+        in Inland Waters: Profiles, Distribution and Threats","author":"Gherardi","year":"2007"},{"key":"bibr26","first-page":"87","article-title":"A
+        revision of the North American Astaci, with observations on their habits and
+        geographic distribution","volume":"6","author":"Girard","year":"1852","journal-title":"Proceedings
+        of the Academy of Natural Sciences of Philadelphia"},{"key":"bibr27","doi-asserted-by":"crossref","first-page":"177","DOI":"10.1016\/S1146-609X(02)01149-9","article-title":"Implications
+        of waterbird ecology for the dispersal of aquatic organisms","volume":"23","author":"Green","year":"2002","journal-title":"Acta
+        Oecologica"},{"key":"bibr28","first-page":"380","article-title":"The potential
+        role of waterbirds in dispersing invertebrates and plants in arid Australia","volume":"53","author":"Green","year":"2008","journal-title":"Freshwater
+        Biology"},{"key":"bibr29","first-page":"1","article-title":"European quaternary
+        freshwater Ostracoda: a biostratigraphic and palaeobiographic primer","volume":"34","author":"Griffiths","year":"1995","journal-title":"Scopolia"},{"key":"bibr30","first-page":"65","article-title":"Three
+        ostracod species from Lake Velence new to the fauna of Hungary","volume":"3","author":"Gy\u00f6re","year":"1985","journal-title":"Miscellanea
+        Zoologica Hungarica"},{"issue":"5","key":"bibr31","first-page":"149","article-title":"\u00dcber
+        eine neue Candonader Provinz Brandenburg: Candona holzkampfinov. spec.","volume":"1900","author":"Hartwig","year":"1900","journal-title":"Sitzungsberichte
+        der Gesellschaft Naturforschender Freunde zu Berlin"},{"issue":"4","key":"bibr32","first-page":"87","article-title":"Die
+        Arten der Ostracoden. Unterfamilie Candoninae der Provinz Brandenburg","volume":"1901","author":"Hartwig","year":"1901","journal-title":"Sitzungsberichte
+        der Gesellschaft Naturforschender Freunde zu Berlin"},{"issue":"4","key":"bibr33","doi-asserted-by":"crossref","first-page":"611","DOI":"10.1051\/kmae:2002055","article-title":"Distribution
+        of crayfish in Europe and some adjoining countries","volume":"367","author":"Holdich","year":"2002","journal-title":"Bulletin
+        Fran\u00e7ais de la P\u00eache et de la Pisciculture"},{"key":"bibr34","doi-asserted-by":"crossref","first-page":"29","DOI":"10.1007\/978-1-4020-6029-8_2","article-title":"Invasive
+        crustaceans in European inland waters","volume-title":"Biological Invaders
+        in Inland Waters: Profiles, Distribution and Threats","author":"Holdich","year":"2007"},{"issue":"1-2","key":"bibr35","first-page":"297","article-title":"First
+        British record of Potamocypris humilis(Sars, 1924), a freshwater ostracod
+        with a disjunct distribution in northern Europe and southern Africa","volume":"43","author":"Horne","year":"2004","journal-title":"Bollettino
+        della Societa Paleontologica Italiana"},{"key":"bibr36","doi-asserted-by":"crossref","first-page":"253","DOI":"10.1111\/j.1096-3642.2004.00134.x","article-title":"The
+        first British record and a new species of the superfamily Terrestricytheroidea
+        (Crustacea, Ostracoda): morphology, ontogeny, lifestyle and phylogeny","volume":"142","author":"Horne","year":"2004","journal-title":"Zoological
+        Journal of the Linnean Society"},{"key":"bibr37","volume-title":"Cretaceous-Quaternary
+        Ostracode Fauna from Jiangsu","author":"Hou","year":"1982"},{"key":"bibr38","first-page":"86","article-title":"Pleistocene
+        Ostracoda from middle and lower reaches of Sanggan River Valley and its geographical
+        significance","volume":"21","author":"Huang","year":"1985","journal-title":"Memoirs
+        Institute of Geology and Paleontology, Academia Sinica"},{"key":"bibr39","first-page":"728","article-title":"Ostracod
+        from late Pleistocene deposits in Sanggan river valley","volume":"30","author":"Huang","year":"1991","journal-title":"Acta
+        Palaeontologica Sinica"},{"key":"bibr40","first-page":"2","article-title":"Andmeid
+        Eesti magevete karpv\u00e4hiliste (Ostracoda) fauna kohta","volume":"8","author":"J\u00e4rvek\u00fclg","year":"1959","journal-title":"Eesti
+        NSV Teaduste Akadeemia Toimetised, Bioloogia"},{"key":"bibr41","series-title":"Crustacean
+        Issues 12","first-page":"55","article-title":"Immigration history and present
+        distribution of alien crustaceans in Polish waters","volume-title":"The Biodiversity
+        Crisis and Crustacea","author":"Ja\u017ad\u017aewski","year":"2000"},{"key":"bibr42","doi-asserted-by":"crossref","first-page":"23","DOI":"10.1016\/0006-3207(96)00015-8","article-title":"Geographic
+        spread of exotic species: ecological lessons and opportunities from the invasion
+        of the zebra mussel","volume":"78","author":"Johnson","year":"1996","journal-title":"Biological
+        Conservation"},{"key":"bibr43","doi-asserted-by":"crossref","first-page":"279","DOI":"10.1007\/s000270050042","article-title":"Origin
+        and recent trophic evolution in the Spanish mountain lake La Cruz","volume":"60","author":"Juli\u00e0","year":"1998","journal-title":"Aquatic
+        Sciences"},{"key":"bibr44","doi-asserted-by":"crossref","volume-title":"Histoiredes
+        Monocles qui se Trouvent aux Environs de Gen\u00e8ve","author":"Jurine","year":"1820","DOI":"10.5962\/bhl.title.10137"},{"key":"bibr45","series-title":"Crustaceana
+        Monographs","doi-asserted-by":"crossref","DOI":"10.1163\/ej.9789004156937.i-434","volume-title":"Candoninae
+        Ostracodes from the Pilbara Region in Western Australia","volume":"7","author":"Karanovic","year":"2007"},{"key":"bibr46","doi-asserted-by":"crossref","first-page":"63","DOI":"10.1051\/limn\/2011061","article-title":"When
+        anthropogenic translocation meets cryptic speciation globalised bouillon originates;
+        molecular variability of the cosmopolitan freshwater cyclopoid Macrocyclops
+        albidus(Crustacea: Copepoda)","volume":"48","author":"Karanovic","year":"2012","journal-title":"Annales
+        de Limnologie-International Journal of Limnology"},{"key":"bibr47","doi-asserted-by":"crossref","first-page":"161","DOI":"10.1007\/s10530-006-9013-9","article-title":"Changes
+        in global economies and trade: the potential spread of exotic freshwater bivalves","volume":"9","author":"Karatayev","year":"2007","journal-title":"Biological
+        Invasions"},{"key":"bibr48","doi-asserted-by":"crossref","first-page":"3641","DOI":"10.1111\/j.1365-294X.2006.03012.x","article-title":"Contrasting
+        patterns in genetic diversity following multiple invasions of fresh and brackish
+        waters","volume":"15","author":"Kelly","year":"2006","journal-title":"Molecular
+        Ecology"},{"key":"bibr49","first-page":"1","article-title":"Index and bibliography
+        of nonmarine Ostracoda. Bibliography A. Part 4","volume":"38","author":"Kempf","year":"1980","journal-title":"Sonderver\u00f6ffentlichungen
+        des Geologischen Institut der Universit\u00e4t zu K\u00f6ln"},{"key":"bibr50","first-page":"1","article-title":"Index
+        and bibliography of nonmarine Ostracoda. Index\u00a0A. Part 1","volume":"35","author":"Kempf","year":"1980","journal-title":"Sonderver\u00f6ffentlichungen
+        des Geologischen Institut der Universit\u00e4t zu K\u00f6ln"},{"key":"bibr51","first-page":"1","article-title":"Index
+        and bibliography of nonmarine Ostracoda. Index\u00a0B. Part 2","volume":"36","author":"Kempf","year":"1980","journal-title":"Sonderver\u00f6ffentlichungen
+        des Geologischen Institut der Universit\u00e4t zu K\u00f6ln"},{"key":"bibr52","first-page":"1","article-title":"Index
+        and bibliography of nonmarine Ostracoda. Index\u00a0C. Part 3","volume":"37","author":"Kempf","year":"1980","journal-title":"Sonderver\u00f6ffentlichungen
+        des Geologischen Institut der Universit\u00e4t zu K\u00f6ln"},{"key":"bibr53","first-page":"1","article-title":"Index
+        and bibliography of nonmarine Ostracoda. Bibliography B. Part 5","volume":"77","author":"Kempf","year":"1991","journal-title":"Sonderver\u00f6ffentlichungen
+        des Geologischen Institut der Universit\u00e4t zu K\u00f6ln"},{"key":"bibr54","first-page":"1","article-title":"Index
+        and bibliography of nonmarine Ostracoda. Bibliography C. Part 9","volume":"112","author":"Kempf","year":"1997","journal-title":"Sonderver\u00f6ffentlichungen
+        des Geologischen Institut der Universit\u00e4t zu K\u00f6ln"},{"key":"bibr55","first-page":"1","article-title":"Index
+        and bibliography of nonmarine Ostracoda. Index A Supplement. Part 6","volume":"109","author":"Kempf","year":"1997","journal-title":"Sonderver\u00f6ffentlichungen
+        des Geologischen Institut der Universit\u00e4t zu K\u00f6ln"},{"key":"bibr56","first-page":"1","article-title":"Index
+        and bibliography of nonmarine Ostracoda. Index\u00a0B Supplement 1. Part 7","volume":"110","author":"Kempf","year":"1997","journal-title":"Sonderver\u00f6ffentlichungen
+        des Geologischen Institut der Universit\u00e4t zu K\u00f6ln"},{"key":"bibr57","first-page":"1","article-title":"Index
+        and bibliography of nonmarine Ostracoda. Index\u00a0C Supplement 1. Part 8","volume":"111","author":"Kempf","year":"1997","journal-title":"Sonderver\u00f6ffentlichungen
+        des Geologischen Institut der Universit\u00e4t zu K\u00f6ln"},{"key":"bibr58","author":"Kempf","year":"2002"},{"key":"bibr59","author":"Kempf","year":"2006"},{"key":"bibr60","first-page":"35","article-title":"Zweiter
+        Beitrag zur Kenntnis der S\u00fcsswasser. Ostracoden Russlands","volume":"9","author":"Klie","year":"1926","journal-title":"Arbeiten
+        Der Biolischen Wolga Station"},{"issue":"1-4","key":"bibr61","first-page":"1","article-title":"Krebstiere
+        oder Crustacea, III: Ostracoda, Muschelkrebse","volume":"34","author":"Klie","year":"1938","journal-title":"Die
+        Tierwelt Deutschlands und der angrenzenden Meersteile nach ihren Merkmalen
+        und nach ihrer Lebensweise"},{"key":"bibr62","doi-asserted-by":"crossref","first-page":"207","DOI":"10.3376\/1081-1710(2007)32[207:LMCIDV]2.0.CO;2","article-title":"Larval
+        mosquito communities in discarded vehicle tires in a forested and unforested
+        site: detritus type, amount, and water nutrient differences","volume":"32","author":"Kling","year":"2007","journal-title":"Journal
+        of Vector Ecology"},{"key":"bibr63","first-page":"87","article-title":"On
+        the distribution of Ostracoda in the littoral of Lake Kisajno (Masurian Lake
+        District)","volume":"15","author":"Kosmal","year":"1968","journal-title":"Polskie
+        Archiwum Hydrobiologii"},{"key":"bibr64","first-page":"1","article-title":"Rod
+        Candona(Ostracoda) iz kongerijskikh slojeva juzhnog dela Panonskog Basena","volume":"39","author":"Krsti\u0107","year":"1972","journal-title":"Poseb
+        Izd, Srp Akad Nauka Umet, Odelene Prir-Math Nauka"},{"key":"bibr65","volume-title":"Histoire
+        naturelle des animaux sans vertebres","volume":"Vol.\u00a06","author":"Lamarck","year":"1822"},{"key":"bibr66","first-page":"435","article-title":"Ostracod
+        fauna from the East Sea coast of Korea and their distribution. Preliminary
+        study on Ostracoda as an indicator of water pollution","volume":"36","author":"Lee","year":"2000","journal-title":"Journal
+        of the Geological Society of Korea"},{"key":"bibr67","first-page":"149","article-title":"Introduction
+        of Aedes albopictus(Skuse) in southern California and potential for its establishment","volume":"27","author":"Madon","year":"2002","journal-title":"Journal
+        of Vector Ecology"},{"key":"bibr68","author":"Marco-Barba","year":"2010"},{"key":"bibr69","doi-asserted-by":"crossref","first-page":"405","DOI":"10.1016\/B978-012370626-3.00184-8","article-title":"Ostracoda","volume-title":"Encyclopedia
+        of Inland Waters","author":"Martens","year":"2009"},{"key":"bibr70","doi-asserted-by":"crossref","first-page":"185","DOI":"10.1007\/s10750-007-9245-4","article-title":"Global
+        diversity of ostracods (Ostracoda, Crustacea) in freshwater","volume":"595","author":"Martens","year":"2008","journal-title":"Hydrobiologia"},{"key":"bibr71","author":"Mazepova","year":"1990"},{"key":"bibr72","doi-asserted-by":"crossref","first-page":"181","DOI":"10.2307\/1547979","article-title":"Man
+        as an agent of crustacean passive dispersal via useful plants \u2013 exemplified
+        by Ostracoda ospiti esteriof the Italian ricefiels ecosystem \u2013 and implications
+        arising therefrom","volume":"6","author":"McKenzie","year":"1986","journal-title":"Journal
+        of Crustacean Biology"},{"key":"bibr73","volume-title":"Freshwater Ostracoda
+        of Western and Central Europe","author":"Meisch","year":"2000"},{"key":"bibr74","doi-asserted-by":"crossref","first-page":"504","DOI":"10.1163\/156854097X00087","article-title":"New
+        records of the genus FabaeformiscandonaKrsti\u0107, 1972 (Ostracoda) from
+        the Iberian Peninsula","volume":"70","author":"Mezquita","year":"1997","journal-title":"Crustaceana"},{"key":"bibr75","doi-asserted-by":"crossref","first-page":"344","DOI":"10.2307\/1549241","article-title":"Ecology
+        and distribution of ostracods associated with flowing waters in eastern Iberian
+        Peninsula","volume":"19","author":"Mezquita","year":"1999","journal-title":"Journal
+        of Crustacean Biology"},{"key":"bibr76","first-page":"1","article-title":"Crustacea.
+        Ostracoda","volume-title":"Das Tierreich","volume":"Vol.\u00a031","author":"M\u00fcller","year":"1912"},{"key":"bibr77","author":"M\u00fcller","year":"1774"},{"key":"bibr78","doi-asserted-by":"crossref","volume-title":"Zoologiae
+        danicae prodomus seu animalium daniae et norvegiae indigenarum charactere,
+        nomina et synonyma imprimis popularium","author":"M\u00fcller","year":"1776","DOI":"10.5962\/bhl.title.13268"},{"key":"bibr79","doi-asserted-by":"crossref","first-page":"146","DOI":"10.2307\/1138","article-title":"The
+        arthropod fauna of a Rice-Ship, trading from Burma to the West Indies","volume":"3","author":"Myers","year":"1934","journal-title":"Journal
+        of Animal Ecology"},{"key":"bibr80","volume-title":"The Migration Ecology
+        of Birds","author":"Newton","year":"2008"},{"key":"bibr81","first-page":"39","article-title":"Sixteen
+        species of freshwater Ostracoda from Japan (freshwater Ostracoda from Japan,
+        XV)","volume":"45","author":"Okubo","year":"1990","journal-title":"Bulletin
+        of the Biogeographical Society of Japan"},{"key":"bibr82","author":"Okubo","year":"2004"},{"key":"bibr83","first-page":"105","article-title":"Freshwater
+        Ostracoda from Gunma Prefecture, Japan","volume":"44","author":"Okubo","year":"1989","journal-title":"Bulletin
+        of the Biogeographical Society of Japan"},{"key":"bibr84","volume-title":"Reise
+        durch verschiedene Provinzen des Russischen Reichs","volume":"Vol. 1","author":"Pallas","year":"1771"},{"key":"bibr85","first-page":"57","article-title":"Species
+        of the genus StenocyprisSars, 1889 from the rice-fields of Macedonia","volume":"23","author":"Petkovski","year":"1996","journal-title":"Travaux
+        Scientifiques du Mus\u00e9e National d\u2019Histoire Naturelle de Luxembourg"},{"key":"bibr86","doi-asserted-by":"crossref","first-page":"280","DOI":"10.1002\/aqc.831","article-title":"Loss
+        of Ostracoda biodiversity in Western Mediterranean wetlands","volume":"18","author":"Poquet","year":"2008","journal-title":"Aquatic
+        Conservation: Marine and Freshwater Ecosystems"},{"key":"bibr87","first-page":"83","article-title":"\u00dcber
+        die gattung CyprisM\u00fcller und drei zu derselben geh\u00f6rigen neue arten","volume":"2","author":"Ramdohr","year":"1808","journal-title":"Magazine
+        Gesellschaft Naturforschender Freunde zu Berlin, Neuesten Entdeckungen Gesammter
+        Naturkunde"},{"key":"bibr88","doi-asserted-by":"crossref","first-page":"707","DOI":"10.1191\/09596830195735","article-title":"A
+        multi-proxy record of Holocene climatic change in southwestern Spain: the
+        Laguna de Medina, C\u00e1diz","volume":"11","author":"Reed","year":"2001","journal-title":"The
+        Holocene"},{"key":"bibr89","doi-asserted-by":"crossref","first-page":"1","DOI":"10.4081\/jlimnol.2003.1","article-title":"Ostracoda
+        of the Italian ricefields thirty years on: new synthesis and hypothesis","volume":"62","author":"Rossi","year":"2003","journal-title":"Journal
+        of Limnology"},{"key":"bibr90","first-page":"9","article-title":"Contribuci\u00f3n
+        al conocimiento de los crust\u00e1ceos (Arthropoda, Crustacea) de las Malladas
+        de la Devesa del Parque Natural de la Albufera (Valencia)","volume":"30","author":"Rueda","year":"2006","journal-title":"Bolet\u00edn
+        de la Asociaci\u00f3n Espa\u00f1ola de Entomolog\u00eda"},{"key":"bibr91","doi-asserted-by":"crossref","first-page":"305","DOI":"10.1146\/annurev.ecolsys.32.081501.114037","article-title":"The
+        population biology of invasive species","volume":"32","author":"Sakai","year":"2001","journal-title":"Annual
+        Review of Ecology and Systematics"},{"key":"bibr92","series-title":"Annals
+        of the South African Museum 20","volume-title":"The Freshwater Entomostraca
+        of the Cape Province (Union of South Africa). Ostracoda","author":"Sars","year":"1924"},{"key":"bibr93","doi-asserted-by":"crossref","first-page":"259","DOI":"10.1080\/00222930802590885","article-title":"On
+        a freshwater species of the genus SanyuaniaZhao and Han, 1980 (Crustacea,
+        Ostracoda, Loxoconchidae) from Thailand, with a discussion on morphological
+        evolution of the freshwater Loxoconchidae","volume":"43","author":"Savatenalinton","year":"2009","journal-title":"Journal
+        of Natural History"},{"key":"bibr94","doi-asserted-by":"crossref","first-page":"352","DOI":"10.1111\/j.1365-2915.2008.00763.x","article-title":"Accidental
+        importation of the mosquito Aedes albopictusinto the Netherlands: a survey
+        of mosquito distribution and the presence of dengue virus","volume":"22","author":"Scholte","year":"2008","journal-title":"Medical
+        and Veterinary Entomology"},{"key":"bibr95","first-page":"458","article-title":"Classis
+        Ostracoda \u2013 shelled Crustacea. Chapter III. Annotated list of biota of
+        the islands","volume-title":"Far-Eastern Marine Biosphere Reserve. Biota","volume":"Vol.\u00a02","author":"Schornikov","year":"2004"},{"key":"bibr96","first-page":"56","article-title":"Ostracods
+        of brackish and fresh waters of southwestern coast of Peter The Great Bay","volume-title":"The
+        State of Environment and Biota of the Southwestern Part of Peter The Great
+        Bay and the Tumen River Mouth","volume":"Vol. 3","author":"Schornikov","year":"2001"},{"key":"bibr97","doi-asserted-by":"crossref","first-page":"61","DOI":"10.1134\/S199508291104016X","article-title":"Ostracods
+        (Crustacea and Ostracoda) in the zooperiphyton of waterbodies and watercourses
+        of Tyumen oblast (Western Siberia)","volume":"5","author":"Semenova","year":"2012","journal-title":"Inland
+        Water Biology"},{"key":"bibr98","doi-asserted-by":"crossref","first-page":"2865","DOI":"10.1080\/00222930802361030","article-title":"Recent
+        species of the Family Candonidae (Ostracoda, Crustacea) from the ancient Lake
+        Biwa, Central Japan","volume":"42","author":"Smith","year":"2008","journal-title":"Journal
+        of Natural History"},{"key":"bibr99","doi-asserted-by":"crossref","first-page":"225","DOI":"10.1007\/s10750-007-0640-7","article-title":"Copulatory
+        behaviour and sexual morphology of three FabaeformiscandonaKrsti\u0107, 1972
+        (Candoninae, Ostracoda, Crustacea) species from Japan, including descriptions
+        of two new species","volume":"585","author":"Smith","year":"2007","journal-title":"Hydrobiologia"},{"key":"bibr100","first-page":"1","article-title":"Malzoraczki
+        (Ostracoda)","volume-title":"Fauna Slodkowodna Polski, Warzawa, Pozna\u0144","volume":"Vol.
+        24","author":"Sywula","year":"1974"},{"issue":"132","key":"bibr101","first-page":"397","article-title":"Ecology
+        of non-marine ostracoda from La Fe reservoir (El Retiro, Antioquia) and their
+        potential application in paleoenvironmental studies","volume":"34","author":"Torres
+        Saldarriaga","year":"2010","journal-title":"Revista de la Academia Colombiana
+        de Ciencias"},{"key":"bibr102","doi-asserted-by":"crossref","first-page":"18","DOI":"10.1046\/j.1523-1739.2000.99084.x","article-title":"Review
+        of ecological effects of roads on terrestrial and aquatic communities","volume":"14","author":"Trombulak","year":"2000","journal-title":"Conservation
+        Biology"},{"key":"bibr103","series-title":"Crustacean Issues 12","first-page":"3","article-title":"Ecological
+        impact of crustacean invaders: general considerations and examples from the
+        Rhine River","volume-title":"The Biodiversity Crisis and Crustacea","author":"van\u00a0der\u00a0Velde","year":"2000"},{"key":"bibr104","first-page":"2264","article-title":"Dispersal
+        of freshwater invertebrates by large terrestrial mammals, a case study with
+        wild boar ( Sus scrofa) in Mediterranean wetlands","volume":"53","author":"Vanschoenwinkel","year":"2008","journal-title":"Freshwater
+        Biology"},{"key":"bibr105","article-title":"Ostracoda, Muschelkrebse, pp.
+        85-136","volume-title":"Die S\u00fcsswasserfauna Deutschlands, eine Exkursionsfauna","volume":"Vol.\u00a011(2)","author":"V\u00e1vra","year":"1909"},{"key":"bibr106","doi-asserted-by":"crossref","first-page":"108","DOI":"10.2307\/2425084","article-title":"An
+        ostracod ( Cypridopsis vidua) can reduce predation from fish by resisting
+        digestion","volume":"102","author":"Vinyard","year":"1979","journal-title":"American
+        Midland Naturalist"},{"key":"bibr107","first-page":"183","article-title":"Reconstruction
+        pal\u00e9oenvironnmentale des derniers 30.000 ans de la s\u00e9quence de La
+        Draga (Banyoles, Espagne), d\u00e9duite des rapports (Sr\/Ca) et (Mg\/Ca)
+        des valves d\u2019ostracodes lacustres","volume":"120","author":"Wansard","year":"1997","journal-title":"Annales
+        de la Soci\u00e9t\u00e9 G\u00e9ologique de Belgique"},{"key":"bibr108","doi-asserted-by":"crossref","first-page":"580","DOI":"10.1002\/aqc.1122","article-title":"Unintentional
+        dispersal of aquatic invertebrates via foot wear and motor vehicles in a Mediterranean
+        wetland area","volume":"20","author":"Waterkeyn","year":"2010","journal-title":"Aquatic
+        Conservation: Marine and Freshwater Ecosystems"},{"key":"bibr109","first-page":"153","article-title":"Check-list
+        of the recent non-marine Ostracoda (Crustacea) of Belgium","volume-title":"Proceedings
+        of the Symposium \u201cInvertebrates of Belgium\u201d","author":"Wouters","year":"1989"},{"key":"bibr110","volume-title":"Biodiversitat
+        i Ecologia dels Invertebrats Aqu\u00e0tics Continentals de la Marina Alta
+        i el Seu Valor com a Indicadors de la Qualitat de les Aig\u00fces de la Comarca","author":"Zamora","year":"2005"},{"key":"bibr111","first-page":"156","article-title":"Ostracod
+        assemblages of the freshened part of Amursky Bay and lower reaches of Razdolnaya
+        River (Sea of Japan)","volume-title":"Ecological Studies and the State of
+        the Razdolnaya River (Sea of Japan)","volume":"Vol. 1","author":"Zenina","year":"2008"}],"container-title":["Journal
+        of Crustacean Biology"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/academic.oup.com\/jcb\/article-pdf\/32\/6\/949\/10336473\/jcb0949.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,7,5]],"date-time":"2019-07-05T16:53:10Z","timestamp":1562345590000},"score":1,"resource":{"primary":{"URL":"https:\/\/academic.oup.com\/jcb\/article-lookup\/doi\/10.1163\/1937240X-00002096"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2012,1,1]]},"references-count":111,"journal-issue":{"issue":"6","published-print":{"date-parts":[[2012,1,1]]}},"URL":"http:\/\/dx.doi.org\/10.1163\/1937240x-00002096","relation":{},"ISSN":["0278-0372","1937-240X"],"issn-type":[{"value":"0278-0372","type":"print"},{"value":"1937-240X","type":"electronic"}],"subject":["Aquatic
+        Science"],"published":{"date-parts":[[2012,1,1]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:04 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1163
@@ -69,30 +310,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:32 GMT
+      - Sun, 12 Mar 2023 19:21:04 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TplkrCQljeHONZTnAZn3Dmt9OYLav8wZKAivlK5b%2BsO%2BDJciCWFL4royw5xtt5twKXR4rDW1j6IkMc3vRAX%2BTVkiWquDuClBYzDBRVam0li1bG%2BBJt%2FtRowY1%2FXM830JLIZoX8s%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=d1lzCiE9cPQD2y7AqVF1e1J0clMJZpJMKqz69GSaZfOswUUQan7EX7B423z2b9NMFLhoxacN1o5SVnVBvn%2F1BR%2BSVxKrZNdigrp%2Fm%2F0TPlyYAcFnghbAToenqM8YySwSYjLJx4w%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -100,72 +341,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6250d73fe51cba-AMS
+      - 7a6e65eb8b1c0bd7-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Q0MzYyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAqrH6/DYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:32 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1163/1937240x-00002096
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:41 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '9481'
-      Set-Cookie:
-      - AWSALB=ny7nIixzuU+ZLA2aPUvWcIDu/zYx91ej7KlncwnJbR9Tls6+mTG+6AciLyl88FJNoaPsEnH+6ZvVjzo1qdd2vpoMl46spddTd+CSSFVwTS0W2fpuH/0hgGo3u2zi;
-        Expires=Sat, 18 Mar 2023 08:54:41 GMT; Path=/, AWSALBCORS=ny7nIixzuU+ZLA2aPUvWcIDu/zYx91ej7KlncwnJbR9Tls6+mTG+6AciLyl88FJNoaPsEnH+6ZvVjzo1qdd2vpoMl46spddTd+CSSFVwTS0W2fpuH/0hgGo3u2zi;
-        Expires=Sat, 18 Mar 2023 08:54:41 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:41 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1163",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:04 GMT
 recorded_with: VCR 6.1.0

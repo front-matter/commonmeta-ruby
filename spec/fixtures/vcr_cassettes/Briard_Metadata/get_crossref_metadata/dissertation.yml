@@ -2,33 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.14264/uql.2020.791/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.14264/uql.2020.791
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:41 GMT
+      - Sun, 12 Mar 2023 19:20:58 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '973'
-      Set-Cookie:
-      - AWSALB=qthM4p8MSU9QBs0xwKx2eo0nVvkf2HOiuhOl0F3g6LQ7z1BnPKaARsSh5M52c4oDsFA8YYGXCEsyAEeBp2SrO4Iy4ZZEVFHl6wAmngSQAM5ySRj2IMyCReWWVyMb;
-        Expires=Sat, 18 Mar 2023 08:09:41 GMT; Path=/, AWSALBCORS=qthM4p8MSU9QBs0xwKx2eo0nVvkf2HOiuhOl0F3g6LQ7z1BnPKaARsSh5M52c4oDsFA8YYGXCEsyAEeBp2SrO4Iy4ZZEVFHl6wAmngSQAM5ySRj2IMyCReWWVyMb;
-        Expires=Sat, 18 Mar 2023 08:09:41 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.14264/uql.2020.791>; rel="canonical", <http://orcid.org/0000-0003-3086-4443>;
-        title="Patricia Maree Collingwood"; rel="author"
+      - '1438'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -38,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -47,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -58,9 +51,14 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAA/7VWS4/iOBC+j7T/wco9cUKABhQyhxmttFKPdma6W1rtBZnYEGsTO+1HQ/79lh0e6SZ0M4dBEByX63PVV+UqZ5/3dYVemNJcimWQRHGAmCgk5WK7DJ4e/wxnwef8U1YoqbVim5Vi2lYGgZbQy6A0pllgvNvtouOKSKotfla6KFlNcOoAT/D+zasu9pq/Ut+lXnEUxwn+59v9g1cPudCGiIKBluaLDvNeFsR4uFt2R9cWdUs0Pnn2bJlqV9KaxhpQjPaaBvkfnxDKOknnuZ+BuZIRehjDG5V8tSamKFec5kIKluFXUwcl3NPK1pK2ZwS/BwJvjQVeYS9ZvbCDAedNkGkbtgwo15op42kI8iSOkvFoOsb2uYpG8SiO7uaJN6CvXag65IbVSJAaIBq7rrgumQrde3AA1kZB4IP8SXAfNNMiuUE/LGNCV0RQdM/Xiqg2w0e497YAVvn+9+HXrF6D/Zwe0YV1E0E+SWd3NyEUvONwACNJpvP0bpxObwJaS/nfEEg6nsLnJgjKGgmEhIbXDNKgbi7AJnP4juZpehOe3Akgp4vBW/qPGXMTUEW0CW1DiTmF0Y9zl2phPA3j2WM8WcSzxWT+7220KwYA9CO02Y1oMKbrNiykFeYtafEwhDucihVS0d6sh+6KwUf1bX8oMEmU/Fpp6ikeKxPYMlyZrOB7mIOl51rUs7VfBN7IQNrA8ZJi5ShCmkF1gSq6DDZcaeCokAIyYW2NVCslKxAQa0qp3u7hkbZwVDug/DsBtYIT9I0oBjWuJxpQ1FZ50RdZVZB2Oylpho+TA+v//vnlr6/IWcKE4YVLkWVglIXkcFRp4EqqglNPUgyfEH5pmMazaTgej+FYeIRLLnCPjEup4aZiesggL8mhFUlZITAEOlGLXJXacAFjTirEBZxbBg+gF1HrjhdiNVNbNyAUGgYo0wUiqJJiy42FxgpqBB6t5tpVP8hDxhvjhg5bsYq7loekQAXRJWxMhN6ABxnuDLr074oLGWkaJV9ItXJHbMjDGhKhzONJhrvRwBJK2nwEC9z/gLhlRPmzm2E/vDTufSMy1+KBl8Esfi3u4vdYMnStfWT4YvkHkBA9okwNCXeMMwA+SB/bh4K7sL4G7SlcuvqeLxllWzg0+ffyKwIfIPjAaTd1uRTKE7BFBuMBbf2mjn/ScJcJqwqWHwoO0w0pWFR1rTayzxGjNiIWv3C2w08/FqOUJOwOusNJ89LVKyaC4FpZyk5XrX4lxgOlOMP+NnS6NZ1uSgfB+Sp2xjzO/Q8n44jB0QoAAA==
-  recorded_at: Sat, 11 Mar 2023 08:09:41 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":[{"name":"The
+        University of Queensland","department":["School of Social Science"]}],"indexed":{"date-parts":[[2022,4,3]],"date-time":"2022-04-03T00:57:13Z","timestamp":1648947433930},"reference-count":0,"publisher":"University
+        of Queensland Library","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.14264\/uql.2020.791","type":"dissertation","created":{"date-parts":[[2020,6,8]],"date-time":"2020-06-08T05:08:58Z","timestamp":1591592938000},"approved":{"date-parts":[[2020,5,25]]},"source":"Crossref","is-referenced-by-count":0,"title":["School
+        truancy and financial independence during emerging adulthood: a longitudinal
+        analysis of receipt of and reliance on cash transfers"],"prefix":"10.14264","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-3086-4443","authenticated-orcid":true,"given":"Patricia
+        Maree","family":"Collingwood","sequence":"first","affiliation":[]}],"member":"5387","container-title":[],"original-title":[],"deposited":{"date-parts":[[2020,6,8]],"date-time":"2020-06-08T05:08:59Z","timestamp":1591592939000},"score":1,"degree":["PhD
+        Thesis"],"resource":{"primary":{"URL":"http:\/\/espace.library.uq.edu.au\/view\/UQ:23a1e74"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.14264\/uql.2020.791","relation":{}}}'
+  recorded_at: Sun, 12 Mar 2023 19:20:58 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.14264
@@ -69,30 +67,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:42 GMT
+      - Sun, 12 Mar 2023 19:20:59 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HlEx6bskvgKaqY31qi4TDkeXSBxBinU0SC8M9ytIPtJy3raTpQ4jNNCCJBVqtvuCDmladRMLF5tmXsTYmM%2BnB47nirgBxpw9BNibjHHnJpSG%2ByGVWD%2Brgx6eRs9nojSgiEm5Nbw%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eu7qnQxLqKmtPimKCCMoSRO7WDdl739fZpSLuKOdSIHdPNZDebPIUueotBrWgm0qLiJKzktVOm0wdnGb6cT%2FToauK1g6bg865EtnODpBfDPp1EVGfG%2BB9EOaXxd1QRSrboQJ%2BGQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -100,72 +98,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a625114fc3c0e3c-AMS
+      - 7a6e65c84c89b88b-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9QxMjMxMlHYhwkCNI1Lkov7i4KDVNCShYyxULAMUR8AA3AAAA
-  recorded_at: Sat, 11 Mar 2023 08:09:42 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.14264/uql.2020.791
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:29 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '750'
-      Set-Cookie:
-      - AWSALB=cKS9OXFLqtgErssnxx6V279wD4O6Dvx5f1Ewhu2WRnR2wPhHbXeLICbj8EkbmPpltXmg0W9VrcXlEkHaeLbTHgaMtP6AxPDaskGQSsVZPE+6LMQRyv2hk8GJ+k/q;
-        Expires=Sat, 18 Mar 2023 08:54:29 GMT; Path=/, AWSALBCORS=cKS9OXFLqtgErssnxx6V279wD4O6Dvx5f1Ewhu2WRnR2wPhHbXeLICbj8EkbmPpltXmg0W9VrcXlEkHaeLbTHgaMtP6AxPDaskGQSsVZPE+6LMQRyv2hk8GJ+k/q;
-        Expires=Sat, 18 Mar 2023 08:54:29 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAA/6VUTW/iMBD9K5HPSTBJgJBre6nUVb8vWziYZACrjp36oy1C/PedCbQbdctpJYSssWfevDdvsmfOCx8cq5h5YTFrwTmxgcTvOsDYu7HD6BtYJ43Gi3HKU/73hlV7JrXz0gffP3jeMy1aKvG4hehJyz7V7yKzju4CgHZK6AYLNNAJ61vQHpPYQ701RtGjB1NLoaKHWoKugS0PyxgRGviAhsAa4SGhTOz8+TnjWRYXcb7ER/2Nlz02xRNeJDx/5GWVzSs++42YdIu0245V42lRzmfFpJiVPDvEzMIaLCEmtQnUE49ZF1ZKui1YrHiOSXQtV1bYHVavjfZIJ2lMK6Tumz2dnrG92hrnWmFfEos9WFkf9VoL5QDx3dZYn1AJzACLRLyCY+blzRUJz9NxkU2LxSi8qhQJ8nQ2HxOp48Qa6RxYnCmVJThAPX6WjMfTuPxBMp7wacLLRz6pULVJ+V2yyRx/2TwvOefYsug6a97OYkzibLJcEjUTbE0QFyQBCo1lpUu+FG+S1W6g+ifzT094G4SudxGJvZYaz+QPskQH+IcFoiZYqTcRtGA3dBBNUB6TmyoSkTJ6g/ZsMFVhEaF2TjoaooUaZOfpSLUtKCmomtFRLdwWgYV22KNjKFWH7cqPwRyQhAgIYnvP39xfXF3i7db7rlqMFiNja9mkxm4WI1QLleU8T3JeTpOiKPJTMrpF1jSmpH/OKuQKMdug1WjXbgX5RIrol7AAmLMWrVQ7UtIohUTfkSKGHbyGflkqtpbWeaq+Xkukc9rJfolaaFe9lSd5OTvZ9R+vGSs3JNQwhkIbNP7/mWl+zkzzo5lcbSxmjgluQ2zRALfbywi/IjgumgCuzclIe5yGbGnp8Ph0fz3UHVwnakjVcSvT8JpCE1IRFqM3Ce+L0dNdleViDLOCHQg2rAZMj0s4COBOhZ9466BU7+0vE7uBg7+11HykjZFHL5zdYnTfaVr7w+HwB7jZzr+eBQAA
-  recorded_at: Sat, 11 Mar 2023 08:54:29 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.14264",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:20:59 GMT
 recorded_with: VCR 6.1.0

@@ -2,36 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1038/hdy.2013.26/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1038/hdy.2013.26
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:35 GMT
+      - Sun, 12 Mar 2023 19:21:01 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '6343'
-      Set-Cookie:
-      - AWSALB=Euw9Das956EoshZBF0G3FV3Sf3EJYTtHAz4VLV/rwgOYSu5GFHNzZ6eMRBzRUcEv9Xl7NHnPp+eRzb9dxBjouYD42IPoDQlo+1CZTolIrCZxCOAb52YqP+hdyf41;
-        Expires=Sat, 18 Mar 2023 08:09:35 GMT; Path=/, AWSALBCORS=Euw9Das956EoshZBF0G3FV3Sf3EJYTtHAz4VLV/rwgOYSu5GFHNzZ6eMRBzRUcEv9Xl7NHnPp+eRzb9dxBjouYD42IPoDQlo+1CZTolIrCZxCOAb52YqP+hdyf41;
-        Expires=Sat, 18 Mar 2023 08:09:35 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1038/hdy.2013.26>; rel="canonical", <http://www.nature.com/articles/hdy201326.pdf>;
-        version="vor"; type="application/pdf"; rel="item", <http://www.nature.com/articles/hdy201326>;
-        version="vor"; type="text/html"; rel="item", <http://www.nature.com/articles/hdy201326.pdf>;
-        version="vor"; type="application/pdf"; rel="item", <http://www.springer.com/tdm>;
-        version="tdm"; rel="license"
+      - '17476'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -41,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -50,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -61,9 +51,156 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:35 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,3,12]],"date-time":"2023-03-12T15:26:52Z","timestamp":1678634812059},"reference-count":41,"publisher":"Springer
+        Science and Business Media LLC","issue":"2","license":[{"start":{"date-parts":[[2013,4,10]],"date-time":"2013-04-10T00:00:00Z","timestamp":1365552000000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/www.springer.com\/tdm"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Heredity"],"published-print":{"date-parts":[[2013,8]]},"DOI":"10.1038\/hdy.2013.26","type":"journal-article","created":{"date-parts":[[2013,4,10]],"date-time":"2013-04-10T09:19:27Z","timestamp":1365585567000},"page":"122-130","source":"Crossref","is-referenced-by-count":46,"title":["Albinism
+        in phylogenetically and geographically distinct populations of Astyanax cavefish
+        arises through the same loss-of-function Oca2 allele"],"prefix":"10.1038","volume":"111","author":[{"given":"J
+        B","family":"Gross","sequence":"first","affiliation":[]},{"given":"H","family":"Wilkens","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2013,4,10]]},"reference":[{"key":"BFhdy201326_CR1","first-page":"263","volume":"4","author":"J
+        Alvarez","year":"1946","unstructured":"Alvarez J . (1946). Revisi\u00f3n del
+        g\u00e9nero Anoptichthys con descipci\u00f3n de una especie nueva (Pisces,
+        Characidae). An Esc Nac Cien Biol M\u00e9xico 4: 263\u2013282.","journal-title":"An
+        Esc Nac Cien Biol M\u00e9xico"},{"key":"BFhdy201326_CR2","doi-asserted-by":"publisher","first-page":"R23","DOI":"10.1016\/j.cub.2007.11.023","volume":"18","author":"R
+        Borowsky","year":"2008","unstructured":"Borowsky R . (2008). Restoring sight
+        in blind cavefish. Curr Biol 18: R23\u2013R24.","journal-title":"Curr Biol"},{"key":"BFhdy201326_CR3","doi-asserted-by":"publisher","first-page":"19","DOI":"10.1093\/jhered\/93.1.19","volume":"93","author":"R
+        Borowsky","year":"2002","unstructured":"Borowsky R, Wilkens H . (2002). Mapping
+        a cave fish genome: Polygenic systems and regressive evolution. J Hered 93:
+        19\u201321.","journal-title":"J Hered"},{"key":"BFhdy201326_CR4","doi-asserted-by":"publisher","first-page":"9","DOI":"10.1186\/1471-2148-12-9","volume":"12","author":"M
+        Bradic","year":"2012","unstructured":"Bradic M, Beerli P, Garc\u00eda-de Le\u00f3n
+        FJ, Esquivel-Bobadilla S, Borowsky R . (2012). Gene flow and population structure
+        in the Mexican blind cavefish complex (Astyanax mexicanus). BMC Evol Biol
+        12: 9.","journal-title":"BMC Evol Biol"},{"key":"BFhdy201326_CR5","doi-asserted-by":"publisher","first-page":"311","DOI":"10.2307\/1376730","volume":"37","author":"DH
+        Brown","year":"1956","unstructured":"Brown DH, Norris KS . (1956). Observations
+        of captive and wild cetaceans. J Mammal 37: 311\u2013326.","journal-title":"J
+        Mammal"},{"key":"BFhdy201326_CR6","doi-asserted-by":"publisher","first-page":"519","DOI":"10.1002\/zoo.10068","volume":"21","author":"S
+        Clark","year":"2002","unstructured":"Clark S . (2002). First report of albinism
+        in the white-spotted bamboo shark, Chiloscyllium plagiosum (Orectolobiformes:
+        Hemiscyllidae), with a review of reported color aberrations in elasmobranchs.
+        Zoo Biol 21: 519\u2013524.","journal-title":"Zoo Biol"},{"key":"BFhdy201326_CR7","doi-asserted-by":"publisher","first-page":"1928","DOI":"10.1126\/science.1107239","volume":"307","author":"PF
+        Colosimo","year":"2005","unstructured":"Colosimo PF, Hosemann KE, Balabhadra
+        S, Villarreal G Jr, Dickson M, Grimwood J et al. (2005). Widespread parallel
+        evolution in sticklebacks by repeated fixation of Ectodysplasin alleles. Science
+        307: 1928\u20131933.","journal-title":"Science"},{"key":"BFhdy201326_CR8","doi-asserted-by":"publisher","volume-title":"Adaptation
+        and Natural Selection in Caves: The Evolution of Gammarus minus","author":"DC
+        Culver","year":"1995","unstructured":"Culver DC, Kane TC, Fong DW . (1995)
+        Adaptation and Natural Selection in Caves: The Evolution of Gammarus minus.
+        Harvard University Press: Cambridge, MA, USA.","DOI":"10.4159\/harvard.9780674419070"},{"key":"BFhdy201326_CR9","first-page":"381","volume-title":"Subterranean
+        Ecosystems","author":"DC Culver","year":"2000","unstructured":"Culver DC,
+        Wilkens H . (2000). Critical review of the relevant theories of the evolution
+        of subterranean animals. In: Wilkens H, Culver DC, Humphreys WF, (eds). Subterranean
+        Ecosystems. Elsevier: Amsterdam, the Netherlands. pp 381\u2013398."},{"key":"BFhdy201326_CR10","doi-asserted-by":"publisher","first-page":"446","DOI":"10.1093\/oxfordjournals.molbev.a004100","volume":"19","author":"TE
+        Dowling","year":"2002","unstructured":"Dowling TE, Martasian DP, Jeffery WR
+        . (2002). Evidence for multiple genetic forms with similar eyeless phenotypes
+        in the blind cavefish, Astyanax mexicanus. Mol Biol Evol 19: 446\u2013455.","journal-title":"Mol
+        Biol Evol"},{"key":"BFhdy201326_CR11","doi-asserted-by":"publisher","first-page":"249","DOI":"10.1146\/annurev.es.26.110195.001341","volume":"26","author":"DW
+        Fong","year":"1995","unstructured":"Fong DW, Kane TC, Culver DC . (1995).
+        Vestigialization and loss of nonfunctional characters. Ann Rev Ecol Syst 26:
+        249\u2013268.","journal-title":"Ann Rev Ecol Syst"},{"key":"BFhdy201326_CR12","doi-asserted-by":"publisher","first-page":"127","DOI":"10.1002\/zoo.1430050207","volume":"5","author":"R
+        Frankham","year":"1986","unstructured":"Frankham R, Hemmer H, Ryder OA, Cothran
+        EG, Soul\u00e9 ME, Murray ND et al. (1986). Selection in captive populations.
+        Zoo Biol 5: 127\u2013138.","journal-title":"Zoo Biol"},{"key":"BFhdy201326_CR13","doi-asserted-by":"publisher","first-page":"105","DOI":"10.1186\/1471-2148-12-105","volume":"12","author":"JB
+        Gross","year":"2012","unstructured":"Gross JB . (2012). The complex origin
+        of Astyanax cavefish. BMC Evol Biol 12: 105.","journal-title":"BMC Evol Biol"},{"key":"BFhdy201326_CR14","doi-asserted-by":"publisher","first-page":"e1000326","DOI":"10.1371\/journal.pgen.1000326","volume":"5","author":"JB
+        Gross","year":"2009","unstructured":"Gross JB, Borowsky R, Tabin CJ . (2009).
+        A novel role for Mc1r in the parallel evolution of depigmentation in independent
+        populations of the cavefish Astyanax mexicanus. PLoS Genet 5: e1000326.","journal-title":"PLoS
+        Genet"},{"key":"BFhdy201326_CR15","doi-asserted-by":"publisher","first-page":"89","DOI":"10.1016\/j.ympev.2011.03.009","volume":"60","author":"B
+        Hausdorf","year":"2011","unstructured":"Hausdorf B, Wilkens H, Strecker U
+        . (2011). Population genetic patterns revealed by microsatellite data challenge
+        the mitochondrial DNA based taxonomy of Astyanax in Mexico (Characidae, Teleostei).
+        Mol Phylogenet Evol 60: 89\u201397.","journal-title":"Mol Phylogenet Evol"},{"key":"BFhdy201326_CR16","first-page":"1","volume":"342","author":"CL
+        Hubbs","year":"1936","unstructured":"Hubbs CL, Innes WT . (1936). The first
+        known blind fish of the family Characidae: A new genus from Mexico. Occas
+        Papers Mus Zool, Univ Michigan 342: 1\u20137.","journal-title":"Occas Papers
+        Mus Zool, Univ Michigan"},{"key":"BFhdy201326_CR17","doi-asserted-by":"publisher","first-page":"1","DOI":"10.1006\/dbio.2000.0121","volume":"231","author":"WR
+        Jeffery","year":"2001","unstructured":"Jeffery WR . (2001). Cavefish as a
+        model system in evolutionary developmental biology. Dev Biol 231: 1\u201312.","journal-title":"Dev
+        Biol"},{"key":"BFhdy201326_CR18","doi-asserted-by":"publisher","first-page":"185","DOI":"10.1093\/jhered\/esi028","volume":"96","author":"WR
+        Jeffery","year":"2005","unstructured":"Jeffery WR . (2005). Adaptive evolution
+        of eye degeneration in the Mexican blind cavefish. J Hered 96: 185\u2013196.","journal-title":"J
+        Hered"},{"key":"BFhdy201326_CR19","doi-asserted-by":"publisher","first-page":"25","DOI":"10.1146\/annurev-genet-102108-134216","volume":"43","author":"WR
+        Jeffery","year":"2009","unstructured":"Jeffery WR . (2009). Regressive evolution
+        in Astyanax cavefish. Annu Rev Genet 43: 25\u201347.","journal-title":"Annu
+        Rev Genet"},{"key":"BFhdy201326_CR20","doi-asserted-by":"publisher","first-page":"81","DOI":"10.1002\/(SICI)1098-2361(1999)18:2<81::AID-ZOO1>3.0.CO;2-2","volume":"18","author":"L
+        Laikre","year":"1999","unstructured":"Laikre L . (1999). Hereditary defects
+        and conservation genetic management of captive populations. Zoo Biol 18: 81\u201399.","journal-title":"Zoo
+        Biol"},{"key":"BFhdy201326_CR21","doi-asserted-by":"publisher","first-page":"354","DOI":"10.1016\/0888-7543(95)80220-G","volume":"26","author":"ST
+        Lee","year":"1995","unstructured":"Lee ST, Nicholls RD, Jong MT, Fukai K,
+        Spritz RA . (1995). Organization and sequence of the human P gene and identification
+        of a new family of transport proteins. Genomics 26: 354\u2013363.","journal-title":"Genomics"},{"key":"BFhdy201326_CR22","doi-asserted-by":"publisher","first-page":"71","DOI":"10.1016\/S0006-3207(03)00095-8","volume":"115","author":"ME
+        McPhee","year":"2004","unstructured":"McPhee ME . (2004). Generations in captivity
+        increases behavioral variance: Considerations for captive breeding and reintroduction
+        programs. Biol Conserv 115: 71\u201377.","journal-title":"Biol Conserv"},{"key":"BFhdy201326_CR23","volume-title":"Mexican
+        Eyeless Characin Fishes, Genus Astyanax: Environment, Distribution, and Evolution","author":"RW
+        Mitchell","year":"1977","unstructured":"Mitchell RW, Russell WH, Elliott WR
+        . (1977) Mexican Eyeless Characin Fishes, Genus Astyanax: Environment, Distribution,
+        and Evolution. Texas Tech Press: Lubbock, TX, USA."},{"key":"BFhdy201326_CR24","doi-asserted-by":"publisher","first-page":"340","DOI":"10.1186\/1471-2148-8-340","volume":"8","author":"CP
+        Ornelas-Garc\u00eda","year":"2008","unstructured":"Ornelas-Garc\u00eda CP,
+        Dom\u00ednguez-Dom\u00ednguez O, Doadrio I . (2008). Evolutionary history
+        of the fish genus Astyanax Baird & Girard (1854) (Actinopterygii, Characidae)
+        in Mesoamerica reveals multiple morphological homoplasies. BMC Evol Biol 8:
+        340.","journal-title":"BMC Evol Biol"},{"key":"BFhdy201326_CR25","doi-asserted-by":"publisher","first-page":"263","DOI":"10.1016\/j.tree.2008.11.013","volume":"24","author":"F
+        Pelletier","year":"2009","unstructured":"Pelletier F, R\u00e9ale D, Watters
+        J, Boakes EH, Garant D . (2009). Value of captive populations for quantitative
+        genetics research. Trends Ecol Evol 24: 263\u2013270.","journal-title":"Trends
+        Ecol Evol"},{"key":"BFhdy201326_CR26","doi-asserted-by":"publisher","first-page":"110","DOI":"10.1111\/j.1439-0469.1975.tb00504.x","volume":"13","author":"VN
+        Peters","year":"1975","unstructured":"Peters VN, Scholl A, Wilkens H . (1975).
+        Der Micos-Fisch, H\u00f6hlenfisch in statu nascendi oder Bastard? Ein Beitrag
+        zur Evolution der H\u00f6hlentiere. J Zool Syst Evol Res 13: 110\u2013124.","journal-title":"J
+        Zool Syst Evol Res"},{"key":"BFhdy201326_CR27","doi-asserted-by":"publisher","first-page":"173","DOI":"10.3986\/ac.v36i1.219","volume":"36","author":"ML
+        Porter","year":"2007","unstructured":"Porter ML, Dittmar K, P\u00e9rez-Losada
+        M . (2007). How long does evolution of the troglomorphic form take? Estimating
+        divergence times in Astyanax mexicanus. Acta Carsologica 36: 173\u2013182.","journal-title":"Acta
+        Carsologica"},{"key":"BFhdy201326_CR28","doi-asserted-by":"publisher","first-page":"452","DOI":"10.1016\/j.cub.2007.01.051","volume":"17","author":"M
+        Protas","year":"2007","unstructured":"Protas M, Conrad M, Gross JB, Tabin
+        C, Borowsky R . (2007). Regressive evolution in the Mexican cave tetra, Astyanax
+        mexicanus. Curr Biol 17: 452\u2013454.","journal-title":"Curr Biol"},{"key":"BFhdy201326_CR29","doi-asserted-by":"publisher","first-page":"107","DOI":"10.1038\/ng1700","volume":"38","author":"ME
+        Protas","year":"2006","unstructured":"Protas ME, Hersey C, Kochanek D, Zhou
+        Y, Wilkens H, Jeffery WR et al. (2006). Genetic analysis of cavefish reveals
+        molecular convergence in the evolution of albinism. Nat Genet 38: 107\u2013111.","journal-title":"Nat
+        Genet"},{"key":"BFhdy201326_CR30","doi-asserted-by":"publisher","first-page":"394","DOI":"10.1007\/BF02161111","volume":"13","author":"P
+        \u015eado\u011flu","year":"1955","unstructured":"\u015eado\u011flu P . (1955).
+        A Mendelian gene for albinism in natural cave fish. Experientia 13: 394\u2013395.","journal-title":"Experientia"},{"key":"BFhdy201326_CR31","first-page":"432","volume":"1957","author":"P
+        \u015eado\u011flu","year":"1957","unstructured":"\u015eado\u011flu P . (1957).
+        Mendelian inheritance in the hybrids between the Mexican blind cave fishes
+        and their overground ancestor. Verh Dtsch Zool Ges Graz 1957: 432\u2013439.","journal-title":"Verh
+        Dtsch Zool Ges Graz"},{"key":"BFhdy201326_CR32","doi-asserted-by":"publisher","first-page":"10","DOI":"10.1093\/oxfordjournals.jhered.a107917","volume":"60","author":"P
+        \u015eado\u011flu","year":"1969","unstructured":"\u015eado\u011flu P, McKee
+        A . (1969). A second gene that affects eye and body color in Mexican blind
+        cave fish. J Hered 60: 10\u201314.","journal-title":"J Hered"},{"key":"BFhdy201326_CR33","first-page":"17","volume":"32","author":"SR
+        Schlagel","year":"1947","unstructured":"Schlagel SR, Breder CM . (1947). A
+        study of oxygen consumption of blind and eyed cave characins in light and
+        in darkness. Zoologica 32: 17\u201328.","journal-title":"Zoologica"},{"key":"BFhdy201326_CR34","doi-asserted-by":"publisher","first-page":"699","DOI":"10.1046\/j.1365-294X.2003.01753.x","volume":"12","author":"U
+        Strecker","year":"2003","unstructured":"Strecker U, Bernatchez L, Wilkens
+        H . (2003). Genetic divergence between cave and surface populations of Astyanax
+        in Mexico (Characidae, Teleostei). Mol Ecol 12: 699\u2013710.","journal-title":"Mol
+        Ecol"},{"key":"BFhdy201326_CR35","doi-asserted-by":"publisher","first-page":"469","DOI":"10.1016\/j.ympev.2004.07.001","volume":"33","author":"U
+        Strecker","year":"2004","unstructured":"Strecker U, Faundez VH, Wilkens H
+        . (2004). Phylogeography of surface and cave Astyanax (Teleostei) from Central
+        and North America based on cytochrome b sequence data. Mol Phylogenet Evol
+        33: 469\u2013481.","journal-title":"Mol Phylogenet Evol"},{"key":"BFhdy201326_CR36","doi-asserted-by":"publisher","first-page":"62","DOI":"10.1016\/j.ympev.2011.09.005","volume":"62","author":"U
+        Strecker","year":"2012","unstructured":"Strecker U, Hausdorf B, Wilkens H
+        . (2012). Parallel speciation in Astyanax cave fish (Teleostei) in Northern
+        Mexico. Mol Phylogenet Evol 62: 62\u201370.","journal-title":"Mol Phylogenet
+        Evol"},{"key":"BFhdy201326_CR37","doi-asserted-by":"publisher","first-page":"530","DOI":"10.2307\/2407352","volume":"25","author":"H
+        Wilkens","year":"1971","unstructured":"Wilkens H . (1971). Genetic interpretation
+        of regressive evolutionary processes: Studies on hybrid eyes of two Astyanax
+        populations (Characidae, Pisces). Evolution 25: 530\u2013544.","journal-title":"Evolution"},{"key":"BFhdy201326_CR38","doi-asserted-by":"publisher","first-page":"271","DOI":"10.1007\/978-1-4613-1043-3_8","volume-title":"Evolutionary
+        Biology","author":"H Wilkens","year":"1988","unstructured":"Wilkens H . (1988).
+        Evolution and genetics of epigean and cave Astyanax fasciatus (Characidae,
+        Pisces). Support for the neutral mutation theory. In: Hecht MK, Wallace B,
+        (eds). Evolutionary Biology Vol 23, Plenum Publishing Corporation: New York,
+        NY, USA. pp 271\u2013367."},{"key":"BFhdy201326_CR39","doi-asserted-by":"publisher","first-page":"413","DOI":"10.1038\/hdy.2009.184","volume":"105","author":"H
+        Wilkens","year":"2010","unstructured":"Wilkens H . (2010). Genes, modules
+        and the evolution of cave fish. Heredity 105: 413\u2013422.","journal-title":"Heredity"},{"key":"BFhdy201326_CR40","first-page":"263","volume":"27","author":"H
+        Wilkens","year":"1972","unstructured":"Wilkens H, Burns RJ . (1972). A new
+        Anoptichthys cave population. Ann Sp\u00e9l\u00e9ol 27: 263\u2013270.","journal-title":"Ann
+        Sp\u00e9l\u00e9ol"},{"key":"BFhdy201326_CR41","doi-asserted-by":"publisher","first-page":"545","DOI":"10.1111\/j.1095-8312.2003.00230.x","volume":"80","author":"H
+        Wilkens","year":"2003","unstructured":"Wilkens H, Strecker U . (2003). Convergent
+        evolution of the cavefish Astyanax (Characidae: Teleostei): Genetic evidence
+        from reduced eye-size and pigmentation. Biol J Linn Soc 80: 545\u2013554.","journal-title":"Biol
+        J Linn Soc"}],"container-title":["Heredity"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/www.nature.com\/articles\/hdy201326.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/hdy201326","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/www.nature.com\/articles\/hdy201326.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,12,2]],"date-time":"2021-12-02T02:50:35Z","timestamp":1638413435000},"score":1,"resource":{"primary":{"URL":"http:\/\/www.nature.com\/articles\/hdy201326"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2013,4,10]]},"references-count":41,"journal-issue":{"issue":"2","published-print":{"date-parts":[[2013,8]]}},"alternative-id":["BFhdy201326"],"URL":"http:\/\/dx.doi.org\/10.1038\/hdy.2013.26","relation":{},"ISSN":["0018-067X","1365-2540"],"issn-type":[{"value":"0018-067X","type":"print"},{"value":"1365-2540","type":"electronic"}],"subject":["Genetics
+        (clinical)","Genetics"],"published":{"date-parts":[[2013,4,10]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:01 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1038
@@ -72,30 +209,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:35 GMT
+      - Sun, 12 Mar 2023 19:21:01 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LE%2Fq4KBC81%2BRd8KzR%2BuKS3YBvNt2Oow1DbQH97FSBJ9U5LzCRh6f2D9jiR91ueylVJtt8hAn1mr2vYZ6FXQxpdRuKOpvSWc1oGsUCRXX4Hjzst9%2F8dfXMmkdy3EXUI%2BYy6tnoh4%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8HZxIdMNLhvvDzFZN4BbbtPUAYf9BaDJnQaVbbHk2iqBD1sFHaHrP%2FHcNZeg8y3MEmZyuoCwcb1U%2BcLveD4ONYkJrjA40TiKNtOo6mC9xuRKqd%2FEjf%2BG5n0itHRxwdD7tNY5QyQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -103,72 +240,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6250ee8e170b47-AMS
+      - 7a6e65d8abce0e30-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9QwNjCyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAjMSPRDYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:35 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1038/hdy.2013.26
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:47 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '5722'
-      Set-Cookie:
-      - AWSALB=MYX89ZgFP+Aj+1isx7tonKvXlILfZirU6a1VYgz15XyWW25acTFuqwIL4eHWXEy0zXQwz4MbigKJpFPehl4Zw0VEWRneUClROgd5w+BBNGRWORZvLumk/baXKxFZ;
-        Expires=Sat, 18 Mar 2023 08:54:47 GMT; Path=/, AWSALBCORS=MYX89ZgFP+Aj+1isx7tonKvXlILfZirU6a1VYgz15XyWW25acTFuqwIL4eHWXEy0zXQwz4MbigKJpFPehl4Zw0VEWRneUClROgd5w+BBNGRWORZvLumk/baXKxFZ;
-        Expires=Sat, 18 Mar 2023 08:54:47 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:47 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1038",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:01 GMT
 recorded_with: VCR 6.1.0

@@ -27,13 +27,19 @@ module Briard
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
         url = normalize_id(id)
-        response = Maremma.get(url, raw: true)
+        conn = Faraday.new(url, request: { timeout: 5 }) do |f|
+          f.request :gzip
+          f.request :json
+          # f.response :json
+        end
+        response = conn.get(url)
+        body = JSON.parse(response.body)
 
         # some responses are returned as a hash
-        if response.body["data"].is_a?(Hash)
-          string = response.body.dig("data", "html", "head", "script", 1, "__content__")
+        if body["data"].is_a?(Hash)
+          string = body.dig("data", "html", "head", "script", 1, "__content__")
         else
-          doc = Nokogiri::HTML(response.body.fetch("data", nil), nil, "UTF-8")
+          doc = Nokogiri::HTML(body.fetch("data", nil), nil, "UTF-8")
 
           # workaround for xhtml documents
           nodeset = doc.at("script[type='application/ld+json']")
@@ -89,7 +95,7 @@ module Briard
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
 
-        meta = string.present? ? Maremma.from_json(string) : {}
+        meta = string.present? ? JSON.parse(string) : {}
 
         identifiers = Array.wrap(meta.fetch("identifier", nil)).map do |r|
           r = normalize_id(r) if r.is_a?(String)
@@ -198,7 +204,7 @@ module Briard
           dates << { "date" => strip_milliseconds(meta.fetch("dateModified")),
                      "dateType" => "Updated" }
         end
-        publication_year = meta.fetch("datePublished")[0..3] if meta.fetch("datePublished",
+        publication_year = meta.fetch("datePublished")[0..3].to_i if meta.fetch("datePublished",
                                                                            nil).present?
 
         language = case meta.fetch("inLanguage", nil)

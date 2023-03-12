@@ -130,7 +130,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       json = JSON.parse(subject.csl)
       expect(json['type']).to eq('book')
-      expect(json['DOI']).to eq('10.5281/ZENODO.2598836')
+      expect(json['DOI']).to eq('10.5281/zenodo.2598836')
       expect(json['version']).to eq('1.0.0')
       expect(json['copyright']).to eq('Open Access')
     end
@@ -205,7 +205,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'container title' do
       input = 'https://doi.org/10.6102/ZIS146'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.csl)
       expect(json['type']).to eq('article-journal')
       expect(json['id']).to eq('https://doi.org/10.6102/zis146')
@@ -264,8 +264,7 @@ describe Briard::Metadata, vcr: true do
       expect(json['type']).to eq('dataset')
       expect(json['id']).to eq('https://doi.org/10.1594/pangaea.721193')
       expect(json['DOI']).to eq('10.1594/pangaea.721193')
-      expect(json['categories']).to include('animalia',
-                                            'bottles or small containers/aquaria (&lt;20 l)')
+      expect(json['categories']).to include("Animalia", "Bottles or small containers/Aquaria (&lt;20 L)")
       expect(json['copyright']).to eq('Creative Commons Attribution 3.0 Unported')
     end
 

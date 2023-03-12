@@ -8,26 +8,22 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 10 Mar 2023 21:13:20 GMT
+      - Sun, 12 Mar 2023 19:25:29 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '3327'
-      Set-Cookie:
-      - AWSALB=HTSkfEVBlEBdoPWER3h1/1nQZ7mufYEb+NaK+c8SR50suhQVQUB29WrVRdU4eyDKpyqIhqbv5482AM2aP3gSyuVrnPadpZ6J2PYTNQieb3fq2oLPjmb+PTQYGlfd;
-        Expires=Fri, 17 Mar 2023 21:13:20 GMT; Path=/, AWSALBCORS=HTSkfEVBlEBdoPWER3h1/1nQZ7mufYEb+NaK+c8SR50suhQVQUB29WrVRdU4eyDKpyqIhqbv5482AM2aP3gSyuVrnPadpZ6J2PYTNQieb3fq2oLPjmb+PTQYGlfd;
-        Expires=Fri, 17 Mar 2023 21:13:20 GMT; Path=/; SameSite=None
+      - '10006'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -37,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -46,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -57,9 +51,66 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAA/7Vaa3PbuBX9Kxh92IlnRJqkntRsM+PYTqJsnLiWs213lelAJGTBJgkWIG0raf57zwUpiXLkRE43H5Kx8Dw4uPfgXoCfW6bgRWlao5a6abVbqTCGXwmnWOYCZXdKN0tvhTZSZajwXc/1NjWt0eeWzEwhi7KwDf783Mp4SkPMpLq4l7etLx/baBKLexFT65gXwsm5LjD1n38GXtBp+22/8xGtbFUhbW+qcDzf8TuXXm/U80ed8A9MS7UAnuatkd8fdHrD0AvDIAi+tFu5MsXuKfx+2w/awfDjRzS70qrMMUuR0DSTSIqskHMZsWOVpmUmI04LYTyL2WlcVr8wsRZzoUUWCSdSZVa0RkEfU5azRJqF0BjpWCUxm+RaZlfsNdczpdlbjv95ofQSA0QqKzCVE6uUy8zCrP/6E0uPtDIm5frG0VifllHF5pwnRgC0WShdODQEegi9gk89eRSJ/LGFD9q+1w7tuvkM4/IIyFu/XvPCjOwYz4/q4l+nh43SqkX+/HIhDcN4MkoEywENK0AB/kQXUJUwrXic8pzNsV4TLVTCdbJkAMKZFtgSieVLYVihmEzzRKQYoaqOZFFRLcF2FCkdc9DL7mSxYMVCsDdKoumJiDBk1VDN2Qn1PF71PAfbkcSopg1QZpmp3BBg7N2C61Rl8tO6Jw2pRYRNFllsSw0Vp/zaIpe0tyxXiYyWbKZiYHbZJfWpF3jHDYvFrUhULmI2W9oBL5pLPL3PhS7YKzIw4DGMdmI19Tbw8YqKeh0yUQV7dnI8Pj8At+paRAVGIGpkIdHmVtA4L99fHJ/6vqv0lV0jjftu/Jq9kOr46ORkfMqeVRsn7gsnkdkNu0+TzIzu6e+/TVuLoshH08Pp4d3dnXvXoXGmh34YhtND22TaYqueVgfQpdQSpbZ2tIAP1KMYOww8POIxqLIjtZ4/UrMyrdXYz+0arzRPtxlO+Q1Y9H1mchFZl3ywX21mnRf0wzIUlq8FtmzBjbBbKbdIHTF+gAH+U0qNDpCG3LBMiBg/0NeUeQ6X+hFDmx1scK1HLha8YHMeyYS6iJXPTA+tqVudqIWFlHWeqDsyWexhdMBUThXwpeZQpQY0TWvSCru/7TEr9FQn48ocv3I5d8V7/hzyc/J+TOrtub7v+dNDLxz4YZ8EtdL7SjydWqRIrrTg35bT8GvJ9vuOHzhBeOn1R7438nsPJbs7DMLQH/o9z/NI1lSpI+p6TPIH80JzaZy11sbObLnSW79HQ1Wy1zp6sD8XDRWarFXItmm6aAuIoWJzeb/hAlPysoC+2rMLHjY+QeXaVZSOZFx5CjB7Dv51HL/rh07Q9Xp1ZzpCIqLLsc1r3cZZA8elQ/OMzIFOkTlPZbJEyUuRQcdRYmChtFSUzaU2RD2fz2FGvD5Pod17w+p4XccPO+G+sISOpqXniWETGu0FN9vQyJcrI/1xfL7TC2AdA68X7InvjZjPtVg2wb3SAv3+enCBE3YGA8cbhIM9wZ1wuF4T2m+0pfHyZxA37A5Cxwv6+xL3GlAQhzTRvRY6veY3avYz8IXDXsfp9fvDPfGdLzBPnosmwAsVRdyZCK35z9jewB8OnaA38PaE+KqEZt2qJsKTUkOxfwY4f9CBd3S6/T3BXajZtpy8EPrahql/vekF3dAZdIb7bu1EzDjSAb4F7zeuo8VDuftrqBt2vb7TGQ78fTWP6yXPttCROqvsJ4hKxwE4D+z197W6S5mqYrGleMc4y26egO0j5WbpzOYkgbWo9XFqTzhpTEmDdFBzI5bVuR16A7/vdzpDPwChnvfvKj64DVzi1R5MiAAo3Wt1qWMd3qzTqCMKVQutkDDZ89hGZ4Jd28gqXwdP9nzeCmUw1q1KShs/dGmupeC6wkSH6zUCBCxzPc+LMkkEjtJVVH2UCuRKCJSn0yRWCFBoa/ZYFQlpibRVA2+pKcxpHSVFyrM2O3NZm/3CqlPQ/nyGoToHVax6Smh3xogj9lKrtBEpEgnbcb7LxkeTyXhyyf5egkGBGMVFfIJ0D3lFzObUf21PdTLlIpG55Tp2RVxOD7HcSEQW2vSwEVXil1ghc4hgZ0Wws2Hf2Q6Q9+Wq8zVXSDgQZYmUm4qd/kFzHYikrQGyIGgzGy4+WBqyA1N3t/6yL5IukMRKOtwYJFo2OkSXaBM7PoB5/P7k6PLIGR9PLsfskpubKjdj2L3t8HFSQNhBcpU6nlfJrdjs/PvS5nFoL9qrH2cyi0fWJo5LrSmrndjIH1WrAdrs3OaTVaR/KaJFphJ1tbRuQOa7BlAbk1vhmtTZ6JvK+tvMD555gLHJr8BCnb15btAdIqCPzbX7fvL+zO84nnXRdcC/s35Pxntfk/qAuWWGhVDSbamtKOseuA8JfqzZk3Ivl72EbApkwI9R0euG3vSQh4O5I66WN/sus/+dZZoROyIccL8fMvh5DftKFoty5kpV5YVbToqx9/eEwW7AZKDsTBTcauw/kGkiCtwg/rpJ5cVrezxv5Klksk37vBBG0DFe7c5t1/U2A35DxWwflyaLqKHdKUqBjd2wXrczpPPS39sih99Y+aSa7Ik7ZB4Hui+ocDeoM8z8XzZb387gvx8DR6hSET8NlO/tRmVEwRxWCTCN+E1I/qN8rftPD+tR9wbm7wBGlpexY6Ub1nlaXxdORNFmv1dX0Mx3/Qpx8DQfjO0MESaoQMcqKml0GCINBivswyS7qIiEeQLLO0KJ07fjf44vKkch10rkXPzYxtNFnUjkvdSOKLXKn2iX/o6z+zVPU5XFbXZJgc5rxMJ8Wf/4hb0tqeaFBeuRPl+cvGQT61tlmiJ0Bv0eO0OcBzkesfOL8eTM3RtN92s059UNOl2aX1R3dXZPLG3jLEYShjlXx/PGMp7ZmQ8e15281EnFlTYkNS6OhbSCjUotTfoEFntPjDteq0zpNnvrEpPEsRHJFV3jtdkxFbzU/JMUaPHGZUcV8fXlQZuduOzdtmJvVBgO8o7MQKb8CoyBf5iEMlj8C2GKddhRsWe7juP6dWOj6UcFGJuVVTyKkBX18KzN2Bk6p2geIfiFQj9y0oKnEOdahuYuYXUp3ek2w45HWuzL+Y4j+Tesuc1ekRUSZeuAHatbsMpkB+DsaEPL2nBWB9zmbrB5tCEaBwtFdc9exWG7V+173R7siE4KmszhFsLeaxrstKPNI1LzlrYX9KBJqZkReb1+vzfce5odR+S5vfS0T1yIZn5Mi+rgJVIpeRCNF1XDrX6KvdMvf8eBefHymHXCYR9n04dMkhFSyGEviNdmDHjPPlyMD0bslcgo87OBJb+vNr/3tAOBtFXPI2cG96ylAr8Igrso0mTvVNJ7ojpMeGZUBi2wrv9KZZ94Ij45L0RSaLLnWhEa92HIIxqScHQ5aVtjtkpY8CtmSlJopJsi47MEFdJEUBvNZ/QcsSQTj6sjGlvfePG0EtHFjPUDX1YSYSPmD0BmaGccHDzqChS5GRqXLHTg9sIt+91RvS+h/vcI3bqPEMN+c+LBwB/AIIXQ105kXFv58LZioubFHUeksX5Q2STJzQuJYOs+or/jPuIc87wht8pLpPOrxG3vlQZPW6n/jYX6u25logV8gc7WRQmdsvKfchRmgl5chTFyYyEU9caVTeEs2DzlNm8ZmuR8/7Lm/ySn8wS19IM+haR2ApfzRd/v762XwY6w5FKLRHFtnZHcwCfHExmOcrjbOUWiht7J2PsZPdU29Wla0p0BeyuzG9D5Phf1XcMZh6jhlFYu+0NkKlaPnTG9gNL1T1WbHpS/v/dCdmTrHxaJ1FY/TrGS09g92ATPSKab0cAIK7TP22QwFnOjcjsd3EQaVLy+PRmto0TYE+xtnGHfM16/blI6ahYq3xm0bcLdjOfVXRdsjieKSOn0+l2bRDt8g8iJ12irG69mHQA1k+sarS02K7R709p/osD/jqXHiDVg+CJB+Ffp+TuRQPbtheLbag+q8yqVGeSaOD+aqbJgfo/9C25lX7QtgYj610p+OgcLpOInzls5g1FdIZKksyTwn/kwG7uv34pdMpwLJPI0vXMLJnDEEsxt7f5mS7ph3vklitISYelGAKiM3vvttfOHi7f1bXmdPy6zuJYVdyGvFndylZjVb9AWfYV8+8V69SFN/XIN8qvPBUTcqNx8sHSrSCokFcfYO57nKzlDpZGphMyBWgf5bETXJXZ9cfVo/MgXSx59sTTc8cWSZ79YGl56wajXGfUGD5+/e4Ow4/e9zqB+/qZsFMV0Rb96Cv/corsg+BD9uSFtdW+q7+VtRVOi1E2ZP8LSFxq9nDU2ovqCqFFg3wG+/7nU+vHAND98egAsvne3TG17w6ClNd/0+gB3FHTcFo6aVw8S8WorMQZtVbwVQnT9XjgAr6GD/MF37DvUliNinSTC2Lcvmy+yvr8woqf+9qEGBNb+B/SDc/8WJwAA
-  recorded_at: Fri, 10 Mar 2023 21:13:20 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":[{"name":"bioRxiv"}],"indexed":{"date-parts":[[2023,1,13]],"date-time":"2023-01-13T05:44:11Z","timestamp":1673588651470},"posted":{"date-parts":[[2016,12,28]]},"group-title":"Scientific
+        Communication and Education","reference-count":26,"publisher":"Cold Spring
+        Harbor Laboratory","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"accepted":{"date-parts":[[2017,10,9]]},"abstract":"<jats:title>Abstract<\/jats:title><jats:p>This
+        article presents a practical roadmap for scholarly data repositories to implement
+        data citation in accordance with the Joint Declaration of Data Citation Principles,
+        a synopsis and harmonization of the recommendations of major science policy
+        bodies. The roadmap was developed by the Repositories Expert Group, as part
+        of the Data Citation Implementation Pilot (DCIP) project, an initiative of
+        FORCE11.org and the NIH BioCADDIE (<jats:ext-link xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\"
+        ext-link-type=\"uri\" xlink:href=\"https:\/\/biocaddie.org\">https:\/\/biocaddie.org<\/jats:ext-link>)
+        program. The roadmap makes 11 specific recommendations, grouped into three
+        phases of implementation: a) required steps needed to support the Joint Declaration
+        of Data Citation Principles, b) recommended steps that facilitate article\/data
+        publication workflows, and c) optional steps that further improve data citation
+        support provided by data repositories.<\/jats:p>","DOI":"10.1101\/097196","type":"posted-content","created":{"date-parts":[[2016,12,29]],"date-time":"2016-12-29T06:10:15Z","timestamp":1482991815000},"source":"Crossref","is-referenced-by-count":15,"title":["A
+        Data Citation Roadmap for Scholarly Data Repositories"],"prefix":"10.1101","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-1419-2405","authenticated-orcid":false,"given":"Martin","family":"Fenner","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-1304-1939","authenticated-orcid":false,"given":"Merc\u00e8","family":"Crosas","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-5212-7052","authenticated-orcid":false,"given":"Jeffrey","family":"Grethe","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-9377-0797","authenticated-orcid":false,"given":"David","family":"Kennedy","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-8479-0262","authenticated-orcid":false,"given":"Henning","family":"Hermjakob","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-9853-5668","authenticated-orcid":false,"given":"Philippe","family":"Rocca-Serra","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-2188-2570","authenticated-orcid":false,"given":"Gustavo","family":"Durand","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-1731-5346","authenticated-orcid":false,"given":"Robin","family":"Berjon","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-8249-7388","authenticated-orcid":false,"given":"Sebastian","family":"Karcher","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-8406-3871","authenticated-orcid":false,"given":"Maryann","family":"Martone","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-4060-7360","authenticated-orcid":false,"given":"Timothy","family":"Clark","sequence":"additional","affiliation":[]}],"member":"246","reference":[{"issue":"3","key":"2019071613381284000_097196v2.1","first-page":"43","article-title":"An
+        introduction to the joint principles for data citation","volume":"41","year":"2015","journal-title":"Bulletin
+        of the American \\ldots"},{"key":"2019071613381284000_097196v2.2","unstructured":"Altman,
+        M. , & Crosas, M. (2013). The Evolution of Data Citation: From Principles
+        to Implementation. IASSIST Quarterly. Retrieved from http:\/\/scholar.harvard.edu\/mercecrosas\/publications\/evolution-data-citation-principles-implementation"},{"key":"2019071613381284000_097196v2.3","unstructured":"BioSchemas.
+        (2016). Retrieved December 22, 2016, from http:\/\/bioschemas.org\/"},{"key":"2019071613381284000_097196v2.4","doi-asserted-by":"crossref","unstructured":"CODATA-ICSTI
+        Task Group on Data Citation Standards and Practice. (2013). Out of Cite, Out
+        of Mind: The Current State of Practice, Policy, and Technology for the Citation
+        of Data. Data Science Journal, 12(0). https:\/\/doi.org\/10.2481\/dsj.OSOM13-043","DOI":"10.2481\/dsj.OSOM13-043"},{"key":"2019071613381284000_097196v2.5","unstructured":"Data
+        Citation Synthesis Group. (2014). Data Citation Synthesis Group. (2014). Joint
+        Declaration of Data Citation Principles. Force11. https:\/\/doi.org\/10.25490\/a97f-egyk"},{"key":"2019071613381284000_097196v2.6","unstructured":"Data
+        Citations: A Primer. (2016). Retrieved December 22, 2016, from http:\/\/force11.github.io\/data-citation-primer\/"},{"key":"2019071613381284000_097196v2.7","unstructured":"DataCite
+        Metadata Working. (2016). DataCite Metadata Schema for the Publication and
+        Citation of Research Data v4.0. DataCite. Retrieved from http:\/\/search.datacite.org\/works\/10.5438\/0013"},{"key":"2019071613381284000_097196v2.8","unstructured":"DataCite
+        Search. (2016). Retrieved December 22, 2016, from https:\/\/search.datacite.org\/"},{"key":"2019071613381284000_097196v2.9","unstructured":"DataMed
+        | bioCADDIE DDI. (2016). Retrieved December 22, 2016, from https:\/\/datamed.org\/"},{"key":"2019071613381284000_097196v2.10","unstructured":"Dataset
+        - schema.org. (2016). Retrieved December 12, 2016, from https:\/\/schema.org\/Dataset"},{"key":"2019071613381284000_097196v2.11","unstructured":"Dublin
+        Core Metadata Element Set, Version 1.1. (2012). Retrieved December 22, 2016,
+        from http:\/\/dublincore.org\/documents\/2012\/06\/14\/dces\/"},{"key":"2019071613381284000_097196v2.12","unstructured":"ELIXIR
+        Data for life. (2016). Retrieved December 22, 2016, from https:\/\/www.elixir-europe.org\/"},{"key":"2019071613381284000_097196v2.13","unstructured":"Hammond,
+        T. , Hannay, T. , & Lund, B. (2004). RDF Site Summary 1.0 Modules: PRISM."},{"key":"2019071613381284000_097196v2.14","unstructured":"Publishing
+        Requirements for Industry Standard Metadata (PRISM). Retrieved from http:\/\/purl.org\/rss\/1.0\/modules\/prism\/"},{"key":"2019071613381284000_097196v2.15","doi-asserted-by":"crossref","unstructured":"Honor,
+        L. B. , Haselgrove, C. , Frazier, J. A. , & Kennedy, D. N. (2016). Data Citation
+        in Neuroimaging: Proposed Best Practices for Data Identification and Attribution.
+        Frontiers in Neuroinformatics, 10. https:\/\/doi.org\/10.3389\/fninf.2016.00034","DOI":"10.3389\/fninf.2016.00034"},{"key":"2019071613381284000_097196v2.16","unstructured":"King,
+        Gary , & Altman, Micah . (2007). A Proposed Standard for the Scholarly Citation
+        of Quantitative Data. https:\/\/doi.org\/10.1045\/march2007-altman"},{"key":"2019071613381284000_097196v2.17","doi-asserted-by":"publisher","DOI":"10.15252\/msb.20156658"},{"key":"2019071613381284000_097196v2.18","unstructured":"Prefix
+        Commons. (2016). Retrieved December 22, 2016, from https:\/\/github.com\/prefixcommons\/prefixes"},{"key":"2019071613381284000_097196v2.19","unstructured":"RFC
+        3986 - Uniform Resource Identifier (URI): Generic Syntax. (2005). Retrieved
+        December 22, 2016, from http:\/\/www.rfc-base.org\/rfc-3986.html"},{"key":"2019071613381284000_097196v2.20","doi-asserted-by":"crossref","unstructured":"Sansone,
+        A. , Gonzalez-Beltran, A. , & Rocca-Serra, P. (2016). DATS, the data tag suite
+        to enable discoverability of datasets. Scientific Data 4, Article number:
+        170059 (2017) https:\/\/doi.org\/10.1038\/sdata.2017.59","DOI":"10.1038\/sdata.2017.59"},{"key":"2019071613381284000_097196v2.21","doi-asserted-by":"crossref","first-page":"e86","DOI":"10.7717\/peerj-cs.86","article-title":"Software
+        citation principles","volume":"2","year":"2016","journal-title":"PeerJ Computer
+        Science"},{"key":"2019071613381284000_097196v2.22","doi-asserted-by":"crossref","first-page":"e1","DOI":"10.7717\/peerj-cs.1","article-title":"Achieving
+        human and machine accessibility of cited data in scholarly publications","volume":"1","year":"2015","journal-title":"PeerJ
+        Computer Science"},{"key":"2019071613381284000_097196v2.23","doi-asserted-by":"publisher","DOI":"10.1126\/science.aah6168"},{"key":"2019071613381284000_097196v2.24","unstructured":"Treloar,
+        A. (2011). Den Haag Persistent Object Identifier \u2013 Linked Open Data Manifesto.
+        Zenodo. https:\/\/doi.org\/10.5281\/zenodo.55666"},{"key":"2019071613381284000_097196v2.25","unstructured":"Uhlir,
+        P. E. (Ed.). (2012). For Attribution: Developing Data Attribution and Citation
+        Practices and Standards: Summary of an International Workshop. Retrieved from
+        https:\/\/www.nap.edu\/catalog\/13564\/for-attribution-developing-data-attribution-and-citation-practices-and-standards"},{"key":"2019071613381284000_097196v2.26","doi-asserted-by":"crossref","unstructured":"Van
+        de Sompel, H. , & Nelson, M. L. (2015). Reminiscing About 15 Years of Interoperability
+        Efforts. D-Lib Magazine, 21(11\/12). https:\/\/doi.org\/10.1045\/november2015-vandesompel","DOI":"10.1045\/november2015-vandesompel"}],"container-title":[],"original-title":[],"link":[{"URL":"https:\/\/syndication.highwire.org\/content\/doi\/10.1101\/097196","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,1,18]],"date-time":"2020-01-18T02:53:57Z","timestamp":1579316037000},"score":1,"resource":{"primary":{"URL":"http:\/\/biorxiv.org\/lookup\/doi\/10.1101\/097196"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2016,12,28]]},"references-count":26,"URL":"http:\/\/dx.doi.org\/10.1101\/097196","relation":{"is-preprint-of":[{"id-type":"doi","id":"10.1038\/s41597-019-0031-8","asserted-by":"subject"}]},"published":{"date-parts":[[2016,12,28]]},"subtype":"preprint"}}'
+  recorded_at: Sun, 12 Mar 2023 19:25:29 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1101
@@ -68,30 +119,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 10 Mar 2023 21:13:20 GMT
+      - Sun, 12 Mar 2023 19:25:30 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=h8lF0jFlTyZVay1kTZOOS1UOBsyVndoVDv1FBb70sOxvvxFdCXkyuI6QZQyTsLSdnlCTPrGeSDlcgkqxqu0AKpdI4HgwJXFGkMCeag12hVvYTA6f6rmT56nF9DAW1ymrHjd3TYw%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=JdTwDSljJMZ6rVQdgOkJbXIuRxITdpJkh8mjyuXpXpLvJT0C6YeshGWMKigvUqkbwax6oPy0MpjoN35lhkxaWXcFoRoViWLFUtCKietH7b9D4yWNZA9DJsJKBxbGwtRhzNxRMMI%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -99,12 +150,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a5e8fa0cd61b734-AMS
+      - 7a6e6c66f827b836-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Q0MDQyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAXAVrojYAAAA=
-  recorded_at: Fri, 10 Mar 2023 21:13:20 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1101",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:25:30 GMT
 recorded_with: VCR 6.1.0

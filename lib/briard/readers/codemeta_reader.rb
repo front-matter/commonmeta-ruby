@@ -7,8 +7,15 @@ module Briard
         return { 'string' => nil, 'state' => 'not_found' } unless id.present?
 
         id = normalize_id(id)
-        response = Maremma.get(github_as_codemeta_url(id), accept: 'json', raw: true)
-        string = response.body.fetch('data', nil)
+        url = github_as_codemeta_url(id)
+        conn = Faraday.new(url, request: { timeout: 5 }) do |f|
+          f.request :gzip
+          f.request :json
+          # f.response :json
+        end
+        response = conn.get(url)
+        body = JSON.parse(response.body)
+        string = body.fetch('data', nil)
 
         { 'string' => string }
       end
@@ -22,7 +29,7 @@ module Briard
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
 
-        meta = string.present? ? Maremma.from_json(string) : {}
+        meta = string.present? ? JSON.parse(string) : {}
 
         identifiers = Array.wrap(meta.fetch('identifier', nil)).map do |r|
           r = normalize_id(r) if r.is_a?(String)

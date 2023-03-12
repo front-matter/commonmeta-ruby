@@ -9,7 +9,6 @@ SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
 SimpleCov.start
 
 require 'briard'
-require 'maremma'
 require 'rspec'
 require 'rack/test'
 require 'webmock/rspec'
@@ -92,6 +91,5 @@ VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   c.hook_into :webmock
   c.ignore_localhost = true
-  c.default_cassette_options = { :record => :new_episodes }
   c.configure_rspec_metadata!
 end

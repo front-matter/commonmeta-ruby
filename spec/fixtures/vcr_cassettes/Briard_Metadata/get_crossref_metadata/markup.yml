@@ -2,39 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1098/rspb.2017.0132/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1098/rspb.2017.0132
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:59 GMT
+      - Sun, 12 Mar 2023 19:21:01 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '3968'
-      Set-Cookie:
-      - AWSALB=9OS3m5hlYyFuI/gV33zjatOdhFVQ28nW/Ivl+aPWtv+qgUmAlvjFnQFVFYopABfd+wLPy5jNFkpnFabMmTnGWQMj8v9U3nNCHHRs3Yn0ZY+bz/vLrnbaClBAeQaO;
-        Expires=Sat, 18 Mar 2023 08:09:59 GMT; Path=/, AWSALBCORS=9OS3m5hlYyFuI/gV33zjatOdhFVQ28nW/Ivl+aPWtv+qgUmAlvjFnQFVFYopABfd+wLPy5jNFkpnFabMmTnGWQMj8v9U3nNCHHRs3Yn0ZY+bz/vLrnbaClBAeQaO;
-        Expires=Sat, 18 Mar 2023 08:09:59 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1098/rspb.2017.0132>; rel="canonical", <https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2017.0132>;
-        version="vor"; type="application/pdf"; rel="item", <https://royalsocietypublishing.org/doi/full-xml/10.1098/rspb.2017.0132>;
-        version="vor"; type="application/xml"; rel="item", <https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2017.0132>;
-        version="vor"; rel="item", <https://royalsociety.org/journals/ethics-policies/data-sharing-mining/>;
-        version="tdm"; rel="license", <http://orcid.org/0000-0003-1406-0680>; title="Liam
-        R. Dougherty"; rel="author", <http://orcid.org/0000-0001-6072-3807>; title="Kathryn
-        B. McNamara"; rel="author", <http://orcid.org/0000-0003-0562-1474>; title="Leigh
-        W. Simmons"; rel="author"
+      - '11776'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -44,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -53,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -64,9 +51,66 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:59 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,1,31]],"date-time":"2023-01-31T08:31:33Z","timestamp":1675153893156},"reference-count":54,"publisher":"The
+        Royal Society","issue":"1855","license":[{"start":{"date-parts":[[2017,5,24]],"date-time":"2017-05-24T00:00:00Z","timestamp":1495584000000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/royalsociety.org\/journals\/ethics-policies\/data-sharing-mining\/"}],"funder":[{"DOI":"10.13039\/100010663","name":"H2020
+        European Research Council","doi-asserted-by":"publisher","award":["GENCON
+        AdG-294333"]},{"DOI":"10.13039\/501100004359","name":"Vetenskapsr\u00e5det","doi-asserted-by":"publisher","award":["621-2014-4523"]},{"name":"UWA
+        Research Collaboration Award"},{"DOI":"10.13039\/501100000923","name":"Australian
+        Research Council","doi-asserted-by":"publisher","award":["DE-160100097","DP-110101163","DP-130100618"]}],"content-domain":{"domain":["royalsocietypublishing.org"],"crossmark-restriction":true},"short-container-title":["Proc.
+        R. Soc. B."],"published-print":{"date-parts":[[2017,5,31]]},"abstract":"<jats:p>\n            Traumatic
+        mating (or copulatory wounding) is an extreme form of sexual conflict whereby
+        male genitalia physically harm females during mating. In such species females
+        are expected to evolve counter-adaptations to reduce male-induced harm. Importantly,
+        female counter-adaptations may include both genital and non-genital traits.
+        In this study, we examine evolutionary associations between harmful male genital
+        morphology and female reproductive tract morphology and immune function across
+        13 populations of the seed beetle\n            <jats:italic>Callosobruchus
+        maculatus<\/jats:italic>\n            . We detected positive correlated evolution
+        between the injuriousness of male genitalia and putative female resistance
+        adaptations across populations. Moreover, we found evidence for a negative
+        relationship between female immunity and population productivity, which suggests
+        that investment in female resistance may be costly due to the resource trade-offs
+        that are predicted between immunity and reproduction. Finally, the degree
+        of female tract scarring (harm to females) was greater in those populations
+        with both longer aedeagal spines and a thinner female tract lining. Our results
+        are thus consistent with a sexual arms race, which is only apparent when both
+        male and female traits are taken into account. Importantly, our study provides
+        rare evidence for sexually antagonistic coevolution of male and female traits
+        at the within-species level.\n          <\/jats:p>","DOI":"10.1098\/rspb.2017.0132","type":"journal-article","created":{"date-parts":[[2017,5,24]],"date-time":"2017-05-24T09:10:21Z","timestamp":1495617021000},"page":"20170132","update-policy":"http:\/\/dx.doi.org\/10.1098\/crossmark-policy","source":"Crossref","is-referenced-by-count":65,"title":["Sexual
+        conflict and correlated evolution between male persistence and female resistance
+        traits in the seed beetle\n            <i>Callosobruchus maculatus<\/i>"],"prefix":"10.1098","volume":"284","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-1406-0680","authenticated-orcid":false,"given":"Liam
+        R.","family":"Dougherty","sequence":"first","affiliation":[{"name":"School
+        of Biological Sciences, Centre for Evolutionary Biology, University of Western
+        Australia, Crawley, WA 6009, Australia"}]},{"given":"Emile","family":"van
+        Lieshout","sequence":"additional","affiliation":[{"name":"School of Biological
+        Sciences, Centre for Evolutionary Biology, University of Western Australia,
+        Crawley, WA 6009, Australia"}]},{"ORCID":"http:\/\/orcid.org\/0000-0001-6072-3807","authenticated-orcid":false,"given":"Kathryn
+        B.","family":"McNamara","sequence":"additional","affiliation":[{"name":"School
+        of Biological Sciences, Centre for Evolutionary Biology, University of Western
+        Australia, Crawley, WA 6009, Australia"}]},{"given":"Joe A.","family":"Moschilla","sequence":"additional","affiliation":[{"name":"School
+        of Biological Sciences, Centre for Evolutionary Biology, University of Western
+        Australia, Crawley, WA 6009, Australia"}]},{"given":"G\u00f6ran","family":"Arnqvist","sequence":"additional","affiliation":[{"name":"Animal
+        Ecology, Department of Ecology and Genetics, Uppsala University, Norbyv\u00e4gen
+        18D, Uppsala 75236, Sweden"}]},{"ORCID":"http:\/\/orcid.org\/0000-0003-0562-1474","authenticated-orcid":false,"given":"Leigh
+        W.","family":"Simmons","sequence":"additional","affiliation":[{"name":"School
+        of Biological Sciences, Centre for Evolutionary Biology, University of Western
+        Australia, Crawley, WA 6009, Australia"}]}],"member":"175","published-online":{"date-parts":[[2017,5,24]]},"reference":[{"key":"e_1_3_6_2_2","first-page":"123","volume-title":"Sexual
+        selection and reproductive competition in insects","author":"Parker G","year":"1979"},{"key":"e_1_3_6_3_2","doi-asserted-by":"publisher","DOI":"10.1515\/9781400850600"},{"key":"e_1_3_6_4_2","doi-asserted-by":"publisher","DOI":"10.1111\/brv.12018"},{"key":"e_1_3_6_5_2","doi-asserted-by":"publisher","DOI":"10.1038\/35038154"},{"key":"e_1_3_6_6_2","doi-asserted-by":"publisher","DOI":"10.1093\/beheco\/13.3.353"},{"key":"e_1_3_6_7_2","doi-asserted-by":"publisher","DOI":"10.1007\/s00435-010-0109-5"},{"key":"e_1_3_6_8_2","doi-asserted-by":"publisher","DOI":"10.1007\/s00265-012-1361-0"},{"key":"e_1_3_6_9_2","doi-asserted-by":"publisher","DOI":"10.1086\/429356"},{"key":"e_1_3_6_10_2","doi-asserted-by":"publisher","DOI":"10.1086\/303392"},{"key":"e_1_3_6_11_2","doi-asserted-by":"publisher","DOI":"10.1093\/beheco\/arg073"},{"key":"e_1_3_6_12_2","doi-asserted-by":"publisher","DOI":"10.1046\/j.1420-9101.2003.00537.x"},{"key":"e_1_3_6_13_2","doi-asserted-by":"publisher","DOI":"10.1093\/beheco\/ari055"},{"key":"e_1_3_6_14_2","doi-asserted-by":"publisher","DOI":"10.1016\/j.cub.2009.01.045"},{"key":"e_1_3_6_15_2","doi-asserted-by":"publisher","DOI":"10.1016\/j.cub.2012.10.009"},{"key":"e_1_3_6_16_2","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.101440698"},{"key":"e_1_3_6_17_2","doi-asserted-by":"publisher","DOI":"10.1111\/j.0014-3820.2002.tb01406.x"},{"key":"e_1_3_6_18_2","doi-asserted-by":"publisher","DOI":"10.1186\/1471-2148-5-25"},{"key":"e_1_3_6_19_2","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pone.0000522"},{"key":"e_1_3_6_20_2","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.0701170104"},{"key":"e_1_3_6_21_2","doi-asserted-by":"publisher","DOI":"10.1111\/j.1420-9101.2010.01991.x"},{"key":"e_1_3_6_22_2","doi-asserted-by":"publisher","DOI":"10.1111\/j.1095-8312.2001.tb01359.x"},{"key":"e_1_3_6_23_2","doi-asserted-by":"publisher","DOI":"10.1111\/j.1558-5646.2011.01464.x"},{"key":"e_1_3_6_24_2","doi-asserted-by":"publisher","DOI":"10.1111\/bij.12850"},{"key":"e_1_3_6_25_2","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.2010.2453"},{"key":"e_1_3_6_26_2","doi-asserted-by":"publisher","DOI":"10.1093\/beheco\/arh119"},{"key":"e_1_3_6_27_2","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.2006.3710"},{"key":"e_1_3_6_28_2","doi-asserted-by":"publisher","DOI":"10.1016\/j.anbehav.2009.06.036"},{"key":"e_1_3_6_29_2","doi-asserted-by":"publisher","DOI":"10.1111\/j.0307-6946.2005.00730.x"},{"key":"e_1_3_6_30_2","doi-asserted-by":"publisher","DOI":"10.1111\/j.1570-7458.2011.01187.x"},{"key":"e_1_3_6_31_2","doi-asserted-by":"publisher","DOI":"10.1038\/415787a"},{"key":"e_1_3_6_32_2","doi-asserted-by":"publisher","DOI":"10.1111\/j.1558-5646.2007.00315.x"},{"key":"e_1_3_6_33_2","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.2009.2026"},{"key":"e_1_3_6_34_2","doi-asserted-by":"publisher","DOI":"10.1016\/j.anbehav.2011.10.007"},{"key":"e_1_3_6_35_2","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.2015.1421"},{"key":"e_1_3_6_36_2","doi-asserted-by":"publisher","DOI":"10.1186\/s12862-015-0547-2"},{"key":"e_1_3_6_37_2","doi-asserted-by":"publisher","DOI":"10.1186\/1472-6793-9-11"},{"key":"e_1_3_6_38_2","doi-asserted-by":"publisher","DOI":"10.2307\/4087240"},{"key":"e_1_3_6_39_2","doi-asserted-by":"publisher","DOI":"10.1002\/arch.20056"},{"key":"e_1_3_6_40_2","doi-asserted-by":"publisher","DOI":"10.1111\/evo.12422"},{"key":"e_1_3_6_41_2","volume-title":"R:
+        a language and environment for statistical computing","author":"R Development
+        Core Team","year":"2015"},{"key":"e_1_3_6_42_2","volume-title":"Genstat for
+        Windows 18th Edition","author":"VSN International","year":"2015"},{"key":"e_1_3_6_43_2","doi-asserted-by":"publisher","DOI":"10.1086\/687963"},{"key":"e_1_3_6_44_2","doi-asserted-by":"publisher","DOI":"10.1098\/rsbl.2009.0433"},{"key":"e_1_3_6_45_2","doi-asserted-by":"publisher","DOI":"10.1111\/j.1558-5646.2011.01309.x"},{"key":"e_1_3_6_46_2","doi-asserted-by":"publisher","DOI":"10.1111\/j.1469-7998.2011.00892.x"},{"key":"e_1_3_6_47_2","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.2015.0724"},{"key":"e_1_3_6_48_2","doi-asserted-by":"publisher","DOI":"10.1073\/pnas.1505797112"},{"key":"e_1_3_6_49_2","doi-asserted-by":"publisher","DOI":"10.1007\/BF01953792"},{"key":"e_1_3_6_50_2","doi-asserted-by":"publisher","DOI":"10.1007\/s11692-012-9193-4"},{"key":"e_1_3_6_51_2","doi-asserted-by":"publisher","DOI":"10.1007\/s10522-013-9417-8"},{"key":"e_1_3_6_52_2","doi-asserted-by":"publisher","DOI":"10.1034\/j.1600-0706.2000.880110.x"},{"key":"e_1_3_6_53_2","doi-asserted-by":"publisher","DOI":"10.1146\/annurev-ento-010715-023924"},{"key":"e_1_3_6_54_2","doi-asserted-by":"publisher","DOI":"10.1086\/659947"},{"key":"e_1_3_6_55_2","unstructured":"Dougherty
+        LR van Lieshout E McNamara KB Moschilla JA Arnqvist G Simmons LW. 2017 Sexual
+        conflict and correlated evolution between male persistence and female resistance
+        traits in the seed beetle Callosobruchus maculatus . Dryad Digital Repository
+        (http:\/\/dx.doi.org\/10.5061\/dryad.1b15j)"}],"container-title":["Proceedings
+        of the Royal Society B: Biological Sciences"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/royalsocietypublishing.org\/doi\/pdf\/10.1098\/rspb.2017.0132","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/royalsocietypublishing.org\/doi\/full-xml\/10.1098\/rspb.2017.0132","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/royalsocietypublishing.org\/doi\/pdf\/10.1098\/rspb.2017.0132","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,2,19]],"date-time":"2021-02-19T03:35:34Z","timestamp":1613705734000},"score":1,"resource":{"primary":{"URL":"https:\/\/royalsocietypublishing.org\/doi\/10.1098\/rspb.2017.0132"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2017,5,24]]},"references-count":54,"journal-issue":{"issue":"1855","published-print":{"date-parts":[[2017,5,31]]}},"alternative-id":["10.1098\/rspb.2017.0132"],"URL":"http:\/\/dx.doi.org\/10.1098\/rspb.2017.0132","relation":{},"ISSN":["0962-8452","1471-2954"],"issn-type":[{"value":"0962-8452","type":"print"},{"value":"1471-2954","type":"electronic"}],"subject":["General
+        Agricultural and Biological Sciences","General Environmental Science","General
+        Immunology and Microbiology","General Biochemistry, Genetics and Molecular
+        Biology","General Medicine"],"published":{"date-parts":[[2017,5,24]]},"assertion":[{"value":"2017-01-20","order":0,"name":"received","label":"Received","group":{"name":"publication_history","label":"Publication
+        History"}},{"value":"2017-04-25","order":1,"name":"accepted","label":"Accepted","group":{"name":"publication_history","label":"Publication
+        History"}},{"value":"2017-05-24","order":2,"name":"published","label":"Published","group":{"name":"publication_history","label":"Publication
+        History"}}]}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:01 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1098
@@ -75,30 +119,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:10:00 GMT
+      - Sun, 12 Mar 2023 19:21:02 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cigDU%2B9VbNBQMFTCxCm82OkitPO9PfeG0BZb46oZebYbljjGE3bcNS3kv7E4gMuMDNo2f%2FF%2BQqMtwgSZ%2FJQvwdmDh1DGkgwmGOZqO04ihMQLIayeHCRuMMqDUrFGHXw77HwBjNM%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=JUbGsDIEsGuFiP7a4LQZey91mBn1BJZaJM8CgK13IbDkpqzQlw1Cn4K2EgpEydgvoy36agT%2BGqsTsqNZa0jEfD9VUo1rEdb%2FFDouYU7mO16Um87e0IaWfNtRXMcrX2VUkgw9kyw%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -106,72 +150,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a62518648040a50-AMS
+      - 7a6e65dc0bbfb97e-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9QwNLCyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAplN/LjYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:10:00 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1098/rspb.2017.0132
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:40 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '3451'
-      Set-Cookie:
-      - AWSALB=JcsxkR1RU4TbwAShKsVVG99hDErUYlvd9yP5ZcCB+8ebOG4FHIKPh5+NEqfOLEdX1u0MM024MSro/U4bsmXNjokPDpMD1sTF2Zrpn5X0/tnDgFCibuZZMzkVFXuQ;
-        Expires=Sat, 18 Mar 2023 08:54:40 GMT; Path=/, AWSALBCORS=JcsxkR1RU4TbwAShKsVVG99hDErUYlvd9yP5ZcCB+8ebOG4FHIKPh5+NEqfOLEdX1u0MM024MSro/U4bsmXNjokPDpMD1sTF2Zrpn5X0/tnDgFCibuZZMzkVFXuQ;
-        Expires=Sat, 18 Mar 2023 08:54:40 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:40 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1098",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:02 GMT
 recorded_with: VCR 6.1.0

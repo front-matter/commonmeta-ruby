@@ -34,7 +34,7 @@ module Briard
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
 
-        meta = string.present? ? Maremma.from_json(string) : {}
+        meta = string.present? ? JSON.parse(string) : {}
 
         citeproc_type = meta.fetch('type', nil)
         schema_org = CP_TO_SO_TRANSLATIONS[citeproc_type] || 'CreativeWork'

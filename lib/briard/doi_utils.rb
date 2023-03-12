@@ -63,9 +63,9 @@ module Briard
       return nil if prefix.blank?
 
       url = "https://doi.org/ra/#{prefix}"
-      result = Maremma.get(url)
-
-      result.body.dig('data', 0, 'RA')
+      response = Faraday.get(url)
+      body = JSON.parse(response.body)
+      body.dig(0, 'RA')
     end
   end
 end

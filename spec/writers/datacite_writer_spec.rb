@@ -26,7 +26,7 @@ describe Briard::Metadata, vcr: true do
       input = 'https://doi.org/10.1155/2012/291294'
       subject = described_class.new(input: input, from: 'crossref')
       datacite = JSON.parse(subject.datacite)
-      expect(datacite.fetch('url')).to eq('http://www.hindawi.com/journals/pm/2012/291294/')
+      expect(datacite.fetch('url')).to eq('http://www.hindawi.com/journals/pm/2012/291294')
       expect(datacite.fetch('types')).to eq('bibtex' => 'article', 'citeproc' => 'article-journal',
                                             'resourceType' => 'JournalArticle', 'resourceTypeGeneral' => 'JournalArticle', 'ris' => 'JOUR', 'schemaOrg' => 'ScholarlyArticle')
       expect(datacite.fetch('creators').length).to eq(7)

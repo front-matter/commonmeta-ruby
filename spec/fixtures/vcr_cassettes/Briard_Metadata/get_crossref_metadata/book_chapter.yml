@@ -2,35 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1007/978-3-662-46370-3_13/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1007/978-3-662-46370-3_13
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:51 GMT
+      - Sun, 12 Mar 2023 19:21:05 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '4276'
-      Set-Cookie:
-      - AWSALB=5uvLVvtxnUwgDyRLxSr5X969arTGFS4zIPwVInNksFmSmb7Rart4uZB4vxhVHokjNZJ3OQdbVpd1Qmvd4w3g2M7dpiYwDlLPJccuVRsJ2XG3leoEgSppRoizV02a;
-        Expires=Sat, 18 Mar 2023 08:09:51 GMT; Path=/, AWSALBCORS=5uvLVvtxnUwgDyRLxSr5X969arTGFS4zIPwVInNksFmSmb7Rart4uZB4vxhVHokjNZJ3OQdbVpd1Qmvd4w3g2M7dpiYwDlLPJccuVRsJ2XG3leoEgSppRoizV02a;
-        Expires=Sat, 18 Mar 2023 08:09:51 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1007/978-3-662-46370-3_13>; rel="canonical", <https://link.springer.com/content/pdf/10.1007/978-3-662-46370-3_13>;
-        version="vor"; rel="item", <https://www.springernature.com/gp/researchers/text-and-data-mining>;
-        version="tdm"; rel="license", <https://www.springernature.com/gp/researchers/text-and-data-mining>;
-        version="vor"; rel="license"
+      - '9780'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -40,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -49,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -60,9 +51,83 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:51 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T09:40:31Z","timestamp":1676022031544},"publisher-location":"Berlin,
+        Heidelberg","reference-count":22,"publisher":"Springer Berlin Heidelberg","isbn-type":[{"value":"9783662463697","type":"print"},{"value":"9783662463703","type":"electronic"}],"license":[{"start":{"date-parts":[[2015,1,1]],"date-time":"2015-01-01T00:00:00Z","timestamp":1420070400000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.springernature.com\/gp\/researchers\/text-and-data-mining"},{"start":{"date-parts":[[2015,1,1]],"date-time":"2015-01-01T00:00:00Z","timestamp":1420070400000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/www.springernature.com\/gp\/researchers\/text-and-data-mining"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[2015]]},"DOI":"10.1007\/978-3-662-46370-3_13","type":"book-chapter","created":{"date-parts":[[2015,4,14]],"date-time":"2015-04-14T02:31:00Z","timestamp":1428978660000},"page":"155-158","source":"Crossref","is-referenced-by-count":1,"title":["Clinical
+        Symptoms and Physical Examinations"],"prefix":"10.1007","author":[{"given":"Ronald
+        L.","family":"Diercks","sequence":"first","affiliation":[]},{"given":"Tom
+        Clement","family":"Ludvigsen","sequence":"additional","affiliation":[]}],"member":"297","reference":[{"issue":"10","key":"13_CR1","doi-asserted-by":"publisher","first-page":"1301","DOI":"10.1007\/s00256-012-1391-8","volume":"41","author":"KS
+        Ahn","year":"2012","unstructured":"Ahn KS, Kang CH, Oh YW, Jeong WK. Correlation
+        between magnetic resonance imaging and clinical impairment in patients with
+        adhesive capsulitis. Skeletal Radiol. 2012;41(10):1301\u20138.","journal-title":"Skeletal
+        Radiol"},{"issue":"3","key":"13_CR2","doi-asserted-by":"publisher","first-page":"333","DOI":"10.1016\/j.arthro.2004.11.003","volume":"21","author":"JR
+        Andrews","year":"2005","unstructured":"Andrews JR. Diagnosis and treatment
+        of chronic painful shoulder: review of nonsurgical interventions. Arthroscopy.
+        2005;21(3):333\u201347.","journal-title":"Arthroscopy"},{"key":"13_CR3","first-page":"1773","volume":"39","author":"HA
+        Anton","year":"1993","unstructured":"Anton HA. Frozen shoulder. Can Fam Physician.
+        1993;39:1773\u20138.","journal-title":"Can Fam Physician"},{"issue":"5","key":"13_CR4","doi-asserted-by":"publisher","first-page":"321","DOI":"10.3109\/03009749009096786","volume":"19","author":"B
+        Baslund","year":"1990","unstructured":"Baslund B, Thomsen BS, Jensen EM. Frozen
+        shoulder: current concepts. Scand J Rheumatol. 1990;19(5):321\u20135.","journal-title":"Scand
+        J Rheumatol"},{"issue":"8","key":"13_CR5","doi-asserted-by":"publisher","first-page":"1048","DOI":"10.1007\/s00167-007-0291-2","volume":"15","author":"S
+        Brue","year":"2007","unstructured":"Brue S, Valentin A, Forssblad M, Werner
+        S, Mikkelsen C, Cerulli G. Idiopathic adhesive capsulitis of the shoulder:
+        a review. Knee Surg Sports Traumatol Arthrosc. 2007;15(8):1048\u201354.","journal-title":"Knee
+        Surg Sports Traumatol Arthrosc"},{"issue":"1640","key":"13_CR6","first-page":"730","volume":"246","author":"S
+        Cutts","year":"2002","unstructured":"Cutts S, Clarke D. The patient with frozen
+        shoulder. Practitioner. 2002;246(1640):730, 734\u20136, 738\u20139.","journal-title":"Practitioner"},{"issue":"7530","key":"13_CR7","doi-asserted-by":"publisher","first-page":"1453","DOI":"10.1136\/bmj.331.7530.1453","volume":"331","author":"R
+        Dias","year":"2005","unstructured":"Dias R, Cutts S, Massoud S. Frozen shoulder.
+        BMJ. 2005;331(7530):1453\u20136.","journal-title":"BMJ"},{"issue":"5","key":"13_CR8","doi-asserted-by":"publisher","first-page":"499","DOI":"10.1016\/j.jse.2004.03.002","volume":"13","author":"RL
+        Diercks","year":"2004","unstructured":"Diercks RL, Stevens M. Gentle thawing
+        of the frozen shoulder: a prospective study of supervised neglect versus intensive
+        physical therapy in seventy-seven patients with frozen shoulder syndrome followed
+        up for two years. J Shoulder Elbow Surg. 2004;13(5):499\u2013502.","journal-title":"J
+        Shoulder Elbow Surg"},{"issue":"6","key":"13_CR9","doi-asserted-by":"publisher","first-page":"1457","DOI":"10.2214\/ajr.164.6.7754892","volume":"164","author":"EW
+        Emig","year":"1995","unstructured":"Emig EW, Schweitzer ME, Karasick D, Lubowitz
+        J. Adhesive capsulitis of the shoulder: MR diagnosis. AJR Am J Roentgenol.
+        1995;164(6):1457\u20139.","journal-title":"AJR Am J Roentgenol"},{"issue":"2","key":"13_CR10","doi-asserted-by":"publisher","first-page":"117","DOI":"10.1016\/j.physio.2012.01.001","volume":"98","author":"NC
+        Hanchard","year":"2012","unstructured":"Hanchard NC, Goodchild L, Thompson
+        J, O\u2019Brien T, Davison D, Richardson C. Evidence-based clinical guidelines
+        for the diagnosis, assessment and physiotherapy management of contracted (frozen)
+        shoulder: quick reference summary. Physiotherapy. 2012;98(2):117\u201320.","journal-title":"Physiotherapy"},{"issue":"4","key":"13_CR11","doi-asserted-by":"publisher","first-page":"264","DOI":"10.1136\/oem.55.4.264","volume":"55","author":"JM
+        Harrington","year":"1998","unstructured":"Harrington JM, Carter JT, Birrell
+        L, Gompertz D. Surveillance case definitions for work related upper limb pain
+        syndromes. Occup Environ Med. 1998;55(4):264\u201371.","journal-title":"Occup
+        Environ Med"},{"issue":"10","key":"13_CR12","first-page":"845","volume":"29","author":"R
+        Hertel","year":"2000","unstructured":"Hertel R. The frozen shoulder. Orthopade.
+        2000;29(10):845\u201351.","journal-title":"Orthopade"},{"issue":"3","key":"13_CR13","doi-asserted-by":"publisher","first-page":"502","DOI":"10.1016\/j.jse.2010.08.023","volume":"20","author":"JE
+        Hsu","year":"2011","unstructured":"Hsu JE, Anakwenze OA, Warrender WJ, Abboud
+        JA. Current review of adhesive capsulitis. J Shoulder Elbow Surg. 2011;20(3):502\u201314.","journal-title":"J
+        Shoulder Elbow Surg"},{"key":"13_CR14","doi-asserted-by":"publisher","first-page":"1","DOI":"10.3109\/ort.1969.40.suppl-119.01","volume":"Suppl
+        119","author":"J Lundberg","year":"1969","unstructured":"Lundberg J. The frozen
+        shoulder. Clinical and radiographical observations. The effect of manipulation
+        under general anesthesia. Structure and glycosaminoglycan content of the joint
+        capsule. Local bone metabolism. Acta Orthop Scand. 1969;Suppl 119:1\u201359.","journal-title":"Acta
+        Orthop Scand"},{"issue":"11","key":"13_CR15","doi-asserted-by":"publisher","first-page":"2346","DOI":"10.1177\/0363546509348048","volume":"38","author":"AS
+        Neviaser","year":"2010","unstructured":"Neviaser AS, Hannafin JA. Adhesive
+        capsulitis: a review of current treatment. Am J Sports Med. 2010;38(11):2346\u201356.","journal-title":"Am
+        J Sports Med"},{"issue":"223","key":"13_CR16","first-page":"59","volume":"223","author":"RJ
+        Neviaser","year":"1987","unstructured":"Neviaser RJ, Neviaser TJ. The frozen
+        shoulder. Diagnosis and management. Clin Orthop Relat Res. 1987;223(223):59\u201364.","journal-title":"Clin
+        Orthop Relat Res"},{"issue":"11","key":"13_CR17","first-page":"619","volume":"64","author":"E
+        Noel","year":"1997","unstructured":"Noel E. Treatment of calcific tendinitis
+        and adhesive capsulitis of the shoulder. Rev Rhum Engl Ed. 1997;64(11):619\u201328.","journal-title":"Rev
+        Rhum Engl Ed"},{"issue":"5","key":"13_CR18","first-page":"393","volume":"67","author":"E
+        Noel","year":"2000","unstructured":"Noel E, Thomas T, Schaeverbeke T, Thomas
+        P, Bonjean M, Revel M. Frozen shoulder. Joint Bone Spine. 2000;67(5):393\u2013400.","journal-title":"Joint
+        Bone Spine"},{"issue":"8","key":"13_CR19","doi-asserted-by":"publisher","first-page":"445","DOI":"10.1136\/ard.57.8.445","volume":"57","author":"K
+        Palmer","year":"1998","unstructured":"Palmer K, Coggon D, Cooper C, Doherty
+        M. Work related upper limb disorders: getting down to specifics. Ann Rheum
+        Dis. 1998;57(8):445\u20136.","journal-title":"Ann Rheum Dis"},{"issue":"6","key":"13_CR20","doi-asserted-by":"publisher","first-page":"478","DOI":"10.1016\/j.math.2008.04.005","volume":"13","author":"JM
+        Schellingerhout","year":"2008","unstructured":"Schellingerhout JM, Verhagen
+        AP, Thomas S, Koes BW. Lack of uniformity in diagnostic labeling of shoulder
+        pain: time for a different approach. Man Ther. 2008;13(6):478\u201383.","journal-title":"Man
+        Ther"},{"issue":"1","key":"13_CR21","doi-asserted-by":"publisher","first-page":"22","DOI":"10.3928\/01477447-20090101-29","volume":"32","author":"JC
+        Yoo","year":"2009","unstructured":"Yoo JC, Ahn JH, Lee YS, Koh KH. Magnetic
+        resonance arthrographic findings of presumed stage-2 adhesive capsulitis:
+        focus on combined rotator cuff pathology. Orthopedics. 2009;32(1):22.","journal-title":"Orthopedics"},{"issue":"2","key":"13_CR22","doi-asserted-by":"publisher","first-page":"322","DOI":"10.1016\/j.jse.2010.07.008","volume":"20","author":"JD
+        Zuckerman","year":"2011","unstructured":"Zuckerman JD, Rokito A. Frozen shoulder:
+        a consensus definition. J Shoulder Elbow Surg. 2011;20(2):322\u20135.","journal-title":"J
+        Shoulder Elbow Surg"}],"container-title":["Shoulder Stiffness"],"original-title":[],"link":[{"URL":"https:\/\/link.springer.com\/content\/pdf\/10.1007\/978-3-662-46370-3_13","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2023,2,10]],"date-time":"2023-02-10T08:59:39Z","timestamp":1676019579000},"score":1,"resource":{"primary":{"URL":"https:\/\/link.springer.com\/10.1007\/978-3-662-46370-3_13"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"ISBN":["9783662463697","9783662463703"],"references-count":22,"URL":"http:\/\/dx.doi.org\/10.1007\/978-3-662-46370-3_13","relation":{},"published":{"date-parts":[[2015]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:05 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1007
@@ -71,30 +136,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:51 GMT
+      - Sun, 12 Mar 2023 19:21:05 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=T0LorsLq0jg7vjyPqJSGJFhoFgA%2B6N5787L49OyksZU2yi%2B65bLzmiuHxcSGyQnlaZAat7gtN45KbGX2vjCrZkWQls7dhf34kPx0V%2Br%2Bwd9R4lFSupTtYcBQpcNT5jhPjNfR1SA%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=VO3sWreH3DpNNLWdXfboJfBV3zPLhvzzRMLZc6SMq1z%2Fht%2FxUtnJYHhv70ioAerpxaU8ceNHxC2eyqcpb%2FEZPBZNkF9ofdP5Jk2PQYrKqkM7QQQrX0sJN05oguGJjIUkI3P97Wk%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -102,72 +167,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6251507a5c1c88-AMS
+      - 7a6e65efda14b8be-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9QwMDcyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAxkrz2jYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:51 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1007/978-3-662-46370-3_13
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:43 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '3496'
-      Set-Cookie:
-      - AWSALB=huLMvxbCITktRsBqx34ohw2Uydm9kwAqONbug/jTNT0SXgEVL4lLopmj7CB+OUa2Ez/r2tp3GfxidbVIoI+OAhj8unOPybJ/3Bx1J+hfdxraoHO4vooW81uVmu4N;
-        Expires=Sat, 18 Mar 2023 08:54:43 GMT; Path=/, AWSALBCORS=huLMvxbCITktRsBqx34ohw2Uydm9kwAqONbug/jTNT0SXgEVL4lLopmj7CB+OUa2Ez/r2tp3GfxidbVIoI+OAhj8unOPybJ/3Bx1J+hfdxraoHO4vooW81uVmu4N;
-        Expires=Sat, 18 Mar 2023 08:54:43 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAA/8VaXXObyBL9K1N6cqoE5ktCSE+27F2vYicpyXddu7FrawQjiRgYlg87Sir//Z4ekAwyduKXe7eyCYKZYeZ09+nTw3zv5QUvyrw37sn7Xr8Xizzna6EV21Tg3qPMmncfRJaHMsEDUzd04+lJb/y9FyaB+CoCugx4IbSUZwXG/fzZMiy7b/VN4+6uXz0qwphGpweaYWmmcW14Y8cYO+7fGJOeYlZx2hubQ3doWJbhuJ47/NHvpeUyCvONyLRI+ryo5nIqsihM+uxChIGIliJbY5BMrEQmEl9oviyToje2rEZ39FqkWZisRcaq7u3eYb5Magw+f+898Kik+XruyB4OLWdoDz2XJlqBRAMVvR/9roauYT81FJHwi0wmod/7ASii0BdJXr0C682KLujMQd/sm8+RMweaYeLPtWGM1Z9D5BzLMFzDMeg/IOfLpBBJ0TBhEcTogjXzrRYmWsC3eKXR7/1nfomnm6JI8/Ht8e3x4+OjntdgJfCVTOi+jG+P1+ntcSZywTMfiOa3x4X4Wmg8CTBUwbU4TNBFwfJ/WNyDzP4Xi7t7encgYx4mapX11Wd6msk8j3l2r2G0Igv9ymdXPMoFJp5vZFZoNAR6wKuLsIhE1XPnq4FW+VcnfHd3GOTs4x8UkYZuApTbYzifZmtwP035n2b/YzZ8cCnlveZveFoIQsjPBAbtDFoYx+mbTrd1HM10rg1rbJud1hlhEsNhbZ1UEUTPHAw0czBC21yWmU+3poQOIlVFnLYP2UBbbndha9LQFSi9KeI09HnEFts4LWScMxiEfdpsc3X3/CuHXRQr5D1CEAOGX5+gwVt4WQBxFXHr8EGQp8xlwqOAXep4vMIA0RY3z0KR+fc5zVX8W9KccHMVZnlBg6xWYRTW7PP5jjx8N9i1jNk0EjEcojncZRk8hOscTVoD8iAIaRQedYx6R+QaLxVXWYpu9vio+Yd5rrjGJBq+F/Qa0/5nOjfJ72Wo8TwXWaGwJI7aM1+/Woe2s4ptUI8DH8oNwxoMEYEgZ9szNbLag4xK5QGO2UCy937BTja0sC2CpfIPC7/KBO5e+hRR8K4emrD3iz57z5M1m1702ccN++umz2ZC4sbNe51NZZYhXGn9bCmKRyESFvN1IorQZwgewISlsxD3EHrK8v7OH8I45WFGqDMweYpBcJmzx7DYMB5sRA7zMJ+neRkB8Fxni3twcYGecx6EMtIZzXrimEem8W5MkNyWuGOPyCm+wFthol1s9g76KobbGcNu28J6my1s226bwhzeHn/REZKbTOqgPEc3kXhVStlbw2pZYzZnJ0mQice8aRFj0GGRqhmbzXV2FgJomYdVQBXECQpMuWL+RiUsgBomqzJiYKwyCkQ2hk0eQvFIbRIEXJmtK1OADTMEg4pCnZ2ouee+TLcEsjGYWOaR/W6MpVYQO24Xxo1uCt8GpvYzD3bdFiC21wTk4gSAFLLhoKbn2V1woBG7ONHZb5n8Bt/bLRSeyRP2G49rogl5ojMaY2J7Y3r3K67yrGfLWQZtZ3He6CxWK25t0/Bujw3bMDzX8fC34Q3BwU1gzBYwp+yU51GZBC1kjOfI1M3YaZ9db0C6wOZ0QZGb0OX51TPExswvEcvwHyQ2X6QFBZxPnjVj840oY15QyNHbJqZ3NIA3WHXADToD7rBvC8VRG8XBG+nPcEad9AflqeEa8hT0Z7VgHDRhXLDTDPNoBpvbgSHaMID2J48oNBJ20me/ySzPlxEP2FWf3UB+QIuiyVV4D4IhaKd9NhVZGUUh+11nf4BswGwbxGIHpVEYFhvRsAGvA1Rn7xOBlyNA2SKF3MjZdcYrIPfhqWLTnZiDoxH4D5jU5nC67PEL47UsZA6dgxw1PDSDaxstTnOGbYynZVG0Ga0jx6hGBOE0guAS7EyHw4pdOqiyweowuD9lHJqM2Ip+0cATvP2I5vxujGn1mWs7FRpDuq6R8bqAaY7VQsAd2AcIuG90U2fQTg2Yze3xMv6i27ap0/B63eSJBu1WYpgTyf80KVAbNu+zPZRXmKAsA7bo4MXTq1nN6XjXEU0CvoNZ1Gh1IYQur1Hg6G2oOJ7XlS+/5KJKloatV47yFLt2C5NL9iT0nnBxunBRzdj8ss8WhUB+yxmI73f4VSQQePyRNEkdg6tDOuQsRVCkKP4oaPOiDLbUNi9TpMowFwFLxJpqQ0YFTJmrJJqoCE934hYDZzzdkr7J6f3FVlP/Hqidg3ezfIs0L2NMSkaRfMSryhTXGSseJaMlg5tnbLFrfh4t5aOKbWVZZ2LaxM8AuiYEw+oya+cILUMP24b23uz+btPSlmU6t8f8S6YjTvWh7roDZ+S1LT10mqY+v2Hncbhu5boO/6c27By6dOFvHkVYfMOKrs5JtmYcdrhnZ312WWKFeMTg/Se/wsRXcxbsBBa6kESLKZ1JmG0tkjoXDiaY8tFQhZD7Csl09G8hbR2UA8YboTbdrphSfkga1LR0gzSo2QTbGzWx/jBlF9DqG54FvZ+UBbt27AOS3e9SBv4mpGKskhopRD+boVZQcHinGRydXffZGUfU4BGMMQ9Vf/o11dn5QxioPZ8lp6ja1wfrkvZ2UGHnle/DPHuL9BkhgyKdcgQJjWqpu3iLeQJg9moYlTqRPAY/qkLtXcPQ/5bkIvsyDQEeo/SH8P3UHLIuNrzRkQVjm7WtLaMzozQ7tszsHJj5jWWfpcLjIJ9IEeuDge7o1dO9eQctxTO7gnkz2jI5lNWjLgPvWrIZZM4UtQxCagYjnoZU70Vk699hakz6G2VsMMeDCKNIFXs+zMgCVPGJyqqV9WhPkqlSUbEZerIojJeqQtnzHQLto++D686ThxAVDLsSgQqz0WQwOHLejbHECnjX7AL+Wee2ojmsua1DfEfOoCVoWtJ7zi7IRlEr63Qo76oVm1c65pl0+QixBUkYCMXVxsTyVPmKV9dk3b2yXa/XCleVJ9/gTgOVZl/IxLhhjHTDapetRsunztlFXrbYwuzAIy/ZDGx8kvD7R5F8E+wjdPQNp2KDcs8NuOJkuSS9MkMhN62rkKdCtXMv4MX0Z5oTy6BiFaurEDU79fDL2a+J6BvLu47iDlpbN72hpzuGDu2QRpppenqbiRd0n5ntUm+GnJUE9db2PlyH3nOEd+0ot3X63H4Ljpgyow2QNahpo27JJVb2wOvKn7qL1YpUDZAHjYZpWW/vlMpaSF2gNRpJ5AXZhSP6d5NR46+jrS9z2tSTdIliut5s3eXYLzKkKlMZE1FwKWkaS8hvFouCLyWgjZFx/YLXwVLVoUQEQ2+yx2q8qz67E+5h9zYVmAeR88YC1LJVrdNgYtelOn6I4ms4MDzbGVUl6pOwbyXbkwX7AP8GUWat8Omgk107dgJhj8ybcBCripQOGfNUQKq8V4fSfmtIrzRIXQAqcqWXTuzRkWmCXbGqGtPOOuCgc1vAWIdk9KxcHHgtKrHaqn7WgYjpjTrK8j0iczDH/sf1S87f3iZ7UgZVWOx8ZE6pCX/n5GYjd4LpHeF/0EgtooedLNI5xOuu5h7iMjRbwBxIYPZBNnMOkmEXJGjDzgFAaxOQR364Cn2G4AtUMq4g+IWNCB3LeGDzTRkjm64xdJWG3QnELnkKplwLoM4dtMPOr1WP5ujZHpnXyjlD9zU8unNwhUelR1EbX6vSgKPyypbiXtDv+sknSBqZfBFgKQgdzBv9nu+NId0ozjolklqkkKR18h66aiPM222LGp168LDzazth5huLLEdJlgNJCG2tD1x9pDttQTNoQfmefeJR3I63LjVYtWLvIQTlel0p+KmUJOGg/88kZlVsCbWbFzReAN2fAUbQ01oUBRXdgXxMWCEZ1dfko1RiJUm1WYiIzXeqz6WtLWenjbpZqdnvtfLVemNR5bgHm4yVPIp5saGdCogjR6/2Y17YqYDmhttBLqsPlfClouW3HVAfNFfq+09cY0IJO/m0d1v6JiNRF53eIH9ylC+I3zIJIbTjsFDbDXWlRJ9hIr6kMkrtdOy3GEh3jxl9/1PynKPDSlVAKKfSNJPc3+jsCmEBTq222Ea0rYBKF7DUm+d2lzl2fdokeGCJt9Y9LZ1qe9YIydZ0XNdxXM2ibXMYR7NaNGpbLVNM2V9StuDvEFJowmbwafruNbvos0sh2F8K6w17f0F4PPuyVX3mqeUUQ2oG064Vn6ZohKkELC/oFIbVxbtjgO+XaE4iKV6CG6DPZMELmMQvVyvaJ9rISK63u8JBBCpYaP4T2zqirN25udNo/dpGg/XWj13WT0oGV68c+6WS4Yz9Xfr3IkMe/lnhsG/IZrRnIO9DEMbzTz2keaAwc5HQJtxT3fnTGsGiTxjWK58wXigR6uMD7W//vX3TRYFIgjpWX7NlFq7Dxpif1QmS5F59DD481kAP9ucaqhMNtXS+PU6D1e3xz04L7E411KcGgGdFryLovXzcQm1bBrA84j4K9+dz8jAOI56BTjSQkn+/OzkRiBRi6oXTB79wZGgERYWM2XVkyPQGrledPsh9mQl1joBCrTp48J3O7NDWDF3+Anavo/WD3lIuG3apjnU0bqiYeeGUhTrD8cfi9APZ/vCIUfsk0V3jEEDePNj0tAa1hOCrjkjUZbb+uaV3H90xucYBq5fn+uPHfwEz+3ggNCYAAA==
-  recorded_at: Sat, 11 Mar 2023 08:54:43 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1007",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:05 GMT
 recorded_with: VCR 6.1.0

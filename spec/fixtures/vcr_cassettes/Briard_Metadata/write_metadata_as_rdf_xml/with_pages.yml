@@ -8,26 +8,22 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 10 Mar 2023 21:18:14 GMT
+      - Sun, 12 Mar 2023 19:21:21 GMT
       Content-Type:
       - application/json
       Content-Length:
-      - '2886'
-      Set-Cookie:
-      - AWSALB=RTJgqIlOcWuLAfjFWyoSaI0kQvtI8s+9sqes/QZshuXtgRL+K4tHmZwySMJH2dfRjkdPWSNP8/FUD2jEA+kas6hSqvIQeYTzVpjuxOqS5gtC4YnupqteOkKjaVgj;
-        Expires=Fri, 17 Mar 2023 21:18:14 GMT; Path=/, AWSALBCORS=RTJgqIlOcWuLAfjFWyoSaI0kQvtI8s+9sqes/QZshuXtgRL+K4tHmZwySMJH2dfRjkdPWSNP8/FUD2jEA+kas6hSqvIQeYTzVpjuxOqS5gtC4YnupqteOkKjaVgj;
-        Expires=Fri, 17 Mar 2023 21:18:14 GMT; Path=/; SameSite=None
+      - '8691'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -37,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -46,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -57,9 +51,66 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Fri, 10 Mar 2023 21:18:14 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,1,4]],"date-time":"2023-01-04T21:53:57Z","timestamp":1672869237883},"reference-count":27,"publisher":"Hindawi
+        Limited","license":[{"start":{"date-parts":[[2012,1,1]],"date-time":"2012-01-01T00:00:00Z","timestamp":1325376000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Pulmonary
+        Medicine"],"published-print":{"date-parts":[[2012]]},"abstract":"<jats:p><jats:italic>Objective<\/jats:italic>.
+        To find a statistically significant separation point for the QuantiFERON Gold
+        In-Tube (QFT) interferon gamma release assay that could define an optimal
+        \u201cretesting zone\u201d for use in serially tested low-risk populations
+        who have test \u201creversions\u201d from initially positive to subsequently
+        negative results.<jats:italic>Method<\/jats:italic>. Using receiver operating
+        characteristic analysis (ROC) to analyze retrospective data collected from
+        3 major hospitals, we searched for predictors of reversion until statistically
+        significant separation points were revealed. A confirmatory regression analysis
+        was performed on an additional sample.<jats:italic>Results<\/jats:italic>.
+        In 575 initially positive US healthcare workers (HCWs), 300 (52.2%) had reversions,
+        while 275 (47.8%) had two sequential positive tests. The most statistically
+        significant (Kappa\u2009=\u20090.48, chi-square\u2009=\u2009131.0,<mml:math
+        xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\" id=\"M1\"><mml:mrow><mml:mi>P<\/mml:mi><mml:mo>&lt;<\/mml:mo><mml:mn>0.001<\/mml:mn><\/mml:mrow><\/mml:math>)
+        separation point identified by the ROC for predicting reversion was the tuberculosis
+        antigen minus-nil (TBag-nil) value at 1.11 International Units per milliliter
+        (IU\/mL). The second separation point was found at TBag-nil at 0.72\u2009IU\/mL
+        (Kappa\u2009=\u20090.16, chi-square\u2009=\u20098.2,<mml:math xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"
+        id=\"M2\"><mml:mrow><mml:mi>P<\/mml:mi><mml:mo>&lt;<\/mml:mo><mml:mn>0.01<\/mml:mn><\/mml:mrow><\/mml:math>).
+        The model was validated by the regression analysis of 287\u2009HCWs.<jats:italic>Conclusion<\/jats:italic>.
+        Reversion likelihood increases as the TBag-nil approaches the manufacturer''s
+        cut-point of 0.35\u2009IU\/mL. The most statistically significant separation
+        point between those who test repeatedly positive and those who revert is 1.11\u2009IU\/mL.
+        Clinicians should retest low-risk individuals with initial QFT results\u2009&lt;\u20091.11\u2009IU\/mL.<\/jats:p>","DOI":"10.1155\/2012\/291294","type":"journal-article","created":{"date-parts":[[2012,12,30]],"date-time":"2012-12-30T21:05:01Z","timestamp":1356901501000},"page":"1-7","source":"Crossref","is-referenced-by-count":30,"title":["Delineating
+        a Retesting Zone Using Receiver Operating Characteristic Analysis on Serial
+        QuantiFERON Tuberculosis Test Results in US Healthcare Workers"],"prefix":"10.1155","volume":"2012","author":[{"given":"Wendy","family":"Thanassi","sequence":"first","affiliation":[{"name":"Department
+        of Medicine, Veterans Affairs Palo Alto Health Care System, 3801 Miranda Avenue
+        MC-, Palo Alto, CA 94304-1207, USA"},{"name":"Occupational Health Strategic
+        Health Care Group, Office of Public Health, Veterans Health Administration,
+        Washington, DC 20006, USA"},{"name":"Division of Emergency Medicine, Stanford
+        University School of Medicine, Stanford, CA 94304, USA"},{"name":"War Related
+        Illness and Injury Study Center (WRIISC) and Mental Illness Research Education
+        and Clinical Center (MIRECC), Department of Veterans Affairs, Palo Alto, CA
+        94304, USA"}]},{"given":"Art","family":"Noda","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"},{"name":"Department of Psychiatry and Behavioral Sciences,
+        Stanford University School of Medicine, Stanford, CA 94304, USA"}]},{"ORCID":"http:\/\/orcid.org\/0000-0003-2043-4925","authenticated-orcid":true,"given":"Beatriz","family":"Hernandez","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"},{"name":"Department of Psychiatry and Behavioral Sciences,
+        Stanford University School of Medicine, Stanford, CA 94304, USA"}]},{"given":"Jeffery","family":"Newell","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"}]},{"given":"Paul","family":"Terpeluk","sequence":"additional","affiliation":[{"name":"Department
+        of Occupational Health, The Cleveland Clinic, Cleveland, OH 44195, USA"}]},{"given":"David","family":"Marder","sequence":"additional","affiliation":[{"name":"University
+        Health Services, University of Illinois Chicago, Chicago, IL 60612, USA"}]},{"given":"Jerome
+        A.","family":"Yesavage","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"},{"name":"Department of Psychiatry and Behavioral Sciences,
+        Stanford University School of Medicine, Stanford, CA 94304, USA"}]}],"member":"98","reference":[{"key":"1","volume":"179","year":"2009","journal-title":"American
+        Journal of Respiratory and Critical Care Medicine"},{"key":"2","doi-asserted-by":"publisher","DOI":"10.1128\/CVI.00168-09"},{"key":"3","doi-asserted-by":"publisher","DOI":"10.1164\/rccm.200604-472OC"},{"key":"4","doi-asserted-by":"publisher","DOI":"10.5588\/ijtld.11.0364"},{"key":"5","doi-asserted-by":"publisher","DOI":"10.1128\/CVI.05058-11"},{"key":"6","doi-asserted-by":"publisher","DOI":"10.1007\/s00420-010-0571-x"},{"key":"7","doi-asserted-by":"publisher","DOI":"10.1086\/593965"},{"key":"8","doi-asserted-by":"publisher","DOI":"10.1378\/chest.09-2350"},{"issue":"11","key":"9","first-page":"1235","volume":"12","year":"2008","journal-title":"International
+        Journal of Tuberculosis and Lung Disease"},{"key":"10","doi-asserted-by":"publisher","DOI":"10.1056\/NEJMsa031667"},{"key":"11","doi-asserted-by":"publisher","DOI":"10.1378\/chest.128.1.116"},{"key":"12","year":"2012"},{"issue":"5","key":"13","first-page":"1","volume":"59","year":"2010","journal-title":"Morbidity
+        and Mortality Weekly Report"},{"key":"14","year":"2011"},{"key":"15","year":"2011"},{"key":"16","year":"2011"},{"key":"17","year":"2011"},{"key":"18","year":"2012"},{"key":"20","year":"1992"},{"key":"22","doi-asserted-by":"publisher","DOI":"10.3205\/dgkh000148"},{"key":"23","doi-asserted-by":"publisher","DOI":"10.1378\/chest.11-0992"},{"key":"24","doi-asserted-by":"publisher","DOI":"10.1186\/1471-2334-10-220"},{"key":"25","doi-asserted-by":"publisher","DOI":"10.1186\/1745-6673-7-6"},{"key":"27","doi-asserted-by":"publisher","DOI":"10.1128\/CVI.00398-07"},{"key":"28","doi-asserted-by":"publisher","DOI":"10.1164\/rccm.201006-0974OC"},{"key":"29","doi-asserted-by":"publisher","DOI":"10.1136\/thx.2010.143180"},{"key":"30","doi-asserted-by":"publisher","DOI":"10.1378\/chest.12-0045"}],"container-title":["Pulmonary
+        Medicine"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/pm\/2012\/291294.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/pm\/2012\/291294.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/pm\/2012\/291294.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,2]],"date-time":"2016-08-02T18:42:41Z","timestamp":1470163361000},"score":1,"resource":{"primary":{"URL":"http:\/\/www.hindawi.com\/journals\/pm\/2012\/291294\/"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2012]]},"references-count":27,"alternative-id":["291294","291294"],"URL":"http:\/\/dx.doi.org\/10.1155\/2012\/291294","relation":{},"ISSN":["2090-1836","2090-1844"],"issn-type":[{"value":"2090-1836","type":"print"},{"value":"2090-1844","type":"electronic"}],"subject":["Pulmonary
+        and Respiratory Medicine","General Medicine"],"published":{"date-parts":[[2012]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:21 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1155
@@ -68,30 +119,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Fri, 10 Mar 2023 21:18:14 GMT
+      - Sun, 12 Mar 2023 19:21:21 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tXa4Hmz7wEzx5eC%2BcB0xfWvOP2KSiNM0mvb%2BpA5hUH3FmdXY2K3npPlDwFxeWbVod1dF7ebHYTnoK3%2FcyBiORdZ8kRtzLP5VVXc%2F8SAC7NwIUZwtypzuRXDgO8p4v%2FiLCfigCRs%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=x8jNsWxdrFzTyvLG5N%2BBQbO0zOiDbW3OslciNejw6x1BDIBANsrg244RumHvjMEF53MlnSaW51gOl%2B7Pr9I%2Bz%2BnmDni4yXwcmRdvR8%2B2I5pEYt5kFshT0imJNUoIUZ%2F3yqO7vqU%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -99,12 +150,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a5e96cccc20b885-AMS
+      - 7a6e6653dd660a53-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Q0NTUyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA6cKQZjYAAAA=
-  recorded_at: Fri, 10 Mar 2023 21:18:14 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1155",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:21 GMT
 recorded_with: VCR 6.1.0

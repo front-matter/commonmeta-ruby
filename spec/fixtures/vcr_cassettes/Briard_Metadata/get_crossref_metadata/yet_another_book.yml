@@ -2,33 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.1029/ar035/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.1029/ar035
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:57 GMT
+      - Sun, 12 Mar 2023 19:21:17 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '16444'
-      Set-Cookie:
-      - AWSALB=p+Q2NwA6DhAmIin2OPar1pURwpDN0o+2da+8G1i6yeLVw7Yt5468C73UBeKRQ4cTnVcTj7CBCTv2OlqPqf1oUScv2/WGhJctiDuJennfNmHChzqYkyYfLnGGZBTW;
-        Expires=Sat, 18 Mar 2023 08:09:57 GMT; Path=/, AWSALBCORS=p+Q2NwA6DhAmIin2OPar1pURwpDN0o+2da+8G1i6yeLVw7Yt5468C73UBeKRQ4cTnVcTj7CBCTv2OlqPqf1oUScv2/WGhJctiDuJennfNmHChzqYkyYfLnGGZBTW;
-        Expires=Sat, 18 Mar 2023 08:09:57 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.1029/ar035>; rel="canonical", <http://onlinelibrary.wiley.com/wol1/doi/10.1029/AR035/fullpdf>;
-        version="vor"; rel="item"
+      - '57909'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -38,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -47,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -58,9 +51,499 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:57 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,2,7]],"date-time":"2023-02-07T09:49:58Z","timestamp":1675763398225},"publisher-location":"Washington,
+        D. C.","reference-count":242,"publisher":"American Geophysical Union","isbn-type":[{"value":"0875901816","type":"print"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"published-print":{"date-parts":[[1982]]},"DOI":"10.1029\/ar035","type":"monograph","created":{"date-parts":[[2011,9,8]],"date-time":"2011-09-08T21:55:55Z","timestamp":1315518955000},"source":"Crossref","is-referenced-by-count":22,"title":["Biogeography
+        of Lanternfishes (Myctophidae) South of 30\u00b0S"],"prefix":"10.1111","author":[{"given":"Richard
+        Frank","family":"McGinnis","sequence":"first","affiliation":[]}],"member":"311","reference":[{"key":"10.1029\/AR035:addi70","doi-asserted-by":"crossref","first-page":"287","DOI":"10.1016\/0031-0182(70)90103-3","article-title":"Latitudinal
+        gradients in tertiary mol-luscan faunas of the Pacific coast","volume":"8","author":"Addicott","year":"1970","journal-title":"Palaeogeogr.
+        Palaeoclimatol. Palaeoecol."},{"key":"10.1029\/AR035:ahls71","first-page":"3","article-title":"Kinds
+        and abundance of fish larvae in the eastern tropical Pacific, based on collections
+        made on Eastropac I","volume":"69","author":"Ahlstrom","year":"1971","journal-title":"Fish.
+        Bull."},{"key":"10.1029\/AR035:alco91","doi-asserted-by":"crossref","first-page":"197","DOI":"10.1080\/00222939008694027","article-title":"Natural
+        history notes from H.M. Indian Marine Survey Steamer Investigator. No. 16.
+        On the bathybial fishes collected In the Bay of Bengal during the season 1889-90","volume":"6","author":"Alcock","year":"1891","journal-title":"Ann.
+        Mag. Nat. Hist., ser. 6"},{"key":"10.1029\/AR035:andr66","first-page":"177","article-title":"The
+        distribution and life history of Calanoides acutus","volume":"34","author":"Andrews","year":"1966","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:andr58","first-page":"199","article-title":"List
+        of ichthyological stations with preliminary characterization of the hauls","author":"Andriashev","year":"1958","journal-title":"Trudy
+        Kompl. Antarkt. Eksped. Akad. Nauk SSSR, Gidrol. Gidrok-him. Geol. Biol. Issled.
+        D\/E\/ Ob 1955-1956"},{"key":"10.1029\/AR035:andr61","first-page":"227","article-title":"List
+        of ichthyological stations with preliminary characterization of the hauls","volume":"22","author":"Andriashev","year":"1961","journal-title":"Trudy
+        Sov. Antarkt. Eksped."},{"issue":"9","key":"10.1029\/AR035:andr62","first-page":"216","article-title":"Bathypelagic
+        fished of the Antarctic. 1. Family Myctophidae","volume":"1","author":"Andriashev","year":"1962","journal-title":"Izv.
+        Akad. Nauk SSSR Fauny Morei"},{"key":"10.1029\/AR035:ange69","first-page":"1","article-title":"Alimentacion
+        de las merluza en la region del Talud Continental Argentino, epoca internal
+        (Merluciidae, Merlucius merlucius hubbsi)","volume":"19","author":"Angelescu","year":"1969","journal-title":"Boln.
+        Inst. Biol. Mar."},{"key":"10.1029\/AR035:back65","first-page":"139","article-title":"The
+        mesopelagic fishes collected during cruise 17 of the R\/V Chain with a method
+        of analyzing faunal transects","volume":"145","author":"Backus","year":"1965","journal-title":"Bull.
+        Mus. Comp. Zool. Harv."},{"key":"10.1029\/AR035:back69","doi-asserted-by":"crossref","first-page":"87","DOI":"10.1007\/BF00353427","article-title":"Mesopelagic
+        fishes and thermal fronts in the western Sargasso Sea","volume":"3","author":"Backus","year":"1969","journal-title":"Mar.
+        Biol."},{"key":"10.1029\/AR035:back70","first-page":"179","article-title":"The
+        distribution of mesopelagic fishes in the equatorial and western North Atlantic
+        Ocean","volume":"28","author":"Backus","year":"1970","journal-title":"J. Mar.
+        Res."},{"key":"10.1029\/AR035:bake54","first-page":"201","article-title":"The
+        circumpolar continuity of Antarctic plankton species","volume":"27","author":"Baker","year":"1954","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:bake59","first-page":"309","article-title":"Distribution
+        and life history of Euphausiia triacantha Holt and Taterstal","volume":"29","author":"Baker","year":"1959","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:bake65","first-page":"309","article-title":"The
+        latitudinal distribution of Euphausia species in the surface waters of the
+        Indian Ocean","volume":"33","author":"Baker","year":"1965","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:bale70","first-page":"143","article-title":"The
+        distribution and endemism of some Antarctic microplankton","volume-title":"Antarctic
+        ecology","volume":"I","author":"Balech","year":"1970"},{"key":"10.1029\/AR035:barn25","first-page":"235","article-title":"A
+        monograph of marine fishes of South Africa. 1","volume":"21","author":"Barnard","year":"1925","journal-title":"Ann.
+        S. Afr. Mus."},{"key":"10.1029\/AR035:bars59","first-page":"379","article-title":"List
+        of ichthyological collections","volume":"6","author":"Barsukov","year":"1959","journal-title":"Trudy
+        Sov. Antarkt. Eksped."},{"key":"10.1029\/AR035:be","first-page":"9","volume-title":"1969
+        Planktonic Foraminifera","author":"Be''"},{"key":"10.1029\/AR035:beck63a","first-page":"15","article-title":"New
+        data on the lanternfish genera Electrona and Protomyctophum (Pisces, Myctophidae)
+        of the southern hemisphere","volume":"3","author":"Becker","year":"1963","journal-title":"Vop.
+        Ikhtiol."},{"key":"10.1029\/AR035:beck63b","first-page":"164","article-title":"North
+        Pacific species of the genus Protomyctophum (Myctophidae, Pisces)","volume":"62","author":"Becker","year":"1963","journal-title":"Trudy
+        Inst. Okeanol."},{"key":"10.1029\/AR035:beck64a","first-page":"11","article-title":"Slendertailed
+        lanternfishes (Genera Loweina, Tarletonbeania, Gonichthys, and Centrobranchus)
+        of the Pacific and Indian Oceans. Systematics and distribution","volume":"21","author":"Becker","year":"1964","journal-title":"Trudy
+        Inst. Okeanol."},{"issue":"3","key":"10.1029\/AR035:beck64b","first-page":"464","article-title":"The
+        temperate-cold water myctophid complex (Myctophidae, Pisces)","volume":"4","author":"Becker","year":"1964","journal-title":"Okeanologiya"},{"key":"10.1029\/AR035:beck65","first-page":"62","article-title":"Lanternfishes
+        of the genus Hygophum. Systematics and distribution","volume":"80","author":"Becker","year":"1965","journal-title":"Trudy
+        Inst. Okeanol."},{"key":"10.1029\/AR035:beck67a","first-page":"84","article-title":"Lanternfishes
+        (Family Myctophidae) from the Petr Lebedev Atlantic expeditions 1961-1964","volume":"84","author":"Becker","year":"1967","journal-title":"Trudy
+        Inst. Okeanol."},{"key":"10.1029\/AR035:beck67b","first-page":"145","article-title":"Lanternfishes
+        (Family Myctophidae)","author":"Becker","year":"1967"},{"key":"10.1029\/AR035:beeb37","first-page":"197","article-title":"Preliminary
+        list of Bermuda deepsea fishes","volume":"22","author":"Beebe","year":"1937","journal-title":"Zoologica"},{"key":"10.1029\/AR035:beeb43","first-page":"59","article-title":"Eastern
+        Pacific Expedition of the New York Zoological Society XXXIII. Pacific Myctophidae
+        (Fishes)","volume":"29","author":"Beebe","year":"1943","journal-title":"Zoologica"},{"key":"10.1029\/AR035:bekl67","article-title":"Biogeographical
+        division of the pelagial of the Pacific Ocean (in surface and intermediate
+        waters)","volume-title":"Biology of the Pacific Ocean","volume":"1","author":"Beklemishev","year":"1967"},{"key":"10.1029\/AR035:berr66","first-page":"625","article-title":"Survey
+        of pelagic fishes of the California Current area","volume":"65","author":"Berry","year":"1966","journal-title":"Fish.
+        Bull."},{"key":"10.1029\/AR035:blac64a","first-page":"97","article-title":"Contribution
+        a la connaissance des poissons de la famille Myctophidae dans la partie orientale
+        du Golfe de Guiness (Teleostei, Clupeiformi, Myctophidae). 1. Les genres Electrona
+        Goode and Bean 1895, Hygophum Bolin 1939","volume":"1","author":"Blache","year":"1964","journal-title":"Cah.
+        Oceanogr."},{"issue":"2","key":"10.1029\/AR035:blac64b","first-page":"61","article-title":"Contribution
+        a la connaissance des poissons de la famille Myctophidae dans la partie orientale
+        du Golfe de Guiness (Teleostei, Clupeiformi, Myctophidae). 2. Les genres Diogenichthys","volume":"2","author":"Blache","year":"1964","journal-title":"Cah.
+        Oceanogr."},{"issue":"1","key":"10.1029\/AR035:blac68","first-page":"71","article-title":"Micronekton
+        of the eastern tropical Pacific Ocean: Family composition, distribution, avoidance,
+        and relation to tuna","volume":"67","author":"Blackburn","year":"1968","journal-title":"Fish.
+        Bull."},{"key":"10.1029\/AR035:bois67","first-page":"1","article-title":"Major
+        currents in the North and South Atlantic Oceans between 64\u00b0N and 60\u00b0S","author":"Boisvert","year":"1967"},{"key":"10.1029\/AR035:boli39","first-page":"89","article-title":"A
+        review of the myctophid fishes of the Pacific coast of the United States and
+        of lower California","volume":"1","author":"Bolin","year":"1939","journal-title":"Stanford
+        Ichthyol. Bull."},{"key":"10.1029\/AR035:boli46","first-page":"89","article-title":"Lanternfishes
+        from Investigator station 670, Indian Ocean","volume":"1","author":"Bolin","year":"1946","journal-title":"Stanford
+        Ichthyol. Bull."},{"issue":"7","key":"10.1029\/AR035:boli59","first-page":"1","article-title":"Iniomi.
+        Myctophidae. Report of the Scientific results of Michael Sars","volume":"4","author":"Bolin","year":"1959","journal-title":"North
+        Atlantic Deep-Sea Expedition, 1910"},{"issue":"6","key":"10.1029\/AR035:bolt68","first-page":"199","article-title":"Hidrologia
+        de las aguas suferficiales en la parte occidental del Atlantic sur","volume":"2","author":"Boltovskoy","year":"1968","journal-title":"Hydrobiologia"},{"key":"10.1029\/AR035:bona40","series-title":"Iconograffia
+        della fauna italica per la quatre classi degli anamali vertebrati","volume":"3","author":"Bonaparte","year":"1840"},{"issue":"1","key":"10.1029\/AR035:botn66","first-page":"48","article-title":"The
+        limits of the West Wind Drift","volume":"6","author":"Botnikov","year":"1966","journal-title":"Inf.
+        Bull. Sov. Antarkt. Eksped."},{"key":"10.1029\/AR035:boul02","first-page":"174","article-title":"Pisces","volume-title":"Report
+        on the collections of natural history made in Antarctic regions during the
+        voyage of the Southern Cross","volume":"2","author":"Boulenger","year":"1902"},{"issue":"10","key":"10.1029\/AR035:brau04","first-page":"377","article-title":"Die
+        Gattung Myctophum","volume":"28","author":"Brauer","year":"1904","journal-title":"Zool.
+        Anzeiger"},{"issue":"1","key":"10.1029\/AR035:brau06","first-page":"1","article-title":"Die
+        Tiefsee Fische. 1. Systematischer Teil. Wiss. Ergeben. Dt. Tiefsee Exped","volume":"15","author":"Brauer","year":"1906","journal-title":"Valdivia
+        1898\u20131899"},{"issue":"2","key":"10.1029\/AR035:brig66","doi-asserted-by":"crossref","first-page":"153","DOI":"10.2307\/2411634","article-title":"Oceanic
+        Islands, endemism, and marine paleotemperatures","volume":"15","author":"Briggs","year":"1966","journal-title":"System.
+        Zool."},{"issue":"1","key":"10.1029\/AR035:brig70","doi-asserted-by":"crossref","first-page":"19","DOI":"10.2307\/2412025","article-title":"A
+        faunal history of the North Atlantic Ocean","volume":"19","author":"Briggs","year":"1970","journal-title":"Syst.
+        Zool."},{"issue":"2","key":"10.1029\/AR035:brin62","first-page":"51","article-title":"The
+        distribution of Pacific Euphausiids","volume":"8","author":"Brinton","year":"1962","journal-title":"Bull.
+        Scripps Instn. Oceanogr."},{"issue":"4","key":"10.1029\/AR035:brod65","first-page":"1","article-title":"The
+        taxonomy of marine plankton organisms and oceanography","volume":"5","author":"Brodskey","year":"1965","journal-title":"Oceanology"},{"key":"10.1029\/AR035:burl61","first-page":"1","article-title":"Hydrology
+        of circumpolar waters south of New Zealand","volume":"143","author":"Burling","year":"1961","journal-title":"N.Z.
+        Dep. Sci. Ind. Res. Bull."},{"key":"10.1029\/AR035:buss65","first-page":"185","article-title":"Studies
+        of the midwater fishes of the Peru-Chile Trench","volume-title":"Antarctic
+        Res. Ser.","volume":"5","author":"Bussing","year":"1965"},{"key":"10.1029\/AR035:chap44","doi-asserted-by":"crossref","first-page":"54","DOI":"10.2307\/1438250","article-title":"A
+        new name for Myctophum oculeum Chapman","volume":"1","author":"Chapman","year":"1944","journal-title":"Copeia"},{"key":"10.1029\/AR035:cocc29","first-page":"138","article-title":"Su
+        di alcuni pesci Mari di Messina","volume":"26","author":"Cocco","year":"1829","journal-title":"Giorn.
+        Sci. Lett. Arti Sicilia"},{"key":"10.1029\/AR035:cocc38","first-page":"161","article-title":"Su
+        di alcuni Salmonidi del Mar di Messina, lettera al C. D. C. L. Bonaparte","volume":"2","author":"Cocco","year":"1838","journal-title":"Nuovi.
+        Ann. Sci. Nat. Bolgna"},{"issue":"4","key":"10.1029\/AR035:cohe70","first-page":"341","article-title":"How
+        many recent fishes are there? fri Festschrift for George Sprague Myers in
+        honor of his sixty-fifth birthday","volume":"38","author":"Cohen","year":"1970","journal-title":"Proc.
+        Calif. Acad. Sci."},{"key":"10.1029\/AR035:cole72","first-page":"1","article-title":"Dorsadena
+        yacquinae, a new genus and species of myctophid fish from the eastern North
+        Pacific Ocean","volume":"225","author":"Coleman","year":"1972","journal-title":"Nat.
+        His. Mus. Los Angeles, County Contr. Sci."},{"key":"10.1029\/AR035:crad70","first-page":"3","article-title":"Midwater
+        Fishes from the eastern south Pacific Ocean","volume":"3","author":"Craddock","year":"1970","journal-title":"Sci.
+        Res. SE Pacif. Exped. Anton Bruun Rep."},{"key":"10.1029\/AR035:dani67","article-title":"Bony
+        fishes of the Maikop deposits of the Caucasus. Translated from Russian, catalogue
+        1885","author":"Danilchenko","year":"1967"},{"key":"10.1029\/AR035:davi55","first-page":"235","article-title":"The
+        distribution of Sagitta gazelle Ritter-Zahoney","volume":"27","author":"David","year":"1955","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:davi58","first-page":"201","article-title":"The
+        distribution of the Chaetognatha of the Southern Ocean","volume":"29","author":"David","year":"1958","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:davi63","series-title":"Some aspects of speciation
+        on Chaetognatha. Publ.","first-page":"129","volume":"5","author":"David","year":"1963"},{"issue":"1","key":"10.1029\/AR035:davy72","first-page":"67","article-title":"A
+        review of the lanternfish genus Taan-ingichthys (Family Myctophidae) with
+        the description of a new species","volume":"70","author":"Davy","year":"1972","journal-title":"Fish.
+        Bull."},{"key":"10.1029\/AR035:deac33","first-page":"171","article-title":"A
+        general account of the hydrology of the South Atlantic Ocean","volume":"7","author":"Deacon","year":"1933","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:deac37","first-page":"1","article-title":"The
+        hydrology of the Southern Ocean","volume":"L5","author":"Deacon","year":"1937","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:deac63","first-page":"28","article-title":"The
+        Southern Ocean","volume-title":"The Sea","volume":"2","author":"Deacon","year":"1963"},{"key":"10.1029\/AR035:defa61","series-title":"Physical
+        oeanography","volume":"1","author":"Defant","year":"1961"},{"issue":"4","key":"10.1029\/AR035:deve67","first-page":"984","article-title":"Oxygen
+        isotope paleotemperature measurements on New Zealand Tertiary fossils","volume":"10","author":"Devereaux","year":"1967","journal-title":"N.Z.
+        J. Sci."},{"key":"10.1029\/AR035:dewi70","first-page":"305","article-title":"The
+        character of the midwater fish fauna of the Ross Sea, Antarctica","author":"Dewitt","year":"1970"},{"issue":"4","key":"10.1029\/AR035:dewi60","first-page":"162","article-title":"Fishes
+        of the Stanford Antarctic biological research program 1958-1959","volume":"7","author":"Dewitt","year":"1960","journal-title":"Stanford
+        Ichthyol. Bull."},{"key":"10.1029\/AR035:diet63","volume-title":"General oceanography","author":"Dietrich","year":"1963"},{"key":"10.1029\/AR035:ebel62","first-page":"1","article-title":"Melamphaidae.
+        I. Systematics and zoogeography of the species in the bathypelagic fish genus
+        Melamphaes G\u00fcnther","volume":"58","author":"Ebeling","year":"1962","journal-title":"Dana
+        Rep."},{"key":"10.1029\/AR035:ebel67","first-page":"593","article-title":"Zoogeography
+        of tropical deep sea animals","volume":"5","author":"Ebeling","year":"1967","journal-title":"Proc.
+        Int. Conf., Tropical Oceanogr."},{"issue":"48","key":"10.1029\/AR035:eige89","first-page":"123","article-title":"Notes
+        from the San Diego Biological Laboratory. The fishes of Cortez Banks. West","volume":"6","author":"Eigenmann","year":"1889","journal-title":"Amer.
+        Sci."},{"key":"10.1029\/AR035:eige90","first-page":"1","article-title":"Addition
+        to the fauna of San Diego","volume":"3","author":"Eigenmann","year":"1890","journal-title":"Proc.
+        Calif. Acad. Sci., Ser. 2"},{"key":"10.1029\/AR035:ekma53","volume-title":"Zoogeography
+        of the sea","author":"Ekman","year":"1953"},{"key":"10.1029\/AR035:el-s70","first-page":"194","article-title":"Phytoplankton
+        production of the South Pacific and the Pacific sector of the Antarctic","author":"El-Sayed","year":"1970"},{"issue":"1","key":"10.1029\/AR035:este47","first-page":"67","article-title":"Revision
+        des types myctophides (Scope-lides) du Museum","volume":"19","author":"Esteve","year":"1947","journal-title":"Bull.
+        Mus. Hist. Nat. Paris., Ser. 2"},{"key":"10.1029\/AR035:fell67","first-page":"317","article-title":"Cretaceous
+        and tertiary surface currents of the oceans","volume-title":"Annual Review","volume":"5","author":"Fell","year":"1967"},{"key":"10.1029\/AR035:fitc69","doi-asserted-by":"crossref","first-page":"1","DOI":"10.5962\/p.241160","article-title":"Fossil
+        lanternfish otoliths of California, with notes on fossil myctophidae of North
+        America. Los Angeles County Mus","volume":"173","author":"Fitch","year":"1969","journal-title":"Contrib.
+        Sci."},{"key":"10.1029\/AR035:fitc68","doi-asserted-by":"crossref","first-page":"2561","DOI":"10.1139\/f68-227","article-title":"Fish
+        otoliths in cetacean stomachs and their importance in interpreting feeding
+        habits","volume":"25","author":"Fitch","year":"1968","journal-title":"J. Fish.
+        Res. Bd. Can."},{"key":"10.1029\/AR035:flem62","first-page":"53","article-title":"New
+        Zealand biogeography, a paleontologist''s approach","volume":"10","author":"Fleming","year":"1962","journal-title":"Tuatara"},{"issue":"3567","key":"10.1029\/AR035:flem67","doi-asserted-by":"crossref","first-page":"1","DOI":"10.5479\/si.00963801.120-3567.1","article-title":"Taxonomy,
+        distribution, and polymorphism in the Labidocera jollae group with remarks
+        on evolution within the group (Copepoda: Calanoidea)","volume":"120","author":"Fleminger","year":"1967","journal-title":"Proc.
+        U.S. Natnl. Mus."},{"key":"10.1029\/AR035:fowl01","first-page":"620","article-title":"Myctophum
+        phengodes in the North Atlantic","volume":"53","author":"Fowler","year":"1901","journal-title":"Proc.
+        Acad. Nat. Sci. Phi lad."},{"key":"10.1029\/AR035:fowl25","first-page":"1","article-title":"New
+        taxonomic names of West African marine fishes","volume":"162","author":"Fowler","year":"1925","journal-title":"Am.
+        Mus. Novit."},{"key":"10.1029\/AR035:foxt56","first-page":"191","article-title":"The
+        distribution of the standing crop of zooplankton in the Southern Ocean","volume":"28","author":"Foxton","year":"1956","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:foxt61","first-page":"1","article-title":"Salpa
+        fusiformis and related species","volume":"32","author":"Foxton","year":"1961","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:foxt65","first-page":"1","article-title":"The
+        distribution and life history of Salpa thompsoni Foxton with observations
+        on a related species, Salpa gerlachei Foxton","volume":"34","author":"Foxton","year":"1965","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:frak72","doi-asserted-by":"crossref","first-page":"97","DOI":"10.1038\/240097a0","article-title":"Influence
+        of continental positions on early Tertiary climates","volume":"240","author":"Frakes","year":"1972","journal-title":"Nature"},{"key":"10.1029\/AR035:fras31","doi-asserted-by":"crossref","first-page":"217","DOI":"10.1080\/00222933108673386","article-title":"Some
+        interesting West African fishes, with descriptions of a new genus and two
+        new species","volume":"8","author":"Fraser-Brunner","year":"1931","journal-title":"Ann.
+        Mag. Nat. Hist., Ser. 10"},{"issue":"4","key":"10.1029\/AR035:fras49","first-page":"1010","article-title":"A
+        classification of the fishes of the Family Myctophidae","volume":"118","author":"Fraser-Brunner","year":"1949","journal-title":"Proc.
+        Zool. Soc. London"},{"key":"10.1029\/AR035:frie64","article-title":"Physical
+        oceanographic data obtained during Eltanin cruises 4, 5 and 6 in the Drake
+        Passage, along the Chilean coast and in the Bransfield strait, June, 1962-Janury,
+        1963","author":"Friedman","year":"1964"},{"key":"10.1029\/AR035:fros68","first-page":"1","article-title":"A
+        revision of the Genus Clausocalanus (Copepoda: Calanoidea) with remarks on
+        distribution patterns in diagnostic characters","volume":"12","author":"Frost","year":"1968","journal-title":"Bull.
+        Scripps Instn. Oceanogr."},{"key":"10.1029\/AR035:garm99","first-page":"1","article-title":"Reports
+        of an exploration off the west coasts of Mexico, Central and South America,
+        and off the Galapagos Islands, in charge of Alexander Agassiz, by the U.S.
+        Fish Commission Steamer Albatross, during 1891, Lieut. Commander Z. L. Tanner
+        U. S. N., commandin","volume":"24","author":"Garman","year":"1899","journal-title":"Mem.
+        Mus. Comp. Zool. Harv."},{"key":"10.1029\/AR035:garn67a","first-page":"1","article-title":"Hydrology
+        of the southwest Tasman Sea","volume":"48","author":"Garner","year":"1967","journal-title":"Mem.
+        N.Z. Oceanogr. Inst."},{"key":"10.1029\/AR035:garn67b","first-page":"1","article-title":"Hydrology
+        of the southern Hikurangi trench region","volume":"34","author":"Garner","year":"1967","journal-title":"Mem.
+        N.Z. Oceanogr. Inst."},{"key":"10.1029\/AR035:gatt03","first-page":"1","article-title":"Richerche
+        sugli ovgawi luminosi dei pesci","volume":"233","author":"Gatti","year":"1903","journal-title":"Annali
+        Agric. Roma"},{"key":"10.1029\/AR035:gibb68","doi-asserted-by":"crossref","first-page":"1","DOI":"10.5962\/p.241138","article-title":"Photonectes
+        munificus, a new species of melanostomatid fish from the south Pacific Subtropical
+        Convergence, with remarks on the convergence Fauna. Los Angeles County Mus","volume":"149","author":"Gibbs","year":"1968","journal-title":"Contrib.
+        Sci."},{"key":"10.1029\/AR035:gilb91","doi-asserted-by":"crossref","first-page":"49","DOI":"10.5479\/si.00963801.13-797.49","article-title":"Preliminary
+        report on the fishes collected by the steamer Albatross on the Pacific coast
+        of North America during the year 1889","volume":"13","author":"Gilbert","year":"1891","journal-title":"Proc.
+        U.S. Natn. Mus."},{"key":"10.1029\/AR035:gilb05","first-page":"575","article-title":"The
+        deep sea fishes of the Hawaiian Islands","volume":"2","author":"Gilbert","year":"1905","journal-title":"Bull.
+        U.S. Fish. Comm."},{"key":"10.1029\/AR035:gilb11","first-page":"13","article-title":"Notes
+        on lanternfishes from Southern Seas, collected by J. T. Nichols in 1906","volume":"30","author":"Gilbert","year":"1911","journal-title":"Bull.
+        Am. Mus. Nat. Hist."},{"key":"10.1029\/AR035:gilb13","first-page":"67","article-title":"The
+        lanternfishes of Japan","volume":"6","author":"Gilbert","year":"1913","journal-title":"Mem.
+        Carneg. Mus."},{"key":"10.1029\/AR035:gilb97","doi-asserted-by":"crossref","first-page":"403","DOI":"10.5479\/si.00963801.19-1114.403","article-title":"Report
+        on the fishes dredged in deep water near the Hawaiian Islands, with descriptions
+        and figures of twenty three new species","volume":"19","author":"Gilbert","year":"1897","journal-title":"Proc.
+        U.S. Natl. Mus."},{"key":"10.1029\/AR035:gilc04","first-page":"15","article-title":"South
+        African fishes","volume":"3","author":"Gilchrist","year":"1904","journal-title":"Mar.
+        Invest. S. Afr."},{"key":"10.1029\/AR035:gist50","series-title":"Gonichthys,
+        ein fisch aus der Bai von Madeira Isis","first-page":"71","volume":"1850","author":"Gistel","year":"1850"},{"key":"10.1029\/AR035:good96","first-page":"1","article-title":"Oceanic
+        ichthyology","volume":"2","author":"Goode","year":"1896","journal-title":"Spec.
+        Bull. U.S. Natn. Mus."},{"key":"10.1029\/AR035:good69","first-page":"1","article-title":"The
+        relationships of certain Upper Cretaceous telecosts with special reference
+        to the Myctophoids","volume":"7","author":"Goody","year":"1969","journal-title":"Bull.
+        Br. Mus. Nat. Hist. Geol."},{"key":"10.1029\/AR035:gord","first-page":"1","volume-title":"Structure
+        of antarctic waters between 20\u00b0W and 170\u00b0W","author":"Gordon"},{"key":"10.1029\/AR035:gord71a","first-page":"169","article-title":"Oceanography
+        of antarctic waters","volume-title":"Antarctic Res. Ser.","volume":"15","author":"Gordon","year":"1971"},{"key":"10.1029\/AR035:gord71b","first-page":"205","article-title":"Antarctic
+        polar front zone","volume-title":"Antarctic Res. Ser.","volume":"15","author":"Gordon","year":"1971"},{"key":"10.1029\/AR035:gord70","first-page":"1","volume-title":"Circumpolar
+        characteristics of Antartic waters","author":"Gordon","year":"1970"},{"issue":"4","key":"10.1029\/AR035:gran66","first-page":"35","article-title":"Coriolis
+        Croisiere Alize. Individualization de plusiers ichtyofaunes le long de l''equater","volume":"4","author":"Grandperrin","year":"1966","journal-title":"Cah.
+        Oceanogr."},{"key":"10.1029\/AR035:guen36","first-page":"107","article-title":"A
+        report on oceanographical investigations in Peru Coastal Current","volume":"13","author":"Guenther","year":"1936","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:gunt64","series-title":"Catalogue of the fishes
+        in the British Museum","volume":"5","author":"G\u00fcnther","year":"1864"},{"issue":"4","key":"10.1029\/AR035:gunt73","first-page":"256","article-title":"Zweiter
+        ichthyologischer Beitrag nach Exemplaren aus dem Museum Godeffroy","volume":"1","author":"G\u00fcnther","year":"1873","journal-title":"J.
+        Mus. Godeffroy"},{"issue":"43","key":"10.1029\/AR035:gunt76","doi-asserted-by":"crossref","first-page":"389","DOI":"10.1080\/00222937608681975","article-title":"Remarks
+        on fishes with descriptions of new species in the British Museum, chiefly
+        from southern seas","volume":"17","author":"G\u00fcnther","year":"1876","journal-title":"Ann.
+        Mag. Nat. Hist., Ser. 4"},{"issue":"8","key":"10.1029\/AR035:gunt78","doi-asserted-by":"crossref","first-page":"179","DOI":"10.1080\/00222937808682406","article-title":"Preliminary
+        notices of deep-sea fishes collected during the voyage of the H.M.S. Challenger","volume":"2","author":"G\u00fcnther","year":"1878","journal-title":"Ann.
+        Mag. Nat. Hist., Ser. 5"},{"issue":"57","key":"10.1029\/AR035:gunt87","first-page":"1","article-title":"Report
+        on the deep-sea fishes collected by H.M.S. Challenger during the years 1873-1876","volume":"22","author":"G\u00fcnther","year":"1887","journal-title":"Challenger
+        Rep."},{"key":"10.1029\/AR035:hamo65","first-page":"899","article-title":"The
+        East Australian Current, 1960-1964","volume":"12","author":"Hamon","year":"1965","journal-title":"Deep
+        Sea Res."},{"key":"10.1029\/AR035:hamo70","volume-title":"Western boundary
+        currents, Scientific Exploration of the South Pacific","author":"Hamon","year":"1970"},{"key":"10.1029\/AR035:hard56","volume-title":"The
+        open sea: Its natural history. 1. The world of plankton","author":"Hardy","year":"1956"},{"key":"10.1029\/AR035:hard35","first-page":"1","article-title":"Plankton
+        of the South Georgia whaling grounds and adjacent waters","volume":"II","author":"Hardy","year":"1935","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:hart42","first-page":"261","article-title":"Phytoplankton
+        periodicity in Antarctic surface waters","volume":"21","author":"Hart","year":"1942","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:hasl69","first-page":"1","article-title":"An
+        analysis of the phytoplankton of the Pacific Southern Ocean: Abundance, composition,
+        and distribution during the Brategg Expedition, 1947-1948","volume":"52","author":"Hasle","year":"1969","journal-title":"Hvalrad.
+        Skr."},{"key":"10.1029\/AR035:hays68","first-page":"139","article-title":"Climatic
+        record of late Cenozoic Antarctic Ocean sediments related to the record of
+        world climate","volume-title":"Paleocology of Africa and of the Surrounding
+        Islands and of Antarctica","volume":"4","author":"Hays","year":"1968"},{"key":"10.1029\/AR035:hays69","doi-asserted-by":"crossref","first-page":"1481","DOI":"10.1130\/0016-7606(1969)80[1481:PSOTEP]2.0.CO;2","article-title":"Pliocene-Pleistocene
+        sediments of the equatorial Pacific: Their paleomagnetic, biostratigraphic,
+        and climatic record","volume":"80","author":"Hays","year":"1969","journal-title":"Geol.
+        Soc. Am. Bull."},{"issue":"4","key":"10.1029\/AR035:heat68","doi-asserted-by":"crossref","first-page":"659","DOI":"10.1080\/00288330.1968.9515263","article-title":"Geostrophic
+        currents derived from oceanic density measurements north and south of the
+        Subtropical Convergence east of New Zealand","volume":"2","author":"Heath","year":"1968","journal-title":"N.Z.
+        J. Mar. Freshwater Res."},{"key":"10.1029\/AR035:herd66","volume-title":"Southern
+        Ocean. Encyclopaedia of Oceanography","author":"Herdman","year":"1966"},{"key":"10.1029\/AR035:hubb64","first-page":"445","article-title":"Parvilux,
+        a new genus of myctophid fishes from the northeastern Pacific, with two new
+        species","volume":"39","author":"Hubbs","year":"1964","journal-title":"Zool.
+        Meded."},{"key":"10.1029\/AR035:hurl69","first-page":"32","volume-title":"Amphipoda
+        Hyperiidea","author":"Hurley","year":"1969"},{"key":"10.1029\/AR035:isaa52","first-page":"1","article-title":"Isaacs-Kidd
+        midwater trawl","author":"Isaacs","year":"1952"},{"key":"10.1029\/AR035:jaco66","first-page":"1","article-title":"Physical
+        and chemical oceanographic observations in the Southern Oceans, U.S.-N.S.
+        Eltanin cruises 16-21","author":"Jacobs","year":"1966"},{"key":"10.1029\/AR035:jaco67","first-page":"1","article-title":"Physical
+        and chemical oceanographic observations in the Southern Oceans, U.S.-N.S.
+        Eltanin cruises 22-27","author":"Jacobs","year":"1967"},{"key":"10.1029\/AR035:john36","first-page":"165","article-title":"The
+        southern species of the genus Euphausia","volume":"14","author":"John","year":"1936","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:john90","first-page":"452","article-title":"On
+        some new species of fish from Madeira","volume":"58","author":"Johnson","year":"1890","journal-title":"Proc.
+        Zool. Soc. London"},{"key":"10.1029\/AR035:john63","first-page":"381","article-title":"Biological
+        species, water-masses and currents","volume-title":"The Sea","volume":"2","author":"Johnson","year":"1963"},{"key":"10.1029\/AR035:kane66","first-page":"163","article-title":"The
+        distribution of Parathemisto gaudi-chauddi (Guer.) with observations on its
+        life history in the 0\u00b0 to 20\u00b0E sector of the Southern Ocean","volume":"34","author":"Kane","year":"1966","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:kash67","first-page":"125","article-title":"On
+        the quantitative distribution of the lanternfishes (Myctophidae sensulato)
+        in the Atlantic Ocean","volume":"84","author":"Kashkin","year":"1967","journal-title":"Trudy
+        Akad. Nauk SSSR, Inst. Okeanol"},{"key":"10.1029\/AR035:kemp29","first-page":"151","article-title":"The
+        Discovery investigations: Objects, equipment, and methods, 2","volume":"1","author":"Kemp","year":"1929","journal-title":"Discovery
+        Rep."},{"issue":"1","key":"10.1029\/AR035:kenn70","first-page":"125","article-title":"Pleistocene
+        paleoclimates and foraminiferal biostratigraphy in subantarctic deep sea cores","volume":"17","author":"Kennett","year":"1970","journal-title":"Deep
+        Sea Res."},{"issue":"82","key":"10.1029\/AR035:kent71","doi-asserted-by":"crossref","first-page":"2741","DOI":"10.1130\/0016-7606(1971)82[2741:CCITNP]2.0.CO;2","article-title":"Climate
+        change in the North Pacific using ice-rafted detritus as climate indicator","volume":"5","author":"Kent","year":"1971","journal-title":"Geol.
+        Soc. Am. Bull."},{"key":"10.1029\/AR035:knox63","series-title":"Problems of
+        speciation in intertidal animals with special reference to New Zealand shores.
+        Publ.","first-page":"129","volume":"5","author":"Knox","year":"1963"},{"key":"10.1029\/AR035:knox70","first-page":"155","article-title":"Biological
+        oceanography of the South Pacific, Scientific Exploration of the South Pacific","author":"Knox","year":"1970"},{"key":"10.1029\/AR035:kobl70","first-page":"183","article-title":"Plankton
+        primary production of the world ocean, Scientific Exploration of the South
+        Pacific","author":"Koblentz-Mishke","year":"1970"},{"issue":"3","key":"10.1029\/AR035:kort62","doi-asserted-by":"crossref","first-page":"113","DOI":"10.1038\/scientificamerican0962-113","article-title":"The
+        Antarctic Ocean","volume":"207","author":"Kort","year":"1962","journal-title":"Scient.
+        Am."},{"key":"10.1029\/AR035:kort65","first-page":"261","article-title":"Boundaries
+        of the Southern Ocean","volume":"4","author":"Kort","year":"1965","journal-title":"Inf.
+        Byull. Sb. Antarkt. Eksped."},{"key":"10.1029\/AR035:kref58","first-page":"249","article-title":"Antarktische
+        Fische und den Planktonfangen","volume":"2","author":"Krefft","year":"1958","journal-title":"Dt.
+        Antarkt. Exped. 1938-39"},{"key":"10.1029\/AR035:kref70","first-page":"271","article-title":"Zur
+        Systematick und verbeitung der Gattung Lampadena Goode and Bean, 1896 (Osteichthyes,
+        Myctophoidei, Myctophidae) in Atlantischen Ocean, mit Beschreibung einer Neven
+        Art","volume":"21","author":"Krefft","year":"1970","journal-title":"Ber. Dt.
+        Wiss. Kommn. Meeresforsch."},{"key":"10.1029\/AR035:kref74","first-page":"226","article-title":"Investigations
+        on midwater fish in the Atlantic Ocean","volume":"23","author":"Krefft","year":"1974","journal-title":"Ber.
+        Dt. Wiss. Kommn. Meeresforsch."},{"key":"10.1029\/AR035:kuli60","first-page":"166","article-title":"Lampanyctids
+        (Genus Lampanyctus) of the far eastern seas and the Northwestern Pacific","volume":"31","author":"Kulikova","year":"1960","journal-title":"Trudy
+        Akad. Nauk SSSR, Inst. Okeanol."},{"key":"10.1029\/AR035:kuli61","first-page":"5","article-title":"Material
+        on the lanternfish genus Diaphus (Family Scopelidae) in the western part of
+        the Pacific Ocean","volume":"43","author":"Kulikova","year":"1961","journal-title":"Trudy
+        Akad. Nauk SSSR, Inst. Okeanol."},{"issue":"4","key":"10.1029\/AR035:lega67","first-page":"47","article-title":"Cycles
+        biologiques des poissons mesopelagiques dans l''est de l''Ocean Indien. 1.
+        Scopelopsis multipunctatus Brauer, Gonostoma sp. and Notolychnus valdiviae
+        Brauer","volume":"5","author":"Legand","year":"1967","journal-title":"Cah.
+        Oceanogr."},{"issue":"4","key":"10.1029\/AR035:lega67a","first-page":"73","article-title":"Cycles
+        biologiques des poissons mesopel-agiques dans l''est de l''Ocean Indien. 2.
+        Distribution moyenne des principal especes dell''ichtyofaune","volume":"5","author":"Legand","year":"1967","journal-title":"Cah.
+        Oceanogr."},{"key":"10.1029\/AR035:lloy63","first-page":"88","article-title":"Tectonic
+        history American Orogan: Americans-Tectonic pole, a symposium","volume":"2","author":"Lloyd","year":"1963","journal-title":"Geol."},{"issue":"6","key":"10.1029\/AR035:lonn05","first-page":"1","article-title":"The
+        fishes of the Swedish South Polar Expedition","volume":"5","author":"L\u00f6nnberg","year":"1905","journal-title":"Wiss.
+        Ergebn. Schwed. Sub-polarexped."},{"key":"10.1029\/AR035:lutk92","first-page":"221","article-title":"Spolia
+        Atlantica. Scopelini museu zoologici Hauniensis. Bidrag til Kindstab om det
+        aabne Haus lakesild eller Scopeliner","volume":"7","author":"L\u00fctken","year":"1892","journal-title":"K.
+        Danske Vidensk. Selsk. Skr., Ser. 6"},{"key":"10.1029\/AR035:mack37","first-page":"365","article-title":"The
+        seasonal circulation of the antarctic macroplankton","volume":"16","author":"Mackintosh","year":"1937","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:mack46","first-page":"177","article-title":"The
+        antarctic convergence and the distribution of surface temperatures in Antarctic
+        waters","volume":"22","author":"Mackintosh","year":"1946","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:marg70","doi-asserted-by":"crossref","first-page":"1085","DOI":"10.1126\/science.170.3962.1085","article-title":"Antarctic
+        glaciation during the Tertiary recorded in subantarctic deep-sea cores","volume":"170","author":"Margolis","year":"1970","journal-title":"Science"},{"key":"10.1029\/AR035:marr62","first-page":"33","article-title":"The
+        natural history and geography of the Antarctic Krill (Euphausia Superba Dana","volume":"32","author":"Marr","year":"1962","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:mauc69","series-title":"The biology of euphausiids.","volume-title":"Advances
+        in marine biology","volume":"7","author":"Mauchline","year":"1969"},{"key":"10.1029\/AR035:mayr63","doi-asserted-by":"crossref","volume-title":"Animal
+        species and evolution","author":"Mayr","year":"1963","DOI":"10.4159\/harvard.9780674865327"},{"issue":"3","key":"10.1029\/AR035:mccu15","first-page":"104","article-title":"Biological
+        results of fishing experiments carried on by the F.I.S","volume":"3","author":"McCulloch","year":"1915","journal-title":"Endeavour
+        1909-1914"},{"key":"10.1029\/AR035:mccu23","first-page":"110","article-title":"Fishes
+        from Australia and Lord Howe Island. 2","volume":"14","author":"McCulloch","year":"1923","journal-title":"Rec.
+        Aust. Mus."},{"issue":"1","key":"10.1029\/AR035:mccu29","doi-asserted-by":"crossref","first-page":"1","DOI":"10.3853\/j.0067-1967.5.1929.473","article-title":"A
+        checklist of the fishes recorded from Australia","volume":"1\u20135","author":"McCulloch","year":"1929","journal-title":"Mem.
+        Aust. Mus."},{"key":"10.1029\/AR035:mcgi74","doi-asserted-by":"crossref","first-page":"736","DOI":"10.1126\/science.186.4165.736","article-title":"Counterclockwise
+        circulation in the Pacific Subantarctic sector of the Southern Ocean","volume":"186","author":"McGinnis","year":"1974","journal-title":"Science"},{"key":"10.1029\/AR035:mcgi77","first-page":"547","article-title":"Evolution
+        within pelagic ecosystems: Aspects of the distribution and evolution of the
+        Family Myctophidae","author":"McGinnis","year":"1977"},{"key":"10.1029\/AR035:mcgo71","first-page":"3","article-title":"Oceanic
+        biogeography of the Pacific","author":"McGowan","year":"1971"},{"key":"10.1029\/AR035:mcin67","doi-asserted-by":"crossref","first-page":"1314","DOI":"10.1126\/science.158.3806.1314","article-title":"Coccoliths
+        as paleoclimatic indicators of Pleistocene glaciation","volume":"158","author":"McIntyre","year":"1967","journal-title":"Science"},{"issue":"5","key":"10.1029\/AR035:mead66","first-page":"162","article-title":"Family
+        Chlorophthalmidae. Fishes of the Western North Atlantic","volume":"1","author":"Mead","year":"1966","journal-title":"Mem.
+        Sears Fdn. Mar. Res."},{"issue":"8","key":"10.1029\/AR035:mead53","doi-asserted-by":"crossref","first-page":"560","DOI":"10.1139\/f53-033","article-title":"A
+        collection of oceanic fishes from off Northeastern Japan","volume":"10","author":"Mead","year":"1953","journal-title":"J.
+        Fish. Res. Bd. Can."},{"key":"10.1029\/AR035:midt57","first-page":"1","article-title":"Pacific
+        Antarctic Waters","volume":"3","author":"Midttun","year":"1957","journal-title":"Scient.
+        Results Brategg Exped. 1947-1948"},{"issue":"3","key":"10.1029\/AR035:mile71","doi-asserted-by":"crossref","first-page":"193","DOI":"10.1007\/BF00352809","article-title":"Types
+        of larval development in marine bottom invertebrates, their distribution and
+        ecological significance: A re-evaluation","volume":"10","author":"Mileikovsky","year":"1971","journal-title":"Mar.
+        Biol."},{"issue":"3","key":"10.1029\/AR035:more88","first-page":"108","article-title":"Le
+        scopele de Verany, Scopelus veranyi","volume":"12","author":"Moreau","year":"1888","journal-title":"Bull.
+        Soc. Philomath., Paris, Ser. 7"},{"key":"10.1029\/AR035:mose70","first-page":"1","article-title":"Development
+        of lanternfishes (Family Myctophidae) in the California current. 1. Species
+        with narrow-eyed larvae","volume":"7","author":"Moser","year":"1970","journal-title":"Bull.
+        Los Angeles County Mus. Nat. Hist., Sci."},{"issue":"3","key":"10.1029\/AR035:mose72","first-page":"541","article-title":"Development
+        of the lanternfish Scopelopsis multipunctatus Brauer 1906, with a discussion
+        of its proposed mechanism for the evolution of photophore patterns in lanternfishes","volume":"70","author":"Moser","year":"1972","journal-title":"Fish.
+        Bull."},{"issue":"2","key":"10.1029\/AR035:mose74","first-page":"391","article-title":"Role
+        of larval stages in systematic investigations of marine teleosts: The Myctophidae,
+        A Case Study","volume":"72","author":"Moser","year":"1974","journal-title":"Fish.
+        Bull."},{"key":"10.1029\/AR035:muro63","first-page":"1","article-title":"The
+        principal hydrological features of the Pacific Ocean. Translated from Russian,
+        catalogue 753","author":"Muromtsev","year":"1963"},{"key":"10.1029\/AR035:nafp68","first-page":"1","article-title":"Lanternfishes
+        of the genera Lobianchia and Diaphus in the North Atlantic","volume":"73","author":"Nafpaktitis","year":"1968","journal-title":"Dana
+        Rep."},{"key":"10.1029\/AR035:nafp69","first-page":"1","article-title":"Lanternfishes
+        (Family Myctophidae) collected during cruises 3 and 6 of the R\/V Anton Bruun
+        in the Indian Ocean","volume":"5","author":"Nafpaktitis","year":"1969","journal-title":"Bull.
+        Los Angeles County Mus. Nat. Hist., Sci."},{"key":"10.1029\/AR035:nafp68a","first-page":"1","article-title":"Review
+        of the lanternfish genus Lampadena with a description of a new species","volume":"138","author":"Nafpaktitis","year":"1968","journal-title":"Los
+        Angeles County Mus. Contr. Sci."},{"key":"10.1029\/AR035:newe66","doi-asserted-by":"crossref","first-page":"77","DOI":"10.1071\/MF9660077","article-title":"Seasonal
+        changes in the hydrological and biological environments off Port Hacking,
+        Sydney","volume":"17","author":"Newell","year":"1966","journal-title":"Aut.
+        J. Mar. Freshwater Res."},{"key":"10.1029\/AR035:norm30","first-page":"261","article-title":"Oceanic
+        fishes and flatfishes collected in 1925-1927","volume":"2","author":"Norman","year":"1930","journal-title":"Discovery
+        Rep."},{"issue":"2","key":"10.1029\/AR035:norm37","first-page":"50","article-title":"Fishes","volume":"1","author":"Norman","year":"1937","journal-title":"Rep.
+        BANZ Antarct. Res. Exped., Ser. B"},{"key":"10.1029\/AR035:norm38","doi-asserted-by":"crossref","first-page":"1","DOI":"10.5962\/bhl.part.19412","article-title":"Coast
+        Fishes. 3. The antarctic zone","volume":"43","author":"Norman","year":"1938","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:oday65","first-page":"77","article-title":"A
+        study of the effects of expatriation on the gonads of the two myctophid fishes
+        in the North Atlantic Ocean","volume":"136","author":"O''Day","year":"1965","journal-title":"Bull.
+        Mus. Comp. Zool. Harv."},{"key":"10.1029\/AR035:orre66","first-page":"1","article-title":"Hydrology
+        of the southeast Indian Ocean","author":"Orren","year":"1966"},{"key":"10.1029\/AR035:osta65","first-page":"976","article-title":"Antarctic
+        oceanography, Ecology and biogeography of the antarctic","volume-title":"Monogr.
+        Biol.","volume":"15","author":"Ostapoff","year":"1965"},{"key":"10.1029\/AR035:papp12","first-page":"162","article-title":"Die
+        Fische der Deutschen Sudpolar Expedition 1901-1903. 2. Die Fische der Antarctic
+        aug Subantarctic","volume":"13","author":"Pappenheim","year":"1912","journal-title":"Dt.
+        Sudpol. Exped."},{"issue":"2","key":"10.1029\/AR035:papp14","first-page":"160","article-title":"Die
+        Fishen der Sudpolar Expedition 1901-1903. 2. Die tiefse Fishe","volume":"15","author":"Pappenheim","year":"1914","journal-title":"Dt.
+        Sudpol. Exped."},{"key":"10.1029\/AR035:pari70","article-title":"Ichthyofauna
+        of the epipelagic zone. Translated from Russian, catalogue 5538","author":"Parin","year":"1970"},{"issue":"3","key":"10.1029\/AR035:parr28","first-page":"1","article-title":"Deepsea
+        fishes of the order Iniomi from the waters around the Bahama and Bermuda Islands,
+        with annotated keys to the Sud-idae, Myctophidae, Scopelarchidae, Evermanellidae,
+        Omosudidae, Cetomimidae, and Rondeletiidae of the world","volume":"3","author":"Parr","year":"1928","journal-title":"Bull.
+        Bingham Oceanogr. Coll."},{"key":"10.1029\/AR035:paxt67a","doi-asserted-by":"crossref","first-page":"422","DOI":"10.2307\/1442131","article-title":"A
+        distributional analysis for the lanternfishes (Family Myctophidae) of the
+        San Pedro Basin, California","volume":"2","author":"Paxton","year":"1967","journal-title":"Copeia"},{"issue":"3","key":"10.1029\/AR035:paxt67b","first-page":"214","article-title":"Biological
+        notes on southern California lanternfishes (Family Myctophidae)","volume":"53","author":"Paxton","year":"1967","journal-title":"Calif.
+        Fish Game"},{"key":"10.1029\/AR035:paxt72","first-page":"1","article-title":"Osteology
+        and relationships of the lanternf ishes (Family Myctophidae)","volume":"13","author":"Paxton","year":"1972","journal-title":"Bull.
+        Los Angeles County Nat. Hist. Mus., Sci."},{"issue":"1","key":"10.1029\/AR035:pytc68","first-page":"8","article-title":"Water
+        masses and their properties at 160\u00b0W in the Southern Ocean","volume":"24","author":"Pytcowitz","year":"1968","journal-title":"J.
+        Oceanogr. Soc. Jap."},{"key":"10.1029\/AR035:rafi10","volume-title":"Indice
+        d''lttiologia Siciliana","author":"Rafinesque","year":"1810"},{"key":"10.1029\/AR035:rega13","doi-asserted-by":"crossref","first-page":"229","DOI":"10.1017\/S0080456800003951","article-title":"The
+        Antarctic fishes of the Scottish National Antarctic expedition","volume":"49","author":"Regan","year":"1913","journal-title":"Trans.
+        R. Soc. Edinb."},{"issue":"1","key":"10.1029\/AR035:rega14","first-page":"1","article-title":"Fishes","volume":"1","author":"Regan","year":"1914","journal-title":"Natural
+        History, Br. Antarct. Terra Nova Exped. 1910, Zool."},{"key":"10.1029\/AR035:reid65","first-page":"1","article-title":"Intermediate
+        waters of the Pacific Ocean","volume":"2","author":"Reid","year":"1965","journal-title":"Johns
+        Hopkins Oceanogr. Stud."},{"key":"10.1029\/AR035:rein37","first-page":"107","article-title":"Ichthyologiske
+        bidrag til den gronlandska fauna","volume":"6","author":"Reinhardt","year":"1837","journal-title":"Dansk
+        Vid. Selsk. Afh. Copenhagen"},{"key":"10.1029\/AR035:rich44","volume-title":"Ichthyology
+        of the voyage of H.M.S","author":"Richardson","year":"1844"},{"key":"10.1029\/AR035:rich48","first-page":"1","article-title":"Erebus
+        and Terror","volume-title":"Erebus and Terror","volume":"2","author":"Richardson","year":"1848"},{"issue":"2","key":"10.1029\/AR035:roch60","doi-asserted-by":"crossref","first-page":"127","DOI":"10.1071\/MF9600127","article-title":"The
+        intermediate waters of the Tasman and Coral seas. 1. The 26.80 sigma t surface","volume":"11","author":"Rochford","year":"1960","journal-title":"Aust.
+        J. Mar. Freshwater Res."},{"key":"10.1029\/AR035:rope69","doi-asserted-by":"crossref","first-page":"1","DOI":"10.5479\/si.03629236.291.1","article-title":"Systematics
+        and zoogeography of the worldwide bathypelagic squid Bathyteuthis (Cephalopoda,
+        Oegopsida)","volume":"291","author":"Roper","year":"1969","journal-title":"Bull.
+        U.S. Natn. Mus."},{"key":"10.1029\/AR035:roth67","first-page":"49","article-title":"Oceanography
+        of the Coral and Tasman seas","volume-title":"Oceanography and Marine Biology,
+        Annual Review","volume":"5","author":"Rothschi","year":"1967"},{"key":"10.1029\/AR035:sava60","doi-asserted-by":"crossref","first-page":"184","DOI":"10.2307\/2411967","article-title":"Evolution
+        of a Peninsular Herpetofauna","volume":"9","author":"Savage","year":"1960","journal-title":"Syst.
+        Zool."},{"key":"10.1029\/AR035:sava65","article-title":"Studies on Antarctic
+        oceanology. Biological stations occupied by the USNS Eltan-","author":"Savage","year":"1965"},{"key":"10.1029\/AR035:sava66","article-title":"Studies
+        in Antarctic oceanology. Biological stations occupied by the USNS Eltan-","author":"Savage","year":"1966"},{"key":"10.1029\/AR035:sava67","article-title":"Studies
+        in Antarctic oceanology. Biological stations occupied by the USNS Eltan","author":"Savage","year":"1967"},{"key":"10.1029\/AR035:sche68","doi-asserted-by":"crossref","first-page":"109","DOI":"10.1007\/BF02235725","article-title":"On
+        the relation between the winds off Southwest Africa and the Benguela Current
+        and Agulhas Current penetrations in the South Atlantic","volume":"21","author":"Schell","year":"1968","journal-title":"Dt.
+        Hydrogr. Z."},{"key":"10.1029\/AR035:scri69","article-title":"Physical and
+        chemical data from the Scorpio expedition in the South Pacific Ocean, USNS
+        Eltanin cruises 28 and 29","author":"Scripps Institution of Oceanography,
+        Woods Hole Oceanographic Institution","year":"1969"},{"key":"10.1029\/AR035:shac75","first-page":"743","article-title":"Paleotemperature
+        history of the Cenozoic and the initiation of Antarctic glaciation: Oxygen
+        analyses in DSDP sites 277, 279, and 281","volume-title":"Initial reports
+        of the Deep Sea Drilling Project","volume":"29","author":"Shackleton","year":"1975"},{"key":"10.1029\/AR035:shan66","first-page":"1","article-title":"Hydrology
+        of the south and west coasts of Africa","author":"Shannon","year":"1966"},{"key":"10.1029\/AR035:shih69","first-page":"1","article-title":"The
+        systematics and biology of the family Phronimidae","volume":"74","author":"Shih","year":"1969","journal-title":"Dana
+        Rep."},{"key":"10.1029\/AR035:smit33","doi-asserted-by":"crossref","first-page":"125","DOI":"10.1080\/00359193309519317","article-title":"New
+        Myctophid fish from South Africa","volume":"21","author":"Smith","year":"1933","journal-title":"Trans.
+        R. Soc. S. Afr."},{"key":"10.1029\/AR035:sver42","volume-title":"The oceans","author":"Sverdrup","year":"1942"},{"key":"10.1029\/AR035:taft63","first-page":"129","article-title":"Distribution
+        of salinity and dissolved oxygen on surfaces of uniform potential specific-volume
+        in the South Atlantic, South Pacific, and Indian oceans","volume":"2l","author":"Taft","year":"1963","journal-title":"J.
+        Mar. Res."},{"key":"10.1029\/AR035:tani28","first-page":"49","article-title":"Synopsis
+        of scopelids in the North Atlantic","volume":"86","author":"T\u00e4ning","year":"1928","journal-title":"Vidensk.
+        Meddr. Dansk Naturh. Foren."},{"key":"10.1029\/AR035:tuni32","first-page":"125","article-title":"Notes
+        on scopelids from the Dana expedition. 1","volume":"94","author":"Tuning","year":"1932","journal-title":"Vidensk.
+        Meddr. Dansk Naturh. Foren."},{"key":"10.1029\/AR035:tebb60","first-page":"161","article-title":"The
+        distribution of pelagic polychaetes in the South Atlantic Ocean","volume":"30","author":"Tebble","year":"1960","journal-title":"Discovery
+        Rep."},{"key":"10.1029\/AR035:trun68","first-page":"595","article-title":"New
+        observations on the distribution of Electrona rissoi (Cocco) and Diaphus ostenfeldi
+        Tuning (Myctophidae)","volume":"4","author":"Trunov","year":"1968","journal-title":"Vopr.
+        Ichtiol"},{"key":"10.1029\/AR035:vigl66","volume-title":"Oceans: Limits, definitions,
+        and dimensions, Encyclopaedia of Oceanography","author":"Viglieri","year":"1966"},{"key":"10.1029\/AR035:voro68","doi-asserted-by":"crossref","first-page":"277","DOI":"10.1080\/00364827.1968.10413391","article-title":"The
+        distribution of zooplankton in the Southern Ocean and its dependence on the
+        circulation of water","volume":"34","author":"Voronina","year":"1968","journal-title":"Sarsia"},{"issue":"3","key":"10.1029\/AR035:wait04","doi-asserted-by":"crossref","first-page":"135","DOI":"10.3853\/j.0067-1975.5.1904.1053","article-title":"Addition
+        to the fish fauna of Lord Howe Island, 4","volume":"5","author":"Waite","year":"1904","journal-title":"Rec.
+        Aust. Mus."},{"issue":"3","key":"10.1029\/AR035:wait11","first-page":"157","article-title":"Fishes.
+        2","volume":"1","author":"Waite","year":"1911","journal-title":"Rec. Canterbury
+        Mus."},{"issue":"1","key":"10.1029\/AR035:wait16","first-page":"59","article-title":"Fishes","volume":"3","author":"Waite","year":"1916","journal-title":"Australas.
+        Antarct. Exped., Ser. C."},{"issue":"1","key":"10.1029\/AR035:wals69","doi-asserted-by":"crossref","first-page":"86","DOI":"10.4319\/lo.1969.14.1.0086","article-title":"Vertical
+        distribution of antarctic phyto-plankton. 2. A comparison of phyto-plankton
+        standing crops in the Southern Ocean with that of the Florida Straits","volume":"14","author":"Walsh","year":"1969","journal-title":"Limmol.
+        Oceanogr."},{"key":"10.1029\/AR035:warr70","first-page":"33","article-title":"General
+        circulation of the South Pacific","author":"Warren","year":"1970"},{"key":"10.1029\/AR035:watk71","doi-asserted-by":"crossref","first-page":"813","DOI":"10.1126\/science.173.3999.813","article-title":"Antarctic
+        bottom water: Major change in velocity during the late Cenozoic between Australia
+        and Antarctica","volume":"173","author":"Watkins","year":"1971","journal-title":"Science"},{"issue":"3","key":"10.1029\/AR035:whit31","doi-asserted-by":"crossref","first-page":"96","DOI":"10.3853\/j.0067-1975.18.1931.720","article-title":"Studies
+        in Ichthyology. 4","volume":"18","author":"Whitley","year":"1931","journal-title":"Rec.
+        Aust. Mus."},{"key":"10.1029\/AR035:whit32","doi-asserted-by":"crossref","first-page":"321","DOI":"10.3853\/j.0067-1975.18.1932.737","article-title":"Studies
+        in Ichthyology. 6","volume":"18","author":"Whitley","year":"1932","journal-title":"Rec.
+        Aust. Mus."},{"issue":"1","key":"10.1029\/AR035:whit41","first-page":"124","article-title":"A
+        lanternfish from Macquarie Island","volume":"10","author":"Whitley","year":"1941","journal-title":"Aust.
+        Zool."},{"key":"10.1029\/AR035:whit43","first-page":"167","article-title":"Ichthyological
+        notes and illustrations. 2","volume":"10","author":"Whitley","year":"1943","journal-title":"Aust.
+        Zool."},{"issue":"3","key":"10.1029\/AR035:whit53","doi-asserted-by":"crossref","first-page":"133","DOI":"10.3853\/j.0067-1975.23.1953.627","article-title":"Studies
+        in Ichthyology. 16","volume":"23","author":"Whitley","year":"1953","journal-title":"Rec.
+        Aust. Mus."},{"key":"10.1029\/AR035:wisn63","doi-asserted-by":"crossref","first-page":"24","DOI":"10.2307\/1441270","article-title":"A
+        new genus and species of myctophid fish from the south-central Pacific Ocean,
+        with notes on related genera and the designation of a new tribe, Electronic","volume":"I","author":"Wisner","year":"1963","journal-title":"Copeia"},{"key":"10.1029\/AR035:wisn71","doi-asserted-by":"crossref","first-page":"39","DOI":"10.2307\/1441597","article-title":"Descriptions
+        of eight new species of myctophid fishes from the eastern Pacific Ocean","volume":"I","author":"Wisner","year":"1971","journal-title":"Copeia"},{"key":"10.1029\/AR035:woos70","first-page":"60","article-title":"Eastern
+        boundary currents in South Pacific","author":"Wooster","year":"1970"},{"issue":"3","key":"10.1029\/AR035:woos61","first-page":"212","article-title":"The
+        Peru-Chile undercurrent","volume":"19","author":"Wooster","year":"1961","journal-title":"J.
+        Mar. Res."},{"key":"10.1029\/AR035:woos63","first-page":"253","article-title":"Eastern
+        boundary currents","volume-title":"The sea","volume":"2","author":"Wooster","year":"1963"},{"key":"10.1029\/AR035:wust36","article-title":"Schichtung
+        and Zikulation des Atlantischen Ozeans. Dt. Atlant. Exped. Meteor 1925\u20131927","author":"W\u00fcst","year":"1936"},{"issue":"4","key":"10.1029\/AR035:wyrt60a","doi-asserted-by":"crossref","first-page":"153","DOI":"10.1007\/BF02226197","article-title":"The
+        antarctic circumpolar current and the antarctic polar front","volume":"13","author":"Wyrtki","year":"1960","journal-title":"Dt.
+        Hydrogr. Z."},{"key":"10.1029\/AR035:wyrt60b","first-page":"1","article-title":"Surface
+        circulation in the Coral and Tasman sea","author":"Wyrtki","year":"1960"},{"issue":"4","key":"10.1029\/AR035:wyrt63","first-page":"313","article-title":"The
+        horizontal and vertical field of motion in the Peru Current","volume":"8","author":"Wyrtki","year":"1963","journal-title":"Bull.
+        Scripps Inst. Oceanogr."},{"key":"10.1029\/AR035:wyrt67","first-page":"117","article-title":"Circulation
+        and water masses in the eastern equatorial Pacific Ocean","volume":"2","author":"Wyrtki","year":"1967","journal-title":"Int.
+        J. Oceanogr. Limnol."},{"key":"10.1029\/AR035:zugm11","first-page":"1","article-title":"Diagnoses
+        des poissons nouveaux provenant des campganes du yacht Princess Alice 1901-1910","volume":"193","author":"Zugmayer","year":"1911","journal-title":"Bull.
+        Inst. Oceanogr. Monaco"}],"container-title":["Antarctic Research Series"],"original-title":[],"link":[{"URL":"http:\/\/onlinelibrary.wiley.com\/wol1\/doi\/10.1029\/AR035\/fullpdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,12,4]],"date-time":"2021-12-04T00:09:54Z","timestamp":1638576594000},"score":1,"resource":{"primary":{"URL":"http:\/\/doi.wiley.com\/10.1029\/AR035"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[1982]]},"ISBN":["0875901816"],"references-count":242,"URL":"http:\/\/dx.doi.org\/10.1029\/ar035","relation":{},"ISSN":["0066-4634"],"issn-type":[{"value":"0066-4634","type":"print"}],"published":{"date-parts":[[1982]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:17 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1029
@@ -69,30 +552,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:58 GMT
+      - Sun, 12 Mar 2023 19:21:17 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lkUzuV9tNcgva3Lybtu2zXilhyYAqAklghT7%2BFVMuyUt4Uh3jbQqmgBtZbbuz87PKgykZIcpjVRzMnRfXhqMhYD9%2BLbYY8X8F3vsI8bkf1sj71eU7xyPh%2B21unhXxqbS39x0A3E%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=q1cCE74DSqCYKWlndRNOZwI05BaL9iGONH240a4jR7vDyHoc28Yn1cMITK4%2BJwYsJ%2B9VxjD4ErKLMG8%2FLUxdsIkia5zO9j13WcQraKZubZs%2FEObBbviodxCaH2fuFEIePTcP%2FnQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -100,72 +583,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a62517adf79b93c-AMS
+      - 7a6e663de8b7b743-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9QwMjSyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsAVc8IdjYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:58 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1029/ar035
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:46 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '14544'
-      Set-Cookie:
-      - AWSALB=CR1K6VlRJFpOhdpqFmdnztlsZoCI3m74rB5YsUUADnLO0RK3KAkRVloJMZxS5hCG2fTOM41zCk//TkGJE02SGkw7CPObhyC80sfZj47/YS2po4wjpU0bDxo419cm;
-        Expires=Sat, 18 Mar 2023 08:54:46 GMT; Path=/, AWSALBCORS=CR1K6VlRJFpOhdpqFmdnztlsZoCI3m74rB5YsUUADnLO0RK3KAkRVloJMZxS5hCG2fTOM41zCk//TkGJE02SGkw7CPObhyC80sfZj47/YS2po4wjpU0bDxo419cm;
-        Expires=Sat, 18 Mar 2023 08:54:46 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:46 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.1029",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:17 GMT
 recorded_with: VCR 6.1.0

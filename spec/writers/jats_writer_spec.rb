@@ -7,7 +7,7 @@ describe Briard::Metadata, vcr: true do
     it 'with data citation' do
       input = '10.7554/eLife.01567'
       subject = described_class.new(input: input, from: 'crossref')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('journal')
       expect(jats['article_title']).to eq('Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
       expect(jats['source']).to eq('eLife')
@@ -22,7 +22,7 @@ describe Briard::Metadata, vcr: true do
     it 'with ORCID ID' do
       input = 'https://doi.org/10.1155/2012/291294'
       subject = described_class.new(input: input, from: 'crossref')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('journal')
       expect(jats['article_title']).to eq('Delineating a Retesting Zone Using Receiver Operating Characteristic Analysis on Serial QuantiFERON Tuberculosis Test Results in US Healthcare Workers')
       expect(jats['source']).to eq('Pulmonary Medicine')
@@ -35,9 +35,9 @@ describe Briard::Metadata, vcr: true do
     it 'with editor' do
       input = 'https://doi.org/10.1371/journal.pone.0000030'
       subject = described_class.new(input: input, from: 'crossref')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('journal')
-      expect(jats['article_title']).to eq('Triose Phosphate Isomerase Deficiency Is Caused by Altered Dimerization???Not Catalytic Inactivity???of the Mutant Enzymes')
+      expect(jats['article_title']).to eq('Triose Phosphate Isomerase Deficiency Is Caused by Altered Dimerization–Not Catalytic Inactivity–of the Mutant Enzymes')
       expect(jats['source']).to eq('PLoS ONE')
       expect(jats.dig('person_group', 0, 'name').length).to eq(5)
       expect(jats.dig('person_group', 0,
@@ -55,10 +55,10 @@ describe Briard::Metadata, vcr: true do
     it 'book chapter' do
       input = 'https://doi.org/10.5005/jp/books/12414_3'
       subject = described_class.new(input: input, from: 'crossref')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('chapter')
       expect(jats['chapter_title']).to eq('Physical Examinations')
-      expect(jats['source']).to eq('Jaypee Brothers Medical Publishing')
+      expect(jats['source']).to eq('Jaypee Brothers Medical Publishers (P) Ltd.')
       expect(jats.dig('person_group', 'name')).to eq('surname' => 'Saha', 'given_names' => 'Ashis')
       expect(jats['year']).to eq('iso_8601_date' => '2015', '__content__' => '2015')
       expect(jats['fpage']).to eq('27')
@@ -70,7 +70,7 @@ describe Briard::Metadata, vcr: true do
     it 'Crossref DOI' do
       input = "#{fixture_path}crossref.bib"
       subject = described_class.new(input: input, from: 'bibtex')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('journal')
       expect(jats['article_title']).to eq('Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
       expect(jats['source']).to eq('eLife')
@@ -85,7 +85,7 @@ describe Briard::Metadata, vcr: true do
     it 'BlogPosting Citeproc JSON' do
       input = "#{fixture_path}citeproc.json"
       subject = described_class.new(input: input, from: 'csl')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type'].nil?).to be(true)
       expect(jats['source']).to eq('Eating your own Dog Food')
       expect(jats['publisher_name']).to eq('DataCite')
@@ -100,7 +100,7 @@ describe Briard::Metadata, vcr: true do
     it 'rdataone' do
       input = "#{fixture_path}codemeta.json"
       subject = described_class.new(input: input, from: 'codemeta')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('software')
       expect(jats['source']).to eq('R Interface to the DataONE REST API')
       expect(jats['publisher_name']).to eq('https://cran.r-project.org')
@@ -117,7 +117,7 @@ describe Briard::Metadata, vcr: true do
     it 'maremma' do
       input = 'https://github.com/datacite/maremma'
       subject = described_class.new(input: input, from: 'codemeta')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('software')
       expect(jats['source']).to eq('Maremma: a Ruby library for simplified network calls')
       expect(jats['publisher_name']).to eq('DataCite')
@@ -132,7 +132,7 @@ describe Briard::Metadata, vcr: true do
     it 'Text pass-thru' do
       input = 'https://doi.org/10.23640/07243.5153971'
       subject = described_class.new(input: input, from: 'datacite')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('journal')
       expect(jats['article_title']).to eq('Recommendation of: ORCID Works Metadata Working Group')
       expect(jats['source']).to eq('Figshare')
@@ -147,7 +147,7 @@ describe Briard::Metadata, vcr: true do
     it 'Dataset in schema 4.0' do
       input = 'https://doi.org/10.5061/DRYAD.8515'
       subject = described_class.new(input: input, from: 'datacite', regenerate: true)
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('data')
       expect(jats['data_title']).to eq('Data from: A new malaria agent in African hominids.')
       expect(jats['source']).to eq('Dryad')
@@ -161,7 +161,7 @@ describe Briard::Metadata, vcr: true do
     it 'from schema_org' do
       input = 'https://blog.front-matter.io/posts/eating-your-own-dog-food/'
       subject = described_class.new(input: input, from: 'schema_org')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('journal')
       expect(jats['article_title']).to eq('Eating your own Dog Food')
       expect(jats['source']).to eq('Front Matter')
@@ -178,7 +178,7 @@ describe Briard::Metadata, vcr: true do
     it 'interactive resource without dates' do
       input = 'https://doi.org/10.34747/g6yb-3412'
       subject = described_class.new(input: input, from: 'datacite')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type'].nil?).to be(true)
       expect(jats['source']).to eq('Exploring the "Many analysts, one dataset" project from COS')
       expect(jats['publisher_name']).to eq('Gigantum, Inc.')
@@ -194,7 +194,7 @@ describe Briard::Metadata, vcr: true do
     it 'with data citation' do
       input = '10.7554/eLife.01567'
       subject = described_class.new(input: input, from: 'crossref')
-      jats = Maremma.from_xml(subject.jats).fetch('element_citation', {})
+      jats = XmlHasher.parse(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('journal')
       expect(jats['article_title']).to eq('Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
       expect(jats['source']).to eq('eLife')

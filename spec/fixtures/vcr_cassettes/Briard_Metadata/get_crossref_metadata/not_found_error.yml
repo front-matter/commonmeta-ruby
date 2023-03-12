@@ -2,130 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.7554/elife.01567x/transform/application/vnd.crossref.unixsd+xml
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 404
-      message: Not Found
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:09:52 GMT
-      Content-Type:
-      - text/plain;charset=utf-8
-      Set-Cookie:
-      - AWSALB=LaA+4tjjjAIxXNZwk5QW2iAUKRg4UDRAufOCjWuf+7SiRF011dgc2X9sQiPMoXPaIAQ6ZnpCBZtBboh83LVTEXlyY5r4dbQtQ0fnrDXv0GzLHKwGE9HjYxv7psP5;
-        Expires=Sat, 18 Mar 2023 08:09:52 GMT; Path=/, AWSALBCORS=LaA+4tjjjAIxXNZwk5QW2iAUKRg4UDRAufOCjWuf+7SiRF011dgc2X9sQiPMoXPaIAQ6ZnpCBZtBboh83LVTEXlyY5r4dbQtQ0fnrDXv0GzLHKwGE9HjYxv7psP5;
-        Expires=Sat, 18 Mar 2023 08:09:52 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: Resource not found.
-  recorded_at: Sat, 11 Mar 2023 08:09:52 GMT
-- request:
-    method: get
-    uri: https://doi.org/ra/10.7554
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:09:53 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Connection:
-      - keep-alive
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=qtMplgVWFcvkI%2FF8B1pNCBmpDZtH%2BrBxYBDCeOPAS6MMFLUNP9KbFSd8XokHtJJFJlZmaMxwMASyilsVfX%2FHB0DKuCS25Gfd0205wef8GJaBKG7hp36uLB4jICRqGUx6opxxZJg%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7a62515a88da1c98-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9c1NTEyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA4VlVnTYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:53 GMT
-- request:
-    method: get
     uri: https://api.crossref.org/works/10.7554/elife.01567x
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 404
       message: Not Found
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:54:25 GMT
+      - Sun, 12 Mar 2023 19:21:15 GMT
       Content-Type:
       - application/json
-      Set-Cookie:
-      - AWSALB=MzrM8pO/gY2lhGctQ17L01SN6Pw9hAzuN2JdrL3h1+zW+aFxIV7r/wPIfH0lnrPwxZq1CJiMbH2dFOatMADemAw1FKDs/SpCusm1VOkor73ZsJrrAzkj9rlXFL0r;
-        Expires=Sat, 18 Mar 2023 08:54:25 GMT; Path=/, AWSALBCORS=MzrM8pO/gY2lhGctQ17L01SN6Pw9hAzuN2JdrL3h1+zW+aFxIV7r/wPIfH0lnrPwxZq1CJiMbH2dFOatMADemAw1FKDs/SpCusm1VOkor73ZsJrrAzkj9rlXFL0r;
-        Expires=Sat, 18 Mar 2023 08:54:25 GMT; Path=/; SameSite=None
+      Transfer-Encoding:
+      - chunked
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -140,7 +38,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -150,7 +48,7 @@ http_interactions:
       Connection:
       - close
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: Resource not found.
-  recorded_at: Sat, 11 Mar 2023 08:54:25 GMT
+  recorded_at: Sun, 12 Mar 2023 19:21:16 GMT
 recorded_with: VCR 6.1.0

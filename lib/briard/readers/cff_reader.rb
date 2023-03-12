@@ -7,10 +7,16 @@ module Briard
         return { 'string' => nil, 'state' => 'not_found' } unless id.present?
 
         id = normalize_id(id)
-        response = Maremma.get(github_as_cff_url(id), accept: 'json', raw: true)
-        data = response.body.fetch('data', nil)
+        url = github_as_cff_url(id)
+        conn = Faraday.new(url, request: { timeout: 5 }) do |f|
+          f.request :gzip
+          # f.request :json
+          # f.response :json
+        end
+        response = conn.get(url)
+        # body = JSON.parse(response.body)
         # Dates are parsed to date object, need to convert to iso8601 later
-        string = Psych.safe_load(data, permitted_classes: [Date])
+        string = Psych.safe_load(response.body, permitted_classes: [Date])
         { 'string' => string }
       end
 

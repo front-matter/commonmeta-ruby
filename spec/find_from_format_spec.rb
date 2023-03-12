@@ -112,12 +112,6 @@ describe Briard::CLI do
       expect(subject.find_from_format_by_string(string)).to eq('crossref')
     end
 
-
-    it 'datacite_xml' do
-      string = File.read("#{fixture_path}datacite.xml").strip
-      expect(subject.find_from_format_by_string(string)).to eq('datacite_xml')
-    end
-
     it 'codemeta' do
       string = File.read("#{fixture_path}codemeta.json").strip
       expect(subject.find_from_format_by_string(string)).to eq('codemeta')

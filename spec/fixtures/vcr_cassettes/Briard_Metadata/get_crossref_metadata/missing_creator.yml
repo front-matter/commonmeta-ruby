@@ -2,36 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.3390/publications6020015/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.3390/publications6020015
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:53 GMT
+      - Sun, 12 Mar 2023 19:21:13 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '2965'
-      Set-Cookie:
-      - AWSALB=o0D0cchEfhNUpxpgpqmeLG9BR/VPI8yIKO+llqsnAcPLSzfLvIij56XaMkOiWKLEEpu5MQu8uIGHJjPxsc2+Gco/HeNatP/6VCw/UQ+IFpjBbJe6/2XpWDZHjMpZ;
-        Expires=Sat, 18 Mar 2023 08:09:53 GMT; Path=/, AWSALBCORS=o0D0cchEfhNUpxpgpqmeLG9BR/VPI8yIKO+llqsnAcPLSzfLvIij56XaMkOiWKLEEpu5MQu8uIGHJjPxsc2+Gco/HeNatP/6VCw/UQ+IFpjBbJe6/2XpWDZHjMpZ;
-        Expires=Sat, 18 Mar 2023 08:09:53 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.3390/publications6020015>; rel="canonical", <https://www.mdpi.com/2304-6775/6/2/15/pdf>;
-        version="vor"; rel="item", <https://creativecommons.org/licenses/by/4.0/>;
-        version="vor"; rel="license", <http://orcid.org/0000-0002-3836-8885>; title="Alexander
-        Kohls"; rel="author", <http://orcid.org/0000-0003-0762-2235>; title="Salvatore
-        Mele"; rel="author"
+      - '6116'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -41,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -50,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -61,9 +51,45 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:53 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,3,29]],"date-time":"2022-03-29T20:40:55Z","timestamp":1648586455265},"reference-count":23,"publisher":"MDPI
+        AG","issue":"2","license":[{"start":{"date-parts":[[2018,4,9]],"date-time":"2018-04-09T00:00:00Z","timestamp":1523232000000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Publications"],"abstract":"<jats:p>Gigantic
+        particle accelerators, incredibly complex detectors, an antimatter factory
+        and the discovery of the Higgs boson\u2014this is part of what makes CERN
+        famous. Only a few know that CERN also hosts the world largest Open Access
+        initiative: SCOAP3. The Sponsoring Consortium for Open Access Publishing in
+        Particle Physics started operation in 2014 and has since supported the publication
+        of 20,000 Open Access articles in the field of particle physics, at no direct
+        cost, nor burden, for individual authors worldwide. SCOAP3 is made possible
+        by a 3000-institute strong partnership, where libraries re-direct funds previously
+        used for subscriptions to \u2018flip\u2019 articles to \u2018Gold Open Access\u2019.
+        With its recent expansion, the initiative now covers about 90% of the journal
+        literature of the field. This article describes the economic principles of
+        SCOAP3, the collaborative approach of the partnership, and finally summarizes
+        financial results after four years of successful operation.<\/jats:p>","DOI":"10.3390\/publications6020015","type":"journal-article","created":{"date-parts":[[2018,4,10]],"date-time":"2018-04-10T17:06:08Z","timestamp":1523379968000},"page":"15","source":"Crossref","is-referenced-by-count":2,"title":["Converting
+        the Literature of a Scientific Field to Open Access through Global Collaboration:
+        The Experience of SCOAP3 in Particle Physics"],"prefix":"10.3390","volume":"6","author":[{"ORCID":"http:\/\/orcid.org\/0000-0002-3836-8885","authenticated-orcid":false,"given":"Alexander","family":"Kohls","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-0762-2235","authenticated-orcid":false,"given":"Salvatore","family":"Mele","sequence":"additional","affiliation":[]}],"member":"1968","published-online":{"date-parts":[[2018,4,9]]},"reference":[{"key":"ref1","unstructured":"CERN
+        Convention for the Establishment of a European Organization for Nuclear Researchhttps:\/\/council.web.cern.ch\/en\/content\/convention-establishment-european-organization-nuclear-research"},{"key":"ref2","unstructured":"CERN
+        Member Stateshttp:\/\/www.webcitation.org\/6xNGDH2oU"},{"key":"ref3","unstructured":"CERN
+        Distribution of all CERN Users by Location of Institutes on 5 July 2017https:\/\/cds.cern.ch\/record\/2290407"},{"key":"ref4","doi-asserted-by":"publisher","DOI":"10.3233\/ISU-2008-0570"},{"key":"ref5","unstructured":"Communication
+        Patterns in High-Energy Physicshttp:\/\/webzine.web.cern.ch\/webzine\/6\/papers\/1\/index.html"},{"key":"ref6","doi-asserted-by":"publisher","DOI":"10.1038\/nphys3862"},{"key":"ref7","unstructured":"Information
+        Management: A Proposalhttps:\/\/cds.cern.ch\/record\/369245"},{"key":"ref8","series-title":"Open
+        Access","first-page":"1","article-title":"What is Open Access","author":"Suber","year":"2012"},{"key":"ref9","doi-asserted-by":"publisher","DOI":"10.1007\/s11192-009-0111-1"},{"key":"ref10","unstructured":"Towards
+        Open Access Publishing in High Energy Physics: Report of the SCOAP3 Working
+        Partyhttps:\/\/scoap3.org\/files\/Working_Party_Report.pdf"},{"key":"ref11","unstructured":"SCOAP3
+        Invitation to Tender\u2014Technical Specificationhttps:\/\/scoap3.org\/files\/Technical_Specification.pdf"},{"key":"ref12","unstructured":"RCUK
+        Policy on Open Accesshttp:\/\/www.rcuk.ac.uk\/documents\/documents\/rcukopenaccesspolicy-pdf\/"},{"key":"ref13","unstructured":"FWF
+        Open Access Policyhttp:\/\/www.webcitation.org\/6xNFwtASf"},{"key":"ref14","unstructured":"Quantitative
+        Study of the Geographical Distribution of the Authorship of High-Energy Physics
+        Journalshttps:\/\/cds.cern.ch\/record\/1033099"},{"key":"ref15","unstructured":"SCOAP3
+        Participating Countrieshttp:\/\/www.webcitation.org\/6xNFlBz9R"},{"key":"ref16","unstructured":"What
+        is SCOAP3: Governancehttp:\/\/www.webcitation.org\/6xNFpARKE"},{"key":"ref17","doi-asserted-by":"publisher","DOI":"10.2314\/CERN\/C26P.W9DT"},{"key":"ref18","unstructured":"SCOAP3
+        Phase 1 Journalshttp:\/\/www.webcitation.org\/6xNG2CUt1"},{"key":"ref19","doi-asserted-by":"publisher","DOI":"10.4119\/UNIBI\/UB.2014.18"},{"key":"ref20","unstructured":"Article
+        Processing Charges (APCs) and Subscriptions\u2014Monitoring Open Access Costshttps:\/\/www.jisc.ac.uk\/sites\/default\/files\/apc-and-subscriptions-report.pdf"},{"key":"ref21","unstructured":"SCOAP3
+        Forum 2017 Presentationhttps:\/\/scoap3.org\/wp-content\/uploads\/2017\/12\/Webinar-Dec-2017.pdf"},{"key":"ref22","unstructured":"InspireHEPhttp:\/\/inspirehep.net\/?ln=en"},{"key":"ref23","unstructured":"SCOAP3
+        News: APS Joins SCOAP3http:\/\/www.webcitation.org\/6xNFQb5iD"}],"container-title":["Publications"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/www.mdpi.com\/2304-6775\/6\/2\/15\/pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,7,22]],"date-time":"2021-07-22T10:05:05Z","timestamp":1626948305000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.mdpi.com\/2304-6775\/6\/2\/15"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2018,4,9]]},"references-count":23,"journal-issue":{"issue":"2","published-online":{"date-parts":[[2018,6]]}},"alternative-id":["publications6020015"],"URL":"http:\/\/dx.doi.org\/10.3390\/publications6020015","relation":{},"ISSN":["2304-6775"],"issn-type":[{"value":"2304-6775","type":"electronic"}],"subject":["Computer
+        Science Applications","Media Technology","Communication","Business and International
+        Management","Library and Information Sciences"],"published":{"date-parts":[[2018,4,9]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:13 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.3390
@@ -72,30 +98,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:54 GMT
+      - Sun, 12 Mar 2023 19:21:13 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=r4KZx33dAES0kbPIq%2FvbU0BkZK6xUqKg1HEUcZ3ld%2FdkFxHHXbTy53xCV324vhCqlB%2BViiVoSXrjPWeEuAlAGrhBPc879JQ999BsUw5%2B7iDg74dNCVjJC2zXKgV0ZFjcREZ9HY4%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=heM8HehRhXNJ08fpgm2Q1HgHoggXL5osTZvJDTAmppWkIq4DRoVdr6ttf%2Fnw4ZKQmCiVEzLnGkiiQJ5GbfddUAka9KatM691CffBRzeswkofLH2sSly2c07kELpCcmzRR7Zs9bY%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -103,72 +129,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a62516049491cba-AMS
+      - 7a6e6621bb171ed2-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9Y2NLAyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA/mTzsjYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:54 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.3390/publications6020015
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:38 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '2549'
-      Set-Cookie:
-      - AWSALB=UWuHEKv31Ijk+wt2ldwRI0lr0YB0CfcZQXXsiiT6HJL3v7c3jELZkDqCNutDEj4qO6nc4ZrmVmhm/MZY6VO5xKPg/yxUyStlz7A83TaZi09thlK+kynTDJO9vi5p;
-        Expires=Sat, 18 Mar 2023 08:54:38 GMT; Path=/, AWSALBCORS=UWuHEKv31Ijk+wt2ldwRI0lr0YB0CfcZQXXsiiT6HJL3v7c3jELZkDqCNutDEj4qO6nc4ZrmVmhm/MZY6VO5xKPg/yxUyStlz7A83TaZi09thlK+kynTDJO9vi5p;
-        Expires=Sat, 18 Mar 2023 08:54:38 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:54:38 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.3390",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:13 GMT
 recorded_with: VCR 6.1.0

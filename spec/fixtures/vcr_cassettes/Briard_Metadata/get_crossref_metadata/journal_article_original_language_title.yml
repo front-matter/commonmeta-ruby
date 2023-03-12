@@ -2,33 +2,28 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.7600/jspfsm.56.60/transform/application/vnd.crossref.unixsd+xml
+    uri: https://api.crossref.org/works/10.7600/jspfsm.56.60
     body:
       encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/xml;charset=utf-8
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:46 GMT
+      - Sun, 12 Mar 2023 19:21:03 GMT
+      Content-Type:
+      - application/json
       Content-Length:
-      - '1521'
-      Set-Cookie:
-      - AWSALB=P0N2/mNdd2gz+1r1tnWQOL6XA7PM3fSDSlMfLcRlela6FxDgUH0h8i4d1FYXz+zz2y/GlMeihmulA9AK6IT4IX4taoaWD/UFgY4ubB5gytdQwRkOT94O4t/blexr;
-        Expires=Sat, 18 Mar 2023 08:09:46 GMT; Path=/, AWSALBCORS=P0N2/mNdd2gz+1r1tnWQOL6XA7PM3fSDSlMfLcRlela6FxDgUH0h8i4d1FYXz+zz2y/GlMeihmulA9AK6IT4IX4taoaWD/UFgY4ubB5gytdQwRkOT94O4t/blexr;
-        Expires=Sat, 18 Mar 2023 08:09:46 GMT; Path=/; SameSite=None
-      Link:
-      - <http://dx.doi.org/10.7600/jspfsm.56.60>; rel="canonical", <https://www.jstage.jst.go.jp/article/jspfsm/56/1/56_1_60/_pdf>;
-        version="vor"; rel="item"
+      - '2869'
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -38,8 +33,6 @@ http_interactions:
       - "*"
       Vary:
       - Accept-Encoding
-      Content-Encoding:
-      - gzip
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -47,7 +40,7 @@ http_interactions:
       X-Ratelimit-Interval:
       - 1s
       X-Api-Pool:
-      - polite
+      - public
       X-Rate-Limit-Limit:
       - '50'
       X-Rate-Limit-Interval:
@@ -58,9 +51,19 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        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
-  recorded_at: Sat, 11 Mar 2023 08:09:46 GMT
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,4,3]],"date-time":"2022-04-03T07:37:27Z","timestamp":1648971447572},"reference-count":7,"publisher":"The
+        Japanese Society of Physical Fitness and Sports Medicine","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Tairyoku
+        Kagaku","Jpn. J. Phys. Fitness Sports Med."],"published-print":{"date-parts":[[2007]]},"DOI":"10.7600\/jspfsm.56.60","type":"journal-article","created":{"date-parts":[[2012,8,30]],"date-time":"2012-08-30T04:10:55Z","timestamp":1346299855000},"page":"60-60","source":"Crossref","is-referenced-by-count":0,"title":[""],"prefix":"10.7600","volume":"56","member":"4426","reference":[{"key":"1","doi-asserted-by":"crossref","unstructured":"Seals
+        DR Esler MD J Physiol. 528 : 407-417, 2000","DOI":"10.1111\/j.1469-7793.2000.00407.x"},{"key":"2","doi-asserted-by":"crossref","unstructured":"Akselrod
+        S et al. Science 213 : 220-222, 1981","DOI":"10.1126\/science.6166045"},{"key":"3","doi-asserted-by":"crossref","unstructured":"Parati
+        G et al. J Hypertens. 18 : 7-19, 2000","DOI":"10.1097\/00004872-200018010-00003"},{"key":"4","doi-asserted-by":"crossref","unstructured":"Yamamoto
+        K et al. MSSE. 33 : 1496-502, 2001","DOI":"10.1097\/00005768-200109000-00012"},{"key":"5","doi-asserted-by":"crossref","unstructured":"Parati
+        G, Bernardi L. J Hypertens. 24 : 1009-1012, 2006","DOI":"10.1097\/01.hjh.0000226186.83192.93"},{"key":"6","doi-asserted-by":"crossref","unstructured":"Miyachi
+        et al. Circulation. 110(18): 2858-2863, 2004","DOI":"10.1161\/01.CIR.0000146380.08401.99"},{"key":"7","doi-asserted-by":"crossref","unstructured":"Cheitlin
+        MD et al. Circulation 95 : 1686-1744, 1997","DOI":"10.1161\/01.CIR.95.6.1686"}],"container-title":["Japanese
+        Journal of Physical Fitness and Sports Medicine"],"original-title":["\u81ea\u5f8b\u795e\u7d4c\u30fb\u5faa\u74b0\u5668\u5fdc\u7b54"],"language":"en","link":[{"URL":"https:\/\/www.jstage.jst.go.jp\/article\/jspfsm\/56\/1\/56_1_60\/_pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,5,20]],"date-time":"2021-05-20T22:32:01Z","timestamp":1621549921000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.jstage.jst.go.jp\/article\/jspfsm\/56\/1\/56_1_60\/_article\/-char\/ja\/"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2007]]},"references-count":7,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2007]]}},"URL":"http:\/\/dx.doi.org\/10.7600\/jspfsm.56.60","relation":{},"ISSN":["0039-906X","1881-4751"],"issn-type":[{"value":"0039-906X","type":"print"},{"value":"1881-4751","type":"electronic"}],"subject":["Physical
+        Therapy, Sports Therapy and Rehabilitation","Orthopedics and Sports Medicine"],"published":{"date-parts":[[2007]]}}}'
+  recorded_at: Sun, 12 Mar 2023 19:21:03 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.7600
@@ -69,30 +72,30 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
+      - Faraday v2.7.4
       Accept-Encoding:
-      - gzip,deflate
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 11 Mar 2023 08:09:46 GMT
+      - Sun, 12 Mar 2023 19:21:04 GMT
       Content-Type:
       - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
-      Content-Encoding:
-      - gzip
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=x3L4zHGJaLQN5F6qNYxqY9DssvOLROH5Rbce6kLCUjtq%2BFImYN4oO42%2FiqaTHP0aj0YO8O9Cw6bEyPhiOppOD31RaXiWPvZhDOQmSRM%2FlwWDT%2FlOKvRgwDMmc8emjI6n3QVcHk8%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=CiEDQJcPZvmMp5usnKKMVBKTNZTA78REvbZn1Np3V16bG3wtIV3tHckV4WxrxoXWB9hoR3O2czlVS6obPuPOkeppKHi96JTQev%2BYkZrUv8Ijun8uUJ5izsw35Crp7KM%2B63XL780%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -100,72 +103,17 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6251339c061c92-AMS
+      - 7a6e65e7aa1db740-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAAA4vmUlCoBmIFBSUXf08lKwUlQwM9czMDAyUdiGiQI0jQuSi/uLgoNU0JKFjLFQsA65axkDYAAAA=
-  recorded_at: Sat, 11 Mar 2023 08:09:46 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.7600/jspfsm.56.60
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Mozilla/5.0 (compatible; Maremma/4.9.9; mailto:info@front-matter.io)
-      Accept:
-      - text/html,application/json,application/xml;q=0.9, text/plain;q=0.8,image/png,*/*;q=0.5
-      Accept-Encoding:
-      - gzip,deflate
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sat, 11 Mar 2023 08:54:27 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '1261'
-      Set-Cookie:
-      - AWSALB=T8GmcjiWIQGrdY0PmuOO2KHOwOa9+/25mm64Toeck9TX7AFWMMHNpW/35QEz+KVGrtGt5kUlN48X8GlmN3M6dGKQ/TXt9US9fvso8H2BSWJJDaSLWUmTNQ1n0RS1;
-        Expires=Sat, 18 Mar 2023 08:54:27 GMT; Path=/, AWSALBCORS=T8GmcjiWIQGrdY0PmuOO2KHOwOa9+/25mm64Toeck9TX7AFWMMHNpW/35QEz+KVGrtGt5kUlN48X8GlmN3M6dGKQ/TXt9US9fvso8H2BSWJJDaSLWUmTNQ1n0RS1;
-        Expires=Sat, 18 Mar 2023 08:54:27 GMT; Path=/; SameSite=None
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Vary:
-      - Accept-Encoding
-      Content-Encoding:
-      - gzip
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - polite
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        H4sIAAAAAAAA/61W227jNhD9FUJPLSDSJCVRkt/aZNsmu9ldxCnQNjYCWqJtxrIokFISI8i/dyhfcwM2RfMQS0NydOacufAxcK1sOxcMA7MMwmClnJNzhdt1o8B2b+yx9U5Zp00NC4xQQg8rwfAx0HWpHlTpH0vZKtxI24Lf62tOOQ/jMJpMws1Kq1feubdjGmMaXbF4mCTDhP8DLv0qgFo1wZCJOMvzNE14FmVPYWDVTFlVFwoXpqvbYJiGQdNNK+0WyoLHq4VC57KRtXIKjUyhVbtGZoa+L9ZOF7JCv+kW1hySdYlGjQGA6EKVutC1gi9r5zoPjMFzYepW1S0uzUrqug9q+3QNYRTWOLeSdoktYLW6aHtaZrJyCnC6BbjG3gWcUBYCbitwfB1cSW3XZtmhz3Iulx1857ypCTonPUSyx3fARoLJIcYSN1b7uF9TTNPJBL58+u3MB0BJKigdD25dM3MrkggivFpbVW9NZ2tZYTiti8pHXlgF/t7UjvEwCyP6WjwG4mU4olc0HjIK+r0UL4oFz/MsSSilAK3p8yQQFPdYHIAovOHEcwnK9gLgvcQlnq53MlPveEthzwfs0g+HQOHonam6Hlgi+rRcTfuMiGPu3/dewcNjsFTrrcql0Vg6p2zbfw+sxQFNV4O0XdF21jMTjBSoi04v0SdXKYsuTtH5JrFMRRBkKBqimKY4ZmmIQA8Paq8Ggz9Qg7BY5DhN84j4HYRSOEEegqdwB4p/ENQvS6cqayCbkWqRBCQjyHoIFHEWASLOKeZQfojlGXuOiIvxwG02E8GEoHFyBCT6IJDv0spWo993MM7RH5BscLKGtGaenBSz/A1maJ6OB2CkcZZy7JdZRhnF3hQdAYo/COhvuZIr0xr0eQfpYjT6RFDkaWFxLnBCeY+HvY0nSUXm8YAF3jwexo/wJP+RoBD9qqD6bKnRlxc08dhDozTHzJedxybewMbI4nZBPETOBcsEySKWc5IfsyU+iO5Cr2Wx0DuqTrQtukr6rgbqMfoTy36GZMoSYCQTUQ8tfp5OgvXQTs4ue2iQ6VEGGZ7FYMzzI2jpB6GdLBTUvq59xb2Gh/LEkyYygVkaxz7R8/RdZHlCBPGbg6fJpse/aND76XG+6ZE/PD3AnbF6rn1f3XsbdxlTctwls2w67tI8UfC/jItxF9HZ1NslrKbxlMKzEJm3lLCaTpPYe6xkPe82bVPVEBSwsOw72J+XX8C2aNvGDceD8eD+/p7cQt+dK/9D5obcNuPBtr/vxsB4kEDJM/9zw24EjIebppwdzbrteAD+G1XomQb6D4uH2X9nrO/V3lyCfLJpKqBnMwEDp1e6kla30LwXqljqet5zXarGOP3OjOEsTEL+xozhDNMEivCK82HEh5S9uiBwlsR5ztlmxrjCWDjJfMffDZhHGBcaZvXaP/5fxO13QJTSwkY5HgRPHkE33ck/2V0Ejgz9FeNNDrYDfD+p3NEdZzewtxeUx2c3lR+9HIDzQ/R98OUDgUIkxs4huneuDFZVW2kfwcHZaPTVJza05hznVPwFO1iWMRynCQs28dXbPII0vZNVD/N4+zbJNlh9V9htOvjZb1KVKlpral30OQTc3oLBA9jXJFz5rGzW4a4gt+99jV6qhZzqSrebCMLgm20XpvEl+24R79l8n8enfwHLcPEnNQsAAA==
-  recorded_at: Sat, 11 Mar 2023 08:54:27 GMT
+      string: |-
+        [
+          {
+            "DOI": "10.7600",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 19:21:04 GMT
 recorded_with: VCR 6.1.0
