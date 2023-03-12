@@ -40,7 +40,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ 'title' => 'Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth' }])
       expect(subject.descriptions.first['description']).to start_with('Among various advantages, their small size makes model organisms preferred subjects of investigation.')
       expect(subject.dates).to eq([{ 'date' => '2014', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2014')
+      expect(subject.publication_year).to eq(2014)
       expect(subject.related_identifiers).to eq([{ 'id' => '2050084X',
                                                    'relatedIdentifierType' => 'ISSN', 'relationType' => 'IsPartOf', 'title' => 'eLife', 'type' => 'Periodical' }])
       expect(subject.container).to eq('identifier' => '2050084X', 'title' => 'eLife',
@@ -61,7 +61,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.descriptions.first['description']).to start_with('Designing the climates of cities')
       expect(subject.dates).to eq([{ 'date' => '2018-04-25', 'dateType' => 'Issued' },
                                    { 'date' => '2018-04-25', 'dateType' => 'Created' }])
-      expect(subject.publication_year).to eq('2018')
+      expect(subject.publication_year).to eq(2018)
     end
 
     it 'RIS with Dashes' do

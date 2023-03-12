@@ -39,7 +39,7 @@ module Briard
         if meta.fetch('date-released', nil).present?
           dates << { 'date' => meta.fetch('date-released', nil).iso8601, 'dateType' => 'Issued' }
         end
-        publication_year = meta.fetch('date-released').iso8601[0..3] if meta.fetch('date-released',
+        publication_year = meta.fetch('date-released').iso8601[0..3].to_i if meta.fetch('date-released',
                                                                                    nil).present?
         publisher = url.to_s.starts_with?('https://github.com') ? 'GitHub' : nil
         state = meta.present? || read_options.present? ? 'findable' : 'not_found'

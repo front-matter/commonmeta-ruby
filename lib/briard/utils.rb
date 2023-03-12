@@ -550,7 +550,7 @@ module Briard
 
       begin # try to parse as JSON
         hsh = MultiJson.load(string).to_h
-        if URI.parse(hsh.dig('@context')).host == 'schema.org'
+        if hsh.dig('@context') && URI.parse(hsh.dig('@context')).host == 'schema.org'
           return 'schema_org'
         elsif hsh.dig('schemaVersion').to_s.start_with?('http://datacite.org/schema/kernel')
           return 'datacite'

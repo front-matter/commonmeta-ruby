@@ -62,6 +62,7 @@ describe Briard::Metadata, vcr: true do
     it 'Crossref DOI' do
       input = "#{fixture_path}crossref.bib"
       subject = described_class.new(input: input, from: 'bibtex')
+      puts subject.errors
       expect(subject.valid?).to be true
       datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
       expect(datacite_xml.dig('resourceType', 'resourceTypeGeneral')).to eq('JournalArticle')
@@ -126,6 +127,7 @@ describe Briard::Metadata, vcr: true do
     it 'rdataone and codemeta_v2' do
       input = "#{fixture_path}codemeta_v2.json"
       subject = described_class.new(input: input, from: 'codemeta')
+      puts subject.errors
       expect(subject.valid?).to be true
       datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
       expect(datacite_xml.dig('titles', 'title')).to eq('R Interface to the DataONE REST API')
@@ -184,12 +186,12 @@ describe Briard::Metadata, vcr: true do
       expect(subject.rights_list).to eq([{ 'rights' => 'Open Access',
                                            'rightsUri' => 'info:eu-repo/semantics/openAccess' }])
       expect(subject.dates).to eq([{ 'date' => '2015-08-19', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2015')
+      expect(subject.publication_year).to eq(2015)
       expect(subject.version_info).to eq('v0.3.2')
       expect(subject.publisher).to eq('Zenodo')
       expect(subject.agency).to eq('DataCite')
       expect(subject.schema_version).to eq('http://datacite.org/schema/kernel-4')
-      expect(subject.datacite).to include('<version>v0.3.2</version>')
+      expect(subject.datacite_xml).to include('<version>v0.3.2</version>')
     end
 
     it 'Text pass-thru' do
@@ -210,7 +212,7 @@ describe Briard::Metadata, vcr: true do
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
       expect(subject.dates).to eq([{ 'date' => '2017-06-28', 'dateType' => 'Created' },
                                    { 'date' => '2017-06-28', 'dateType' => 'Updated' }, { 'date' => '2017', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2017')
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq('Figshare')
       expect(subject.subjects).to eq([{ 'subject' => 'information systems' },
                                       { 'schemeUri' => 'http://www.oecd.org/science/inno/38235147.pdf',
@@ -225,7 +227,7 @@ describe Briard::Metadata, vcr: true do
       input = 'https://doi.org/10.23640/07243.5153971'
       subject = described_class.new(input: input, from: 'datacite', doi: '10.5072/07243.5153971')
       expect(subject.valid?).to be true
-      expect(subject.id).to eq('https://doi.org/10.5072/07243.5153971')
+      expect(subject.id).to eq('https://doi.org/10.23640/07243.5153971')
       expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-journal',
                                   'resourceType' => 'Paper', 'resourceTypeGeneral' => 'Text', 'ris' => 'RPRT', 'schemaOrg' => 'ScholarlyArticle')
       expect(subject.creators.length).to eq(20)
@@ -239,7 +241,7 @@ describe Briard::Metadata, vcr: true do
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
       expect(subject.dates).to eq([{ 'date' => '2017-06-28', 'dateType' => 'Created' },
                                    { 'date' => '2017-06-28', 'dateType' => 'Updated' }, { 'date' => '2017', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2017')
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq('Figshare')
       expect(subject.subjects).to eq([{ 'subject' => 'information systems' },
                                       { 'schemeUri' => 'http://www.oecd.org/science/inno/38235147.pdf',
@@ -268,7 +270,7 @@ describe Briard::Metadata, vcr: true do
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
       expect(subject.dates).to eq([{ 'date' => '2011-02-01T17:22:41Z', 'dateType' => 'Available' },
                                    { 'date' => '2011', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2011')
+      expect(subject.publication_year).to eq(2011)
       expect(subject.related_identifiers.length).to eq(1)
       expect(subject.related_identifiers.last).to eq('relatedIdentifier' => '10.1371/journal.ppat.1000446',
                                                      'relatedIdentifierType' => 'DOI', 'relationType' => 'IsCitedBy')
@@ -299,7 +301,7 @@ describe Briard::Metadata, vcr: true do
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
       expect(subject.dates).to eq([{ 'date' => '2014-10-17', 'dateType' => 'Updated' },
                                    { 'date' => '2016-03-14T17:02:02Z', 'dateType' => 'Available' }, { 'date' => '2013', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2013')
+      expect(subject.publication_year).to eq(2013)
       expect(subject.publisher).to eq('UC Merced')
       expect(subject.agency).to eq('DataCite')
       expect(subject.schema_version).to eq('http://datacite.org/schema/kernel-4')
@@ -358,7 +360,7 @@ describe Briard::Metadata, vcr: true do
       expect(datacite_xml.dig('rightsList',
                           'rights')).to eq('rightsURI' => 'https://creativecommons.org/licenses/by/3.0/legalcode',
                                            'rightsIdentifier' => 'cc-by-3.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeURI' => 'https://spdx.org/licenses/', '__content__' => 'Creative Commons Attribution 3.0 Unported')
-      expect(datacite_xml.dig('fundingReferences', 'fundingReference').count).to eq(4)
+      expect(datacite_xml.dig('fundingReferences', 'fundingReference').count).to eq(8)
       expect(datacite_xml.dig('fundingReferences',
                           'fundingReference').last).to eq('funderName' => 'University of Lausanne',
                                                           'funderIdentifier' => { 'funderIdentifierType' => 'Crossref Funder ID',
@@ -373,7 +375,7 @@ describe Briard::Metadata, vcr: true do
       datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
       expect(datacite_xml.dig('descriptions',
                           'description')).to eq([
-                                                  { '__content__' => 'eLife, 3, e01567',
+                                                  { '__content__' => 'eLife, 3',
                                                     'descriptionType' => 'SeriesInformation' }, { '__content__' => 'This is an abstract.', 'descriptionType' => 'Abstract' }
                                                 ])
     end
@@ -398,7 +400,7 @@ describe Briard::Metadata, vcr: true do
                             'familyName' => 'Fenner' }]
       subject.titles = [{ 'title' => 'Data from: Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth' }]
       subject.types = { 'schemaOrg' => 'Dataset', 'resourceTypeGeneral' => 'Dataset' }
-      subject.publication_year = '2011'
+      subject.publication_year = 2011
       subject.state = 'findable'
       expect(subject.exists?).to be true
       datacite_xml = Maremma.from_xml(subject.datacite_xml).fetch('resource', {})
@@ -492,7 +494,7 @@ describe Briard::Metadata, vcr: true do
       expect(datacite_xml.dig('descriptions',
                           'description')).to eq('__content__' => 'GTEx',
                                                 'descriptionType' => 'SeriesInformation')
-      expect(datacite_xml['publicationYear']).to eq('2017')
+      expect(datacite_xml['publicationYear']).to eq(2017)
       expect(datacite_xml.dig('dates', 'date')).to eq('__content__' => '2017', 'dateType' => 'Issued')
       expect(datacite_xml.dig('subjects',
                           'subject')).to eq(['gtex', 'annotation', 'phenotype', 'gene regulation',

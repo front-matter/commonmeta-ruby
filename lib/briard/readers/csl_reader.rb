@@ -58,7 +58,7 @@ module Briard
                   [{ 'date' => date,
                      'dateType' => 'Issued' }]
                 end
-        publication_year = get_date_from_date_parts(meta.fetch('issued', nil)).to_s[0..3]
+        publication_year = get_date_from_date_parts(meta.fetch('issued', nil)).to_s[0..3].to_i
         rights_list = if meta.fetch('copyright', nil)
                         [hsh_to_spdx('rightsURI' => meta.fetch('copyright'))]
                       end

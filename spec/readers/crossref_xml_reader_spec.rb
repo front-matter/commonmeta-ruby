@@ -35,7 +35,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth" }])
       expect(subject.dates).to eq([{ "date" => "2014-02-11", "dateType" => "Issued" },
                                    { "date" => "2022-03-26T09:21:50Z", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2014")
+      expect(subject.publication_year).to eq(2014)
       expect(subject.publisher).to eq("eLife Sciences Publications, Ltd")
       expect(subject.container).to eq("firstPage" => "e01567", "identifier" => "2050-084X",
                                       "identifierType" => "ISSN", "title" => "eLife", "type" => "Journal", "volume" => "3")
@@ -77,7 +77,7 @@ describe Briard::Metadata, vcr: true do
                                            "schemeUri" => "https://spdx.org/licenses/" }])
       expect(subject.dates).to eq([{ "date" => "2006-12-20", "dateType" => "Issued" },
                                    { "date" => "2021-08-06", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2006")
+      expect(subject.publication_year).to eq(2006)
       expect(subject.publisher).to eq("Public Library of Science (PLoS)")
       expect(subject.related_identifiers.length).to eq(68)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "1932-6203",
@@ -108,7 +108,7 @@ describe Briard::Metadata, vcr: true do
                                            "schemeUri" => "https://spdx.org/licenses/" }])
       expect(subject.dates).to eq([{ "date" => "2019-07-02", "dateType" => "Issued" },
                                    { "date" => "2019-09-22", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2019")
+      expect(subject.publication_year).to eq(2019)
       expect(subject.publisher).to eq("Frontiers Media SA")
       expect(subject.funding_references).to eq([{ "awardNumber" => "CA17111",
                                                   "funderIdentifier" => "https://doi.org/10.13039/501100000921", "funderIdentifierType" => "Crossref Funder ID", "funderName" => "COST (European Cooperation in Science and Technology)" }])
@@ -134,7 +134,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators).to eq([{ "name" => ":(unav)", "nameType" => "Organizational" }])
       expect(subject.titles).to eq([{"lang"=>"ja", "title"=>"??????????????????????????????"}])
       expect(subject.dates).to include({ "date" => "2007", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2007")
+      expect(subject.publication_year).to eq(2007)
       expect(subject.publisher).to eq("The Japanese Society of Physical Fitness and Sports Medicine")
       expect(subject.related_identifiers.length).to eq(8)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "1881-4751",
@@ -158,7 +158,7 @@ describe Briard::Metadata, vcr: true do
         "name" => "Mesquita-Joanes, Francesc")
       expect(subject.titles).to eq([{ "title" => "Global distribution of Fabaeformiscandona subacuta: an??exotic??invasive Ostracoda on the Iberian Peninsula?" }])
       expect(subject.dates).to include({ "date" => "2012-01-01", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2012")
+      expect(subject.publication_year).to eq(2012)
       expect(subject.publisher).to eq("Oxford University Press (OUP)")
       expect(subject.related_identifiers.length).to eq(44)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "1937-240X",
@@ -184,7 +184,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Human Body Orientation Estimation in Multiview Scenarios" }])
       expect(subject.dates).to eq([{ "date" => "2012", "dateType" => "Issued" },
                                    { "date" => "2020-11-24", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2012")
+      expect(subject.publication_year).to eq(2012)
       expect(subject.publisher).to eq("Springer Science and Business Media LLC")
       expect(subject.related_identifiers.length).to eq(7)
       expect(subject.related_identifiers.first).to eq(
@@ -211,7 +211,7 @@ describe Briard::Metadata, vcr: true do
                                            "identifierType" => "pisa" }])
       expect(subject.descriptions.first["description"]).to start_with("This article presents a practical roadmap")
       expect(subject.dates).to include({ "date" => "2017-10-09", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2017")
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq("Cold Spring Harbor Laboratory")
       expect(subject.agency).to eq("Crossref")
     end
@@ -234,7 +234,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.identifiers.empty?).to be(true)
       expect(subject.descriptions.empty?).to be(true)
       expect(subject.dates).to include({ "date" => "2020-05-19", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2020")
+      expect(subject.publication_year).to eq(2020)
       expect(subject.publisher).to eq("eLife Sciences Publications, Ltd")
       expect(subject.agency).to eq("Crossref")
     end
@@ -258,7 +258,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.identifiers.empty?).to be(true)
       expect(subject.descriptions.empty?).to be(true)
       expect(subject.dates).to eq([{ "date" => "2020-06-08", "dateType" => "Issued" }, { "date" => "2020-06-08", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2020")
+      expect(subject.publication_year).to eq(2020)
       expect(subject.publisher).to eq("University of Queensland Library")
       expect(subject.agency).to eq("Crossref")
     end
@@ -279,7 +279,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "THE IMPACT OF PARASITE MANIPULATION AND PREDATOR FORAGING BEHAVIOR ON PREDATOR???PREY COMMUNITIES" }])
       expect(subject.dates).to eq([{ "date" => "2006-11", "dateType" => "Issued" },
                                    { "date" => "2019-04-28", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2006")
+      expect(subject.publication_year).to eq(2006)
       expect(subject.publisher).to eq("Wiley")
       expect(subject.related_identifiers.length).to eq(35)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "0012-9658",
@@ -309,7 +309,7 @@ describe Briard::Metadata, vcr: true do
                                            "schemeUri" => "https://spdx.org/licenses/" }])
       expect(subject.titles).to eq([{ "title" => "Delineating a Retesting Zone Using Receiver Operating Characteristic Analysis on Serial QuantiFERON Tuberculosis Test Results in US Healthcare Workers" }])
       expect(subject.dates).to include({ "date" => "2012", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2012")
+      expect(subject.publication_year).to eq(2012)
       expect(subject.publisher).to eq("Hindawi Limited")
       expect(subject.related_identifiers.length).to eq(18)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "2090-1844",
@@ -336,7 +336,7 @@ describe Briard::Metadata, vcr: true do
                                            "givenName" => "Sarah E.", "familyName" => "Beck")
       expect(subject.titles).to eq([{ "title" => "Paving the path to HIV neurotherapy: Predicting SIV CNS disease" }])
       expect(subject.dates).to include({ "date" => "2015-07", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2015")
+      expect(subject.publication_year).to eq(2015)
       expect(subject.publisher).to eq("Elsevier BV")
       expect(subject.related_identifiers).to eq([{ "relatedIdentifier" => "0014-2999", "relatedIdentifierType" => "ISSN", "relationType" => "IsPartOf", "resourceTypeGeneral" => "Collection" },
                                                  { "relatedIdentifier" => "10.1212/01.wnl.0000287431.88658.8b",
@@ -618,7 +618,7 @@ describe Briard::Metadata, vcr: true do
                                            "name" => "Gross, J B", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Albinism in phylogenetically and geographically distinct populations of Astyanax cavefish arises through the same loss-of-function Oca2 allele" }])
       expect(subject.dates).to include({ "date" => "2013-04-10", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2013")
+      expect(subject.publication_year).to eq(2013)
       expect(subject.publisher).to eq("Springer Science and Business Media LLC")
       expect(subject.related_identifiers.size).to eq(35)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "1365-2540",
@@ -643,7 +643,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.descriptions).to eq([{ "description" => "x-ray diffraction structure",
                                             "descriptionType" => "Other" }])
       expect(subject.dates).to include({ "date" => "1984-07-17", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("1984")
+      expect(subject.publication_year).to eq(1984)
       expect(subject.publisher).to eq("Worldwide Protein Data Bank")
       expect(subject.agency).to eq("Crossref")
     end
@@ -661,7 +661,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.descriptions.empty?).to be(true)
       expect(subject.dates).to eq([{ "date" => "2015-10-20", "dateType" => "Issued" },
                                    { "date" => "2018-10-19", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2015")
+      expect(subject.publication_year).to eq(2015)
       expect(subject.publisher).to eq("Public Library of Science (PLoS)")
       expect(subject.agency).to eq("Crossref")
     end
@@ -681,7 +681,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.descriptions.empty?).to be(true)
       expect(subject.dates).to eq([{ "date" => "2017-08-09", "dateType" => "Issued" },
                                    { "date" => "2021-07-01", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2017")
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq("USDA Forest Service")
       expect(subject.agency).to eq("Crossref")
     end
@@ -699,7 +699,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Clinical Symptoms and Physical Examinations" }])
       expect(subject.dates).to eq([{ "date" => "2015", "dateType" => "Issued" },
                                    { "date" => "2023-02-10", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2015")
+      expect(subject.publication_year).to eq(2015)
       expect(subject.publisher).to eq("Springer Science and Business Media LLC")
       expect(subject.agency).to eq("Crossref")
       expect(subject.container["type"]).to eq("Book")
@@ -722,7 +722,7 @@ describe Briard::Metadata, vcr: true do
                                         "name" => "Jones, Hunter M.", "nameType" => "Personal" }])
       expect(subject.titles).to eq([{ "title" => "Climate Change and Increasing Risk of Extreme Heat" }])
       expect(subject.dates).to include({ "date" => "2018", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("Springer Science and Business Media LLC")
       expect(subject.agency).to eq("Crossref")
       expect(subject.container["type"]).to eq("Book Series")
@@ -744,7 +744,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Unsupervised and Supervised Image Segmentation Using Graph Partitioning" }])
       expect(subject.dates).to eq([{ "date" => "2012-08-08", "dateType" => "Issued" },
                                    { "date" => "2019-07-02", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2012")
+      expect(subject.publication_year).to eq(2012)
       expect(subject.publisher).to eq("IGI Global")
       expect(subject.agency).to eq("Crossref")
       expect(subject.container["type"]).to eq("Book")
@@ -780,7 +780,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Converting the Literature of a Scientific Field to Open Access through Global Collaboration: The Experience of SCOAP3 in Particle Physics" }])
       expect(subject.dates).to eq([{ "date" => "2018-04-09", "dateType" => "Issued" },
                                    { "date" => "2021-07-22", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("MDPI AG")
       expect(subject.agency).to eq("Crossref")
     end
@@ -800,7 +800,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "The Politics of the Past in Early China" }])
       expect(subject.dates).to eq([{ "date" => "2019-07-01", "dateType" => "Issued" },
                                    { "date" => "2022-09-22", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2019")
+      expect(subject.publication_year).to eq(2019)
       expect(subject.publisher).to eq("Cambridge University Press (CUP)")
       expect(subject.agency).to eq("Crossref")
       expect(subject.date_registered).to eq("2019-07-06T10:19:22Z")
@@ -821,7 +821,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Proceedings of the Ocean Drilling Program, 180 Initial Reports" }])
       expect(subject.dates).to eq([{ "date" => "2000-02-04", "dateType" => "Issued" },
                                    { "date" => "2009-02-02", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2000")
+      expect(subject.publication_year).to eq(2000)
       expect(subject.publisher).to eq("International Ocean Discovery Program (IODP)")
       expect(subject.agency).to eq("Crossref")
       expect(subject.date_registered).to eq("2006-10-17T20:17:44Z")
@@ -842,7 +842,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Biogeography of Lanternfishes (Myctophidae) South of 30??S" }])
       expect(subject.dates).to eq([{ "date" => "1982", "dateType" => "Issued" },
                                    { "date" => "2021-12-04", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("1982")
+      expect(subject.publication_year).to eq(1982)
       expect(subject.publisher).to eq("Wiley")
       expect(subject.related_identifiers.length).to eq(46)
       expect(subject.related_identifiers.first).to eq(
@@ -869,7 +869,7 @@ describe Briard::Metadata, vcr: true do
                                            "name" => "Oh, Sohae Eve", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Substitutability between organic and conventional poultry products and organic price premiums" }])
       expect(subject.dates).to include({ "date" => "2018-05", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("Franco Angeli")
       expect(subject.agency).to eq("Crossref")
     end
@@ -890,7 +890,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Synthesis, Crystal Structure and Theoretical Calculation of a Novel Nickel(II) Complex with Dibromotyrosine and 1,10-Phenanthroline" }])
       expect(subject.dates).to eq([{ "date" => "2013-10-20", "dateType" => "Issued" },
                                    { "date" => "2016-12-15", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2013")
+      expect(subject.publication_year).to eq(2013)
       expect(subject.publisher).to eq("Korean Chemical Society")
       expect(subject.agency).to eq("KISTI")
     end
@@ -908,7 +908,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Utilizing the Internet. 12 Series. Future of the Internet." }])
       expect(subject.dates).to eq([{ "date" => "1997", "dateType" => "Issued" },
                                    { "date" => "2020-03-06", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("1997")
+      expect(subject.publication_year).to eq(1997)
       expect(subject.publisher).to eq("Japan Science and Technology Agency (JST)")
       expect(subject.agency).to eq("JaLC")
     end
@@ -925,7 +925,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.first).to eq("familyName" => "Younes", "givenName" => "Maged", "name" => "Younes, Maged", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Scientific opinion on the safety of green tea catechins" }])
       expect(subject.dates).to include({ "date" => "2018-04", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("Wiley")
       expect(subject.agency).to eq("OP")
     end
@@ -944,7 +944,7 @@ describe Briard::Metadata, vcr: true do
                                      { "title" => "Distances, absence, proximit??s et pr??sences??: des concepts en d??placement" }, { "title" => "Distance(s), proximity and presence(s): evolving concepts" },
                                    ])
       expect(subject.dates).to include({ "date" => "2014-12-14", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2014")
+      expect(subject.publication_year).to eq(2014)
       expect(subject.publisher).to eq("OpenEdition")
       expect(subject.agency).to eq("Crossref")
       expect(subject.date_registered.nil?).to be(true)
@@ -981,7 +981,7 @@ describe Briard::Metadata, vcr: true do
                                         "nameType" => "Personal" }])
       expect(subject.titles).to eq([{ "title" => "Finding function: evaluation methods for functional genomic data" }])
       expect(subject.dates).to include({ "date" => "2006-07-25", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2006")
+      expect(subject.publication_year).to eq(2006)
       expect(subject.publisher).to eq("Springer Science and Business Media LLC")
       expect(subject.agency).to eq("Crossref")
       expect(subject.date_registered).to eq("2021-08-31T17:31:49Z")
@@ -1003,7 +1003,7 @@ describe Briard::Metadata, vcr: true do
       )
       expect(subject.titles).to eq([{ "title" => "Sexual conflict and correlated evolution between male persistence and female resistance traits in the seed beetle <i>Callosobruchus maculatus</i>" }])
       expect(subject.dates).to include({ "date" => "2017-05-24", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2017")
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq("The Royal Society")
       expect(subject.agency).to eq("Crossref")
       expect(subject.date_registered).to eq("2021-02-14T10:36:45Z")
@@ -1024,7 +1024,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.rights_list).to eq([{ "rightsUri" => "http://doi.wiley.com/10.1002/tdm_license_1.1" }])
       expect(subject.dates).to eq([{ "date" => "2010-12", "dateType" => "Issued" },
                                    { "date" => "2023-02-09", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2010")
+      expect(subject.publication_year).to eq(2010)
       expect(subject.publisher).to eq("Hindawi Limited")
     end
 
@@ -1049,7 +1049,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Silver-Catalyzed [3+3] Annulation of Glycine Imino Esters with Seyferth???Gilbert Reagent To Access Tetrahydro-1,2,4-triazinecarboxylate Esters" }])
       expect(subject.dates).to eq([{ "date" => "2020-04-08", "dateType" => "Issued" },
                                    { "date" => "2020-06-16", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2020")
+      expect(subject.publication_year).to eq(2020)
       expect(subject.publisher).to eq("Georg Thieme Verlag KG")
     end
 
@@ -1068,7 +1068,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.rights_list).to eq([{ "rightsUri" => "http://doi.wiley.com/10.1002/tdm_license_1.1" },
             { "rightsUri" => "http://onlinelibrary.wiley.com/termsAndConditions#vor" }])
       expect(subject.dates).to include({ "date" => "2018-05", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("Wiley")
       expect(subject.related_identifiers.length).to eq(49)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "0028-646X",
@@ -1093,7 +1093,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.last).to eq("name" => "GTEx Consortium", "nameType" => "Organizational")
       expect(subject.titles).to eq([{ "title" => "The impact of structural variation on human gene expression" }])
       expect(subject.dates).to include({ "date" => "2017-04-03", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2017")
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq("Springer Science and Business Media LLC")
       expect(subject.agency).to eq("Crossref")
       expect(subject.date_registered).to eq("2019-11-02T09:30:06Z")
@@ -1111,7 +1111,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.first).to eq("affiliation" => [{"name"=>"??"}], "familyName" => "Petrovici", "givenName" => "Norbert", "name" => "Petrovici, Norbert", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Workers and the City: Rethinking the Geographies of Power in Post-socialist Urbanisation" }])
       expect(subject.dates).to include({ "date" => "2011-12-22", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2011")
+      expect(subject.publication_year).to eq(2011)
       expect(subject.publisher).to eq("SAGE Publications")
       expect(subject.agency).to eq("Crossref")
       expect(subject.date_registered).to eq("2021-05-16T02:02:38Z")
@@ -1130,7 +1130,7 @@ describe Briard::Metadata, vcr: true do
                                            "name" => "Razib, Ali", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Log-Domain Arithmetic for High-Speed Fuzzy Control on a Field-Programmable Gate Array" }])
       expect(subject.dates).to include({ "date" => "2013", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2013")
+      expect(subject.publication_year).to eq(2013)
       expect(subject.publisher).to eq("Springer Science and Business Media LLC")
       expect(subject.container).to eq("identifier" => "1860-0808", "identifierType" => "ISSN",
                                       "title" => "Studies in Fuzziness and Soft Computing", "type" => "Book Series")
@@ -1151,7 +1151,7 @@ describe Briard::Metadata, vcr: true do
                                            "name" => "Marrazzo, Antimo", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Prediction of a Large-Gap and Switchable Kane-Mele Quantum Spin Hall Insulator" }])
       expect(subject.dates).to include({ "date" => "2018-03-13", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("American Physical Society (APS)")
       expect(subject.container).to eq("firstPage" => "117701", "identifier" => "1079-7114",
                                       "identifierType" => "ISSN", "issue" => "11", "title" => "Physical Review Letters", "type" => "Journal", "volume" => "120")
@@ -1176,7 +1176,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.identifiers.empty?).to be(true)
       expect(subject.descriptions.first["description"]).to start_with("Abstract. During the early last glacial termination")
       expect(subject.dates).to include({ "date" => "2020-07-28", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2020")
+      expect(subject.publication_year).to eq(2020)
       expect(subject.publisher).to eq("Copernicus GmbH")
       expect(subject.agency).to eq("Crossref")
     end
@@ -1199,7 +1199,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.identifiers.empty?).to be(true)
       expect(subject.descriptions.first["description"]).to start_with("This chapter explores the nature of the connections")
       expect(subject.dates).to include({ "date" => "2018-04-05", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("Oxford University Press (OUP)")
       expect(subject.agency).to eq("Crossref")
     end
@@ -1223,7 +1223,7 @@ describe Briard::Metadata, vcr: true do
                                         ])
       expect(subject.descriptions.empty?).to be(true)
       expect(subject.dates).to include({ "date" => "2010-01-01", "dateType" => "Issued" })
-      expect(subject.publication_year).to eq("2010")
+      expect(subject.publication_year).to eq(2010)
       expect(subject.publisher).to eq("Office of Scientific and Technical Information (OSTI)")
       expect(subject.agency).to eq("Crossref")
     end
@@ -1240,7 +1240,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => ":(unav)" }])
       expect(subject.dates).to eq([{ "date" => "2018-10", "dateType" => "Issued" },
                                    { "date" => "2018-10-03", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("Baskent University")
       expect(subject.related_identifiers.length).to eq(2)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "2146-8427",

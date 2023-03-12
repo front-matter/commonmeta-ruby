@@ -51,7 +51,7 @@ module Briard
         dates << { 'date' => meta.fetch('dateModified'), 'dateType' => 'Updated' } if meta.fetch(
           'dateModified', nil
         ).present?
-        publication_year = meta.fetch('datePublished')[0..3] if meta.fetch('datePublished',
+        publication_year = meta.fetch('datePublished')[0..3].to_i if meta.fetch('datePublished',
                                                                            nil).present?
         publisher = meta.fetch('publisher', nil)
         state = meta.present? || read_options.present? ? 'findable' : 'not_found'

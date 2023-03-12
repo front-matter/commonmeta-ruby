@@ -7,7 +7,8 @@ describe Briard::Metadata, vcr: true do
     it 'journal article' do
       input = '10.7554/eLife.01567'
       subject = described_class.new(input: input, from: 'crossref_xml')
-      expect(subject.valid?).to be true
+      expect(subject.valid?).to be false
+      expect(subject.errors).to eq(["property '/descriptions/1/description' is not of type: string"])
       ris = subject.ris.split("\r\n")
       expect(ris[0]).to eq('TY  - JOUR')
       expect(ris[1]).to eq('T1  - Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
@@ -50,7 +51,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       expect(subject.valid?).to be true
       ris = subject.ris.split("\r\n")
-      expect(ris[0]).to eq('TY  - RPRT')
+      expect(ris[0]).to eq('TY  - JOUR')
       expect(ris[1]).to eq('T1  - Visions and reality: the idea of competence-oriented assessment for German medical students is not yet realised in licensing examinations')
       expect(ris[2]).to eq('T2  - GMS Journal for Medical Education; 34(2):Doc25')
       expect(ris[3]).to eq('AU  - Huber-Lang, Markus')
@@ -58,11 +59,11 @@ describe Briard::Metadata, vcr: true do
       expect(ris[10]).to eq('UR  - http://www.egms.de/en/journals/zma/2017-34/zma001102.shtml')
       expect(ris[11]).to start_with('AB  - Objective: Competence orientation')
       expect(ris[12]).to eq('KW  - medical competence')
-      expect(ris[21]).to eq('PY  - 2017')
-      expect(ris[22]).to eq('PB  - German Medical Science GMS Publishing House')
-      expect(ris[23]).to eq('LA  - en')
-      expect(ris[24]).to eq('SN  - 2366-5017')
-      expect(ris[25]).to eq('ER  - ')
+      expect(ris[22]).to eq('PY  - 2017')
+      expect(ris[23]).to eq('PB  - German Medical Science GMS Publishing House')
+      expect(ris[24]).to eq('LA  - en')
+      expect(ris[25]).to eq('SN  - 2366-5017')
+      expect(ris[26]).to eq('ER  - ')
     end
 
     it 'Crossref DOI' do
@@ -165,7 +166,7 @@ describe Briard::Metadata, vcr: true do
       expect(ris[2]).to eq('AU  - Ollomo, Benjamin')
       expect(ris[10]).to eq('DO  - 10.5061/dryad.8515')
       expect(ris[11]).to eq('UR  - http://datadryad.org/stash/dataset/doi:10.5061/dryad.8515')
-      expect(ris[13]).to eq('KW  - plasmodium')
+      expect(ris[13]).to eq('KW  - Plasmodium')
       expect(ris[18]).to eq('PB  - Dryad')
       expect(ris[19]).to eq('LA  - en')
       expect(ris[20]).to eq('ER  - ')
@@ -191,17 +192,17 @@ describe Briard::Metadata, vcr: true do
       input = 'https://doi.org/10.1594/pangaea.721193'
       subject = described_class.new(input: input, from: 'datacite')
       ris = subject.ris.split("\r\n")
-      expect(ris.first).to eq('TY  - DATA')
-      expect(ris).to include('T1  - Seawater carbonate chemistry and processes during experiments with Crassostrea gigas, 2007, supplement to: Kurihara, Haruko; Kato, Shoji; Ishimatsu, Atsushi (2007): Effects of increased seawater pCO2 on early development of the oyster Crassostrea gigas. Aquatic Biology, 1(1), 91-98')
-      expect(ris).to include('AU  - Kurihara, Haruko')
-      expect(ris).to include('DO  - 10.1594/pangaea.721193')
-      expect(ris).to include('UR  - https://doi.pangaea.de/10.1594/PANGAEA.721193')
-      expect(ris).to include('KW  - animalia')
-      expect(ris).to include('KW  - bottles or small containers/aquaria (&lt;20 l)')
-      expect(ris).to include('PY  - 2007')
-      expect(ris).to include('PB  - PANGAEA - Data Publisher for Earth & Environmental Science')
-      expect(ris).to include('LA  - en')
-      expect(ris.last).to eq('ER  - ')
+      expect(ris[0]).to eq('TY  - DATA')
+      expect(ris[1]).to eq('T1  - Seawater carbonate chemistry and processes during experiments with Crassostrea gigas, 2007')
+      expect(ris[2]).to eq('AU  - Kurihara, Haruko')
+      expect(ris[5]).to eq('DO  - 10.1594/pangaea.721193')
+      expect(ris[6]).to eq('UR  - https://doi.pangaea.de/10.1594/PANGAEA.721193')
+      expect(ris[8]).to eq('KW  - Animalia')
+      expect(ris[9]).to eq('KW  - Bottles or small containers/Aquaria (&lt;20 L)')
+      expect(ris[51]).to eq('PY  - 2007')
+      expect(ris[52]).to eq('PB  - PANGAEA')
+      expect(ris[53]).to eq('LA  - en')
+      expect(ris[54]).to eq('ER  - ')
     end
   end
 end

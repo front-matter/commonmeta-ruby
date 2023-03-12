@@ -69,7 +69,6 @@ module Briard
         string = doc.to_xml(indent: 2)
 
         meta = Maremma.from_xml(string).to_h.fetch('resource', {})
-
         # validate only when option is set, as this step is expensive and
         # not needed if XML comes from DataCite MDS
         if options[:validate]
@@ -148,6 +147,8 @@ module Briard
         if meta.fetch('publicationYear', nil).present? && get_date(dates, 'Issued').blank?
           dates << { 'date' => meta.fetch('publicationYear', nil), 'dateType' => 'Issued' }
         end
+        publication_year = parse_attributes(meta.fetch('publicationYear', nil),
+                                                 first: true).to_s.strip.to_i
         sizes = Array.wrap(meta.dig('sizes', 'size')).map do |k|
           if k.blank?
             nil
@@ -313,8 +314,7 @@ module Briard
           'agency' => 'DataCite',
           'funding_references' => funding_references,
           'dates' => dates,
-          'publication_year' => parse_attributes(meta.fetch('publicationYear', nil),
-                                                 first: true).to_s.strip.presence,
+          'publication_year' => publication_year.presence,
           'descriptions' => descriptions,
           'rights_list' => Array.wrap(rights_list),
           'version_info' => meta.fetch('version', nil).to_s.presence,

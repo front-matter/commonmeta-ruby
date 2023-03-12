@@ -164,7 +164,7 @@ module Briard
         date_updated['date'] = get_iso8601_date(date_updated['date']) if date_updated.present?
 
         dates = [date_published, date_updated].compact
-        publication_year = date_published.to_h.fetch('date', '')[0..3].presence
+        publication_year = date_published.to_h.fetch('date', '')[0..3].to_i.presence
 
         state = meta.present? || read_options.present? ? 'findable' : 'not_found'
 
@@ -213,11 +213,14 @@ module Briard
         # have their meta inside `content_item`, but the main book indentifers inside of `book_metadata`
         identifiers ||= crossref_alternate_identifiers(bibliographic_metadata)
 
+        url = parse_attributes(bibliographic_metadata.dig('doi_data', 'resource'),
+        first: true)
+        url = normalize_url(url) if url.present?
+
         { 'id' => id,
           'types' => types,
           'doi' => doi_from_url(id),
-          'url' => parse_attributes(bibliographic_metadata.dig('doi_data', 'resource'),
-                                    first: true),
+          'url' => url,
           'titles' => titles,
           'identifiers' => identifiers,
           'creators' => crossref_people(bibliographic_metadata, 'author'),

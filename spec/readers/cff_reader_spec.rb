@@ -30,7 +30,7 @@ describe Briard::Metadata, vcr: true do
                                       { 'subject' => 'cff' }])
       expect(subject.version_info).to eq('1.0.1')
       expect(subject.dates).to eq([{ 'date' => '2022-11-05', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2022')
+      expect(subject.publication_year).to eq(2022)
       expect(subject.publisher).to eq('GitHub')
       expect(subject.rights_list).to eq([{ 'rights' => 'Apache License 2.0',
                                            'rightsIdentifier' => 'apache-2.0',
@@ -99,7 +99,7 @@ describe Briard::Metadata, vcr: true do
                                       { 'subject' => 'citation file format' }])
       expect(subject.version_info).to eq('2.0.0')
       expect(subject.dates).to eq([{ 'date' => '2021-09-22', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2021')
+      expect(subject.publication_year).to eq(2021)
       expect(subject.publisher).to eq('GitHub')
       expect(subject.rights_list).to eq([{ 'rights' => 'Apache License 2.0',
                                            'rightsIdentifier' => 'apache-2.0',
@@ -133,7 +133,7 @@ describe Briard::Metadata, vcr: true do
                                       { 'subject' => 'cff' }])
       expect(subject.version_info).to eq('1.0.1')
       expect(subject.dates).to eq([{ 'date' => '2022-11-05', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2022')
+      expect(subject.publication_year).to eq(2022)
       expect(subject.publisher).to eq('GitHub')
       expect(subject.rights_list).to eq([{ 'rights' => 'Apache License 2.0',
                                            'rightsIdentifier' => 'apache-2.0',
@@ -169,7 +169,7 @@ describe Briard::Metadata, vcr: true do
                                       { 'subject' => 'cff' }])
       expect(subject.version_info).to eq('1.0.1')
       expect(subject.dates).to eq([{ 'date' => '2022-11-05', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2022')
+      expect(subject.publication_year).to eq(2022)
       expect(subject.publisher).to eq('GitHub')
       expect(subject.rights_list).to eq([{ 'rights' => 'Apache License 2.0',
                                            'rightsIdentifier' => 'apache-2.0',

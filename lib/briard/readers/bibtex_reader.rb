@@ -71,7 +71,7 @@ module Briard
                   [{ 'date' => meta.date.to_s,
                      'dateType' => 'Issued' }]
                 end
-        publication_year = meta.try(:date).present? ? meta.date.to_s[0..3] : nil
+        publication_year = meta.try(:date).present? ? meta.date.to_s[0..3].to_i : nil
         rights_list = meta.try(:copyright).present? ? [hsh_to_spdx('rightsURI' => meta[:copyright])] : []
 
         { 'id' => normalize_doi(doi),

@@ -11,11 +11,12 @@ describe Briard::Metadata, vcr: true do
       expect(json['@id']).to eq('https://doi.org/10.7554/elife.01567')
       expect(json['@type']).to eq('ScholarlyArticle')
       expect(json['isPartOf']).to eq('@type' => 'Periodical', 'issn' => '2050-084X')
-      expect(json['periodical']).to eq('@type' => 'Journal', 'firstPage' => 'e01567',
+      expect(json['periodical']).to eq('@type' => 'Journal',
                                        'identifier' => '2050-084X', 'identifierType' => 'ISSN', 'name' => 'eLife', 'volume' => '3')
       expect(json['citation'].length).to eq(27)
       expect(json['citation'].first).to eq('@id' => 'https://doi.org/10.1038/nature02100',
                                            '@type' => 'CreativeWork')
+      puts json['funder']
       expect(json['funder']).to eq([{ 'name' => 'SystemsX', '@type' => 'Organization' },
                                     { 'name' => 'EMBO',
                                       '@type' => 'Organization',
@@ -58,7 +59,7 @@ describe Briard::Metadata, vcr: true do
       expect(json['@id']).to eq('https://doi.org/10.5061/dryad.8515')
       expect(json['@type']).to eq('Dataset')
       expect(json['license']).to eq('https://creativecommons.org/publicdomain/zero/1.0/legalcode')
-      expect(json['keywords']).to eq('plasmodium, malaria, mitochondrial genome, parasites')
+      expect(json['keywords']).to eq('Plasmodium, malaria, mitochondrial genome, Parasites')
     end
 
     it 'Schema.org JSON IsSupplementTo' do
@@ -82,7 +83,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'rdataone' do
       input = "#{fixture_path}codemeta.json"
-      subject = described_class.new(input: input, from: 'codemeta')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.5063/f1m61h5x')
       expect(json['@type']).to eq('SoftwareSourceCode')
@@ -134,7 +135,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'subject scheme' do
       input = 'https://doi.org/10.4232/1.2745'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.4232/1.2745')
       expect(json['@type']).to eq('Dataset')
@@ -144,7 +145,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'subject scheme multiple keywords' do
       input = 'https://doi.org/10.1594/pangaea.721193'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.1594/pangaea.721193')
       expect(json['@type']).to eq('Dataset')
@@ -158,7 +159,7 @@ describe Briard::Metadata, vcr: true do
       url = 'https://ors.datacite.org/doi:/10.25491/9hx8-ke93'
       content_url = 'https://storage.googleapis.com/gtex_analysis_v7/single_tissue_eqtl_data/GTEx_Analysis_v7_eQTL_expression_matrices.tar.gz'
       subject = described_class.new(input: input, url: url, content_url: content_url,
-                                    from: 'datacite')
+                                    from: 'datacite_xml')
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.25491/9hx8-ke93')
       expect(json['@type']).to eq('Dataset')
@@ -176,20 +177,20 @@ describe Briard::Metadata, vcr: true do
 
     it 'series information' do
       input = '10.4229/23RDEUPVSEC2008-5CO.8.3'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.4229/23rdeupvsec2008-5co.8.3')
       expect(json['@type']).to eq('ScholarlyArticle')
       expect(json['name']).to eq('Rural Electrification With Hybrid Power Systems Based on Renewables - Technical System Configurations From the Point of View of the European Industry')
       expect(json['author'].count).to eq(3)
-      expect(json['author'].first).to eq("name"=>"Llamas, P.")
+      expect(json['author'].first).to eq("@type"=>"Person", "familyName"=>"Llamas", "givenName"=>"P.", "name"=>"P. Llamas")
       expect(json['periodical']).to eq('@type' => 'Series', 'firstPage' => 'Spain; 3353',
                                        'lastPage' => '3356', 'name' => '23rd European Photovoltaic Solar Energy Conference and Exhibition', 'volume' => '1-5 September 2008')
     end
 
     it 'data catalog' do
       input = '10.25491/8KMC-G314'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.25491/8kmc-g314')
       expect(json['@type']).to eq('Dataset')
@@ -203,7 +204,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'alternate identifiers' do
       input = '10.23725/8na3-9s47'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.23725/8na3-9s47')
       expect(json['@type']).to eq('Dataset')
@@ -277,7 +278,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'geo_location_box' do
       input = '10.1594/PANGAEA.842237'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.1594/pangaea.842237')
       expect(json['@type']).to eq('Dataset')
@@ -314,7 +315,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'from schema_org gtex' do
       input = "#{fixture_path}schema_org_gtex.json"
-      subject = described_class.new(input: input, from: 'schema_org')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.25491/d50j-3083')
       expect(json['@type']).to eq('Dataset')
@@ -357,7 +358,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'from schema_org topmed' do
       input = "#{fixture_path}schema_org_topmed.json"
-      subject = described_class.new(input: input, from: 'schema_org')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.23725/8na3-9s47')
       expect(json['@type']).to eq('Dataset')
@@ -392,7 +393,7 @@ describe Briard::Metadata, vcr: true do
 
     it 'interactive resource without dates' do
       input = 'https://doi.org/10.34747/g6yb-3412'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.34747/g6yb-3412')
       expect(json['@type']).to eq('CreativeWork')

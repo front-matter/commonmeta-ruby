@@ -29,7 +29,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.subjects).to eq([{ 'subject' => 'feature' }])
       expect(subject.dates).to eq([{ 'date' => '2016-12-20T00:00:00Z', 'dateType' => 'Issued' },
                                    { 'date' => '2022-08-15T09:06:22Z', 'dateType' => 'Updated' }])
-      expect(subject.publication_year).to eq('2016')
+      expect(subject.publication_year).to eq(2016)
       expect(subject.related_identifiers.length).to eq(0)
       expect(subject.publisher).to eq('Front Matter')
     end
@@ -62,7 +62,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to eq([{ 'date' => '2016-12-20', 'dateType' => 'Issued' },
                                    { 'date' => '2016-12-20', 'dateType' => 'Created' },
                                    { 'date' => '2016-12-20', 'dateType' => 'Updated' }])
-      expect(subject.publication_year).to eq('2016')
+      expect(subject.publication_year).to eq(2016)
       expect(subject.related_identifiers.length).to eq(3)
       expect(subject.related_identifiers.last).to eq('relatedIdentifier' => '10.5438/55e5-t5c0',
                                                      'relatedIdentifierType' => 'DOI', 'relationType' => 'References', 'resourceTypeGeneral' => 'Text')
@@ -84,7 +84,7 @@ describe Briard::Metadata, vcr: true do
         expect(subject.subjects).to eq([{ 'subject' => 'news' }])
         expect(subject.dates).to eq([{ 'date' => '2021-08-24T16:57:24Z', 'dateType' => 'Issued' },
                                      { 'date' => '2022-08-15T19:05:14Z', 'dateType' => 'Updated' }])
-        expect(subject.publication_year).to eq('2021')
+        expect(subject.publication_year).to eq(2021)
         expect(subject.related_identifiers.length).to eq(0)
         expect(subject.container).to eq('identifier' => '2749-9952', 'identifierType' => 'ISSN',
                                         'title' => 'Front Matter', 'type' => 'Blog')
@@ -108,7 +108,7 @@ describe Briard::Metadata, vcr: true do
                                            'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0001-9688-838X', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }],
                                            'nameType' => 'Personal', 'givenName' => 'Matthias', 'familyName' => 'Staib', 'affiliation' => [{ 'name' => 'University of Zurich, Zurich, Switzerland' }])
       expect(subject.publisher).to eq('Zenodo')
-      expect(subject.publication_year).to eq('2018')
+      expect(subject.publication_year).to eq(2018)
       expect(subject.subjects).to eq([{ 'subject' => 'pupil size response' },
                                       { 'subject' => 'skin conductance response' },
                                       { 'subject' => 'electrocardiogram' },
@@ -137,7 +137,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.first).to eq('nameType' => 'Personal', 'name' => 'Johansson, Emma',
                                            'givenName' => 'Emma', 'familyName' => 'Johansson')
       expect(subject.publisher).to eq('PANGAEA')
-      expect(subject.publication_year).to eq('2014')
+      expect(subject.publication_year).to eq(2014)
     end
 
     # TODO: check redirections
@@ -193,7 +193,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publisher).to eq('Upstream')
       expect(subject.dates).to eq([{ 'date' => '2022-11-15T10:29:38Z', 'dateType' => 'Issued' },
         { 'date' => '2023-01-11T22:58:48Z', 'dateType' => 'Updated' }])
-      expect(subject.publication_year).to eq('2022')
+      expect(subject.publication_year).to eq(2022)
       expect(subject.rights_list).to eq([{"rights"=>"Creative Commons Attribution 4.0 International", "rightsUri"=>"https://creativecommons.org/licenses/by/4.0/legalcode", "rightsIdentifier"=>"cc-by-4.0", "rightsIdentifierScheme"=>"SPDX", "schemeUri"=>"https://spdx.org/licenses/"}])
     end
 
@@ -230,7 +230,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to eq([{ 'date' => '2016-12-20', 'dateType' => 'Issued' },
                                    { 'date' => '2016-12-20', 'dateType' => 'Created' },
                                    { 'date' => '2016-12-20', 'dateType' => 'Updated' }])
-      expect(subject.publication_year).to eq('2016')
+      expect(subject.publication_year).to eq(2016)
       expect(subject.related_identifiers.length).to eq(3)
       expect(subject.related_identifiers.last).to eq('relatedIdentifier' => '10.5438/55e5-t5c0',
                                                      'relatedIdentifierType' => 'DOI', 'relationType' => 'References', 'resourceTypeGeneral' => 'Text')
@@ -255,7 +255,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.subjects).to eq([{ 'subject' => 'gtex' }, { 'subject' => 'annotation' },
                                       { 'subject' => 'phenotype' }, { 'subject' => 'gene regulation' }, { 'subject' => 'transcriptomics' }])
       expect(subject.dates).to eq([{ 'date' => '2017', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2017')
+      expect(subject.publication_year).to eq(2017)
       expect(subject.container).to eq('title' => 'GTEx', 'type' => 'DataRepository')
       expect(subject.publisher).to eq('GTEx')
       expect(subject.funding_references.length).to eq(7)
@@ -284,7 +284,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.subjects).to eq([{ 'subject' => 'topmed' },
                                       { 'subject' => 'whole genome sequencing' }])
       expect(subject.dates).to eq([{ 'date' => '2017-11-30', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2017')
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq('TOPMed')
       expect(subject.related_identifiers).to eq([{ 'relatedIdentifier' => '10.23725/2g4s-qv04',
                                                    'relatedIdentifierType' => 'DOI', 'relationType' => 'References', 'resourceTypeGeneral' => 'Dataset' }])
@@ -322,7 +322,7 @@ describe Briard::Metadata, vcr: true do
                                       { 'subject' => 'sierra (mountain range)' }])
       expect(subject.dates).to eq([{ 'date' => '2013', 'dateType' => 'Issued' },
                                    { 'date' => '2014-10-17', 'dateType' => 'Updated' }])
-      expect(subject.publication_year).to eq('2013')
+      expect(subject.publication_year).to eq(2013)
       expect(subject.publisher).to eq('UC Merced')
       expect(subject.funding_references).to eq([{ 'funderName' => 'National Science Foundation, Division of Earth Sciences, Critical Zone Observatories' }])
       expect(subject.geo_locations).to eq([{
@@ -345,7 +345,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.first).to eq('name' => 'Tara Oceans Consortium, Coordinators', 'nameType' => 'Organizational')
       expect(subject.titles).to eq([{ 'title' => 'Registry of all stations from the Tara Oceans Expedition (2009-2013)' }])
       expect(subject.dates).to eq([{ 'date' => '2015-02-03', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2015')
+      expect(subject.publication_year).to eq(2015)
       expect(subject.publisher).to eq('PANGAEA')
       expect(subject.geo_locations).to eq([{ 'geoLocationBox' => { 'eastBoundLongitude' => '174.9006',
                                                                    'northBoundLatitude' => '79.6753', 'southBoundLatitude' => '-64.3088', 'westBoundLongitude' => '-168.5182' } }])
@@ -373,7 +373,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.subjects).to eq([{ 'subject' => 'topmed' },
                                       { 'subject' => 'whole genome sequencing' }])
       expect(subject.dates).to eq([{ 'date' => '2017-11-30', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2017')
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq('TOPMed')
       expect(subject.funding_references).to eq([{
                                                  'funderIdentifier' => 'https://doi.org/10.13039/100000050', 'funderIdentifierType' => 'Crossref Funder ID', 'funderName' => 'National Heart, Lung, and Blood Institute (NHLBI)'
@@ -397,7 +397,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to eq([{ 'date' => '2019-01-09', 'dateType' => 'Issued' },
                                    { 'date' => '2019-01-09', 'dateType' => 'Created' },
                                    { 'date' => '2019-01-09', 'dateType' => 'Updated' }])
-      expect(subject.publication_year).to eq('2019')
+      expect(subject.publication_year).to eq(2019)
       expect(subject.id).to eq('https://doi.org/10.23698/aida/drov')
       expect(subject.publisher).to eq('AIDA')
       expect(subject.rights_list).to eq([{ 'rights' => 'Restricted access',
@@ -414,7 +414,7 @@ describe Briard::Metadata, vcr: true do
                                     titles: [{ 'title' => 'Publication Fp7 Funding Acknowledgment - Plos Openaire' }],
                                     descriptions: [{ 'description' => 'The dataset contains a sample of metadata describing papers', 'descriptionType' => 'Abstract' }],
                                     publisher: 'Zenodo',
-                                    publication_year: '2013',
+                                    publication_year: 2013,
                                     dates: [{ 'date' => '2013-04-03',
                                               'dateType' => 'Issued' }],
                                     funding_references: [{ 'awardNumber' => '246686',
@@ -426,7 +426,6 @@ describe Briard::Metadata, vcr: true do
                                     types: {
                                       'resourceTypeGeneral' => 'Dataset', 'schemaOrg' => 'Dataset'
                                     })
-
       expect(subject.valid?).to be true
       expect(subject.doi).to eq('10.5281/zenodo.1239')
       expect(subject.id).to eq('https://doi.org/10.5281/zenodo.1239')
@@ -437,7 +436,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ 'title' => 'Publication Fp7 Funding Acknowledgment - Plos Openaire' }])
       expect(subject.descriptions.first['description']).to start_with('The dataset contains a sample of metadata describing papers')
       expect(subject.dates).to eq([{ 'date' => '2013-04-03', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2013')
+      expect(subject.publication_year).to eq(2013)
       expect(subject.publisher).to eq('Zenodo')
       expect(subject.funding_references).to eq([{ 'awardNumber' => '246686',
                                                   'awardTitle' => 'Open Access Infrastructure for Research in Europe',

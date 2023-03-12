@@ -157,7 +157,7 @@ describe Briard::Metadata, vcr: true do
   end
 
   context 'insert_formats' do
-    subject { described_class.new(input: input, from: 'datacite') }
+    subject { described_class.new(input: input, from: 'datacite_xml') }
 
     let(:input) { File.read("#{fixture_path}datacite-empty-sizes.xml") }
 
@@ -217,7 +217,7 @@ describe Briard::Metadata, vcr: true do
   context 'insert_descriptions' do
     it 'insert' do
       input = 'https://doi.org/10.5438/4K3M-NYVG'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input, from: 'datacite_xml')
       xml = Nokogiri::XML::Builder.new(encoding: 'UTF-8') do |xml|
         subject.insert_descriptions(xml)
       end.to_xml

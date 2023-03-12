@@ -58,7 +58,7 @@ module Briard
         if meta.fetch('Y1', nil).present?
           dates << { 'date' => get_date_from_parts(*created_date_parts), 'dateType' => 'Created' }
         end
-        publication_year = get_date_from_parts(*date_parts).to_s[0..3]
+        publication_year = get_date_from_parts(*date_parts).to_s[0..3].to_i
         related_identifiers = if meta.fetch('T2', nil).present? && meta.fetch('SN', nil).present?
                                 [{ 'type' => 'Periodical',
                                    'id' => meta.fetch('SN', nil),

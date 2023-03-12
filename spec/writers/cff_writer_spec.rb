@@ -6,7 +6,7 @@ describe Briard::Metadata, vcr: true do
   context 'write metadata as cff' do
     it 'SoftwareSourceCode Zenodo' do
       input = 'https://doi.org/10.5281/zenodo.10164'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       json = Psych.safe_load(subject.cff, permitted_classes: [Date])
       expect(json['doi']).to eq('https://doi.org/10.5281/zenodo.10164')

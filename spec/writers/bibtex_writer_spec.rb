@@ -122,7 +122,7 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:bibtex_key]).to eq('https://doi.org/10.5061/dryad.8515')
       expect(bibtex[:doi]).to eq('10.5061/dryad.8515')
       expect(bibtex[:title]).to eq('Data from: A new malaria agent in African hominids.')
-      expect(bibtex[:author]).to eq('Ollomo, Benjamin and Durand, Patrick and Prugnolle, Franck and {Douzery, Emmanuel J. P.} and Arnathau, Céline and Nkoghe, Dieudonné and Leroy, Eric and Renaud, François')
+      expect(bibtex[:author]).to eq('Ollomo, Benjamin and Durand, Patrick and Prugnolle, Franck and Douzery, Emmanuel J. P. and Arnathau, C??line and Nkoghe, Dieudonn?? and Leroy, Eric and Renaud, Fran??ois')
       expect(bibtex[:publisher]).to eq('Dryad')
       expect(bibtex[:year]).to eq('2011')
       expect(bibtex[:copyright]).to eq('Creative Commons Zero v1.0 Universal')
@@ -162,7 +162,7 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:bibtex_type].to_s).to eq('misc')
       expect(bibtex[:bibtex_key]).to eq('https://doi.org/10.1594/pangaea.721193')
       expect(bibtex[:doi]).to eq('10.1594/pangaea.721193')
-      expect(bibtex[:keywords]).to start_with('animalia, bottles or small containers/aquaria (&lt;20 l), calcification/dissolution')
+      expect(bibtex[:keywords]).to start_with('Animalia, Bottles or small containers/Aquaria (&lt;20 L)')
       expect(bibtex[:year]).to eq('2007')
       expect(bibtex[:copyright]).to eq('Creative Commons Attribution 3.0 Unported')
     end

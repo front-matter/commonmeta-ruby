@@ -263,7 +263,7 @@ module Briard
           "agency" => parse_attributes(meta.fetch("provider", nil), content: "name", first: true),
           "container" => container,
           "related_identifiers" => related_identifiers,
-          "publication_year" => publication_year,
+          "publication_year" => publication_year.to_i,
           "dates" => dates,
           "descriptions" => if meta.fetch("description", nil).present?
           [{ "description" => sanitize(meta.fetch("description")),

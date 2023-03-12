@@ -37,7 +37,7 @@ describe Briard::Metadata, vcr: true do
                                       { 'subject' => 'net/http' }])
       expect(subject.dates).to eq([{ 'date' => '2017-02-24', 'dateType' => 'Issued' },
                                    { 'date' => '2015-11-28', 'dateType' => 'Created' }, { 'date' => '2017-02-24', 'dateType' => 'Updated' }])
-      expect(subject.publication_year).to eq('2017')
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq('DataCite')
       expect(subject.rights_list).to eq([{ 'rights' => 'MIT License',
                                            'rightsIdentifier' => 'mit',
@@ -80,7 +80,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.version_info).to eq('2.0.0')
       expect(subject.dates).to eq([{ 'date' => '2016-05-27', 'dateType' => 'Issued' },
                                    { 'date' => '2016-05-27', 'dateType' => 'Created' }, { 'date' => '2016-05-27', 'dateType' => 'Updated' }])
-      expect(subject.publication_year).to eq('2016')
+      expect(subject.publication_year).to eq(2016)
       expect(subject.publisher).to eq('https://cran.r-project.org')
       expect(subject.rights_list).to eq([{ 'rights' => 'Apache License 2.0',
                                            'rightsIdentifier' => 'apache-2.0',
@@ -112,7 +112,7 @@ describe Briard::Metadata, vcr: true do
                                       { 'subject' => 'net/http' }])
       expect(subject.dates).to eq([{ 'date' => '2017-02-24', 'dateType' => 'Issued' },
                                    { 'date' => '2015-11-28', 'dateType' => 'Created' }, { 'date' => '2017-02-24', 'dateType' => 'Updated' }])
-      expect(subject.publication_year).to eq('2017')
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq('DataCite')
       expect(subject.rights_list).to eq([{ 'rights' => 'MIT License',
                                            'rightsIdentifier' => 'mit',
@@ -138,7 +138,7 @@ describe Briard::Metadata, vcr: true do
                                       { 'subject' => 'codemeta' }])
       expect(subject.dates).to eq([{ 'date' => '2018-05-17', 'dateType' => 'Issued' },
                                    { 'date' => '2018-03-09', 'dateType' => 'Created' }, { 'date' => '2018-05-17', 'dateType' => 'Updated' }])
-      expect(subject.publication_year).to eq('2018')
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq('DataCite')
       expect(subject.rights_list).to eq([{ 'rights' => 'MIT License',
                                            'rightsIdentifier' => 'mit',

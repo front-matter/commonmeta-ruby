@@ -49,7 +49,7 @@ module Briard
         updated_date = get_date_from_date_parts(meta.fetch("deposited", nil))
         dates = [{ "date" => published_date, "dateType" => "Issued" }]
         dates << { "date" => updated_date, "dateType" => "Updated" } if updated_date.present?
-        publication_year = published_date.to_s[0..3]
+        publication_year = published_date.to_s[0..3].to_i
         date_registered = get_date_from_date_parts(meta.fetch("registered", nil)) || get_date_from_date_parts(meta.fetch("created", nil))
 
         rights_list = if meta.fetch("license", nil)

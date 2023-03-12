@@ -43,7 +43,7 @@ describe Briard::Metadata, vcr: true do
                                            'rightsUri' => 'https://creativecommons.org/licenses/by/3.0/legalcode',
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
       expect(subject.dates).to eq([{ 'date' => '2014', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2014')
+      expect(subject.publication_year).to eq(2014)
       expect(subject.related_identifiers).to eq([{ 'relatedIdentifier' => '2050-084X',
                                                    'relatedIdentifierType' => 'ISSN', 'relationType' => 'IsPartOf', 'title' => 'eLife', 'type' => 'Periodical' }])
     end
@@ -62,7 +62,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ 'title' => 'A multiscale analysis of the urban heat island effect: from city averaged temperatures to the energy demand of individual buildings' }])
       expect(subject.descriptions.first['description']).to start_with('Designing the climates of cities')
       expect(subject.dates).to eq([{ 'date' => '2018', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq('2018')
+      expect(subject.publication_year).to eq(2018)
     end
   end
 end

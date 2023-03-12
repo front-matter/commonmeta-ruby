@@ -9,23 +9,21 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'crossref')
       expect(subject.style).to eq('apa')
       expect(subject.locale).to eq('en-US')
-      expect(subject.citation).to eq('Sankar, M., Nieminen, K., Ragni, L., Xenarios, I., &amp; Hardtke, C. S. (2014). Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth. <i>ELife</i>, <i>3</i>, e01567. https://doi.org/10.7554/elife.01567')
+      expect(subject.citation).to eq('Sankar, M., Nieminen, K., Ragni, L., Xenarios, I., &amp; Hardtke, C. S. (2014). Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth. <i>ELife</i>, <i>3</i>. https://doi.org/10.7554/elife.01567')
     end
 
     it 'Journal article vancouver style' do
       input = '10.7554/eLife.01567'
-      subject = described_class.new(input: input, from: 'crossref', style: 'vancouver',
-                                    locale: 'en-US')
+      subject = described_class.new(input: input, style: 'vancouver', locale: 'en-US')
       expect(subject.style).to eq('vancouver')
       expect(subject.locale).to eq('en-US')
-      expect(subject.citation).to eq('Sankar M, Nieminen K, Ragni L, Xenarios I, Hardtke CS. Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth. eLife [Internet]. 2014Feb11;3:e01567. Available from: https://elifesciences.org/articles/01567')
+      expect(subject.citation).to eq('Sankar M, Nieminen K, Ragni L, Xenarios I, Hardtke CS. Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth. eLife [Internet]. 2014Feb11;3. Available from: https://elifesciences.org/articles/01567')
     end
 
     it 'Dataset' do
       input = 'https://doi.org/10.5061/DRYAD.8515'
       subject = described_class.new(input: input, from: 'datacite')
-
-      expect(subject.citation).to eq('Ollomo, B., Durand, P., Prugnolle, F., Douzery, Emmanuel J. P., Arnathau, C., Nkoghe, D., Leroy, E., &amp; Renaud, F. (2011). <i>Data from: A new malaria agent in African hominids.</i> (Version 1) [Data set]. Dryad. https://doi.org/10.5061/dryad.8515')
+      expect(subject.citation).to eq('Ollomo, B., Durand, P., Prugnolle, F., Douzery, E. J. P., Arnathau, C., Nkoghe, D., Leroy, E., &amp; Renaud, F. (2011). <i>Data from: A new malaria agent in African hominids.</i> (Version 1) [Data set]. Dryad. https://doi.org/10.5061/dryad.8515')
     end
 
     it 'Missing author' do
@@ -39,7 +37,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       expect(subject.style).to eq('apa')
       expect(subject.locale).to eq('en-US')
-      expect(subject.citation).to eq('Lab for Exosphere and Near Space Environment Studies. (2019). <i>lenses-lab/LYAO_RT-2018JA026426: Original Release</i> (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.2598836')
+      expect(subject.citation).to eq('Lab For Exosphere And Near Space Environment Studies. (2019). <i>lenses-lab/LYAO_RT-2018JA026426: Original Release</i> (Version 1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.2598836')
     end
 
     it 'interactive resource without dates' do

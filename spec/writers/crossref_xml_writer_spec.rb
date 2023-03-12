@@ -10,9 +10,9 @@ describe Briard::Metadata, vcr: true do
       expect(subject.valid?).to be true
       expect(subject.doi).to eq('10.7554/elife.01567')
       expect(subject.url).to eq('https://elifesciences.org/articles/01567')
-      crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'journal')
-      expect(crossref.dig('journal_metadata', 'full_title')).to eq('eLife')
-      expect(crossref.dig('journal_article', 'doi_data', 'doi')).to eq('10.7554/elife.01567')
+      crossref_xml = Maremma.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'journal')
+      expect(crossref_xml.dig('journal_metadata', 'full_title')).to eq('eLife')
+      expect(crossref_xml.dig('journal_article', 'doi_data', 'doi')).to eq('10.7554/elife.01567')
     end
 
     it 'posted_content' do
@@ -20,14 +20,13 @@ describe Briard::Metadata, vcr: true do
       expect(subject.valid?).to be true
       expect(subject.doi).to eq('10.1101/2020.12.01.406702')
       expect(subject.url).to eq('http://biorxiv.org/lookup/doi/10.1101/2020.12.01.406702')
-      crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
-      expect(crossref.dig('doi_data', 'doi')).to eq('10.1101/2020.12.01.406702')
+      crossref_xml = Maremma.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'posted_content')
+      expect(crossref_xml.dig('doi_data', 'doi')).to eq('10.1101/2020.12.01.406702')
     end
 
     it 'journal article from datacite' do
       input = '10.2312/geowissenschaften.1989.7.181'
       subject = described_class.new(input: input, from: 'datacite')
-
       expect(subject.valid?).to be true
       expect(subject.doi).to eq('10.2312/geowissenschaften.1989.7.181')
       expect(subject.url).to eq('https://www.tib.eu/suchen/id/awi:7058a56c5e43afd705af945d01536b9aaeeee491')
@@ -65,8 +64,8 @@ describe Briard::Metadata, vcr: true do
       expect(subject.rights_list).to eq([{
                                           'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
-      crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
-      expect(crossref.dig('titles',
+      crossref_xml = Maremma.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'posted_content')
+      expect(crossref_xml.dig('titles',
                           'title')).to eq('Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health')
     end
 
@@ -96,8 +95,8 @@ describe Briard::Metadata, vcr: true do
       expect(subject.rights_list).to eq([{
                                           'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
-      crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
-      expect(crossref.dig('titles', 'title')).to eq('Dryad: Interview with Jen Gibson')
+      crossref_xml = Maremma.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'posted_content')
+      expect(crossref_xml.dig('titles', 'title')).to eq('Dryad: Interview with Jen Gibson')
     end
 
     it 'embedded schema.org from front matter' do
@@ -113,10 +112,10 @@ describe Briard::Metadata, vcr: true do
       expect(subject.container).to eq('identifier' => '2749-9952', 'identifierType' => 'ISSN',
                                       'title' => 'Front Matter', 'type' => 'Blog')
       expect(subject.titles).to eq([{ 'title' => 'Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health' }])
-      crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
-      expect(Array.wrap(crossref.dig('contributors', 'person_name')).length).to eq(1)
-      expect(Array.wrap(crossref.dig('contributors', 'person_name')).first).to eq("ORCID"=>"https://orcid.org/0000-0003-1419-2405", "contributor_role"=>"author", "given_name"=>"Martin", "sequence"=>"first", "surname"=>"Fenner")
-      expect(crossref.dig('titles',
+      crossref_xml = Maremma.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'posted_content')
+      expect(Array.wrap(crossref_xml.dig('contributors', 'person_name')).length).to eq(1)
+      expect(Array.wrap(crossref_xml.dig('contributors', 'person_name')).first).to eq("ORCID"=>"https://orcid.org/0000-0003-1419-2405", "contributor_role"=>"author", "given_name"=>"Martin", "sequence"=>"first", "surname"=>"Fenner")
+      expect(crossref_xml.dig('titles',
                           'title')).to eq('Editorial by more than 200 health journals: Call for emergency action to limit global temperature increases, restore biodiversity, and protect health')
     end
 
@@ -148,8 +147,8 @@ describe Briard::Metadata, vcr: true do
       expect(subject.rights_list).to eq([{
                                           'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
-      crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
-      expect(crossref.dig('titles',
+      crossref_xml = Maremma.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'posted_content')
+      expect(crossref_xml.dig('titles',
                           'title')).to eq('Implementing the FAIR Principles Through FAIR-Enabling Artifacts and Services')
     end
 
@@ -175,10 +174,10 @@ describe Briard::Metadata, vcr: true do
       expect(subject.rights_list).to eq([{
                                           'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
-      crossref = Maremma.from_xml(subject.crossref).dig('doi_batch', 'body', 'posted_content')
-      expect(Array.wrap(crossref.dig('contributors', 'person_name')).length).to eq(4)
-      expect(Array.wrap(crossref.dig('contributors', 'person_name')).first).to eq("contributor_role"=>"author", "given_name"=>"Mohammad", "sequence"=>"first", "surname"=>"Hosseini")
-      expect(crossref.dig('titles',
+      crossref_xml = Maremma.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'posted_content')
+      expect(Array.wrap(crossref_xml.dig('contributors', 'person_name')).length).to eq(4)
+      expect(Array.wrap(crossref_xml.dig('contributors', 'person_name')).first).to eq("contributor_role"=>"author", "given_name"=>"Mohammad", "sequence"=>"first", "surname"=>"Hosseini")
+      expect(crossref_xml.dig('titles',
                           'title')).to eq('Deep dive into ethics of Contributor Roles: report of a FORCE11 workshop')
     end
   end

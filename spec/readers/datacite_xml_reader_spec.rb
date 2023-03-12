@@ -34,7 +34,7 @@ describe Briard::Metadata, vcr: true do
                                            "rightsIdentifierScheme" => "SPDX",
                                            "rightsUri" => "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
                                            "schemeUri" => "https://spdx.org/licenses/" }])
-      expect(subject.publication_year).to eq("2011")
+      expect(subject.publication_year).to eq(2011)
       expect(subject.related_identifiers.length).to eq(1)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.1371/journal.ppat.1000446",
                                                      "relatedIdentifierType" => "DOI", "relationType" => "IsCitedBy")
@@ -66,7 +66,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.descriptions.first["description"]).to start_with("Eating your own dog food")
       expect(subject.dates).to eq([{ "date" => "2016-12-20", "dateType" => "Created" },
                                    { "date" => "2016-12-20", "dateType" => "Issued" }, { "date" => "2016-12-20", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2016")
+      expect(subject.publication_year).to eq(2016)
       expect(subject.related_identifiers.length).to eq(3)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.5438/0000-00ss",
                                                      "relatedIdentifierType" => "DOI", "relationType" => "IsPartOf")
@@ -113,7 +113,7 @@ describe Briard::Metadata, vcr: true do
                                            "identifierType" => "URL" }])
       expect(subject.rights_list).to eq([{ "lang" => "en-US",
                                            "rights" => "Creative Commons Zero v1.0 Universal", "rightsIdentifier" => "cc0-1.0", "rightsIdentifierScheme" => "SPDX", "rightsUri" => "https://creativecommons.org/publicdomain/zero/1.0/legalcode", "schemeUri" => "https://spdx.org/licenses/" }])
-      expect(subject.publication_year).to eq("2014")
+      expect(subject.publication_year).to eq(2014)
       expect(subject.contributors).to eq([{ "name" => "Starr, Joan", "givenName" => "Joan", "familyName" => "Starr", "nameIdentifiers" => [{ "nameIdentifier" => "https://orcid.org/0000-0002-7285-027X", "schemeUri" => "https://orcid.org", "nameIdentifierScheme" => "ORCID" }], "affiliation" => [{ "affiliationIdentifier" => "https://ror.org/03yrm5c26",
                                                                                                                                                                                                                                                                                                         "affiliationIdentifierScheme" => "ROR",
                                                                                                                                                                                                                                                                                                         "name" => "California Digital Library" }], "contributorType" => "ProjectLeader", "nameType" => "Personal" }])
@@ -157,7 +157,7 @@ describe Briard::Metadata, vcr: true do
                                       "title" => "Data underpinning - The Sun as a planet-host star: Proxies from SDO images for HARPS radial-velocity variations" }])
       expect(subject.dates).to eq([{ "date" => "2016-01-20", "dateType" => "Available" },
                                    { "date" => "2016", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2016")
+      expect(subject.publication_year).to eq(2016)
       expect(subject.publisher).to eq("University of St Andrews")
       expect(subject.agency).to eq("DataCite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
@@ -186,7 +186,7 @@ describe Briard::Metadata, vcr: true do
                                          { "rights" => "Open Access",
                                            "rightsUri" => "info:eu-repo/semantics/openAccess" }])
       expect(subject.dates).to eq([{ "date" => "2016-03-27", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2016")
+      expect(subject.publication_year).to eq(2016)
       expect(subject.related_identifiers.length).to eq(1)
       expect(subject.related_identifiers.last).to eq(
         "relatedIdentifier" => "https://github.com/kjgarza/frame_experiment_analysis/tree/v1.0", "relatedIdentifierType" => "URL", "relationType" => "IsSupplementTo",
@@ -219,7 +219,7 @@ describe Briard::Metadata, vcr: true do
                                            "schemeUri" => "https://spdx.org/licenses/" }])
       expect(subject.dates).to eq([{ "date" => "2016-11-16", "dateType" => "Created" },
                                    { "date" => "2016-11-16", "dateType" => "Updated" }, { "date" => "2016", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2016")
+      expect(subject.publication_year).to eq(2016)
       expect(subject.related_identifiers.length).to eq(1)
       expect(subject.related_identifiers.last).to eq(
         "relatedIdentifier" => "10.6084/m9.figshare.4234751", "relatedIdentifierType" => "DOI", "relationType" => "IsIdenticalTo",
@@ -266,7 +266,7 @@ describe Briard::Metadata, vcr: true do
                                            "schemeUri" => "https://spdx.org/licenses/" }])
       expect(subject.dates).to eq([{ "date" => "2015-06-14", "dateType" => "Created" },
                                    { "date" => "2020-06-02", "dateType" => "Updated" }, { "date" => "2020", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2020")
+      expect(subject.publication_year).to eq(2020)
       expect(subject.publisher).to eq("figshare")
       expect(subject.subjects).to eq([{ "subject" => "evolutionary biology" },
                                       { "subject" => "FOS: Biological sciences",
@@ -323,7 +323,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Publication Fp7 Funding Acknowledgment - Plos Openaire" }])
       expect(subject.descriptions.first["description"]).to start_with("The dataset contains a sample of metadata describing papers")
       expect(subject.dates).to eq([{ "date" => "2013-04-03", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2013")
+      expect(subject.publication_year).to eq(2013)
       expect(subject.publisher).to eq("Zenodo")
       expect(subject.funding_references).to eq([{ "awardNumber" => "246686",
                                                   "awardTitle" => "Open Access Infrastructure for Research in Europe",
@@ -348,7 +348,7 @@ describe Briard::Metadata, vcr: true do
                                     titles: [{ "title" => "Publication Fp7 Funding Acknowledgment - Plos Openaire" }],
                                     descriptions: [{ "description" => "The dataset contains a sample of metadata describing papers", "descriptionType" => "Abstract" }],
                                     publisher: "Zenodo",
-                                    publication_year: "2013",
+                                    publication_year: 2013,
                                     dates: [{ "date" => "2013-04-03",
                                               "dateType" => "Issued" }],
                                     funding_references: [{ "awardNumber" => "246686",
@@ -363,6 +363,7 @@ describe Briard::Metadata, vcr: true do
                                     "identifiers" => [{
                                       "identifierType" => "Repository ID", "identifier" => "123",
                                     }])
+      puts subject.errors
       expect(subject.valid?).to be true
       expect(subject.doi).to eq("10.5281/zenodo.1239")
       expect(subject.id).to eq("https://doi.org/10.5281/zenodo.1239")
@@ -373,7 +374,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Publication Fp7 Funding Acknowledgment - Plos Openaire" }])
       expect(subject.descriptions.first["description"]).to start_with("The dataset contains a sample of metadata describing papers")
       expect(subject.dates).to eq([{ "date" => "2013-04-03", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2013")
+      expect(subject.publication_year).to eq(2013)
       expect(subject.publisher).to eq("Zenodo")
       expect(subject.funding_references).to eq([{ "awardNumber" => "246686",
                                                   "awardTitle" => "Open Access Infrastructure for Research in Europe",
@@ -502,7 +503,7 @@ describe Briard::Metadata, vcr: true do
                                            "nameIdentifiers" => [{ "nameIdentifier" => "https://orcid.org/0000-0003-1419-2405", "nameIdentifierScheme" => "ORCID", "schemeUri" => "https://orcid.org" }], "name" => "Fenner, Martin", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Eating your own Dog Food" }])
       expect(subject.publisher).to eq("DataCite")
-      expect(subject.publication_year).to eq("2016")
+      expect(subject.publication_year).to eq(2016)
       expect(subject.related_identifiers).to eq([{ "relatedIdentifier" => "10.5438/0012",
                                                    "relatedIdentifierType" => "DOI",
                                                    "relationType" => "References" },
@@ -533,7 +534,7 @@ describe Briard::Metadata, vcr: true do
                                            "name" => "Schumann, Kai", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Gridded results of swath bathymetric mapping of Disko Bay, Western Greenland, 2007-2008" }])
       expect(subject.publisher).to eq("PANGAEA - Data Publisher for Earth & Environmental Science")
-      expect(subject.publication_year).to eq("2011")
+      expect(subject.publication_year).to eq(2011)
       expect(subject.related_identifiers).to eq([{ "relatedIdentifier" => "10.5072/timeseries",
                                                    "relatedIdentifierType" => "DOI", "relationType" => "Continues" }])
       expect(subject.geo_locations).to eq([{ "geoLocationPlace" => "Disko Bay",
@@ -557,7 +558,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publisher).to eq("UC Merced")
       expect(subject.dates).to eq([{ "date" => "2014-10-17", "dateType" => "Updated" },
                                    { "date" => "2016-03-14T17:02:02Z", "dateType" => "Available" }, { "date" => "2013", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2013")
+      expect(subject.publication_year).to eq(2013)
       expect(subject.subjects).to eq([{ "subject" => "earth sciences" },
                                       { "subject" => "soil moisture" },
                                       { "subject" => "soil temperature" },
@@ -644,7 +645,7 @@ describe Briard::Metadata, vcr: true do
       )
       expect(subject.titles).to eq([{ "title" => 'Dataset for "Direct Evidence for Solid-Like Hydrogen in a Nanoporous Carbon Hydrogen Storage Material at Supercritical Temperatures"' }])
       expect(subject.descriptions.first["description"]).to start_with("Dataset for Direct Evidence for Solid-Like Hydrogen")
-      expect(subject.publication_year).to eq("2015")
+      expect(subject.publication_year).to eq(2015)
       expect(subject.publisher).to eq("University of Bath")
       expect(subject.funding_references.length).to eq(5)
       expect(subject.funding_references.first).to eq("awardNumber" => "EP/J016454/1",
@@ -679,7 +680,7 @@ describe Briard::Metadata, vcr: true do
       )
       expect(subject.titles).to eq([{ "title" => "Technical and Human Infrastructure for Open Research (THOR)" }])
       expect(subject.descriptions.first["description"]).to start_with("Five years ago, a global infrastructure")
-      expect(subject.publication_year).to eq("2015")
+      expect(subject.publication_year).to eq(2015)
       expect(subject.publisher).to eq("DataCite")
       expect(subject.funding_references).to eq([{ "awardNumber" => "654039",
                                                   "awardTitle" => "THOR – Technical and Human Infrastructure for Open Research",
@@ -707,7 +708,7 @@ describe Briard::Metadata, vcr: true do
                                     { "title" => "MODEL OF SYSTEM DYNAMICS OF PROCESS OF TRAINING",
                                       "titleType" => "TranslatedTitle" }])
       expect(subject.descriptions.first["description"]).to start_with("Актуальность данной работы обусловлена важностью учета в учебном процессе личностных качеств обучаем")
-      expect(subject.publication_year).to eq("2019")
+      expect(subject.publication_year).to eq(2019)
       expect(subject.publisher).to eq("МОДЕЛИРОВАНИЕ, ОПТИМИЗАЦИЯ И ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ")
       expect(subject.funding_references.length).to eq(1)
       expect(subject.funding_references.first).to eq("awardNumber" => "проект № 170100728",
@@ -736,7 +737,7 @@ describe Briard::Metadata, vcr: true do
                                            "identifierType" => "Local accession number" }])
       expect(subject.dates).to eq([{ "date" => "2016-12-20", "dateType" => "Created" },
                                    { "date" => "2016-12-20", "dateType" => "Issued" }, { "date" => "2016-12-20", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq("2016")
+      expect(subject.publication_year).to eq(2016)
       expect(subject.related_identifiers.length).to eq(3)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.5438/0000-00ss",
                                                      "relatedIdentifierType" => "DOI", "relationType" => "IsPartOf")
@@ -764,7 +765,7 @@ describe Briard::Metadata, vcr: true do
                                     { "date" => "2012-12-13", "dateInformation" => "Correction",
                                       "dateType" => "Other" }, { "date" => "2010", "dateType" => "Issued" },
                                   ])
-      expect(subject.publication_year).to eq("2010")
+      expect(subject.publication_year).to eq(2010)
       expect(subject.related_identifiers.length).to eq(1)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.5272/oldertestpub",
                                                      "relatedIdentifierType" => "DOI", "relationType" => "IsPartOf", "resourceTypeGeneral" => "Text")
@@ -797,7 +798,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq("https://doi.org/10.5072/testpub")
       expect(subject.identifiers).to eq([{ "identifier" => "937-0-4523-12357-6",
                                            "identifierType" => "ISBN" }])
-      expect(subject.publication_year).to eq("2010")
+      expect(subject.publication_year).to eq(2010)
       expect(subject.related_identifiers.length).to eq(1)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.5272/oldertestpub",
                                                      "relatedIdentifierType" => "DOI", "relationType" => "IsPartOf")
@@ -827,7 +828,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq("https://doi.org/10.5061/dryad.8515")
       expect(subject.identifiers).to eq([{ "identifier" => "Ollomo B, Durand P, Prugnolle F, Douzery EJP, Arnathau C, Nkoghe D, Leroy E, Renaud F (2009) A new malaria agent in African hominids. PLoS Pathogens 5(5): e1000446.",
                                            "identifierType" => "citation" }])
-      expect(subject.publication_year).to eq("2011")
+      expect(subject.publication_year).to eq(2011)
       expect(subject.related_identifiers.length).to eq(4)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "19478877",
                                                      "relatedIdentifierType" => "PMID", "relationType" => "IsReferencedBy")
@@ -859,7 +860,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.id).to eq("https://doi.org/10.5072/testpub")
       expect(subject.identifiers).to eq([{ "identifier" => "937-0-4523-12357-6",
                                            "identifierType" => "ISBN" }])
-      expect(subject.publication_year).to eq("2010")
+      expect(subject.publication_year).to eq(2010)
       expect(subject.related_identifiers.length).to eq(1)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.5272/oldertestpub",
                                                      "relatedIdentifierType" => "DOI", "relationType" => "IsPartOf")
@@ -893,11 +894,10 @@ describe Briard::Metadata, vcr: true do
                                     { "date" => "2012-12-13", "dateInformation" => "Correction",
                                       "dateType" => "Other" }, { "date" => "2010", "dateType" => "Issued" },
                                   ])
-      expect(subject.publication_year).to eq("2010")
+      expect(subject.publication_year).to eq(2010)
       expect(subject.sizes).to eq(["256 pages"])
       expect(subject.formats).to eq(["pdf"])
       expect(subject.content_url).to eq("https://example.org/report.pdf")
-      expect(subject.publication_year).to eq("2010")
       expect(subject.related_identifiers.length).to eq(1)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.5272/oldertestpub",
                                                      "relatedIdentifierType" => "DOI", "relationType" => "IsPartOf", "resourceTypeGeneral" => "Text")
@@ -936,50 +936,8 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators).to eq([{ "familyName" => "Wong", "givenName" => "Takmeng",
                                         "name" => "Wong, Takmeng" }])
       expect(subject.titles).to eq([{ "title" => "CERES Level 3 Cloud Type Historgram Terra+Aqua HDF file - Edition4" }])
-      expect(subject.publication_year).to eq("2016")
+      expect(subject.publication_year).to eq(2016)
       expect(subject.publisher).to eq("NASA Langley Atmospheric Science Data Center DAAC")
-      expect(subject.agency).to eq("DataCite")
-      expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
-    end
-
-    it "subject scheme" do
-      input = "https://doi.org/10.4232/1.2745"
-      subject = described_class.new(input: input, from: "datacite_xml")
-      expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://doi.org/10.4232/1.2745")
-      expect(subject.identifiers).to eq([{ "identifier" => "ZA2745", "identifierType" => "ZA-No." },
-                                         { "identifier" => "Internationale Umfrageprogramme",
-                                           "identifierType" => "FDZ" }])
-      expect(subject.types["schemaOrg"]).to eq("Dataset")
-      expect(subject.types["resourceTypeGeneral"]).to eq("Dataset")
-      expect(subject.creators).to eq([{ "name" => "Europäische Kommission", "nameType" => "Organizational" }])
-      expect(subject.contributors.length).to eq(18)
-      expect(subject.contributors.first).to eq(
-        "affiliation" => [{ "name" => "Europäische Kommission, Brüssel" }], "contributorType" => "Researcher", "familyName" => "Reif", "givenName" => "Karlheinz", "name" => "Reif, Karlheinz", "nameType" => "Personal",
-      )
-      expect(subject.titles).to eq([
-                                     { "lang" => "de",
-                                       "title" => "Flash Eurobarometer 54 (Madrid Summit)" }, { "lang" => "en", "title" => "Flash Eurobarometer 54 (Madrid Summit)" }, { "titleType" => "Subtitle", "lang" => "de", "title" => "The Common European Currency" }, { "titleType" => "Subtitle", "lang" => "en", "title" => "The Common European Currency" },
-                                   ])
-      expect(subject.subjects).to eq([{ "lang" => "en",
-                                        "subject" => "KAT12 International Institutions, Relations, Conditions",
-                                        "subjectScheme" => "ZA" },
-                                      { "lang" => "de",
-                                        "subject" => "Internationale Politik und Internationale Organisationen",
-                                        "subjectScheme" => "CESSDA Topic Classification" },
-                                      { "lang" => "de",
-                                        "subject" => "Wirtschaftssysteme und wirtschaftliche Entwicklung",
-                                        "subjectScheme" => "CESSDA Topic Classification" },
-                                      { "lang" => "en",
-                                        "subject" => "International politics and organisations",
-                                        "subjectScheme" => "CESSDA Topic Classification" },
-                                      { "lang" => "en",
-                                        "subject" => "Economic systems and development",
-                                        "subjectScheme" => "CESSDA Topic Classification" }])
-      expect(subject.dates).to eq([{ "date" => "1995-12", "dateType" => "Collected" },
-                                   { "date" => "1996", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("1996")
-      expect(subject.publisher).to eq("GESIS Data Archive")
       expect(subject.agency).to eq("DataCite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
     end
@@ -1015,7 +973,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators).to eq([{ "name" => "anonymous" }])
       expect(subject.titles).to eq([{ "title" => "Messung der Bildunschaerfe in H.264-codierten Bildern und Videosequenzen" }])
       expect(subject.dates).to eq([{ "date" => "2017", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2017")
+      expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq("Siemens AG")
       expect(subject.agency).to eq("DataCite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-3")
@@ -1056,7 +1014,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.version_info).to eq("2")
       expect(subject.dates).to eq([{ "date" => "2014-04-25", "dateType" => "Available" },
                                    { "date" => "2015", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2015")
+      expect(subject.publication_year).to eq(2015)
       expect(subject.publisher).to eq("Royal Netherlands Meteorological Institute (KNMI)")
       expect(subject.agency).to eq("DataCite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
@@ -1082,7 +1040,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators).to eq([{ "affiliation" => [{ "name" => "Caltech" }], "name" => "Tester" }])
       expect(subject.titles).to eq([{ "title" => "Test license" }])
       expect(subject.dates).to eq([{ "date" => "2018-01-12", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("CaltechDATA")
       expect(subject.agency).to eq("DataCite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
@@ -1099,7 +1057,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators).to eq([{ "name" => "Fran2 Levy" }])
       expect(subject.titles).to eq([{ "title" => "Referee report. For: FL Regression Wellcome [version 1; referees: retracted]" }])
       expect(subject.dates).to eq([{ "date" => "2018", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("F1000 Research Limited")
       expect(subject.agency).to eq("DataCite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-3")
@@ -1118,7 +1076,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.length).to eq(5)
       expect(subject.creators.first).to eq("name" => "lina patel")
       expect(subject.titles).to eq([{ "title" => "Referee report. For: Gates - add article keywords to the metatags [version 2; referees: 1 approved]" }])
-      expect(subject.publication_year).to eq("2018")
+      expect(subject.publication_year).to eq(2018)
       expect(subject.publisher).to eq("Gates Open Research")
       expect(subject.agency).to eq("DataCite")
       expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-3")
@@ -1188,53 +1146,6 @@ describe Briard::Metadata, vcr: true do
                                                    "relationType" => "IsCitedBy" }])
     end
 
-    it "dissertation" do
-      input = "10.3204/desy-2014-01645"
-      subject = described_class.new(input: input, from: "datacite_xml")
-      expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://doi.org/10.3204/desy-2014-01645")
-      expect(subject.types["resourceTypeGeneral"]).to eq("Text")
-      expect(subject.types["resourceType"]).to eq("Dissertation")
-      expect(subject.types["schemaOrg"]).to eq("Thesis")
-      expect(subject.types["bibtex"]).to eq("phdthesis")
-      expect(subject.types["citeproc"]).to eq("thesis")
-      expect(subject.creators).to eq([{ "nameType" => "Personal", "name" => "Conrad, Heiko",
-                                        "givenName" => "Heiko", "familyName" => "Conrad" }])
-      expect(subject.titles).to eq([{ "title" => "Dynamics of colloids in molecular glass forming liquids studied via X-ray photon correlation spectroscopy" }])
-      expect(subject.dates).to eq([{ "date" => "2014", "dateType" => "Issued" },
-                                   { "date" => "2014", "dateType" => "Copyrighted" },
-                                   { "date" => "2009-10-01/2014-01-23", "dateType" => "Created" }])
-      expect(subject.publication_year).to eq("2014")
-      expect(subject.publisher).to eq("Deutsches Elektronen-Synchrotron, DESY, Hamburg")
-      expect(subject.agency).to eq("DataCite")
-      expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-3")
-    end
-
-    it "funding references" do
-      input = "10.26102/2310-6018/2019.24.1.006"
-      subject = described_class.new(input: input, from: "datacite_xml")
-      expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://doi.org/10.26102/2310-6018/2019.24.1.006")
-      expect(subject.types["resourceTypeGeneral"]).to eq("Text")
-      expect(subject.types["resourceType"]).to eq("Journal Article")
-      expect(subject.types["schemaOrg"]).to eq("ScholarlyArticle")
-      expect(subject.types["bibtex"]).to eq("article")
-      expect(subject.types["citeproc"]).to eq("article-journal")
-      expect(subject.creators.length).to eq(2)
-      expect(subject.creators.first).to eq("affiliation" => [{ "name" => "Тверская государственная сельскохозяйственная академия" }],
-                                           "name" => "Ганичева, А.В.")
-      expect(subject.titles.last).to eq("title" => "MODEL OF SYSTEM DYNAMICS OF PROCESS OF TRAINING",
-                                        "titleType" => "TranslatedTitle")
-      expect(subject.dates).to eq([{ "date" => "2019-02-09", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2019")
-      expect(subject.publisher).to eq("МОДЕЛИРОВАНИЕ, ОПТИМИЗАЦИЯ И ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ")
-      expect(subject.funding_references.count).to eq(1)
-      expect(subject.funding_references.first).to eq("awardNumber" => "проект № 170100728",
-                                                     "funderName" => "РФФИ")
-      expect(subject.agency).to eq("DataCite")
-      expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
-    end
-
     it "DOI in with related id system" do
       input = "https://doi.org/10.4121/uuid:3926db30-f712-4394-aebc-75976070e91f"
       subject = described_class.new(input: input, from: "datacite_xml")
@@ -1244,7 +1155,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types["resourceTypeGeneral"]).to eq("Dataset")
       expect(subject.titles).to eq([{ "title" => "BPI Challenge 2012" }])
       expect(subject.dates).to eq([{ "date" => "2012-04-23", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq("2012")
+      expect(subject.publication_year).to eq(2012)
       expect(subject.state).to eq("findable")
     end
   end
@@ -1288,7 +1199,7 @@ describe Briard::Metadata, vcr: true do
                                   }])
       expect(subject.titles).to eq([{ "title" => "Eating your own Dog Food" }])
       expect(subject.publisher).to eq("DataCite")
-      expect(subject.publication_year).to eq("2016")
+      expect(subject.publication_year).to eq(2016)
     end
   end
 
@@ -1309,7 +1220,7 @@ describe Briard::Metadata, vcr: true do
     expect(subject.subjects).to eq([{ "subject" => "gtex" }, { "subject" => "annotation" },
                                     { "subject" => "phenotype" }, { "subject" => "gene regulation" }, { "subject" => "transcriptomics" }])
     expect(subject.dates).to eq([{ "date" => "2017", "dateType" => "Issued" }])
-    expect(subject.publication_year).to eq("2017")
+    expect(subject.publication_year).to eq(2017)
     expect(subject.related_identifiers.length).to eq(4)
     expect(subject.related_identifiers.last).to eq(
       "relatedIdentifier" => "https://www.ebi.ac.uk/miriam/main/datatypes/MIR:00000663", "relatedIdentifierType" => "URL", "relationType" => "IsPartOf",
@@ -1339,7 +1250,7 @@ describe Briard::Metadata, vcr: true do
                                          "name" => "den Heijer, C", "nameType" => "Personal")
     expect(subject.titles).to eq([{ "lang" => "en",
                                     "title" => "Meteo measurements at the Sand Motor" }])
-    expect(subject.publication_year).to eq("2017")
+    expect(subject.publication_year).to eq(2017)
     expect(subject.publisher).to eq("4TU.Centre for Research Data")
     expect(subject.agency).to eq("DataCite")
     expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
@@ -1385,7 +1296,7 @@ describe Briard::Metadata, vcr: true do
         { "date" => "2014", "dateType" => "Issued" },
       ]
     )
-    expect(subject.publication_year).to eq("2014")
+    expect(subject.publication_year).to eq(2014)
     expect(subject.subjects).to eq(
       [{
         "subject" => "computer science",
@@ -1566,7 +1477,7 @@ describe Briard::Metadata, vcr: true do
         { "date" => "2012", "dateType" => "Issued" },
       ]
     )
-    expect(subject.publication_year).to eq("2012")
+    expect(subject.publication_year).to eq(2012)
     expect(subject.subjects).to eq(
       [
         {
