@@ -4,34 +4,34 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.0137
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:27:09 GMT
+      - Sun, 12 Mar 2023 22:21:04 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=hypyquYWlPsSjk0CoPX8jgVg2CVVZW4lS49cvUcfe1ewOeKi3IhzLTUVZmgnezEHkLjTHkI%2Fw%2BlfaWRkyaIw3aRyWjNh2gZq41DKaGvcZMhJ3KMaR22RL8ThkrELGDCaGPaaEek%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2ByWWoSfuaTRMi0c8HkrFode0EqaJhjPb352kaNEllSYSUSXUNTDBWEF3Set4W05KSXPcMMamzdm7inCvcAO4ghxMQqu3NoxrnI%2FZa5JcoRnfj50kVUVp1Appcl4%2FYl3DOzleb5I%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,11 +39,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e6ed4fc560e10-AMS
+      - 7a6f6d950aab0e48-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -51,5 +51,5 @@ http_interactions:
             "status": "DOI does not exist"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:27:09 GMT
+  recorded_at: Sun, 12 Mar 2023 22:21:04 GMT
 recorded_with: VCR 6.1.0

@@ -4,34 +4,34 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.7554
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:21:23 GMT
+      - Sun, 12 Mar 2023 22:21:40 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=36JUCXc0rOQ58eogV%2FcrDE%2FM3IKqerayf%2FEThPbry3cGToY6I5dmjWHCWY8AzS9HG1UPi%2BY4kg30Q5Y%2FqrmDRmUx3s4YWIjjOAbOyRwIbZeFqcwCDkvZTgSArJxh7subAN6ZO4s%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zfxr7U0z6XomIP7Kuu9o6D0%2FI2SXlLtzlRE6J49Ckg3uWBpF%2BFJ7jrzJvHJQXko4YMDqHV6bRdEcrcrc8iseFu%2F8ZkudspIojn3lR0%2FETGN15fBk7Okm4wSjVNoBTihuPjdbYO4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,11 +39,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e66605b82b97b-AMS
+      - 7a6f6e76cacb0a67-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -51,5 +51,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:21:23 GMT
+  recorded_at: Sun, 12 Mar 2023 22:21:40 GMT
 recorded_with: VCR 6.1.0

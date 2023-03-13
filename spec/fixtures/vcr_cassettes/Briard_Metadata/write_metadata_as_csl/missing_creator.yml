@@ -1,0 +1,143 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.3390/publications6020015
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:18 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,3,29]],"date-time":"2022-03-29T20:40:55Z","timestamp":1648586455265},"reference-count":23,"publisher":"MDPI
+        AG","issue":"2","license":[{"start":{"date-parts":[[2018,4,9]],"date-time":"2018-04-09T00:00:00Z","timestamp":1523232000000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Publications"],"abstract":"<jats:p>Gigantic
+        particle accelerators, incredibly complex detectors, an antimatter factory
+        and the discovery of the Higgs boson\u2014this is part of what makes CERN
+        famous. Only a few know that CERN also hosts the world largest Open Access
+        initiative: SCOAP3. The Sponsoring Consortium for Open Access Publishing in
+        Particle Physics started operation in 2014 and has since supported the publication
+        of 20,000 Open Access articles in the field of particle physics, at no direct
+        cost, nor burden, for individual authors worldwide. SCOAP3 is made possible
+        by a 3000-institute strong partnership, where libraries re-direct funds previously
+        used for subscriptions to \u2018flip\u2019 articles to \u2018Gold Open Access\u2019.
+        With its recent expansion, the initiative now covers about 90% of the journal
+        literature of the field. This article describes the economic principles of
+        SCOAP3, the collaborative approach of the partnership, and finally summarizes
+        financial results after four years of successful operation.<\/jats:p>","DOI":"10.3390\/publications6020015","type":"journal-article","created":{"date-parts":[[2018,4,10]],"date-time":"2018-04-10T17:06:08Z","timestamp":1523379968000},"page":"15","source":"Crossref","is-referenced-by-count":2,"title":["Converting
+        the Literature of a Scientific Field to Open Access through Global Collaboration:
+        The Experience of SCOAP3 in Particle Physics"],"prefix":"10.3390","volume":"6","author":[{"ORCID":"http:\/\/orcid.org\/0000-0002-3836-8885","authenticated-orcid":false,"given":"Alexander","family":"Kohls","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-0762-2235","authenticated-orcid":false,"given":"Salvatore","family":"Mele","sequence":"additional","affiliation":[]}],"member":"1968","published-online":{"date-parts":[[2018,4,9]]},"reference":[{"key":"ref1","unstructured":"CERN
+        Convention for the Establishment of a European Organization for Nuclear Researchhttps:\/\/council.web.cern.ch\/en\/content\/convention-establishment-european-organization-nuclear-research"},{"key":"ref2","unstructured":"CERN
+        Member Stateshttp:\/\/www.webcitation.org\/6xNGDH2oU"},{"key":"ref3","unstructured":"CERN
+        Distribution of all CERN Users by Location of Institutes on 5 July 2017https:\/\/cds.cern.ch\/record\/2290407"},{"key":"ref4","doi-asserted-by":"publisher","DOI":"10.3233\/ISU-2008-0570"},{"key":"ref5","unstructured":"Communication
+        Patterns in High-Energy Physicshttp:\/\/webzine.web.cern.ch\/webzine\/6\/papers\/1\/index.html"},{"key":"ref6","doi-asserted-by":"publisher","DOI":"10.1038\/nphys3862"},{"key":"ref7","unstructured":"Information
+        Management: A Proposalhttps:\/\/cds.cern.ch\/record\/369245"},{"key":"ref8","series-title":"Open
+        Access","first-page":"1","article-title":"What is Open Access","author":"Suber","year":"2012"},{"key":"ref9","doi-asserted-by":"publisher","DOI":"10.1007\/s11192-009-0111-1"},{"key":"ref10","unstructured":"Towards
+        Open Access Publishing in High Energy Physics: Report of the SCOAP3 Working
+        Partyhttps:\/\/scoap3.org\/files\/Working_Party_Report.pdf"},{"key":"ref11","unstructured":"SCOAP3
+        Invitation to Tender\u2014Technical Specificationhttps:\/\/scoap3.org\/files\/Technical_Specification.pdf"},{"key":"ref12","unstructured":"RCUK
+        Policy on Open Accesshttp:\/\/www.rcuk.ac.uk\/documents\/documents\/rcukopenaccesspolicy-pdf\/"},{"key":"ref13","unstructured":"FWF
+        Open Access Policyhttp:\/\/www.webcitation.org\/6xNFwtASf"},{"key":"ref14","unstructured":"Quantitative
+        Study of the Geographical Distribution of the Authorship of High-Energy Physics
+        Journalshttps:\/\/cds.cern.ch\/record\/1033099"},{"key":"ref15","unstructured":"SCOAP3
+        Participating Countrieshttp:\/\/www.webcitation.org\/6xNFlBz9R"},{"key":"ref16","unstructured":"What
+        is SCOAP3: Governancehttp:\/\/www.webcitation.org\/6xNFpARKE"},{"key":"ref17","doi-asserted-by":"publisher","DOI":"10.2314\/CERN\/C26P.W9DT"},{"key":"ref18","unstructured":"SCOAP3
+        Phase 1 Journalshttp:\/\/www.webcitation.org\/6xNG2CUt1"},{"key":"ref19","doi-asserted-by":"publisher","DOI":"10.4119\/UNIBI\/UB.2014.18"},{"key":"ref20","unstructured":"Article
+        Processing Charges (APCs) and Subscriptions\u2014Monitoring Open Access Costshttps:\/\/www.jisc.ac.uk\/sites\/default\/files\/apc-and-subscriptions-report.pdf"},{"key":"ref21","unstructured":"SCOAP3
+        Forum 2017 Presentationhttps:\/\/scoap3.org\/wp-content\/uploads\/2017\/12\/Webinar-Dec-2017.pdf"},{"key":"ref22","unstructured":"InspireHEPhttp:\/\/inspirehep.net\/?ln=en"},{"key":"ref23","unstructured":"SCOAP3
+        News: APS Joins SCOAP3http:\/\/www.webcitation.org\/6xNFQb5iD"}],"container-title":["Publications"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/www.mdpi.com\/2304-6775\/6\/2\/15\/pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,7,22]],"date-time":"2021-07-22T10:05:05Z","timestamp":1626948305000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.mdpi.com\/2304-6775\/6\/2\/15"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2018,4,9]]},"references-count":23,"journal-issue":{"issue":"2","published-online":{"date-parts":[[2018,6]]}},"alternative-id":["publications6020015"],"URL":"http:\/\/dx.doi.org\/10.3390\/publications6020015","relation":{},"ISSN":["2304-6775"],"issn-type":[{"value":"2304-6775","type":"electronic"}],"subject":["Computer
+        Science Applications","Media Technology","Communication","Business and International
+        Management","Library and Information Sciences"],"published":{"date-parts":[[2018,4,9]]}}}'
+  recorded_at: Sun, 12 Mar 2023 22:21:18 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.3390
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:18 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sRnHkzrtV6EztVJ6aM60pLYR1mR82RZtXE2vUPFhGx%2FyrN%2F2CtE%2F4wQek8%2BUsYd%2FDY0h30Qsf6BD6Zg27%2FpxOegLoGBW0N0CcOr5v7evQmzTHl4nXZHY4TXwd4sAPp4I2c0UmO8%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a6f6def5bae1c14-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.3390",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 22:21:18 GMT
+recorded_with: VCR 6.1.0

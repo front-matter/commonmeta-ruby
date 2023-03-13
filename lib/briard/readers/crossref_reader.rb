@@ -7,17 +7,10 @@ module Briard
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
         api_url = crossref_api_url(id, options)
-        conn = Faraday.new(api_url, request: { timeout: 5 }) do |f|
-          f.request :json
-          # f.response :json
-        end
-        response = conn.get(api_url)
-        body = JSON.parse(response.body)
-        return { "string" => nil, "state" => "not_found" } if body.dig("data", "status") != "ok"
+        response = HTTP.get(api_url)
+        return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
-        string = body.dig("message").to_json
-
-        { "string" => string }
+        { "string" => response.body.to_s }
       end
 
       def read_crossref(string: nil, **options)
@@ -28,7 +21,7 @@ module Briard
 
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
-        meta = string.present? ? JSON.parse(string) : {}
+        meta = string.present? ? JSON.parse(string).dig('message') : {}
 
         resource_type = meta.fetch("type", nil)
         resource_type = resource_type.present? ? resource_type.underscore.camelcase : nil

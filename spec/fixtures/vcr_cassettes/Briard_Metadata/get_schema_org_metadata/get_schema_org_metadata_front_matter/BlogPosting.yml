@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://blog.front-matter.io/posts/step-forward-for-software-citation
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - blog.front-matter.io
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Server:
+      - openresty
+      Status:
+      - 301 Moved Permanently
+      X-Request-Id:
+      - 0f9064c41d62e60d0c76f81b836bbbfa
+      - 0f9064c41d62e60d0c76f81b836bbbfa
+      Location:
+      - "/posts/step-forward-for-software-citation/"
+      Ghost-Cache:
+      - MISS
+      Cache-Control:
+      - public, max-age=31536000
+      Ghost-Age:
+      - '0'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 12 Mar 2023 22:20:59 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '218730'
+      X-Served-By:
+      - cache-ams21068-AMS
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      X-Timer:
+      - S1678659659.224459,VS0,VE1
+      Vary:
+      - Cookie
+      Ghost-Fastly:
+      - 'true'
+      Alt-Svc:
+      - clear
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Sun, 12 Mar 2023 22:20:59 GMT
+recorded_with: VCR 6.1.0

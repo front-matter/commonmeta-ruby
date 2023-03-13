@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://blog.front-matter.io/posts/eating-your-own-dog-food
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - blog.front-matter.io
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Server:
+      - openresty
+      Status:
+      - 301 Moved Permanently
+      X-Request-Id:
+      - 2b52c1012b2695ed68a386d25f60ed73
+      - 2b52c1012b2695ed68a386d25f60ed73
+      Location:
+      - "/posts/eating-your-own-dog-food/"
+      Ghost-Cache:
+      - MISS
+      Cache-Control:
+      - public, max-age=31536000
+      Ghost-Age:
+      - '0'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 12 Mar 2023 22:20:58 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '2286279'
+      X-Served-By:
+      - cache-ams21060-AMS
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '2'
+      X-Timer:
+      - S1678659659.848898,VS0,VE0
+      Vary:
+      - Cookie
+      Ghost-Fastly:
+      - 'true'
+      Alt-Svc:
+      - clear
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Sun, 12 Mar 2023 22:20:58 GMT
+recorded_with: VCR 6.1.0

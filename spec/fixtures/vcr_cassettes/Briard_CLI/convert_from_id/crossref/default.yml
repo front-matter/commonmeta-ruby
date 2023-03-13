@@ -4,34 +4,34 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.7554
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:34:02 GMT
+      - Sun, 12 Mar 2023 22:21:28 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fvN%2BitvUG2MEDH6Jk6Axo7JP%2FQ73Lw6L36gSuoWI6HCM27syG4mwXdeLv2F4330XgbTiGwOof896Q%2FUDCmRpYr%2FH3NunlXTKuB3N7YLo4c1glo4PYyrCdaFgrDq%2Fe15DqOkaX8k%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gd271%2BK8tESVrEMsmtWqcqrnijoRm0mYdXaG7UDYMSSnpAPrDB6rldDsy67%2BlOkanlPIUaA1%2F9%2B3dPRZCcmvHIvnJdSwxqFHlwAtqvtFhLZK4X48w7846uJ%2B3SyZtd5OgsLqz0A%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,11 +39,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e78ec3b83b8af-AMS
+      - 7a6f6e2e6bec0bc6-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -51,31 +51,31 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:34:02 GMT
+  recorded_at: Sun, 12 Mar 2023 22:21:28 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.7554/elife.01567
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:34:03 GMT
+      - Sun, 12 Mar 2023 22:21:29 GMT
       Content-Type:
       - application/json
-      Content-Length:
-      - '13663'
+      Transfer-Encoding:
+      - chunked
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -83,8 +83,6 @@ http_interactions:
         Accept-Ranges, Cache-Control
       Access-Control-Allow-Origin:
       - "*"
-      Vary:
-      - Accept-Encoding
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -102,7 +100,7 @@ http_interactions:
       Connection:
       - close
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,1,28]],"date-time":"2023-01-28T13:31:01Z","timestamp":1674912661129},"reference-count":27,"publisher":"eLife
         Sciences Publications, Ltd","license":[{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"},{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"am","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"},{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"},{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"},{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"am","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"},{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"funder":[{"name":"SystemsX"},{"name":"EMBO
         longterm post-doctoral fellowships"},{"name":"Marie Heim-Voegtlin"},{"DOI":"10.13039\/501100006390","name":"University
@@ -190,39 +188,39 @@ http_interactions:
         History"}},{"value":"2013-12-24","order":1,"name":"accepted","label":"Accepted","group":{"name":"publication_history","label":"Publication
         History"}},{"value":"2014-02-11","order":2,"name":"published","label":"Published","group":{"name":"publication_history","label":"Publication
         History"}}]}}'
-  recorded_at: Sun, 12 Mar 2023 19:34:03 GMT
+  recorded_at: Sun, 12 Mar 2023 22:21:29 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.7554
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:34:03 GMT
+      - Sun, 12 Mar 2023 22:21:29 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=SFY2Z6Pq3n6B7GvTlxPc%2FCmyGT8cAZtArOSN7AjPRRbLg0AEYlD%2F%2F3a%2Ff3OmRjlsNNEmxrhiCvn0szhSAZGEzDDyDZpL5sFJTh%2FR1ixVzKvCtu0V8tyUYfB%2F1op1eVWJ5s4aqRI%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=soSnZTijAIzfgV4deOBzgTEkqtG8NzBvGUhIuZXR68yidayF7YFtO9puVairyHsF22s8IzyTdU8pb37JcUOafD40WdMtxevssYSfphiJlvzMGAOfMLkEb6ETvSyOHFaCWEg336w%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -230,11 +228,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e78f03ca8b98c-AMS
+      - 7a6f6e32bb57b933-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -242,5 +240,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:34:03 GMT
+  recorded_at: Sun, 12 Mar 2023 22:21:29 GMT
 recorded_with: VCR 6.1.0

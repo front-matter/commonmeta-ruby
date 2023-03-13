@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.5063/f1m61h5x?include=media,client
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.datacite.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 468ed770-3409-481e-bec9-3e0776f6ccfc
+      X-Download-Options:
+      - noopen
+      Etag:
+      - W/"e00cc8b2da34dbb47aadb32872c9f03f"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.020865'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.17
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.5063/f1m61h5x","type":"dois","attributes":{"doi":"10.5063/f1m61h5x","prefix":"10.5063","suffix":"f1m61h5x","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Jones,
+        Matthew B.; Slaughter, Peter; Nahf, Rob; Boettiger, Carl ; Jones, Chris; Read,
+        Jordan; Walker, Lauren; Hart, Edmund; Chamberlain, Scott","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"dataone:
+        R interface to the DataONE network of data repositories"}],"publisher":"KNB
+        Data Repository","container":{},"publicationYear":2016,"subjects":[],"contributors":[],"dates":[{"date":"2016","dateType":"Issued"}],"language":null,"types":{"ris":"COMP","bibtex":"misc","citeproc":"article","schemaOrg":"SoftwareSourceCode","resourceTypeGeneral":"Software"},"relatedIdentifiers":[],"relatedItems":[],"sizes":[],"formats":[],"version":null,"rightsList":[],"descriptions":[],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtMyIKICB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIgogIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL2RhdGFjaXRlLm9yZy9zY2hlbWEva2VybmVsLTMKICAgIGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MDYzL0YxTTYxSDVYPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+Sm9uZXMsIE1hdHRoZXcgQi47IFNsYXVnaHRlciwgUGV0ZXI7IE5haGYsIFJvYjsgQm9ldHRpZ2VyLCBDYXJsIDsgSm9uZXMsIENocmlzOyBSZWFkLCBKb3JkYW47IFdhbGtlciwgTGF1cmVuOyBIYXJ0LCBFZG11bmQ7IENoYW1iZXJsYWluLCBTY290dDwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPmRhdGFvbmU6IFIgaW50ZXJmYWNlIHRvIHRoZSBEYXRhT05FIG5ldHdvcmsgb2YgZGF0YSByZXBvc2l0b3JpZXM8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+S05CIERhdGEgUmVwb3NpdG9yeTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAxNjwvcHVibGljYXRpb25ZZWFyPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU29mdHdhcmUiLz4KPC9yZXNvdXJjZT4K","url":"https://github.com/DataONEorg/rdataone","contentUrl":null,"metadataVersion":1,"schemaVersion":"http://datacite.org/schema/kernel-3","source":null,"isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2016-03-12T03:15:03.000Z","registered":"2016-03-12T03:15:04.000Z","published":"2016","updated":"2020-09-18T09:33:12.000Z"},"relationships":{"client":{"data":{"id":"cdl.ucsb","type":"clients"}},"provider":{"data":{"id":"njqd","type":"providers"}},"media":{"data":{"id":"10.5063/f1m61h5x","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"cdl.ucsb","type":"clients","attributes":{"name":"UC
+        Santa Barbara","symbol":"CDL.UCSB","year":2011,"alternateName":null,"description":null,"language":null,"clientType":"repository","domains":"*","re3data":null,"opendoar":null,"issn":null,"url":null,"created":"2011-12-13T04:30:53.000Z","updated":"2022-12-21T13:44:44.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"njqd","type":"providers"}},"consortium":{"data":{"id":"cdlco","type":"providers"}},"prefixes":{"data":[{"id":"10.5062","type":"prefixes"},{"id":"10.5063","type":"prefixes"},{"id":"10.6085","type":"prefixes"},{"id":"10.7919","type":"prefixes"},{"id":"10.7940","type":"prefixes"},{"id":"10.15780","type":"prefixes"},{"id":"10.17915","type":"prefixes"},{"id":"10.18739","type":"prefixes"},{"id":"10.21229","type":"prefixes"},{"id":"10.21431","type":"prefixes"},{"id":"10.21424","type":"prefixes"},{"id":"10.21972","type":"prefixes"},{"id":"10.21983","type":"prefixes"},{"id":"10.25436","type":"prefixes"},{"id":"10.25349","type":"prefixes"},{"id":"10.25496","type":"prefixes"},{"id":"10.25494","type":"prefixes"},{"id":"10.25497","type":"prefixes"},{"id":"10.26081","type":"prefixes"},{"id":"10.34796","type":"prefixes"},{"id":"10.34958","type":"prefixes"},{"id":"10.48522","type":"prefixes"},{"id":"10.57902","type":"prefixes"}]}}}]}'
+  recorded_at: Sun, 12 Mar 2023 22:21:23 GMT
+recorded_with: VCR 6.1.0

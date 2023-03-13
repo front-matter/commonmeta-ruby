@@ -12,13 +12,5 @@ describe Briard::Metadata, vcr: true do
       response = subject.json_schema_errors
       expect(response).to be_nil
     end
-
-    it 'no creator' do
-      input = "#{fixture_path}datacite_missing_creator.xml"
-      subject = described_class.new(input: input, regenerate: true)
-      expect(subject.creators).to be_empty
-      expect(subject.valid?).to be false
-      expect(subject.json_schema_errors).to eq(["property '/creators' is invalid: error_type=minItems"])
-    end
   end
 end

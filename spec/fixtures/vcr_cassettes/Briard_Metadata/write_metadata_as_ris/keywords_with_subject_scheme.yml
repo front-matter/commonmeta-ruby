@@ -1,0 +1,149 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.1594/pangaea.721193?include=media,client
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.datacite.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 78f4a078-c4c9-4e39-939a-477b743f520d
+      X-Download-Options:
+      - noopen
+      Etag:
+      - W/"134239acb30f9e7fd37ef6e0a1c45f69"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.032047'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.17
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.1594/pangaea.721193","type":"dois","attributes":{"doi":"10.1594/pangaea.721193","prefix":"10.1594","suffix":"pangaea.721193","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Kurihara,
+        Haruko","givenName":"Haruko","familyName":"Kurihara","affiliation":[],"nameIdentifiers":[]},{"name":"Kato,
+        Shoji","givenName":"Shoji","familyName":"Kato","affiliation":[],"nameIdentifiers":[]},{"name":"Ishimatsu,
+        Atsushi","givenName":"Atsushi","familyName":"Ishimatsu","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"Seawater
+        carbonate chemistry and processes during experiments with Crassostrea gigas,
+        2007"}],"publisher":"PANGAEA","container":{},"publicationYear":2007,"subjects":[{"subject":"Animalia"},{"subject":"Bottles
+        or small containers/Aquaria (&lt;20 L)"},{"subject":"Calcification/Dissolution"},{"subject":"Coast
+        and continental shelf"},{"subject":"Crassostrea gigas"},{"subject":"Development"},{"subject":"Growth/Morphology"},{"subject":"Laboratory
+        experiment"},{"subject":"Mollusca"},{"subject":"North Pacific"},{"subject":"Pelagos"},{"subject":"Single
+        species"},{"subject":"Temperate"},{"subject":"Zooplankton"},{"subject":"Experimental
+        treatment","subjectScheme":"Parameter"},{"subject":"Carbonate system computation
+        flag","subjectScheme":"Parameter"},{"subject":"Temperature, water","subjectScheme":"Parameter"},{"subject":"Salinity","subjectScheme":"Parameter"},{"subject":"pH","subjectScheme":"Parameter"},{"subject":"Alkalinity,
+        total","subjectScheme":"Parameter"},{"subject":"Carbon, inorganic, dissolved","subjectScheme":"Parameter"},{"subject":"Carbon
+        dioxide","subjectScheme":"Parameter"},{"subject":"Bicarbonate ion","subjectScheme":"Parameter"},{"subject":"Carbonate
+        ion","subjectScheme":"Parameter"},{"subject":"Partial pressure of carbon dioxide
+        (water) at sea surface temperature (wet air)","subjectScheme":"Parameter"},{"subject":"Fugacity
+        of carbon dioxide (water) at sea surface temperature (wet air)","subjectScheme":"Parameter"},{"subject":"Aragonite
+        saturation state","subjectScheme":"Parameter"},{"subject":"Calcite saturation
+        state","subjectScheme":"Parameter"},{"subject":"Proportion","subjectScheme":"Parameter"},{"subject":"Crassostrea
+        gigas, larvae length","subjectScheme":"Parameter"},{"subject":"Crassostrea
+        gigas, larvae height","subjectScheme":"Parameter"},{"subject":"Crassostrea
+        gigas, non mineralized","subjectScheme":"Parameter"},{"subject":"Crassostrea
+        gigas, partially mineralized","subjectScheme":"Parameter"},{"subject":"Crassostrea
+        gigas, fully mineralized","subjectScheme":"Parameter"},{"subject":"Experiment","subjectScheme":"Method"},{"subject":"Calculated
+        using seacarb after Nisumaa et al. (2010)","subjectScheme":"Method"},{"subject":"Refractometer
+        (Atago 100-S)","subjectScheme":"Method"},{"subject":"pH meter (Mettler Toledo,
+        USA)","subjectScheme":"Method"},{"subject":"pH meter (PHM290, Radiometer)","subjectScheme":"Method"},{"subject":"Measured","subjectScheme":"Method"},{"subject":"European
+        network of excellence for Ocean Ecosystems Analysis (EUR-OCEANS)","subjectScheme":"Project"},{"subject":"European
+        Project on Ocean Acidification (EPOCA)","subjectScheme":"Project"},{"subject":"Ocean
+        Acidification International Coordination Centre (OA-ICC)","subjectScheme":"Project"}],"contributors":[{"name":"Nisumaa,
+        Anne-Marin","givenName":"Anne-Marin","familyName":"Nisumaa","contributorType":"DataCollector","affiliation":[],"nameIdentifiers":[]}],"dates":[{"date":"2007","dateType":"Issued"}],"language":"en","types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceType":"Supplementary
+        Dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[{"relationType":"IsSupplementTo","relatedIdentifier":"10.3354/ab00009","relatedIdentifierType":"DOI"}],"relatedItems":[],"sizes":["2170
+        data points"],"formats":["text/tab-separated-values"],"version":null,"rightsList":[{"rights":"Creative
+        Commons Attribution 3.0 Unported","rightsUri":"https://creativecommons.org/licenses/by/3.0/legalcode","schemeUri":"https://spdx.org/licenses/","rightsIdentifier":"cc-by-3.0","rightsIdentifierScheme":"SPDX"}],"descriptions":[{"description":"This
+        study demonstrated that the increased partial pressure of CO2 (pCO2) in seawater
+        and the attendant acidification that are projected to occur by the year 2300
+        will severely impact the early development of the oyster Crassostrea gigas.
+        Eggs of the oyster were artificially fertilized and incubated for 48 h in
+        seawater acidified to pH 7.4 by equilibrating it with CO2-enriched air (CO2
+        group), and the larval morphology and degree of shell mineralization were
+        compared with the control treatment (air-equilibrated seawater). Only 5% of
+        the CO2 group developed into normal ''D-shaped'' veliger larvae as compared
+        with 68% in the control group, although no difference was observed between
+        the groups up to the trochophore stage. Thus, during embryogenesis, the calcification
+        process appears to be particularly affected by low pH and/or the low CaCO3
+        saturation state of high-CO2 seawater. Veliger larvae with fully mineralized
+        shells accounted for 30% of the CO2-group larvae, compared with 72% in the
+        control (p &lt; 0.005). Shell mineralization was completely inhibited in 45%
+        of the CO2-group larvae, but only in 16% of the control (p &lt; 0.05). Normal
+        D-shaped veligers of the control group exhibited increased shell length and
+        height between 24 and 48 h after fertilization, while the few D-shaped veligers
+        of the CO2 group showed no shell growth during the same period. Our results
+        suggest that future ocean acidification will have deleterious impacts on the
+        early development of marine benthic calcifying organisms.","descriptionType":"Abstract"},{"description":"In
+        order to allow full comparability with other ocean acidification data sets,
+        the R package seacarb (Lavigne and Gattuso, 2011) was used to compute a complete
+        and consistent set of carbonate system variables, as described by Nisumaa
+        et al. (2010). In this dataset the original values were archived in addition
+        with the recalculated parameters (see related PI).","descriptionType":"TechnicalInfo"},{"description":"Supplement
+        to: Kurihara, Haruko; Kato, Shoji; Ishimatsu, Atsushi (2007): Effects of increased
+        seawater pCO2 on early development of the oyster Crassostrea gigas. Aquatic
+        Biology, 1(1), 91-98","descriptionType":"Other"}],"geoLocations":[],"fundingReferences":[{"awardUri":"https://cordis.europa.eu/project/id/211384","awardTitle":"European
+        Project on Ocean Acidification","funderName":"Seventh Framework Programme","awardNumber":"211384","funderIdentifier":"https://doi.org/10.13039/100011102","funderIdentifierType":"Crossref
+        Funder ID"},{"awardUri":"https://cordis.europa.eu/project/id/511106","awardTitle":"European
+        network of excellence for Ocean Ecosystems Analysis","funderName":"Sixth Framework
+        Programme","awardNumber":"511106","funderIdentifier":"https://doi.org/10.13039/100011103","funderIdentifierType":"Crossref
+        Funder ID"}],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjMvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC4xNTk0L1BBTkdBRUEuNzIxMTkzPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+S3VyaWhhcmEsIEhhcnVrbzwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+SGFydWtvPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkt1cmloYXJhPC9mYW1pbHlOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5LYXRvLCBTaG9qaTwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+U2hvamk8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+S2F0bzwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+SXNoaW1hdHN1LCBBdHN1c2hpPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5BdHN1c2hpPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPklzaGltYXRzdTwvZmFtaWx5TmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+U2Vhd2F0ZXIgY2FyYm9uYXRlIGNoZW1pc3RyeSBhbmQgcHJvY2Vzc2VzIGR1cmluZyBleHBlcmltZW50cyB3aXRoIENyYXNzb3N0cmVhIGdpZ2FzLCAyMDA3PC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlBBTkdBRUE8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMDc8L3B1YmxpY2F0aW9uWWVhcj4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD5BbmltYWxpYTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PkJvdHRsZXMgb3Igc21hbGwgY29udGFpbmVycy9BcXVhcmlhICgmbHQ7MjAgTCk8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5DYWxjaWZpY2F0aW9uL0Rpc3NvbHV0aW9uPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+Q29hc3QgYW5kIGNvbnRpbmVudGFsIHNoZWxmPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+Q3Jhc3Nvc3RyZWEgZ2lnYXM8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5EZXZlbG9wbWVudDwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pkdyb3d0aC9Nb3JwaG9sb2d5PC9zdWJqZWN0PgogICAgPHN1YmplY3Q+TGFib3JhdG9yeSBleHBlcmltZW50PC9zdWJqZWN0PgogICAgPHN1YmplY3Q+TW9sbHVzY2E8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5Ob3J0aCBQYWNpZmljPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+UGVsYWdvczwvc3ViamVjdD4KICAgIDxzdWJqZWN0PlNpbmdsZSBzcGVjaWVzPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+VGVtcGVyYXRlPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+Wm9vcGxhbmt0b248L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQYXJhbWV0ZXIiPkV4cGVyaW1lbnRhbCB0cmVhdG1lbnQ8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQYXJhbWV0ZXIiPkNhcmJvbmF0ZSBzeXN0ZW0gY29tcHV0YXRpb24gZmxhZzwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IlBhcmFtZXRlciI+VGVtcGVyYXR1cmUsIHdhdGVyPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iUGFyYW1ldGVyIj5TYWxpbml0eTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IlBhcmFtZXRlciI+cEg8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQYXJhbWV0ZXIiPkFsa2FsaW5pdHksIHRvdGFsPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iUGFyYW1ldGVyIj5DYXJib24sIGlub3JnYW5pYywgZGlzc29sdmVkPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iUGFyYW1ldGVyIj5DYXJib24gZGlveGlkZTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IlBhcmFtZXRlciI+QmljYXJib25hdGUgaW9uPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iUGFyYW1ldGVyIj5DYXJib25hdGUgaW9uPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iUGFyYW1ldGVyIj5QYXJ0aWFsIHByZXNzdXJlIG9mIGNhcmJvbiBkaW94aWRlICh3YXRlcikgYXQgc2VhIHN1cmZhY2UgdGVtcGVyYXR1cmUgKHdldCBhaXIpPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iUGFyYW1ldGVyIj5GdWdhY2l0eSBvZiBjYXJib24gZGlveGlkZSAod2F0ZXIpIGF0IHNlYSBzdXJmYWNlIHRlbXBlcmF0dXJlICh3ZXQgYWlyKTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IlBhcmFtZXRlciI+QXJhZ29uaXRlIHNhdHVyYXRpb24gc3RhdGU8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQYXJhbWV0ZXIiPkNhbGNpdGUgc2F0dXJhdGlvbiBzdGF0ZTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IlBhcmFtZXRlciI+UHJvcG9ydGlvbjwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9IlBhcmFtZXRlciI+Q3Jhc3Nvc3RyZWEgZ2lnYXMsIGxhcnZhZSBsZW5ndGg8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQYXJhbWV0ZXIiPkNyYXNzb3N0cmVhIGdpZ2FzLCBsYXJ2YWUgaGVpZ2h0PC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iUGFyYW1ldGVyIj5DcmFzc29zdHJlYSBnaWdhcywgbm9uIG1pbmVyYWxpemVkPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iUGFyYW1ldGVyIj5DcmFzc29zdHJlYSBnaWdhcywgcGFydGlhbGx5IG1pbmVyYWxpemVkPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iUGFyYW1ldGVyIj5DcmFzc29zdHJlYSBnaWdhcywgZnVsbHkgbWluZXJhbGl6ZWQ8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJNZXRob2QiPkV4cGVyaW1lbnQ8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJNZXRob2QiPkNhbGN1bGF0ZWQgdXNpbmcgc2VhY2FyYiBhZnRlciBOaXN1bWFhIGV0IGFsLiAoMjAxMCk8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJNZXRob2QiPlJlZnJhY3RvbWV0ZXIgKEF0YWdvIDEwMC1TKTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9Ik1ldGhvZCI+cEggbWV0ZXIgKE1ldHRsZXIgVG9sZWRvLCBVU0EpPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iTWV0aG9kIj5wSCBtZXRlciAoUEhNMjkwLCBSYWRpb21ldGVyKTwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHN1YmplY3RTY2hlbWU9Ik1ldGhvZCI+TWVhc3VyZWQ8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQcm9qZWN0Ij5FdXJvcGVhbiBuZXR3b3JrIG9mIGV4Y2VsbGVuY2UgZm9yIE9jZWFuIEVjb3N5c3RlbXMgQW5hbHlzaXMgKEVVUi1PQ0VBTlMpPC9zdWJqZWN0PgogICAgPHN1YmplY3Qgc3ViamVjdFNjaGVtZT0iUHJvamVjdCI+RXVyb3BlYW4gUHJvamVjdCBvbiBPY2VhbiBBY2lkaWZpY2F0aW9uIChFUE9DQSk8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJQcm9qZWN0Ij5PY2VhbiBBY2lkaWZpY2F0aW9uIEludGVybmF0aW9uYWwgQ29vcmRpbmF0aW9uIENlbnRyZSAoT0EtSUNDKTwvc3ViamVjdD4KICA8L3N1YmplY3RzPgogIDxjb250cmlidXRvcnM+CiAgICA8Y29udHJpYnV0b3IgY29udHJpYnV0b3JUeXBlPSJEYXRhQ29sbGVjdG9yIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZT5OaXN1bWFhLCBBbm5lLU1hcmluPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+QW5uZS1NYXJpbjwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5OaXN1bWFhPC9mYW1pbHlOYW1lPgogICAgPC9jb250cmlidXRvcj4KICA8L2NvbnRyaWJ1dG9ycz4KICA8bGFuZ3VhZ2U+ZW48L2xhbmd1YWdlPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+U3VwcGxlbWVudGFyeSBEYXRhc2V0PC9yZXNvdXJjZVR5cGU+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGlvblR5cGU9IklzU3VwcGxlbWVudFRvIiByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMzM1NC9hYjAwMDA5PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8c2l6ZXM+CiAgICA8c2l6ZT4yMTcwIGRhdGEgcG9pbnRzPC9zaXplPgogIDwvc2l6ZXM+CiAgPGZvcm1hdHM+CiAgICA8Zm9ybWF0PnRleHQvdGFiLXNlcGFyYXRlZC12YWx1ZXM8L2Zvcm1hdD4KICA8L2Zvcm1hdHM+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzMuMC8iIHNjaGVtZVVSST0iaHR0cHM6Ly9zcGR4Lm9yZy9saWNlbnNlcy8iIHJpZ2h0c0lkZW50aWZpZXJTY2hlbWU9IlNQRFgiIHJpZ2h0c0lkZW50aWZpZXI9IkNDLUJZLTMuMCI+Q3JlYXRpdmUgQ29tbW9ucyBBdHRyaWJ1dGlvbiAzLjAgVW5wb3J0ZWQ8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij5UaGlzIHN0dWR5IGRlbW9uc3RyYXRlZCB0aGF0IHRoZSBpbmNyZWFzZWQgcGFydGlhbCBwcmVzc3VyZSBvZiBDTzIgKHBDTzIpIGluIHNlYXdhdGVyIGFuZCB0aGUgYXR0ZW5kYW50IGFjaWRpZmljYXRpb24gdGhhdCBhcmUgcHJvamVjdGVkIHRvIG9jY3VyIGJ5IHRoZSB5ZWFyIDIzMDAgd2lsbCBzZXZlcmVseSBpbXBhY3QgdGhlIGVhcmx5IGRldmVsb3BtZW50IG9mIHRoZSBveXN0ZXIgQ3Jhc3Nvc3RyZWEgZ2lnYXMuIEVnZ3Mgb2YgdGhlIG95c3RlciB3ZXJlIGFydGlmaWNpYWxseSBmZXJ0aWxpemVkIGFuZCBpbmN1YmF0ZWQgZm9yIDQ4IGggaW4gc2Vhd2F0ZXIgYWNpZGlmaWVkIHRvIHBIIDcuNCBieSBlcXVpbGlicmF0aW5nIGl0IHdpdGggQ08yLWVucmljaGVkIGFpciAoQ08yIGdyb3VwKSwgYW5kIHRoZSBsYXJ2YWwgbW9ycGhvbG9neSBhbmQgZGVncmVlIG9mIHNoZWxsIG1pbmVyYWxpemF0aW9uIHdlcmUgY29tcGFyZWQgd2l0aCB0aGUgY29udHJvbCB0cmVhdG1lbnQgKGFpci1lcXVpbGlicmF0ZWQgc2Vhd2F0ZXIpLiBPbmx5IDUlIG9mIHRoZSBDTzIgZ3JvdXAgZGV2ZWxvcGVkIGludG8gbm9ybWFsICdELXNoYXBlZCcgdmVsaWdlciBsYXJ2YWUgYXMgY29tcGFyZWQgd2l0aCA2OCUgaW4gdGhlIGNvbnRyb2wgZ3JvdXAsIGFsdGhvdWdoIG5vIGRpZmZlcmVuY2Ugd2FzIG9ic2VydmVkIGJldHdlZW4gdGhlIGdyb3VwcyB1cCB0byB0aGUgdHJvY2hvcGhvcmUgc3RhZ2UuIFRodXMsIGR1cmluZyBlbWJyeW9nZW5lc2lzLCB0aGUgY2FsY2lmaWNhdGlvbiBwcm9jZXNzIGFwcGVhcnMgdG8gYmUgcGFydGljdWxhcmx5IGFmZmVjdGVkIGJ5IGxvdyBwSCBhbmQvb3IgdGhlIGxvdyBDYUNPMyBzYXR1cmF0aW9uIHN0YXRlIG9mIGhpZ2gtQ08yIHNlYXdhdGVyLiBWZWxpZ2VyIGxhcnZhZSB3aXRoIGZ1bGx5IG1pbmVyYWxpemVkIHNoZWxscyBhY2NvdW50ZWQgZm9yIDMwJSBvZiB0aGUgQ08yLWdyb3VwIGxhcnZhZSwgY29tcGFyZWQgd2l0aCA3MiUgaW4gdGhlIGNvbnRyb2wgKHAgJmx0OyAwLjAwNSkuIFNoZWxsIG1pbmVyYWxpemF0aW9uIHdhcyBjb21wbGV0ZWx5IGluaGliaXRlZCBpbiA0NSUgb2YgdGhlIENPMi1ncm91cCBsYXJ2YWUsIGJ1dCBvbmx5IGluIDE2JSBvZiB0aGUgY29udHJvbCAocCAmbHQ7IDAuMDUpLiBOb3JtYWwgRC1zaGFwZWQgdmVsaWdlcnMgb2YgdGhlIGNvbnRyb2wgZ3JvdXAgZXhoaWJpdGVkIGluY3JlYXNlZCBzaGVsbCBsZW5ndGggYW5kIGhlaWdodCBiZXR3ZWVuIDI0IGFuZCA0OCBoIGFmdGVyIGZlcnRpbGl6YXRpb24sIHdoaWxlIHRoZSBmZXcgRC1zaGFwZWQgdmVsaWdlcnMgb2YgdGhlIENPMiBncm91cCBzaG93ZWQgbm8gc2hlbGwgZ3Jvd3RoIGR1cmluZyB0aGUgc2FtZSBwZXJpb2QuIE91ciByZXN1bHRzIHN1Z2dlc3QgdGhhdCBmdXR1cmUgb2NlYW4gYWNpZGlmaWNhdGlvbiB3aWxsIGhhdmUgZGVsZXRlcmlvdXMgaW1wYWN0cyBvbiB0aGUgZWFybHkgZGV2ZWxvcG1lbnQgb2YgbWFyaW5lIGJlbnRoaWMgY2FsY2lmeWluZyBvcmdhbmlzbXMuPC9kZXNjcmlwdGlvbj4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IlRlY2huaWNhbEluZm8iPkluIG9yZGVyIHRvIGFsbG93IGZ1bGwgY29tcGFyYWJpbGl0eSB3aXRoIG90aGVyIG9jZWFuIGFjaWRpZmljYXRpb24gZGF0YSBzZXRzLCB0aGUgUiBwYWNrYWdlIHNlYWNhcmIgKExhdmlnbmUgYW5kIEdhdHR1c28sIDIwMTEpIHdhcyB1c2VkIHRvIGNvbXB1dGUgYSBjb21wbGV0ZSBhbmQgY29uc2lzdGVudCBzZXQgb2YgY2FyYm9uYXRlIHN5c3RlbSB2YXJpYWJsZXMsIGFzIGRlc2NyaWJlZCBieSBOaXN1bWFhIGV0IGFsLiAoMjAxMCkuIEluIHRoaXMgZGF0YXNldCB0aGUgb3JpZ2luYWwgdmFsdWVzIHdlcmUgYXJjaGl2ZWQgaW4gYWRkaXRpb24gd2l0aCB0aGUgcmVjYWxjdWxhdGVkIHBhcmFtZXRlcnMgKHNlZSByZWxhdGVkIFBJKS48L2Rlc2NyaXB0aW9uPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iT3RoZXIiPlN1cHBsZW1lbnQgdG86IEt1cmloYXJhLCBIYXJ1a287IEthdG8sIFNob2ppOyBJc2hpbWF0c3UsIEF0c3VzaGkgKDIwMDcpOiBFZmZlY3RzIG9mIGluY3JlYXNlZCBzZWF3YXRlciBwQ08yIG9uIGVhcmx5IGRldmVsb3BtZW50IG9mIHRoZSBveXN0ZXIgQ3Jhc3Nvc3RyZWEgZ2lnYXMuIEFxdWF0aWMgQmlvbG9neSwgMSgxKSwgOTEtOTg8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgogIDxmdW5kaW5nUmVmZXJlbmNlcz4KICAgIDxmdW5kaW5nUmVmZXJlbmNlPgogICAgICA8ZnVuZGVyTmFtZT5TZXZlbnRoIEZyYW1ld29yayBQcm9ncmFtbWU8L2Z1bmRlck5hbWU+CiAgICAgIDxmdW5kZXJJZGVudGlmaWVyIGZ1bmRlcklkZW50aWZpZXJUeXBlPSJDcm9zc3JlZiBGdW5kZXIgSUQiPmh0dHBzOi8vZG9pLm9yZy8xMC4xMzAzOS8xMDAwMTExMDI8L2Z1bmRlcklkZW50aWZpZXI+CiAgICAgIDxhd2FyZE51bWJlciBhd2FyZFVSST0iaHR0cHM6Ly9jb3JkaXMuZXVyb3BhLmV1L3Byb2plY3QvaWQvMjExMzg0Ij4yMTEzODQ8L2F3YXJkTnVtYmVyPgogICAgICA8YXdhcmRUaXRsZT5FdXJvcGVhbiBQcm9qZWN0IG9uIE9jZWFuIEFjaWRpZmljYXRpb248L2F3YXJkVGl0bGU+CiAgICA8L2Z1bmRpbmdSZWZlcmVuY2U+CiAgICA8ZnVuZGluZ1JlZmVyZW5jZT4KICAgICAgPGZ1bmRlck5hbWU+U2l4dGggRnJhbWV3b3JrIFByb2dyYW1tZTwvZnVuZGVyTmFtZT4KICAgICAgPGZ1bmRlcklkZW50aWZpZXIgZnVuZGVySWRlbnRpZmllclR5cGU9IkNyb3NzcmVmIEZ1bmRlciBJRCI+aHR0cHM6Ly9kb2kub3JnLzEwLjEzMDM5LzEwMDAxMTEwMzwvZnVuZGVySWRlbnRpZmllcj4KICAgICAgPGF3YXJkTnVtYmVyIGF3YXJkVVJJPSJodHRwczovL2NvcmRpcy5ldXJvcGEuZXUvcHJvamVjdC9pZC81MTExMDYiPjUxMTEwNjwvYXdhcmROdW1iZXI+CiAgICAgIDxhd2FyZFRpdGxlPkV1cm9wZWFuIG5ldHdvcmsgb2YgZXhjZWxsZW5jZSBmb3IgT2NlYW4gRWNvc3lzdGVtcyBBbmFseXNpczwvYXdhcmRUaXRsZT4KICAgIDwvZnVuZGluZ1JlZmVyZW5jZT4KICA8L2Z1bmRpbmdSZWZlcmVuY2VzPgo8L3Jlc291cmNlPg==","url":"https://doi.pangaea.de/10.1594/PANGAEA.721193","contentUrl":null,"metadataVersion":34,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2011-12-03T14:53:05.000Z","registered":"2009-07-17T01:23:41.000Z","published":"2007","updated":"2023-02-25T10:01:25.000Z"},"relationships":{"client":{"data":{"id":"pangaea.repository","type":"clients"}},"provider":{"data":{"id":"pangaea","type":"providers"}},"media":{"data":{"id":"10.1594/pangaea.721193","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"pangaea.repository","type":"clients","attributes":{"name":"PANGAEA","symbol":"PANGAEA.REPOSITORY","year":2020,"alternateName":"Data
+        Publisher for Earth and Environmental Science","description":"PANGAEA is a
+        data publisher for earth and environmental sciences. PANGAEA currently keeps
+        billions of data items comprised in hundred of thousands trans-disciplinary
+        data sets from all over the world. Since more than 25 years, PANGAEA is one
+        of the leading data centers for data curation, long-term data archiving and
+        publication. In contrast to generic data repositories, data curation at PANGAEA
+        includes editing of deposited data for accuracy by well-trained data editors
+        from the geological and biological domains. Since more than 10 years PANGAEA
+        assigns Digital Object Identifiers (DOI) to datasets. The PANGAEA team support
+        the further development of services for cross-linking data and paper publications
+        as well as evaluating the FAIR-ness of repositories according to the FAIR
+        principles.","language":["en"],"clientType":"repository","domains":"pangaea.de,doi.pangaea.de","re3data":"https://doi.org/10.17616/R3XS37","opendoar":null,"issn":{},"url":"https://www.pangaea.de/","created":"2020-03-11T13:58:41.000Z","updated":"2023-03-09T17:50:18.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"pangaea","type":"providers"}},"prefixes":{"data":[{"id":"10.1594","type":"prefixes"},{"id":"10.25594","type":"prefixes"}]}}}]}'
+  recorded_at: Sun, 12 Mar 2023 22:21:42 GMT
+recorded_with: VCR 6.1.0

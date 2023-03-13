@@ -4,34 +4,34 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.99999
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:21:38 GMT
+      - Sun, 12 Mar 2023 22:20:54 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=K4wGTfyxoMJkcu%2Bbl%2FZLM%2BfuedPFoapFgKZ%2FiCfRDN062AEyswuwQGIH38OVW5au2jCP5iajfOqZi4aOV7RIKRqSlGcNUOJAUuFPn%2FhfFkAbL1rXECwxSHecpY4VaVTx%2BhdSKAQ%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dG%2F6xP9%2FFU92JcibUalwBZ4BIUk3%2BgwHTrmWfWA5BTdixJnszhhXmdZ2ugmPI%2FFMafX4BZigDYct%2Bc0NsadbpHv58BDyzE4MiByhfEf8TxswAegjl2DYN7UaDGDTu0pFaI5Igu4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,11 +39,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e66be0c550ea0-AMS
+      - 7a6f6d550816b8e5-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -51,5 +51,5 @@ http_interactions:
             "status": "DOI does not exist"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:21:38 GMT
+  recorded_at: Sun, 12 Mar 2023 22:20:54 GMT
 recorded_with: VCR 6.1.0

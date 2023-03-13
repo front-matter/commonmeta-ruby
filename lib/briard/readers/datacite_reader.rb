@@ -7,21 +7,10 @@ module Briard
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
         api_url = datacite_api_url(id, options)
-        conn = Faraday.new(api_url, request: { timeout: 5 }) do |f|
-          f.request :gzip
-          f.request :json
-          # f.response :json
-        end
-        response = conn.get(api_url)
+        response = HTTP.get(api_url)
+        return { "string" => nil, "state" => "not_found" } unless response.status.success?
+
         body = JSON.parse(response.body)
-        attributes = body.dig("data", "attributes")
-        return { "string" => nil, "state" => "not_found" } unless attributes.present?
-
-        # remove the base64 encoded xml
-        attributes.delete("xml")
-        # convert the attributes to json for consitency with other readers
-        string = attributes.to_json
-
         client = Array.wrap(body.fetch("included", nil)).find do |m|
           m["type"] == "clients"
         end
@@ -30,22 +19,9 @@ module Briard
           m["provider"].present?
         end.to_h.dig("provider", "data", "id")
 
-        content_url = attributes.fetch("contentUrl",
-                                       nil) || Array.wrap(body.fetch("included",
-                                                                     nil)).select do |m|
-          m["type"] == "media"
-        end.map do |m|
-          m.dig("attributes", "url")
-        end.compact
-
-        { "string" => string,
-          "url" => attributes.fetch("url", nil),
-          "state" => attributes.fetch("state", nil),
-          "date_registered" => attributes.fetch("registered", nil),
-          "date_updated" => attributes.fetch("updated", nil),
+        { "string" => response.body.to_s,
           "provider_id" => provider_id,
-          "client_id" => client_id,
-          "content_url" => content_url }
+          "client_id" => client_id }
       end
 
       def read_datacite(string: nil, **_options)
@@ -53,7 +29,8 @@ module Briard
         return { "errors" => errors } if errors.present?
         read_options = ActiveSupport::HashWithIndifferentAccess.new(_options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
-        meta = string.present? ? JSON.parse(string).transform_keys!(&:underscore) : {}
+        meta = string.present? ? JSON.parse(string).dig('data', 'attributes') : {}
+        meta.transform_keys!(&:underscore)
         
         id = normalize_doi(meta.fetch("doi", nil))
         types = meta.fetch("types", nil)

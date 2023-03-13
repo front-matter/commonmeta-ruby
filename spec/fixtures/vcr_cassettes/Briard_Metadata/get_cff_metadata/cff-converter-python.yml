@@ -1,0 +1,200 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://raw.githubusercontent.com/citation-file-format/cff-converter-python/main/CITATION.cff
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - raw.githubusercontent.com
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '4446'
+      Cache-Control:
+      - max-age=300
+      Content-Security-Policy:
+      - default-src 'none'; style-src 'unsafe-inline'; sandbox
+      Content-Type:
+      - text/plain; charset=utf-8
+      Etag:
+      - '"4974fffdc9a25f5f89ff7e5d2ad280e99988d2efee603db8fd0f0b38eeaed7a5"'
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Github-Request-Id:
+      - 2DDA:C7B6:12108B6:130D2B6:640E5058
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 12 Mar 2023 22:21:13 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-ams21083-AMS
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1678659673.919676,VS0,VE178
+      Vary:
+      - Authorization,Accept-Encoding,Origin
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Fastly-Request-Id:
+      - 0ef8bc47accfe1d01d2ccdec5e6ec139ab213c7a
+      Expires:
+      - Sun, 12 Mar 2023 22:26:13 GMT
+      Source-Age:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: |
+        abstract: Command line program to validate and convert CITATION.cff files.
+        authors:
+          - affiliation: Netherlands eScience Center
+            family-names: Spaaks
+            given-names: Jurriaan H.
+            orcid: https://orcid.org/0000-0002-7064-4069
+          - affiliation: Netherlands eScience Center
+            family-names: Klaver
+            given-names: Tom
+          - affiliation: Netherlands eScience Center
+            family-names: Verhoeven
+            given-names: Stefan
+            orcid: https://orcid.org/0000-0002-5821-2060
+          - affiliation: Humboldt-Universität zu Berlin
+            family-names: Druskat
+            given-names: Stephan
+            orcid: https://orcid.org/0000-0003-4925-7248
+          - affiliation: University of Oslo
+            family-names: Leoncio
+            given-names: Waldir
+            name-suffix: Netto
+        cff-version: 1.2.0
+        date-released: 2021-09-22
+        identifiers:
+          - type: doi
+            value: 10.5281/zenodo.1162057
+            description: Persistent identifier for all versions of cffconvert
+          - type: doi
+            value: 10.5281/zenodo.5521767
+            description: Persistent identifier for this version of cffconvert
+          - type: url
+            value: https://github.com/citation-file-format/cff-converter-python
+            description: URL to the GitHub repository for cffconvert
+          - type: url
+            value: https://pypi.org/project/cffconvert
+            description: cffconvert on PyPI
+        keywords:
+          - bibliography
+          - BibTeX
+          - cff
+          - citation
+          - CITATION.cff
+          - CodeMeta
+          - EndNote
+          - RIS
+          - Citation File Format
+        license: Apache-2.0
+        message: If you use this software, please cite it using these metadata.
+        repository-artifact: https://pypi.org/project/cffconvert
+        repository-code: https://github.com/citation-file-format/cff-converter-python
+        title: cffconvert
+        version: 2.0.0
+        references:
+          - authors:
+              - affiliation: Netherlands eScience Center
+                family-names: Zwaan
+                given-names: Janneke
+                name-particle: van der
+                orcid: https://orcid.org/0000-0002-8329-7000
+              - affiliation: Netherlands eScience Center
+                family-names: Werkhoven
+                given-names: Ben
+                name-particle: van
+                orcid: https://orcid.org/0000-0002-7508-3272
+              - affiliation: Netherlands eScience Center
+                family-names: Andela
+                given-names: Bouwe
+                orcid: https://orcid.org/0000-0001-9005-8940
+              - affiliation: Netherlands eScience Center
+                family-names: Bos
+                given-names: Patrick
+                orcid: https://orcid.org/0000-0002-6033-960X
+              - affiliation: Netherlands eScience Center
+                family-names: Attema
+                given-names: Jisk
+                orcid: https://orcid.org/0000-0002-0948-1176
+              - affiliation: Netherlands eScience Center
+                family-names: Bakker
+                given-names: Tom
+              - affiliation: Netherlands eScience Center
+                family-names: Spaaks
+                given-names: Jurriaan H.
+                orcid: https://orcid.org/0000-0002-7064-4069
+              - affiliation: Netherlands eScience Center
+                family-names: Kuppevelt
+                given-names: Dafne
+                name-particle: van
+                orcid: https://orcid.org/0000-0002-2662-1994
+              - affiliation: Netherlands eScience Center
+                family-names: Veen
+                given-names: Lourens
+                orcid: https://orcid.org/0000-0002-6311-1168
+              - affiliation: Netherlands eScience Center
+                family-names: Rol
+                given-names: Evert
+                orcid: https://orcid.org/0000-0001-8357-4453
+              - affiliation: Netherlands eScience Center
+                family-names: Verhoeven
+                given-names: Stefan
+                orcid: https://orcid.org/0000-0002-5821-2060
+              - affiliation: Netherlands eScience Center
+                family-names: Diblen
+                given-names: Faruk
+                orcid: https://orcid.org/0000-0002-0989-929X
+              - affiliation: Netherlands eScience Center
+                family-names: Tjong Kim Sang
+                given-names: Erik
+                orcid: https://orcid.org/0000-0002-8431-081X
+            date-released: 2018-07-17
+            identifiers:
+              - description: Concept DOI for Netherlands eScience Center Python Template
+                type: doi
+                value: 10.5281/zenodo.1310751
+            keywords:
+              - cookiecutter
+              - template
+              - Python
+            license: Apache-2.0
+            repository-code: https://github.com/NLeSC/python-template
+            title: Netherlands eScience Center Python Template
+            type: software
+            version: 0.4.0
+          - authors:
+              - family-names: McAdoo
+                given-names: Timothy
+            title: How to Cite Software in APA Style
+            type: blog
+            url: >-
+              https://blog.apastyle.org/apastyle/2015/01/how-to-cite-software-in-apa-style.html
+  recorded_at: Sun, 12 Mar 2023 22:21:13 GMT
+recorded_with: VCR 6.1.0

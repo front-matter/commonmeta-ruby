@@ -4,34 +4,34 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.7554
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:20:53 GMT
+      - Sun, 12 Mar 2023 22:22:20 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5lj4ZEf8ievGykgd7%2FkPQvUwgx9Q%2FDffpFz0E0Y%2BbCsOlKjBfbGZs2eaYXDyjhy53mFhghEs0hvzo9XskoUzah8a8LTGJQh8rCltcgda%2FoS1nOwu6wjnmdbrf%2FEwVy0gnOuN5rU%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6YpeN9fc0fQj%2Bmn2ZqLvf3L4RjiZLZYvPBZHfD7NKuPlixIiUMfr6KlVM1HXUo4KqmeXvs%2F%2FJGxMYeESeDomY4Nxw439WGzt6LkT3eSng4lVEzHoi7g%2BEcyjOJCyX%2F789gOw%2Bws%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,11 +39,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e65a31e92b920-AMS
+      - 7a6f6f6fdae60be3-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -51,5 +51,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:20:53 GMT
+  recorded_at: Sun, 12 Mar 2023 22:22:20 GMT
 recorded_with: VCR 6.1.0

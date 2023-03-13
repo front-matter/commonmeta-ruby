@@ -7,18 +7,13 @@ module Briard
         return { 'string' => nil, 'state' => 'not_found' } unless id.present?
 
         url = normalize_id(id)
-        conn = Faraday.new(url, request: { timeout: 5 }) do |f|
-          f.request :gzip
-          f.request :json
-          # f.response :json
-        end
-        response = conn.get(url)
-        string = JSON.parse(response.body)
+        response = HTTP.get(url)
+        return { "string" => nil, "state" => "not_found" } unless response.status.success?
         
-        { 'string' => string }
+        { 'string' => response.body.to_s }
       end
 
-      def read_npm(string: nil, **options)
+      def read_npm(hsh: nil, **options)
         if string.present?
           errors = jsonlint(string)
           return { 'errors' => errors } if errors.present?

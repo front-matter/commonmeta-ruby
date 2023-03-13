@@ -4,26 +4,26 @@ http_interactions:
     method: get
     uri: https://api.crossref.org/works/10.2737/rds-2018-0001
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:21:12 GMT
+      - Sun, 12 Mar 2023 22:21:51 GMT
       Content-Type:
       - application/json
-      Content-Length:
-      - '2435'
+      Transfer-Encoding:
+      - chunked
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -31,8 +31,123 @@ http_interactions:
         Accept-Ranges, Cache-Control
       Access-Control-Allow-Origin:
       - "*"
-      Vary:
-      - Accept-Encoding
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,3,29]],"date-time":"2022-03-29T17:05:18Z","timestamp":1648573518641},"publisher-location":"Fort
+        Collins, CO","reference-count":6,"publisher":"Forest Service Research Data
+        Archive","funder":[{"DOI":"10.13039\/100006959","name":"U.S. Forest Service","doi-asserted-by":"publisher"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.2737\/rds-2018-0001","type":"dataset","created":{"date-parts":[[2017,8,9]],"date-time":"2017-08-09T19:44:20Z","timestamp":1502307860000},"source":"Crossref","is-referenced-by-count":1,"title":["Fledging
+        times of grassland birds"],"prefix":"10.2737","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-2583-1778","authenticated-orcid":true,"given":"Christine
+        A.","family":"Ribic","sequence":"first","affiliation":[{"name":"U.S. Geological
+        Survey"}]},{"ORCID":"http:\/\/orcid.org\/0000-0003-4606-044X","authenticated-orcid":true,"given":"Pamela
+        J.","family":"Pietz","sequence":"additional","affiliation":[{"name":"U.S.
+        Geological Survey"}]},{"given":"Nicola","family":"Koper","sequence":"additional","affiliation":[{"name":"University
+        of Manitoba"}]},{"given":"Christoph S.","family":"Ng","sequence":"additional","affiliation":[{"name":"University
+        of Manitoba"}]}],"member":"1450","reference":[{"key":"ref1","doi-asserted-by":"publisher","DOI":"10.5066\/F7V98780"},{"key":"ref2","doi-asserted-by":"publisher","DOI":"10.1016\/j.biocon.2016.11.002"},{"key":"ref3","doi-asserted-by":"publisher","DOI":"10.1642\/0004-8038(2005)122[0618:EABNGB]2.0.CO;2"},{"key":"ref4","series-title":"Studies
+        in Avian Biology","first-page":"119","volume-title":"Bird productivity and
+        nest predation in agricultural grasslands","volume":"43","author":"Ribic","year":"2012"},{"key":"ref5","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pone.0059151"},{"key":"ref6","doi-asserted-by":"publisher","DOI":"10.1674\/0003-0031-178.1.47"}],"container-title":["Forest
+        Service Research Data Archive"],"original-title":[],"deposited":{"date-parts":[[2021,7,1]],"date-time":"2021-07-01T22:10:21Z","timestamp":1625177421000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.fs.usda.gov\/rds\/archive\/Catalog\/RDS-2018-0001"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":6,"URL":"http:\/\/dx.doi.org\/10.2737\/rds-2018-0001","relation":{}}}'
+  recorded_at: Sun, 12 Mar 2023 22:21:51 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.2737
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:51 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=v4O85RPW6gNLiQlrct0d8gHkTjYk0f1kz1JGCbjEhC0gkz8CllltVwPcGo8KiP0F8YVzEZ4vKsE5MbZmbhO1MLLjYnP3wnLS20DhQKF5nKQzOfzjTY%2B5qi7fse%2BdSa6C0mLkaRc%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a6f6ebca94e1cae-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.2737",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 22:21:51 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.2737/rds-2018-0001/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:26:43 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.2737/rds-2018-0001>; rel="canonical", <http://orcid.org/0000-0003-2583-1778>;
+        title="Christine A. Ribic"; rel="author", <http://orcid.org/0000-0003-4606-044X>;
+        title="Pamela J. Pietz"; rel="author"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -51,52 +166,103 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,3,29]],"date-time":"2022-03-29T17:05:18Z","timestamp":1648573518641},"publisher-location":"Fort
-        Collins, CO","reference-count":6,"publisher":"Forest Service Research Data
-        Archive","funder":[{"DOI":"10.13039\/100006959","name":"U.S. Forest Service","doi-asserted-by":"publisher"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.2737\/rds-2018-0001","type":"dataset","created":{"date-parts":[[2017,8,9]],"date-time":"2017-08-09T19:44:20Z","timestamp":1502307860000},"source":"Crossref","is-referenced-by-count":1,"title":["Fledging
-        times of grassland birds"],"prefix":"10.2737","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-2583-1778","authenticated-orcid":true,"given":"Christine
-        A.","family":"Ribic","sequence":"first","affiliation":[{"name":"U.S. Geological
-        Survey"}]},{"ORCID":"http:\/\/orcid.org\/0000-0003-4606-044X","authenticated-orcid":true,"given":"Pamela
-        J.","family":"Pietz","sequence":"additional","affiliation":[{"name":"U.S.
-        Geological Survey"}]},{"given":"Nicola","family":"Koper","sequence":"additional","affiliation":[{"name":"University
-        of Manitoba"}]},{"given":"Christoph S.","family":"Ng","sequence":"additional","affiliation":[{"name":"University
-        of Manitoba"}]}],"member":"1450","reference":[{"key":"ref1","doi-asserted-by":"publisher","DOI":"10.5066\/F7V98780"},{"key":"ref2","doi-asserted-by":"publisher","DOI":"10.1016\/j.biocon.2016.11.002"},{"key":"ref3","doi-asserted-by":"publisher","DOI":"10.1642\/0004-8038(2005)122[0618:EABNGB]2.0.CO;2"},{"key":"ref4","series-title":"Studies
-        in Avian Biology","first-page":"119","volume-title":"Bird productivity and
-        nest predation in agricultural grasslands","volume":"43","author":"Ribic","year":"2012"},{"key":"ref5","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pone.0059151"},{"key":"ref6","doi-asserted-by":"publisher","DOI":"10.1674\/0003-0031-178.1.47"}],"container-title":["Forest
-        Service Research Data Archive"],"original-title":[],"deposited":{"date-parts":[[2021,7,1]],"date-time":"2021-07-01T22:10:21Z","timestamp":1625177421000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.fs.usda.gov\/rds\/archive\/Catalog\/RDS-2018-0001"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":6,"URL":"http:\/\/dx.doi.org\/10.2737\/rds-2018-0001","relation":{}}}'
-  recorded_at: Sun, 12 Mar 2023 19:21:12 GMT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<crossref_result xmlns=\"http://www.crossref.org/qrschema/3.0\"
+        version=\"3.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.crossref.org/qrschema/3.0
+        http://www.crossref.org/schemas/crossref_query_output3.0.xsd\">\r\n  <query_result>\r\n
+        \   <head>\r\n      <doi_batch_id>none</doi_batch_id>\r\n    </head>\r\n    <body>\r\n
+        \     <query status=\"resolved\">\r\n        <doi type=\"dataset\">10.2737/RDS-2018-0001</doi>\r\n
+        \       <crm-item name=\"publisher-name\" type=\"string\">USDA Forest Service</crm-item>\r\n
+        \       <crm-item name=\"prefix-name\" type=\"string\">USDA Forest Service,
+        Research &amp; Development</crm-item>\r\n        <crm-item name=\"member-id\"
+        type=\"number\">1450</crm-item>\r\n        <crm-item name=\"citation-id\"
+        type=\"number\">92231967</crm-item>\r\n        <crm-item name=\"book-id\"
+        type=\"number\">2005400</crm-item>\r\n        <crm-item name=\"deposit-timestamp\"
+        type=\"number\">202006041527</crm-item>\r\n        <crm-item name=\"owner-prefix\"
+        type=\"string\">10.2737</crm-item>\r\n        <crm-item name=\"last-update\"
+        type=\"date\">2021-07-01T22:10:21Z</crm-item>\r\n        <crm-item name=\"created\"
+        type=\"date\">2017-08-09T19:44:20Z</crm-item>\r\n        <crm-item name=\"citedby-count\"
+        type=\"number\">1</crm-item>\r\n        <doi_record>\r\n          <crossref
+        xmlns=\"http://www.crossref.org/xschema/1.1\" xsi:schemaLocation=\"http://www.crossref.org/xschema/1.1
+        http://doi.crossref.org/schemas/unixref1.1.xsd\">\r\n            <database>\r\n
+        \             <database_metadata language=\"en\">\r\n                <titles>\r\n
+        \                 <title>Forest Service Research Data Archive</title>\r\n
+        \               </titles>\r\n                <publisher>\r\n                  <publisher_name>Forest
+        Service Research Data Archive</publisher_name>\r\n                  <publisher_place>Fort
+        Collins, CO</publisher_place>\r\n                </publisher>\r\n              </database_metadata>\r\n
+        \             <dataset dataset_type=\"collection\">\r\n                <contributors>\r\n
+        \                 <person_name contributor_role=\"author\" sequence=\"first\">\r\n
+        \                   <given_name>Christine A.</given_name>\r\n                    <surname>Ribic</surname>\r\n
+        \                   <affiliation>U.S. Geological Survey</affiliation>\r\n
+        \                   <ORCID authenticated=\"true\">http://orcid.org/0000-0003-2583-1778</ORCID>\r\n
+        \                 </person_name>\r\n                  <person_name contributor_role=\"author\"
+        sequence=\"additional\">\r\n                    <given_name>Pamela J.</given_name>\r\n
+        \                   <surname>Pietz</surname>\r\n                    <affiliation>U.S.
+        Geological Survey</affiliation>\r\n                    <ORCID authenticated=\"true\">https://orcid.org/0000-0003-4606-044X</ORCID>\r\n
+        \                 </person_name>\r\n                  <person_name contributor_role=\"author\"
+        sequence=\"additional\">\r\n                    <given_name>Nicola</given_name>\r\n
+        \                   <surname>Koper</surname>\r\n                    <affiliation>University
+        of Manitoba</affiliation>\r\n                  </person_name>\r\n                  <person_name
+        contributor_role=\"author\" sequence=\"additional\">\r\n                    <given_name>Christoph
+        S.</given_name>\r\n                    <surname>Ng</surname>\r\n                    <affiliation>University
+        of Manitoba</affiliation>\r\n                  </person_name>\r\n                </contributors>\r\n
+        \               <titles>\r\n                  <title>Fledging times of grassland
+        birds</title>\r\n                </titles>\r\n                <program xmlns=\"http://www.crossref.org/fundref.xsd\">\r\n
+        \                 <assertion name=\"fundgroup\">\r\n                    <assertion
+        name=\"funder_name\">\r\n                      U.S. Forest Service\r\n                      <assertion
+        name=\"funder_identifier\">https://doi.org/10.13039/100006959</assertion>\r\n
+        \                   </assertion>\r\n                  </assertion>\r\n                </program>\r\n
+        \               <doi_data>\r\n                  <doi>10.2737/RDS-2018-0001</doi>\r\n
+        \                 <resource>https://www.fs.usda.gov/rds/archive/Catalog/RDS-2018-0001</resource>\r\n
+        \               </doi_data>\r\n                <citation_list>\r\n                  <citation
+        key=\"ref1\">\r\n                    <doi>10.5066/F7V98780</doi>\r\n                  </citation>\r\n
+        \                 <citation key=\"ref2\">\r\n                    <doi>10.1016/j.biocon.2016.11.002</doi>\r\n
+        \                 </citation>\r\n                  <citation key=\"ref3\">\r\n
+        \                   <doi>10.1642/0004-8038(2005)122[0618:EABNGB]2.0.CO;2</doi>\r\n
+        \                 </citation>\r\n                  <citation key=\"ref4\">\r\n
+        \                   <author>Ribic</author>\r\n                    <series_title>Studies
+        in Avian Biology</series_title>\r\n                    <volume_title>Bird
+        productivity and nest predation in agricultural grasslands</volume_title>\r\n
+        \                   <cYear>2012</cYear>\r\n                    <volume>43</volume>\r\n
+        \                   <first_page>119</first_page>\r\n                  </citation>\r\n
+        \                 <citation key=\"ref5\">\r\n                    <doi>10.1371/journal.pone.0059151</doi>\r\n
+        \                 </citation>\r\n                  <citation key=\"ref6\">\r\n
+        \                   <doi>10.1674/0003-0031-178.1.47</doi>\r\n                  </citation>\r\n
+        \               </citation_list>\r\n              </dataset>\r\n            </database>\r\n
+        \         </crossref>\r\n        </doi_record>\r\n      </query>\r\n    </body>\r\n
+        \ </query_result>\r\n</crossref_result>"
+  recorded_at: Sun, 12 Mar 2023 22:26:43 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.2737
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:21:12 GMT
+      - Mon, 13 Mar 2023 08:17:02 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eqMKnvE5MuD%2B2Cb9V6HYqpELyNc4BfXTtFTu%2F9ucoo75AoEze8L2X%2B8aioNEN4AmAvoKTFILz3wGI8quXj5eX3nIE6C4UuigMFF5tvDn8keCAcXHi2zBY8GsL11HFaSLfF2oJTw%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8j2V2lItm%2F2DtkijSp6L7n%2BF2YUfamHZ9pZ2OKoOFU%2FfpXZ46crhSWJCTPEvMNf6i87BUXFrgn2MvSTyXL6N%2BJWtaF%2BvZ2dh%2FVGneIqjotyKfTQndv7eSJJJKRJjKnaNvzu00Fs%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -104,11 +270,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e661c9a50b8b4-AMS
+      - 7a72d694bbfcd0d9-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -116,5 +282,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:21:12 GMT
+  recorded_at: Mon, 13 Mar 2023 08:17:02 GMT
 recorded_with: VCR 6.1.0

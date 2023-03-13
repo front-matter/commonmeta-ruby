@@ -4,34 +4,34 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.1371
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:27:08 GMT
+      - Sun, 12 Mar 2023 22:21:04 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=7dwphimR7TTf0sNrXuwaceRvuN27CfSpm3n%2FVM7xwt%2BY7uV04Ar%2BvGL8edgvQ8p1i4yiKkNvrrRUT1VCq5gHCC8KeyVa0mj4n6g8zM7H8Jtf%2BCJ2lAQOy2QE76Hx9GGHDqt%2BDQs%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vdzN387%2FKOeAsTYOpNL97ysDyOlhkQyWUwxY0r21m52uP0Q6aXKsCDryikP3zvUp7qVSlHIukqzOoe5TzAO70bOYIoUzuDvKi0Pcf5ZHfXyiTxCZLawayyLj3D9aM3a4MWYE%2B%2F4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,11 +39,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e6ecc891b0e86-AMS
+      - 7a6f6d96df1fb791-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -51,5 +51,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:27:08 GMT
+  recorded_at: Sun, 12 Mar 2023 22:21:04 GMT
 recorded_with: VCR 6.1.0

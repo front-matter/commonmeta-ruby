@@ -4,26 +4,26 @@ http_interactions:
     method: get
     uri: https://api.crossref.org/works/10.14264/uql.2020.791
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:20:58 GMT
+      - Sun, 12 Mar 2023 22:22:01 GMT
       Content-Type:
       - application/json
-      Content-Length:
-      - '1438'
+      Transfer-Encoding:
+      - chunked
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -31,8 +31,116 @@ http_interactions:
         Accept-Ranges, Cache-Control
       Access-Control-Allow-Origin:
       - "*"
-      Vary:
-      - Accept-Encoding
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":[{"name":"The
+        University of Queensland","department":["School of Social Science"]}],"indexed":{"date-parts":[[2022,4,3]],"date-time":"2022-04-03T00:57:13Z","timestamp":1648947433930},"reference-count":0,"publisher":"University
+        of Queensland Library","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.14264\/uql.2020.791","type":"dissertation","created":{"date-parts":[[2020,6,8]],"date-time":"2020-06-08T05:08:58Z","timestamp":1591592938000},"approved":{"date-parts":[[2020,5,25]]},"source":"Crossref","is-referenced-by-count":0,"title":["School
+        truancy and financial independence during emerging adulthood: a longitudinal
+        analysis of receipt of and reliance on cash transfers"],"prefix":"10.14264","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-3086-4443","authenticated-orcid":true,"given":"Patricia
+        Maree","family":"Collingwood","sequence":"first","affiliation":[]}],"member":"5387","container-title":[],"original-title":[],"deposited":{"date-parts":[[2020,6,8]],"date-time":"2020-06-08T05:08:59Z","timestamp":1591592939000},"score":1,"degree":["PhD
+        Thesis"],"resource":{"primary":{"URL":"http:\/\/espace.library.uq.edu.au\/view\/UQ:23a1e74"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.14264\/uql.2020.791","relation":{}}}'
+  recorded_at: Sun, 12 Mar 2023 22:22:01 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.14264
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:22:02 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mP%2FxHiFZS4veMLpCSs%2F%2FqN329YgUqt63XXEkCaVm2MDKDi4HWf8VVkuSRiIKSGONGfLpW4LIdLL1sxQK92gpw8rVKjy4BLM9wKuFt%2BIR5a0naWLlPeUJw43ZvyDpovP3hJ0EhCs%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a6f6effa96b1c77-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.14264",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 22:22:02 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.14264/uql.2020.791/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:27:06 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.14264/uql.2020.791>; rel="canonical", <http://orcid.org/0000-0003-3086-4443>;
+        title="Patricia Maree Collingwood"; rel="author"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -51,64 +159,37 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":[{"name":"The
-        University of Queensland","department":["School of Social Science"]}],"indexed":{"date-parts":[[2022,4,3]],"date-time":"2022-04-03T00:57:13Z","timestamp":1648947433930},"reference-count":0,"publisher":"University
-        of Queensland Library","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.14264\/uql.2020.791","type":"dissertation","created":{"date-parts":[[2020,6,8]],"date-time":"2020-06-08T05:08:58Z","timestamp":1591592938000},"approved":{"date-parts":[[2020,5,25]]},"source":"Crossref","is-referenced-by-count":0,"title":["School
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<crossref_result xmlns=\"http://www.crossref.org/qrschema/3.0\"
+        version=\"3.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.crossref.org/qrschema/3.0
+        http://www.crossref.org/schemas/crossref_query_output3.0.xsd\">\r\n  <query_result>\r\n
+        \   <head>\r\n      <doi_batch_id>none</doi_batch_id>\r\n    </head>\r\n    <body>\r\n
+        \     <query status=\"resolved\">\r\n        <doi type=\"dissertation\">10.14264/uql.2020.791</doi>\r\n
+        \       <crm-item name=\"publisher-name\" type=\"string\">University of Queensland
+        Library</crm-item>\r\n        <crm-item name=\"prefix-name\" type=\"string\">University
+        of Queensland Library</crm-item>\r\n        <crm-item name=\"member-id\" type=\"number\">5387</crm-item>\r\n
+        \       <crm-item name=\"citation-id\" type=\"number\">116937436</crm-item>\r\n
+        \       <crm-item name=\"book-id\" type=\"number\">1346666</crm-item>\r\n
+        \       <crm-item name=\"deposit-timestamp\" type=\"number\">1591592933</crm-item>\r\n
+        \       <crm-item name=\"owner-prefix\" type=\"string\">10.14264</crm-item>\r\n
+        \       <crm-item name=\"last-update\" type=\"date\">2020-06-08T05:08:59Z</crm-item>\r\n
+        \       <crm-item name=\"created\" type=\"date\">2020-06-08T05:08:58Z</crm-item>\r\n
+        \       <crm-item name=\"citedby-count\" type=\"number\">0</crm-item>\r\n
+        \       <doi_record>\r\n          <crossref xmlns=\"http://www.crossref.org/xschema/1.1\"
+        xsi:schemaLocation=\"http://www.crossref.org/xschema/1.1 http://doi.crossref.org/schemas/unixref1.1.xsd\">\r\n
+        \           <dissertation>\r\n              <person_name sequence=\"first\"
+        contributor_role=\"author\">\r\n                <given_name>Patricia Maree</given_name>\r\n
+        \               <surname>Collingwood</surname>\r\n                <ORCID authenticated=\"true\">https://orcid.org/0000-0003-3086-4443</ORCID>\r\n
+        \             </person_name>\r\n              <titles>\r\n                <title>School
         truancy and financial independence during emerging adulthood: a longitudinal
-        analysis of receipt of and reliance on cash transfers"],"prefix":"10.14264","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-3086-4443","authenticated-orcid":true,"given":"Patricia
-        Maree","family":"Collingwood","sequence":"first","affiliation":[]}],"member":"5387","container-title":[],"original-title":[],"deposited":{"date-parts":[[2020,6,8]],"date-time":"2020-06-08T05:08:59Z","timestamp":1591592939000},"score":1,"degree":["PhD
-        Thesis"],"resource":{"primary":{"URL":"http:\/\/espace.library.uq.edu.au\/view\/UQ:23a1e74"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.14264\/uql.2020.791","relation":{}}}'
-  recorded_at: Sun, 12 Mar 2023 19:20:58 GMT
-- request:
-    method: get
-    uri: https://doi.org/ra/10.14264
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 12 Mar 2023 19:20:59 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eu7qnQxLqKmtPimKCCMoSRO7WDdl739fZpSLuKOdSIHdPNZDebPIUueotBrWgm0qLiJKzktVOm0wdnGb6cT%2FToauK1g6bg865EtnODpBfDPp1EVGfG%2BB9EOaXxd1QRSrboQJ%2BGQ%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7a6e65c84c89b88b-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        [
-          {
-            "DOI": "10.14264",
-            "RA": "Crossref"
-          }
-        ]
-  recorded_at: Sun, 12 Mar 2023 19:20:59 GMT
+        analysis of receipt of and reliance on cash transfers</title>\r\n              </titles>\r\n
+        \             <approval_date>\r\n                <month>05</month>\r\n                <day>25</day>\r\n
+        \               <year>2020</year>\r\n              </approval_date>\r\n              <institution>\r\n
+        \               <institution_name>The University of Queensland</institution_name>\r\n
+        \               <institution_department>School of Social Science</institution_department>\r\n
+        \             </institution>\r\n              <degree>PhD Thesis</degree>\r\n
+        \             <doi_data>\r\n                <doi>10.14264/uql.2020.791</doi>\r\n
+        \               <resource>http://espace.library.uq.edu.au/view/UQ:23a1e74</resource>\r\n
+        \             </doi_data>\r\n            </dissertation>\r\n          </crossref>\r\n
+        \       </doi_record>\r\n      </query>\r\n    </body>\r\n  </query_result>\r\n</crossref_result>"
+  recorded_at: Sun, 12 Mar 2023 22:27:06 GMT
 recorded_with: VCR 6.1.0

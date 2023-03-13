@@ -4,26 +4,26 @@ http_interactions:
     method: get
     uri: https://api.crossref.org/works/10.2973/odp.proc.ir.180.2000
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:21:00 GMT
+      - Sun, 12 Mar 2023 22:22:07 GMT
       Content-Type:
       - application/json
-      Content-Length:
-      - '1459'
+      Transfer-Encoding:
+      - chunked
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -31,8 +31,113 @@ http_interactions:
         Accept-Ranges, Cache-Control
       Access-Control-Allow-Origin:
       - "*"
-      Vary:
-      - Accept-Encoding
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,9,13]],"date-time":"2022-09-13T23:30:27Z","timestamp":1663111827500},"reference-count":0,"publisher":"Ocean
+        Drilling Program","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.2973\/odp.proc.ir.180.2000","type":"monograph","created":{"date-parts":[[2006,10,17]],"date-time":"2006-10-17T15:50:37Z","timestamp":1161100237000},"source":"Crossref","is-referenced-by-count":11,"title":["Proceedings
+        of the Ocean Drilling Program, 180 Initial Reports"],"prefix":"10.2973","member":"1029","published-online":{"date-parts":[[2000,2,4]]},"container-title":["Proceedings
+        of the Ocean Drilling Program"],"original-title":[],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T16:19:43Z","timestamp":1233591583000},"score":1,"resource":{"primary":{"URL":"http:\/\/www-odp.tamu.edu\/publications\/180_IR\/180TOC.HTM"}},"subtitle":[],"editor":[{"given":"B.","family":"Taylor","sequence":"first","affiliation":[]},{"given":"P.","family":"Huchon","sequence":"additional","affiliation":[]},{"given":"A.","family":"Klaus","sequence":"additional","affiliation":[]},{"name":"et
+        al.","sequence":"additional","affiliation":[]}],"short-title":[],"issued":{"date-parts":[[2000,2,4]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.2973\/odp.proc.ir.180.2000","relation":{},"published":{"date-parts":[[2000,2,4]]}}}'
+  recorded_at: Sun, 12 Mar 2023 22:22:07 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.2973
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:22:07 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=hCxpaxxqXJRsC%2BFVfKJABYGwJ607AQYlaB5zeOzv8WAFlvUuRXFMIb8Y4A0bpeTYa3qKtskjo1%2BdaU1q%2BHy1N%2BclH2ZwKUjEuLPxE39jR8xgWq3KXgjLM40UsSftBGQkBKLnwF0%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a6f6f22ce190e48-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.2973",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 22:22:07 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.2973/odp.proc.ir.180.2000/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:26:52 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.2973/odp.proc.ir.180.2000>; rel="canonical"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -51,62 +156,47 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,9,13]],"date-time":"2022-09-13T23:30:27Z","timestamp":1663111827500},"reference-count":0,"publisher":"Ocean
-        Drilling Program","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.2973\/odp.proc.ir.180.2000","type":"monograph","created":{"date-parts":[[2006,10,17]],"date-time":"2006-10-17T15:50:37Z","timestamp":1161100237000},"source":"Crossref","is-referenced-by-count":11,"title":["Proceedings
-        of the Ocean Drilling Program, 180 Initial Reports"],"prefix":"10.2973","member":"1029","published-online":{"date-parts":[[2000,2,4]]},"container-title":["Proceedings
-        of the Ocean Drilling Program"],"original-title":[],"deposited":{"date-parts":[[2009,2,2]],"date-time":"2009-02-02T16:19:43Z","timestamp":1233591583000},"score":1,"resource":{"primary":{"URL":"http:\/\/www-odp.tamu.edu\/publications\/180_IR\/180TOC.HTM"}},"subtitle":[],"editor":[{"given":"B.","family":"Taylor","sequence":"first","affiliation":[]},{"given":"P.","family":"Huchon","sequence":"additional","affiliation":[]},{"given":"A.","family":"Klaus","sequence":"additional","affiliation":[]},{"name":"et
-        al.","sequence":"additional","affiliation":[]}],"short-title":[],"issued":{"date-parts":[[2000,2,4]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.2973\/odp.proc.ir.180.2000","relation":{},"published":{"date-parts":[[2000,2,4]]}}}'
-  recorded_at: Sun, 12 Mar 2023 19:21:00 GMT
-- request:
-    method: get
-    uri: https://doi.org/ra/10.2973
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 12 Mar 2023 19:21:01 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=QEuUfOsQyxUYJkFOI25RbwmdFO%2FMq7wQM05AKP3YVIQ4cKwn2mkjj%2BuTS5M%2BIhrePuPv82W%2BysE6MKkHyn285bKjOIQlbZeb1Ni7FcVGVhs8FvDBZbvOjpyoyu8cKrJl9KmFVcA%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7a6e65d49aa1b8cc-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        [
-          {
-            "DOI": "10.2973",
-            "RA": "Crossref"
-          }
-        ]
-  recorded_at: Sun, 12 Mar 2023 19:21:01 GMT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<crossref_result xmlns=\"http://www.crossref.org/qrschema/3.0\"
+        version=\"3.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.crossref.org/qrschema/3.0
+        http://www.crossref.org/schemas/crossref_query_output3.0.xsd\">\r\n  <query_result>\r\n
+        \   <head>\r\n      <doi_batch_id>none</doi_batch_id>\r\n    </head>\r\n    <body>\r\n
+        \     <query status=\"resolved\">\r\n        <doi type=\"book_title\">10.2973/odp.proc.ir.180.2000</doi>\r\n
+        \       <crm-item name=\"publisher-name\" type=\"string\">International Ocean
+        Discovery Program (IODP)</crm-item>\r\n        <crm-item name=\"prefix-name\"
+        type=\"string\">International Ocean Discovery Program Texas</crm-item>\r\n
+        \       <crm-item name=\"member-id\" type=\"number\">1029</crm-item>\r\n        <crm-item
+        name=\"citation-id\" type=\"number\">23807285</crm-item>\r\n        <crm-item
+        name=\"book-id\" type=\"number\">284099</crm-item>\r\n        <crm-item name=\"series-id\"
+        type=\"number\">283327</crm-item>\r\n        <crm-item name=\"deposit-timestamp\"
+        type=\"number\">20061017201744</crm-item>\r\n        <crm-item name=\"owner-prefix\"
+        type=\"string\">10.2973</crm-item>\r\n        <crm-item name=\"last-update\"
+        type=\"date\">2009-02-02T21:19:43Z</crm-item>\r\n        <crm-item name=\"created\"
+        type=\"date\">2006-10-17T19:50:37Z</crm-item>\r\n        <crm-item name=\"citedby-count\"
+        type=\"number\">11</crm-item>\r\n        <doi_record>\r\n          <crossref
+        xmlns=\"http://www.crossref.org/xschema/1.0\" xsi:schemaLocation=\"http://www.crossref.org/xschema/1.0
+        http://doi.crossref.org/schemas/unixref1.0.xsd\">\r\n            <book book_type=\"monograph\">\r\n
+        \             <book_metadata language=\"en\">\r\n                <contributors>\r\n
+        \                 <person_name sequence=\"first\" contributor_role=\"editor\">\r\n
+        \                   <given_name>B.</given_name>\r\n                    <surname>Taylor</surname>\r\n
+        \                 </person_name>\r\n                  <person_name sequence=\"additional\"
+        contributor_role=\"editor\">\r\n                    <given_name>P.</given_name>\r\n
+        \                   <surname>Huchon</surname>\r\n                  </person_name>\r\n
+        \                 <person_name sequence=\"additional\" contributor_role=\"editor\">\r\n
+        \                   <given_name>A.</given_name>\r\n                    <surname>Klaus</surname>\r\n
+        \                 </person_name>\r\n                  <organization sequence=\"additional\"
+        contributor_role=\"editor\">et al.</organization>\r\n                </contributors>\r\n
+        \               <titles>\r\n                  <title>Proceedings of the Ocean
+        Drilling Program, 180 Initial Reports</title>\r\n                </titles>\r\n
+        \               <series_metadata>\r\n                  <titles>\r\n                    <title>Proceedings
+        of the Ocean Drilling Program</title>\r\n                  </titles>\r\n                </series_metadata>\r\n
+        \               <volume>180</volume>\r\n                <publication_date
+        media_type=\"online\">\r\n                  <month>02</month>\r\n                  <day>04</day>\r\n
+        \                 <year>2000</year>\r\n                </publication_date>\r\n
+        \               <publisher>\r\n                  <publisher_name>Ocean Drilling
+        Program</publisher_name>\r\n                </publisher>\r\n                <doi_data>\r\n
+        \                 <doi>10.2973/odp.proc.ir.180.2000</doi>\r\n                  <resource>http://www-odp.tamu.edu/publications/180_IR/180TOC.HTM</resource>\r\n
+        \               </doi_data>\r\n              </book_metadata>\r\n            </book>\r\n
+        \         </crossref>\r\n        </doi_record>\r\n      </query>\r\n    </body>\r\n
+        \ </query_result>\r\n</crossref_result>"
+  recorded_at: Sun, 12 Mar 2023 22:26:52 GMT
 recorded_with: VCR 6.1.0

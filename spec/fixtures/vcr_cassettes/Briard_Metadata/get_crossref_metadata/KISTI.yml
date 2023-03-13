@@ -2,28 +2,80 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.crossref.org/works/10.5012/bkcs.2013.34.10.2889
+    uri: https://doi.org/ra/10.5012
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:20:58 GMT
+      - Sun, 12 Mar 2023 22:21:53 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gTBmUtu70DOyj%2F9bx2E33NzUD%2BXHKfX%2BsBbDUgwemfL7h9NrFJE8g40N4uxPYUVvzcN30%2BgB%2BfD07wZG1i4OyvHvlZFRk7UoPddm5yhHYii0eXvBCDUXvy1aPSL7Skb0hwrtML0%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a6f6eca5f01b8f7-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.5012",
+            "RA": "KISTI"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 22:21:53 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.5012/bkcs.2013.34.10.2889
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:54 GMT
       Content-Type:
       - application/json
-      Content-Length:
-      - '2301'
+      Transfer-Encoding:
+      - chunked
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -31,8 +83,116 @@ http_interactions:
         Accept-Ranges, Cache-Control
       Access-Control-Allow-Origin:
       - "*"
-      Vary:
-      - Accept-Encoding
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,8,15]],"date-time":"2022-08-15T09:26:44Z","timestamp":1660555604788},"reference-count":0,"publisher":"Korean
+        Chemical Society","issue":"10","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Bulletin
+        of the Korean Chemical Society"],"published-print":{"date-parts":[[2013,10,20]]},"DOI":"10.5012\/bkcs.2013.34.10.2889","type":"journal-article","created":{"date-parts":[[2013,11,25]],"date-time":"2013-11-25T08:03:35Z","timestamp":1385366615000},"page":"2889-2894","source":"Crossref","is-referenced-by-count":3,"title":["Synthesis,
+        Crystal Structure and Theoretical Calculation of a Novel Nickel(II) Complex
+        with Dibromotyrosine and 1,10-Phenanthroline"],"prefix":"10.5012","volume":"34","author":[{"given":"Guimei","family":"Huang","sequence":"first","affiliation":[]},{"given":"Xia","family":"Zhang","sequence":"additional","affiliation":[]},{"given":"Yuhua","family":"Fan","sequence":"additional","affiliation":[]},{"given":"Caifeng","family":"Bi","sequence":"additional","affiliation":[]},{"given":"Xingchen","family":"Yan","sequence":"additional","affiliation":[]},{"given":"Zhongyu","family":"Zhang","sequence":"additional","affiliation":[]},{"given":"Nan","family":"Zhang","sequence":"additional","affiliation":[]}],"member":"2923","container-title":["Bulletin
+        of the Korean Chemical Society"],"original-title":[""],"language":"en","link":[{"URL":"http:\/\/ocean.kisti.re.kr\/downfile\/crosscheck\/chemical\/JAKO201332479081554.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,15]],"date-time":"2016-12-15T02:40:52Z","timestamp":1481769652000},"score":1,"resource":{"primary":{"URL":"http:\/\/koreascience.or.kr\/journal\/view.jsp?kj=JCGMCS&py=2013&vnc=v34n10&sp=2889"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2013,10,20]]},"references-count":0,"journal-issue":{"issue":"10","published-print":{"date-parts":[[2013,10,20]]}},"URL":"http:\/\/dx.doi.org\/10.5012\/bkcs.2013.34.10.2889","relation":{},"ISSN":["0253-2964"],"issn-type":[{"value":"0253-2964","type":"print"}],"subject":["General
+        Chemistry"],"published":{"date-parts":[[2013,10,20]]}}}'
+  recorded_at: Sun, 12 Mar 2023 22:21:54 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.5012
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:54 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1YPRoEoVq7%2FfAhxCjwNEtTEPCxHOjd%2Fbd96ZUotJLRsBGoq63vakxYlaVYFds1zvr%2FUrWVRpJTe%2FQzyOK76lX7v85wRcefpQofHKcIrt5ot4GZc%2F3WvngvSsF%2FZP%2FEjvPWmeSE0%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a6f6ecf8ea1b903-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.5012",
+            "RA": "KISTI"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 22:21:54 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.5012/bkcs.2013.34.10.2889/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:26:59 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.5012/bkcs.2013.34.10.2889>; rel="canonical", <http://ocean.kisti.re.kr/downfile/crosscheck/chemical/JAKO201332479081554.pdf>;
+        version="vor"; rel="item"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -51,64 +211,66 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,8,15]],"date-time":"2022-08-15T09:26:44Z","timestamp":1660555604788},"reference-count":0,"publisher":"Korean
-        Chemical Society","issue":"10","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Bulletin
-        of the Korean Chemical Society"],"published-print":{"date-parts":[[2013,10,20]]},"DOI":"10.5012\/bkcs.2013.34.10.2889","type":"journal-article","created":{"date-parts":[[2013,11,25]],"date-time":"2013-11-25T08:03:35Z","timestamp":1385366615000},"page":"2889-2894","source":"Crossref","is-referenced-by-count":3,"title":["Synthesis,
-        Crystal Structure and Theoretical Calculation of a Novel Nickel(II) Complex
-        with Dibromotyrosine and 1,10-Phenanthroline"],"prefix":"10.5012","volume":"34","author":[{"given":"Guimei","family":"Huang","sequence":"first","affiliation":[]},{"given":"Xia","family":"Zhang","sequence":"additional","affiliation":[]},{"given":"Yuhua","family":"Fan","sequence":"additional","affiliation":[]},{"given":"Caifeng","family":"Bi","sequence":"additional","affiliation":[]},{"given":"Xingchen","family":"Yan","sequence":"additional","affiliation":[]},{"given":"Zhongyu","family":"Zhang","sequence":"additional","affiliation":[]},{"given":"Nan","family":"Zhang","sequence":"additional","affiliation":[]}],"member":"2923","container-title":["Bulletin
-        of the Korean Chemical Society"],"original-title":[""],"language":"en","link":[{"URL":"http:\/\/ocean.kisti.re.kr\/downfile\/crosscheck\/chemical\/JAKO201332479081554.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,12,15]],"date-time":"2016-12-15T02:40:52Z","timestamp":1481769652000},"score":1,"resource":{"primary":{"URL":"http:\/\/koreascience.or.kr\/journal\/view.jsp?kj=JCGMCS&py=2013&vnc=v34n10&sp=2889"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2013,10,20]]},"references-count":0,"journal-issue":{"issue":"10","published-print":{"date-parts":[[2013,10,20]]}},"URL":"http:\/\/dx.doi.org\/10.5012\/bkcs.2013.34.10.2889","relation":{},"ISSN":["0253-2964"],"issn-type":[{"value":"0253-2964","type":"print"}],"subject":["General
-        Chemistry"],"published":{"date-parts":[[2013,10,20]]}}}'
-  recorded_at: Sun, 12 Mar 2023 19:20:58 GMT
-- request:
-    method: get
-    uri: https://doi.org/ra/10.5012
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 12 Mar 2023 19:20:58 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kUFf3G2ImeRfJcOxB9vudbT8Is1epsYgC3L3g4vBf1jyprcjJ7mrvrRWKAx65lUKVdxImmtSiRIzFU5dvMjwmK%2B7%2Fg92HD6K2XE%2Ft9yRsGO98NCT%2FZ%2FEaXjFOh8EcetXErDiEpU%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7a6e65c43a08b900-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        [
-          {
-            "DOI": "10.5012",
-            "RA": "KISTI"
-          }
-        ]
-  recorded_at: Sun, 12 Mar 2023 19:20:58 GMT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<crossref_result xmlns=\"http://www.crossref.org/qrschema/3.0\"
+        version=\"3.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.crossref.org/qrschema/3.0
+        http://www.crossref.org/schemas/crossref_query_output3.0.xsd\">\r\n  <query_result>\r\n
+        \   <head>\r\n      <doi_batch_id>none</doi_batch_id>\r\n    </head>\r\n    <body>\r\n
+        \     <query status=\"resolved\">\r\n        <doi type=\"journal_article\">10.5012/bkcs.2013.34.10.2889</doi>\r\n
+        \       <crm-item name=\"publisher-name\" type=\"string\">Korean Chemical
+        Society</crm-item>\r\n        <crm-item name=\"prefix-name\" type=\"string\">Korean
+        Chemical Society</crm-item>\r\n        <crm-item name=\"member-id\" type=\"number\">2923</crm-item>\r\n
+        \       <crm-item name=\"citation-id\" type=\"number\">65745032</crm-item>\r\n
+        \       <crm-item name=\"journal-id\" type=\"number\">98185</crm-item>\r\n
+        \       <crm-item name=\"deposit-timestamp\" type=\"number\">20131125165312</crm-item>\r\n
+        \       <crm-item name=\"owner-prefix\" type=\"string\">10.5012</crm-item>\r\n
+        \       <crm-item name=\"last-update\" type=\"date\">2016-12-15T02:40:52Z</crm-item>\r\n
+        \       <crm-item name=\"created\" type=\"date\">2013-11-25T08:03:35Z</crm-item>\r\n
+        \       <crm-item name=\"citedby-count\" type=\"number\">3</crm-item>\r\n
+        \       <doi_record>\r\n          <crossref xmlns=\"http://www.crossref.org/xschema/1.1\"
+        xsi:schemaLocation=\"http://www.crossref.org/xschema/1.1 http://doi.crossref.org/schemas/unixref1.1.xsd\">\r\n
+        \           <journal>\r\n              <journal_metadata language=\"en\">\r\n
+        \               <full_title>Bulletin of the Korean Chemical Society</full_title>\r\n
+        \               <abbrev_title>Bulletin of the Korean Chemical Society</abbrev_title>\r\n
+        \               <issn media_type=\"print\">0253-2964</issn>\r\n              </journal_metadata>\r\n
+        \             <journal_issue>\r\n                <publication_date media_type=\"print\">\r\n
+        \                 <month>10</month>\r\n                  <day>20</day>\r\n
+        \                 <year>2013</year>\r\n                </publication_date>\r\n
+        \               <journal_volume>\r\n                  <volume>34</volume>\r\n
+        \               </journal_volume>\r\n                <issue>10</issue>\r\n
+        \             </journal_issue>\r\n              <journal_article publication_type=\"full_text\">\r\n
+        \               <titles>\r\n                  <title>Synthesis, Crystal Structure
+        and Theoretical Calculation of a Novel Nickel(II) Complex with Dibromotyrosine
+        and 1,10-Phenanthroline</title>\r\n                  <original_language_title
+        />\r\n                </titles>\r\n                <contributors>\r\n                  <person_name
+        sequence=\"first\" contributor_role=\"author\">\r\n                    <given_name>Guimei</given_name>\r\n
+        \                   <surname>Huang</surname>\r\n                  </person_name>\r\n
+        \                 <person_name sequence=\"additional\" contributor_role=\"author\">\r\n
+        \                   <given_name>Xia</given_name>\r\n                    <surname>Zhang</surname>\r\n
+        \                 </person_name>\r\n                  <person_name sequence=\"additional\"
+        contributor_role=\"author\">\r\n                    <given_name>Yuhua</given_name>\r\n
+        \                   <surname>Fan</surname>\r\n                  </person_name>\r\n
+        \                 <person_name sequence=\"additional\" contributor_role=\"author\">\r\n
+        \                   <given_name>Caifeng</given_name>\r\n                    <surname>Bi</surname>\r\n
+        \                 </person_name>\r\n                  <person_name sequence=\"additional\"
+        contributor_role=\"author\">\r\n                    <given_name>Xingchen</given_name>\r\n
+        \                   <surname>Yan</surname>\r\n                  </person_name>\r\n
+        \                 <person_name sequence=\"additional\" contributor_role=\"author\">\r\n
+        \                   <given_name>Zhongyu</given_name>\r\n                    <surname>Zhang</surname>\r\n
+        \                 </person_name>\r\n                  <person_name sequence=\"additional\"
+        contributor_role=\"author\">\r\n                    <given_name>Nan</given_name>\r\n
+        \                   <surname>Zhang</surname>\r\n                  </person_name>\r\n
+        \               </contributors>\r\n                <publication_date media_type=\"print\">\r\n
+        \                 <month>10</month>\r\n                  <day>20</day>\r\n
+        \                 <year>2013</year>\r\n                </publication_date>\r\n
+        \               <pages>\r\n                  <first_page>2889</first_page>\r\n
+        \                 <last_page>2894</last_page>\r\n                </pages>\r\n
+        \               <publisher_item>\r\n                  <item_number>JCGMCS_2013_v34n10_2889</item_number>\r\n
+        \               </publisher_item>\r\n                <doi_data>\r\n                  <doi>10.5012/bkcs.2013.34.10.2889</doi>\r\n
+        \                 <resource>http://koreascience.or.kr/journal/view.jsp?kj=JCGMCS&amp;py=2013&amp;vnc=v34n10&amp;sp=2889</resource>\r\n
+        \                 <collection property=\"crawler-based\">\r\n                    <item
+        crawler=\"iParadigms\">\r\n                      <resource>http://ocean.kisti.re.kr/downfile/crosscheck/chemical/JAKO201332479081554.pdf</resource>\r\n
+        \                   </item>\r\n                  </collection>\r\n                </doi_data>\r\n
+        \             </journal_article>\r\n            </journal>\r\n          </crossref>\r\n
+        \       </doi_record>\r\n      </query>\r\n    </body>\r\n  </query_result>\r\n</crossref_result>"
+  recorded_at: Sun, 12 Mar 2023 22:26:59 GMT
 recorded_with: VCR 6.1.0

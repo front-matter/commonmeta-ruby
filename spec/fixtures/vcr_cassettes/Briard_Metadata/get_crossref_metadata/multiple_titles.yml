@@ -4,26 +4,26 @@ http_interactions:
     method: get
     uri: https://api.crossref.org/works/10.4000/dms.865
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:21:11 GMT
+      - Sun, 12 Mar 2023 22:22:14 GMT
       Content-Type:
       - application/json
-      Content-Length:
-      - '2562'
+      Transfer-Encoding:
+      - chunked
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -31,8 +31,112 @@ http_interactions:
         Accept-Ranges, Cache-Control
       Access-Control-Allow-Origin:
       - "*"
-      Vary:
-      - Accept-Encoding
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,12,19]],"date-time":"2022-12-19T16:56:26Z","timestamp":1671468986336},"reference-count":14,"publisher":"OpenEdition","issue":"8","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["dms"],"DOI":"10.4000\/dms.865","type":"journal-article","created":{"date-parts":[[2015,2,1]],"date-time":"2015-02-01T04:53:39Z","timestamp":1422766419000},"source":"Crossref","is-referenced-by-count":12,"title":["Distances,
+        absence, proximit\u00e9s et pr\u00e9sences\u00a0: des concepts en d\u00e9placement"],"prefix":"10.4000","volume":"2","author":[{"given":"Daniel","family":"Peraya","sequence":"first","affiliation":[]}],"member":"2399","published-online":{"date-parts":[[2014,12,14]]},"reference":[{"key":"ref0","doi-asserted-by":"publisher","DOI":"10.3166\/ds.9.313-330"},{"key":"ref1","doi-asserted-by":"publisher","DOI":"10.3166\/ds.4.469-496"},{"key":"ref2","doi-asserted-by":"publisher","DOI":"10.3917\/puf.charl.2010.01"},{"key":"ref3","doi-asserted-by":"publisher","DOI":"10.21236\/ADA128980"},{"key":"ref4","doi-asserted-by":"publisher","DOI":"10.1109\/HICSS.1999.772701"},{"key":"ref5","doi-asserted-by":"publisher","DOI":"10.3917\/dbu.guir.2002.01"},{"key":"ref6","doi-asserted-by":"publisher","DOI":"10.14375\/NP.9782710126720"},{"key":"ref7","doi-asserted-by":"publisher","DOI":"10.3406\/rfp.1993.1305"},{"key":"ref8","doi-asserted-by":"publisher","DOI":"10.3166\/ds.5.341-366"},{"key":"ref9","doi-asserted-by":"publisher","DOI":"10.3166\/ds.9.565-590"},{"key":"ref10","doi-asserted-by":"publisher","DOI":"10.4000\/dms.797"},{"key":"ref11","doi-asserted-by":"publisher","DOI":"10.4000\/questionsdecommunication.6590"},{"key":"ref12","doi-asserted-by":"publisher","DOI":"10.4267\/2042\/14983"},{"key":"ref13","doi-asserted-by":"publisher","DOI":"10.4324\/9780203052945"}],"container-title":["Distances
+        et m\u00e9diations des savoirs"],"original-title":[],"deposited":{"date-parts":[[2022,5,2]],"date-time":"2022-05-02T09:30:36Z","timestamp":1651483836000},"score":1,"resource":{"primary":{"URL":"http:\/\/journals.openedition.org\/dms\/865"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2014,12,14]]},"references-count":14,"journal-issue":{"issue":"8","published-online":{"date-parts":[[2014,12,14]]}},"URL":"http:\/\/dx.doi.org\/10.4000\/dms.865","relation":{},"ISSN":["2264-7228"],"issn-type":[{"value":"2264-7228","type":"electronic"}],"subject":["General
+        Medicine"],"published":{"date-parts":[[2014,12,14]]}}}'
+  recorded_at: Sun, 12 Mar 2023 22:22:14 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.4000
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:22:14 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=JAK2BDMNk9BJ5s7T3fkJZomAlulB7%2FkIbnWQUE0K5KxXGDXfDR4OpHFeuVBHuSw5aajakKDfMXME7DXjRHQZB%2BL8b2xOhHRhm%2FYCsWAncPvLR5medvPAkLXFid5YsLBkGZa%2FEZk%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a6f6f4cbd2fb8f1-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.4000",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 22:22:14 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.4000/dms.865/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:26:47 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.4000/dms.865>; rel="canonical"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -51,61 +155,7 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,12,19]],"date-time":"2022-12-19T16:56:26Z","timestamp":1671468986336},"reference-count":14,"publisher":"OpenEdition","issue":"8","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["dms"],"DOI":"10.4000\/dms.865","type":"journal-article","created":{"date-parts":[[2015,2,1]],"date-time":"2015-02-01T04:53:39Z","timestamp":1422766419000},"source":"Crossref","is-referenced-by-count":12,"title":["Distances,
-        absence, proximit\u00e9s et pr\u00e9sences\u00a0: des concepts en d\u00e9placement"],"prefix":"10.4000","volume":"2","author":[{"given":"Daniel","family":"Peraya","sequence":"first","affiliation":[]}],"member":"2399","published-online":{"date-parts":[[2014,12,14]]},"reference":[{"key":"ref0","doi-asserted-by":"publisher","DOI":"10.3166\/ds.9.313-330"},{"key":"ref1","doi-asserted-by":"publisher","DOI":"10.3166\/ds.4.469-496"},{"key":"ref2","doi-asserted-by":"publisher","DOI":"10.3917\/puf.charl.2010.01"},{"key":"ref3","doi-asserted-by":"publisher","DOI":"10.21236\/ADA128980"},{"key":"ref4","doi-asserted-by":"publisher","DOI":"10.1109\/HICSS.1999.772701"},{"key":"ref5","doi-asserted-by":"publisher","DOI":"10.3917\/dbu.guir.2002.01"},{"key":"ref6","doi-asserted-by":"publisher","DOI":"10.14375\/NP.9782710126720"},{"key":"ref7","doi-asserted-by":"publisher","DOI":"10.3406\/rfp.1993.1305"},{"key":"ref8","doi-asserted-by":"publisher","DOI":"10.3166\/ds.5.341-366"},{"key":"ref9","doi-asserted-by":"publisher","DOI":"10.3166\/ds.9.565-590"},{"key":"ref10","doi-asserted-by":"publisher","DOI":"10.4000\/dms.797"},{"key":"ref11","doi-asserted-by":"publisher","DOI":"10.4000\/questionsdecommunication.6590"},{"key":"ref12","doi-asserted-by":"publisher","DOI":"10.4267\/2042\/14983"},{"key":"ref13","doi-asserted-by":"publisher","DOI":"10.4324\/9780203052945"}],"container-title":["Distances
-        et m\u00e9diations des savoirs"],"original-title":[],"deposited":{"date-parts":[[2022,5,2]],"date-time":"2022-05-02T09:30:36Z","timestamp":1651483836000},"score":1,"resource":{"primary":{"URL":"http:\/\/journals.openedition.org\/dms\/865"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2014,12,14]]},"references-count":14,"journal-issue":{"issue":"8","published-online":{"date-parts":[[2014,12,14]]}},"URL":"http:\/\/dx.doi.org\/10.4000\/dms.865","relation":{},"ISSN":["2264-7228"],"issn-type":[{"value":"2264-7228","type":"electronic"}],"subject":["General
-        Medicine"],"published":{"date-parts":[[2014,12,14]]}}}'
-  recorded_at: Sun, 12 Mar 2023 19:21:11 GMT
-- request:
-    method: get
-    uri: https://doi.org/ra/10.4000
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 12 Mar 2023 19:21:11 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=foOTgrotLttS2kJlu%2FP5jS4apqTKAkbKIkWx4PCowPj%2BL7AEN5G0cDhFTJW%2FBMvExOmcNEfRQCukdaz9T5%2B4MKNW3GL8bsO4%2BUNH7gt2Q%2BELJWleyv6t9YXkz3oD4KPa8lcKNs0%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7a6e66154d820e81-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: |-
-        [
-          {
-            "DOI": "10.4000",
-            "RA": "Crossref"
-          }
-        ]
-  recorded_at: Sun, 12 Mar 2023 19:21:11 GMT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIiB2ZXJzaW9uPSIzLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIGh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3NjaGVtYXMvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0My4wLnhzZCI+DQogIDxxdWVyeV9yZXN1bHQ+DQogICAgPGhlYWQ+DQogICAgICA8ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICA8cXVlcnkgc3RhdHVzPSJyZXNvbHZlZCI+DQogICAgICAgIDxkb2kgdHlwZT0iam91cm5hbF9hcnRpY2xlIj4xMC40MDAwL2Rtcy44NjU8L2RvaT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9InB1Ymxpc2hlci1uYW1lIiB0eXBlPSJzdHJpbmciPk9wZW5FZGl0aW9uPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9InByZWZpeC1uYW1lIiB0eXBlPSJzdHJpbmciPk9wZW5FZGl0aW9uPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9Im1lbWJlci1pZCIgdHlwZT0ibnVtYmVyIj4yMzk5PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImNpdGF0aW9uLWlkIiB0eXBlPSJudW1iZXIiPjczNTgxNzk0PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImpvdXJuYWwtaWQiIHR5cGU9Im51bWJlciI+MjAxMzI1PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImRlcG9zaXQtdGltZXN0YW1wIiB0eXBlPSJudW1iZXIiPjE2MDA2MDk3ODY8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0ib3duZXItcHJlZml4IiB0eXBlPSJzdHJpbmciPjEwLjQwMDA8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0ibGFzdC11cGRhdGUiIHR5cGU9ImRhdGUiPjIwMjItMDUtMDJUMDk6MzA6MzZaPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImNyZWF0ZWQiIHR5cGU9ImRhdGUiPjIwMTUtMDItMDFUMDQ6NTM6MzlaPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImNpdGVkYnktY291bnQiIHR5cGU9Im51bWJlciI+MTI8L2NybS1pdGVtPg0KICAgICAgICA8ZG9pX3JlY29yZD4NCiAgICAgICAgICA8Y3Jvc3NyZWYgeG1sbnM9Imh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3hzY2hlbWEvMS4xIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3hzY2hlbWEvMS4xIGh0dHA6Ly9kb2kuY3Jvc3NyZWYub3JnL3NjaGVtYXMvdW5peHJlZjEuMS54c2QiPg0KICAgICAgICAgICAgPGpvdXJuYWw+DQogICAgICAgICAgICAgIDxqb3VybmFsX21ldGFkYXRhPg0KICAgICAgICAgICAgICAgIDxmdWxsX3RpdGxlPkRpc3RhbmNlcyBldCBtw6lkaWF0aW9ucyBkZXMgc2F2b2lyczwvZnVsbF90aXRsZT4NCiAgICAgICAgICAgICAgICA8YWJicmV2X3RpdGxlPmRtczwvYWJicmV2X3RpdGxlPg0KICAgICAgICAgICAgICAgIDxpc3NuIG1lZGlhX3R5cGU9ImVsZWN0cm9uaWMiPjIyNjQtNzIyODwvaXNzbj4NCiAgICAgICAgICAgICAgICA8ZG9pX2RhdGE+DQogICAgICAgICAgICAgICAgICA8ZG9pPjEwLjQwMDAvZG1zPC9kb2k+DQogICAgICAgICAgICAgICAgICA8cmVzb3VyY2U+aHR0cDovL2pvdXJuYWxzLm9wZW5lZGl0aW9uLm9yZy9kbXM8L3Jlc291cmNlPg0KICAgICAgICAgICAgICAgIDwvZG9pX2RhdGE+DQogICAgICAgICAgICAgIDwvam91cm5hbF9tZXRhZGF0YT4NCiAgICAgICAgICAgICAgPGpvdXJuYWxfaXNzdWU+DQogICAgICAgICAgICAgICAgPHB1YmxpY2F0aW9uX2RhdGUgbWVkaWFfdHlwZT0ib25saW5lIj4NCiAgICAgICAgICAgICAgICAgIDxtb250aD4xMjwvbW9udGg+DQogICAgICAgICAgICAgICAgICA8ZGF5PjE0PC9kYXk+DQogICAgICAgICAgICAgICAgICA8eWVhcj4yMDE0PC95ZWFyPg0KICAgICAgICAgICAgICAgIDwvcHVibGljYXRpb25fZGF0ZT4NCiAgICAgICAgICAgICAgICA8am91cm5hbF92b2x1bWU+DQogICAgICAgICAgICAgICAgICA8dm9sdW1lPjI8L3ZvbHVtZT4NCiAgICAgICAgICAgICAgICA8L2pvdXJuYWxfdm9sdW1lPg0KICAgICAgICAgICAgICAgIDxpc3N1ZT44PC9pc3N1ZT4NCiAgICAgICAgICAgICAgICA8ZG9pX2RhdGE+DQogICAgICAgICAgICAgICAgICA8ZG9pPjEwLjQwMDAvZG1zLjg2NDwvZG9pPg0KICAgICAgICAgICAgICAgICAgPHJlc291cmNlPmh0dHA6Ly9qb3VybmFscy5vcGVuZWRpdGlvbi5vcmcvZG1zLzg2NDwvcmVzb3VyY2U+DQogICAgICAgICAgICAgICAgPC9kb2lfZGF0YT4NCiAgICAgICAgICAgICAgPC9qb3VybmFsX2lzc3VlPg0KICAgICAgICAgICAgICA8am91cm5hbF9hcnRpY2xlIHB1YmxpY2F0aW9uX3R5cGU9ImZ1bGxfdGV4dCI+DQogICAgICAgICAgICAgICAgPHRpdGxlcz4NCiAgICAgICAgICAgICAgICAgIDx0aXRsZT5EaXN0YW5jZXMsIGFic2VuY2UsIHByb3hpbWl0w6lzIGV0IHByw6lzZW5jZXPCoDogZGVzIGNvbmNlcHRzIGVuIGTDqXBsYWNlbWVudDwvdGl0bGU+DQogICAgICAgICAgICAgICAgPC90aXRsZXM+DQogICAgICAgICAgICAgICAgPHRpdGxlcz4NCiAgICAgICAgICAgICAgICAgIDx0aXRsZT5EaXN0YW5jZShzKSwgcHJveGltaXR5IGFuZCBwcmVzZW5jZShzKTogZXZvbHZpbmcgY29uY2VwdHM8L3RpdGxlPg0KICAgICAgICAgICAgICAgIDwvdGl0bGVzPg0KICAgICAgICAgICAgICAgIDxjb250cmlidXRvcnM+DQogICAgICAgICAgICAgICAgICA8cGVyc29uX25hbWUgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIiBzZXF1ZW5jZT0iZmlyc3QiPg0KICAgICAgICAgICAgICAgICAgICA8Z2l2ZW5fbmFtZT5EYW5pZWw8L2dpdmVuX25hbWU+DQogICAgICAgICAgICAgICAgICAgIDxzdXJuYW1lPlBlcmF5YTwvc3VybmFtZT4NCiAgICAgICAgICAgICAgICAgIDwvcGVyc29uX25hbWU+DQogICAgICAgICAgICAgICAgPC9jb250cmlidXRvcnM+DQogICAgICAgICAgICAgICAgPHB1YmxpY2F0aW9uX2RhdGUgbWVkaWFfdHlwZT0ib25saW5lIj4NCiAgICAgICAgICAgICAgICAgIDxtb250aD4xMjwvbW9udGg+DQogICAgICAgICAgICAgICAgICA8ZGF5PjE0PC9kYXk+DQogICAgICAgICAgICAgICAgICA8eWVhcj4yMDE0PC95ZWFyPg0KICAgICAgICAgICAgICAgIDwvcHVibGljYXRpb25fZGF0ZT4NCiAgICAgICAgICAgICAgICA8ZG9pX2RhdGE+DQogICAgICAgICAgICAgICAgICA8ZG9pPjEwLjQwMDAvZG1zLjg2NTwvZG9pPg0KICAgICAgICAgICAgICAgICAgPHJlc291cmNlPmh0dHA6Ly9qb3VybmFscy5vcGVuZWRpdGlvbi5vcmcvZG1zLzg2NTwvcmVzb3VyY2U+DQogICAgICAgICAgICAgICAgPC9kb2lfZGF0YT4NCiAgICAgICAgICAgICAgICA8Y2l0YXRpb25fbGlzdD4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9InJlZjAiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjMxNjYvZHMuOS4zMTMtMzMwPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0icmVmMSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMzE2Ni9kcy40LjQ2OS00OTY8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJyZWYyIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4zOTE3L3B1Zi5jaGFybC4yMDEwLjAxPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0icmVmMyI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMjEyMzYvQURBMTI4OTgwPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0icmVmNCI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTEwOS9ISUNTUy4xOTk5Ljc3MjcwMTwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9InJlZjUiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjM5MTcvZGJ1Lmd1aXIuMjAwMi4wMTwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9InJlZjYiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjE0Mzc1L05QLjk3ODI3MTAxMjY3MjA8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJyZWY3Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4zNDA2L3JmcC4xOTkzLjEzMDU8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJyZWY4Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4zMTY2L2RzLjUuMzQxLTM2NjwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9InJlZjkiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjMxNjYvZHMuOS41NjUtNTkwPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0icmVmMTAiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjQwMDAvZG1zLjc5NzwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9InJlZjExIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC40MDAwL3F1ZXN0aW9uc2RlY29tbXVuaWNhdGlvbi42NTkwPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0icmVmMTIiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjQyNjcvMjA0Mi8xNDk4MzwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9InJlZjEzIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC40MzI0Lzk3ODAyMDMwNTI5NDU8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgPC9jaXRhdGlvbl9saXN0Pg0KICAgICAgICAgICAgICA8L2pvdXJuYWxfYXJ0aWNsZT4NCiAgICAgICAgICAgIDwvam91cm5hbD4NCiAgICAgICAgICA8L2Nyb3NzcmVmPg0KICAgICAgICA8L2RvaV9yZWNvcmQ+DQogICAgICA8L3F1ZXJ5Pg0KICAgIDwvYm9keT4NCiAgPC9xdWVyeV9yZXN1bHQ+DQo8L2Nyb3NzcmVmX3Jlc3VsdD4=
+  recorded_at: Sun, 12 Mar 2023 22:26:47 GMT
 recorded_with: VCR 6.1.0

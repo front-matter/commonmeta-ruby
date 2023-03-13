@@ -4,34 +4,34 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.7554
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:21:23 GMT
+      - Sun, 12 Mar 2023 22:21:40 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FTtGMQibpaxHv3AwAp%2Bj85pC0hAfXq%2Bq%2Fhq1bZZyriNnwIKe7A1JvwtZCrDhILGk71WQaHDiCKi8b%2BEQ9u5UfzmHowYT%2FoR5l71dOFo6V51gIpRG0Xt%2BzBuUAFk41gG8XmppfaI%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4%2FK6TJWfJFM9Tat4c1zh2LV%2Fc33c%2FeonSl0BTctNIxVQcNyXa%2BtrV78NSIq35mhHZ93KnU7fWycyI2P%2BNb8MeqmKOMCydRfF%2BP03DsSq3nsLDs%2Fw1vOUAVHePfxZpU4E2eRdUmM%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,11 +39,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e66614f34b906-AMS
+      - 7a6f6e756e6f0eaa-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -51,5 +51,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:21:23 GMT
+  recorded_at: Sun, 12 Mar 2023 22:21:40 GMT
 recorded_with: VCR 6.1.0

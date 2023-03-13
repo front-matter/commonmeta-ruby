@@ -4,34 +4,34 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.0137
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:27:08 GMT
+      - Sun, 12 Mar 2023 22:21:05 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wkqdZcfn2vJnzt%2BrluhUm%2BzLN%2FqFWJ6x3nPRUzba8ju3hfv1RKKEjSk3Lk89%2Fhbg2rsSm8wNJsn68y24517yLTtxUQlGX2xUv5i7UNhSVYhYKgHoaebxJ2%2BR4tQsNIDn69ZkIJ8%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wRu%2FKMG3woM43LX4ngzhQ1fvI%2BjJ4fRTPSEpePNc93e1MaAeGfP7z21klwMvW8%2BvT0RTd%2BMVAt7Z55WZA4UW17dX9hnF9mTYm5W%2BtAvE90pLseODsi%2F0O3Jpz6Gcwq4D%2B1m4E0I%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,11 +39,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e6ecb5c311c93-AMS
+      - 7a6f6d9c3b460e40-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -51,5 +51,5 @@ http_interactions:
             "status": "DOI does not exist"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:27:08 GMT
+  recorded_at: Sun, 12 Mar 2023 22:21:05 GMT
 recorded_with: VCR 6.1.0

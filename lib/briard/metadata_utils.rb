@@ -77,6 +77,13 @@ module Briard
     alias get_op get_crossref
     alias read_op read_crossref
 
+    def raw
+      r = string.present? ? string.strip : nil
+      return r unless from == 'crossref_xml' && r.present?
+
+      r
+    end
+
     def should_passthru
       (from == 'crossref_xml') && regenerate.blank? && raw.present?
     end

@@ -1,0 +1,160 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.26301
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:20:45 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uyHK0kKRdoKSlZudwt6TApYHvN2BAAf4bEVCt7TRN9T4sGUxRqmdJDspzMCBIPSEKOnAaETne5wPPxjTRIjCrV0cjQ3elJkCs2gszNJpUAlrp85iVOhXKyRN2vMQo0HLxRRNRdo%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a6f6d20ec690bba-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.26301",
+            "RA": "DataCite"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 22:20:45 GMT
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.26301/jgf3-jm06?include=media,client
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.datacite.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:20:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - e4b27784-33b9-4375-8e5b-d33123dfbd06
+      X-Download-Options:
+      - noopen
+      Etag:
+      - W/"837fc182f515c5448a65b127578c2a4b"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.028405'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.17
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.26301/jgf3-jm06","type":"dois","attributes":{"doi":"10.26301/jgf3-jm06","prefix":"10.26301","suffix":"jgf3-jm06","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"CyArk","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://cyark.org/","nameIdentifierScheme":"Other"}]},{"name":"ICOMOS","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://www.icomos.org/en","nameIdentifierScheme":"Other"}]},{"name":"Google
+        Arts And Culture","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://artsandculture.google.com/","nameIdentifierScheme":"Other"}]},{"name":"Ministerio
+        De Cultura","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://www.gob.pe/cultura","nameIdentifierScheme":"Other"}]},{"name":"Direcci????N
+        Desconcentrada De Cultura De La Libertad","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://ddclalibertad.gob.pe/","nameIdentifierScheme":"Other"}]}],"titles":[{"title":"Palacio
+        Rivero - Chan Chan Archaeological Zone","titleType":"Other"}],"publisher":"OpenHeritage3D","container":{},"publicationYear":2020,"subjects":[{"subject":"chan
+        chan","valueUri":"http://www.oecd.org/science/inno/38235147.pdf","schemeUri":"http://www.oecd.org/science/inno"},{"subject":"peru","valueUri":"http://www.oecd.org/science/inno/38235147.pdf","schemeUri":"http://www.oecd.org/science/inno"},{"subject":"trujillo","valueUri":"http://www.oecd.org/science/inno/38235147.pdf","schemeUri":"http://www.oecd.org/science/inno"},{"subject":"chimu","valueUri":"http://www.oecd.org/science/inno/38235147.pdf","schemeUri":"http://www.oecd.org/science/inno"}],"contributors":[],"dates":[{"date":"2019-08-12","dateType":"Collected","dateInformation":"Start"},{"date":"2019-08-22","dateType":"Collected","dateInformation":"End"},{"date":"2020-06-22","dateType":"Submitted","dateInformation":"Publish"},{"date":"2020","dateType":"Issued"}],"language":null,"types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceType":"Dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[],"relatedItems":[],"sizes":[],"formats":[],"version":null,"rightsList":[{"rights":"Creative
+        Commons Attribution Non Commercial Share Alike 4.0 International","rightsUri":"https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode","schemeUri":"https://spdx.org/licenses/","rightsIdentifier":"cc-by-nc-sa-4.0","rightsIdentifierScheme":"SPDX"}],"descriptions":[{"description":"Chan
+        Chan Archaeological Site was inscribed on the World Heritage List in 1986.
+        The property????????s Statement of Outstanding Universal Value, adopted in
+        2011, describes it as an ''absolute masterpiece of town planning'' that ''uniquely
+        integrates the symbolic and sacred architecture with technological knowledge
+        and the adaptation to the native environment''. Over 100,000 people visit
+        the site every year to gain a better understanding of the lives of those who
+        built one of the most powerful empires in pre-Columbian America. External
+        Project Link: https://artsandculture.google.com/project/heritage-on-the-edge-chan-chan
+        Additional Info Link:","descriptionType":"Abstract"}],"geoLocations":[{"geoLocationPoint":{"pointLatitude":"-8.112249","pointLongitude":"-79.077847"}}],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMjYzMDEvSkdGMy1KTTA2PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9Ik9yZ2FuaXphdGlvbmFsIj5DeUFyazwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT3RoZXIiIHNjaGVtZVVSST0iIj5odHRwczovL2N5YXJrLm9yZy88L25hbWVJZGVudGlmaWVyPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iT3JnYW5pemF0aW9uYWwiPklDT01PUzwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT3RoZXIiIHNjaGVtZVVSST0iIj5odHRwczovL3d3dy5pY29tb3Mub3JnL2VuPC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9Ik9yZ2FuaXphdGlvbmFsIj5Hb29nbGUgQXJ0cyBhbmQgQ3VsdHVyZTwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT3RoZXIiIHNjaGVtZVVSST0iIj5odHRwczovL2FydHNhbmRjdWx0dXJlLmdvb2dsZS5jb20vPC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9Ik9yZ2FuaXphdGlvbmFsIj5NaW5pc3RlcmlvIGRlIEN1bHR1cmE8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik90aGVyIiBzY2hlbWVVUkk9IiI+aHR0cHM6Ly93d3cuZ29iLnBlL2N1bHR1cmE8L25hbWVJZGVudGlmaWVyPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iT3JnYW5pemF0aW9uYWwiPkRpcmVjY2k/Pz8/biBEZXNjb25jZW50cmFkYSBkZSBDdWx0dXJhIGRlIExhIExpYmVydGFkPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPdGhlciIgc2NoZW1lVVJJPSIiPmh0dHBzOi8vZGRjbGFsaWJlcnRhZC5nb2IucGUvPC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGUgdGl0bGVUeXBlPSJPdGhlciI+UGFsYWNpbyBSaXZlcm8gLSBDaGFuIENoYW4gQXJjaGFlb2xvZ2ljYWwgWm9uZTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5PcGVuSGVyaXRhZ2UzRDwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMDwvcHVibGljYXRpb25ZZWFyPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0IHNjaGVtZVVSST0iaHR0cDovL3d3dy5vZWNkLm9yZy9zY2llbmNlL2lubm8iIHZhbHVlVVJJPSJodHRwOi8vd3d3Lm9lY2Qub3JnL3NjaWVuY2UvaW5uby8zODIzNTE0Ny5wZGYiPmNoYW4gY2hhbjwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHNjaGVtZVVSST0iaHR0cDovL3d3dy5vZWNkLm9yZy9zY2llbmNlL2lubm8iIHZhbHVlVVJJPSJodHRwOi8vd3d3Lm9lY2Qub3JnL3NjaWVuY2UvaW5uby8zODIzNTE0Ny5wZGYiPnBlcnU8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzY2hlbWVVUkk9Imh0dHA6Ly93d3cub2VjZC5vcmcvc2NpZW5jZS9pbm5vIiB2YWx1ZVVSST0iaHR0cDovL3d3dy5vZWNkLm9yZy9zY2llbmNlL2lubm8vMzgyMzUxNDcucGRmIj50cnVqaWxsbzwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHNjaGVtZVVSST0iaHR0cDovL3d3dy5vZWNkLm9yZy9zY2llbmNlL2lubm8iIHZhbHVlVVJJPSJodHRwOi8vd3d3Lm9lY2Qub3JnL3NjaWVuY2UvaW5uby8zODIzNTE0Ny5wZGYiPmNoaW11PC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkNvbGxlY3RlZCIgZGF0ZUluZm9ybWF0aW9uPSJTdGFydCI+MjAxOS0wOC0xMjwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJDb2xsZWN0ZWQiIGRhdGVJbmZvcm1hdGlvbj0iRW5kIj4yMDE5LTA4LTIyPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlN1Ym1pdHRlZCIgZGF0ZUluZm9ybWF0aW9uPSJQdWJsaXNoIj4yMDIwLTA2LTIyPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHNpemVzLz4KICA8Zm9ybWF0cy8+CiAgPHZlcnNpb24vPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS1uYy1zYS80LjAiPkNyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb24gTm9uIENvbW1lcmNpYWwgU2hhcmUgQWxpa2UgNC4wIEludGVybmF0aW9uYWw8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CiAgPGRlc2NyaXB0aW9ucz4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij4JIENoYW4gQ2hhbiBBcmNoYWVvbG9naWNhbCBTaXRlIHdhcyBpbnNjcmliZWQgb24gdGhlIFdvcmxkIEhlcml0YWdlIExpc3QgaW4gMTk4Ni4gVGhlIHByb3BlcnR5Pz8/Pz8/Pz9zIFN0YXRlbWVudCBvZiBPdXRzdGFuZGluZyBVbml2ZXJzYWwgVmFsdWUsIGFkb3B0ZWQgaW4gMjAxMSwgZGVzY3JpYmVzIGl0IGFzIGFuICdhYnNvbHV0ZSBtYXN0ZXJwaWVjZSBvZiB0b3duIHBsYW5uaW5nJyB0aGF0ICd1bmlxdWVseSBpbnRlZ3JhdGVzIHRoZSBzeW1ib2xpYyBhbmQgc2FjcmVkIGFyY2hpdGVjdHVyZSB3aXRoIHRlY2hub2xvZ2ljYWwga25vd2xlZGdlIGFuZCB0aGUgYWRhcHRhdGlvbiB0byB0aGUgbmF0aXZlIGVudmlyb25tZW50Jy4gT3ZlciAxMDAsMDAwIHBlb3BsZSB2aXNpdCB0aGUgc2l0ZSBldmVyeSB5ZWFyIHRvIGdhaW4gYSBiZXR0ZXIgdW5kZXJzdGFuZGluZyBvZiB0aGUgbGl2ZXMgb2YgdGhvc2Ugd2hvIGJ1aWx0IG9uZSBvZiB0aGUgbW9zdCBwb3dlcmZ1bCBlbXBpcmVzIGluIHByZS1Db2x1bWJpYW4gQW1lcmljYS4gICBFeHRlcm5hbCBQcm9qZWN0IExpbms6IGh0dHBzOi8vYXJ0c2FuZGN1bHR1cmUuZ29vZ2xlLmNvbS9wcm9qZWN0L2hlcml0YWdlLW9uLXRoZS1lZGdlLWNoYW4tY2hhbiBBZGRpdGlvbmFsIEluZm8gTGluazogPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KICA8Z2VvTG9jYXRpb25zPgogICAgPGdlb0xvY2F0aW9uPgogICAgICA8Z2VvTG9jYXRpb25Qb2ludD4KICAgICAgICA8cG9pbnRMYXRpdHVkZT4tOC4xMTIyNDk8L3BvaW50TGF0aXR1ZGU+CiAgICAgICAgPHBvaW50TG9uZ2l0dWRlPi03OS4wNzc4NDc8L3BvaW50TG9uZ2l0dWRlPgogICAgICA8L2dlb0xvY2F0aW9uUG9pbnQ+CiAgICA8L2dlb0xvY2F0aW9uPgogIDwvZ2VvTG9jYXRpb25zPgo8L3Jlc291cmNlPg==","url":"https://openheritage3d.org/project/jgf3-jm06","contentUrl":null,"metadataVersion":3,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"fabricaForm","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2020-02-11T18:32:33.000Z","registered":"2020-02-11T18:32:33.000Z","published":"2020","updated":"2021-11-11T17:13:06.000Z"},"relationships":{"client":{"data":{"id":"cyark.oh","type":"clients"}},"provider":{"data":{"id":"cyark","type":"providers"}},"media":{"data":{"id":"10.26301/jgf3-jm06","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"cyark.oh","type":"clients","attributes":{"name":"OpenHeritage3D","symbol":"CYARK.OH","year":2019,"alternateName":"Open
+        Heritage 3D","description":"As 3D and reality capture strategies for heritage
+        documentation become more widespread and available, there has emerged a growing
+        need to assist with guiding and facilitating accessibility to data, while
+        maintaining scientific rigor, cultural and ethical sensitivity, discoverability,
+        and archival standards. In response to these areas of need, The Open Heritage
+        3D Alliance (OHA) has developed as an advisory group governing the Open Heritage
+        3D initiative. This collaborative advisory group are among some of the earliest
+        adopters of 3D heritage documentation technologies, and offer first-hand guidance
+        for best practices in data management, sharing, and dissemination approaches
+        for 3D cultural heritage projects.\n\nThe founding members of the OHA, consist
+        of experts and organizational leaders from CyArk, Historic Environment Scotland,
+        and the University of South Florida Libraries, who together have significant
+        repositories of legacy and on-going 3D research and documentation projects.
+        These groups offer unique insight into not only the best practices for 3D
+        data capture and sharing, but also have come together around concerns dealing
+        with standards, formats, approach, ethics, and archive commitment. Together,
+        the OHA has begun the journey to provide open access to cultural heritage
+        3D data, while maintaining integrity, security, and standards relating to
+        discoverable dissemination. Together, the OHA will work to provide democratized
+        access to primary heritage 3D data submitted from donors and organizations,
+        and will help to facilitate an operation platform, archive, and organization
+        of resources into the future","language":["en"],"clientType":"repository","domains":"*","re3data":null,"opendoar":null,"issn":{},"url":"https://openheritage3d.org/","created":"2019-03-26T16:21:19.000Z","updated":"2020-04-27T15:30:01.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"cyark","type":"providers"}},"prefixes":{"data":[{"id":"10.26301","type":"prefixes"}]}}}]}'
+  recorded_at: Sun, 12 Mar 2023 22:20:45 GMT
+recorded_with: VCR 6.1.0

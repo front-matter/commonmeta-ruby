@@ -1,0 +1,109 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.5005/jp/books/12414_3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:09 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T03:38:02Z","timestamp":1648611482713},"reference-count":0,"publisher":"Jaypee
+        Brothers Medical Publishers (P) Ltd.","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.5005\/jp\/books\/12414_3","type":"book-chapter","created":{"date-parts":[[2016,1,20]],"date-time":"2016-01-20T23:44:05Z","timestamp":1453333445000},"page":"27-27","source":"Crossref","is-referenced-by-count":0,"title":["Physical
+        Examinations"],"prefix":"10.5005","author":[{"given":"Ashis","family":"Saha","sequence":"first","affiliation":[]}],"member":"2914","published-online":{"date-parts":[[2015]]},"container-title":["Clinical
+        Methods and Interpretation in Medicine"],"original-title":[],"deposited":{"date-parts":[[2019,8,3]],"date-time":"2019-08-03T10:10:08Z","timestamp":1564827008000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.jaypeedigital.com\/book\/9789351526285\/chapter\/ch2"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.5005\/jp\/books\/12414_3","relation":{},"published":{"date-parts":[[2015]]}}}'
+  recorded_at: Sun, 12 Mar 2023 22:21:09 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.5005
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:09 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OprtIHuYcoC9%2F2pOQUwsjmk3WCrtcG%2BCStD%2BZP22uRObShvLk%2BPBO2steT0wcH0Ya8j78%2FP%2Fo9r7dNEBWSuTcyvpOYsB61gKNY%2FqWsvik%2FlBG6kfUqVtM%2BtK7cz8GiQ4HATDMns%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a6f6db5fd6d0be1-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.5005",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 22:21:09 GMT
+recorded_with: VCR 6.1.0

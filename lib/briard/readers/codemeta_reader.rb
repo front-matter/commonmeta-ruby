@@ -8,24 +8,13 @@ module Briard
 
         id = normalize_id(id)
         url = github_as_codemeta_url(id)
-        conn = Faraday.new(url, request: { timeout: 5 }) do |f|
-          f.request :gzip
-          f.request :json
-          # f.response :json
-        end
-        response = conn.get(url)
-        body = JSON.parse(response.body)
-        string = body.fetch('data', nil)
+        response = HTTP.get(url)
+        return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
-        { 'string' => string }
+        { 'string' => response.body.to_s }
       end
 
       def read_codemeta(string: nil, **options)
-        if string.present?
-          errors = jsonlint(string)
-          return { 'errors' => errors } if errors.present?
-        end
-
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
 

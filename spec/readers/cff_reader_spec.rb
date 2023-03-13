@@ -72,7 +72,7 @@ describe Briard::Metadata, vcr: true do
                                              'nameIdentifierScheme' => 'ORCID',
                                              'schemeUri' => 'https://orcid.org' }],
                                         'nameType' => 'Personal' },
-                                      { 'affiliation' => [{ 'name' => 'Humboldt-Universit??t zu Berlin' }],
+                                      { 'affiliation' => [{ 'name' => 'Humboldt-Universität zu Berlin' }],
                                         'familyName' => 'Druskat',
                                         'givenName' => 'Stephan',
                                         'name' => 'Druskat, Stephan',

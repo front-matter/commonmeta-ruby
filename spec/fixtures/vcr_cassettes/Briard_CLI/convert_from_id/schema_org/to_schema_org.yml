@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://blog.datacite.org/eating-your-own-dog-food
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - blog.datacite.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 12 Mar 2023 22:21:35 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Content-Length:
+      - '0'
+      Connection:
+      - close
+      X-Cache-Enabled:
+      - 'True'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Redirect-By:
+      - WordPress
+      Location:
+      - https://blog.datacite.org/eating-your-own-dog-food/
+      X-Httpd-Modphp:
+      - '1'
+      Host-Header:
+      - 6b7412fb82ca5edfd0917e3957f05d89
+      X-Proxy-Cache:
+      - MISS
+      X-Proxy-Cache-Info:
+      - '0301 NC:000000 UP:'
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Sun, 12 Mar 2023 22:21:35 GMT
+recorded_with: VCR 6.1.0

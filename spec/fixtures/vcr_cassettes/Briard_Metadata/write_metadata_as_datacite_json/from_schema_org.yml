@@ -4,22 +4,22 @@ http_interactions:
     method: get
     uri: https://blog.front-matter.io/posts/eating-your-own-dog-food
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - blog.front-matter.io
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip,deflate
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 301
       message: Moved Permanently
     headers:
       Connection:
-      - keep-alive
+      - close
       Content-Length:
       - '0'
       Server:
@@ -40,19 +40,19 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 12 Mar 2023 19:21:19 GMT
+      - Sun, 12 Mar 2023 22:22:20 GMT
       Via:
       - 1.1 varnish
       Age:
-      - '2275499'
+      - '2286360'
       X-Served-By:
-      - cache-ams21054-AMS
+      - cache-ams21040-AMS
       X-Cache:
       - HIT
       X-Cache-Hits:
       - '1'
       X-Timer:
-      - S1678648879.363356,VS0,VE1
+      - S1678659740.330859,VS0,VE1
       Vary:
       - Cookie
       Ghost-Fastly:
@@ -60,7 +60,7 @@ http_interactions:
       Alt-Svc:
       - clear
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
-  recorded_at: Sun, 12 Mar 2023 19:21:19 GMT
+  recorded_at: Sun, 12 Mar 2023 22:22:20 GMT
 recorded_with: VCR 6.1.0

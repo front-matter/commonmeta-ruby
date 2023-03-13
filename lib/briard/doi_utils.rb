@@ -63,7 +63,7 @@ module Briard
       return nil if prefix.blank?
 
       url = "https://doi.org/ra/#{prefix}"
-      response = Faraday.get(url)
+      response = HTTP.get(url)
       body = JSON.parse(response.body)
       body.dig(0, 'RA')
     end

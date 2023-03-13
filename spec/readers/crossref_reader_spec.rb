@@ -663,7 +663,7 @@ describe Briard::Metadata, vcr: true do
 
     it "dataset usda" do
       input = "https://doi.org/10.2737/RDS-2018-0001"
-      subject = described_class.new(input: input, from: "crossref")
+      subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.2737/rds-2018-0001")
       expect(subject.url).to eq("https://www.fs.usda.gov/rds/archive/Catalog/RDS-2018-0001")
@@ -842,7 +842,7 @@ describe Briard::Metadata, vcr: true do
 
     it "mEDRA" do
       input = "https://doi.org/10.3280/ecag2018-001005"
-      subject = described_class.new(input: input, from: "crossref")
+      subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.3280/ecag2018-001005")
       expect(subject.url).to eq("http://www.francoangeli.it/riviste/Scheda_Riviste.asp?IDArticolo=61645")
@@ -860,7 +860,7 @@ describe Briard::Metadata, vcr: true do
 
     it "KISTI" do
       input = "https://doi.org/10.5012/bkcs.2013.34.10.2889"
-      subject = described_class.new(input: input, from: "crossref")
+      subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5012/bkcs.2013.34.10.2889")
       expect(subject.url).to eq("http://koreascience.or.kr/journal/view.jsp?kj=JCGMCS&py=2013&vnc=v34n10&sp=2889")

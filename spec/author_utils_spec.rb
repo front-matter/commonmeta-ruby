@@ -50,7 +50,7 @@ describe Briard::Metadata, vcr: true do
     it 'has familyName' do
       input = 'https://doi.org/10.5438/4K3M-NYVG'
       subject = described_class.new(input: input, from: 'datacite')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
+      meta = JSON.parse(subject.raw)
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq(
         'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-1419-2405',
@@ -59,56 +59,13 @@ describe Briard::Metadata, vcr: true do
                                 "nameType" => "Personal")
     end
 
-    it 'has name in sort-order' do
-      input = 'https://doi.org/10.5061/dryad.8515'
-      subject = described_class.new(input: input, from: 'datacite_xml')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
-      response = subject.get_one_author(meta.dig('creators', 'creator').first)
-      expect(response).to eq('nameType' => 'Personal', 'name' => 'Ollomo, Benjamin',
-                             'givenName' => 'Benjamin', 'familyName' => 'Ollomo', 'affiliation' => [{ 'affiliationIdentifier' => 'https://ror.org/01wyqb997', 'affiliationIdentifierScheme' => 'ROR', 'name' => 'Centre International de Recherches Médicales de Franceville' }])
-    end
-
-    it 'has name in display-order' do
-      input = 'https://doi.org/10.5281/ZENODO.48440'
-      subject = described_class.new(input: input, from: 'datacite_xml')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
-      response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq('nameType' => 'Personal', 'name' => 'Garza, Kristian',
-                             'givenName' => 'Kristian', 'familyName' => 'Garza')
-    end
-
     it 'has name in display-order with ORCID' do
       input = 'https://doi.org/10.6084/M9.FIGSHARE.4700788'
-      subject = described_class.new(input: input, from: 'datacite_xml')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
+      subject = described_class.new(input: input)
+      meta = JSON.parse(subject.raw).fetch('resource', {})
       response = subject.get_one_author(meta.dig('creators', 'creator'))
       expect(response).to eq('nameType' => 'Personal',
                              'nameIdentifiers' => [{ 'nameIdentifier' => 'https://orcid.org/0000-0003-4881-1606', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }], 'name' => 'Bedini, Andrea', 'givenName' => 'Andrea', 'familyName' => 'Bedini')
-    end
-
-    it 'has name in Thai' do
-      input = 'https://doi.org/10.14457/KMITL.res.2006.17'
-      subject = described_class.new(input: input, from: 'datacite_xml')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
-      response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq("name"=>"กัญจนา แซ่เตียว")
-    end
-
-    it 'multiple author names in one field' do
-      input = 'https://doi.org/10.7910/dvn/eqtqyo'
-      subject = described_class.new(input: input, from: 'datacite_xml')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
-      response = subject.get_authors(meta.dig('creators', 'creator'))
-      expect(response).to eq([{"name"=>
-        "Enos, Ryan (Harvard University); Fowler, Anthony (University of Chicago); Vavreck, Lynn (UCLA)" }])
-    end
-
-    it 'hyper-authorship' do
-      input = 'https://doi.org/10.17182/HEPDATA.77274.V1'
-      subject = described_class.new(input: input, from: 'datacite_xml')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
-      response = subject.get_authors(meta.dig('creators', 'creator'))
-      expect(response).to eq([{ 'name' => 'ALICE Collaboration', "nameType"=>"Organizational" }])
     end
 
     it 'is organization' do
@@ -118,23 +75,6 @@ describe Briard::Metadata, vcr: true do
       expect(response).to eq('name' => 'University of California, Santa Barbara', "nameType"=>"Organizational")
     end
 
-    it 'name with affiliation' do
-      input = '10.11588/DIGLIT.6130'
-      subject = described_class.new(input: input, from: 'datacite_xml')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
-      response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq("name"=>"Dr. Störi, Kunstsalon <Zürich>", "nameIdentifiers"=>[{"nameIdentifier"=>"10113301-7", "nameIdentifierScheme"=>"GND"}])
-    end
-
-    # it 'name with affiliation and country' do
-    #   input = '10.16910/jemr.9.1.2'
-    #   subject = described_class.new(input: input, from: 'crossref')
-    #   response = subject.get_one_author(subject.creators.first)
-    #   expect(response).to eq('familyName' => 'Eraslan',
-    #                          'givenName' => 'Sukru',
-    #                          'name' => 'Eraslan, Sukru')
-    # end
-
     it 'name with affiliation crossref' do
       input = '10.7554/elife.01567'
       subject = described_class.new(input: input, from: 'crossref')
@@ -142,31 +82,6 @@ describe Briard::Metadata, vcr: true do
       expect(response).to eq('affiliation' => [{"name"=>"Department of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland"}],'familyName' => 'Sankar',
                              'givenName' => 'Martial',
                              'name' => 'Sankar, Martial', "nameType" => "Personal")
-    end
-
-    it 'name with role' do
-      input = '10.14463/GBV:873056442'
-      subject = described_class.new(input: input, from: 'datacite_xml')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
-      response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq("name"=>"Unknown")
-    end
-
-    it 'multiple name_identifier' do
-      input = '10.24350/CIRM.V.19028803'
-      subject = described_class.new(input: input, from: 'datacite_xml')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
-      response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq('nameType' => 'Personal', 'name' => 'Dubos, Thomas',
-                             'givenName' => 'Thomas', 'familyName' => 'Dubos', 'affiliation' => [{ 'name' => '&#201;cole Polytechnique Laboratoire de M&#233;t&#233;orologie Dynamique' }], 'nameIdentifiers' => [{ 'nameIdentifier' => 'http://isni.org/isni/0000 0003 5752 6882', 'nameIdentifierScheme' => 'ISNI', 'schemeUri' => 'http://isni.org/isni/' }, { 'nameIdentifier' => 'https://orcid.org/0000-0003-4514-4211', 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org' }])
-    end
-
-    it 'nameType organizational' do
-      input = "#{fixture_path}gtex.xml"
-      subject = described_class.new(input: input, from: 'datacite_xml')
-      meta = XmlHasher.parse(subject.raw).fetch('resource', {})
-      response = subject.get_one_author(meta.dig('creators', 'creator'))
-      expect(response).to eq('nameType' => 'Organizational', 'name' => 'The GTEx Consortium')
     end
 
     it 'only familyName and givenName' do

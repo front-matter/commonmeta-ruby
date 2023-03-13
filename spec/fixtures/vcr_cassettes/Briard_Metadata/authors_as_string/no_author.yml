@@ -4,26 +4,26 @@ http_interactions:
     method: get
     uri: https://api.crossref.org/works/10.1101/097196
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:39:23 GMT
+      - Sun, 12 Mar 2023 22:20:42 GMT
       Content-Type:
       - application/json
-      Content-Length:
-      - '10006'
+      Transfer-Encoding:
+      - chunked
       Access-Control-Expose-Headers:
       - Link
       Access-Control-Allow-Headers:
@@ -31,8 +31,6 @@ http_interactions:
         Accept-Ranges, Cache-Control
       Access-Control-Allow-Origin:
       - "*"
-      Vary:
-      - Accept-Encoding
       Server:
       - Jetty(9.4.40.v20210413)
       X-Ratelimit-Limit:
@@ -50,7 +48,7 @@ http_interactions:
       Connection:
       - close
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":[{"name":"bioRxiv"}],"indexed":{"date-parts":[[2023,1,13]],"date-time":"2023-01-13T05:44:11Z","timestamp":1673588651470},"posted":{"date-parts":[[2016,12,28]]},"group-title":"Scientific
         Communication and Education","reference-count":26,"publisher":"Cold Spring
         Harbor Laboratory","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"accepted":{"date-parts":[[2017,10,9]]},"abstract":"<jats:title>Abstract<\/jats:title><jats:p>This
@@ -110,39 +108,39 @@ http_interactions:
         https:\/\/www.nap.edu\/catalog\/13564\/for-attribution-developing-data-attribution-and-citation-practices-and-standards"},{"key":"2019071613381284000_097196v2.26","doi-asserted-by":"crossref","unstructured":"Van
         de Sompel, H. , & Nelson, M. L. (2015). Reminiscing About 15 Years of Interoperability
         Efforts. D-Lib Magazine, 21(11\/12). https:\/\/doi.org\/10.1045\/november2015-vandesompel","DOI":"10.1045\/november2015-vandesompel"}],"container-title":[],"original-title":[],"link":[{"URL":"https:\/\/syndication.highwire.org\/content\/doi\/10.1101\/097196","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,1,18]],"date-time":"2020-01-18T02:53:57Z","timestamp":1579316037000},"score":1,"resource":{"primary":{"URL":"http:\/\/biorxiv.org\/lookup\/doi\/10.1101\/097196"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2016,12,28]]},"references-count":26,"URL":"http:\/\/dx.doi.org\/10.1101\/097196","relation":{"is-preprint-of":[{"id-type":"doi","id":"10.1038\/s41597-019-0031-8","asserted-by":"subject"}]},"published":{"date-parts":[[2016,12,28]]},"subtype":"preprint"}}'
-  recorded_at: Sun, 12 Mar 2023 19:39:23 GMT
+  recorded_at: Sun, 12 Mar 2023 22:20:42 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1101
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:39:23 GMT
+      - Sun, 12 Mar 2023 22:20:43 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=K%2F06zeWoBqUgcJZxm2iaTbVZkDCckJhSNeJJRCMLt6mjwB%2FHX50ibGB8y%2FtMDPIqUGfrGMa9jCIhk%2F5yzoCBXAjbfTh%2BevQgolseCACpBYFnawr9K5QwlzPSs3mSUw0teFRBqIY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vzlQ9WxkSHrCnkejBHcnZTfJLwiqWJnDZ0c%2FPzT%2BukibvHINPR%2FD3MJGQi377eN0mo9LtnJe2NyDff1RPgcBuJmVi76UvlcSSGZ5OAltO2mCYHtnchldPW8Am5vGdBkLU2bCyvE%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -150,11 +148,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e80c09cb3b77f-AMS
+      - 7a6f6d113e63b932-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -162,5 +160,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:39:23 GMT
+  recorded_at: Sun, 12 Mar 2023 22:20:43 GMT
 recorded_with: VCR 6.1.0

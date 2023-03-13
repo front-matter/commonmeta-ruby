@@ -542,12 +542,6 @@ module Briard
     end
 
     def find_from_format_by_string(string)
-      XmlHasher.configure do |config|
-        config.snakecase = true
-        config.ignore_namespaces = false
-        config.string_keys = true
-      end
-
       begin # try to parse as JSON
         hsh = MultiJson.load(string).to_h
         if hsh.dig('@context') && URI.parse(hsh.dig('@context')).host == 'schema.org'
@@ -566,11 +560,11 @@ module Briard
       end
 
       begin # try to parse as XML
-        hsh = XmlHasher.parse(string)
+        hsh = Hash.from_xml(string)
         if hsh.to_h.dig('crossref_result').present?
           return 'crossref_xml'
         end
-      rescue NoMethodError
+      rescue Nokogiri::XML::SyntaxError
       end
 
       begin # try to parse as YAML

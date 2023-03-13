@@ -1,0 +1,126 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.16910/jemr.9.1.2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:02 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,1,19]],"date-time":"2023-01-19T23:54:29Z","timestamp":1674172469039},"reference-count":0,"publisher":"University
+        of Bern","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["JEMR"],"abstract":"<jats:p>Eye
+        tracking has commonly been used to investigate how users interact with web
+        pages, with the goal of improving their usability. This article comprehensively
+        revisits the techniques that could be applicable to eye tracking data for
+        analysing user scanpaths on web pages. It also uses a third-party eye tracking
+        study to compare these techniques. This allows researchers to recognise existing
+        techniques for their goals, understand how they work and know their strengths
+        and limitations so that they can make an efficient choice for their studies.
+        These techniques can mainly be used for calculating similarities\/dissimilarities
+        between scanpaths, computing transition probabilities between web page elements,
+        detecting patterns in scanpaths and identifying common scanpaths. The scanpath
+        analysis techniques are classified into four groups by their goals so that
+        researchers can directly focus on the appropriate techniques for a sequential
+        analysis of user scanpaths on web pages. This article also suggests dealing
+        with the limitations of these techniques by pre-processing eye tracking data,
+        considering cognitive processing and addressing their reductionist approach.<\/jats:p>","DOI":"10.16910\/jemr.9.1.2","type":"journal-article","created":{"date-parts":[[2021,2,27]],"date-time":"2021-02-27T11:57:27Z","timestamp":1614427047000},"source":"Crossref","is-referenced-by-count":15,"title":["Eye
+        tracking scanpath analysis techniques on web pages: A survey, evaluation and
+        comparison"],"prefix":"10.16910","volume":"9","author":[{"given":"Sukru","family":"Eraslan","sequence":"first","affiliation":[]},{"given":"Yeliz","family":"Yesilada","sequence":"additional","affiliation":[]},{"given":"Simon","family":"Harper","sequence":"additional","affiliation":[]}],"member":"22676","published-online":{"date-parts":[[2015,12,30]]},"container-title":["Journal
+        of Eye Movement Research"],"original-title":[],"link":[{"URL":"https:\/\/bop.unibe.ch\/JEMR\/article\/download\/2430\/3624","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/bop.unibe.ch\/JEMR\/article\/download\/2430\/3624","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,2,27]],"date-time":"2021-02-27T11:57:27Z","timestamp":1614427047000},"score":1,"resource":{"primary":{"URL":"https:\/\/bop.unibe.ch\/JEMR\/article\/view\/2430"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015,12,30]]},"references-count":0,"journal-issue":{"issue":"1","published-online":{"date-parts":[[2016,2,10]]}},"URL":"http:\/\/dx.doi.org\/10.16910\/jemr.9.1.2","relation":{},"ISSN":["1995-8692"],"issn-type":[{"value":"1995-8692","type":"electronic"}],"subject":["Sensory
+        Systems","Ophthalmology"],"published":{"date-parts":[[2015,12,30]]}}}'
+  recorded_at: Sun, 12 Mar 2023 22:21:02 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.16910
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:21:02 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=c2Ca3sWx0ZArE9oB793ajgmATcrpiKppN%2FinexK%2FjlSRtSMr8zST0Q64ceplB%2BSNdCPE2av30l1a1yyky14qE6zK0InFcw8Iya9nP9VgVZxFlqcv5gv0ZVcdHh6283DMDEqCClg%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a6f6d8b58abfa40-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.16910",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 12 Mar 2023 22:21:02 GMT
+recorded_with: VCR 6.1.0

@@ -4,34 +4,34 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.11367
     body:
-      encoding: US-ASCII
+      encoding: UTF-8
       string: ''
     headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
       User-Agent:
-      - Faraday v2.7.4
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
+      - http.rb/5.1.1
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sun, 12 Mar 2023 19:21:39 GMT
+      - Sun, 12 Mar 2023 22:22:26 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
       - chunked
       Connection:
-      - keep-alive
+      - close
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KpEDh2SpHeyN8LLdfSN8Ld7nxDo93fbEy5btMh7TPIrZL6p9K9MqEiAOauURRDFYskkun2t8toXSxbRCF0ypKOHfXrxQjfLiESrei2lVh1NfbJgLMFxAGdQ%2FVNHhMJ9SctqtkEk%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=w%2BWMUiYkhbROnF%2BL6pVEAH%2BPdyHWh6kL67emH%2BGf3w4DHvAMm28jfP%2FD5HSCYtFUfgt2BAVJ8o1VEnm6jRZ7zQi47yTxIze4N6pM9fE22CvRsv6DZUx%2Fl3m1g6zPJ94aDWBqeas%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,11 +39,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7a6e66c24aa1b8de-AMS
+      - 7a6f6f94ad9d1af8-AMS
       Alt-Svc:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: ASCII-8BIT
+      encoding: UTF-8
       string: |-
         [
           {
@@ -51,5 +51,5 @@ http_interactions:
             "RA": "JaLC"
           }
         ]
-  recorded_at: Sun, 12 Mar 2023 19:21:39 GMT
+  recorded_at: Sun, 12 Mar 2023 22:22:26 GMT
 recorded_with: VCR 6.1.0

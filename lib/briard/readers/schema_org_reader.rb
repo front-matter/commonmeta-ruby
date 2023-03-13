@@ -27,19 +27,10 @@ module Briard
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
         url = normalize_id(id)
-        conn = Faraday.new(url, request: { timeout: 5 }) do |f|
-          f.request :gzip
-          f.request :json
-          # f.response :json
-        end
-        response = conn.get(url)
-        body = JSON.parse(response.body)
-
-        # some responses are returned as a hash
-        if body["data"].is_a?(Hash)
-          string = body.dig("data", "html", "head", "script", 1, "__content__")
-        else
-          doc = Nokogiri::HTML(body.fetch("data", nil), nil, "UTF-8")
+        response = HTTP.get(url)
+        return { "string" => nil, "state" => "not_found" } unless response.status.success?
+        
+          doc = Nokogiri::HTML(response.body.to_s)
 
           # workaround for xhtml documents
           nodeset = doc.at("script[type='application/ld+json']")
@@ -80,10 +71,7 @@ module Briard
             hsh["publisher"] = { "name" => publisher }
           end
 
-          string = hsh.to_json if hsh.present?
-        end
-
-        { "string" => string }
+        { "string" => hsh.to_json }
       end
 
       def read_schema_org(string: nil, **options)
@@ -96,7 +84,7 @@ module Briard
                                                                                    :sandbox, :validate, :ra))
 
         meta = string.present? ? JSON.parse(string) : {}
-
+        
         identifiers = Array.wrap(meta.fetch("identifier", nil)).map do |r|
           r = normalize_id(r) if r.is_a?(String)
           if r.is_a?(String) && URI(r).host != "doi.org"

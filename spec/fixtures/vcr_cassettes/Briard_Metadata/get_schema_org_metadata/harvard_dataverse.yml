@@ -1,0 +1,1838 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/NJ7XSO
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - dataverse.harvard.edu
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 12 Mar 2023 22:20:58 GMT
+      Content-Type:
+      - text/html;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Set-Cookie:
+      - AWSALB=3Tr/hNM0LfxoCc0uTqAxjzWdS+gJkfkr73m5ecist1adfbw4sHKHmk5j2To0pWeQQze7p6c/nbPUZXLS8qG7eSTTiS1p6i4pOiABOtAqt0yJdsogpCmfjjwAU7Kr;
+        Expires=Sun, 19 Mar 2023 22:20:57 GMT; Path=/
+      - AWSALBCORS=3Tr/hNM0LfxoCc0uTqAxjzWdS+gJkfkr73m5ecist1adfbw4sHKHmk5j2To0pWeQQze7p6c/nbPUZXLS8qG7eSTTiS1p6i4pOiABOtAqt0yJdsogpCmfjjwAU7Kr;
+        Expires=Sun, 19 Mar 2023 22:20:57 GMT; Path=/; SameSite=None; Secure
+      - JSESSIONID=7e99ede93d1294c046dd520bcbec; Path=/; Secure; HttpOnly
+      Server:
+      - Apache
+      Content-Security-Policy:
+      - frame-ancestors 'none'
+    body:
+      encoding: UTF-8
+      string: "<?xml version='1.0' encoding='UTF-8' ?>\n<!DOCTYPE html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\"
+        lang=\"en\" xml:lang=\"en\"><head id=\"j_idt19\"><!-- Global site tag (gtag.js)
+        - Google Analytics -->\n<script async=\"async\" src=\"https://www.googletagmanager.com/gtag/js?id=UA-61753334-1\"></script>\n<script>\n
+        \ //<![CDATA[\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n
+        \ gtag('js', new Date()); gtag('config', 'UA-61753334-1');\n\n  window.addEventListener(\"load\",
+        enableAnalyticsEventCapture, false);\n\n  function enableAnalyticsEventCapture()
+        {\n    // Download button\n    $(document).on(\"click\", \".btn-download,
+        .btn-download.dropdown-toggle + ul.dropdown-menu li a\", function() {\n      var
+        category = stripSize($(this).text());\n      var label = getFileId($(this));\n
+        \     gtag('event', 'Download',{'event_category' : category,\n                                'event_label'
+        : label});\n    });\n\n    // Request Access button\n    $(document).on(\"click\",
+        \".btn-request\", function() {\n      var category = $(this).text();\n      var
+        label = getFileId($(this));\n      gtag('event', 'Request Access', {'event_category'
+        : category,\n                                     'event_label' : label});\n
+        \   });\n\n    // Explore button\n    $(document).on(\"click\", \".btn-explore,
+        .btn-explore.dropdown-toggle + ul.dropdown-menu li a\", function() {\n      var
+        category = $(this).text();\n      var label = getFileId($(this));\n      gtag('event',
+        'Explore', {'event_category' : category,\n                                'event_label'
+        : label});\n    });\n\n    // Compute button\n    $(document).on(\"click\",
+        \".btn-compute, .btn-compute.dropdown-toggle + ul.dropdown-menu li a\", function()
+        {\n      var category = $(this).text();\n      var label = getFileId($(this));\n
+        \     gtag('event', 'Compute', {'event_category' : category,\n                                'event_label'
+        : label});\n    });\n\n    // Preview button\n    $(document).on(\"click\",
+        \".btn-preview, .btn-preview.dropdown-toggle + ul.dropdown-menu li a\", function()
+        {\n      var category = $(this).text();\n      var label = getFileId($(this));\n
+        \     gtag('event', 'Preview', {'event_category' : category,\n                                'event_label'
+        : label});\n    });\n\n    // Cite button\n    $(document).on(\"click\", \".downloadCitation
+        + ul.dropdown-menu li a\", function() {\n      var category = $(this).text();\n
+        \     var label = 'Unknown';\n      if($('#fileForm').length > 0) {\n        label
+        = stripId($('#fileForm').attr('action'));\n      } else if($('#datasetForm').length
+        > 0) {\n        label = stripId($('#datasetForm').attr('action'));\n      }\n
+        \     gtag('event', 'Download Citation', {'event_category' : category,\n                                        'event_label'
+        : label});\n    });\n\n    // Export Metadata button\n    $(document).on(\"click\",
+        \".btn-export + ul.dropdown-menu li a\", function() {\n      var category
+        = $(this).text();\n      var label = 'Unknown';\n      if($('#fileForm').length
+        > 0) {\n        label = stripId($('#fileForm').attr('action'));\n      } else
+        if($('#datasetForm').length > 0) {\n        label = stripId($('#datasetForm').attr('action'));\n
+        \     }\n      gtag('event', 'Export Metadata', {'event_category' : category,\n
+        \                                       'event_label' : label});\n    });\n\n
+        \   // Contact button\n    $(document).on(\"click\", \".btn-contact\", function()
+        {\n      var category = $(this).text();\n      var label = 'Unknown';\n      if($('#fileForm').length
+        > 0) {\n        label = stripId($('#fileForm').attr('action'));\n      } else
+        if($('#datasetForm').length > 0) {\n        label = stripId($('#datasetForm').attr('action'));\n
+        \     } else if($('#dataverseForm').length > 0) {\n        label = stripAlias($('#dataverseForm').attr('action'));\n
+        \     }\n      gtag('event', 'Contact', {'event_category' : category,\n                                'event_label'
+        : label});\n    });\n\n    // Share button\n    $(document).on(\"click\",
+        'div[id$=\"shareDialog\"] a[class^=\"sharrre\"]', function() {\n      var
+        sharrreVal = $(this).attr('class');\n      var category = sharrreVal.substring(sharrreVal.indexOf('-')
+        + 1) ;\n      var label = 'Unknown';\n      if($('#fileForm').length > 0)
+        {\n        label = stripId($('#fileForm').attr('action'));\n      } else if($('#datasetForm').length
+        > 0) {\n        label = stripId($('#datasetForm').attr('action'));\n      }
+        else if($('#dataverseForm').length > 0) {\n        label = stripAlias($('#dataverseForm').attr('action'));\n
+        \     }\n      gtag('event', 'Share', {'event_category' : category,\n                              'event_label'
+        : label});\n    });\n\n  }\n\n  function getFileId(target) {\n    var label
+        = 'Unknown';\n    if(target.parents('th, #actionButtonBlock .btn-access-dataset
+        + ul.dropdown-menu').length>0) {\n      //Special case - the Download button
+        that downloads all selected files in the dataset\n      label = 'file(s) from
+        ' + stripId($('#datasetForm').attr('action'));\n    } else {\n      var row
+        = target.parents('tr')[0];\n      if(row != null) {\n        //finds the file
+        id/DOI in the Dataset page\n        label = $(row).find('td.col-file-metadata
+        \ a').attr('href');\n      } else {\n        //finds the file id/DOI in the
+        file page\n        label = $('#fileForm').attr('action');\n      }\n      label
+        = stripId(label);\n    }\n    return label;\n  }\n\n\n  function stripId(label)
+        {\n    var index = label.indexOf('&');\n    if(index == -1) index = label.length;\n
+        \   if(label.indexOf('persistentId=') >= 0) {\n      label = label.substring(label.indexOf('persistentId=')
+        + 13, index);\n    }\n    if(label.indexOf('fileId=') >= 0) {\n      label
+        = label.substring(label.indexOf('fileId=') + 7, index);\n    }\n    return(label);\n
+        \ }\n\n  function stripAlias(label) {\n    var index = label.length;\n    label
+        = label.substring(label.indexOf('/dataverse/') + 11, index).split(/[?#]/)[0];\n
+        \   return(label);\n  }\n\n  function stripSize(category) {\n    var index
+        = category.indexOf('ZIP (');\n    if(index >= 0) {\n      category = category.substring(0,
+        index + 3);\n    }\n    return(category);\n  }\n  //]]>\n</script>\n\n            <title>Summary
+        data ankylosing spondylitis GWAS - Harvard Dataverse</title>\n\t    <meta
+        http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\n            <meta
+        name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n            <meta
+        http-equiv=\"X-UA-Compatible\" content=\"IE=edge\" />\n                    <meta
+        name=\"description\" content=\"Summary of association tests for Nature Genetics
+        publication &quot;Identification of multiple risk variants for ankylosing
+        spondylitis through high-density genotyping of immune-related loci&quot;.\"
+        />\n                    <meta name=\"DC.identifier\" content=\"doi:10.7910/DVN/NJ7XSO\"
+        />\n                    <meta name=\"DC.type\" content=\"Dataset\" />\n                    <meta
+        name=\"DC.title\" content=\"Summary data ankylosing spondylitis GWAS\" />\n
+        \                   <meta name=\"DC.date\" content=\"2017-09-30\" />\n                    <meta
+        name=\"DC.publisher\" content=\"Harvard Dataverse\" />\n                    <meta
+        name=\"DC.description\" content=\"Summary of association tests for Nature
+        Genetics publication &quot;Identification of multiple risk variants for ankylosing
+        spondylitis through high-density genotyping of immune-related loci&quot;.\"
+        />\n                        <meta name=\"DC.creator\" content=\"International
+        Genetics of Ankylosing Spondylitis Consortium (IGAS)\" />\n                        <meta
+        name=\"DC.subject\" content=\"Medicine, Health and Life Sciences\" />\n                    <meta
+        property=\"og:title\" content=\"Summary data ankylosing spondylitis GWAS\"
+        />\n                    <meta property=\"og:type\" content=\"article\" />\n
+        \                   <meta property=\"og:url\" content=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/NJ7XSO\"
+        />\n                    <meta property=\"og:image\" content=\"https://dataverse.harvard.edu/javax.faces.resource/images/dataverse-icon-1200.png.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec\"
+        />\n                    <meta property=\"og:site_name\" content=\"Harvard
+        Dataverse\" />\n                    <meta property=\"og:description\" content=\"Summary
+        of association tests for Nature Genetics publication &quot;Identification
+        of multiple risk variants for ankylosing spondylitis through high-dens...\"
+        />\n                        <meta property=\"article:author\" content=\"International
+        Genetics of Ankylosing Spondylitis Consortium (IGAS)\" />\n                    <meta
+        property=\"article:published_time\" content=\"2017-09-30\" />\n                    <script
+        type=\"application/ld+json\">{\"@context\":\"http://schema.org\",\"@type\":\"Dataset\",\"@id\":\"https://doi.org/10.7910/DVN/NJ7XSO\",\"identifier\":\"https://doi.org/10.7910/DVN/NJ7XSO\",\"name\":\"Summary
+        data ankylosing spondylitis GWAS\",\"creator\":[{\"name\":\"International
+        Genetics of Ankylosing Spondylitis Consortium (IGAS)\"}],\"author\":[{\"name\":\"International
+        Genetics of Ankylosing Spondylitis Consortium (IGAS)\"}],\"datePublished\":\"2017-09-30\",\"dateModified\":\"2017-09-30\",\"version\":\"1\",\"description\":[\"Summary
+        of association tests for Nature Genetics publication \\\"Identification of
+        multiple risk variants for ankylosing spondylitis through high-density genotyping
+        of immune-related loci\\\".\"],\"keywords\":[\"Medicine, Health and Life Sciences\",\"
+        Genome-Wide Association Studies\",\"Ankylosing spondylitis\"],\"citation\":[{\"@type\":\"CreativeWork\",\"text\":\"10.1038/ng.2667\"}],\"license\":\"http://creativecommons.org/publicdomain/zero/1.0\",\"includedInDataCatalog\":{\"@type\":\"DataCatalog\",\"name\":\"Harvard
+        Dataverse\",\"url\":\"https://dataverse.harvard.edu\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Harvard
+        Dataverse\"},\"provider\":{\"@type\":\"Organization\",\"name\":\"Harvard Dataverse\"},\"distribution\":[{\"@type\":\"DataDownload\",\"name\":\"Asian_Case_Control_Results.txt\",\"fileFormat\":\"text/plain\",\"contentSize\":11572412,\"description\":\"Summary
+        data for Asian cohort\",\"@id\":\"https://doi.org/10.7910/DVN/NJ7XSO/K3NRMO\",\"identifier\":\"https://doi.org/10.7910/DVN/NJ7XSO/K3NRMO\",\"contentUrl\":\"https://dataverse.harvard.edu/api/access/datafile/3055424\"},{\"@type\":\"DataDownload\",\"name\":\"European_Asian_Case_Control_Results.txt\",\"fileFormat\":\"text/plain\",\"contentSize\":11245496,\"description\":\"Summary
+        data for combined cohort\",\"@id\":\"https://doi.org/10.7910/DVN/NJ7XSO/HA2SVR\",\"identifier\":\"https://doi.org/10.7910/DVN/NJ7XSO/HA2SVR\",\"contentUrl\":\"https://dataverse.harvard.edu/api/access/datafile/3055425\"},{\"@type\":\"DataDownload\",\"name\":\"European_Case_Control_Results.txt\",\"fileFormat\":\"text/plain\",\"contentSize\":13337183,\"description\":\"Summary
+        data for European cohort\",\"@id\":\"https://doi.org/10.7910/DVN/NJ7XSO/IN45GZ\",\"identifier\":\"https://doi.org/10.7910/DVN/NJ7XSO/IN45GZ\",\"contentUrl\":\"https://dataverse.harvard.edu/api/access/datafile/3055426\"}]}\n\n
+        \                   </script><link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/theme.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces-bootstrap&amp;v=11.0.0\"
+        /><link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/primeicons/primeicons.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"
+        /><script type=\"text/javascript\" src=\"/javax.faces.resource/omnifaces.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=omnifaces&amp;v=3.8\"></script><script
+        type=\"text/javascript\" src=\"/javax.faces.resource/jquery/jquery.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"></script><script
+        type=\"text/javascript\" src=\"/javax.faces.resource/jquery/jquery-plugins.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"></script><script
+        type=\"text/javascript\" src=\"/javax.faces.resource/core.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"></script><script
+        type=\"text/javascript\" src=\"/javax.faces.resource/components.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"></script><link
+        type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/components.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"
+        /><script type=\"text/javascript\" src=\"/javax.faces.resource/watermark/watermark.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"></script><link
+        type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/fileupload/fileupload.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"
+        /><script type=\"text/javascript\" src=\"/javax.faces.resource/fileupload/fileupload.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"></script><script
+        type=\"text/javascript\" src=\"/javax.faces.resource/touch/touchswipe.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"></script><script
+        type=\"text/javascript\" src=\"/javax.faces.resource/inputmask/inputmask.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"></script><script
+        type=\"text/javascript\" src=\"/javax.faces.resource/datepicker/datepicker.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=primefaces&amp;v=11.0.0\"></script><script
+        type=\"text/javascript\">if(window.PrimeFaces){PrimeFaces.settings.locale='en';PrimeFaces.settings.viewId='/dataset.xhtml';PrimeFaces.settings.contextPath='';PrimeFaces.settings.cookiesSecure=false;}</script>\n
+        \       <link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"/javax.faces.resource/images/fav/apple-touch-icon.png.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec\"
+        />\n        <link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"/javax.faces.resource/images/fav/favicon-16x16.png.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec\"
+        />\n        <link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"/javax.faces.resource/images/fav/favicon-32x32.png.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec\"
+        />\n        <link rel=\"manifest\" href=\"/javax.faces.resource/images/fav/site.webmanifest.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec\"
+        />\n        <link rel=\"mask-icon\" href=\"/javax.faces.resource/images/fav/safari-pinned-tab.svg.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec\"
+        color=\"#da532c\" />\n        <meta name=\"msapplication-TileColor\" content=\"#da532c\"
+        />\n        <meta name=\"theme-color\" content=\"#ffffff\" />\n        <link
+        type=\"image/png\" rel=\"image_src\" href=\"/javax.faces.resource/images/dataverseproject.png.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec\"
+        />\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/bs/css/bootstrap.min.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"
+        />\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/bs/css/bootstrap-theme.min.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"
+        />\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/css/ie-compat.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"
+        />\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/css/owl.carousel.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"
+        />\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/css/fontcustom.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"
+        />\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/css/socicon.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"
+        />\n        <link type=\"text/css\" rel=\"stylesheet\" href=\"/javax.faces.resource/css/structure.css.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"
+        />\n            <style>\n                /* Custom CSS */\n                #navbarFixed
+        div.navbar-header img.navbar-brand.custom-logo {height:50px !important;}\n#dataverseDesc
+        span > span > span > h3 {font-weight: 300 !important;}\n\nnav.navbar.navbar-default
+        {background: #ececec !important;}\n/* #footer {background: #ececec !important;
+        padding-top:1.25em;} */\n\n            </style></head><body>\n\t<a href=\"#content\"
+        class=\"sr-only\">Skip to main content</a>\n\n    <nav id=\"dataverse-header-block\"><div
+        id=\"navbarFixed\" class=\"navbar navbar-default navbar-fixed-top\">\n            <div
+        class=\"container\">\n                <div class=\"navbar-header\">\n                    <button
+        type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"#topNavBar\"
+        aria-pressed=\"false\">\n                        <span class=\"sr-only\">Toggle
+        navigation</span>\n                        <span class=\"icon-bar\"></span>\n
+        \                       <span class=\"icon-bar\"></span>\n                        <span
+        class=\"icon-bar\"></span>\n                    </button>\n                    <a
+        href=\"/\"><img src=\"/logos/navbar/logo.png;jsessionid=7e99ede93d1294c046dd520bcbec\"
+        alt=\"Harvard Dataverse homepage\" class=\"navbar-brand custom-logo\" />\n
+        \                   </a>\n                </div>\n                <div class=\"collapse
+        navbar-collapse\" id=\"topNavBar\">\n                    <ul class=\"nav navbar-nav
+        navbar-right\"><li class=\"dropdown\">\n                            <a href=\"#\"
+        class=\"dropdown-toggle\" data-toggle=\"dropdown\">Add Data <b class=\"caret\"></b></a>\n
+        \                           <ul class=\"dropdown-menu\"><li><a href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ownerId=1\">New
+        Dataset</a></li>\n                            </ul></li>\n                        <li
+        class=\"dropdown\">\n                            <a href=\"#\" class=\"dropdown-toggle\"
+        data-toggle=\"dropdown\">Search <b class=\"caret\"></b></a>\n                            <ul
+        class=\"dropdown-menu navbar-search\">\n                                <li>\n
+        \                                   <form class=\"form-inline\" role=\"search\">\n
+        \                                       <label id=\"searchNavLabel\" class=\"sr-only\"
+        for=\"navbarsearch\">Search</label>\n                                        <div
+        class=\"input-group\">\n                                            <input
+        id=\"navbarsearch\" type=\"text\" class=\"form-control\" size=\"28\" value=\"\"
+        placeholder=\"Search all dataverses...\" />\n                                            <span
+        class=\"input-group-btn\">\n                                                <button
+        type=\"submit\" title=\"Find\" class=\"btn btn-default bootstrap-button-tooltip\"
+        aria-labelledby=\"searchNavLabel\" onclick=\"window.location='/dataverse/harvard?q='
+        + document.getElementById('navbarsearch').value;return false;\">\n                                                    <span
+        class=\"glyphicon glyphicon-search no-text\"></span>\n                                                </button>\n
+        \                                           </span>\n                                        </div>\n
+        \                                   </form>\n                                </li>\n
+        \                           </ul>\n                        </li><li><a href=\"https://support.dataverse.harvard.edu/\"
+        rel=\"noopener\" target=\"_blank\">About</a></li>\n                        <li><a
+        href=\"https://guides.dataverse.org/en/5.13/user\" rel=\"noopener\" target=\"_blank\">User
+        Guide</a>\n                        </li>\n                            <li>\n<form
+        id=\"j_idt78\" name=\"j_idt78\" method=\"post\" action=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO\"
+        class=\"navbar-form navbar-left navbar-form-link\" enctype=\"application/x-www-form-urlencoded\"
+        data-partialsubmit=\"true\">\n<input type=\"hidden\" name=\"j_idt78\" value=\"j_idt78\"
+        />\n<a id=\"j_idt78:headerSupportLink\" href=\"#\" class=\"ui-commandlink
+        ui-widget\" onclick=\"PrimeFaces.ab({s:&quot;j_idt78:headerSupportLink&quot;,f:&quot;j_idt78&quot;,u:&quot;contactDialog&quot;,onco:function(xhr,status,args,data){PF('contactForm').show();}});return
+        false;\">Support</a><input type=\"hidden\" name=\"javax.faces.ViewState\"
+        id=\"j_id1:javax.faces.ViewState:0\" value=\"8809981920267980055:5478236138567398528\"
+        autocomplete=\"off\" />\n</form>\n                            </li>\n                            <li><a
+        href=\"/dataverseuser.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?editMode=CREATE&amp;redirectPage=%2Fdataset.xhtml%3FpersistentId%3Ddoi%3A10.7910%2FDVN%2FNJ7XSO\">\n
+        \                                   Sign Up\n                                </a>\n
+        \                           </li>\n                            <li><a href=\"/loginpage.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?redirectPage=%2Fdataset.xhtml%3FpersistentId%3Ddoi%3A10.7910%2FDVN%2FNJ7XSO\">\n
+        \                                   Log In\n                                </a>\n
+        \                           </li>\n                    </ul>\n                </div>\n
+        \           </div></div>\n        \n        <noscript>\n            <div id=\"noscript-alert\"
+        class=\"bg-danger\">\n                <div class=\"alert container text-danger
+        no-margin-bottom\">Please enable JavaScript in your browser. It is required
+        to use most of the features of Dataverse.\n                </div>\n            </div>\n
+        \       </noscript>\n<form id=\"j_idt132\" name=\"j_idt132\" method=\"post\"
+        action=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO\"
+        class=\"form-inline\" enctype=\"application/x-www-form-urlencoded\" data-partialsubmit=\"true\">\n<input
+        type=\"hidden\" name=\"j_idt132\" value=\"j_idt132\" />\n<input type=\"hidden\"
+        name=\"javax.faces.ViewState\" id=\"j_id1:javax.faces.ViewState:1\" value=\"8809981920267980055:5478236138567398528\"
+        autocomplete=\"off\" />\n</form><div id=\"breadCrumbPanel\"><div id=\"breadcrumbNavBlock\"
+        class=\"container\">\n                <div class=\"breadcrumbBlock\">\n                            <a
+        id=\"breadcrumbLnk0\" href=\"/dataverse/harvard\">Harvard Dataverse\n                            </a>\n
+        \               </div><span class=\"breadcrumbCarrot\"> &gt; </span>\n                <div
+        class=\"breadcrumbBlock\">\n                </div></div></div><div id=\"messagePanel\">\n
+        \           <div class=\"container messagePanel\">\n            </div></div>\n
+        \   </nav>\n        <div class=\"container\" id=\"content\" role=\"main\">\n<form
+        id=\"datasetForm\" name=\"datasetForm\" method=\"post\" action=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO\"
+        enctype=\"application/x-www-form-urlencoded\">\n<input type=\"hidden\" name=\"datasetForm\"
+        value=\"datasetForm\" />\n<input id=\"datasetForm:validateFilesOutcome\" type=\"hidden\"
+        name=\"datasetForm:validateFilesOutcome\" /><input id=\"datasetForm:validTermsofAccess\"
+        type=\"hidden\" name=\"datasetForm:validTermsofAccess\" value=\"true\" /><div
+        id=\"datasetForm:topDatasetBlockFragment\"><div class=\"row\">\n                            <div
+        class=\"col-xs-12\">\n                                <div id=\"datasetVersionBlock\"
+        class=\"row\"><div id=\"title-block\" class=\"col-xs-12 margin-bottom-half\">\n
+        \                                       <h1 id=\"title\"> Summary data ankylosing
+        spondylitis GWAS</h1>\n                                        <div id=\"title-label-block\"
+        class=\"margin-top-half\"><span class=\"label label-default\">Version 1.0</span>\n
+        \                                       </div></div>\n                                </div>\n\n
+        \                               \n                                <div id=\"datasetCitationActionSummaryBlock\"
+        class=\"row\">\n                                    <div class=\"col-xs-12
+        col-sm-12 col-md-8 col-lg-9\">\n    <div class=\"citation-block\">\n        <div
+        class=\"clearfix alert alert-info bg-citation\">\n            <div class=\"citation
+        margin-bottom\">\n                <div class=\"pull-left preview-icon-block\"><span
+        class=\"icon-dataset\"></span>\n                </div>\n                <span
+        class=\"citation-select\" onclick=\"if (event.target) { selectText(event.target);
+        } else{ selectText(this); }\">International Genetics of Ankylosing Spondylitis
+        Consortium (IGAS), 2017, \"Summary data ankylosing spondylitis GWAS\", <a
+        href=\"https://doi.org/10.7910/DVN/NJ7XSO\" target=\"_blank\">https://doi.org/10.7910/DVN/NJ7XSO</a>,
+        Harvard Dataverse, V1\n                </span>\n            </div><div class=\"pull-left
+        row col-sm-9 padding-none\"><div class=\"col-sm-3 col-md-4 col-lg-3 btn-group
+        margin-bottom citation-download\">\n                    <button type=\"button\"
+        class=\"btn btn-link dropdown-toggle padding-none downloadCitation\" data-toggle=\"dropdown\">\n
+        \                       Cite Dataset <span class=\"caret\"></span>\n                    </button>\n
+        \                   <ul class=\"dropdown-menu\">\n                        <li><script
+        type=\"text/javascript\" src=\"/javax.faces.resource/jsf.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?ln=javax.faces\"></script><a
+        id=\"datasetForm:endNoteLink\" href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:endNoteLink':'datasetForm:endNoteLink'},'');return
+        false\">\n                                EndNote XML\n                            </a>\n
+        \                       </li>\n                        <li><a id=\"datasetForm:risLink\"
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:risLink':'datasetForm:risLink'},'');return
+        false\">\n                                RIS\n                            </a>\n
+        \                       </li>\n                        <li><a id=\"datasetForm:bibLink\"
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:bibLink':'datasetForm:bibLink'},'_blank');return
+        false\" target=\"_blank\">\n                                BibTeX\n                            </a>\n
+        \                       </li>\n                    </ul></div><div class=\"col-sm-9
+        col-md-8 col-lg-9 text-muted margin-bottom citation-standards\">Learn about
+        <a href=\"https://dataverse.org/best-practices/data-citation\" title=\"Data
+        Citation - Dataverse.org\" target=\"_blank\">Data Citation Standards</a>.</div></div>\n
+        \       </div>\n    </div>\n                                        \n                                    </div>\n\n
+        \                                   <div class=\"col-xs-12 col-sm-12 col-md-4
+        col-lg-3 pull-right margin-bottom\"><div id=\"actionButtonBlock\"><div class=\"btn-group
+        btn-group-justified\">\n                                                <div
+        class=\"btn-group\">\n                                                    <button
+        type=\"button\" class=\"btn btn-primary btn-access-dataset dropdown-toggle\"
+        data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n
+        \                                                       Access Dataset <span
+        class=\"caret\"></span>\n                                                    </button>\n
+        \                                                   <ul class=\"dropdown-menu
+        pull-right text-left\" style=\"padding-left:1em; padding-right:1em;\">\n                                                                <li
+        class=\"dropdown-header\">Download Options <span class=\"glyphicon glyphicon-download-alt\"></span></li><li><a
+        id=\"datasetForm:j_idt264\" href=\"#\" class=\"ui-commandlink ui-widget btn-download\"
+        onclick=\"PrimeFaces.ab({s:&quot;datasetForm:j_idt264&quot;,f:&quot;datasetForm&quot;,u:&quot;datasetForm&quot;,onco:function(xhr,status,args,data){showPopup();;},fp:&quot;datasetForm:topDatasetBlockFragment&quot;});return
+        false;\">\n                                                                    Download\n
+        \                                                                       ZIP
+        (34.5 MB)</a></li>\n                                                            <li
+        class=\"dropdown-header\">Explore Options <span class=\"glyphicon glyphicon-equalizer\"></span></li>\n
+        \                                                               <li><a href=\"#\"
+        onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:j_idt292:0:j_idt294':'datasetForm:j_idt292:0:j_idt294'},'');return
+        false\" class=\"btn-explore\">Binder</a>\n                                                                </li>\n
+        \                                                       \n                                                    </ul>\n
+        \                                               </div></div>\n                                            \n\n
+        \                                           \n                                            <div
+        class=\"btn-group btn-group-justified\"><a id=\"datasetForm:j_idt400\" href=\"#\"
+        class=\"ui-commandlink ui-widget btn btn-default btn-xs btn-contact\" onclick=\"PrimeFaces.ab({s:&quot;datasetForm:j_idt400&quot;,f:&quot;datasetForm&quot;,u:&quot;contactDialog&quot;,onco:function(xhr,status,args,data){PF('contactForm').show();},fp:&quot;datasetForm:topDatasetBlockFragment&quot;});return
+        false;\" title=\"Contact Dataset Owner\">\n                                                    Contact
+        Owner\n                                                </a><a id=\"datasetForm:j_idt402\"
+        href=\"#\" class=\"ui-commandlink ui-widget btn btn-default btn-xs btn-share\"
+        onclick=\"PrimeFaces.ab({s:&quot;datasetForm:j_idt402&quot;,f:&quot;datasetForm&quot;,onco:function(xhr,status,args,data){PF('shareDialog').show();sharrre();;},fp:&quot;datasetForm:topDatasetBlockFragment&quot;});return
+        false;\" title=\"Share Dataset\">\n                                                    Share\n
+        \                                               </a>\n                                            </div></div>\n
+        \                                       \n                                    </div><div
+        style=\"clear:right;\" class=\"col-xs-12 col-sm-12 col-md-4 col-lg-3 pull-right
+        margin-bottom\">\n                                        \n                                        <div
+        id=\"metrics-block\">\n                                            <div id=\"metrics-heading\">\n
+        \                                               Dataset Metrics\n                                                \n
+        \                                                   <span class=\"glyphicon
+        glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto
+        top\" data-trigger=\"hover\" data-original-title=\"Aggregated metrics for
+        this dataset.\"></span>\n                                            </div>\n
+        \                                           <div id=\"metrics-body\"><div
+        class=\"metrics-count-block\">234 Downloads\n                                                    <span
+        class=\"glyphicon glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\"
+        data-placement=\"auto top\" data-original-title=\"Total aggregated downloads
+        of files in this dataset.\"></span></div>\n                                            </div>\n
+        \                                       </div></div>\n\n                                    \n
+        \                                   <div id=\"dataset-colorder-block\" class=\"visible-md-block
+        visible-lg-block col-md-8 col-lg-9\"></div><div id=\"dataset-summary-metadata\"
+        class=\"col-xs-12 col-sm-12 col-md-8 col-lg-9 metadata-container padding-none
+        margin-bottom\">\n                                        <table class=\"metadata\">\n
+        \                                           <tbody><tr id=\"dsDescription\">\n
+        \                                                       <th scope=\"row\">\n
+        \                                                           Description\n
+        \                                                           <span class=\"glyphicon
+        glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto
+        right\" data-original-title=\"A summary describing the purpose, nature, and
+        scope of the Dataset\"></span>\n                                                        </th><td>\n
+        \                                                                   <div>Summary
+        of association tests for Nature Genetics publication \"Identification of multiple
+        risk variants for ankylosing spondylitis through high-density genotyping of
+        immune-related loci\".\n                                                                    </div></td></tr><tr
+        id=\"subject\">\n                                                        <th
+        scope=\"row\">\n                                                            Subject\n
+        \                                                           <span class=\"glyphicon
+        glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto
+        right\" data-original-title=\"The area of study relevant to the Dataset\"></span>\n
+        \                                                       </th><td>Medicine,
+        Health and Life Sciences</td></tr><tr id=\"keywords\">\n                                                        <th
+        scope=\"row\">\n                                                            Keyword\n
+        \                                                           <span class=\"glyphicon
+        glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto
+        right\" data-original-title=\"A key term that describes an important aspect
+        of the Dataset and information about any controlled vocabulary used\"></span>\n
+        \                                                       </th>\n                                                        <td>
+        Genome-Wide Association Studies, Ankylosing spondylitis</td></tr><tr id=\"publication\">\n
+        \                                                       <th scope=\"row\">\n
+        \                                                           Related Publication\n
+        \                                                           <span class=\"glyphicon
+        glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto
+        right\" data-original-title=\"The article or report that uses the data in
+        the Dataset. The full list of related publications will be displayed on the
+        metadata tab\"></span>\n                                                        </th><td>10.1038/ng.2667\n
+        \                                                           <a target=\"_blank\"
+        rel=\"noopener\"></a></td></tr><tr id=\"notesText\">\n                                                        <th
+        scope=\"row\">\n                                                            Notes\n
+        \                                                           <span class=\"glyphicon
+        glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto
+        right\" data-original-title=\"Additional information about the Dataset\"></span>\n
+        \                                                       </th><td>European_Case_Control_Results.txt:
+        summary data for European cohort Asian_Case_Control_Results.txt: summary data
+        for Asian cohort European_Asian_Case_Control_Results.txt: summary data for
+        combined cohort</td></tr>\n                                                <tr>\n
+        \                                                   <th scope=\"row\">\n                                                        License/Data
+        Use Agreement\n                                                    </th>\n
+        \                                                   <td>\n                                                        <p>\n
+        \                                                           <img src=\"https://licensebuttons.net/p/zero/1.0/88x31.png\"
+        title=\"Creative Commons CC0 1.0 Universal Public Domain Dedication. \" style=\"display:none\"
+        onload=\"this.style.display='inline'\" />\n                                                            <a
+        href=\"http://creativecommons.org/publicdomain/zero/1.0\" title=\"Creative
+        Commons CC0 1.0 Universal Public Domain Dedication. \" target=\"_blank\">CC0
+        1.0</a>\n                                                        </p>\n                                                    </td>\n
+        \                                               </tr>\n                                            </tbody>\n
+        \                                       </table></div>\n                                    \n
+        \                               </div>\n                                \n
+        \                           </div></div></div><div id=\"contentTabs\"><div
+        id=\"datasetForm:pageRefreshFragment\"><input id=\"datasetForm:datasetLockedForAnyReasonVariable\"
+        type=\"hidden\" name=\"datasetForm:datasetLockedForAnyReasonVariable\" value=\"false\"
+        /><input id=\"datasetForm:datasetStateChangedVariable\" type=\"hidden\" name=\"datasetForm:datasetStateChangedVariable\"
+        value=\"false\" /><script id=\"datasetForm:j_idt671\" type=\"text/javascript\">refreshAllLocksCommand
+        = function() {return PrimeFaces.ab({s:\"datasetForm:j_idt671\",f:\"datasetForm\",p:\"datasetForm:j_idt671\",u:\"datasetForm:pageRefreshFragment
+        messagePanel\",pa:arguments[0],fp:\"datasetForm:pageRefreshFragment\"});}</script><script
+        id=\"datasetForm:j_idt672\" type=\"text/javascript\">refreshAllCommand = function()
+        {return PrimeFaces.ab({s:\"datasetForm:j_idt672\",f:\"datasetForm\",p:\"datasetForm:j_idt672\",u:\"datasetForm:topDatasetBlockFragment
+        datasetForm:tabView:filesTable messagePanel\",pa:arguments[0],fp:\"datasetForm:pageRefreshFragment\"});}</script><button
+        id=\"datasetForm:refreshButton\" name=\"datasetForm:refreshButton\" class=\"\"
+        onclick=\"PrimeFaces.ab({s:&quot;datasetForm:refreshButton&quot;,f:&quot;datasetForm&quot;,p:&quot;datasetForm:refreshButton&quot;,u:&quot;datasetForm:topDatasetBlockFragment
+        datasetForm:tabView:filesTable&quot;,fp:&quot;datasetForm:pageRefreshFragment&quot;});return
+        false;\" style=\"display:none\" type=\"submit\"><span class=\"ui-button-text
+        ui-c\">ui-button</span></button><script id=\"datasetForm:refreshButton_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"refreshButton\",{id:\"datasetForm:refreshButton\"});});</script>\n
+        \                           <script>\n                                //<![CDATA[\n
+        \                               // javascript for refreshing page when locks\n
+        \                               $(this).ready(function () {\n                                    refreshIfStillLocked();\n
+        \                               });\n                                function
+        refreshIfStillLocked() {\n                                    if ($('input[id$=\"datasetLockedForAnyReasonVariable\"]').val()
+        === 'true') {\n                                        // if dataset is locked,
+        instruct the page to\n                                        // wait and
+        check again:\n                                        waitAndCheckLockAgain();\n
+        \                                   } else {\n                                        //
+        if not locked, has it just been unlocked?\n                                        if
+        ($('input[id$=\"datasetStateChangedVariable\"]').val() === 'true') {\n                                            //
+        For whatever unknown PrimeFaces reason\n                                            //
+        the page needs to be refreshed twice, for all\n                                            //
+        the pull down menus to update properly:\n                                            refreshAllCommand();\n
+        \                                           // You can't just run 2 refreshAllCommand()s
+        in a row\n                                            // either; because the
+        command has an \"update=@all\" on it,\n                                            //
+        so I guess if you try to execute the 2nd one right after\n                                            //
+        the first one, this fragment is still going to be loading -\n                                            //
+        so there would not yet be a command to run! (it needs to\n                                            //
+        be rendered, before you can execute it, that is)\n                                            setTimeout(function
+        () {\n                                                // this button doesn't
+        do anything, but it has an update=\"@all\"\n                                                //
+        attribute:\n                                                $('button[id$=\"refreshButton\"]').trigger('click');\n
+        \                                               //refreshAllCommand();\n                                            },
+        1500);\n                                        }\n                                    }\n
+        \                               }\n                                function
+        waitAndCheckLockAgain() {\n                                    setTimeout(function
+        () {\n                                        // refresh the lock in the\n
+        \                                       // backing bean; i.e., check, if the
+        ingest has\n                                        // already completed in
+        the background:\n                                        //$('button[id$=\"refreshButton\"]').trigger('click');\n
+        \                                       //refreshLockCommand();\n                                        refreshAllLocksCommand();\n
+        \                                   }, 10000);\n                                }\n
+        \                               //]]>\n                            </script></div><div
+        id=\"datasetForm:tabView\" class=\"ui-tabs ui-widget ui-widget-content ui-corner-all
+        ui-hidden-container ui-tabs-top\" data-widget=\"content\"><ul class=\"ui-tabs-nav
+        ui-helper-reset ui-widget-header ui-corner-all\" role=\"tablist\"><li class=\"ui-tabs-header
+        ui-state-default ui-tabs-selected ui-state-active ui-corner-top\" role=\"tab\"
+        aria-expanded=\"true\" aria-selected=\"true\" data-index=\"0\"><a href=\"#datasetForm:tabView:dataFilesTab\"
+        tabindex=\"-1\">Files</a></li><li class=\"ui-tabs-header ui-state-default
+        ui-corner-top\" role=\"tab\" aria-expanded=\"false\" aria-selected=\"false\"
+        data-index=\"1\"><a href=\"#datasetForm:tabView:metadataMapTab\" tabindex=\"-1\">Metadata</a></li><li
+        class=\"ui-tabs-header ui-state-default ui-corner-top\" role=\"tab\" aria-expanded=\"false\"
+        aria-selected=\"false\" data-index=\"2\"><a href=\"#datasetForm:tabView:termsTab\"
+        tabindex=\"-1\">Terms</a></li><li class=\"ui-tabs-header ui-state-default
+        ui-corner-top\" role=\"tab\" aria-expanded=\"false\" aria-selected=\"false\"
+        data-index=\"3\"><a href=\"#datasetForm:tabView:versionsTab\" tabindex=\"-1\">Versions</a></li></ul><div
+        class=\"ui-tabs-panels\"><div id=\"datasetForm:tabView:dataFilesTab\" class=\"ui-tabs-panel
+        ui-widget-content ui-corner-bottom\" role=\"tabpanel\" aria-hidden=\"false\"
+        data-index=\"0\"><script id=\"datasetForm:tabView:j_idt1062\" type=\"text/javascript\">refreshPaginator
+        = function() {return PrimeFaces.ab({s:\"datasetForm:tabView:j_idt1062\",f:\"datasetForm\",p:\"datasetForm:tabView:j_idt1062\",u:\"datasetForm\",pa:arguments[0]});}</script><script
+        id=\"datasetForm:tabView:j_idt1067\" type=\"text/javascript\">rebindCommand
+        = function() {return PrimeFaces.ab({s:\"datasetForm:tabView:j_idt1067\",f:\"datasetForm\",p:\"datasetForm:tabView:j_idt1067\",u:\"datasetForm:tabView:filesTable\",pa:arguments[0]});}</script><div
+        id=\"datasetForm:tabView:filesTable\" class=\"ui-datatable ui-widget\" style=\"margin-right:1px;\"><div
+        class=\"ui-datatable-header ui-widget-header ui-corner-top\"><div id=\"datasetForm:tabView:filesTable:filesHeaderBlock\"
+        class=\"row\">\n                <div class=\"col-xs-5\"><div class=\"input-group\"><label
+        for=\"datasetForm:tabView:filesTable:searchFiles\" id=\"searchLabel\" class=\"sr-only\">Search</label><input
+        id=\"datasetForm:tabView:filesTable:searchFiles\" name=\"datasetForm:tabView:filesTable:searchFiles\"
+        type=\"text\" value=\"\" class=\"ui-inputfield ui-inputtext ui-widget ui-state-default
+        ui-corner-all form-control\" title=\"Search\" onkeypress=\"if (event.keyCode
+        == 13) {                                                  submitsearch();
+        \                                                 return false;                                              }\"
+        aria-labelledby=\"searchLabel\" /><script id=\"datasetForm:tabView:filesTable:searchFiles_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"InputText\",\"inputSearchTerm\",{id:\"datasetForm:tabView:filesTable:searchFiles\"});});</script><script
+        id=\"datasetForm:tabView:filesTable:j_idt1078_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Watermark\",\"widget_datasetForm_tabView_filesTable_j_idt1078\",{id:\"datasetForm:tabView:filesTable:j_idt1078\",value:\"Search
+        this dataset...\",target:\"datasetForm:tabView:filesTable:searchFiles\"});});</script><script
+        id=\"datasetForm:tabView:filesTable:j_idt1079\" type=\"text/javascript\">submitsearch
+        = function() {return PrimeFaces.ab({s:\"datasetForm:tabView:filesTable:j_idt1079\",f:\"datasetForm\",p:\"datasetForm:tabView:filesTable:j_idt1079
+        @widgetVar(inputSearchTerm)\",u:\"datasetForm\",ps:true,pa:arguments[0]});}</script>\n\n
+        \                       <span class=\"input-group-btn\"><a id=\"datasetForm:tabView:filesTable:j_idt1081\"
+        href=\"#\" class=\"ui-commandlink ui-widget btn btn-default bootstrap-button-tooltip\"
+        onclick=\"PrimeFaces.ab({s:&quot;datasetForm:tabView:filesTable:j_idt1081&quot;,f:&quot;datasetForm&quot;,p:&quot;datasetForm:tabView:filesTable:j_idt1081
+        @widgetVar(inputSearchTerm)&quot;,u:&quot;datasetForm&quot;,ps:true});return
+        false;\" title=\"Find\">\n                                <span class=\"glyphicon
+        glyphicon-search no-text\"></span></a>\n                        </span></div>\n
+        \               </div>\n                <div class=\"col-xs-7 text-right\">\n
+        \               </div></div><div style=\"margin-bottom:10px;\" class=\"row\"><div
+        class=\"col-xs-9 text-left\"><div style=\"font-weight:normal;\" class=\"text-muted
+        small\">Filter by</div><div style=\"margin-right:20px;\" class=\"btn-group\">\n
+        \                       <button type=\"button\" class=\"btn btn-link dropdown-toggle\"
+        style=\"padding:0;\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n
+        \                           File Type: <span class=\"\">All</span> <span class=\"caret\"></span>\n
+        \                       </button>\n                        <ul class=\"dropdown-menu\">\n
+        \                           \n                            <li><a href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO&amp;version=&amp;q=&amp;fileAccess=&amp;fileTag=&amp;fileSortField=&amp;fileSortOrder=\"><span
+        class=\"highlightBold\">All</span></a></li>\n                            <li
+        role=\"separator\" class=\"divider\"></li>\n                                <li><a
+        href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO&amp;version=&amp;q=&amp;fileTypeGroupFacet=%22Text%22&amp;fileAccess=&amp;fileTag=&amp;fileSortField=&amp;fileSortOrder=\"><span
+        class=\"\">Text (3)</span></a></li>\n                        </ul></div><div
+        style=\"margin-right:20px;\" class=\"btn-group\">\n                        <button
+        type=\"button\" class=\"btn btn-link dropdown-toggle\" style=\"padding:0;\"
+        data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n
+        \                           Access: <span class=\"\">All</span> <span class=\"caret\"></span>\n
+        \                       </button>\n                        <ul class=\"dropdown-menu\">\n
+        \                           \n                            <li><a href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO&amp;version=&amp;q=&amp;fileTypeGroupFacet=&amp;fileTag=&amp;fileSortField=&amp;fileSortOrder=\"><span
+        class=\"highlightBold\">All</span></a></li>\n                            <li
+        role=\"separator\" class=\"divider\"></li>\n                                <li><a
+        href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO&amp;version=&amp;q=&amp;fileTypeGroupFacet=&amp;fileAccess=Public&amp;fileTag=&amp;fileSortField=&amp;fileSortOrder=\"><span
+        class=\"\">Public (3)</span></a></li>\n                        </ul></div></div>\n\n
+        \               <div class=\"col-xs-3 text-right \">\n                    \n
+        \                   <div class=\"btn-group\">\n                        <button
+        type=\"button\" class=\"btn btn-default dropdown-toggle\" data-toggle=\"dropdown\"
+        aria-haspopup=\"true\" aria-expanded=\"false\">\n                            <span
+        class=\"glyphicon glyphicon-sort\"></span> Sort <span class=\"caret\"></span>\n
+        \                       </button>\n                        <ul class=\"dropdown-menu
+        pull-right text-left\">\n                            <li><a href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO&amp;version=&amp;q=&amp;fileTypeGroupFacet=&amp;fileAccess=\"><span
+        class=\"highlightBold\">Name (A-Z)</span></a></li>\n                            <li><a
+        href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO&amp;version=&amp;q=&amp;fileTypeGroupFacet=&amp;fileAccess=&amp;fileSortField=name&amp;fileSortOrder=desc\"><span
+        class=\"\">Name (Z-A)</span></a></li>\n                            <li><a
+        href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO&amp;version=&amp;q=&amp;fileTypeGroupFacet=&amp;fileAccess=&amp;fileSortField=date\"><span
+        class=\"\">Newest</span></a></li>\n                            <li><a href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO&amp;version=&amp;q=&amp;fileTypeGroupFacet=&amp;fileAccess=&amp;fileSortField=date&amp;fileSortOrder=desc\"><span
+        class=\"\">Oldest</span></a></li>\n                            <li><a href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO&amp;version=&amp;q=&amp;fileTypeGroupFacet=&amp;fileAccess=&amp;fileSortField=size\"><span
+        class=\"\">Size</span></a></li>\n                            <li><a href=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO&amp;version=&amp;q=&amp;fileTypeGroupFacet=&amp;fileAccess=&amp;fileSortField=type\"><span
+        class=\"\">Type</span></a></li>\n                        </ul>\n                    </div>\n
+        \               </div></div></div><div class=\"ui-datatable-tablewrapper\"><table
+        role=\"grid\" style=\"min-width:100%;width:auto;\"><thead id=\"datasetForm:tabView:filesTable_head\"><tr
+        role=\"row\"><th id=\"datasetForm:tabView:filesTable:j_idt1255\" class=\"ui-state-default
+        ui-selection-column text-center\" role=\"columnheader\" aria-label=\"Select
+        Files\" scope=\"col\"><span class=\"ui-column-title\"></span><div class=\"ui-chkbox
+        ui-chkbox-all ui-widget\"><div id=\"datasetForm:tabView:filesTable_head_checkbox\"
+        role=\"checkbox\" tabindex=\"0\" aria-label=\"Select All\" aria-checked=\"false\"
+        class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\"><span class=\"ui-chkbox-icon
+        ui-icon ui-icon-blank ui-c\"></span></div></div></th><th id=\"datasetForm:tabView:filesTable:j_idt1256\"
+        class=\"ui-state-default col-file-metadata\" role=\"columnheader\" aria-label=\"{0}
+        to {1} of {2} {2, choice, 0#Files|1#File|2#Files}\" scope=\"col\"><span class=\"ui-column-title\"><div
+        id=\"datasetForm:tabView:filesTable:filesHeaderCount\"><span class=\"highlightBold\">1
+        to 3 of 3 Files</span></div></span></th><th id=\"datasetForm:tabView:filesTable:j_idt1292\"
+        class=\"ui-state-default col-file-action button-block text-right\" role=\"columnheader\"
+        aria-label=\"File Actions\" scope=\"col\" style=\"width:40%;\"><span class=\"ui-column-title\">\n
+        \               <script type=\"text/javascript\">\n                    function
+        downloadFiles(url, filelist) {\n                        filelist = filelist
+        + ','; //Prevents last file from being dropped on server\n                        var
+        form = $('<form></form>').attr('action', url).attr('method', 'post').attr('enctype',
+        'text/plain');\n                        form.append($(\"<input />\").attr('type',
+        'hidden').attr('name', 'fileIds').attr('value', filelist));\n                        //Submit
+        and then remove form\n                        form.appendTo('body').submit().remove();\n
+        \                   }\n                </script><div id=\"datasetForm:tabView:filesTable:downloadButtonBlockNormal\"
+        class=\"btn-group\"><a id=\"datasetForm:tabView:filesTable:j_idt1343\" href=\"#\"
+        class=\"ui-commandlink ui-widget btn btn-default btn-download\" onclick=\"if
+        (!testFilesSelected()) return false;;PrimeFaces.ab({s:&quot;datasetForm:tabView:filesTable:j_idt1343&quot;,f:&quot;datasetForm&quot;,u:&quot;datasetForm&quot;,onco:function(xhr,status,args,data){showPopup();;}});return
+        false;\">\n                        <span class=\"glyphicon glyphicon-download-alt\"></span>
+        Download\n                    </a></div></span></th></tr></thead><tbody id=\"datasetForm:tabView:filesTable_data\"
+        class=\"ui-datatable-data ui-widget-content\"><tr data-ri=\"0\" data-rk=\"s3://dvn-cloud:15ed57a652e-67284a372c29\"
+        class=\"ui-widget-content ui-datatable-even ui-datatable-selectable\" role=\"row\"
+        aria-selected=\"false\"><td role=\"gridcell\" class=\"ui-selection-column
+        text-center\"><div class=\"ui-chkbox ui-widget\"><div id=\"datasetForm:tabView:filesTable_s3://dvn-cloud:15ed57a652e-67284a372c29_checkbox\"
+        role=\"checkbox\" tabindex=\"0\" aria-label=\"Select Asian_Case_Control_Results.txt\"
+        aria-checked=\"false\" class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\"><span
+        class=\"ui-chkbox-icon ui-icon ui-icon-blank ui-c\"></span></div></div></td><td
+        role=\"gridcell\" class=\"col-file-metadata\"><div id=\"datasetForm:tabView:filesTable:0:fileInfoInclude-filesTable\"
+        class=\"ui-outputpanel ui-widget media\">\n        <div class=\"media-left
+        col-file-thumb\" style=\"padding-top:4px;\">\n            <div class=\"media-object
+        thumbnail-block text-center\"><span class=\"icon-document file-thumbnail-icon
+        text-muted\"></span>\n            </div>\n        </div>\n        <div class=\"media-body
+        col-file-metadata\">\n            <div class=\"fileNameOriginal\">\n                    \n
+        \                   <a href=\"/file.xhtml?persistentId=doi:10.7910/DVN/NJ7XSO/K3NRMO&amp;version=1.0\">\n
+        \                       Asian_Case_Control_Results.txt\n                    </a>\n
+        \           </div>\n            \n            <div class=\"text-muted small\"><span
+        id=\"datasetForm:tabView:filesTable:0:fileType\">Plain Text</span><span id=\"datasetForm:tabView:filesTable:0:fileSize\">
+        - 11.0 MB</span>\n                <div class=\"dateCreatePublish-block\"><span
+        id=\"datasetForm:tabView:filesTable:0:fileCreatePublishDate\">Published Sep
+        30, 2017</span>\n                </div><div class=\"downloads-block\"><span
+        id=\"datasetForm:tabView:filesTable:0:fileDownloadCount\" class=\"visible-xs-block
+        visible-sm-block visible-md-inline visible-lg-inline\">68 Downloads</span></div><div
+        class=\"checksum-block\">\n                    <span class=\"checksum-truncate
+        checksum-tooltip\" style=\"margin-right:3px;\" data-toggle=\"tooltip\" data-placement=\"top\"
+        data-html=\"true\" data-clipboard-action=\"copy\" data-clipboard-text=\"bcc06aebf96c9540995192c89c91fb23\"
+        title=\"Click to copy&lt;br/&gt;bcc06aebf96c9540995192c89c91fb23\">MD5: bcc06aebf96c9540995192c89c91fb23</span>\n
+        \                   <span class=\"glyphicon glyphicon-copy btn-copy checksum-tooltip\"
+        data-toggle=\"tooltip\" data-placement=\"top\" data-html=\"true\" data-clipboard-action=\"copy\"
+        data-clipboard-text=\"bcc06aebf96c9540995192c89c91fb23\" title=\"Click to
+        copy&lt;br/&gt;bcc06aebf96c9540995192c89c91fb23\"></span></div>\n            </div><div
+        class=\"fileDescription small\"><span id=\"datasetForm:tabView:filesTable:0:fileDescNonEmpty\">Summary
+        data for Asian cohort</span></div>\n        </div></div></td><td role=\"gridcell\"
+        style=\"width:40%;\" class=\"col-file-action button-block text-right\"><div
+        role=\"group\" class=\"btn-group\" aria-label=\"File Actions\"><div class=\"btn-group\">\n
+        \                       <a class=\"btn-preview btn btn-link bootstrap-button-tooltip\"
+        title=\"Read Text\" href=\"/file.xhtml?persistentId=doi:10.7910/DVN/NJ7XSO/K3NRMO&amp;version=1.0\">\n
+        \                           <span class=\"glyphicon glyphicon-eye-open\"></span><span
+        class=\"sr-only\">Preview \"Asian_Case_Control_Results.txt\"</span>\n                        </a>\n
+        \                   <a type=\"button\" style=\"padding:6px 8px;\" class=\"btn-access-file
+        btn btn-link bootstrap-button-tooltip dropdown-toggle\" title=\"Access File\"
+        data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" tabindex=\"0\">\n
+        \                       <span class=\"glyphicon glyphicon-download-alt\"></span><span
+        class=\"sr-only\">Access File</span><span class=\"caret\"></span>\n                    </a>\n
+        \                   <ul class=\"dropdown-menu pull-right text-left\">\n    \n
+        \   \n    <li class=\"dropdown-header\">File Access <span class=\"glyphicon
+        glyphicon-file\"></span></li>\n    <li><span class=\"dropdown-item-text\">\n
+        \           <span class=\"glyphicon glyphicon-globe text-success\"></span><span
+        class=\"text-success\"> Public</span>\n        </span></li>\n        \n        <li
+        class=\"dropdown-header\">Download Options <span class=\"glyphicon glyphicon-download-alt\"></span></li><li><a
+        id=\"datasetForm:tabView:filesTable:0:j_idt1396\" href=\"#\" class=\"ui-commandlink
+        ui-widget btn-download\" onclick=\"PrimeFaces.ab({s:&quot;datasetForm:tabView:filesTable:0:j_idt1396&quot;,f:&quot;datasetForm&quot;,p:&quot;datasetForm:tabView:filesTable:0:j_idt1396&quot;});return
+        false;\">\n                \n                \n                Plain Text\n
+        \           </a></li>\n    \n    \n    \n    <li class=\"dropdown-header\">Download
+        Metadata <span class=\"glyphicon glyphicon-download-alt\"></span></li><li
+        class=\"dropdown-submenu pull-left\">\n            <a tabindex=\"0\">Data
+        File Citation</a>\n        <ul class=\"dropdown-menu\">\n            <li><a
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:tabView:filesTable:0:j_idt1431':'datasetForm:tabView:filesTable:0:j_idt1431'},'');return
+        false\" class=\"btn-download\">EndNote XML</a>\n            </li>\n            <li><a
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:tabView:filesTable:0:j_idt1434':'datasetForm:tabView:filesTable:0:j_idt1434'},'');return
+        false\" class=\"btn-download\">RIS</a>\n            </li>\n            <li><a
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:tabView:filesTable:0:j_idt1437':'datasetForm:tabView:filesTable:0:j_idt1437'},'');return
+        false\" class=\"btn-download\">BibTeX</a>\n            </li>\n        </ul></li>\n
+        \   \n    <li role=\"presentation\" class=\"clearfix\"></li>\n                        \n
+        \                   </ul></div></div></td></tr><tr data-ri=\"1\" data-rk=\"s3://dvn-cloud:15ed57a87b9-99abc162b458\"
+        class=\"ui-widget-content ui-datatable-odd ui-datatable-selectable\" role=\"row\"
+        aria-selected=\"false\"><td role=\"gridcell\" class=\"ui-selection-column
+        text-center\"><div class=\"ui-chkbox ui-widget\"><div id=\"datasetForm:tabView:filesTable_s3://dvn-cloud:15ed57a87b9-99abc162b458_checkbox\"
+        role=\"checkbox\" tabindex=\"0\" aria-label=\"Select European_Asian_Case_Control_Results.txt\"
+        aria-checked=\"false\" class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\"><span
+        class=\"ui-chkbox-icon ui-icon ui-icon-blank ui-c\"></span></div></div></td><td
+        role=\"gridcell\" class=\"col-file-metadata\"><div id=\"datasetForm:tabView:filesTable:1:fileInfoInclude-filesTable\"
+        class=\"ui-outputpanel ui-widget media\">\n        <div class=\"media-left
+        col-file-thumb\" style=\"padding-top:4px;\">\n            <div class=\"media-object
+        thumbnail-block text-center\"><span class=\"icon-document file-thumbnail-icon
+        text-muted\"></span>\n            </div>\n        </div>\n        <div class=\"media-body
+        col-file-metadata\">\n            <div class=\"fileNameOriginal\">\n                    \n
+        \                   <a href=\"/file.xhtml?persistentId=doi:10.7910/DVN/NJ7XSO/HA2SVR&amp;version=1.0\">\n
+        \                       European_Asian_Case_Control_Results.txt\n                    </a>\n
+        \           </div>\n            \n            <div class=\"text-muted small\"><span
+        id=\"datasetForm:tabView:filesTable:1:fileType\">Plain Text</span><span id=\"datasetForm:tabView:filesTable:1:fileSize\">
+        - 10.7 MB</span>\n                <div class=\"dateCreatePublish-block\"><span
+        id=\"datasetForm:tabView:filesTable:1:fileCreatePublishDate\">Published Sep
+        30, 2017</span>\n                </div><div class=\"downloads-block\"><span
+        id=\"datasetForm:tabView:filesTable:1:fileDownloadCount\" class=\"visible-xs-block
+        visible-sm-block visible-md-inline visible-lg-inline\">68 Downloads</span></div><div
+        class=\"checksum-block\">\n                    <span class=\"checksum-truncate
+        checksum-tooltip\" style=\"margin-right:3px;\" data-toggle=\"tooltip\" data-placement=\"top\"
+        data-html=\"true\" data-clipboard-action=\"copy\" data-clipboard-text=\"0ae7b4639626ebad6ab77f54bfcfdd6d\"
+        title=\"Click to copy&lt;br/&gt;0ae7b4639626ebad6ab77f54bfcfdd6d\">MD5: 0ae7b4639626ebad6ab77f54bfcfdd6d</span>\n
+        \                   <span class=\"glyphicon glyphicon-copy btn-copy checksum-tooltip\"
+        data-toggle=\"tooltip\" data-placement=\"top\" data-html=\"true\" data-clipboard-action=\"copy\"
+        data-clipboard-text=\"0ae7b4639626ebad6ab77f54bfcfdd6d\" title=\"Click to
+        copy&lt;br/&gt;0ae7b4639626ebad6ab77f54bfcfdd6d\"></span></div>\n            </div><div
+        class=\"fileDescription small\"><span id=\"datasetForm:tabView:filesTable:1:fileDescNonEmpty\">Summary
+        data for combined cohort</span></div>\n        </div></div></td><td role=\"gridcell\"
+        style=\"width:40%;\" class=\"col-file-action button-block text-right\"><div
+        role=\"group\" class=\"btn-group\" aria-label=\"File Actions\"><div class=\"btn-group\">\n
+        \                       <a class=\"btn-preview btn btn-link bootstrap-button-tooltip\"
+        title=\"Read Text\" href=\"/file.xhtml?persistentId=doi:10.7910/DVN/NJ7XSO/HA2SVR&amp;version=1.0\">\n
+        \                           <span class=\"glyphicon glyphicon-eye-open\"></span><span
+        class=\"sr-only\">Preview \"European_Asian_Case_Control_Results.txt\"</span>\n
+        \                       </a>\n                    <a type=\"button\" style=\"padding:6px
+        8px;\" class=\"btn-access-file btn btn-link bootstrap-button-tooltip dropdown-toggle\"
+        title=\"Access File\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"
+        tabindex=\"0\">\n                        <span class=\"glyphicon glyphicon-download-alt\"></span><span
+        class=\"sr-only\">Access File</span><span class=\"caret\"></span>\n                    </a>\n
+        \                   <ul class=\"dropdown-menu pull-right text-left\">\n    \n
+        \   \n    <li class=\"dropdown-header\">File Access <span class=\"glyphicon
+        glyphicon-file\"></span></li>\n    <li><span class=\"dropdown-item-text\">\n
+        \           <span class=\"glyphicon glyphicon-globe text-success\"></span><span
+        class=\"text-success\"> Public</span>\n        </span></li>\n        \n        <li
+        class=\"dropdown-header\">Download Options <span class=\"glyphicon glyphicon-download-alt\"></span></li><li><a
+        id=\"datasetForm:tabView:filesTable:1:j_idt1396\" href=\"#\" class=\"ui-commandlink
+        ui-widget btn-download\" onclick=\"PrimeFaces.ab({s:&quot;datasetForm:tabView:filesTable:1:j_idt1396&quot;,f:&quot;datasetForm&quot;,p:&quot;datasetForm:tabView:filesTable:1:j_idt1396&quot;});return
+        false;\">\n                \n                \n                Plain Text\n
+        \           </a></li>\n    \n    \n    \n    <li class=\"dropdown-header\">Download
+        Metadata <span class=\"glyphicon glyphicon-download-alt\"></span></li><li
+        class=\"dropdown-submenu pull-left\">\n            <a tabindex=\"0\">Data
+        File Citation</a>\n        <ul class=\"dropdown-menu\">\n            <li><a
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:tabView:filesTable:1:j_idt1431':'datasetForm:tabView:filesTable:1:j_idt1431'},'');return
+        false\" class=\"btn-download\">EndNote XML</a>\n            </li>\n            <li><a
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:tabView:filesTable:1:j_idt1434':'datasetForm:tabView:filesTable:1:j_idt1434'},'');return
+        false\" class=\"btn-download\">RIS</a>\n            </li>\n            <li><a
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:tabView:filesTable:1:j_idt1437':'datasetForm:tabView:filesTable:1:j_idt1437'},'');return
+        false\" class=\"btn-download\">BibTeX</a>\n            </li>\n        </ul></li>\n
+        \   \n    <li role=\"presentation\" class=\"clearfix\"></li>\n                        \n
+        \                   </ul></div></div></td></tr><tr data-ri=\"2\" data-rk=\"s3://dvn-cloud:15ed57aab7e-90a2b6c112eb\"
+        class=\"ui-widget-content ui-datatable-even ui-datatable-selectable\" role=\"row\"
+        aria-selected=\"false\"><td role=\"gridcell\" class=\"ui-selection-column
+        text-center\"><div class=\"ui-chkbox ui-widget\"><div id=\"datasetForm:tabView:filesTable_s3://dvn-cloud:15ed57aab7e-90a2b6c112eb_checkbox\"
+        role=\"checkbox\" tabindex=\"0\" aria-label=\"Select European_Case_Control_Results.txt\"
+        aria-checked=\"false\" class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\"><span
+        class=\"ui-chkbox-icon ui-icon ui-icon-blank ui-c\"></span></div></div></td><td
+        role=\"gridcell\" class=\"col-file-metadata\"><div id=\"datasetForm:tabView:filesTable:2:fileInfoInclude-filesTable\"
+        class=\"ui-outputpanel ui-widget media\">\n        <div class=\"media-left
+        col-file-thumb\" style=\"padding-top:4px;\">\n            <div class=\"media-object
+        thumbnail-block text-center\"><span class=\"icon-document file-thumbnail-icon
+        text-muted\"></span>\n            </div>\n        </div>\n        <div class=\"media-body
+        col-file-metadata\">\n            <div class=\"fileNameOriginal\">\n                    \n
+        \                   <a href=\"/file.xhtml?persistentId=doi:10.7910/DVN/NJ7XSO/IN45GZ&amp;version=1.0\">\n
+        \                       European_Case_Control_Results.txt\n                    </a>\n
+        \           </div>\n            \n            <div class=\"text-muted small\"><span
+        id=\"datasetForm:tabView:filesTable:2:fileType\">Plain Text</span><span id=\"datasetForm:tabView:filesTable:2:fileSize\">
+        - 12.7 MB</span>\n                <div class=\"dateCreatePublish-block\"><span
+        id=\"datasetForm:tabView:filesTable:2:fileCreatePublishDate\">Published Sep
+        30, 2017</span>\n                </div><div class=\"downloads-block\"><span
+        id=\"datasetForm:tabView:filesTable:2:fileDownloadCount\" class=\"visible-xs-block
+        visible-sm-block visible-md-inline visible-lg-inline\">98 Downloads</span></div><div
+        class=\"checksum-block\">\n                    <span class=\"checksum-truncate
+        checksum-tooltip\" style=\"margin-right:3px;\" data-toggle=\"tooltip\" data-placement=\"top\"
+        data-html=\"true\" data-clipboard-action=\"copy\" data-clipboard-text=\"876bb3b600460fdbfabc01eb08c41497\"
+        title=\"Click to copy&lt;br/&gt;876bb3b600460fdbfabc01eb08c41497\">MD5: 876bb3b600460fdbfabc01eb08c41497</span>\n
+        \                   <span class=\"glyphicon glyphicon-copy btn-copy checksum-tooltip\"
+        data-toggle=\"tooltip\" data-placement=\"top\" data-html=\"true\" data-clipboard-action=\"copy\"
+        data-clipboard-text=\"876bb3b600460fdbfabc01eb08c41497\" title=\"Click to
+        copy&lt;br/&gt;876bb3b600460fdbfabc01eb08c41497\"></span></div>\n            </div><div
+        class=\"fileDescription small\"><span id=\"datasetForm:tabView:filesTable:2:fileDescNonEmpty\">Summary
+        data for European cohort</span></div>\n        </div></div></td><td role=\"gridcell\"
+        style=\"width:40%;\" class=\"col-file-action button-block text-right\"><div
+        role=\"group\" class=\"btn-group\" aria-label=\"File Actions\"><div class=\"btn-group\">\n
+        \                       <a class=\"btn-preview btn btn-link bootstrap-button-tooltip\"
+        title=\"Read Text\" href=\"/file.xhtml?persistentId=doi:10.7910/DVN/NJ7XSO/IN45GZ&amp;version=1.0\">\n
+        \                           <span class=\"glyphicon glyphicon-eye-open\"></span><span
+        class=\"sr-only\">Preview \"European_Case_Control_Results.txt\"</span>\n                        </a>\n
+        \                   <a type=\"button\" style=\"padding:6px 8px;\" class=\"btn-access-file
+        btn btn-link bootstrap-button-tooltip dropdown-toggle\" title=\"Access File\"
+        data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" tabindex=\"0\">\n
+        \                       <span class=\"glyphicon glyphicon-download-alt\"></span><span
+        class=\"sr-only\">Access File</span><span class=\"caret\"></span>\n                    </a>\n
+        \                   <ul class=\"dropdown-menu pull-right text-left\">\n    \n
+        \   \n    <li class=\"dropdown-header\">File Access <span class=\"glyphicon
+        glyphicon-file\"></span></li>\n    <li><span class=\"dropdown-item-text\">\n
+        \           <span class=\"glyphicon glyphicon-globe text-success\"></span><span
+        class=\"text-success\"> Public</span>\n        </span></li>\n        \n        <li
+        class=\"dropdown-header\">Download Options <span class=\"glyphicon glyphicon-download-alt\"></span></li><li><a
+        id=\"datasetForm:tabView:filesTable:2:j_idt1396\" href=\"#\" class=\"ui-commandlink
+        ui-widget btn-download\" onclick=\"PrimeFaces.ab({s:&quot;datasetForm:tabView:filesTable:2:j_idt1396&quot;,f:&quot;datasetForm&quot;,p:&quot;datasetForm:tabView:filesTable:2:j_idt1396&quot;});return
+        false;\">\n                \n                \n                Plain Text\n
+        \           </a></li>\n    \n    \n    \n    <li class=\"dropdown-header\">Download
+        Metadata <span class=\"glyphicon glyphicon-download-alt\"></span></li><li
+        class=\"dropdown-submenu pull-left\">\n            <a tabindex=\"0\">Data
+        File Citation</a>\n        <ul class=\"dropdown-menu\">\n            <li><a
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:tabView:filesTable:2:j_idt1431':'datasetForm:tabView:filesTable:2:j_idt1431'},'');return
+        false\" class=\"btn-download\">EndNote XML</a>\n            </li>\n            <li><a
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:tabView:filesTable:2:j_idt1434':'datasetForm:tabView:filesTable:2:j_idt1434'},'');return
+        false\" class=\"btn-download\">RIS</a>\n            </li>\n            <li><a
+        href=\"#\" onclick=\"mojarra.jsfcljs(document.getElementById('datasetForm'),{'datasetForm:tabView:filesTable:2:j_idt1437':'datasetForm:tabView:filesTable:2:j_idt1437'},'');return
+        false\" class=\"btn-download\">BibTeX</a>\n            </li>\n        </ul></li>\n
+        \   \n    <li role=\"presentation\" class=\"clearfix\"></li>\n                        \n
+        \                   </ul></div></div></td></tr></tbody></table></div><input
+        id=\"datasetForm:tabView:filesTable_selection\" name=\"datasetForm:tabView:filesTable_selection\"
+        type=\"hidden\" autocomplete=\"off\" aria-hidden=\"true\" value=\"\" /></div><script
+        id=\"datasetForm:tabView:filesTable_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"DataTable\",\"filesTable\",{id:\"datasetForm:tabView:filesTable\",selectionMode:\"checkbox\",rowSelectMode:\"checkbox\",groupColumnIndexes:[],disableContextMenuIfEmpty:false,behaviors:{rowUnselect:function(ext,event)
+        {PrimeFaces.ab({s:\"datasetForm:tabView:filesTable\",e:\"rowUnselect\",f:\"datasetForm\",p:\"datasetForm:tabView:filesTable\",u:\"datasetForm:validateFilesOutcome
+        datasetForm:tabView:filesTable\",onco:function(xhr,status,args,data){rebindCommand();}},ext);},rowUnselectCheckbox:function(ext,event)
+        {PrimeFaces.ab({s:\"datasetForm:tabView:filesTable\",e:\"rowUnselectCheckbox\",f:\"datasetForm\",p:\"datasetForm:tabView:filesTable\",u:\"datasetForm:validateFilesOutcome
+        datasetForm:tabView:filesTable\",onco:function(xhr,status,args,data){rebindCommand();}},ext);},rowDblselect:function(ext,event)
+        {PrimeFaces.ab({s:\"datasetForm:tabView:filesTable\",e:\"rowDblselect\",f:\"datasetForm\",p:\"datasetForm:tabView:filesTable\",u:\"datasetForm:validateFilesOutcome
+        datasetForm:tabView:filesTable\",onco:function(xhr,status,args,data){rebindCommand();}},ext);},page:function(ext,event)
+        {PrimeFaces.ab({s:\"datasetForm:tabView:filesTable\",e:\"page\",f:\"datasetForm\",p:\"datasetForm:tabView:filesTable\",u:\"datasetForm:tabView:filesTable\",onco:function(xhr,status,args,data){refreshPaginator(),rebindCommand();}},ext);},rowSelect:function(ext,event)
+        {PrimeFaces.ab({s:\"datasetForm:tabView:filesTable\",e:\"rowSelect\",f:\"datasetForm\",p:\"datasetForm:tabView:filesTable\",u:\"datasetForm:validateFilesOutcome
+        datasetForm:tabView:filesTable\",onco:function(xhr,status,args,data){rebindCommand();}},ext);},toggleSelect:function(ext,event)
+        {PrimeFaces.ab({s:\"datasetForm:tabView:filesTable\",e:\"toggleSelect\",f:\"datasetForm\",p:\"datasetForm:tabView:filesTable\",u:\"datasetForm:validateFilesOutcome
+        datasetForm:tabView:filesTable\",onco:function(xhr,status,args,data){rebindCommand();}},ext);},rowSelectCheckbox:function(ext,event)
+        {PrimeFaces.ab({s:\"datasetForm:tabView:filesTable\",e:\"rowSelectCheckbox\",f:\"datasetForm\",p:\"datasetForm:tabView:filesTable\",u:\"datasetForm:validateFilesOutcome
+        datasetForm:tabView:filesTable\",onco:function(xhr,status,args,data){rebindCommand();}},ext);}}});});</script></div><div
+        id=\"datasetForm:tabView:metadataMapTab\" class=\"ui-tabs-panel ui-widget-content
+        ui-corner-bottom ui-helper-hidden\" role=\"tabpanel\" aria-hidden=\"true\"
+        data-index=\"1\"><div class=\"button-block tab-header margin-bottom text-right\"><div
+        class=\"btn-group\">\n                                        <button class=\"btn
+        btn-default btn-export dropdown-toggle\" type=\"button\" data-toggle=\"dropdown\">\n
+        \                                           <span class=\"glyphicon glyphicon-export\"></span>
+        Export Metadata <span class=\"caret\"></span>\n                                        </button>\n
+        \                                       <ul class=\"dropdown-menu pull-right
+        text-left\">\n                                                <li><a href=\"https://dataverse.harvard.edu/api/datasets/export;jsessionid=7e99ede93d1294c046dd520bcbec?exporter=dcterms&amp;persistentId=doi%3A10.7910/DVN/NJ7XSO\"
+        target=\"_blank\">Dublin Core</a>\n                                                </li>\n
+        \                                               <li><a href=\"https://dataverse.harvard.edu/api/datasets/export;jsessionid=7e99ede93d1294c046dd520bcbec?exporter=ddi&amp;persistentId=doi%3A10.7910/DVN/NJ7XSO\"
+        target=\"_blank\">DDI</a>\n                                                </li>\n
+        \                                               <li><a href=\"https://dataverse.harvard.edu/api/datasets/export;jsessionid=7e99ede93d1294c046dd520bcbec?exporter=Datacite&amp;persistentId=doi%3A10.7910/DVN/NJ7XSO\"
+        target=\"_blank\">DataCite</a>\n                                                </li>\n
+        \                                               <li><a href=\"https://dataverse.harvard.edu/api/datasets/export;jsessionid=7e99ede93d1294c046dd520bcbec?exporter=html&amp;persistentId=doi%3A10.7910/DVN/NJ7XSO\"
+        target=\"_blank\">DDI HTML Codebook</a>\n                                                </li>\n
+        \                                               <li><a href=\"https://dataverse.harvard.edu/api/datasets/export;jsessionid=7e99ede93d1294c046dd520bcbec?exporter=dataverse_json&amp;persistentId=doi%3A10.7910/DVN/NJ7XSO\"
+        target=\"_blank\">JSON</a>\n                                                </li>\n
+        \                                               <li><a href=\"https://dataverse.harvard.edu/api/datasets/export;jsessionid=7e99ede93d1294c046dd520bcbec?exporter=OAI_ORE&amp;persistentId=doi%3A10.7910/DVN/NJ7XSO\"
+        target=\"_blank\">OAI_ORE</a>\n                                                </li>\n
+        \                                               <li><a href=\"https://dataverse.harvard.edu/api/datasets/export;jsessionid=7e99ede93d1294c046dd520bcbec?exporter=oai_datacite&amp;persistentId=doi%3A10.7910/DVN/NJ7XSO\"
+        target=\"_blank\">OpenAIRE</a>\n                                                </li>\n
+        \                                               <li><a href=\"https://dataverse.harvard.edu/api/datasets/export;jsessionid=7e99ede93d1294c046dd520bcbec?exporter=schema.org&amp;persistentId=doi%3A10.7910/DVN/NJ7XSO\"
+        target=\"_blank\">Schema.org JSON-LD</a>\n                                                </li>\n
+        \                                       </ul></div></div><div id=\"datasetForm:tabView:j_idt1546\"></div><div
+        class=\"panel-group\">\n        <p>\n        </p>\n            <div class=\"panel
+        panel-default\">\n                <div data-toggle=\"collapse\" data-target=\"#panelCollapse0\"
+        class=\"panel-heading text-info\">\n                    Citation Metadata
+         <span class=\"glyphicon glyphicon-chevron-up\"></span>\n                </div>\n
+        \               <div id=\"panelCollapse0\" class=\"collapse in\">\n                    <div
+        class=\"panel-body metadata-container\">\n                        <table class=\"metadata\">\n
+        \                           <tbody>\n                                    <tr
+        id=\"metadata_persistentId\">\n                                        <th
+        scope=\"row\">\n                                            Persistent Identifier\n
+        \                                           <span class=\"glyphicon glyphicon-question-sign
+        tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto right\" data-original-title=\"The
+        Dataset's unique persistent identifier, either a DOI or Handle\"></span>\n
+        \                                       </th>\n                                        <td>doi:10.7910/DVN/NJ7XSO</td>\n
+        \                                   </tr><tr id=\"metadata_publicationDate\">\n
+        \                                       <th scope=\"row\">\n                                            Publication
+        Date\n                                            <span class=\"glyphicon
+        glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto
+        right\" data-original-title=\"The publication date of a Dataset.\"></span>\n
+        \                                       </th>\n                                        <td>2017-09-30</td></tr>\n
+        \                                   <tr id=\"metadata_title\">\n                                        <th
+        scope=\"row\">\n                                            Title\n                                            <span
+        class=\"glyphicon glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\"
+        data-placement=\"auto right\" data-original-title=\"The main title of the
+        Dataset\"></span>\n                                        </th><td>Summary
+        data ankylosing spondylitis GWAS</td>\n                                    </tr>\n
+        \                                   <tr id=\"metadata_author\">\n                                        <th
+        scope=\"row\">\n                                            Author\n                                            <span
+        class=\"glyphicon glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\"
+        data-placement=\"auto right\" data-original-title=\"The entity, e.g. a person
+        or organization, that created the Dataset\"></span>\n                                        </th><td>International
+        Genetics of Ankylosing Spondylitis Consortium (IGAS)</td>\n                                    </tr>\n
+        \                                   <tr id=\"metadata_datasetContact\">\n
+        \                                       <th scope=\"row\">\n                                            Point
+        of Contact\n                                            <span class=\"glyphicon
+        glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto
+        right\" data-original-title=\"The entity, e.g. a person or organization, that
+        users of the Dataset can contact with questions\"></span>\n                                        </th><td>\n
+        \                                                   <p class=\"help-block\">Use
+        email button above to contact.\n                                                    </p>Li,
+        Zhixiu (QUT) </td>\n                                    </tr>\n                                    <tr
+        id=\"metadata_dsDescription\">\n                                        <th
+        scope=\"row\">\n                                            Description\n
+        \                                           <span class=\"glyphicon glyphicon-question-sign
+        tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto right\" data-original-title=\"A
+        summary describing the purpose, nature, and scope of the Dataset\"></span>\n
+        \                                       </th><td>Summary of association tests
+        for Nature Genetics publication \"Identification of multiple risk variants
+        for ankylosing spondylitis through high-density genotyping of immune-related
+        loci\".</td>\n                                    </tr>\n                                    <tr
+        id=\"metadata_subject\">\n                                        <th scope=\"row\">\n
+        \                                           Subject\n                                            <span
+        class=\"glyphicon glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\"
+        data-placement=\"auto right\" data-original-title=\"The area of study relevant
+        to the Dataset\"></span>\n                                        </th><td>Medicine,
+        Health and Life Sciences</td>\n                                    </tr>\n
+        \                                   <tr id=\"metadata_keyword\">\n                                        <th
+        scope=\"row\">\n                                            Keyword\n                                            <span
+        class=\"glyphicon glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\"
+        data-placement=\"auto right\" data-original-title=\"A key term that describes
+        an important aspect of the Dataset and information about any controlled vocabulary
+        used\"></span>\n                                        </th><td>Genome-Wide
+        Association Studies\n                                                        <br
+        />Ankylosing spondylitis</td>\n                                    </tr>\n
+        \                                   <tr id=\"metadata_publication\">\n                                        <th
+        scope=\"row\">\n                                            Related Publication\n
+        \                                           <span class=\"glyphicon glyphicon-question-sign
+        tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto right\" data-original-title=\"The
+        article or report that uses the data in the Dataset. The full list of related
+        publications will be displayed on the metadata tab\"></span>\n                                        </th><td>10.1038/ng.2667
+        doi: </td>\n                                    </tr>\n                                    <tr
+        id=\"metadata_notesText\">\n                                        <th scope=\"row\">\n
+        \                                           Notes\n                                            <span
+        class=\"glyphicon glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\"
+        data-placement=\"auto right\" data-original-title=\"Additional information
+        about the Dataset\"></span>\n                                        </th><td>European_Case_Control_Results.txt:
+        summary data for European cohort Asian_Case_Control_Results.txt: summary data
+        for Asian cohort European_Asian_Case_Control_Results.txt: summary data for
+        combined cohort</td>\n                                    </tr>\n                                    <tr
+        id=\"metadata_depositor\">\n                                        <th scope=\"row\">\n
+        \                                           Depositor\n                                            <span
+        class=\"glyphicon glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\"
+        data-placement=\"auto right\" data-original-title=\"The entity, such as a
+        person or organization, that deposited the Dataset in the repository\"></span>\n
+        \                                       </th><td>Li, Zhixiu</td>\n                                    </tr>\n
+        \                                   <tr id=\"metadata_dateOfDeposit\">\n                                        <th
+        scope=\"row\">\n                                            Deposit Date\n
+        \                                           <span class=\"glyphicon glyphicon-question-sign
+        tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto right\" data-original-title=\"The
+        date when the Dataset was deposited into the repository\"></span>\n                                        </th><td>2017-09-30</td>\n
+        \                                   </tr>\n                            </tbody>\n
+        \                       </table>\n                    </div>\n                </div>\n
+        \           </div></div>\n <script>\n    //<![CDATA[\n    $(document).ready(function()
+        {\n      //The select2 widget used in external vocab scripts has trouble determining
+        the width of an input field if it is initially hidden\n      //Starting with
+        the metadatablocks displayed and collapsing them here is a work-around to
+        fix that.\n      if(false) {\n        for(let i=1;i< 1;i++) {\n          $('#panelCollapse'+i).collapse('hide');\n
+        \       }\n      }\n    });\n    //]]>\n    </script></div><div id=\"datasetForm:tabView:termsTab\"
+        class=\"ui-tabs-panel ui-widget-content ui-corner-bottom ui-helper-hidden\"
+        role=\"tabpanel\" aria-hidden=\"true\" data-index=\"2\">\n    <div class=\"panel-group\">\n
+        \      <div class=\"panel panel-default\">\n           <div data-toggle=\"collapse\"
+        data-target=\"#panelCollapseTOU\" class=\"panel-heading text-info\">\n               Dataset
+        Terms  <span class=\"glyphicon glyphicon-chevron-up\"></span>\n           </div>\n
+        \          <div id=\"panelCollapseTOU\" class=\"collapse in\"><div id=\"datasetForm:tabView:touFragment\">\n
+        \                  <div class=\"panel-body\">\n                       <div
+        class=\"form-group\">\n                           <label for=\"datasetForm:tabView:metadata_Terms\"
+        class=\"col-sm-3 control-label\">\n                               License/Data
+        Use Agreement\n                           </label>\n                           <div
+        class=\"col-sm-9\">\n                                   <p class=\"help-block\">Our
+        <a href=\"https://dataverse.org/best-practices/dataverse-community-norms\"
+        title=\"Dataverse Community Norms - Dataverse.org\" target=\"_blank\">Community
+        Norms</a> as well as good scientific practices expect that proper credit is
+        given via citation. Please use the data citation shown on the dataset page.\n
+        \                                  </p>\n                                   <p>\n
+        \                                      <img src=\"https://licensebuttons.net/p/zero/1.0/88x31.png\"
+        title=\"Creative Commons CC0 1.0 Universal Public Domain Dedication. \" style=\"display:none\"
+        onload=\"this.style.display='inline'\" />\n                                       <a
+        href=\"http://creativecommons.org/publicdomain/zero/1.0\" title=\"Creative
+        Commons CC0 1.0 Universal Public Domain Dedication. \" target=\"_blank\">CC0
+        1.0</a>\n                                   </p>\n                           </div>\n
+        \                      </div>\n                        \n                    </div></div>\n
+        \           </div>\n        </div> \n    </div></div><div id=\"datasetForm:tabView:versionsTab\"
+        class=\"ui-tabs-panel ui-widget-content ui-corner-bottom ui-helper-hidden\"
+        role=\"tabpanel\" aria-hidden=\"true\" data-index=\"3\">\n\n   <script>\n
+        \      //<![CDATA[\n       // Version tab: Retrieve data after page load\n
+        \       $(document).ready(function () {\n            preload_message = \"(Loading
+        versions...)\";\n            $('#datasetForm\\\\:tabView\\\\:versionsTable_data
+        tr.ui-datatable-empty-message td').text(preload_message);\n            postLoadVersionTabList();\n
+        \      });\n       //]]>\n   </script><script id=\"datasetForm:tabView:j_idt1898\"
+        type=\"text/javascript\">postLoadVersionTabList = function() {return PrimeFaces.ab({s:\"datasetForm:tabView:j_idt1898\",f:\"datasetForm\",p:\"datasetForm:tabView:j_idt1898\",u:\"datasetForm:tabView:versionsTable\",pa:arguments[0]});}</script>\n
+        \   <div class=\"text-right margin-bottom\"><button id=\"datasetForm:tabView:compareVersions\"
+        name=\"datasetForm:tabView:compareVersions\" class=\"ui-button ui-widget ui-state-default
+        ui-corner-all ui-button-text-only\" onclick=\"PrimeFaces.ab({s:&quot;datasetForm:tabView:compareVersions&quot;,f:&quot;datasetForm&quot;,u:&quot;datasetForm&quot;,onco:function(xhr,status,args,data){PF('detailsBlocks').show();post_differences();;}});return
+        false;\" style=\"display:none\" type=\"submit\"><span class=\"ui-button-text
+        ui-c\">Direct</span></button><script id=\"datasetForm:tabView:compareVersions_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_tabView_compareVersions\",{id:\"datasetForm:tabView:compareVersions\"});});</script>\n
+        \   </div><div id=\"datasetForm:tabView:versionsTable\" class=\"ui-datatable
+        ui-widget\"><div class=\"ui-datatable-tablewrapper\"><table role=\"grid\"><thead
+        id=\"datasetForm:tabView:versionsTable_head\"><tr role=\"row\"><th id=\"datasetForm:tabView:versionsTable:j_idt1904\"
+        class=\"ui-state-default col-sm-1 text-center\" role=\"columnheader\" aria-label=\"Dataset
+        Version\" scope=\"col\"><span class=\"ui-column-title\">Dataset Version</span></th><th
+        id=\"datasetForm:tabView:versionsTable:j_idt1916\" class=\"ui-state-default\"
+        role=\"columnheader\" aria-label=\"Summary\" scope=\"col\"><span class=\"ui-column-title\">Summary</span></th><th
+        id=\"datasetForm:tabView:versionsTable:j_idt1958\" class=\"ui-state-default
+        col-sm-2\" role=\"columnheader\" aria-label=\"Contributors\" scope=\"col\"><span
+        class=\"ui-column-title\">Contributors</span></th><th id=\"datasetForm:tabView:versionsTable:j_idt1963\"
+        class=\"ui-state-default col-sm-2\" role=\"columnheader\" aria-label=\"Published
+        on\" scope=\"col\"><span class=\"ui-column-title\">Published on</span></th></tr></thead><tbody
+        id=\"datasetForm:tabView:versionsTable_data\" class=\"ui-datatable-data ui-widget-content\"><tr
+        class=\"ui-widget-content ui-datatable-empty-message\"><td colspan=\"4\">No
+        records found.</td></tr></tbody></table></div></div><script id=\"datasetForm:tabView:versionsTable_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"DataTable\",\"versionsTable\",{id:\"datasetForm:tabView:versionsTable\",groupColumnIndexes:[],disableContextMenuIfEmpty:false});});</script></div></div><input
+        id=\"datasetForm:tabView_activeIndex\" name=\"datasetForm:tabView_activeIndex\"
+        type=\"hidden\" autocomplete=\"off\" aria-hidden=\"true\" value=\"0\" /></div><script
+        id=\"datasetForm:tabView_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"TabView\",\"content\",{id:\"datasetForm:tabView\",effectDuration:\"normal\",scrollable:false,behaviors:{tabChange:function(ext,event)
+        {PrimeFaces.ab({s:\"datasetForm:tabView\",e:\"tabChange\",f:\"datasetForm\",p:\"datasetForm:tabView\",u:\"datasetForm:tabView\"},ext);}}});});</script></div><div
+        id=\"datasetForm:j_idt1981\" class=\"ui-blockui-content ui-widget ui-widget-content
+        ui-corner-all ui-helper-hidden ui-shadow\"></div><script id=\"datasetForm:j_idt1981_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"BlockUI\",\"blockDatasetForm\",{id:\"datasetForm:j_idt1981\",block:\"datasetForm\"});});</script><div
+        id=\"datasetForm:fileAlreadyDeletedPrevious\" class=\"ui-dialog ui-widget
+        ui-widget-content ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div
+        class=\"ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top\"><span
+        id=\"datasetForm:fileAlreadyDeletedPrevious_title\" class=\"ui-dialog-title\">Edit
+        File</span><a href=\"#\" class=\"ui-dialog-titlebar-icon ui-dialog-titlebar-close
+        ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon ui-icon-closethick\"></span></a></div><div
+        class=\"ui-dialog-content ui-widget-content\" id=\"datasetForm:fileAlreadyDeletedPrevious_content\">\n
+        \       <p class=\"text-danger\"><span class=\"glyphicon glyphicon-exclamation-sign\"></span>
+        This file has already been deleted (or replaced) in the current version. It
+        may not be edited.</p>\n        <div class=\"button-block\">\n            <button
+        class=\"btn btn-default\" onclick=\"PF('fileAlreadyDeletedPrevious').hide();\"
+        type=\"button\">\n                Close\n            </button>\n        </div></div></div><script
+        id=\"datasetForm:fileAlreadyDeletedPrevious_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"fileAlreadyDeletedPrevious\",{id:\"datasetForm:fileAlreadyDeletedPrevious\",modal:true});});</script><div
+        id=\"datasetForm:accessPopup\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:accessPopup_title\"
+        class=\"ui-dialog-title\">Restrict Access</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:accessPopup_content\"><span id=\"datasetForm:j_idt1983\"></span><script
+        type=\"text/javascript\">$(function(){PrimeFaces.focus(null, 'datasetForm:accessPopup');});</script>\n
+        \       <p class=\"help-block\"><span class=\"text-muted\">Restricting limits
+        access to published files. People who want to use the restricted files can
+        request access by default.  </span><span style=\"font-weight:bold\">If you
+        disable request access, you must add information about access to the Terms
+        of Access field.</span>\n            <p></p><span class=\"text-muted\">Learn
+        about restricting files and dataset access in the <a href=\"https://guides.dataverse.org/en/5.13/user/dataset-management.html#restricted-files-terms-of-access\"
+        title=\"Dataverse User Guide\" target=\"_blank\">User Guide</a>.</span>\n
+        \       </p><div id=\"datasetForm:j_idt1992\"><input id=\"datasetForm:termsofAccessHidden\"
+        type=\"hidden\" name=\"datasetForm:termsofAccessHidden\" /><input id=\"datasetForm:fileAccessRequestHidden\"
+        type=\"hidden\" name=\"datasetForm:fileAccessRequestHidden\" value=\"false\"
+        /></div>\n        <div class=\"form-horizontal\">\n            <div class=\"form-group\">\n
+        \               <label for=\"datasetForm:requestAccess2\" class=\"col-sm-3
+        control-label\">\n                    Request Access\n                    <span
+        class=\"glyphicon glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\"
+        data-placement=\"auto right\" data-original-title=\"If checked, users can
+        request access to the restricted files in this dataset.\"></span>\n                </label>\n
+        \               <div class=\"col-sm-9\"><div id=\"datasetForm:requestAccess2\"
+        class=\"ui-selectbooleancheckbox ui-chkbox ui-widget\"><div class=\"ui-helper-hidden-accessible\"><input
+        id=\"datasetForm:requestAccess2_input\" name=\"datasetForm:requestAccess2_input\"
+        type=\"checkbox\" autocomplete=\"off\" aria-label=\"Enable access request\"
+        aria-checked=\"false\" onchange=\"PrimeFaces.ab({s:&quot;datasetForm:requestAccess2&quot;,e:&quot;change&quot;,f:&quot;datasetForm&quot;,p:&quot;datasetForm:requestAccess2&quot;,u:&quot;datasetForm:restrictFileButton&quot;});\"
+        /></div><div class=\"ui-chkbox-box ui-widget ui-corner-all ui-state-default\"><span
+        class=\"ui-chkbox-icon ui-icon ui-icon-blank ui-c\"></span></div><span class=\"ui-chkbox-label\">Enable
+        access request</span></div><script id=\"datasetForm:requestAccess2_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"SelectBooleanCheckbox\",\"inputfar\",{id:\"datasetForm:requestAccess2\"});});</script>\n
+        \               </div>\n            </div><div id=\"datasetForm:popupWarning\"><div
+        aria-live=\"polite\" class=\"ui-message ui-message-error ui-widget ui-corner-all\">\n
+        \                          <span class=\"ui-message-error-detail\">You must
+        enable request access or add terms of access to restrict file access.</span></div></div>\n
+        \           <div class=\"form-group\">\n                <label for=\"termsAccessInput\"
+        class=\"col-sm-3 control-label\">\n                    Terms of Access for
+        Restricted Files\n                    <span class=\"glyphicon glyphicon-question-sign
+        tooltip-icon\" data-toggle=\"tooltip\" data-placement=\"auto right\" data-original-title=\"Information
+        on how and if users can access restricted files in this Dataset\"></span>\n
+        \               </label>\n                <div class=\"col-sm-9\"><textarea
+        id=\"datasetForm:termsAccessInput\" name=\"datasetForm:termsAccessInput\"
+        class=\"ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all
+        form-control\" cols=\"20\" rows=\"5\" maxlength=\"2147483647\" onkeyup=\"PrimeFaces.ab({s:&quot;datasetForm:termsAccessInput&quot;,e:&quot;keyup&quot;,f:&quot;datasetForm&quot;,p:&quot;datasetForm:termsAccessInput&quot;,u:&quot;datasetForm:restrictFileButton&quot;});\"></textarea><script
+        id=\"datasetForm:termsAccessInput_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"InputTextarea\",\"inputtoa\",{id:\"datasetForm:termsAccessInput\",autoResize:false,behaviors:{}});});</script>
+        \n                </div>\n            </div>\n        </div>\n\n        <div
+        class=\"button-block\"><a id=\"datasetForm:restrictFileButton\" href=\"#\"
+        class=\"ui-commandlink ui-widget btn btn-default\" onclick=\"testTOA();;PrimeFaces.ab({s:&quot;datasetForm:restrictFileButton&quot;,f:&quot;datasetForm&quot;,u:&quot;datasetForm:popupWarning&quot;});return
+        false;\">Save Changes</a>\n            <button class=\"btn btn-link\" onclick=\"PF('accessPopup').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                Cancel\n            </button> \n\n        </div></div></div><script
+        id=\"datasetForm:accessPopup_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"accessPopup\",{id:\"datasetForm:accessPopup\",modal:true,width:\"700px\",height:\"350px\"});});</script><div
+        id=\"datasetForm:fileEmbargoPopup\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:fileEmbargoPopup_title\"
+        class=\"ui-dialog-title\">Edit Embargo</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:fileEmbargoPopup_content\"><span id=\"datasetForm:j_idt2000\"></span><script
+        type=\"text/javascript\">$(function(){PrimeFaces.focus('datasetForm:fileEmbargoDate');});</script><p
+        class=\"text-danger embargo\"><span class=\"glyphicon glyphicon-exclamation-sign\"></span>The
+        selected file or files have already been published. Contact an administrator
+        to change the embargo date or reason of the file or files.</p><span id=\"datasetForm:embargoInputs\">\n
+        \           <div class=\"embargo\">\n            </div>\n            <div
+        class=\"embargo\">\n            </div></span>\n        <div class=\"button-block\"><button
+        id=\"datasetForm:fileEmbargoPopupCancelButton\" name=\"datasetForm:fileEmbargoPopupCancelButton\"
+        class=\"ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only
+        btn btn-link\" onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('fileEmbargoPopup').hide();
+        \                    PF('blockDatasetForm').hide();},function(event){PrimeFaces.ab({s:&quot;datasetForm:fileEmbargoPopupCancelButton&quot;,f:&quot;datasetForm&quot;,u:&quot;datasetForm:embargoInputs&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Cancel</span></button><script
+        id=\"datasetForm:fileEmbargoPopupCancelButton_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_fileEmbargoPopupCancelButton\",{id:\"datasetForm:fileEmbargoPopupCancelButton\"});});</script>\n
+        \       </div></div></div><script id=\"datasetForm:fileEmbargoPopup_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"fileEmbargoPopup\",{id:\"datasetForm:fileEmbargoPopup\",resizable:false,modal:true});});</script><div
+        id=\"datasetForm:deleteFileConfirm\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:deleteFileConfirm_title\"
+        class=\"ui-dialog-title\">Delete Files</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:deleteFileConfirm_content\">\n        <p class=\"text-warning\"><span
+        class=\"glyphicon glyphicon-warning-sign\"></span> The file will be deleted
+        after you click on the Delete button.</p>\n            <p class=\"text-warning\"><span
+        class=\"glyphicon glyphicon-warning-sign\"></span> Files will not be removed
+        from previously published versions of the dataset.</p>\n        <div class=\"button-block\"><button
+        id=\"datasetForm:j_idt2031\" name=\"datasetForm:j_idt2031\" class=\"ui-button
+        ui-widget ui-state-default ui-corner-all ui-button-text-only btn btn-default\"
+        onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('deleteFileConfirmation').hide()},function(event){PrimeFaces.ab({s:&quot;datasetForm:j_idt2031&quot;,f:&quot;datasetForm&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Delete</span></button><script
+        id=\"datasetForm:j_idt2031_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2031\",{id:\"datasetForm:j_idt2031\"});});</script>\n
+        \           <button class=\"btn btn-link\" onclick=\"PF('deleteFileConfirmation').hide()\"
+        type=\"button\">\n                Cancel\n            </button>\n        </div></div></div><script
+        id=\"datasetForm:deleteFileConfirm_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"deleteFileConfirmation\",{id:\"datasetForm:deleteFileConfirm\",modal:true});});</script><div
+        id=\"datasetForm:configureToolPopup\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:configureToolPopup_title\"
+        class=\"ui-dialog-title\"></span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:configureToolPopup_content\">\n\n        <p class=\"help-block\"><span
+        class=\"text-left\"> <br/></span>\n        </p>\n        \n        <div class=\"button-block\"><button
+        id=\"datasetForm:j_idt2036\" name=\"datasetForm:j_idt2036\" class=\"ui-button
+        ui-widget ui-state-default ui-corner-all ui-button-text-only btn btn-default\"
+        onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('configureToolPopup').hide();},function(event){PrimeFaces.ab({s:&quot;datasetForm:j_idt2036&quot;,f:&quot;datasetForm&quot;,u:&quot;messagePanel&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Continue</span></button><script
+        id=\"datasetForm:j_idt2036_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2036\",{id:\"datasetForm:j_idt2036\"});});</script>\n
+        \           <button class=\"btn btn-link\" onclick=\"PF('configureToolPopup').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                Cancel\n            </button>\n        </div></div></div><script
+        id=\"datasetForm:configureToolPopup_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"configureToolPopup\",{id:\"datasetForm:configureToolPopup\",modal:true});});</script><div
+        id=\"datasetForm:selectFiles\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:selectFiles_title\"
+        class=\"ui-dialog-title\">Select File(s)</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:selectFiles_content\">\n        <p class=\"text-danger\"><span
+        class=\"glyphicon glyphicon-exclamation-sign\"></span> Please select one or
+        more files.</p>\n        <div class=\"button-block\">\n            <button
+        class=\"btn btn-default\" onclick=\"PF('selectFiles').hide();\" type=\"button\">\n
+        \               Close\n            </button>\n        </div></div></div><script
+        id=\"datasetForm:selectFiles_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"selectFiles\",{id:\"datasetForm:selectFiles\",modal:true});});</script><script
+        id=\"datasetForm:j_idt2039\" type=\"text/javascript\">restrictFileCommand
+        = function() {return PrimeFaces.ab({s:\"datasetForm:j_idt2039\",f:\"datasetForm\",u:\"messagePanel\",pa:arguments[0]});}</script>\n
+        \       <script>\n        //<![CDATA[\n            function testTOA() {\n
+        \               var termsofAccessHidden, fileAccessRequestHidden;\n                    try{\n
+        \                       termsofAccessHidden  = document.getElementById(\"datasetForm:termsofAccessHidden\").value;\n
+        \                       fileAccessRequestHidden  =   document.getElementById(\"datasetForm:fileAccessRequestHidden\").value;
+        \                                                   \n                    }
+        catch (error){\n                        termsofAccessHidden  = document.getElementById(\"fileForm:termsofAccessHidden\").value;\n
+        \                       fileAccessRequestHidden  =   document.getElementById(\"fileForm:fileAccessRequestHidden\").value;\n
+        \                   }\n                        if (fileAccessRequestHidden
+        === 'false' && termsofAccessHidden === '') {\n                           //Not
+        compliant show error keep popup open...\n                        } else {\n
+        \                           PF('accessPopup').hide();\n                            restrictFileCommand();\n
+        \                       }\n                    }                    \n        //]]>\n
+        \   </script><div id=\"datasetForm:shareDialog\" class=\"ui-dialog ui-widget
+        ui-widget-content ui-corner-all ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:shareDialog_title\"
+        class=\"ui-dialog-title\">Share Dataset</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:shareDialog_content\">\n                        <p class=\"help-block\">Share
+        this dataset on your favorite social media networks.</p>\n                        <div
+        id=\"sharrre-widget\" data-url=\"https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/NJ7XSO\"
+        data-text=\"View this dataset.\"></div>\n                        <div class=\"button-block\">\n
+        \                           <button class=\"btn btn-default\" onclick=\"PF('shareDialog').hide()\"
+        type=\"button\">\n                                Close\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:shareDialog_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"shareDialog\",{id:\"datasetForm:shareDialog\",modal:true});});</script><div
+        id=\"datasetForm:citationsDialog\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:citationsDialog_title\"
+        class=\"ui-dialog-title\">Dataset Citations</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:citationsDialog_content\">\n                        <p class=\"help-block\">Citations
+        for this dataset are retrieved from Crossref via DataCite using Make Data
+        Count standards. For more information about dataset metrics, please refer
+        to the <a href=\"https://guides.dataverse.org/en/5.13/user/dataset-management.html#dataset-metrics-and-make-data-count\"
+        title=\"Dataset Metrics and Make Data Count - Dataverse User Guide\" target=\"_blank\">User
+        Guide</a>.\n                        </p>\n                        <div id=\"citations-list-block\"><div>\n
+        \                               Sorry, no citations were found.\n                            </div>\n
+        \                       </div>\n                        <div class=\"button-block\">\n
+        \                           <button class=\"btn btn-default\" onclick=\"PF('citationsDialog').hide()\"
+        type=\"button\">\n                                Close\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:citationsDialog_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"citationsDialog\",{id:\"datasetForm:citationsDialog\",modal:true});});</script><div
+        id=\"datasetForm:downloadInvalid\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:downloadInvalid_title\"
+        class=\"ui-dialog-title\">Restricted Files Selected</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:downloadInvalid_content\">\n                        <p class=\"text-danger\"><span
+        class=\"glyphicon glyphicon-exclamation-sign\"></span> The selected file(s)
+        may not be downloaded because you have not been granted access.</p>\n                        <div
+        class=\"button-block\">\n                            <button class=\"btn btn-default\"
+        onclick=\"PF('downloadInvalid').hide();\" type=\"button\">\n                                Close\n
+        \                           </button>\n                        </div></div></div><script
+        id=\"datasetForm:downloadInvalid_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"downloadInvalid\",{id:\"datasetForm:downloadInvalid\",modal:true});});</script><div
+        id=\"datasetForm:downloadTooLarge\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:downloadTooLarge_title\"
+        class=\"ui-dialog-title\">Download Options</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:downloadTooLarge_content\">\n                        <p class=\"text-danger\"><span
+        class=\"glyphicon glyphicon-exclamation-sign\"></span>  The files selected
+        are too large to download as a ZIP.</p>\n  \n                        <p class=\"help-block\">You
+        can select individual files that are below the 20.0 GB download limit from
+        the files table, or use the <a href=\"https://guides.dataverse.org/en/5.13/api/dataaccess.html\"
+        title=\"Data Access API\" target=\"_blank\">Data Access API</a> for programmatic
+        access to the files.\n                        </p></div></div><script id=\"datasetForm:downloadTooLarge_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"downloadTooLarge\",{id:\"datasetForm:downloadTooLarge\",modal:true});});</script><div
+        id=\"datasetForm:selectFilesForDownload\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:selectFilesForDownload_title\"
+        class=\"ui-dialog-title\">Select File(s)</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:selectFilesForDownload_content\">\n                        <p
+        class=\"text-danger\"><span class=\"glyphicon glyphicon-exclamation-sign\"></span>
+        Please select a file or files to be downloaded.</p>\n                        <div
+        class=\"button-block\">\n                            <button class=\"btn btn-default\"
+        onclick=\"PF('selectFilesForDownload').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                Close\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:selectFilesForDownload_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"selectFilesForDownload\",{id:\"datasetForm:selectFilesForDownload\",modal:true});});</script><div
+        id=\"datasetForm:downloadMixed\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:downloadMixed_title\"
+        class=\"ui-dialog-title\">Restricted Files Selected</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:downloadMixed_content\">\n                        <p class=\"text-danger\"><span
+        class=\"glyphicon glyphicon-exclamation-sign\"></span> The restricted file(s)
+        selected may not be downloaded because you have not been granted access.</p>\n
+        \                       <table>\n                        </table>\n                        <div
+        class=\"button-block\">\n                            <p class=\"help-block\">Click
+        Continue to download the files you have access to download.</p><button id=\"datasetForm:j_idt2070\"
+        name=\"datasetForm:j_idt2070\" class=\"ui-button ui-widget ui-state-default
+        ui-corner-all ui-button-text-only btn btn-default\" onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('downloadMixed').hide()},function(event){PrimeFaces.ab({s:&quot;datasetForm:j_idt2070&quot;,f:&quot;datasetForm&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Continue</span></button><script
+        id=\"datasetForm:j_idt2070_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2070\",{id:\"datasetForm:j_idt2070\"});});</script>\n
+        \                           <button class=\"btn btn-link\" onclick=\"PF('downloadMixed').hide();\"
+        type=\"button\">\n                                Cancel\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:downloadMixed_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"downloadMixed\",{id:\"datasetForm:downloadMixed\",modal:true});});</script><div
+        id=\"datasetForm:deleteConfirmation\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:deleteConfirmation_title\"
+        class=\"ui-dialog-title\">Delete Dataset</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:deleteConfirmation_content\">\n                        <p
+        class=\"text-warning\"><span class=\"glyphicon glyphicon-warning-sign\"></span>
+        Are you sure you want to delete this dataset and all of its files? You cannot
+        undelete this dataset.</p>\n                        <div class=\"button-block\"><button
+        id=\"datasetForm:j_idt2074\" name=\"datasetForm:j_idt2074\" class=\"ui-button
+        ui-widget ui-state-default ui-corner-all ui-button-text-only btn btn-default\"
+        onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('deleteConfirmation').hide()},function(event){PrimeFaces.ab({s:&quot;datasetForm:j_idt2074&quot;,f:&quot;datasetForm&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Continue</span></button><script
+        id=\"datasetForm:j_idt2074_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2074\",{id:\"datasetForm:j_idt2074\"});});</script>\n
+        \                           <button class=\"btn btn-link\" onclick=\"PF('deleteConfirmation').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                Cancel\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:deleteConfirmation_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"deleteConfirmation\",{id:\"datasetForm:deleteConfirmation\",modal:true});});</script><div
+        id=\"datasetForm:deleteVersionConfirmation\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:deleteVersionConfirmation_title\"
+        class=\"ui-dialog-title\">Delete Draft Version</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:deleteVersionConfirmation_content\">\n                        <p
+        class=\"text-warning\"><span class=\"glyphicon glyphicon-warning-sign\"></span>
+        Are you sure you want to delete this draft version? Files will be reverted
+        to the most recently published version. You cannot undelete this draft.</p>\n
+        \                       <div class=\"button-block\"><button id=\"datasetForm:j_idt2077\"
+        name=\"datasetForm:j_idt2077\" class=\"ui-button ui-widget ui-state-default
+        ui-corner-all ui-button-text-only btn btn-default\" onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('deleteVersionConfirmation').hide()},function(event){PrimeFaces.ab({s:&quot;datasetForm:j_idt2077&quot;,f:&quot;datasetForm&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Continue</span></button><script
+        id=\"datasetForm:j_idt2077_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2077\",{id:\"datasetForm:j_idt2077\"});});</script>\n
+        \                           <button class=\"btn btn-link\" onclick=\"PF('deleteVersionConfirmation').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                Cancel\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:deleteVersionConfirmation_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"deleteVersionConfirmation\",{id:\"datasetForm:deleteVersionConfirmation\",modal:true});});</script><div
+        id=\"datasetForm:privateUrlId\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:privateUrlId_title\"
+        class=\"ui-dialog-title\">Unpublished Dataset Private URL</span><a href=\"#\"
+        class=\"ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span
+        class=\"ui-icon ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content
+        ui-widget-content\" id=\"datasetForm:privateUrlId_content\"><div id=\"datasetForm:privateUrlPanelCannotCreate\">\n
+        \                           <p class=\"text-danger\"><span class=\"glyphicon
+        glyphicon-exclamation-sign\"></span> Private URL can only be used with unpublished
+        versions of datasets.</p>\n                            <div class=\"button-block\">\n
+        \                               <button class=\"btn btn-link\" onclick=\"PF('privateUrlConfirmation').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                    Cancel\n                                </button>\n
+        \                           </div></div></div></div><script id=\"datasetForm:privateUrlId_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"privateUrlConfirmation\",{id:\"datasetForm:privateUrlId\",modal:true});});</script><div
+        id=\"datasetForm:disablePrivateUrlConfirmation\" class=\"ui-dialog ui-widget
+        ui-widget-content ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div
+        class=\"ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top\"><span
+        id=\"datasetForm:disablePrivateUrlConfirmation_title\" class=\"ui-dialog-title\">Unpublished
+        Dataset Private URL</span></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:disablePrivateUrlConfirmation_content\">\n                        <p
+        class=\"text-warning\"><span class=\"glyphicon glyphicon-warning-sign\"></span>
+        Are you sure you want to disable the Private URL? If you have shared the Private
+        URL with others they will no longer be able to use it to access your unpublished
+        dataset.</p>\n                        <div class=\"button-block\"><button
+        id=\"datasetForm:j_idt2101\" name=\"datasetForm:j_idt2101\" class=\"ui-button
+        ui-widget ui-state-default ui-corner-all ui-button-text-only btn btn-default\"
+        onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('disablePrivateUrlConfirmation').hide();},function(event){PrimeFaces.ab({s:&quot;datasetForm:j_idt2101&quot;,f:&quot;datasetForm&quot;,u:&quot;datasetForm:privateUrlPanel
+        messagePanel&quot;});return false;}]);\" type=\"submit\"><span class=\"ui-button-text
+        ui-c\">Yes, Disable Private URL</span></button><script id=\"datasetForm:j_idt2101_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2101\",{id:\"datasetForm:j_idt2101\"});});</script>\n
+        \                           <button class=\"btn btn-link\" onclick=\"PF('disablePrivateUrlConfirmation').hide();PF('privateUrlConfirmation').show();\"
+        type=\"button\">\n                                Cancel\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:disablePrivateUrlConfirmation_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"disablePrivateUrlConfirmation\",{id:\"datasetForm:disablePrivateUrlConfirmation\",modal:true});});</script><div
+        id=\"datasetForm:deleteSelectedFileConfirmation\" class=\"ui-dialog ui-widget
+        ui-widget-content ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div
+        class=\"ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top\"><span
+        id=\"datasetForm:deleteSelectedFileConfirmation_title\" class=\"ui-dialog-title\">Delete
+        Files</span><a href=\"#\" class=\"ui-dialog-titlebar-icon ui-dialog-titlebar-close
+        ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon ui-icon-closethick\"></span></a></div><div
+        class=\"ui-dialog-content ui-widget-content\" id=\"datasetForm:deleteSelectedFileConfirmation_content\">\n
+        \                       <p class=\"text-warning\"><span class=\"glyphicon
+        glyphicon-warning-sign\"></span> The file(s) will be deleted after you click
+        on the Delete button.</p>\n                            <p class=\"text-warning\"><span
+        class=\"glyphicon glyphicon-warning-sign\"></span> Files will not be removed
+        from previously published versions of the dataset.</p>\n                        <div
+        class=\"button-block\"><button id=\"datasetForm:j_idt2107\" name=\"datasetForm:j_idt2107\"
+        class=\"ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only
+        btn btn-default\" onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('deleteSelectedFileConfirmation').hide()},function(event){PrimeFaces.ab({s:&quot;datasetForm:j_idt2107&quot;,f:&quot;datasetForm&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Delete</span></button><script
+        id=\"datasetForm:j_idt2107_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2107\",{id:\"datasetForm:j_idt2107\"});});</script>\n
+        \                           <button class=\"btn btn-link\" onclick=\"PF('deleteSelectedFileConfirmation').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                Cancel\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:deleteSelectedFileConfirmation_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"deleteSelectedFileConfirmation\",{id:\"datasetForm:deleteSelectedFileConfirmation\",modal:true});});</script><div
+        id=\"datasetForm:computeInvalid\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:computeInvalid_title\"
+        class=\"ui-dialog-title\">Compute</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:computeInvalid_content\">\n                        <p class=\"text-danger\"><span
+        class=\"glyphicon glyphicon-exclamation-sign\"></span> This dataset contains
+        restricted files you may not compute on because you have not been granted
+        access.</p>\n                        <div class=\"button-block\">\n                            <button
+        class=\"btn btn-default\" onclick=\"PF('computeInvalid').hide();\" type=\"button\">\n
+        \                               Close\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:computeInvalid_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"computeInvalid\",{id:\"datasetForm:computeInvalid\",modal:true});});</script><div
+        id=\"datasetForm:j_idt2110\"><div id=\"datasetForm:j_idt2111\" class=\"ui-outputpanel
+        ui-widget\"></div></div><div id=\"datasetForm:deaccessionConfirmation\" class=\"ui-dialog
+        ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container\"><div
+        class=\"ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top\"><span
+        id=\"datasetForm:deaccessionConfirmation_title\" class=\"ui-dialog-title\">Deaccession
+        Dataset</span><a href=\"#\" class=\"ui-dialog-titlebar-icon ui-dialog-titlebar-close
+        ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon ui-icon-closethick\"></span></a></div><div
+        class=\"ui-dialog-content ui-widget-content\" id=\"datasetForm:deaccessionConfirmation_content\">\n
+        \                       <p class=\"text-warning\"><span class=\"glyphicon
+        glyphicon-warning-sign\"></span> Are you sure you want to deaccession? The
+        selected version(s) will no longer be viewable by the public.</p>\n                        <div
+        class=\"button-block\"><input type=\"submit\" name=\"datasetForm:j_idt2138\"
+        value=\"Yes\" class=\"btn btn-default\" onclick=\"PF('deaccessionConfirmation').hide();
+        \                                    PF('deaccessionBlock').hide()\" />\n
+        \                           <button class=\"btn btn-link\" onclick=\"PF('deaccessionConfirmation').hide();\"
+        type=\"button\">\n                                No\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:deaccessionConfirmation_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"deaccessionConfirmation\",{id:\"datasetForm:deaccessionConfirmation\",modal:true});});</script><div
+        id=\"datasetForm:deaccessionAllConfirmation\" class=\"ui-dialog ui-widget
+        ui-widget-content ui-corner-all ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:deaccessionAllConfirmation_title\"
+        class=\"ui-dialog-title\">Deaccession Dataset</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:deaccessionAllConfirmation_content\">\n                        <p
+        class=\"text-warning\"><span class=\"glyphicon glyphicon-warning-sign\"></span>
+        Are you sure you want to deaccession this dataset? It will no longer be viewable
+        by the public.</p>\n                        <div class=\"button-block\"><input
+        type=\"submit\" name=\"datasetForm:j_idt2141\" value=\"Yes\" class=\"btn btn-default\"
+        onclick=\"PF('deaccessionAllConfirmation').hide();PF('deaccessionBlock').hide();PF('blockDatasetForm').hide();\"
+        />\n                            <button class=\"btn btn-link\" onclick=\"PF('deaccessionAllConfirmation').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                No\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:deaccessionAllConfirmation_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"deaccessionAllConfirmation\",{id:\"datasetForm:deaccessionAllConfirmation\",modal:true});});</script><div
+        id=\"datasetForm:compareTwo\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:compareTwo_title\"
+        class=\"ui-dialog-title\">Version Differences Details</span><a href=\"#\"
+        class=\"ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span
+        class=\"ui-icon ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content
+        ui-widget-content\" id=\"datasetForm:compareTwo_content\">\n                        <p
+        class=\"help-block\"><span class=\"glyphicon glyphicon-exclamation-sign text-danger\"></span>
+        <span class=\"text-danger\">Please select two versions to view the differences.</span></p>\n
+        \                       <div class=\"button-block\">\n                            <button
+        class=\"btn btn-default\" onclick=\"PF('compareTwo').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                Close\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:compareTwo_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"compareTwo\",{id:\"datasetForm:compareTwo\",modal:true});});</script><div
+        id=\"datasetForm:detailsBlocks\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container largePopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:detailsBlocks_title\"
+        class=\"ui-dialog-title\">Version Differences Details</span><a href=\"#\"
+        class=\"ui-dialog-titlebar-icon ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span
+        class=\"ui-icon ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content
+        ui-widget-content\" id=\"datasetForm:detailsBlocks_content\">\n                        <div
+        id=\"version-title\" class=\"margin-bottom-half\"></div>\n                        <div
+        id=\"version-details-block\" class=\" clearfix margin-bottom-half\">\n                            <div
+        class=\"pull-left\">\n                                 \n                            </div>\n
+        \                           <div class=\"pull-left\">\n                                Version:
+        <br />\n                                Last Updated: \n                            </div>\n
+        \                           <div class=\"pull-left\">\n                                Version:
+        <br />\n                                Last Updated: \n                            </div>\n
+        \                       </div>\n                        <div class=\"button-block
+        margin-bottom\">\n                            <button class=\"btn btn-default\"
+        onclick=\"PF('detailsBlocks').hide();PF('blockDatasetForm').hide();\" type=\"button\">\n
+        \                               Done\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:detailsBlocks_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"detailsBlocks\",{id:\"datasetForm:detailsBlocks\",modal:true});});</script><div
+        id=\"datasetForm:selectFilesForRequestAccess\" class=\"ui-dialog ui-widget
+        ui-widget-content ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div
+        class=\"ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top\"><span
+        id=\"datasetForm:selectFilesForRequestAccess_title\" class=\"ui-dialog-title\">Select
+        File(s)</span><a href=\"#\" class=\"ui-dialog-titlebar-icon ui-dialog-titlebar-close
+        ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon ui-icon-closethick\"></span></a></div><div
+        class=\"ui-dialog-content ui-widget-content\" id=\"datasetForm:selectFilesForRequestAccess_content\">\n
+        \                       <p class=\"text-danger\"><span class=\"glyphicon glyphicon-exclamation-sign\"></span>
+        Please select a file or files for access request.</p>\n                        <div
+        class=\"button-block\">\n                            <button class=\"btn btn-default\"
+        onclick=\"PF('selectFilesForRequestAccess').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                Close\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:selectFilesForRequestAccess_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"selectFilesForRequestAccess\",{id:\"datasetForm:selectFilesForRequestAccess\",modal:true});});</script><div
+        id=\"datasetForm:selectEmbargoedFilesForRequestAccess\" class=\"ui-dialog
+        ui-widget ui-widget-content ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div
+        class=\"ui-dialog-titlebar ui-widget-header ui-helper-clearfix ui-corner-top\"><span
+        id=\"datasetForm:selectEmbargoedFilesForRequestAccess_title\" class=\"ui-dialog-title\">Select
+        File(s)</span><a href=\"#\" class=\"ui-dialog-titlebar-icon ui-dialog-titlebar-close
+        ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon ui-icon-closethick\"></span></a></div><div
+        class=\"ui-dialog-content ui-widget-content\" id=\"datasetForm:selectEmbargoedFilesForRequestAccess_content\">\n
+        \                       <p class=\"text-danger\"><span class=\"glyphicon glyphicon-exclamation-sign\"></span>
+        Embargoed files cannot be accessed. Please select an unembargoed file or files
+        for your access request.</p>\n                        <div class=\"button-block\">\n
+        \                           <button class=\"btn btn-default\" onclick=\"PF('selectEmbargoedFilesForRequestAccess').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                Close\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:selectEmbargoedFilesForRequestAccess_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"selectEmbargoedFilesForRequestAccess\",{id:\"datasetForm:selectEmbargoedFilesForRequestAccess\",modal:true});});</script><div
+        id=\"datasetForm:fileTagsPopup\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:fileTagsPopup_title\"
+        class=\"ui-dialog-title\">Edit Tags</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:fileTagsPopup_content\"><span id=\"datasetForm:j_idt2224\"></span><script
+        type=\"text/javascript\">$(function(){PrimeFaces.focus('datasetForm:fileTagsMenuDS');});</script>\n
+        \                       <p class=\"help-block\">Select existing file tags
+        or create new tags to describe your files. Each file can have more than one
+        tag.</p>\n                        <div class=\"button-block\"><button id=\"datasetForm:fileTagsPopupSaveButton\"
+        name=\"datasetForm:fileTagsPopupSaveButton\" class=\"ui-button ui-widget ui-state-default
+        ui-corner-all ui-button-text-only btn btn-default\" onclick=\"PrimeFaces.ab({s:&quot;datasetForm:fileTagsPopupSaveButton&quot;,f:&quot;datasetForm&quot;,u:&quot;datasetForm:tabView:filesTable
+        datasetForm&quot;,onco:function(xhr,status,args,data){PF('fileTagsPopup').hide();}});return
+        false;\" type=\"submit\"><span class=\"ui-button-text ui-c\">Save Changes</span></button><script
+        id=\"datasetForm:fileTagsPopupSaveButton_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_fileTagsPopupSaveButton\",{id:\"datasetForm:fileTagsPopupSaveButton\"});});</script><button
+        id=\"datasetForm:fileTagsPopupCancelButton\" name=\"datasetForm:fileTagsPopupCancelButton\"
+        class=\"ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only
+        btn btn-link\" onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('fileTagsPopup').hide();
+        \                                    PF('blockDatasetForm').hide();},function(event){PrimeFaces.ab({s:&quot;datasetForm:fileTagsPopupCancelButton&quot;,f:&quot;datasetForm&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Cancel</span></button><script
+        id=\"datasetForm:fileTagsPopupCancelButton_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_fileTagsPopupCancelButton\",{id:\"datasetForm:fileTagsPopupCancelButton\"});});</script>\n
+        \                       </div></div></div><script id=\"datasetForm:fileTagsPopup_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"fileTagsPopup\",{id:\"datasetForm:fileTagsPopup\",modal:true});});</script><div
+        id=\"datasetForm:accessSignUpLogIn\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:accessSignUpLogIn_title\"
+        class=\"ui-dialog-title\">Request Access</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:accessSignUpLogIn_content\">\n                        <p
+        class=\"help-block\">\n                            <span class=\"glyphicon
+        glyphicon-warning-sign text-danger\"></span> \n                            <span
+        class=\"text-danger\">You need to <a href=\"/dataverseuser.xhtml?editMode=CREATE&redirectPage=%2Fdataset.xhtml%3FpersistentId%3Ddoi%3A10.7910%2FDVN%2FNJ7XSO\"
+        target=\"_self\" title=\"Sign Up for a Dataverse Account\">Sign Up</a> or
+        <a href=\"/loginpage.xhtml?redirectPage=%2Fdataset.xhtml%3FpersistentId%3Ddoi%3A10.7910%2FDVN%2FNJ7XSO\"
+        target=\"_self\" title=\"Log into your Dataverse Account\">Log In</a> to request
+        access.</span>\n                        </p>\n                        <div
+        class=\"button-block\">\n                            <button class=\"btn btn-default\"
+        onclick=\"PF('accessSignUpLogIn_popup').hide();                                     PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                Close\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:accessSignUpLogIn_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"accessSignUpLogIn_popup\",{id:\"datasetForm:accessSignUpLogIn\",modal:true});});</script><div
+        id=\"datasetForm:downloadPopup\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container largePopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:downloadPopup_title\"
+        class=\"ui-dialog-title\">Dataset Terms</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:downloadPopup_content\"><span id=\"datasetForm:j_idt2256\"></span><script
+        type=\"text/javascript\">$(function(){PrimeFaces.focus(null, 'datasetForm:guestbookUIFragment');});</script>\n
+        \       <p class=\"help-block\">\n            This dataset is made available
+        under the following terms. Please confirm and/or complete the information
+        needed below in order to continue.\n        </p><div id=\"datasetForm:guestbookMessages\">\n
+        \           <div class=\"container messagePanel\">\n            </div></div>\n
+        \       \n        <div class=\"form-horizontal terms\">\n        \n        <div
+        class=\"form-group\"><label for=\"datasetForm:fdLicense\" class=\"col-sm-3
+        control-label\">\n                License/Data Use Agreement </label>\n            <div
+        class=\"col-sm-9\">\n                <p class=\"help-block\">Our <a href=\"https://dataverse.org/best-practices/dataverse-community-norms\"
+        title=\"Dataverse Community Norms - Dataverse.org\" target=\"_blank\">Community
+        Norms</a> as well as good scientific practices expect that proper credit is
+        given via citation. Please use the data citation shown on the dataset page.\n
+        \               </p>\n                <p>\n                    <img src=\"https://licensebuttons.net/p/zero/1.0/88x31.png\"
+        title=\"Creative Commons CC0 1.0 Universal Public Domain Dedication. \" style=\"display:
+        none\" onload=\"this.style.display='inline'\" />\n                    <a href=\"http://creativecommons.org/publicdomain/zero/1.0\"
+        title=\"Creative Commons CC0 1.0 Universal Public Domain Dedication. \" target=\"_blank\">CC0
+        1.0\n                    </a>\n                </p>\n            </div>\n
+        \       </div>\n        </div>\n        <div class=\"button-block\"><button
+        id=\"datasetForm:j_idt2358\" name=\"datasetForm:j_idt2358\" class=\"ui-button
+        ui-widget ui-state-default ui-corner-all ui-button-text-only btn btn-default\"
+        onclick=\"PrimeFaces.ab({s:&quot;datasetForm:j_idt2358&quot;,f:&quot;datasetForm&quot;,u:&quot;datasetForm:guestbookUIFragment&quot;,pa:[{name:&quot;DO_GB_VALIDATION_downloadDataset&quot;,value:&quot;true&quot;}]});return
+        false;\" type=\"submit\"><span class=\"ui-button-text ui-c\">Accept</span></button><script
+        id=\"datasetForm:j_idt2358_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2358\",{id:\"datasetForm:j_idt2358\"});});</script><button
+        name=\"datasetForm:j_idt2366\" value=\"\" onclick=\"PF('downloadPopup').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\" class=\"btn btn-link\">\n                Cancel\n            </button>\n
+        \       </div></div></div><script id=\"datasetForm:downloadPopup_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"downloadPopup\",{id:\"datasetForm:downloadPopup\",modal:true});});</script><div
+        id=\"datasetForm:previewGuestbook\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container largePopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:previewGuestbook_title\"
+        class=\"ui-dialog-title\">Preview Guestbook</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:previewGuestbook_content\">\n    \n        <div class=\"form-horizontal\">\n
+        \           <p class=\"help-block\">\n                Upon downloading files
+        the guestbook asks for the following information.\n            </p>\n            <div
+        class=\"form-group\">\n                <label class=\"col-sm-3 control-label\">\n
+        \                   Guestbook Name\n                </label>\n                <div
+        class=\"col-sm-8\">\n                    <p class=\"form-control-static\">\n
+        \                       \n                    </p>\n                </div>\n
+        \           </div>\n            <div class=\"form-group\">\n                <label
+        class=\"col-sm-3 control-label\">\n                    Collected Data\n                    <span
+        class=\"glyphicon glyphicon-question-sign tooltip-icon\" data-toggle=\"tooltip\"
+        data-placement=\"auto right\" data-original-title=\"User data collected by
+        the guestbook.\"></span>\n                </label>\n                <div class=\"col-sm-8\">\n
+        \                   <p class=\"form-control-static\">Account Information\n
+        \                       <ul>\n                        </ul>\n                    </p>\n
+        \               </div>\n            </div>\n        </div>\n        <div class=\"button-block\">\n
+        \           <button class=\"btn btn-default\" onclick=\"PF('viewGuestbook').hide()\"
+        type=\"button\">\n                Close\n            </button>\n        </div></div></div><script
+        id=\"datasetForm:previewGuestbook_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"viewGuestbook\",{id:\"datasetForm:previewGuestbook\",modal:true});});</script><div
+        id=\"datasetForm:downloadPackagePopup\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container smallPopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:downloadPackagePopup_title\"
+        class=\"ui-dialog-title\">Package File Download</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:downloadPackagePopup_content\"><div id=\"datasetForm:packagePopupDownloadInfo\">\n
+        \       <div class=\"col-sm-12\">\n            <p class=\"help-block no-margin-top\">Use
+        the Download URL in a Wget command or a download manager to download this
+        package file. Download via web browser is not recommended. <a href=\"https://guides.dataverse.org/en/5.13/user/find-use-data.html#downloading-a-dataverse-package-via-url\"
+        title=\"User Guide - Downloading a Dataverse Package via URL\" target=\"_blank\">User
+        Guide - Downloading a Dataverse Package via URL</a>\n            </p>\n        </div>\n
+        \       <div class=\"col-sm-12 margin-bottom\">\n        </div>\n        <div
+        class=\"col-sm-12\">\n            <label>Download URL</label> \n            <p><code>https://dataverse.harvard.edu/api/access/datafile/</code></p>\n
+        \       </div>\n        <div class=\"col-sm-12 button-block margin-top\"><button
+        id=\"datasetForm:downloadPackagePopupCancelButton\" name=\"datasetForm:downloadPackagePopupCancelButton\"
+        class=\"ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only
+        btn btn-default\" onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('downloadPackagePopup').hide();},function(event){PrimeFaces.ab({s:&quot;datasetForm:downloadPackagePopupCancelButton&quot;,f:&quot;datasetForm&quot;,u:&quot;datasetForm:downloadPackagePopup&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Close</span></button><script
+        id=\"datasetForm:downloadPackagePopupCancelButton_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_downloadPackagePopupCancelButton\",{id:\"datasetForm:downloadPackagePopupCancelButton\"});});</script>\n
+        \       </div></div></div></div><script id=\"datasetForm:downloadPackagePopup_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"downloadPackagePopup\",{id:\"datasetForm:downloadPackagePopup\",modal:true});});</script><div
+        id=\"datasetForm:requestAccessPopup\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container largePopUp\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:requestAccessPopup_title\"
+        class=\"ui-dialog-title\">Request Access</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:requestAccessPopup_content\">\n        <p class=\"help-block\">\n
+        \           Please confirm and/or complete the information needed below in
+        order to request access to files in this dataset.\n        </p>\n        <div
+        class=\"form-horizontal\">\n        </div>\n        <div class=\"button-block\"><button
+        id=\"datasetForm:j_idt2473\" name=\"datasetForm:j_idt2473\" class=\"ui-button
+        ui-widget ui-state-default ui-corner-all ui-button-text-only btn btn-default\"
+        onclick=\"PrimeFaces.ab({s:&quot;datasetForm:j_idt2473&quot;,f:&quot;datasetForm&quot;,u:&quot;@([id$=requestAccessConsolidated])
+        @([id$=requestPanel]) @([id$=messagePanel]) @([id$=filesTable])&quot;,onco:function(xhr,status,args,data){PF('requestAccessPopup').hide();;}});return
+        false;\" type=\"submit\"><span class=\"ui-button-text ui-c\">Accept</span></button><script
+        id=\"datasetForm:j_idt2473_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2473\",{id:\"datasetForm:j_idt2473\"});});</script>\n
+        \           <button class=\"btn btn-link\" onclick=\"PF('requestAccessPopup').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                Cancel\n            </button>\n        </div></div></div><script
+        id=\"datasetForm:requestAccessPopup_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"requestAccessPopup\",{id:\"datasetForm:requestAccessPopup\",modal:true});});</script><script
+        id=\"datasetForm:j_idt2491\" type=\"text/javascript\">linkDatasetCommand =
+        function() {return PrimeFaces.ab({s:\"datasetForm:j_idt2491\",f:\"datasetForm\",u:\"messagePanel
+        @([id$=Messages])\",onco:function(xhr,status,args,data){PF('linkDatasetForm').hide();;},pa:arguments[0]});}</script><div
+        id=\"datasetForm:computeBatchListPopup\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:computeBatchListPopup_title\"
+        class=\"ui-dialog-title\">Compute Batch</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:computeBatchListPopup_content\">\n                        <div
+        class=\"text-right\">\n                                <span class=\"glyphicon
+        glyphicon-remove\"></span>Clear Batch<button id=\"datasetForm:j_idt2493\"
+        name=\"datasetForm:j_idt2493\" class=\" btn btn-default\" onclick=\"PrimeFaces.ab({s:&quot;datasetForm:j_idt2493&quot;,f:&quot;datasetForm&quot;,u:&quot;datasetForm
+        messagePanel&quot;});return false;\" type=\"submit\"><span class=\"ui-button-text
+        ui-c\">ui-button</span></button><script id=\"datasetForm:j_idt2493_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2493\",{id:\"datasetForm:j_idt2493\"});});</script>\n
+        \                       </div><table id=\"datasetForm:computeBatch\" class=\"table
+        table-striped\">\n<thead>\n<tr>\n<th scope=\"col\">Dataset</th>\n<th scope=\"col\">Persistent
+        Identifier</th>\n<th scope=\"col\">Change Compute Batch</th>\n</tr>\n</thead>\n<tbody>\n<tr><td></td><td></td><td></td></tr></tbody>\n</table>\n\n
+        \                       <div class=\"button-block\"><a href=\"https://dataverse.harvard.edu/;jsessionid=7e99ede93d1294c046dd520bcbec\"
+        onclick=\"PF('computeBatchListPopup').hide()\" target=\"_blank\" class=\"btn
+        btn-default\">Compute Batch</a>\n                            <button class=\"btn
+        btn-link\" onclick=\"PF('computeBatchListPopup').hide();\" type=\"button\">\n
+        \                               Cancel\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:computeBatchListPopup_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"computeBatchListPopup\",{id:\"datasetForm:computeBatchListPopup\",modal:true});});</script><div
+        id=\"datasetForm:inreview\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:inreview_title\"
+        class=\"ui-dialog-title\">Submit for Review</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:inreview_content\">\n                        <p class=\"text-warning\">\n
+        \                           <span class=\"glyphicon glyphicon-warning-sign\"></span>
+        You will not be able to make changes to this dataset while it is in review.\n
+        \                       </p>\n                        <div class=\"button-block\"><button
+        id=\"datasetForm:j_idt2512\" name=\"datasetForm:j_idt2512\" class=\"ui-button
+        ui-widget ui-state-default ui-corner-all ui-button-text-only btn btn-default\"
+        onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('inreview').hide();
+        \                                                     PF('blockDatasetForm').hide();},function(event){PrimeFaces.ab({s:&quot;datasetForm:j_idt2512&quot;,f:&quot;datasetForm&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Submit</span></button><script
+        id=\"datasetForm:j_idt2512_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2512\",{id:\"datasetForm:j_idt2512\"});});</script>\n
+        \                           <button class=\"btn btn-link\" onclick=\"PF('inreview').hide();PF('blockDatasetForm').hide();\"
+        type=\"button\">\n                                Cancel\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:inreview_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"inreview\",{id:\"datasetForm:inreview\",modal:true});});</script><div
+        id=\"datasetForm:publishDataset\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:publishDataset_title\"
+        class=\"ui-dialog-title\">Publish Dataset</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:publishDataset_content\"><span id=\"datasetForm:j_idt2525\"></span><script
+        type=\"text/javascript\">$(function(){PrimeFaces.focus('datasetForm:options');});</script>\n
+        \                           <p class=\"text-warning\">\n                                <span
+        class=\"glyphicon glyphicon-warning-sign\"></span> Are you sure you want to
+        republish this dataset?\n                            </p><div class=\"well
+        terms-agreement-block\">By default datasets are published with the CC0-“Public
+        Domain Dedication” waiver. Learn more about the CC0 waiver <a target=_blank
+        href='http://creativecommons.org/choose/zero/'>here</a>. <br><br> To publish
+        with custom Terms of Use, click the Cancel button and go to the Terms tab
+        for this dataset.</div>\n                                <p class=\"help-block\">\n
+        \                                   Select if this is a minor or major version
+        update.\n                                </p><table id=\"datasetForm:options\"
+        role=\"presentation\" class=\"ui-selectoneradio ui-widget\"><tr><td><div class=\"ui-radiobutton
+        ui-widget\"><div class=\"ui-helper-hidden-accessible\"><input id=\"datasetForm:options:0\"
+        name=\"datasetForm:options\" type=\"radio\" value=\"1\" checked=\"checked\"
+        /></div><div class=\"ui-radiobutton-box ui-widget ui-corner-all ui-state-default
+        ui-state-active\"><span class=\"ui-radiobutton-icon ui-icon ui-icon-bullet
+        ui-c\"></span></div></div><label for=\"datasetForm:options:0\">Minor Release
+        (1.1)</label></td><td><div class=\"ui-radiobutton ui-widget\"><div class=\"ui-helper-hidden-accessible\"><input
+        id=\"datasetForm:options:1\" name=\"datasetForm:options\" type=\"radio\" value=\"2\"
+        /></div><div class=\"ui-radiobutton-box ui-widget ui-corner-all ui-state-default\"><span
+        class=\"ui-radiobutton-icon ui-icon ui-icon-blank ui-c\"></span></div></div><label
+        for=\"datasetForm:options:1\">Major Release (2.0)</label></td></tr></table><script
+        id=\"datasetForm:options_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"SelectOneRadio\",\"widget_datasetForm_options\",{id:\"datasetForm:options\",unselectable:false});});</script>\n
+        \                           <p>\n                            </p>\n                        <div
+        class=\"button-block\"><button id=\"datasetForm:j_idt2543\" name=\"datasetForm:j_idt2543\"
+        class=\"ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only
+        btn btn-default\" onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('publishDataset').hide();
+        \                                                     PF('blockDatasetForm').hide();},function(event){PrimeFaces.ab({s:&quot;datasetForm:j_idt2543&quot;,f:&quot;datasetForm&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Continue</span></button><script
+        id=\"datasetForm:j_idt2543_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2543\",{id:\"datasetForm:j_idt2543\"});});</script>\n
+        \                           <button class=\"btn btn-link\" onclick=\"PF('publishDataset').hide();
+        \                                    PF('blockDatasetForm').hide();\" type=\"button\">\n
+        \                               Cancel\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:publishDataset_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"publishDataset\",{id:\"datasetForm:publishDataset\",modal:true,width:\"70%\"});});</script><div
+        id=\"datasetForm:mayNotRelease\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:mayNotRelease_title\"
+        class=\"ui-dialog-title\">Publish Dataset</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:mayNotRelease_content\">\n                        <p class=\"text-danger\">\n
+        \                           <span class=\"glyphicon glyphicon-exclamation-sign\"></span>This
+        dataset cannot be published until \n                                    <a
+        href=\"/dataverse.xhtml?alias=harvard\" title=\"Harvard Dataverse\">Harvard
+        Dataverse\n                                    </a>  is published by its administrator.\n
+        \                       </p>\n                        <div class=\"button-block\">\n
+        \                           <button class=\"btn btn-default\" onclick=\"PF('mayNotRelease').hide();
+        \                                    PF('blockDatasetForm').hide();\" type=\"button\">\n
+        \                               Close\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:mayNotRelease_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"mayNotRelease\",{id:\"datasetForm:mayNotRelease\",modal:true});});</script><div
+        id=\"datasetForm:sendBackToContributor\" class=\"ui-dialog ui-widget ui-widget-content
+        ui-corner-all ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar
+        ui-widget-header ui-helper-clearfix ui-corner-top\"><span id=\"datasetForm:sendBackToContributor_title\"
+        class=\"ui-dialog-title\">Return to Author</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"datasetForm:sendBackToContributor_content\">\n                        <p
+        class=\"text-warning\">\n                            <span class=\"glyphicon
+        glyphicon-warning-sign\"></span> Return this dataset to contributor for modification.\n
+        \                       </p>\n                        \n                        <div
+        class=\"button-block\"><button id=\"datasetForm:j_idt2564\" name=\"datasetForm:j_idt2564\"
+        class=\"ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only
+        btn btn-default\" onclick=\"PrimeFaces.bcn(this,event,[function(event){PF('sendBackToContributor').hide()},function(event){PrimeFaces.ab({s:&quot;datasetForm:j_idt2564&quot;,f:&quot;datasetForm&quot;});return
+        false;}]);\" type=\"submit\"><span class=\"ui-button-text ui-c\">Continue</span></button><script
+        id=\"datasetForm:j_idt2564_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_datasetForm_j_idt2564\",{id:\"datasetForm:j_idt2564\"});});</script>\n
+        \                           <button class=\"btn btn-link\" onclick=\"PF('sendBackToContributor').hide();
+        \                                    PF('blockDatasetForm').hide();\" type=\"button\">\n
+        \                               Cancel\n                            </button>\n
+        \                       </div></div></div><script id=\"datasetForm:sendBackToContributor_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"sendBackToContributor\",{id:\"datasetForm:sendBackToContributor\",modal:true});});</script><script
+        id=\"datasetForm:j_idt2566\" type=\"text/javascript\">returnToAuthorCommand
+        = function() {return PrimeFaces.ab({s:\"datasetForm:j_idt2566\",f:\"datasetForm\",pa:arguments[0]});}</script><script
+        id=\"datasetForm:j_idt2567\" type=\"text/javascript\">linkEditTerms = function()
+        {return PrimeFaces.ab({s:\"datasetForm:j_idt2567\",f:\"datasetForm\",u:\"datasetForm
+        datasetForm messagePanel\",pa:arguments[0]});}</script><script id=\"datasetForm:j_idt2568\"
+        type=\"text/javascript\">editMedatdataCommand = function() {return PrimeFaces.ab({s:\"datasetForm:j_idt2568\",f:\"datasetForm\",u:\"datasetForm
+        datasetForm messagePanel\",pa:arguments[0]});}</script><script id=\"datasetForm:j_idt2569\"
+        type=\"text/javascript\">datasetSaveCommand = function() {return PrimeFaces.ab({s:\"datasetForm:j_idt2569\",f:\"datasetForm\",u:\"datasetForm
+        messagePanel\",pa:arguments[0]});}</script><input type=\"hidden\" name=\"javax.faces.ViewState\"
+        id=\"j_id1:javax.faces.ViewState:2\" value=\"8809981920267980055:5478236138567398528\"
+        autocomplete=\"off\" />\n</form>\n                <script>\n                    //<![CDATA[\n
+        \                   $(document).ready(function () {\n                        popoverHTML('Allowed
+        HTML Tags', '&lt;a&gt;, &lt;b&gt;, &lt;blockquote&gt;, &lt;br&gt;, &lt;code&gt;,
+        &lt;del&gt;, &lt;dd&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;em&gt;, &lt;hr&gt;, &lt;h1&gt;-&lt;h3&gt;,
+        &lt;i&gt;, &lt;img&gt;, &lt;kbd&gt;, &lt;li&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;,
+        &lt;s&gt;, &lt;sup&gt;, &lt;sub&gt;, &lt;strong&gt;, &lt;strike&gt;, &lt;u&gt;,
+        &lt;ul&gt;');\n                        summaryDescTruncation();\n                    });\n
+        \                   function summaryDescTruncation() {\n                        //
+        truncate summary description, contentTruncate function in dv_rebind_bootstrap_ui.js\n
+        \                       // add summary desc row id to pass as selector param\n
+        \                       var descId = 'dsDescription td > div';\n                        //
+        add metadata dynamic label text, tooltip text from bundle as param\n                        var
+        truncMoreBtn = 'Read full Description [+]';\n                        var truncMoreTip
+        = 'Click to read the full Description.';\n                        var truncLessBtn
+        = 'Collapse Description [-]';\n                        var truncLessTip =
+        'Click to collapse the Description.';\n\n                        // pass bundle
+        text variabls as params to function\n                        contentTruncate(descId,
+        truncMoreBtn, truncMoreTip, truncLessBtn, truncLessTip);\n                    }\n
+        \                   function openDialog() {\n                        PF('details').show();\n
+        \                   }\n                    function openCompareTwo() {\n                        PF('compareTwo').show();\n
+        \                   }\n                    function editTerms(){  \n                        linkEditTerms();\n
+        \                   }\n                    function editMetadata(){                         \n
+        \                       var validTOA = document.getElementById(\"datasetForm:validTermsofAccess\").value;\n
+        \                       if (validTOA === 'false'){                            \n
+        \                           PF('blockDatasetForm').show();\n                            PF('accessPopup').show();\n
+        \                       } else {\n                            editMedatdataCommand();\n
+        \                       }                            \n                    }\n
+        \                   \n                    function testCheckBoxes() {\n                        var
+        count = PF('versionsTable').getSelectedRowsCount();\n                        if
+        (count !== 2) {\n                            PF('compareTwo').show();\n                        }
+        else {\n                            $('button[id$=\"compareVersions\"]').trigger('click');\n
+        \                       }\n                    }\n                    function
+        testFilesSelected() {\n                        var count = PF('filesTable').getSelectedRowsCount();\n
+        \                       if (count == 0) {\n                            PF('selectFiles').show();\n
+        \                       } else {\n                            return true;\n
+        \                       }\n                    }\n                    function
+        testTermsOfAccess() {\n                        var valid = document.getElementById(\"datasetForm:validTermsofAccess\").value;\n
+        \                       if (valid === false) {\n                            PF('accessPopup').show();\n
+        \                           return false;\n                        } else
+        {\n                            return true;\n                        }\n                    }\n
+        \                   function updateTemplate() {\n                        $('button[id$=\"updateTemplate\"]').trigger('click');\n
+        \                   }\n                    function updateOwnerDataverse()
+        {\n                        $('button[id$=\"updateOwnerDataverse\"]').trigger('click');\n
+        \                   }\n                    \n                    function
+        showPopup() {\n                        var outcome = document.getElementById(\"datasetForm:validateFilesOutcome\").value;\n
+        \                       if (outcome ==='Mixed'){\n                            PF('downloadMixed').show();\n
+        \                       }\n                        if (outcome ==='FailEmpty'){\n
+        \                           PF('selectFilesForDownload').show();\n                        }\n
+        \                       if (outcome ==='FailSize'){\n                            PF('downloadTooLarge').show();\n
+        \                       }\n                        if (outcome ==='FailRestricted'){\n
+        \                           PF('downloadInvalid').show();\n                        }\n
+        \                       if (outcome ==='GuestbookRequired'){\n                            PF('downloadPopup').show();\n
+        \                       }\n                    }\n                    \n                    function
+        testTOADatasetPage() {\n                        var termsofAccessHidden, fileAccessRequestHidden;\n
+        \                       try{\n                            termsofAccessHidden
+        = document.getElementById(\"datasetForm:tabView:termsofAccessHiddenLT\").value;\n
+        \                           fileAccessRequestHidden  = document.getElementById(\"datasetForm:tabView:fileAccessRequestHiddenLT\").value;
+        \ \n                        }\n                        catch (error){\n                            //terms
+        not present so save...\n                            PF('blockDatasetForm').show();\n
+        \                           datasetSaveCommand();                        \n
+        \                       }                         \n                        if
+        ('false' === 'true' && fileAccessRequestHidden === 'false' && termsofAccessHidden
+        === '') {\n                           //Not compliant show error keep page
+        open...\n                        } else {\n                            PF('blockDatasetForm').show();\n
+        \                           datasetSaveCommand();\n                        }\n
+        \                   }\n                                        \n                    //]]>\n
+        \               </script>\n        </div>\n    <footer>\n        <div id=\"dvfooter\">\n
+        \           <div class=\"container\">\n                <div class=\"row\"><div
+        class=\"col-sm-8 small\">\n                        <p>Copyright &#169; 2023,
+        The President &#38; Fellows of Harvard College |  <a href=\"https://support.dataverse.harvard.edu/harvard-dataverse-privacy-policy\"
+        rel=\"noopener\" target=\"_blank\">Privacy Policy</a>\n                        </p></div>\n
+        \                   <div class=\"col-sm-4 text-right\">\n                        <div
+        class=\"poweredbylogo\">\n                            <span>Powered by</span>\n
+        \                           <a href=\"http://dataverse.org/\" title=\"The
+        Dataverse Project\" target=\"_blank\" rel=\"noopener\"><img src=\"/resources/images/dataverse_project_logo.svg\"
+        width=\"118\" height=\"40\" onerror=\"this.src='/resources/images/dataverseproject_logo.png'\"
+        alt=\"The Dataverse Project logo\" /></a><span class=\"version\">v. 5.13 build
+        1244-79d6e57</span>\n                        </div>\n                    </div>\n
+        \               </div>\n            </div>\n        </div><script>\n  //<![CDATA[\n
+        \ $(document).ready(function () {\n    $(\"#footer > div.container > div.row
+        > div.col-sm-8.small > p\").append(\"&#160;|&#160; <a href=\\\"https://www.harvard.edu/copyright-issue\\\"
+        target=\\\"_blank\\\" rel=\\\"noopener\\\">Report Copyright Infringement</a>
+        &#160;|&#160; <a href=\\\"https://accessibility.huit.harvard.edu/digital-accessibility-policy\\\"
+        target=\\\"_blank\\\" rel=\\\"noopener\\\">Accessibility</a>\");\n  });\n
+        \ //]]>\n</script>\n\n<style>\n#feedbackTab {position:fixed; bottom:0; right:50px;}\n#feedbackTab
+        a.btn-feedback {border-bottom-right-radius:0; border-bottom-left-radius:0;}\n.btn-feedback
+        {background-color:#C55B28; border-color:#C55B28; color:#fff;}\n.btn-feedback:hover,
+        .btn-feedback:focus,\n.btn-feedback:active, .btn-feedback.active {background-color:#b05124;
+        border-color: #9b471f; color:#fff;}\n</style>\n\n<div id=\"feedbackTab\">\n
+        \   <a class=\"btn btn-feedback bootstrap-button-tooltip\" href=\"https://goo.gl/forms/p7uu3GfiWYSlJrsi1\"
+        role=\"button\" target=\"_blank\" rel=\"noopener\"  aria-label=\"Help improve
+        Dataverse!\" data-original-title=\"Help improve Dataverse!\">\n        Feedback\n
+        \   </a>\n</div>\n\n    </footer><div id=\"ajaxStatusPanel\"><div id=\"ajaxStatusPanel_start\"
+        style=\"display:none\"><img src=\"/resources/images/ajax-loading.gif;jsessionid=7e99ede93d1294c046dd520bcbec\"
+        alt=\"Loading...\" /></div></div><script id=\"ajaxStatusPanel_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"AjaxStatus\",\"widget_ajaxStatusPanel\",{id:\"ajaxStatusPanel\",delay:0});});</script><div
+        id=\"contactDialog\" class=\"ui-dialog ui-widget ui-widget-content ui-corner-all
+        ui-shadow ui-hidden-container\"><div class=\"ui-dialog-titlebar ui-widget-header
+        ui-helper-clearfix ui-corner-top\"><span id=\"contactDialog_title\" class=\"ui-dialog-title\">Contact
+        Harvard Dataverse Support</span><a href=\"#\" class=\"ui-dialog-titlebar-icon
+        ui-dialog-titlebar-close ui-corner-all\" aria-label=\"Close\"><span class=\"ui-icon
+        ui-icon-closethick\"></span></a></div><div class=\"ui-dialog-content ui-widget-content\"
+        id=\"contactDialog_content\"><div id=\"j_idt2598\">\n<form id=\"emailForm\"
+        name=\"emailForm\" method=\"post\" action=\"/dataset.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?persistentId=doi%3A10.7910%2FDVN%2FNJ7XSO\"
+        class=\"form-horizontal\" enctype=\"application/x-www-form-urlencoded\">\n<input
+        type=\"hidden\" name=\"emailForm\" value=\"emailForm\" />\n<span id=\"emailForm:j_idt2599\"></span><script
+        type=\"text/javascript\">$(function(){PrimeFaces.focus(null, 'contactDialog');});</script>\n
+        \               \n                <div class=\"form-group\">\n                    <label
+        for=\"messageTo\" class=\"col-sm-3 control-label\">To</label>\n                    <div
+        class=\"col-sm-9\">\n                        <p id=\"messageTo\" class=\"form-control-static\">Harvard
+        Dataverse Support</p>\n                    </div>\n                </div>\n
+        \               \n                    <div class=\"form-group\"><label for=\"emailForm:userEmail\"
+        class=\"col-sm-3 control-label\">From <span class=\"glyphicon glyphicon-asterisk
+        text-danger\" title=\"Required field\"></span></label>\n                        <div
+        class=\"col-sm-9\"><input id=\"emailForm:userEmail\" name=\"emailForm:userEmail\"
+        type=\"text\" value=\"\" class=\"ui-inputfield ui-inputtext ui-widget ui-state-default
+        ui-corner-all form-control\" size=\"30\" /><script id=\"emailForm:userEmail_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"InputText\",\"widget_emailForm_userEmail\",{id:\"emailForm:userEmail\"});});</script>\n
+        \                       </div>\n                    </div>\n                \n
+        \               <div class=\"form-group\"><label for=\"emailForm:messageSubject\"
+        class=\"col-sm-3 control-label\">Subject <span class=\"glyphicon glyphicon-asterisk
+        text-danger\" title=\"Required field\"></span></label>\n                    <div
+        class=\"col-sm-9\"><input id=\"emailForm:messageSubject\" name=\"emailForm:messageSubject\"
+        type=\"text\" value=\"\" class=\"ui-inputfield ui-inputtext ui-widget ui-state-default
+        ui-corner-all form-control\" /><script id=\"emailForm:messageSubject_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"InputText\",\"widget_emailForm_messageSubject\",{id:\"emailForm:messageSubject\"});});</script>\n
+        \                   </div>\n                </div>   \n                \n
+        \               <div class=\"form-group\"><label for=\"emailForm:userMessage\"
+        class=\"col-sm-3 control-label\">Message <span class=\"glyphicon glyphicon-asterisk
+        text-danger\" title=\"Required field\"></span></label>\n                    <div
+        class=\"col-sm-9\"><textarea id=\"emailForm:userMessage\" name=\"emailForm:userMessage\"
+        class=\"ui-inputfield ui-inputtextarea ui-widget ui-state-default ui-corner-all
+        form-control\" cols=\"20\" rows=\"10\" title=\"Message\" maxlength=\"2147483647\"></textarea><script
+        id=\"emailForm:userMessage_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"InputTextarea\",\"widget_emailForm_userMessage\",{id:\"emailForm:userMessage\",autoResize:false});});</script>\n
+        \                   </div>\n                </div>\n                \n                <div
+        class=\"form-group\">\n                    <div class=\"col-sm-offset-3 col-sm-9\">\n
+        \                       <p><span class=\"highlightBold\">Please fill this
+        out to prove you are not a robot.</span> <span class=\"glyphicon glyphicon-asterisk
+        text-danger\" title=\"Required field\"></span>\n                        </p>\n
+        \                       <label for=\"emailForm:messageSum\"> +  = \n                        </label><input
+        id=\"emailForm:messageSum\" name=\"emailForm:messageSum\" type=\"text\" class=\"ui-inputfield
+        ui-inputtext ui-widget ui-state-default ui-corner-all \" size=\"4\" title=\"Human
+        Access Validation Answer\" /><script id=\"emailForm:messageSum_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"InputText\",\"widget_emailForm_messageSum\",{id:\"emailForm:messageSum\"});});</script>\n
+        \                   </div>\n                </div>\n                \n                <div
+        class=\"button-block\"><button id=\"emailForm:j_idt2627\" name=\"emailForm:j_idt2627\"
+        class=\"ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only
+        btn btn-default\" onclick=\"PrimeFaces.ab({s:&quot;emailForm:j_idt2627&quot;,f:&quot;emailForm&quot;,u:&quot;emailForm&quot;,onco:function(xhr,status,args,data){if
+        (args &amp;&amp; !args.validationFailed) PF('contactForm').hide();;},pa:[{name:&quot;DO_VALIDATION&quot;,value:&quot;true&quot;}],fp:&quot;j_idt2598&quot;});return
+        false;\" type=\"submit\"><span class=\"ui-button-text ui-c\">Send Message</span></button><script
+        id=\"emailForm:j_idt2627_s\" type=\"text/javascript\">$(function(){PrimeFaces.cw(\"CommandButton\",\"widget_emailForm_j_idt2627\",{id:\"emailForm:j_idt2627\"});});</script>\n
+        \                   <button class=\"btn btn-link\" onclick=\"PF('contactForm').hide()\"
+        type=\"button\">\n                        Cancel\n                    </button>\n
+        \               </div><input type=\"hidden\" name=\"javax.faces.ViewState\"
+        id=\"j_id1:javax.faces.ViewState:3\" value=\"8809981920267980055:5478236138567398528\"
+        autocomplete=\"off\" />\n</form></div></div></div><script id=\"contactDialog_s\"
+        type=\"text/javascript\">$(function(){PrimeFaces.cw(\"Dialog\",\"contactForm\",{id:\"contactDialog\",modal:true});});</script>\n
+        \       <script src=\"/javax.faces.resource/js/dv_rebind_bootstrap_ui.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"></script>\n
+        \       <script src=\"/javax.faces.resource/bs/js/bootstrap.min.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"></script>\n
+        \       <script defer=\"defer\" src=\"/javax.faces.resource/js/ie-compat.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"></script>\n
+        \       <script defer=\"defer\" src=\"/javax.faces.resource/js/owl.carousel.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"></script>\n
+        \       <script defer=\"defer\" src=\"/javax.faces.resource/js/jquery.matchHeight.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"></script>\n
+        \       <script src=\"/javax.faces.resource/js/jquery.sharrre.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"></script>\n
+        \       <script src=\"/javax.faces.resource/js/clipboard.min.js.xhtml;jsessionid=7e99ede93d1294c046dd520bcbec?version=5.13\"></script> \n
+        \       \n        <script>\n            //<![CDATA[\n            $(document).ready(function
+        () {\n                // Navbar Search Toggle\n                $(document).on('click',
+        '#navbar-search-toggle', function (e) {\n                    $(this).parent(\"li\").hide();\n
+        \                   $(\"form.navbar-form[role='search']\").show();\n                });\n
+        \               $('body').click(function (e) {\n                    if (!$(e.target).closest(\"form.navbar-form[role='search']\").length)
+        {\n                        $(\"form.navbar-form[role='search']\").hide();\n
+        \                       $(\"#navbar-search-toggle\").parent(\"li\").show();\n
+        \                   }\n                    ;\n                });\n            });\n
+        \           function clickSupportLink() {\n                $(\"[id$='headerSupportLink']\").click();\n
+        \           }\n            //]]>\n        </script><script type=\"text/javascript\"
+        id=\"j_idt2631\">bind_bsui_components();</script></body>\n</html>"
+  recorded_at: Sun, 12 Mar 2023 22:20:58 GMT
+recorded_with: VCR 6.1.0
