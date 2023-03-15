@@ -7,13 +7,12 @@ describe Briard::Metadata, vcr: true do
     it 'journal article' do
       input = "#{fixture_path}crossref.xml"
       subject = described_class.new(input: input)
-      expect(subject.valid?).to be false
-      expect(subject.errors).to eq(["property '/descriptions/1/description' is not of type: string"])
+      expect(subject.valid?).to be true
       expect(subject.doi).to eq('10.7554/elife.01567')
       expect(subject.url).to eq('https://elifesciences.org/articles/01567')
-      crossref_xml = Hash.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'journal')
+      crossref_xml = Hash.from_xml(subject.crossref_xml).dig("crossref_result", "query_result", "body", "query", "doi_record", "crossref", "journal")
       expect(crossref_xml.dig('journal_metadata', 'full_title')).to eq('eLife')
-      expect(crossref_xml.dig('journal_article', 'doi_data', 'doi')).to eq('10.7554/elife.01567')
+      expect(crossref_xml.dig('journal_article', 'doi_data', 'doi')).to eq('10.7554/eLife.01567')
     end
 
     it 'posted_content' do
@@ -64,7 +63,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.subjects).to eq([{ 'subject' => 'news' }])
       expect(subject.language).to eq('en')
       expect(subject.rights_list).to eq([{
-                                          'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
+                                          'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'CC-BY-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'posted_content')
       expect(crossref_xml.dig('titles',
@@ -95,7 +94,7 @@ describe Briard::Metadata, vcr: true do
                                       'title' => 'Front Matter', 'type' => 'Blog')
       expect(subject.language).to eq('en')
       expect(subject.rights_list).to eq([{
-                                          'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
+                                          'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'CC-BY-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'posted_content')
       expect(crossref_xml.dig('titles', 'title')).to eq('Dryad: Interview with Jen Gibson')
@@ -147,7 +146,7 @@ describe Briard::Metadata, vcr: true do
                                    { 'date' => '2022-10-21', 'dateType' => 'Created' },
                                    { 'date' => '2022-10-21', 'dateType' => 'Updated' }])
       expect(subject.rights_list).to eq([{
-                                          'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
+                                          'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'CC-BY-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'posted_content')
       expect(crossref_xml.dig('titles',
@@ -174,7 +173,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.subjects).to eq([{ 'subject' => 'news' }])
       expect(subject.language).to eq('en')
       expect(subject.rights_list).to eq([{
-                                          'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'cc-by-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
+                                          'rights' => 'Creative Commons Attribution 4.0 International', 'rightsUri' => 'https://creativecommons.org/licenses/by/4.0/legalcode', 'rightsIdentifier' => 'CC-BY-4.0', 'rightsIdentifierScheme' => 'SPDX', 'schemeUri' => 'https://spdx.org/licenses/'
                                         }])
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig('doi_batch', 'body', 'posted_content')
       expect(Array.wrap(crossref_xml.dig('contributors', 'person_name')).length).to eq(4)

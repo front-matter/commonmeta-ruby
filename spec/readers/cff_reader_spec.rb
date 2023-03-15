@@ -33,7 +33,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publication_year).to eq(2022)
       expect(subject.publisher).to eq('GitHub')
       expect(subject.rights_list).to eq([{ 'rights' => 'Apache License 2.0',
-                                           'rightsIdentifier' => 'apache-2.0',
+                                           'rightsIdentifier' => 'Apache-2.0',
                                            'rightsIdentifierScheme' => 'SPDX',
                                            'rightsUri' => 'http://www.apache.org/licenses/LICENSE-2.0',
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
@@ -102,7 +102,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publication_year).to eq(2021)
       expect(subject.publisher).to eq('GitHub')
       expect(subject.rights_list).to eq([{ 'rights' => 'Apache License 2.0',
-                                           'rightsIdentifier' => 'apache-2.0',
+                                           'rightsIdentifier' => 'Apache-2.0',
                                            'rightsIdentifierScheme' => 'SPDX',
                                            'rightsUri' => 'http://www.apache.org/licenses/LICENSE-2.0',
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
@@ -136,7 +136,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publication_year).to eq(2022)
       expect(subject.publisher).to eq('GitHub')
       expect(subject.rights_list).to eq([{ 'rights' => 'Apache License 2.0',
-                                           'rightsIdentifier' => 'apache-2.0',
+                                           'rightsIdentifier' => 'Apache-2.0',
                                            'rightsIdentifierScheme' => 'SPDX',
                                            'rightsUri' => 'http://www.apache.org/licenses/LICENSE-2.0',
                                            'schemeUri' => 'https://spdx.org/licenses/' }])
@@ -172,7 +172,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publication_year).to eq(2022)
       expect(subject.publisher).to eq('GitHub')
       expect(subject.rights_list).to eq([{ 'rights' => 'Apache License 2.0',
-                                           'rightsIdentifier' => 'apache-2.0',
+                                           'rightsIdentifier' => 'Apache-2.0',
                                            'rightsIdentifierScheme' => 'SPDX',
                                            'rightsUri' => 'http://www.apache.org/licenses/LICENSE-2.0',
                                            'schemeUri' => 'https://spdx.org/licenses/' }])

@@ -10,7 +10,6 @@ module Briard
         return nil unless %w[Software Collection].include?(types['resourceTypeGeneral'])
 
         title = parse_attributes(titles, content: 'title', first: true)
-
         hsh = {
           'cff-version' => '1.2.0',
           'message' => "If you use #{title} in your work, please cite it using the following metadata",

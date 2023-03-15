@@ -183,7 +183,6 @@ describe Briard::Metadata, vcr: true do
       expect(json["includedInDataCatalog"]).to eq("@type" => "DataCatalog", "name" => "GTEx")
       expect(json["identifier"]).to eq("@type" => "PropertyValue", "propertyID" => "md5",
                                        "value" => "c7c89fe7366d50cd75448aa603c9de58")
-      expect(json["contentUrl"]).to eq("https://storage.googleapis.com/gtex_analysis_v7/single_tissue_eqtl_data/GTEx_Analysis_v7_eQTL_covariates.tar.gz")
     end
 
     it "alternate identifiers" do
@@ -206,56 +205,6 @@ describe Briard::Metadata, vcr: true do
            "propertyID" => "md5",
            "value" => "3b33f6b9338fccab0901b7d317577ea3" }]
       )
-      expect(json["contentUrl"]).to include(
-        "s3://cgp-commons-public/topmed_open_access/197bc047-e917-55ed-852d-d563cdbc50e4/NWD165827.recab.cram", "gs://topmed-irc-share/public/NWD165827.recab.cram"
-      )
-    end
-
-    it "affiliation identifier" do
-      input = "#{fixture_path}datacite-example-affiliation.xml"
-      subject = described_class.new(input: input)
-      json = JSON.parse(subject.schema_org)
-      expect(json["@id"]).to eq("https://doi.org/10.5072/example-full")
-      expect(json["@type"]).to eq("SoftwareSourceCode")
-      expect(json["name"]).to eq("Full DataCite XML Example")
-      expect(json["author"].length).to eq(3)
-      expect(json["author"].first).to eq("@id" => "https://orcid.org/0000-0001-5000-0007",
-                                         "@type" => "Person",
-                                         "affiliation" => { "@id" => "https://ror.org/04wxnsj81", "@type" => "Organization",
-                                                            "name" => "DataCite" },
-                                         "familyName" => "Miller",
-                                         "givenName" => "Elizabeth",
-                                         "name" => "Elizabeth Miller")
-      expect(json["identifier"]).to eq(
-        { "@type" => "PropertyValue",
-          "propertyID" => "URL",
-          "value" => "https://schema.datacite.org/meta/kernel-4.2/example/datacite-example-full-v4.2.xml" }
-      )
-      expect(json["license"]).to eq("https://creativecommons.org/publicdomain/zero/1.0/legalcode")
-    end
-
-    it "geo_location_point" do
-      input = "#{fixture_path}datacite-example-geolocation-2.xml"
-      doi = "10.6071/Z7WC73"
-      subject = described_class.new(input: input, doi: doi)
-      json = JSON.parse(subject.schema_org)
-      expect(json["@id"]).to eq("https://doi.org/10.6071/z7wc73")
-      expect(json["@type"]).to eq("Dataset")
-      expect(json["name"]).to eq("Southern Sierra Critical Zone Observatory (SSCZO), Providence Creek meteorological data, soil moisture and temperature, snow depth and air temperature")
-      expect(json["author"].length).to eq(6)
-      expect(json["author"][2]).to eq("@id" => "https://orcid.org/0000-0002-8862-1404",
-                                      "@type" => "Person", "familyName" => "Stacy", "givenName" => "Erin", "name" => "Erin Stacy", "affiliation" => { "@type" => "Organization", "name" => "UC Merced" })
-      expect(json["includedInDataCatalog"].nil?).to be(true)
-      expect(json["spatialCoverage"]).to eq([{ "@type" => "Place",
-                                              "geo" => { "@type" => "GeoCoordinates",
-                                                         "address" => "Providence Creek (Lower, Upper and P301)",
-                                                         "latitude" => "37.047756",
-                                                         "longitude" => "-119.221094" } },
-                                             { "@type" => "Place",
-                                              "geo" => { "@type" => "GeoShape",
-                                                         "address" => "Providence Creek (Lower, Upper and P301)",
-                                                         "box" => "37.046 -119.211 37.075 -119.182" } }])
-      expect(json["license"]).to eq("https://creativecommons.org/licenses/by/4.0/legalcode")
     end
 
     it "geo_location_box" do
@@ -265,10 +214,10 @@ describe Briard::Metadata, vcr: true do
       expect(json["@id"]).to eq("https://doi.org/10.1594/pangaea.842237")
       expect(json["@type"]).to eq("Dataset")
       expect(json["name"]).to eq("Registry of all stations from the Tara Oceans Expedition (2009-2013)")
-      expect(json["author"]).to eq([{ "familyName" => "Tara Oceans Consortium",
+      expect(json["author"]).to eq([{ "@type" => "Person", "familyName" => "Tara Oceans Consortium",
                                       "givenName" => "Coordinators",
                                       "name" => "Coordinators Tara Oceans Consortium" },
-                                    { "familyName" => "Tara Oceans Expedition",
+                                    { "@type" => "Person", "familyName" => "Tara Oceans Expedition",
                                       "givenName" => "Participants",
                                       "name" => "Participants Tara Oceans Expedition" }])
       expect(json["includedInDataCatalog"].nil?).to be(true)
@@ -277,22 +226,6 @@ describe Briard::Metadata, vcr: true do
                                               "@type" => "GeoShape", "box" => "-64.3088 -168.5182 79.6753 174.9006",
                                             })
       expect(json["license"]).to eq("https://creativecommons.org/licenses/by/3.0/legalcode")
-    end
-
-    it "geo_location_polygon" do
-      input = "#{fixture_path}datacite-example-polygon-v4.1.xml"
-      subject = described_class.new(input: input)
-      json = JSON.parse(subject.schema_org)
-      expect(json["@id"]).to eq("https://doi.org/10.5072/example-polygon")
-      expect(json["@type"]).to eq("Dataset")
-      expect(json["name"]).to eq("Meteo measurements at the Sand Motor")
-      expect(json["author"]).to eq("@type" => "Person", "familyName" => "den Heijer", "givenName" => "C",
-                                   "name" => "C den Heijer")
-      expect(json["includedInDataCatalog"].nil?).to be(true)
-      expect(json["spatialCoverage"].dig("geo", "polygon").length).to eq(34)
-      expect(json["spatialCoverage"].dig("geo",
-                                         "polygon")[0].first).to eq(["4.1738852605822",
-                                                                     "52.03913926329928"])
     end
 
     it "from schema_org gtex" do

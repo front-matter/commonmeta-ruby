@@ -27,49 +27,50 @@ module Briard
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
         url = normalize_id(id)
-        response = HTTP.get(url)
+        # follow redirects
+        response = HTTP.follow.get(url)
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
-        
-          doc = Nokogiri::HTML(response.body.to_s)
 
-          # workaround for xhtml documents
-          nodeset = doc.at("script[type='application/ld+json']")
-          hsh = JSON.parse(nodeset || "{}")
+        doc = Nokogiri::HTML(response.body.to_s)
 
-          # workaround for doi as canonical_url but not included with schema.org
-          link = doc.css("link[rel='canonical']")
-          hsh["@id"] = link[0]["href"] if link.present?
+        # workaround for xhtml documents
+        nodeset = doc.at("script[type='application/ld+json']")
+        hsh = JSON.parse(nodeset || "{}")
 
-          # workaround if license not included with schema.org
-          license = doc.at("meta[name='dc.rights']")
-          hsh["license"] = license["content"] if license.present?
+        # workaround for doi as canonical_url but not included with schema.org
+        link = doc.css("link[rel='canonical']")
+        hsh["@id"] = link[0]["href"] if link.present?
 
-          # workaround for html language attribute if no language is set via schema.org
-          lang = doc.at("meta[name='dc.language']") || doc.at("meta[name='citation_language']")
-          lang = lang["content"] if lang.present?
-          lang = doc.at("html")["lang"] if lang.blank?
-          hsh["inLanguage"] = lang if hsh["inLanguage"].blank?
+        # workaround if license not included with schema.org
+        license = doc.at("meta[name='dc.rights']")
+        hsh["license"] = license["content"] if license.present?
 
-          # workaround if issn not included with schema.org
-          name = doc.at("meta[property='og:site_name']")
-          issn = doc.at("meta[name='citation_issn']")
-          hsh["isPartOf"] = { "name" => name ? name["content"] : nil,
-                              "issn" => issn ? issn["content"] : nil }.compact
+        # workaround for html language attribute if no language is set via schema.org
+        lang = doc.at("meta[name='dc.language']") || doc.at("meta[name='citation_language']")
+        lang = lang["content"] if lang.present?
+        lang = doc.at("html")["lang"] if lang.blank?
+        hsh["inLanguage"] = lang if hsh["inLanguage"].blank?
 
-          # workaround if not all authors are included with schema.org (e.g. in Ghost metadata)
-          authors = doc.css("meta[name='citation_author']").map do |author|
-            { "@type" => "Person", "name" => author["content"] }
-          end
+        # workaround if issn not included with schema.org
+        name = doc.at("meta[property='og:site_name']")
+        issn = doc.at("meta[name='citation_issn']")
+        hsh["isPartOf"] = { "name" => name ? name["content"] : nil,
+                            "issn" => issn ? issn["content"] : nil }.compact
 
-          hsh["author"] = hsh["creator"] if hsh["author"].blank? && hsh["creator"].present?
-          hsh["author"] = authors if authors.length > Array.wrap(hsh["author"]).length
+        # workaround if not all authors are included with schema.org (e.g. in Ghost metadata)
+        authors = doc.css("meta[name='citation_author']").map do |author|
+          { "@type" => "Person", "name" => author["content"] }
+        end
 
-          # workaround if publisher not included with schema.org (e.g. Zenodo)
-          if hsh["publisher"].blank?
-            publisher = doc.at("meta[property='og:site_name']")
-            publisher = publisher["content"] if publisher.present?
-            hsh["publisher"] = { "name" => publisher }
-          end
+        hsh["author"] = hsh["creator"] if hsh["author"].blank? && hsh["creator"].present?
+        hsh["author"] = authors if authors.length > Array.wrap(hsh["author"]).length
+
+        # workaround if publisher not included with schema.org (e.g. Zenodo)
+        if hsh["publisher"].blank?
+          publisher = doc.at("meta[property='og:site_name']")
+          publisher = publisher["content"] if publisher.present?
+          hsh["publisher"] = { "name" => publisher }
+        end
 
         { "string" => hsh.to_json }
       end
@@ -84,7 +85,7 @@ module Briard
                                                                                    :sandbox, :validate, :ra))
 
         meta = string.present? ? JSON.parse(string) : {}
-        
+
         identifiers = Array.wrap(meta.fetch("identifier", nil)).map do |r|
           r = normalize_id(r) if r.is_a?(String)
           if r.is_a?(String) && URI(r).host != "doi.org"
@@ -124,26 +125,26 @@ module Briard
                                                                          first: true)
 
             {
-                        "type" => schema_org == "Dataset" ? "DataRepository" : "Periodical",
-                        "title" => parse_attributes(from_schema_org(meta.fetch(ct, nil)), content: "name",
-                                                                                          first: true),
-                        "identifier" => url,
-                        "identifierType" => url.present? ? "URL" : nil,
-                        "volume" => meta.fetch("volumeNumber", nil),
-                        "issue" => meta.fetch("issueNumber", nil),
-                        "firstPage" => meta.fetch("pageStart", nil),
-                        "lastPage" => meta.fetch("pageEnd", nil),
-                      }.compact
+              "type" => schema_org == "Dataset" ? "DataRepository" : "Periodical",
+              "title" => parse_attributes(from_schema_org(meta.fetch(ct, nil)), content: "name",
+                                                                                first: true),
+              "identifier" => url,
+              "identifierType" => url.present? ? "URL" : nil,
+              "volume" => meta.fetch("volumeNumber", nil),
+              "issue" => meta.fetch("issueNumber", nil),
+              "firstPage" => meta.fetch("pageStart", nil),
+              "lastPage" => meta.fetch("pageEnd", nil),
+            }.compact
           elsif %w[BlogPosting Article].include?(schema_org)
             issn = meta.dig("isPartOf", "issn")
             url = meta.dig("publisher", "url")
 
             {
-                        "type" => "Blog",
-                        "title" => meta.dig("isPartOf", "name"),
-                        "identifier" => issn.presence || url.presence,
-                        "identifierType" => issn.present? ? "ISSN" : "URL",
-                      }.compact
+              "type" => "Blog",
+              "title" => meta.dig("isPartOf", "name"),
+              "identifier" => issn.presence || url.presence,
+              "identifierType" => issn.present? ? "ISSN" : "URL",
+            }.compact
           else
             {}
           end
@@ -193,7 +194,7 @@ module Briard
                      "dateType" => "Updated" }
         end
         publication_year = meta.fetch("datePublished")[0..3].to_i if meta.fetch("datePublished",
-                                                                           nil).present?
+                                                                                nil).present?
 
         language = case meta.fetch("inLanguage", nil)
           when String

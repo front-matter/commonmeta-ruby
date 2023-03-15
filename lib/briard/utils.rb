@@ -970,13 +970,16 @@ module Briard
             [{ '__content__' => c['@id'], 'nameIdentifierScheme' => 'ORCID',
                'schemeUri' => 'https://orcid.org' }]
         end
-        if c['@type'].is_a?(Array)
-          c['@type'] = c['@type'].find do |t|
+        if c['@type'].is_a?(String)
+          c['nameType'] = c['@type'].titleize + 'al'
+        elsif c['@type'].is_a?(Array)
+          c['nameType'] = c['@type'].find do |t|
             %w[Person Organization].include?(t)
           end
+          c['nameType'] = c['nameType'].titleize + 'al' if c['nameType'].present?
         end
         c['creatorName'] =
-          { 'nameType' => c['@type'].present? ? c['@type'].titleize + 'al' : nil,
+          { 'nameType' => c['nameType'],
             '__content__' => c['name'] }.compact
         c['affiliation'] =
           { '__content__' => c.dig('affiliation', 'name'),
@@ -1042,12 +1045,12 @@ module Briard
     def from_citeproc(element)
       Array.wrap(element).map do |a|
         if a['literal'].present?
-          a['@type'] = 'Organization'
+          a['nameType'] = 'Organizational'
           a['name'] = a['literal']
         elsif a['name'].present?
-          a['@type'] = 'Organization'
+          a['nameType'] = 'Organizational'
         else
-          a['@type'] = 'Person'
+          a['nameType'] = 'Personal'
           a['name'] = [a['given'], a['family']].compact.join(' ')
         end
         a['givenName'] = a['given']
@@ -1330,7 +1333,7 @@ module Briard
         {
           'rights' => license['name'],
           'rightsUri' => license['seeAlso'].first,
-          'rightsIdentifier' => license['licenseId'].downcase,
+          'rightsIdentifier' => license['licenseId'],
           'rightsIdentifierScheme' => 'SPDX',
           'schemeUri' => 'https://spdx.org/licenses/'
         }.compact
@@ -1351,7 +1354,7 @@ module Briard
         {
           'rights' => license['name'],
           'rightsUri' => license['seeAlso'].first,
-          'rightsIdentifier' => license['licenseId'].downcase,
+          'rightsIdentifier' => license['licenseId'],
           'rightsIdentifierScheme' => 'SPDX',
           'schemeUri' => 'https://spdx.org/licenses/',
           'lang' => hsh['lang']

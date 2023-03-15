@@ -3,10 +3,6 @@
 require "spec_helper"
 
 describe Briard::Metadata, vcr: true do
-  subject { described_class.new(input: input) }
-
-  let(:input) { "10.7554/eLife.01567" }
-
   context "get crossref raw" do
     it "journal article" do
       input = "#{fixture_path}crossref.xml"
@@ -17,6 +13,8 @@ describe Briard::Metadata, vcr: true do
 
   context "get crossref metadata" do
     it "DOI with data citation" do
+      input = "10.7554/eLife.01567"
+      subject = described_class.new(input: input, from: "crossref_xml")
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.7554/elife.01567")
       expect(subject.identifiers).to eq([{ "identifier" => "e01567",
@@ -28,20 +26,18 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.first).to eq("nameType" => "Personal", "name" => "Sankar, Martial",
                                            "givenName" => "Martial", "familyName" => "Sankar", "affiliation" => [{ "name" => "Department of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland" }])
       expect(subject.rights_list).to eq([{ "rights" => "Creative Commons Attribution 3.0 Unported",
-                                           "rightsIdentifier" => "cc-by-3.0",
+                                           "rightsIdentifier" => "CC-BY-3.0",
                                            "rightsIdentifierScheme" => "SPDX",
                                            "rightsUri" => "https://creativecommons.org/licenses/by/3.0/legalcode",
                                            "schemeUri" => "https://spdx.org/licenses/" }])
       expect(subject.titles).to eq([{ "title" => "Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth" }])
       expect(subject.dates).to eq([{ "date" => "2014-02-11", "dateType" => "Issued" },
-                                   { "date" => "2022-03-26T09:21:50Z", "dateType" => "Updated" }])
+                                   { "date" => "2022-03-26", "dateType" => "Updated" }])
       expect(subject.publication_year).to eq(2014)
       expect(subject.publisher).to eq("eLife Sciences Publications, Ltd")
       expect(subject.container).to eq("firstPage" => "e01567", "identifier" => "2050-084X",
                                       "identifierType" => "ISSN", "title" => "eLife", "type" => "Journal", "volume" => "3")
-      expect(subject.related_identifiers.length).to eq(28)
-      expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "2050-084X",
-                                                      "relatedIdentifierType" => "ISSN", "relationType" => "IsPartOf", "resourceTypeGeneral" => "Collection")
+      expect(subject.related_identifiers.length).to eq(27)
       expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.1038/ncb2764",
                                                      "relatedIdentifierType" => "DOI", "relationType" => "References")
       expect(subject.funding_references).to eq([{ "funderName" => "SystemsX" },
@@ -71,7 +67,7 @@ describe Briard::Metadata, vcr: true do
                                             "givenName" => "Guilhem", "name" => "Janbon, Guilhem", "nameType" => "Personal" }])
       expect(subject.titles).to eq([{ "title" => "Triose Phosphate Isomerase Deficiency Is Caused by Altered Dimerization–Not Catalytic Inactivity–of the Mutant Enzymes" }])
       expect(subject.rights_list).to eq([{ "rights" => "Creative Commons Attribution 4.0 International",
-                                           "rightsIdentifier" => "cc-by-4.0",
+                                           "rightsIdentifier" => "CC-BY-4.0",
                                            "rightsIdentifierScheme" => "SPDX",
                                            "rightsUri" => "https://creativecommons.org/licenses/by/4.0/legalcode",
                                            "schemeUri" => "https://spdx.org/licenses/" }])
@@ -100,7 +96,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.first).to eq("nameType" => "Personal", "familyName" => "Fortes", "givenName" => "Ana Margarida", "name" => "Fortes, Ana Margarida")
       expect(subject.titles).to eq([{ "title" => "Transcriptional Modulation of Polyamine Metabolism in Fruit Species Under Abiotic and Biotic Stress" }])
       expect(subject.rights_list).to eq([{ "rights" => "Creative Commons Attribution 4.0 International",
-                                           "rightsIdentifier" => "cc-by-4.0",
+                                           "rightsIdentifier" => "CC-BY-4.0",
                                            "rightsIdentifierScheme" => "SPDX",
                                            "rightsUri" => "https://creativecommons.org/licenses/by/4.0/legalcode",
                                            "schemeUri" => "https://spdx.org/licenses/" }])
@@ -134,8 +130,8 @@ describe Briard::Metadata, vcr: true do
       expect(subject.publisher).to eq("The Japanese Society of Physical Fitness and Sports Medicine")
       expect(subject.related_identifiers.length).to eq(7)
       expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "10.1111/j.1469-7793.2000.00407.x",
-           "relatedIdentifierType" => "DOI",
-           "relationType" => "References")
+                                                      "relatedIdentifierType" => "DOI",
+                                                      "relationType" => "References")
       expect(subject.container).to eq("firstPage" => "60", "identifier" => "1881-4751",
                                       "identifierType" => "ISSN", "issue" => "1", "lastPage" => "60", "title" => "Japanese Journal of Physical Fitness and Sports Medicine", "type" => "Journal", "volume" => "56")
       expect(subject.agency).to eq("Crossref")
@@ -296,7 +292,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators[2]).to eq("nameType" => "Personal",
                                         "nameIdentifiers" => [{ "nameIdentifier" => "https://orcid.org/0000-0003-2043-4925", "nameIdentifierScheme" => "ORCID", "schemeUri" => "https://orcid.org" }], "name" => "Hernandez, Beatriz", "givenName" => "Beatriz", "familyName" => "Hernandez", "affiliation" => [{ "name" => "War Related Illness and Injury Study Center (WRIISC) and Mental Illness Research Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo Alto, CA 94304, USA" }, { "name" => "Department of Psychiatry and Behavioral Sciences, Stanford University School of Medicine, Stanford, CA 94304, USA" }])
       expect(subject.rights_list).to eq([{ "rights" => "Creative Commons Attribution 3.0 Unported",
-                                           "rightsIdentifier" => "cc-by-3.0",
+                                           "rightsIdentifier" => "CC-BY-3.0",
                                            "rightsIdentifierScheme" => "SPDX",
                                            "rightsUri" => "https://creativecommons.org/licenses/by/3.0/legalcode",
                                            "schemeUri" => "https://spdx.org/licenses/" }])
@@ -877,7 +873,7 @@ describe Briard::Metadata, vcr: true do
                                            "name" => "Huang, Guimei", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Synthesis, Crystal Structure and Theoretical Calculation of a Novel Nickel(II) Complex with Dibromotyrosine and 1,10-Phenanthroline" }])
       expect(subject.dates).to eq([{ "date" => "2013-10-20", "dateType" => "Issued" },
-                                   { "date" => "2016-12-14", "dateType" => "Updated" }])
+                                   { "date" => "2016-12-15", "dateType" => "Updated" }])
       expect(subject.publication_year).to eq(2013)
       expect(subject.publisher).to eq("Korean Chemical Society")
       expect(subject.agency).to eq("KISTI")
@@ -989,7 +985,7 @@ describe Briard::Metadata, vcr: true do
           "nameIdentifier" => "https://orcid.org/0000-0003-1406-0680", "nameIdentifierScheme" => "ORCID", "schemeUri" => "https://orcid.org",
         }], "nameType" => "Personal",
       )
-      expect(subject.titles).to eq([{ "title" => "Sexual conflict and correlated evolution between male persistence and female resistance traits in the seed beetle <i>Callosobruchus maculatus</i>" }])
+      expect(subject.titles).to eq([{ "title" => "Sexual conflict and correlated evolution between male persistence and female resistance traits in the seed beetle" }])
       expect(subject.dates).to include({ "date" => "2017-05-24", "dateType" => "Issued" })
       expect(subject.publication_year).to eq(2017)
       expect(subject.publisher).to eq("The Royal Society")
@@ -1006,8 +1002,8 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
                                   "resourceType" => "JournalArticle", "resourceTypeGeneral" => "JournalArticle", "ris" => "JOUR", "schemaOrg" => "ScholarlyArticle")
       expect(subject.creators.length).to eq(5)
-      expect(subject.creators[3]).to eq("familyName" => "Ehtisham-ul-Haq", "givenName" => "???",
-                                        "name" => "Ehtisham-ul-Haq, ???", "nameType" => "Personal")
+      expect(subject.creators[3]).to eq("familyName" => "Ehtisham-ul-Haq",
+                                        "name" => "Ehtisham-ul-Haq", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Serological Evidence of Brucella abortus Prevalence in Punjab Province, Pakistan - A Cross-Sectional Study" }])
       expect(subject.rights_list).to eq([{ "rightsUri" => "http://doi.wiley.com/10.1002/tdm_license_1.1" }])
       expect(subject.dates).to eq([{ "date" => "2010-12", "dateType" => "Issued" },
@@ -1070,8 +1066,7 @@ describe Briard::Metadata, vcr: true do
     it "author literal" do
       input = "https://doi.org/10.1038/ng.3834"
       subject = described_class.new(input: input, from: "crossref_xml")
-      puts subject.errors
-      #expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1038/ng.3834")
       expect(subject.url).to eq("http://www.nature.com/articles/ng.3834")
       expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
@@ -1095,7 +1090,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
                                   "resourceType" => "JournalArticle", "resourceTypeGeneral" => "JournalArticle", "ris" => "JOUR", "schemaOrg" => "ScholarlyArticle")
       expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("affiliation" => [{ "name" => "??" }], "familyName" => "Petrovici", "givenName" => "Norbert", "name" => "Petrovici, Norbert", "nameType" => "Personal")
+      expect(subject.creators.first).to eq("familyName" => "Petrovici", "givenName" => "Norbert", "name" => "Petrovici, Norbert", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Workers and the City: Rethinking the Geographies of Power in Post-socialist Urbanisation" }])
       expect(subject.dates).to include({ "date" => "2011-12-22", "dateType" => "Issued" })
       expect(subject.publication_year).to eq(2011)

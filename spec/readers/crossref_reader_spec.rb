@@ -24,7 +24,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators.first).to eq("nameType" => "Personal", "name" => "Sankar, Martial",
                                            "givenName" => "Martial", "familyName" => "Sankar", "affiliation" => [{ "name" => "Department of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland" }])
       expect(subject.rights_list).to eq([{ "rights" => "Creative Commons Attribution 3.0 Unported",
-                                           "rightsIdentifier" => "cc-by-3.0",
+                                           "rightsIdentifier" => "CC-BY-3.0",
                                            "rightsIdentifierScheme" => "SPDX",
                                            "rightsUri" => "https://creativecommons.org/licenses/by/3.0/legalcode",
                                            "schemeUri" => "https://spdx.org/licenses/" }])
@@ -74,7 +74,7 @@ describe Briard::Metadata, vcr: true do
                                             "givenName" => "Guilhem", "name" => "Janbon, Guilhem", "nameType" => "Personal" }])
       expect(subject.titles).to eq([{ "title" => "Triose Phosphate Isomerase Deficiency Is Caused by Altered Dimerization–Not Catalytic Inactivity–of the Mutant Enzymes" }])
       expect(subject.rights_list).to eq([{ "rights" => "Creative Commons Attribution 4.0 International",
-                                           "rightsIdentifier" => "cc-by-4.0",
+                                           "rightsIdentifier" => "CC-BY-4.0",
                                            "rightsIdentifierScheme" => "SPDX",
                                            "rightsUri" => "https://creativecommons.org/licenses/by/4.0/legalcode",
                                            "schemeUri" => "https://spdx.org/licenses/" }])
@@ -106,7 +106,7 @@ describe Briard::Metadata, vcr: true do
                                            "name" => "Fortes, Ana Margarida")
       expect(subject.titles).to eq([{ "title" => "Transcriptional Modulation of Polyamine Metabolism in Fruit Species Under Abiotic and Biotic Stress" }])
       expect(subject.rights_list).to eq([{ "rights" => "Creative Commons Attribution 4.0 International",
-                                           "rightsIdentifier" => "cc-by-4.0",
+                                           "rightsIdentifier" => "CC-BY-4.0",
                                            "rightsIdentifierScheme" => "SPDX",
                                            "rightsUri" => "https://creativecommons.org/licenses/by/4.0/legalcode",
                                            "schemeUri" => "https://spdx.org/licenses/" }])
@@ -130,12 +130,12 @@ describe Briard::Metadata, vcr: true do
     it "journal article original language title" do
       input = "https://doi.org/10.7600/jspfsm.56.60"
       subject = described_class.new(input: input, from: "crossref")
-      expect(subject.valid?).to be true
+      expect(subject.valid?).to be false
       expect(subject.id).to eq("https://doi.org/10.7600/jspfsm.56.60")
       expect(subject.url).to eq("https://www.jstage.jst.go.jp/article/jspfsm/56/1/56_1_60/_article/-char/ja")
       expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
                                   "resourceType" => "JournalArticle", "resourceTypeGeneral" => "JournalArticle", "ris" => "JOUR", "schemaOrg" => "ScholarlyArticle")
-      expect(subject.creators).to eq([{ "name" => ":(unav)", "nameType" => "Organizational" }])
+      expect(subject.creators.empty?).to be true
       expect(subject.titles).to eq([{ "title" => ":(unav)" }])
       expect(subject.dates).to include({ "date" => "2007", "dateType" => "Issued" })
       expect(subject.publication_year).to eq(2007)
@@ -158,8 +158,8 @@ describe Briard::Metadata, vcr: true do
                                   "resourceType" => "JournalArticle", "resourceTypeGeneral" => "JournalArticle", "ris" => "JOUR", "schemaOrg" => "ScholarlyArticle")
       expect(subject.creators.length).to eq(8)
       expect(subject.creators.first).to eq("familyName" => "Escrivà",
-           "givenName" => "Andreu",
-           "name" => "Escrivà, Andreu", "nameType" => "Personal")
+                                           "givenName" => "Andreu",
+                                           "name" => "Escrivà, Andreu", "nameType" => "Personal")
       expect(subject.titles).to eq([{ "title" => "Global distribution of Fabaeformiscandona subacuta: an exotic invasive Ostracoda on the Iberian Peninsula?" }])
       expect(subject.dates).to include({ "date" => "2012-01-01", "dateType" => "Issued" })
       expect(subject.publication_year).to eq(2012)
@@ -303,7 +303,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.creators[2]).to eq("nameType" => "Personal",
                                         "nameIdentifiers" => [{ "nameIdentifier" => "https://orcid.org/0000-0003-2043-4925", "nameIdentifierScheme" => "ORCID", "schemeUri" => "https://orcid.org" }], "name" => "Hernandez, Beatriz", "givenName" => "Beatriz", "familyName" => "Hernandez", "affiliation" => [{ "name" => "War Related Illness and Injury Study Center (WRIISC) and Mental Illness Research Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo Alto, CA 94304, USA" }, { "name" => "Department of Psychiatry and Behavioral Sciences, Stanford University School of Medicine, Stanford, CA 94304, USA" }])
       expect(subject.rights_list).to eq([{ "rights" => "Creative Commons Attribution 3.0 Unported",
-                                           "rightsIdentifier" => "cc-by-3.0",
+                                           "rightsIdentifier" => "CC-BY-3.0",
                                            "rightsIdentifierScheme" => "SPDX",
                                            "rightsUri" => "https://creativecommons.org/licenses/by/3.0/legalcode",
                                            "schemeUri" => "https://spdx.org/licenses/" }])
@@ -646,12 +646,12 @@ describe Briard::Metadata, vcr: true do
     it "component" do
       input = "https://doi.org/10.1371/journal.pmed.0030277.g001"
       subject = described_class.new(input: input, from: "crossref")
-      expect(subject.valid?).to be true
+      expect(subject.valid?).to be false
       expect(subject.id).to eq("https://doi.org/10.1371/journal.pmed.0030277.g001")
       expect(subject.url).to eq("https://dx.plos.org/10.1371/journal.pmed.0030277.g001")
       expect(subject.types).to eq("bibtex" => "misc", "citeproc" => "article-journal",
                                   "resourceType" => "Component", "resourceTypeGeneral" => "Text", "ris" => "GEN", "schemaOrg" => "CreativeWork")
-      expect(subject.creators).to eq([{ "name" => ":(unav)", "nameType" => "Organizational" }])
+      expect(subject.creators.empty?).to be true
       expect(subject.titles).to eq([{ "title" => ":(unav)" }])
       expect(subject.descriptions.empty?).to be(true)
       expect(subject.dates).to eq([{ "date" => "2015-10-20", "dateType" => "Issued" },
@@ -712,7 +712,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.url).to eq("http://link.springer.com/10.1007/978-3-319-75889-3_1")
       expect(subject.types).to eq("bibtex" => "inbook", "citeproc" => "chapter",
                                   "resourceType" => "BookChapter", "resourceTypeGeneral" => "BookChapter", "ris" => "CHAP", "schemaOrg" => "Chapter")
-      expect(subject.creators).to eq([{"familyName"=>"Jones", "givenName"=>"Hunter M.", "name"=>"Jones, Hunter M.", "nameType"=>"Personal"}])
+      expect(subject.creators).to eq([{ "familyName" => "Jones", "givenName" => "Hunter M.", "name" => "Jones, Hunter M.", "nameType" => "Personal" }])
       expect(subject.titles).to eq([{ "title" => "Climate Change and Increasing Risk of Extreme Heat" }])
       expect(subject.dates).to include({ "date" => "2018", "dateType" => "Issued" })
       expect(subject.publication_year).to eq(2018)
@@ -796,12 +796,14 @@ describe Briard::Metadata, vcr: true do
     it "another book" do
       input = "https://doi.org/10.2973/odp.proc.ir.180.2000"
       subject = described_class.new(input: input, from: "crossref")
-      expect(subject.valid?).to be true
+
+      expect(subject.valid?).to be false
+      expect(subject.errors).to eq(["property '/creators' is invalid: error_type=minItems"])
       expect(subject.id).to eq("https://doi.org/10.2973/odp.proc.ir.180.2000")
       expect(subject.url).to eq("http://www-odp.tamu.edu/publications/180_IR/180TOC.HTM")
       expect(subject.types).to eq("bibtex" => "book", "citeproc" => "book", "resourceType" => "Monograph",
                                   "resourceTypeGeneral" => "Book", "ris" => "BOOK", "schemaOrg" => "Book")
-      expect(subject.creators).to eq([{ "name" => ":(unav)", "nameType" => "Organizational" }])
+      expect(subject.creators.empty?).to be true
       expect(subject.contributors.size).to eq(4)
       expect(subject.contributors.first).to eq("nameType" => "Personal", "contributorType" => "Editor", "familyName" => "Taylor",
                                                "givenName" => "B.", "name" => "Taylor, B.")
@@ -902,7 +904,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
                                   "resourceType" => "JournalArticle", "resourceTypeGeneral" => "JournalArticle", "ris" => "JOUR", "schemaOrg" => "ScholarlyArticle")
       expect(subject.creators.length).to eq(28)
-      expect(subject.creators.first).to eq("name" => "EFSA Panel on Food Additives and Nutrient Sources added to Food (ANS)")
+      expect(subject.creators.first).to eq("name" => "EFSA Panel on Food Additives and Nutrient Sources added to Food (ANS)", "nameType" => "Organizational")
       expect(subject.titles).to eq([{ "title" => "Scientific opinion on the safety of green tea catechins" }])
       expect(subject.dates).to include({ "date" => "2018-04", "dateType" => "Issued" })
       expect(subject.publication_year).to eq(2018)
@@ -1047,7 +1049,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
                                   "resourceType" => "JournalArticle", "resourceTypeGeneral" => "JournalArticle", "ris" => "JOUR", "schemaOrg" => "ScholarlyArticle")
       expect(subject.creators.length).to eq(14)
-      expect(subject.creators[1]).to eq("name" => "GTEx Consortium")
+      expect(subject.creators[1]).to eq("name" => "GTEx Consortium", "nameType" => "Organizational")
       expect(subject.titles).to eq([{ "title" => "The impact of structural variation on human gene expression" }])
       expect(subject.dates).to include({ "date" => "2017-04-03", "dateType" => "Issued" })
       expect(subject.publication_year).to eq(2017)
@@ -1182,12 +1184,12 @@ describe Briard::Metadata, vcr: true do
     it "journal issue" do
       input = "https://doi.org/10.6002/ect.2015.0371"
       subject = described_class.new(input: input, from: "crossref")
-      expect(subject.valid?).to be true
+      expect(subject.valid?).to be false
       expect(subject.id).to eq("https://doi.org/10.6002/ect.2015.0371")
       expect(subject.url).to eq("http://ectrx.org/forms/ectrxcontentshow.php?doi_id=10.6002%2Fect.2015.0371")
       expect(subject.types).to eq("bibtex" => "misc", "citeproc" => "article-journal",
                                   "resourceType" => "JournalIssue", "resourceTypeGeneral" => "Text", "ris" => "JOUR", "schemaOrg" => "PublicationIssue")
-      expect(subject.creators).to eq([{ "name" => ":(unav)", "nameType" => "Organizational" }])
+      expect(subject.creators.empty?).to be true
       expect(subject.titles).to eq([{ "title" => ":(unav)" }])
       expect(subject.dates).to eq([{ "date" => "2018-10", "dateType" => "Issued" },
                                    { "date" => "2018-10-03", "dateType" => "Updated" }])

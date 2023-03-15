@@ -16,7 +16,7 @@ describe Briard::Metadata, vcr: true do
   context 'get schema_org metadata' do
     it 'BlogPosting' do
       input = 'https://blog.front-matter.io/posts/eating-your-own-dog-food'
-      subject = described_class.new(input: input, from: 'schema_org')
+      subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.53731/r79vxn1-97aq74v-ag58n')
       expect(subject.url).to eq('https://blog.front-matter.io/posts/eating-your-own-dog-food')
@@ -72,7 +72,7 @@ describe Briard::Metadata, vcr: true do
     context 'get schema_org metadata front matter' do
       it 'BlogPosting' do
         input = 'https://blog.front-matter.io/posts/step-forward-for-software-citation'
-        subject = described_class.new(input: input, from: 'schema_org')
+        subject = described_class.new(input: input)
         expect(subject.valid?).to be true
         expect(subject.id).to eq('https://doi.org/10.53731/r9531p1-97aq74v-ag78v')
         expect(subject.url).to eq('https://blog.front-matter.io/posts/step-forward-for-software-citation')
@@ -194,7 +194,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.dates).to eq([{ 'date' => '2022-11-15T10:29:38Z', 'dateType' => 'Issued' },
         { 'date' => '2023-01-11T22:58:48Z', 'dateType' => 'Updated' }])
       expect(subject.publication_year).to eq(2022)
-      expect(subject.rights_list).to eq([{"rights"=>"Creative Commons Attribution 4.0 International", "rightsUri"=>"https://creativecommons.org/licenses/by/4.0/legalcode", "rightsIdentifier"=>"cc-by-4.0", "rightsIdentifierScheme"=>"SPDX", "schemeUri"=>"https://spdx.org/licenses/"}])
+      expect(subject.rights_list).to eq([{"rights"=>"Creative Commons Attribution 4.0 International", "rightsUri"=>"https://creativecommons.org/licenses/by/4.0/legalcode", "rightsIdentifier"=>"CC-BY-4.0", "rightsIdentifierScheme"=>"SPDX", "schemeUri"=>"https://spdx.org/licenses/"}])
     end
 
     # TODO: check 403 status in DOI resolver

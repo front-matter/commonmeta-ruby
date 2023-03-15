@@ -3,18 +3,18 @@
 require "spec_helper"
 
 describe Briard::Metadata, vcr: true do
-  subject { described_class.new(input: input) }
-
-  let(:input) { "#{fixture_path}datacite.json" }
-
   context "get datacite raw" do
     it "BlogPosting" do
+      input = "#{fixture_path}datacite.json"
+      subject = described_class.new(input: input)
       expect(subject.raw).to eq(File.read(input).strip)
     end
   end
 
   context "get datacite metadata" do
     it "BlogPosting" do
+      input = "#{fixture_path}datacite.json"
+      subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
                                   "resourceType" => "BlogPosting", "resourceTypeGeneral" => "Text", "ris" => "RPRT", "schemaOrg" => "ScholarlyArticle")

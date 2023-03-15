@@ -21,7 +21,10 @@ module Briard
 
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
-        meta = string.present? ? JSON.parse(string).dig('message') : {}
+        meta = string.present? ? JSON.parse(string) : {}
+
+        # optionally strip out the message wrapper from API
+        meta = meta.dig('message') if meta.dig('message').present?
 
         resource_type = meta.fetch("type", nil)
         resource_type = resource_type.present? ? resource_type.underscore.camelcase : nil
@@ -38,7 +41,7 @@ module Briard
         creators = if meta.fetch("author", nil).present?
             get_authors(from_citeproc(Array.wrap(meta.fetch("author", nil))))
           else
-            [{ "nameType" => "Organizational", "name" => ":(unav)" }]
+            []
           end
         editors = Array.wrap(meta.fetch("editor", nil)).each { |e| e["contributorType"] = "Editor" }
         contributors = get_authors(from_citeproc(editors))

@@ -269,7 +269,7 @@ module Briard
       return xml if doi.blank? || url.blank?
 
       xml.doi_data do
-        xml.doi(doi)
+        xml.doi(doi.downcase)
         xml.resource(url)
         xml.collection('property' => 'text-mining') do
           xml.item do

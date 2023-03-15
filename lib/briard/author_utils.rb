@@ -27,8 +27,8 @@ module Briard
       name = cleanup_author(name)
       name = [family_name, given_name].join(', ') if family_name.present? && given_name.present?
       contributor_type = parse_attributes(author.fetch('contributorType', nil))
-      name_type = author.fetch('nameType', nil)
-                     
+      name_type = author.dig('nameType') || author.dig('creatorName', 'nameType')
+
       name_identifiers = author.fetch('nameIdentifiers', nil) || Array.wrap(author.fetch('nameIdentifier', nil)).map do |ni|
         if ni['nameIdentifierScheme'] == 'ORCID'
           {

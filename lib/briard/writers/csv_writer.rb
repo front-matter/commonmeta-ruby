@@ -11,7 +11,7 @@ module Briard
         bib = {
           doi: doi,
           url: url,
-          registered: get_iso8601_date(date_registered),
+          registered: get_date(dates, 'Issued'),
           state: state,
           resource_type_general: types['resourceTypeGeneral'],
           resource_type: types['resourceType'],

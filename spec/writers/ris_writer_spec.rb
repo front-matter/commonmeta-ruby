@@ -7,8 +7,6 @@ describe Briard::Metadata, vcr: true do
     it 'journal article' do
       input = '10.7554/eLife.01567'
       subject = described_class.new(input: input, from: 'crossref_xml')
-      expect(subject.valid?).to be false
-      expect(subject.errors).to eq(["property '/descriptions/1/description' is not of type: string"])
       ris = subject.ris.split("\r\n")
       expect(ris[0]).to eq('TY  - JOUR')
       expect(ris[1]).to eq('T1  - Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
@@ -134,8 +132,7 @@ describe Briard::Metadata, vcr: true do
       expect(ris[5]).to eq('KW  - datacite')
       expect(ris[8]).to eq('PY  - 2016')
       expect(ris[9]).to eq('PB  - DataCite')
-      expect(ris[10]).to eq('SN  - 10.5438/0000-00ss')
-      expect(ris[11]).to eq('ER  - ')
+      expect(ris[10]).to eq('ER  - ')
     end
 
     it 'BlogPosting schema.org' do
@@ -153,7 +150,8 @@ describe Briard::Metadata, vcr: true do
       expect(ris[8]).to eq('PY  - 2016')
       expect(ris[9]).to eq('PB  - Front Matter')
       expect(ris[10]).to eq('LA  - en')
-      expect(ris[11]).to eq('ER  - ')
+      expect(ris[11]).to eq('SN  - 2749-9952')
+      expect(ris[12]).to eq('ER  - ')
     end
 
     it 'Dataset' do

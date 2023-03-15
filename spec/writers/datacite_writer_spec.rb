@@ -16,7 +16,7 @@ describe Briard::Metadata, vcr: true do
       expect(datacite.fetch('relatedIdentifiers').first).to eq('relatedIdentifier' => '2050-084X',
                                                                'relatedIdentifierType' => 'ISSN', 'relationType' => 'IsPartOf', 'resourceTypeGeneral' => 'Collection')
       expect(datacite.fetch('rightsList')).to eq([{ 'rights' => 'Creative Commons Attribution 3.0 Unported',
-                                                    'rightsIdentifier' => 'cc-by-3.0',
+                                                    'rightsIdentifier' => 'CC-BY-3.0',
                                                     'rightsIdentifierScheme' => 'SPDX',
                                                     'rightsUri' => 'https://creativecommons.org/licenses/by/3.0/legalcode',
                                                     'schemeUri' => 'https://spdx.org/licenses/' }])

@@ -9,15 +9,15 @@ module Briard
         id = normalize_id(id)
         url = github_as_cff_url(id)
         response = HTTP.get(url)
-        # body = JSON.parse(response.body)
-        # Dates are parsed to date object, need to convert to iso8601 later
-        string = Psych.safe_load(response.body, permitted_classes: [Date])
-        { 'string' => string }
+        
+        { 'string' => response.body.to_s }
       end
 
       def read_cff(string: nil, **options)
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
+        
+        # Dates are parsed to date object, need to convert to iso8601 later
         meta = string.is_a?(String) ? Psych.safe_load(string, permitted_classes: [Date]) : string
 
         identifiers = Array.wrap(meta.fetch('identifiers', nil)).map do |r|

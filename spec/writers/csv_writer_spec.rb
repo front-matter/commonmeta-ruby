@@ -28,7 +28,7 @@ describe Briard::Metadata, vcr: true do
 
       expect(csv[0]).to eq('10.1155/2012/291294')
       expect(csv[1]).to eq('http://www.hindawi.com/journals/pm/2012/291294')
-      expect(csv[2]).to eq('2012-12-30')
+      expect(csv[2]).to eq('2012')
       expect(csv[3]).to eq('findable')
       expect(csv[4]).to eq('JournalArticle')
       expect(csv[5]).to eq('JournalArticle')
@@ -46,7 +46,7 @@ describe Briard::Metadata, vcr: true do
 
       expect(csv[0]).to eq('10.3204/desy-2014-01645')
       expect(csv[1]).to eq('http://bib-pubdb1.desy.de/record/166827')
-      expect(csv[2]).to eq('2018-01-25')
+      expect(csv[2]).to eq('2014')
       expect(csv[3]).to eq('findable')
       expect(csv[4]).to eq('Text')
       expect(csv[5]).to eq('Dissertation')
@@ -62,7 +62,7 @@ describe Briard::Metadata, vcr: true do
       csv = subject.csv.parse_csv
       expect(csv[0]).to eq('10.5067/altcy-tj122')
       expect(csv[1]).to eq('http://podaac.jpl.nasa.gov/dataset/MERGED_TP_J1_OSTM_OST_CYCLES_V2')
-      expect(csv[2]).to eq('2014-01-15')
+      expect(csv[2]).to eq('2012')
       expect(csv[3]).to eq('findable')
       expect(csv[4]).to eq('Dataset')
       expect(csv[5]).to eq('Dataset')
@@ -79,7 +79,7 @@ describe Briard::Metadata, vcr: true do
 
       expect(csv[0]).to eq('10.5438/qeg0-3gm3')
       expect(csv[1]).to eq('https://github.com/datacite/maremma')
-      expect(csv[2].nil?).to be(true)
+      expect(csv[2]).to eq('2017-02-24')
       expect(csv[3]).to eq('findable')
       expect(csv[4]).to eq('Software')
       expect(csv[5].nil?).to be(true)

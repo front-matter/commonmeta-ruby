@@ -18,6 +18,7 @@ module Briard
       def read_crossref_xml(string: nil, **options)
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
+
         if string.present?
           # query contains information from outside metadata schema, e.g. publisher name
           query = Hash.from_xml(string).dig("crossref_result", "query_result", "body", "query")
@@ -119,6 +120,7 @@ module Briard
                 { "title" => sanitize(r.dig("original_language_title", "__content__")),
                   "lang" => r.dig("original_language_title", "language") }
               else
+                # TODO: handle titles with <i> and <b> tags
                 { "title" => sanitize(r.dig("title", "__content__")) }.compact
               end
             end.compact
@@ -262,8 +264,8 @@ module Briard
 
       def crossref_description(bibmeta)
         abstract = Array.wrap(bibmeta["abstract"]).map do |r|
-          { "descriptionType" => "Abstract",
-            "description" => sanitize(parse_attributes(r, content: "p")) }.compact
+          { "descriptionType" => r.fetch("abstract_type", nil).present? ? "Other" : "Abstract",
+            "description" => sanitize(parse_attributes(r, content: "p"), first: true) }.compact
         end
 
         description = Array.wrap(bibmeta["description"]).map do |r|
@@ -305,15 +307,15 @@ module Briard
               }]
             end
           if a["surname"].present? || a["given_name"].present? || name_identifiers.present?
-            given_name = parse_attributes(a["given_name"])
-            family_name = parse_attributes(a["surname"])
+            given_name = parse_attributes(a["given_name"]).presence
+            family_name = parse_attributes(a["surname"]).presence
             affiliation = Array.wrap(a["affiliation"]).map do |a|
-              if a.is_a?(Hash)
-                a
-              elsif a.is_a?(Hash) && a.key?("__content__") && a["__content__"].strip.blank?
+              if a.is_a?(Hash) && a.key?("__content__") && a["__content__"].strip.blank?
                 nil
               elsif a.is_a?(Hash) && a.key?("__content__")
                 { "name" => a["__content__"] }
+              elsif a.is_a?(Hash)
+                a
               elsif a.strip.blank?
                 nil
               elsif a.is_a?(String)

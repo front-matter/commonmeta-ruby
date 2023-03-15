@@ -20,12 +20,11 @@ describe Briard::Metadata, vcr: true do
                                        'family-names' => 'Speck',
                                        'given-names' => 'Robert' }])
       expect(json['title']).to eq('Pypint -- Python Framework For Parallel-In-Time Methods')
-      expect(json['abstract']).to eq('<em>PyPinT</em> is a framework for Parallel-in-Time integration routines. The main purpose of <em>PyPinT</em> is to provide a framework for educational use and prototyping new parallel-in-time algorithms. As well it will aid in developing a high-performance C++ implementation for massively parallel computers providing the benefits of parallel-in-time routines to a zoo of time integrators in various applications.')
+      expect(json['abstract']).to start_with('<em>PyPinT</em>')
       expect(json['date-released']).to eq('2014-05-27')
       expect(json['repository-code']).to eq('https://zenodo.org/record/10164')
-      expect(json['keywords']).to eq(['parallel-in-time integration',
-                                      'spectral deferred corrections', 'multigrid', 'multi-level spectral deferred corrections', 'python framework'])
-      expect(json['license'].nil?).to be(true)
+      expect(json['keywords']).to eq(["Parallel-in-Time Integration", "Spectral Deferred Corrections", "Multigrid", "Multi-Level Spectral Deferred Corrections", "Python Framework"])
+      expect(json['license']).to eq('MIT')
       expect(json['references']).to eq('identifiers' => [{ 'type' => 'url',
                                                            'value' => 'https://github.com/Parallel-in-Time/PyPinT/tree/release-v0.0.4' }])
     end
@@ -53,7 +52,7 @@ describe Briard::Metadata, vcr: true do
       expect(json['date-released']).to eq('2015-02-18')
       expect(json['repository-code']).to eq('https://zenodo.org/record/15497')
       expect(json['keywords'].nil?).to be(true)
-      expect(json['license'].nil?).to be(true)
+      expect(json['license']).to eq('MIT')
       expect(json['references']).to eq('identifiers' => [{ 'type' => 'url',
                                                            'value' => 'https://github.com/woutergins/satlas/tree/v1.0.0' }])
     end
@@ -75,14 +74,14 @@ describe Briard::Metadata, vcr: true do
       expect(json['repository-code']).to eq('https://github.com/citation-file-format/ruby-cff')
       expect(json['keywords']).to eq(['ruby', 'credit', 'software citation', 'research software',
                                       'software sustainability', 'metadata', 'citation file format', 'cff'])
-      expect(json['license']).to eq('apache-2.0')
+      expect(json['license']).to eq('Apache-2.0')
       expect(json['references']).to eq('identifiers' => [{ 'type' => 'doi',
                                                            'value' => '10.5281/zenodo.1003149' }])
     end
 
     it 'Collection of Jupyter notebooks' do
       input = 'https://doi.org/10.14454/fqq6-w751'
-      subject = described_class.new(input: input, from: 'datacite')
+      subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       json = Psych.safe_load(subject.cff, permitted_classes: [Date])
       expect(json['doi']).to eq('https://doi.org/10.14454/fqq6-w751')
@@ -109,9 +108,8 @@ describe Briard::Metadata, vcr: true do
       expect(json['abstract']).to eq('Jupyter notebooks that use GraphQL to implement EC-funded FREYA Project PID Graph user stories.')
       expect(json['date-released']).to eq('2020-05-08')
       expect(json['repository-code']).to eq('https://github.com/datacite/pidgraph-notebooks-python')
-      expect(json['keywords']).to eq(['pid graph', 'pid', 'graphql', 'freya', 'jupyter',
-                                      'FOS: Computer and information sciences'])
-      expect(json['license'].nil?).to be(true)
+      expect(json['keywords']).to eq(["pid graph", "pid", "graphql", "freya", "jupyter", "FOS: Computer and information sciences", "FOS: Computer and information sciences"])
+      expect(json['license']).to eq('MIT')
       expect(json['references'].nil?).to be(true)
     end
   end

@@ -28,8 +28,14 @@ module Briard
         errors = jsonlint(string)
         return { "errors" => errors } if errors.present?
         read_options = ActiveSupport::HashWithIndifferentAccess.new(_options.except(:doi, :id, :url,
-                                                                                   :sandbox, :validate, :ra))
-        meta = string.present? ? JSON.parse(string).dig('data', 'attributes') : {}
+                                                                            :sandbox, :validate, :ra))
+        
+
+        meta = string.present? ? JSON.parse(string) : {}
+
+        # optionally strip out the message wrapper from API
+        meta = meta.dig('data', 'attributes') if meta.dig('data').present?
+
         meta.transform_keys!(&:underscore)
         
         id = normalize_doi(meta.fetch("doi", nil))

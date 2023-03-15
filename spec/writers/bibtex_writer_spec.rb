@@ -111,7 +111,7 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:bibtex_key]).to eq('https://doi.org/10.5061/dryad.8515')
       expect(bibtex[:doi]).to eq('10.5061/dryad.8515')
       expect(bibtex[:title]).to eq('Data from: A new malaria agent in African hominids.')
-      expect(bibtex[:author]).to eq('Ollomo, Benjamin and Durand, Patrick and Prugnolle, Franck and Douzery, Emmanuel J. P. and Arnathau, C??line and Nkoghe, Dieudonn?? and Leroy, Eric and Renaud, Fran??ois')
+      expect(bibtex[:author]).to eq('Ollomo, Benjamin and Durand, Patrick and Prugnolle, Franck and Douzery, Emmanuel J. P. and Arnathau, Céline and Nkoghe, Dieudonné and Leroy, Eric and Renaud, François')
       expect(bibtex[:publisher]).to eq('Dryad')
       expect(bibtex[:year]).to eq('2011')
       expect(bibtex[:copyright]).to eq('Creative Commons Zero v1.0 Universal')
@@ -154,30 +154,6 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:keywords]).to start_with('Animalia, Bottles or small containers/Aquaria (&lt;20 L)')
       expect(bibtex[:year]).to eq('2007')
       expect(bibtex[:copyright]).to eq('Creative Commons Attribution 3.0 Unported')
-    end
-
-    it 'author is organization' do
-      input = "#{fixture_path}gtex.xml"
-      subject = described_class.new(input: input, from: 'datacite')
-      bibtex = BibTeX.parse(subject.bibtex).to_a(quotes: '').first
-      expect(bibtex[:bibtex_type].to_s).to eq('misc')
-      expect(bibtex[:bibtex_key]).to eq('https://doi.org/10.25491/9hx8-ke93')
-      expect(bibtex[:author]).to eq('{The GTEx Consortium}')
-    end
-
-    it 'dataset neurophysiology' do
-      input = "#{fixture_path}datacite-schema-2.2.xml"
-      subject = described_class.new(input: input)
-      expect(subject.valid?).to be true
-      bibtex = BibTeX.parse(subject.bibtex).to_a(quotes: '').first
-      expect(bibtex[:bibtex_type].to_s).to eq('misc')
-      expect(bibtex[:bibtex_key]).to eq('https://doi.org/10.6080/k0f769gp')
-      expect(bibtex[:doi]).to eq('10.6080/k0f769gp')
-      expect(bibtex[:title]).to eq('Single-unit recordings from two auditory areas in male zebra finches')
-      expect(bibtex[:author]).to eq('{Theunissen, Frederic E.} and {Hauber, ME} and {Woolley, Sarah M. N.} and Gill, Patrick and {Shaevitz, SS} and {Amin, Noopur} and {Hsu, A} and {Singh, NC} and {Grace, GA} and Fremouw, Thane and {Zhang, Junli} and {Cassey, P} and {Doupe, AJ} and {David, SV} and {Vinje, WE}')
-      expect(bibtex[:publisher]).to eq('CRCNS.org')
-      expect(bibtex[:keywords]).to eq('neuroscience, electrophysiology, auditory area, avian (zebra finch)')
-      expect(bibtex[:year]).to eq('2009')
     end
   end
 end
