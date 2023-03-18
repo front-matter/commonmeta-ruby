@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Briard::Metadata, vcr: true do
+describe Commonmeta::Metadata, vcr: true do
   let(:subject) do
     described_class.new
   end

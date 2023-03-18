@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe Briard::Metadata, vcr: true do
+describe Commonmeta::Metadata, vcr: true do
   context "write metadata as crossref" do
     it "journal article" do
       input = "#{fixture_path}crossref.xml"

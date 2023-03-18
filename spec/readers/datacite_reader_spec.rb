@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe Briard::Metadata, vcr: true do
+describe Commonmeta::Metadata, vcr: true do
   context "get datacite raw" do
     it "BlogPosting" do
       input = "#{fixture_path}datacite.json"
@@ -32,7 +32,7 @@ describe Briard::Metadata, vcr: true do
 
     # it "SoftwareSourceCode" do
     #   input = fixture_path + "datacite_software.json"
-    #   subject = Briard::Metadata.new(input: input, from: "datacite")
+    #   subject = Commonmeta::Metadata.new(input: input, from: "datacite")
     #   # # expect(subject.valid?).to be true
     #   expect(subject.identifier).to eq("https://doi.org/10.5063/f1m61h5x")
     #   expect(subject.type).to eq("bibtex"=>"misc", "citeproc"=>"article", "resource_type"=>"Software", "resource_type_general"=>"Software", "ris"=>"COMP", "type"=>"SoftwareSourceCode")

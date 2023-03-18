@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Briard::Metadata, vcr: true do
+describe Commonmeta::Metadata, vcr: true do
   context 'write metadata as jats xml' do
     it 'with data citation' do
       input = '10.7554/eLife.01567'

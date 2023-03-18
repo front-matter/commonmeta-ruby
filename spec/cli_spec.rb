@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'briard/cli'
+require 'commonmeta/cli'
 
-describe Briard::CLI do
+describe Commonmeta::CLI do
   let(:subject) do
     described_class.new
   end

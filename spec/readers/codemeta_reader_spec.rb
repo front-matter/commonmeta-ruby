@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe Briard::Metadata, vcr: true do
+describe Commonmeta::Metadata, vcr: true do
   subject { described_class.new(input: input) }
 
   let(:input) { "https://github.com/datacite/maremma/blob/master/codemeta.json" }

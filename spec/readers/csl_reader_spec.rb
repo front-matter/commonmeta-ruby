@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Briard::Metadata, vcr: true do
+describe Commonmeta::Metadata, vcr: true do
   subject { described_class.new(input: input, from: 'csl') }
 
   let(:input) { "#{fixture_path}citeproc.json" }

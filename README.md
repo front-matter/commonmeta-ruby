@@ -1,16 +1,16 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5785519.svg)](https://doi.org/10.5281/zenodo.5785519)
-[![Gem Version](https://badge.fury.io/rb/briard.svg)](https://badge.fury.io/rb/briard)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=front-matter_briard&metric=coverage)](https://sonarcloud.io/summary/new_code?id=front-matter_briard)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=front-matter_briard&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=front-matter_briard)
-![GitHub](https://img.shields.io/github/license/front-matter/talbot?logo=MIT)
+[![Gem Version](https://badge.fury.io/rb/commonmeta-ruby.svg)](https://badge.fury.io/rb/commonmeta-ruby)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=front-matter_commonmeta-ruby&metric=coverage)](https://sonarcloud.io/summary/new_code?id=front-matter_commonmeta-ruby)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=front-matter_commonmeta-ruby&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=front-matter_commonmeta-ruby)
+![GitHub](https://img.shields.io/github/license/front-matter/commonmeta-ruby?logo=MIT)
 
-# Briard: a Ruby library for conversion of DOI Metadata
+# commonmeta-ruby: a Ruby library for conversion of scholarly metadata
 
-Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including [schema.org](https://schema.org). Fork of version 1.9.12 of the [bolognese](https://github.com/datacite/bolognese) gem.
+Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) gem, but using [commonmeta](https://commonmeta.org) as the intermediate format.
 
 ## Supported Metadata Formats
 
-Briard reads and/or writes these metadata formats:
+commonmeta-ruby reads and/or writes these metadata formats:
 
 | Format | Name | Content Type | Read | Write |
 | ------ | ---- | ------------ | ---- | ----- |
@@ -35,7 +35,7 @@ Requires Ruby 3.0 or later. Then add the following to your `Gemfile` to install 
 latest version:
 
 ```ruby
-gem 'briard'
+gem 'commonmeta-ruby'
 ```
 
 Then run `bundle install` to install into your environment.
@@ -43,22 +43,23 @@ Then run `bundle install` to install into your environment.
 You can also install the gem system-wide in the usual way:
 
 ```bash
-gem install briard
+gem install commonmeta-ruby
+```
 ```
 
 ## Commands
 
-Run the `briard` command with either an identifier (DOI or URL) or filename:
+Run the `commonmeta` command with either an identifier (DOI or URL) or filename:
 
 ```
-briard https://doi.org/10.7554/elife.01567
+commonmeta https://doi.org/10.7554/elife.01567
 ```
 
 ```
-briard example.xml
+commonmeta example.xml
 ```
 
-Briard can read BibTeX files (file extension `.bib`), RIS files (file extension `.ris`), Crossref or DataCite XML files (file extension `.xml`), DataCite JSON files (file extension `Citeproc JSON files ().
+commonmeta can read BibTeX files (file extension `.bib`), RIS files (file extension `.ris`), Crossref files (file extension `.xml`), DataCite files and CSL JSON files.
 
 The input format (e.g. Crossref XML or BibteX) is automatically detected, but
 you can also provide the format with the `--from` or `-f` flag. The supported
@@ -66,27 +67,27 @@ input formats are listed in the table above.
 
 The output format is determined by the `--to` or `-t` flag, and defaults to `schema_org`.
 
-Show all commands with `briard help`:
+Show all commands with `commonmeta help`:
 
 ```
 Commands:
-  briard                 # convert metadata
-  briard --version, -v   # print the version
-  briard help [COMMAND]  # Describe available commands or one specific command
+  commonmeta                 # convert metadata
+  commonmeta --version, -v   # print the version
+  commonmeta help [COMMAND]  # Describe available commands or one specific command
 ```
 
 ## Errors
 
 Errors are returned to STDOUT.
 
-All DataCite XML input is validated against the corresponding schema version (kernel 3 or 4).
+All input is validated against the commonmeta JSON schema.
 
 ## Examples
 
 Read Crossref XML:
 
 ```
-briard https://doi.org/10.7554/elife.01567 -t crossref
+commonmeta https://doi.org/10.7554/elife.01567 -t crossref
 
 <?xml version="1.0" encoding="UTF-8"?>
 <doi_records>
@@ -210,7 +211,7 @@ briard https://doi.org/10.7554/elife.01567 -t crossref
 Convert Crossref XML to schema.org/JSON-LD:
 
 ```
-briard https://doi.org/10.7554/elife.01567
+commonmeta https://doi.org/10.7554/elife.01567
 
 {
     "@context": "http://schema.org",
@@ -405,10 +406,10 @@ briard https://doi.org/10.7554/elife.01567
 }
 ```
 
-Convert Crossref XML to DataCite XML:
+Convert Crossref XML to DataCite JSON:
 
 ```
-briard https://doi.org/10.7554/elife.01567 -t datacite
+commonmeta https://doi.org/10.7554/elife.01567 -t datacite
 
 <?xml version="1.0" encoding="UTF-8"?>
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
@@ -503,7 +504,7 @@ briard https://doi.org/10.7554/elife.01567 -t datacite
 Convert Crossref XML to BibTeX:
 
 ```
-briard https://doi.org/10.7554/elife.01567 -t bibtex
+commonmeta https://doi.org/10.7554/elife.01567 -t bibtex
 
 @article{https://doi.org/10.7554/elife.01567,
   doi = {10.7554/eLife.01567},
@@ -515,82 +516,12 @@ briard https://doi.org/10.7554/elife.01567 -t bibtex
 }
 ```
 
-Read DataCite XML:
 
-```
-briard 10.5061/DRYAD.8515 -t datacite
 
-<?xml version="1.0" encoding="UTF-8"?>
-<resource
-    xmlns="http://datacite.org/schema/kernel-3"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:mets="http://www.loc.gov/METS/"
-    xmlns:dspace="http://www.dspace.org/xmlns/dspace/dim"
-    xmlns:dim="http://www.dspace.org/xmlns/dspace/dim"
-    xmlns:dryad="http://purl.org/dryad/terms/"
-    xsi:schemaLocation="http://datacite.org/schema/kernel-3 http://schema.datacite.org/meta/kernel-3/metadata.xsd">
-    <identifier identifierType="DOI">10.5061/DRYAD.8515</identifier>
-    <version>1</version>
-    <creators>
-        <creator>
-            <creatorName>Ollomo, Benjamin</creatorName>
-        </creator>
-        <creator>
-            <creatorName>Durand, Patrick</creatorName>
-        </creator>
-        <creator>
-            <creatorName>Prugnolle, Franck</creatorName>
-        </creator>
-        <creator>
-            <creatorName>Douzery, Emmanuel J. P.</creatorName>
-        </creator>
-        <creator>
-            <creatorName>Arnathau, Céline</creatorName>
-        </creator>
-        <creator>
-            <creatorName>Nkoghe, Dieudonné</creatorName>
-        </creator>
-        <creator>
-            <creatorName>Leroy, Eric</creatorName>
-        </creator>
-        <creator>
-            <creatorName>Renaud, François</creatorName>
-        </creator>
-    </creators>
-    <titles>
-        <title>Data from: A new malaria agent in African hominids.</title>
-    </titles>
-    <publisher>Dryad Digital Repository</publisher>
-    <publicationYear>2011</publicationYear>
-    <subjects>
-        <subject>Phylogeny</subject>
-        <subject>Malaria</subject>
-        <subject>Parasites</subject>
-        <subject>Taxonomy</subject>
-        <subject>Mitochondrial genome</subject>
-        <subject>Africa</subject>
-        <subject>Plasmodium</subject>
-    </subjects>
-    <resourceType resourceTypeGeneral="Dataset">DataPackage</resourceType>
-    <alternateIdentifiers>
-        <alternateIdentifier alternateIdentifierType="citation">Ollomo B, Durand P, Prugnolle F, Douzery EJP, Arnathau C, Nkoghe D, Leroy E, Renaud F (2009) A new malaria agent in African hominids. PLoS Pathogens 5(5): e1000446.</alternateIdentifier>
-    </alternateIdentifiers>
-    <relatedIdentifiers>
-        <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5061/DRYAD.8515/1</relatedIdentifier>
-        <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">10.5061/DRYAD.8515/2</relatedIdentifier>
-        <relatedIdentifier relatedIdentifierType="DOI" relationType="IsReferencedBy">10.1371/JOURNAL.PPAT.1000446</relatedIdentifier>
-        <relatedIdentifier relatedIdentifierType="PMID" relationType="IsReferencedBy">19478877</relatedIdentifier>
-    </relatedIdentifiers>
-    <rightsList>
-        <rights rightsURI="http://creativecommons.org/publicdomain/zero/1.0/"/>
-    </rightsList>
-</resource>
-```
-
-Convert DataCite XML to schema.org/JSON-LD:
+Convert DataCite JSON to schema.org/JSON-LD:
 
 ```sh
-briard 10.5061/DRYAD.8515
+commonmeta 10.5061/DRYAD.8515
 
 {
     "@context": "http://schema.org",
@@ -659,93 +590,10 @@ briard 10.5061/DRYAD.8515
 }
 ```
 
-Convert DataCite XML to schema version 4.0:
+Convert DataCite JSON to Codemeta:
 
 ```
-briard 10.5061/DRYAD.8515 -t datacite --schema_version http://datacite.org/schema/kernel-4
-
-<?xml version="1.0" encoding="UTF-8"?>
-<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
-  <identifier identifierType="DOI">10.5061/DRYAD.8515</identifier>
-  <creators>
-    <creator>
-      <creatorName>Ollomo, Benjamin</creatorName>
-      <givenName>Benjamin</givenName>
-      <familyName>Ollomo</familyName>
-    </creator>
-    <creator>
-      <creatorName>Durand, Patrick</creatorName>
-      <givenName>Patrick</givenName>
-      <familyName>Durand</familyName>
-    </creator>
-    <creator>
-      <creatorName>Prugnolle, Franck</creatorName>
-      <givenName>Franck</givenName>
-      <familyName>Prugnolle</familyName>
-    </creator>
-    <creator>
-      <creatorName>Douzery, Emmanuel J. P.</creatorName>
-      <givenName>Emmanuel J. P.</givenName>
-      <familyName>Douzery</familyName>
-    </creator>
-    <creator>
-      <creatorName>Arnathau, Céline</creatorName>
-      <givenName>Céline</givenName>
-      <familyName>Arnathau</familyName>
-    </creator>
-    <creator>
-      <creatorName>Nkoghe, Dieudonné</creatorName>
-      <givenName>Dieudonné</givenName>
-      <familyName>Nkoghe</familyName>
-    </creator>
-    <creator>
-      <creatorName>Leroy, Eric</creatorName>
-      <givenName>Eric</givenName>
-      <familyName>Leroy</familyName>
-    </creator>
-    <creator>
-      <creatorName>Renaud, François</creatorName>
-      <givenName>François</givenName>
-      <familyName>Renaud</familyName>
-    </creator>
-  </creators>
-  <titles>
-    <title>Data from: A new malaria agent in African hominids.</title>
-  </titles>
-  <publisher>Dryad Digital Repository</publisher>
-  <publicationYear>2011</publicationYear>
-  <resourceType resourceTypeGeneral="Dataset">DataPackage</resourceType>
-  <alternateIdentifiers>
-    <alternateIdentifier alternateIdentifierType="Local accession number">Ollomo B, Durand P, Prugnolle F, Douzery EJP, Arnathau C, Nkoghe D, Leroy E, Renaud F (2009) A new malaria agent in African hominids. PLoS Pathogens 5(5): e1000446.</alternateIdentifier>
-  </alternateIdentifiers>
-  <subjects>
-    <subject>Phylogeny</subject>
-    <subject>Malaria</subject>
-    <subject>Parasites</subject>
-    <subject>Taxonomy</subject>
-    <subject>Mitochondrial genome</subject>
-    <subject>Africa</subject>
-    <subject>Plasmodium</subject>
-  </subjects>
-  <dates>
-    <date dateType="Issued">2011</date>
-  </dates>
-  <relatedIdentifiers>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">https://doi.org/10.5061/dryad.8515/1</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="HasPart">https://doi.org/10.5061/dryad.8515/2</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">https://doi.org/10.1371/journal.ppat.1000446</relatedIdentifier>
-  </relatedIdentifiers>
-  <version>1</version>
-  <rightsList>
-    <rights rightsURI="http://creativecommons.org/publicdomain/zero/1.0/">Public Domain (CC0 1.0)</rights>
-  </rightsList>
-</resource>
-```
-
-Convert DataCite XML to Codemeta:
-
-```
-briard https://doi.org/10.5063/f1m61h5x -t codemeta
+commonmeta https://doi.org/10.5063/f1m61h5x -t codemeta
 
 {
    "@context":"https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld",
@@ -766,10 +614,10 @@ briard https://doi.org/10.5063/f1m61h5x -t codemeta
 }
 ```
 
-Convert DataCite XML to BibTeX:
+Convert DataCite to BibTeX:
 
 ```
-briard 10.5061/DRYAD.8515 -t bibtex
+commonmeta 10.5061/DRYAD.8515 -t bibtex
 
 @misc{https://doi.org/10.5061/dryad.8515,
   doi = {10.5061/DRYAD.8515},
@@ -781,61 +629,10 @@ briard 10.5061/DRYAD.8515 -t bibtex
 }
 ```
 
-Convert schema.org/JSON-LD to DataCite XML:
-
-```
-briard https://blog.datacite.org/eating-your-own-dog-food -t datacite
-
-<?xml version="1.0" encoding="UTF-8"?>
-<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
-  <identifier identifierType="DOI">10.5438/4k3m-nyvg</identifier>
-  <creators>
-    <creator>
-      <creatorName>Fenner, Martin</creatorName>
-      <givenName>Martin</givenName>
-      <familyName>Fenner</familyName>
-      <nameIdentifier schemeURI="http://orcid.org/" nameIdentifierScheme="ORCID">http://orcid.org/0000-0003-1419-2405</nameIdentifier>
-    </creator>
-  </creators>
-  <titles>
-    <title>Eating your own Dog Food</title>
-  </titles>
-  <publisher>DataCite</publisher>
-  <publicationYear>2016</publicationYear>
-  <resourceType resourceTypeGeneral="Text">BlogPosting</resourceType>
-  <alternateIdentifiers>
-    <alternateIdentifier alternateIdentifierType="Local accession number">MS-49-3632-5083</alternateIdentifier>
-  </alternateIdentifiers>
-  <subjects>
-    <subject>datacite</subject>
-    <subject>doi</subject>
-    <subject>metadata</subject>
-    <subject>featured</subject>
-  </subjects>
-  <dates>
-    <date dateType="Created">2016-12-20</date>
-    <date dateType="Issued">2016-12-20</date>
-    <date dateType="Updated">2016-12-20</date>
-  </dates>
-  <relatedIdentifiers>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="IsPartOf">https://doi.org/10.5438/0000-00ss</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">https://doi.org/10.5438/0012</relatedIdentifier>
-    <relatedIdentifier relatedIdentifierType="DOI" relationType="References">https://doi.org/10.5438/55e5-t5c0</relatedIdentifier>
-  </relatedIdentifiers>
-  <version>1.0</version>
-  <rightsList>
-    <rights rightsURI="https://creativecommons.org/licenses/by/4.0/"/>
-  </rightsList>
-  <descriptions>
-    <description descriptionType="Abstract">Eating your own dog food is a slang term to describe that an organization should itself use the products and services it provides. For DataCite this means that we should use DOIs with appropriate metadata and strategies for long-term preservation for...</description>
-  </descriptions>
-</resource>
-```
-
 Convert schema.org/JSON-LD to BibTeX:
 
 ```
-briard https://blog.datacite.org/eating-your-own-dog-food -t bibtex
+commonmeta https://blog.datacite.org/eating-your-own-dog-food -t bibtex
 
 @article{https://doi.org/10.5438/4k3m-nyvg,
   doi = {10.5438/4k3m-nyvg},
@@ -851,7 +648,7 @@ briard https://blog.datacite.org/eating-your-own-dog-food -t bibtex
 Convert Codemeta to schema.org/JSON-LD:
 
 ```
-briard https://github.com/datacite/maremma
+commonmeta https://github.com/datacite/maremma
 
 {
   "@context":"http://schema.org",
@@ -876,10 +673,10 @@ briard https://github.com/datacite/maremma
 }
 ```
 
-Convert Codemeta to DataCite XML:
+Convert Codemeta to DataCite:
 
 ```
-briard https://github.com/datacite/maremma -t datacite
+commonmeta https://github.com/datacite/maremma -t datacite
 
 <?xml version="1.0" encoding="UTF-8"?>
 <resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" xsi:schemaLocation="http://datacite.org/schema/kernel-4 http://schema.datacite.org/meta/kernel-4/metadata.xsd">
@@ -920,7 +717,7 @@ We use rspec for unit testing:
 bundle exec rspec
 ```
 
-Follow along via [Github Issues](https://github.com/datacite/briard/issues).
+Follow along via [Github Issues](https://github.com/front-matter/commonmeta-ruby/issues).
 Please open an issue if conversion fails or metadata are not properly supported.
 
 ### Note on Patches/Pull Requests
@@ -933,4 +730,4 @@ Please open an issue if conversion fails or metadata are not properly supported.
 
 ## License
 
-**briard** is released under the [MIT License](https://github.com/datacite/briard/blob/master/LICENSE.md).
+**commonmeta-ruby** is released under the [MIT License](https://github.com/front-matter/commonmeta-ruby/blob/master/LICENSE.md).

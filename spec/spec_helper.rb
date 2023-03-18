@@ -8,7 +8,7 @@ require 'simplecov_json_formatter'
 SimpleCov.formatter = SimpleCov::Formatter::JSONFormatter
 SimpleCov.start
 
-require 'briard'
+require 'commonmeta'
 require 'rspec'
 require 'rack/test'
 require 'webmock/rspec'

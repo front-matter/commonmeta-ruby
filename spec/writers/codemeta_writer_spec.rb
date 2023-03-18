@@ -2,11 +2,11 @@
 
 require 'spec_helper'
 
-describe Briard::Metadata, vcr: true do
+describe Commonmeta::Metadata, vcr: true do
   context 'write metadata as codemeta' do
     # it "SoftwareSourceCode DataCite JSON" do
     #   input = fixture_path + "datacite_software.json"
-    #   subject = Briard::Metadata.new(input: input, from: "datacite")
+    #   subject = Commonmeta::Metadata.new(input: input, from: "datacite")
     #   expect(subject.valid?).to be true
     #   json = JSON.parse(subject.codemeta)
     #   expect(json["@context"]).to eq("https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld")

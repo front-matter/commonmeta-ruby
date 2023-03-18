@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe Briard::Metadata, vcr: true do
+describe Commonmeta::Metadata, vcr: true do
   context "write metadata as csl" do
     it "Dataset" do
       input = "https://doi.org/10.5061/DRYAD.8515"

@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe Briard::Metadata, vcr: true do
+describe Commonmeta::Metadata, vcr: true do
   let(:fixture_path) { "spec/fixtures/" }
 
   context "get schema_org raw" do
@@ -130,7 +130,7 @@ describe Briard::Metadata, vcr: true do
     # TODO: check redirections
     # it "ornl" do
     #   input = "https://doi.org/10.3334/ornldaac/1339"
-    #   subject = Briard::Metadata.new(input: input, from: "schema_org")
+    #   subject = Commonmeta::Metadata.new(input: input, from: "schema_org")
     #   # expect(subject.valid?).to be true
     #   expect(subject.id).to eq("https://doi.org/10.3334/ornldaac/1339")
     #   expect(subject.url).to eq("https://doi.org/10.3334/ornldaac/1339")
@@ -181,7 +181,7 @@ describe Briard::Metadata, vcr: true do
     # TODO: check 403 status in DOI resolver
     # it "harvard dataverse via identifiers.org" do
     #   input = "https://identifiers.org/doi/10.7910/DVN/NJ7XSO"
-    #   subject = Briard::Metadata.new(input: input, from: "schema_org")
+    #   subject = Commonmeta::Metadata.new(input: input, from: "schema_org")
     #   # expect(subject.valid?).to be true
     #   expect(subject.id).to eq("https://doi.org/10.7910/dvn/nj7xso")
     #   expect(subject.type).to eq("bibtex"=>"misc", "citeproc"=>"dataset", "resourceTypeGeneral"=>"Dataset", "ris"=>"DATA", "schemaOrg"=>"Dataset")

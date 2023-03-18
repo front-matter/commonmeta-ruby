@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-describe Briard::Metadata, vcr: true do
+describe Commonmeta::Metadata, vcr: true do
   context 'write metadata as cff' do
     it 'SoftwareSourceCode Zenodo' do
       input = 'https://doi.org/10.5281/zenodo.10164'
