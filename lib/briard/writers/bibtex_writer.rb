@@ -4,16 +4,14 @@ module Briard
   module Writers
     module BibtexWriter
       def bibtex
-        return nil unless valid?
-
         pages = if container.to_h['firstPage'].present?
                   [container['firstPage'], container['lastPage']].compact.join('-')
                 end
 
         bib = {
-          bibtex_type: types['bibtex'].presence || 'misc',
-          bibtex_key: normalize_doi(doi),
-          doi: doi,
+          bibtex_type: Briard::Utils::CM_TO_BIB_TRANSLATIONS.fetch(type, 'misc'),
+          bibtex_key: normalize_id(id),
+          doi: doi_from_url(id),
           url: url,
           author: authors_as_string(creators),
           keywords: if subjects.present?
@@ -27,9 +25,9 @@ module Briard
           volume: container.to_h['volume'],
           issue: container.to_h['issue'],
           pages: pages,
-          publisher: publisher,
-          year: publication_year,
-          copyright: Array.wrap(rights_list).map { |l| l['rights'] }.first
+          publisher: publisher.to_h['name'],
+          year: date.to_h['published'] && date['published'].split('-').first,
+          copyright: license.to_h['id']
         }.compact
         BibTeX::Entry.new(bib).to_s
       end

@@ -27,7 +27,7 @@ describe Briard::Metadata, vcr: true do
       expect(subject.valid?).to be true
       ttl = subject.turtle.split("\n")
       expect(ttl[0]).to eq('@prefix schema: <http://schema.org/> .')
-      expect(ttl[2]).to eq('<https://doi.org/10.5438/4k3m-nyvg> a schema:ScholarlyArticle;')
+      expect(ttl[2]).to eq('<https://doi.org/10.5438/4k3m-nyvg> a schema:Article;')
     end
 
     it 'BlogPosting Citeproc JSON' do
@@ -35,7 +35,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'csl')
       ttl = subject.turtle.split("\n")
       expect(ttl[0]).to eq('@prefix schema: <http://schema.org/> .')
-      expect(ttl[2]).to eq('<https://doi.org/10.5438/4k3m-nyvg> a schema:BlogPosting;')
+      expect(ttl[2]).to eq("<https://doi.org/10.5438/4k3m-nyvg> a schema:Article;")
     end
 
     it 'BlogPosting DataCite JSON' do
@@ -43,7 +43,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'datacite')
       ttl = subject.turtle.split("\n")
       expect(ttl[0]).to eq('@prefix schema: <http://schema.org/> .')
-      expect(ttl[2]).to eq('<https://doi.org/10.5438/4k3m-nyvg> a schema:ScholarlyArticle;')
+      expect(ttl[2]).to eq("<https://doi.org/10.5438/4k3m-nyvg> a schema:Article;")
     end
 
     it 'BlogPosting schema.org' do

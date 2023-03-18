@@ -11,17 +11,15 @@ describe Briard::Metadata, vcr: true do
     it 'unknown DOI prefix' do
       input = 'http://doi.org/10.0137/14802'
       subject = described_class.new(input: input)
-      expect(subject.errors).to eq(["root is missing required keys: id, creators, titles, publisher, publication_year, types"])
+      expect(subject.errors).to eq(["root is missing required keys: id, type, url, creators, titles, publisher, date"])
       expect(subject.valid?).to be false
-      expect(subject.bibtex.nil?).to be(true)
     end
 
     it 'DOI RA not Crossref or DataCite' do
       input = 'http://doi.org/10.3980/j.issn.2222-3959.2015.03.07'
       subject = described_class.new(input: input)
-      expect(subject.errors).to eq(["root is missing required keys: id, creators, titles, publisher, publication_year, types"])
+      expect(subject.errors).to eq(["root is missing required keys: id, type, url, creators, titles, publisher, date"])
       expect(subject.valid?).to be false
-      expect(subject.bibtex.nil?).to be(true)
     end
   end
 

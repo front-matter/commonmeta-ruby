@@ -10,7 +10,6 @@ describe Briard::Metadata, vcr: true do
       json = JSON.parse(subject.schema_org)
       expect(json["@id"]).to eq("https://doi.org/10.7554/elife.01567")
       expect(json["@type"]).to eq("ScholarlyArticle")
-      expect(json["isPartOf"]).to eq("@type" => "Periodical", "issn" => "2050-084X")
       expect(json["periodical"]).to eq("@type" => "Journal",
                                        "identifier" => "2050-084X", "identifierType" => "ISSN", "name" => "eLife", "volume" => "3")
       expect(json["citation"].length).to eq(27)
@@ -42,8 +41,9 @@ describe Briard::Metadata, vcr: true do
       expect(json["@id"]).to eq("https://doi.org/10.5438/qeg0-3gm3")
       expect(json["@type"]).to eq("SoftwareSourceCode")
       expect(json["name"]).to eq("Maremma: a Ruby library for simplified network calls")
-      expect(json["author"]).to eq("name" => "Martin Fenner", "givenName" => "Martin",
-                                   "familyName" => "Fenner", "@type" => "Person", "@id" => "https://orcid.org/0000-0003-0077-4738", "affiliation" => { "@type" => "Organization", "name" => "DataCite" })
+      expect(json["author"]).to eq("givenName" => "Martin",
+                                   "familyName" => "Fenner", "@type" => "Person", "@id" => "https://orcid.org/0000-0003-0077-4738", 
+                                   "affiliation" => [{ "@type" => "Organization", "name" => "DataCite" }])
     end
 
     it "Schema.org JSON" do
@@ -53,8 +53,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["@id"]).to eq("https://doi.org/10.5281/zenodo.48440")
       expect(json["@type"]).to eq("SoftwareSourceCode")
       expect(json["name"]).to eq("Analysis Tools For Crossover Experiment Of Ui Using Choice Architecture")
-      expect(json["license"]).to eq(["https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode",
-                                     "info:eu-repo/semantics/openAccess"])
+      expect(json["license"]).to eq("https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode")
     end
 
     it "Another Schema.org JSON" do
@@ -93,20 +92,18 @@ describe Briard::Metadata, vcr: true do
       expect(json["@id"]).to eq("https://doi.org/10.5063/f1m61h5x")
       expect(json["@type"]).to eq("SoftwareSourceCode")
       expect(json["name"]).to eq("R Interface to the DataONE REST API")
-      expect(json["author"]).to eq([{ "name" => "Matt Jones",
-                                     "givenName" => "Matt",
+      expect(json["author"]).to eq([{ "givenName" => "Matt",
                                      "familyName" => "Jones",
                                      "@type" => "Person",
                                      "@id" => "https://orcid.org/0000-0003-0077-4738",
-                                     "affiliation" => { "@type" => "Organization",
-                                                        "name" => "NCEAS" } },
-                                    { "name" => "Peter Slaughter",
-                                     "givenName" => "Peter",
+                                     "affiliation" => [{ "@type" => "Organization",
+                                                        "name" => "NCEAS" }] },
+                                    { "givenName" => "Peter",
                                      "familyName" => "Slaughter",
                                      "@type" => "Person",
                                      "@id" => "https://orcid.org/0000-0002-2192-403X",
-                                     "affiliation" => { "@type" => "Organization",
-                                                        "name" => "NCEAS" } },
+                                     "affiliation" => [{ "@type" => "Organization",
+                                                        "name" => "NCEAS" }] },
                                     { "@type" => "Organization",
                                       "name" => "University of California, Santa Barbara" }])
       expect(json["version"]).to eq("2.0.0")
@@ -118,9 +115,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json["@id"]).to eq("https://doi.org/10.5438/6423")
-      expect(json["@type"]).to eq("Collection")
-      expect(json["hasPart"].length).to eq(25)
-      expect(json["hasPart"].first).to eq("@type" => "CreativeWork", "@id" => "https://doi.org/10.5281/zenodo.30799")
+      expect(json["@type"]).to eq("CreativeWork")
       expect(json["funder"]).to eq("@id" => "https://doi.org/10.13039/501100000780",
                                    "@type" => "Organization", "name" => "European Commission")
       expect(json["license"]).to eq("https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -134,8 +129,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["@type"]).to eq("Dataset")
       expect(json["funder"]).to eq("@id" => "https://doi.org/10.13039/501100000780",
                                    "@type" => "Organization", "name" => "European Commission")
-      expect(json["license"]).to eq(["https://creativecommons.org/publicdomain/zero/1.0/legalcode",
-                                     "info:eu-repo/semantics/openAccess"])
+      expect(json["license"]).to eq("https://creativecommons.org/publicdomain/zero/1.0/legalcode")
     end
 
     it "subject scheme" do
@@ -164,11 +158,11 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input)
       json = JSON.parse(subject.schema_org)
       expect(json["@id"]).to eq("https://doi.org/10.4229/23rdeupvsec2008-5co.8.3")
-      expect(json["@type"]).to eq("ScholarlyArticle")
+      expect(json["@type"]).to eq("CreativeWork")
       expect(json["name"]).to eq("Rural Electrification With Hybrid Power Systems Based on Renewables - Technical System Configurations From the Point of View of the European Industry")
       expect(json["author"].count).to eq(3)
-      expect(json["author"].first).to eq("@type" => "Person", "familyName" => "Llamas", "givenName" => "P.", "name" => "P. Llamas")
-      expect(json["periodical"]).to eq("@type" => "Series", "firstPage" => "Spain; 3353",
+      expect(json["author"].first).to eq("@type" => "Person", "familyName" => "Llamas", "givenName" => "P.")
+      expect(json["periodical"]).to eq("@type" => "Periodical", "firstPage" => "Spain; 3353",
                                        "lastPage" => "3356", "name" => "23rd European Photovoltaic Solar Energy Conference and Exhibition", "volume" => "1-5 September 2008")
     end
 
@@ -215,11 +209,9 @@ describe Briard::Metadata, vcr: true do
       expect(json["@type"]).to eq("Dataset")
       expect(json["name"]).to eq("Registry of all stations from the Tara Oceans Expedition (2009-2013)")
       expect(json["author"]).to eq([{ "@type" => "Person", "familyName" => "Tara Oceans Consortium",
-                                      "givenName" => "Coordinators",
-                                      "name" => "Coordinators Tara Oceans Consortium" },
+                                      "givenName" => "Coordinators" },
                                     { "@type" => "Person", "familyName" => "Tara Oceans Expedition",
-                                      "givenName" => "Participants",
-                                      "name" => "Participants Tara Oceans Expedition" }])
+                                      "givenName" => "Participants" }])
       expect(json["includedInDataCatalog"].nil?).to be(true)
       expect(json["spatialCoverage"]).to eq("@type" => "Place",
                                             "geo" => {

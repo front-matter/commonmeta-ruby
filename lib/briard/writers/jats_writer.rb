@@ -16,13 +16,13 @@ module Briard
         insert_editors(xml)
         insert_citation_title(xml) if is_article? || is_data? || is_chapter?
         insert_source(xml)
-        insert_publisher_name(xml) if publisher.present? && !is_data?
+        insert_publisher_name(xml) if publisher['name'].present? && !is_data?
         insert_publication_date(xml)
         insert_volume(xml) if container.to_h['volume'].present?
         insert_issue(xml) if container.to_h['issue'].present?
         insert_fpage(xml) if container.to_h['firstPage'].present?
         insert_lpage(xml) if container.to_h['lastPage'].present?
-        insert_version(xml) if version_info.present?
+        insert_version(xml) if version.present?
         insert_pub_id(xml)
       end
 
@@ -80,23 +80,23 @@ module Briard
 
       def insert_source(xml)
         if is_chapter?
-          xml.source(publisher)
+          xml.source(publisher['name'])
         elsif is_article? || is_data?
-          xml.source((container && container['title']) || publisher)
+          xml.source((container && container['title']) || publisher['name'])
         else
           xml.source(parse_attributes(titles, content: 'title', first: true))
         end
       end
 
       def insert_publisher_name(xml)
-        xml.send(:'publisher-name', publisher)
+        xml.send(:'publisher-name', publisher['name'])
       end
 
       def insert_publication_date(xml)
-        year, month, day = get_date_parts(get_date(dates, 'Issued')).to_h.fetch('date-parts',
+        year, month, day = get_date_parts(date['published']).to_h.fetch('date-parts',
                                                                                 []).first
 
-        xml.year(year, 'iso-8601-date' => get_date(dates, 'Issued'))
+        xml.year(year, 'iso-8601-date' => date['published'])
         xml.month(month.to_s.rjust(2, '0')) if month.present?
         xml.day(day.to_s.rjust(2, '0')) if day.present?
       end
@@ -118,21 +118,21 @@ module Briard
       end
 
       def insert_version(xml)
-        xml.version(version_info)
+        xml.version(version)
       end
 
       def insert_pub_id(xml)
-        return nil unless doi.present?
+        return nil unless doi_from_url(id).present?
 
-        xml.send(:'pub-id', doi, 'pub-id-type' => 'doi')
+        xml.send(:'pub-id', doi_from_url(id), 'pub-id-type' => 'doi')
       end
 
       def date
-        get_date_parts(get_date(dates, 'Issued') || publication_year)
+        get_date_parts(date['published'])
       end
 
       def publication_type
-        { 'publication-type' => Briard::Utils::CR_TO_JATS_TRANSLATIONS[types['resourceType']] || Briard::Utils::SO_TO_JATS_TRANSLATIONS[types['schemaOrg']] }.compact
+        { 'publication-type' => Briard::Utils::CM_TO_JATS_TRANSLATIONS.fetch(type, nil) }
       end
     end
   end

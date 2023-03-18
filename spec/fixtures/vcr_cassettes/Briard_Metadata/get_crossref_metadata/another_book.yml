@@ -199,4 +199,114 @@ http_interactions:
         \         </crossref>\r\n        </doi_record>\r\n      </query>\r\n    </body>\r\n
         \ </query_result>\r\n</crossref_result>"
   recorded_at: Sun, 12 Mar 2023 22:26:52 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/1029
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Mar 2023 08:40:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1678836712075,"primary-name":"International
+        Ocean Discovery Program (IODP)","counts":{"current-dois":99,"backfile-dois":10179,"total-dois":10278},"breakdowns":{"dois-by-issued-year":[[1992,573],[1995,421],[1990,414],[1973,399],[1980,336],[1978,330],[1979,317],[1998,314],[1991,314],[1984,312],[1996,296],[1983,282],[1974,272],[1985,264],[1989,254],[2000,252],[1986,247],[1982,244],[1997,240],[1987,233],[1993,230],[1994,214],[1975,207],[2006,206],[1988,198],[1976,193],[1981,186],[2001,182],[1977,165],[2002,151],[2003,149],[2004,127],[1999,125],[1972,123],[1970,121],[1971,114],[2017,109],[2011,103],[2015,91],[2007,86],[2013,85],[2005,84],[2014,82],[2019,79],[2009,79],[2018,75],[2016,67],[2012,67],[2010,66],[2021,61],[2020,48],[2022,35],[1969,29],[2008,24],[2023,3]]},"prefixes":["10.2204","10.2973","10.14379"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":0.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.02603399155123293,"licenses-backfile":0.04185086943707633,"funders-current":0.7272727272727273,"affiliations-backfile":0.0,"resource-links-backfile":0.00864525002456037,"orcids-backfile":0.01571863640829158,"update-policies-current":0.9393939393939394,"ror-ids-backfile":0.0,"orcids-current":0.8181818181818182,"similarity-checking-backfile":0.0,"references-backfile":0.09018567639257294,"descriptions-backfile":0.0,"award-numbers-backfile":0.02426564495530013,"update-policies-backfile":0.02652519893899204,"licenses-current":0.898989898989899,"award-numbers-current":0.6060606060606061,"abstracts-backfile":0.0,"resource-links-current":0.696969696969697,"abstracts-current":0.0,"references-current":0.888888888888889},"prefix":[{"name":"International
+        Ocean Discovery Program - Management International","value":"10.2204"},{"name":"International
+        Ocean Discovery Program Texas","value":"10.2973"},{"name":"International Ocean
+        Discovery Program - TAMU","value":"10.14379"}],"id":1029,"tokens":["international","ocean","discovery","program","iodp"],"counts-type":{"all":{"monograph":945,"report":1,"book":3,"book-chapter":9329,"dataset":48},"backfile":{"monograph":920,"report":1,"book":3,"book-chapter":9255},"current":{"monograph":25,"book-chapter":74}},"coverage-type":{"all":{"monograph":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":0.07619047619047618,"licenses":0.04126984126984127,"references":0.1894179894179894,"funders":0.04232804232804233,"similarity-checking":0.0,"award-numbers":0.04126984126984127,"ror-ids":0.0,"update-policies":0.04973544973544974,"resource-links":0.001058201058201058,"descriptions":0.0},"report":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":1.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":1.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":0.01768678314931933,"licenses":0.05102368957015757,"references":0.08864830099689142,"funders":0.03183620966877479,"similarity-checking":0.0,"award-numbers":0.02872762353950048,"ror-ids":0.0,"update-policies":0.0338728695465752,"resource-links":0.01672204952299282,"descriptions":0.0},"dataset":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.6666666666666667,"resource-links":0.0,"descriptions":0.0}},"backfile":{"monograph":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":0.05760869565217391,"licenses":0.02173913043478261,"references":0.1739130434782609,"funders":0.02282608695652174,"similarity-checking":0.0,"award-numbers":0.02173913043478261,"ror-ids":0.0,"update-policies":0.03043478260869565,"resource-links":0.00108695652173913,"descriptions":0.0},"report":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":1.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":1.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":0.01112911939492166,"licenses":0.04386817936250675,"references":0.08190167477039438,"funders":0.02636412749864938,"similarity-checking":0.0,"award-numbers":0.02452728254997299,"ror-ids":0.0,"update-policies":0.02614802809292274,"resource-links":0.00940032414910859,"descriptions":0.0}},"current":{"monograph":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":0.76,"licenses":0.76,"references":0.76,"funders":0.76,"similarity-checking":0.0,"award-numbers":0.76,"ror-ids":0.0,"update-policies":0.76,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1678836712075,"affiliations":0.0,"abstracts":0.0,"orcids":0.8378378378378378,"licenses":0.9459459459459459,"references":0.9324324324324323,"funders":0.7162162162162162,"similarity-checking":0.0,"award-numbers":0.5540540540540541,"ror-ids":0.0,"update-policies":1.0,"resource-links":0.9324324324324323,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":false,"deposits-articles":false,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":false,"deposits-licenses-current":true},"location":"College
+        Station, TX, United States","names":["International Ocean Discovery Program
+        (IODP)","International Ocean Discovery Program - Management International","International
+        Ocean Discovery Program Texas","International Ocean Discovery Program - TAMU"]}}'
+  recorded_at: Wed, 15 Mar 2023 08:40:19 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.2973
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Mar 2023 09:09:28 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NSMkJiOPou0PJY49tNaLlwdW2UnP92t2S5DLt8RBioQQ06Nvv%2FxCAWfg4iaQehm1MZ1kH3NY6mNgQnyX1gWmaVuTgjPsmjadPBPrV4rQ9TLD2zNHpVMTLt9rUP0ZUJY9JS235Vg%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a839e23d8830a64-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.2973",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Wed, 15 Mar 2023 09:09:28 GMT
 recorded_with: VCR 6.1.0

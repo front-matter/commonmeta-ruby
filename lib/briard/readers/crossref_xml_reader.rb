@@ -100,15 +100,8 @@ module Briard
         end
 
         resource_type = (resource_type || model).to_s.underscore.camelcase.presence
-        schema_org = Briard::Utils::CR_TO_SO_TRANSLATIONS[resource_type] || "CreativeWork"
-        types = {
-          "resourceTypeGeneral" => Briard::Utils::CR_TO_DC_TRANSLATIONS[resource_type],
-          "resourceType" => resource_type,
-          "schemaOrg" => schema_org,
-          "citeproc" => Briard::Utils::CR_TO_CP_TRANSLATIONS[resource_type] || "article-journal",
-          "bibtex" => Briard::Utils::CR_TO_BIB_TRANSLATIONS[resource_type] || "misc",
-          "ris" => Briard::Utils::CR_TO_RIS_TRANSLATIONS[resource_type] || "GEN",
-        }.compact
+        resource_type = resource_type.present? ? resource_type.underscore.camelcase : nil
+        type = Briard::Utils::CR_TO_CM_TRANSLATIONS.fetch(resource_type, "Other")
 
         titles = if bibmeta["titles"].present?
             Array.wrap(bibmeta["titles"]).map do |r|
@@ -128,44 +121,26 @@ module Briard
             [{ "title" => ":(unav)" }]
           end
 
-        date_published = crossref_date_published(bibmeta)
-        if date_published.present?
-          date_published = { "date" => date_published, "dateType" => "Issued" }
-        else
-          date_published = Array.wrap(query.to_h["crm_item"]).find { |cr| cr["name"] == "created" }
-          if date_published.present?
-            date_published = { "date" => date_published.fetch("__content__", "")[0..9],
-                               "dateType" => "Issued" }
-          end
-        end
-        date_updated = Array.wrap(query.to_h["crm_item"]).find { |cr| cr["name"] == "last-update" }
-
-        if date_updated.present?
-          date_updated = { "date" => date_updated.fetch("__content__", nil),
-                           "dateType" => "Updated" }
-        end
-
-        date_registered = Array.wrap(query.to_h["crm_item"]).find do |cr|
+        date = {}
+        date["published"] = crossref_date_published(bibmeta) || Array.wrap(query.to_h["crm_item"]).find { |cr| cr["name"] == "created" }
+        date["updated"] = parse_attributes(Array.wrap(query.to_h["crm_item"]).find { |cr| cr["name"] == "last-update" })
+        date["registered"] = Array.wrap(query.to_h["crm_item"]).find do |cr|
           cr["name"] == "deposit-timestamp"
         end
-        if date_registered.present?
-          date_registered = get_datetime_from_time(date_registered.fetch("__content__", nil))
-        end
+        date["registered"] = get_datetime_from_time(parse_attributes(date["registered"])) if date["registered"].present?
 
         # check that date is valid iso8601 date
-        date_published = nil unless Date.edtf(date_published.to_h["date"]).present?
-        date_updated = nil unless Date.edtf(date_updated.to_h["date"]).present?
+        date["published"] = nil unless Date.edtf(date["published"]).present?
+        date["updated"] = nil unless Date.edtf(date["updated"]).present?
 
         # TODO: fix timestamp. Until then, remove time as this is not always stable with Crossref (different server timezones)
-        date_published["date"] = get_iso8601_date(date_published["date"]) if date_published.present?
-        date_updated["date"] = get_iso8601_date(date_updated["date"]) if date_updated.present?
-
-        dates = [date_published, date_updated].compact
-        publication_year = date_published.to_h.fetch("date", "")[0..3].to_i.presence
+        date["published"] = get_iso8601_date(date["published"]) if date["published"].present?
+        date["registered"] = get_iso8601_date(date["registered"]) if date["registered"].present?
+        date["updated"] = get_iso8601_date(date["updated"]) if date["updated"].present?
 
         state = meta.present? || read_options.present? ? "findable" : "not_found"
 
-        related_identifiers = Array.wrap(crossref_references(bibmeta))
+        references = Array.wrap(crossref_references(bibmeta))
 
         container = if journal_metadata.present?
             issn = normalize_issn(journal_metadata.to_h.fetch("issn", nil))
@@ -207,56 +182,52 @@ module Briard
 
         # Let sections override this in case of alternative metadata structures, such as book chapters, which
         # have their meta inside `content_item`, but the main book indentifers inside of `book_metadata`
-        identifiers ||= crossref_alternate_identifiers(bibmeta)
-
+        alternate_identifiers ||= crossref_alternate_identifiers(bibmeta)
+        puts alternate_identifiers
         url = parse_attributes(bibmeta.dig("doi_data", "resource"),
                                first: true)
         url = normalize_url(url) if url.present?
 
         { "id" => id,
-          "types" => types,
-          "doi" => doi_from_url(id),
+          "type" => type,
           "url" => url,
           "titles" => titles,
-          "identifiers" => identifiers,
+          "alternate_identifiers" => alternate_identifiers,
           "creators" => crossref_people(bibmeta, "author"),
           "contributors" => crossref_people(bibmeta, "editor"),
           "funding_references" => crossref_funding_reference(program_metadata),
-          "publisher" => publisher,
+          "publisher" => { "name" => publisher },
           "container" => container,
-          "agency" => agency = options[:ra] || get_doi_ra(id) || "Crossref",
-          "related_identifiers" => related_identifiers,
-          "dates" => dates,
-          "publication_year" => publication_year,
+          "provider" => provider = options[:ra] || get_doi_ra(id) || "Crossref",
+          "references" => references,
+          "date" => date.compact,
           "descriptions" => crossref_description(bibmeta),
-          "rights_list" => crossref_license(program_metadata),
-          "version_info" => nil,
+          "license" => crossref_license(program_metadata),
+          "version" => nil,
           "subjects" => nil,
           "language" => nil,
           "sizes" => nil,
-          "schema_version" => "http://datacite.org/schema/kernel-4",
-          "state" => state,
-          "date_registered" => date_registered }.compact.merge(read_options)
+          "state" => state }.compact.merge(read_options)
       end
 
       def crossref_alternate_identifiers(bibmeta)
         if bibmeta.dig("publisher_item", "item_number").present?
           Array.wrap(bibmeta.dig("publisher_item", "item_number")).map do |item|
             if item.is_a?(String)
-              { "identifier" => item,
-                "identifierType" => "Publisher ID" }
+              { "alternateIdentifier" => item,
+                "alternateIdentifierType" => "Publisher ID" }
             else
-              { "identifier" => item.fetch("__content__", nil),
-                "identifierType" => item.fetch("item_number_type", nil) || "Publisher ID" }
+              { "alternateIdentifier" => item.fetch("__content__", nil),
+                "alternateIdentifierType" => item.fetch("item_number_type", nil) || "Publisher ID" }
             end
           end
         elsif parse_attributes(bibmeta.fetch("item_number", nil)).present?
-          [{ "identifier" => parse_attributes(bibmeta.fetch("item_number", nil)),
-            "identifierType" => parse_attributes(bibmeta.dig("item_number",
+          [{ "alternateIdentifier" => parse_attributes(bibmeta.fetch("item_number", nil)),
+            "alternateIdentifierType" => parse_attributes(bibmeta.dig("item_number",
                                                              "item_number_type")) || "Publisher ID" }]
         elsif parse_attributes(bibmeta.fetch("isbn", nil)).present?
-          [{ "identifier" => parse_attributes(bibmeta.fetch("isbn", nil), first: true),
-             "identifierType" => "ISBN" }]
+          [{ "alternateIdentifier" => parse_attributes(bibmeta.fetch("isbn", nil), first: true),
+             "alternateIdentifierType" => "ISBN" }]
         else
           []
         end
@@ -278,11 +249,11 @@ module Briard
       def crossref_license(program_metadata)
         access_indicator = Array.wrap(program_metadata).find { |m| m["name"] == "AccessIndicators" }
         if access_indicator.present?
-          Array.wrap(access_indicator["license_ref"]).map do |license|
-            hsh_to_spdx("rightsURI" => parse_attributes(license))
-          end.uniq
+          Array.wrap(access_indicator["license_ref"]).reduce({}) do |sum, license|
+            sum.merge!(hsh_to_spdx("rightsURI" => parse_attributes(license)))
+          end
         else
-          []
+          nil
         end
       end
 
@@ -301,12 +272,8 @@ module Briard
         (Array.wrap(person) + Array.wrap(organization)).select do |a|
           a["contributor_role"] == contributor_role
         end.map do |a|
-          name_identifiers = if normalize_orcid(parse_attributes(a["ORCID"])).present?
-              [{
-                "nameIdentifier" => normalize_orcid(parse_attributes(a["ORCID"])), "nameIdentifierScheme" => "ORCID", "schemeUri" => "https://orcid.org",
-              }]
-            end
-          if a["surname"].present? || a["given_name"].present? || name_identifiers.present?
+          id = parse_attributes(a["ORCID"]) ? normalize_orcid(parse_attributes(a["ORCID"])) : nil
+          if a["surname"].present? || a["given_name"].present?
             given_name = parse_attributes(a["given_name"]).presence
             family_name = parse_attributes(a["surname"]).presence
             affiliation = Array.wrap(a["affiliation"]).map do |a|
@@ -323,15 +290,15 @@ module Briard
               end
             end.compact
 
-            { "nameType" => "Personal",
-              "nameIdentifiers" => name_identifiers,
-              "name" => [family_name, given_name].compact.join(", "),
+            { "type" => "Person",
+              "id" => id,
+              "name" => given_name || family_name ? nil : [family_name, given_name].compact.join(", "),
               "givenName" => given_name,
               "familyName" => family_name,
               "affiliation" => affiliation.presence,
               "contributorType" => contributor_role == "editor" ? "Editor" : nil }.compact
           else
-            { "nameType" => "Organizational",
+            { "type" => "Organization",
               "name" => a["name"] || a["__content__"],
               "contributorType" => contributor_role == "editor" ? "Editor" : nil }.compact
           end
@@ -384,13 +351,28 @@ module Briard
 
       def crossref_references(bibmeta)
         refs = bibmeta.dig("citation_list", "citation")
-        Array.wrap(refs).select { |a| a["doi"].present? }.map do |c|
-          next unless c["doi"].present?
+        Array.wrap(refs).map do |reference|
+          return nil unless reference.present? || !reference.is_a?(Hash)
 
-          { "relatedIdentifier" => parse_attributes(c["doi"]).downcase,
-            "relationType" => "References",
-            "relatedIdentifierType" => "DOI" }.compact
-        end.compact.unwrap
+          doi = parse_attributes(reference.dig("doi"))
+
+          {
+            "key" => reference.dig("key"),
+            "doi" => doi ? normalize_doi(doi) : nil,
+            "creator" => reference.dig("author"),
+            "title" => reference.dig("article_title"),
+            "publisher" => reference.dig("publisher"),
+            "publicationYear" => reference.dig("cYear"),
+            "volume" => reference.dig("volume"),
+            "issue" => reference.dig("issue"),
+            "firstPage" => reference.dig("first_page"),
+            "lastPage" => reference.dig("last_page"),
+            "containerTitle" => reference.dig("journal_title"),
+            "edition" => nil,
+            "contributor" => nil,
+            "unstructured" => doi.nil? ? reference.dig("unstructured") : nil,
+          }.compact
+        end.unwrap
       end
     end
   end

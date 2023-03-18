@@ -36,22 +36,15 @@ module Briard
         url = normalize_id(meta.fetch('repository-code', nil))
         creators = cff_creators(Array.wrap(meta.fetch('authors', nil)))
 
-        dates = []
+        date = {}
         if meta.fetch('date-released', nil).present?
-          dates << { 'date' => meta.fetch('date-released', nil).iso8601, 'dateType' => 'Issued' }
+          date['published'] = meta.fetch('date-released', nil).iso8601
         end
-        publication_year = meta.fetch('date-released').iso8601[0..3].to_i if meta.fetch('date-released',
-                                                                                   nil).present?
-        publisher = url.to_s.starts_with?('https://github.com') ? 'GitHub' : nil
+                            
+        publisher = url.to_s.starts_with?('https://github.com') ? { 'name' => 'GitHub' } : nil
         state = meta.present? || read_options.present? ? 'findable' : 'not_found'
-        types = {
-          'resourceTypeGeneral' => 'Software',
-          'resourceType' => nil,
-          'schemaOrg' => 'SoftwareSourceCode',
-          'citeproc' => 'article-journal',
-          'bibtex' => 'misc',
-          'ris' => 'COMP'
-        }.compact
+        
+        type = 'Software'
         subjects = Array.wrap(meta.fetch('keywords', nil)).reduce([]) do |sum, subject|
           sum += name_to_fos(subject)
 
@@ -63,40 +56,34 @@ module Briard
                  else
                    []
                  end
-        related_identifiers = Array.wrap(cff_references(meta.fetch('references', nil)))
-        rights_list = if meta.fetch('license', nil).present?
-                        [hsh_to_spdx('rightsIdentifier' => meta.fetch('license'))]
-                      end
+        
+        references = Array.wrap(meta.fetch("references", nil)).map { |r| get_cff_reference(r) }
+
+        license = hsh_to_spdx('rightsIdentifier' => meta.fetch('license', nil))
 
         { 'id' => id,
-          'types' => types,
+          'type' => type,
           'identifiers' => identifiers,
-          'doi' => doi_from_url(id),
           'url' => url,
           'titles' => titles,
           'creators' => creators,
           'publisher' => publisher,
-          'related_identifiers' => related_identifiers,
-          'dates' => dates,
-          'publication_year' => publication_year,
+          'references' => references,
+          'date' => date,
           'descriptions' => if meta.fetch('abstract', nil).present?
                               [{ 'description' => sanitize(meta.fetch('abstract')),
                                  'descriptionType' => 'Abstract' }]
                             end,
-          'rights_list' => rights_list,
-          'version_info' => meta.fetch('version', nil),
+          'license' => license,
+          'version' => meta.fetch('version', nil),
           'subjects' => subjects,
-          'state' => state }.merge(read_options)
+          'state' => state }.compact.merge(read_options)
       end
 
       def cff_creators(creators)
         Array.wrap(creators).map do |a|
-          name_identifiers = if normalize_orcid(parse_attributes(a['orcid'])).present?
-                               [{
-                                 'nameIdentifier' => normalize_orcid(parse_attributes(a['orcid'])), 'nameIdentifierScheme' => 'ORCID', 'schemeUri' => 'https://orcid.org'
-                               }]
-                             end
-          if a['given-names'].present? || a['family-names'].present? || name_identifiers.present?
+          id = normalize_orcid(parse_attributes(a['orcid']))
+          if a['given-names'].present? || a['family-names'].present? || id.present?
             given_name = parse_attributes(a['given-names'])
             family_name = parse_attributes(a['family-names'])
             affiliation = Array.wrap(a['affiliation']).map do |a|
@@ -113,29 +100,44 @@ module Briard
               end
             end.compact
 
-            { 'nameType' => 'Personal',
-              'nameIdentifiers' => name_identifiers,
-              'name' => [family_name, given_name].compact.join(', '),
+            { 'type' => 'Person',
+              'id' => id,
               'givenName' => given_name,
               'familyName' => family_name,
               'affiliation' => affiliation.presence }.compact
           else
-            { 'nameType' => 'Organizational',
+            { 'type' => 'Organization',
               'name' => a['name'] || a['__content__'] }
           end
         end
       end
 
-      def cff_references(references)
-        Array.wrap(references).map do |r|
-          identifier = Array.wrap(r['identifiers']).find { |i| i['type'] == 'doi' }
-
-          next unless identifier.present?
-
-          { 'relatedIdentifier' => normalize_id(parse_attributes(identifier['value'])),
-            'relationType' => 'References',
-            'relatedIdentifierType' => 'DOI' }.compact
-        end.compact.unwrap
+      def get_cff_reference(reference)
+        return nil unless reference.present? || !reference.is_a?(Hash)
+        
+        doi = Array.wrap(reference['identifiers']).find { |i| i["type"] == "doi" }.to_h["value"]
+        doi = normalize_doi(doi) if doi.present?
+        url = reference.dig("url")
+        date = {}
+        date['published'] = reference.dig('date-released').iso8601 if reference.dig('date-released').present?
+        
+        {
+          "key" => doi || url,
+          "doi" => doi,
+          "url" => url,
+          "creator" => reference.dig("author"),
+          "title" => reference.dig("article-title"),
+          "publisher" => reference.dig("publisher"),
+          "publicationYear" => date['published'] ? date['published'][0..3] : nil,
+          "volume" => reference.dig("volume"),
+          "issue" => reference.dig("issue"),
+          "firstPage" => reference.dig("first-page"),
+          "lastPage" => reference.dig("last-page"),
+          "containerTitle" => reference.dig("journal-title"),
+          "edition" => nil,
+          "contributor" => nil,
+          "unstructured" => doi.nil? ? reference.dig("unstructured") : nil,
+        }.compact
       end
     end
   end

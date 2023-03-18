@@ -9,8 +9,8 @@ module Briard
     attr_accessor :string, :from, :sandbox, :meta, :regenerate, :issue, :show_errors, :depositor,
                   :email, :registrant
     attr_reader :doc, :page_start, :page_end
-    attr_writer :id, :provider_id, :client_id, :doi, :identifiers, :creators, :contributors,
-                :titles, :publisher, :rights_list, :dates, :publication_year, :volume, :url, :version_info, :subjects, :contributor, :descriptions, :language, :sizes, :formats, :schema_version, :meta, :container, :agency, :format, :funding_references, :state, :geo_locations, :types, :content_url, :related_identifiers, :related_items, :style, :locale, :date_registered
+    attr_writer :id, :provider_id, :client_id, :doi, :alternate_identifiers, :creators, :contributors,
+                :titles, :publisher, :license, :date, :volume, :url, :version, :subjects, :contributor, :descriptions, :language, :sizes, :formats, :schema_version, :meta, :container, :provider, :format, :funding_references, :state, :geo_locations, :type, :content_url, :references, :related_identifiers, :related_items, :style, :locale
 
     def initialize(options = {})
       options.symbolize_keys!
@@ -44,8 +44,6 @@ module Briard
           hsh = {
             'url' => options[:url],
             'state' => options[:state],
-            'date_registered' => options[:date_registered],
-            'date_updated' => options[:date_updated],
             'provider_id' => options[:provider_id],
             'client_id' => options[:client_id],
             'depositor' => options[:depositor],
@@ -63,8 +61,6 @@ module Briard
         hsh = {
           'url' => options[:url],
           'state' => options[:state],
-          'date_registered' => options[:date_registered],
-          'date_updated' => options[:date_updated],
           'provider_id' => options[:provider_id],
           'client_id' => options[:client_id],
           'depositor' => options[:depositor],
@@ -74,8 +70,7 @@ module Briard
           'creators' => options[:creators],
           'contributors' => options[:contributors],
           'titles' => options[:titles],
-          'publisher' => options[:publisher],
-          'publication_year' => options[:publication_year]
+          'publisher' => options[:publisher]
         }
         string = options[:input]
         @from = options[:from] || find_from_format(string: string)
@@ -96,8 +91,6 @@ module Briard
       # options that come from the datacite database
       @url = hsh.to_h['url'].presence || options[:url].presence
       @state = hsh.to_h['state'].presence
-      @date_registered = hsh.to_h['date_registered'].presence
-      @date_updated = hsh.to_h['date_updated'].presence
       @provider_id = hsh.to_h['provider_id'].presence
       @client_id = hsh.to_h['client_id'].presence
       @content_url = hsh.to_h['content_url'].presence
@@ -113,19 +106,19 @@ module Briard
         :creators,
         :contributors,
         :titles,
-        :types,
-        :identifiers,
+        :type,
         :container,
         :publisher,
         :funding_references,
-        :dates,
-        :publication_year,
+        :date,
         :descriptions,
         :rights_list,
-        :version_info,
+        :version,
         :subjects,
         :language,
         :geo_locations,
+        :references,
+        :alternate_identifiers,
         :related_identifiers,
         :related_items,
         :formats,
@@ -173,8 +166,8 @@ module Briard
       @descriptions ||= meta.fetch('descriptions', nil)
     end
 
-    def rights_list
-      @rights_list ||= meta.fetch('rights_list', nil)
+    def license
+      @license ||= meta.fetch('license', nil)
     end
 
     def subjects
@@ -201,6 +194,10 @@ module Briard
       @funding_references ||= meta.fetch('funding_references', nil)
     end
 
+    def references
+      @references ||= meta.fetch('references', nil)
+    end
+
     def related_identifiers
       @related_identifiers ||= meta.fetch('related_identifiers', nil)
     end
@@ -213,12 +210,8 @@ module Briard
       @url ||= meta.fetch('url', nil)
     end
 
-    def version_info
-      @version_info ||= meta.fetch('version_info', nil) || meta.fetch('version', nil)
-    end
-
-    def publication_year
-      @publication_year ||= meta.fetch('publication_year', nil)
+    def version
+      @version ||= meta.fetch('version', nil)
     end
 
     def container
@@ -229,36 +222,32 @@ module Briard
       @geo_locations ||= meta.fetch('geo_locations', nil)
     end
 
-    def dates
-      @dates ||= meta.fetch('dates', nil)
+    def date
+      @date ||= meta.fetch('date', nil)
     end
 
     def publisher
       @publisher ||= meta.fetch('publisher', nil)
     end
 
-    def identifiers
-      @identifiers ||= meta.fetch('identifiers', nil)
+    def alternate_identifiers
+      @alternate_identifiers ||= meta.fetch('alternate_identifiers', nil)
     end
 
     def content_url
       @content_url ||= meta.fetch('content_url', nil)
     end
 
-    def agency
-      @agency ||= meta.fetch('agency', nil)
+    def provider
+      @provider ||= meta.fetch('provider', nil)
     end
 
     def state
       @state ||= meta.fetch('state', nil)
     end
 
-    def date_registered
-      @date_registered ||= meta.fetch('date_registered', nil)
-    end
-
-    def types
-      @types ||= meta.fetch('types', nil)
+    def type
+      @type ||= meta.fetch('type', nil)
     end
 
     def titles

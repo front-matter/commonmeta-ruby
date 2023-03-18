@@ -18,14 +18,13 @@ describe Briard::Metadata, vcr: true do
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.5438/4k3m-nyvg')
       expect(subject.url).to eq('https://blog.datacite.org/eating-your-own-dog-food')
-      expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'post-weblog',
-                                  'resourceTypeGeneral' => 'Text', 'ris' => 'GEN', 'schemaOrg' => 'BlogPosting')
+      expect(subject.type).to eq('Article')
       expect(subject.creators).to eq([{ 'familyName' => 'Fenner', 'givenName' => 'Martin',
-                                        'name' => 'Fenner, Martin', 'nameType' => 'Personal' }])
+                                        'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.descriptions.first['description']).to start_with('Eating your own dog food')
-      expect(subject.dates).to eq([{ 'date' => '2016-12-20', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq(2016)
+      expect(subject.date).to eq("published"=>"2016-12-20")
+      expect(subject.license).to be_nil
     end
   end
 
@@ -36,14 +35,12 @@ describe Briard::Metadata, vcr: true do
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.5072/4k3m-nyvg')
       expect(subject.url).to eq('https://blog.datacite.org/eating-your-own-dog-food')
-      expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'post-weblog',
-                                  'resourceTypeGeneral' => 'Text', 'ris' => 'GEN', 'schemaOrg' => 'BlogPosting')
+      expect(subject.type).to eq('Article')
       expect(subject.creators).to eq([{ 'familyName' => 'Fenner', 'givenName' => 'Martin',
-                                        'name' => 'Fenner, Martin', 'nameType' => 'Personal' }])
+                                        'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.descriptions.first['description']).to start_with('Eating your own dog food')
-      expect(subject.dates).to eq([{ 'date' => '2016-12-20', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq(2016)
+      expect(subject.date).to eq("published"=>"2016-12-20")
     end
   end
 
@@ -54,13 +51,11 @@ describe Briard::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.5438/4k3m-nyvg')
       expect(subject.url).to eq('https://blog.datacite.org/eating-your-own-dog-food')
-      expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'post-weblog',
-                                  'resourceTypeGeneral' => 'Text', 'ris' => 'GEN', 'schemaOrg' => 'BlogPosting')
-      expect(subject.creators).to eq([{ 'name' => ':(unav)', 'nameType' => 'Organizational' }])
+      expect(subject.type).to eq('Article')
+      expect(subject.creators).to eq([{ 'name' => ':(unav)', 'type' => 'Organization' }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.descriptions.first['description']).to start_with('Eating your own dog food')
-      expect(subject.dates).to eq([{ 'date' => '2016-12-20', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq(2016)
+      expect(subject.date).to eq("published" => "2016-12-20")
     end
   end
 end

@@ -13,12 +13,10 @@ describe Briard::Metadata, vcr: true do
       expect(csv[1]).to eq('https://elifesciences.org/articles/01567')
       expect(csv[2]).to eq('2014-02-11')
       expect(csv[3]).to eq('findable')
-      expect(csv[4]).to eq('JournalArticle')
-      expect(csv[5]).to eq('JournalArticle')
-      expect(csv[6]).to eq('Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
-      expect(csv[7]).to eq('Sankar, Martial and Nieminen, Kaisa and Ragni, Laura and Xenarios, Ioannis and Hardtke, Christian S')
-      expect(csv[8]).to eq('eLife Sciences Publications, Ltd')
-      expect(csv[9]).to eq('2014')
+      expect(csv[4]).to eq('article')
+      expect(csv[5]).to eq('Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth')
+      expect(csv[6]).to eq('Sankar, Martial and Nieminen, Kaisa and Ragni, Laura and Xenarios, Ioannis and Hardtke, Christian S')
+      expect(csv[7]).to eq('eLife Sciences Publications, Ltd')
     end
 
     it 'with pages' do
@@ -30,12 +28,10 @@ describe Briard::Metadata, vcr: true do
       expect(csv[1]).to eq('http://www.hindawi.com/journals/pm/2012/291294')
       expect(csv[2]).to eq('2012')
       expect(csv[3]).to eq('findable')
-      expect(csv[4]).to eq('JournalArticle')
-      expect(csv[5]).to eq('JournalArticle')
-      expect(csv[6]).to eq('Delineating a Retesting Zone Using Receiver Operating Characteristic Analysis on Serial QuantiFERON Tuberculosis Test Results in US Healthcare Workers')
-      expect(csv[7]).to eq('Thanassi, Wendy and Noda, Art and Hernandez, Beatriz and Newell, Jeffery and Terpeluk, Paul and Marder, David and Yesavage, Jerome A.')
-      expect(csv[8]).to eq('Hindawi Limited')
-      expect(csv[9]).to eq('2012')
+      expect(csv[4]).to eq('article')
+      expect(csv[5]).to eq('Delineating a Retesting Zone Using Receiver Operating Characteristic Analysis on Serial QuantiFERON Tuberculosis Test Results in US Healthcare Workers')
+      expect(csv[6]).to eq('Thanassi, Wendy and Noda, Art and Hernandez, Beatriz and Newell, Jeffery and Terpeluk, Paul and Marder, David and Yesavage, Jerome A.')
+      expect(csv[7]).to eq('Hindawi Limited')
     end
 
     it 'text' do
@@ -48,11 +44,9 @@ describe Briard::Metadata, vcr: true do
       expect(csv[1]).to eq('http://bib-pubdb1.desy.de/record/166827')
       expect(csv[2]).to eq('2014')
       expect(csv[3]).to eq('findable')
-      expect(csv[4]).to eq('Text')
-      expect(csv[5]).to eq('Dissertation')
-      expect(csv[6]).to eq('Dynamics of colloids in molecular glass forming liquids studied via X-ray photon correlation spectroscopy')
-      expect(csv[7]).to eq('Conrad, Heiko')
-      expect(csv[9]).to eq('2014')
+      expect(csv[4]).to eq('phdthesis')
+      expect(csv[5]).to eq('Dynamics of colloids in molecular glass forming liquids studied via X-ray photon correlation spectroscopy')
+      expect(csv[6]).to eq('Conrad, Heiko')
     end
 
     it 'climate data' do
@@ -64,12 +58,10 @@ describe Briard::Metadata, vcr: true do
       expect(csv[1]).to eq('http://podaac.jpl.nasa.gov/dataset/MERGED_TP_J1_OSTM_OST_CYCLES_V2')
       expect(csv[2]).to eq('2012')
       expect(csv[3]).to eq('findable')
-      expect(csv[4]).to eq('Dataset')
-      expect(csv[5]).to eq('Dataset')
-      expect(csv[6]).to eq('Integrated Multi-Mission Ocean Altimeter Data for Climate Research Version 2')
-      expect(csv[7]).to eq('{GSFC}')
-      expect(csv[8]).to eq('NASA Physical Oceanography DAAC')
-      expect(csv[9]).to eq('2012')
+      expect(csv[4]).to eq('misc')
+      expect(csv[5]).to eq('Integrated Multi-Mission Ocean Altimeter Data for Climate Research Version 2')
+      expect(csv[6]).to eq('{GSFC}')
+      expect(csv[7]).to eq('NASA Physical Oceanography DAAC')
     end
 
     it 'maremma' do
@@ -81,12 +73,10 @@ describe Briard::Metadata, vcr: true do
       expect(csv[1]).to eq('https://github.com/datacite/maremma')
       expect(csv[2]).to eq('2017-02-24')
       expect(csv[3]).to eq('findable')
-      expect(csv[4]).to eq('Software')
-      expect(csv[5].nil?).to be(true)
-      expect(csv[6]).to eq('Maremma: a Ruby library for simplified network calls')
-      expect(csv[7]).to eq('Fenner, Martin')
-      expect(csv[8]).to eq('DataCite')
-      expect(csv[9]).to eq('2017')
+      expect(csv[4]).to eq('misc')
+      expect(csv[5]).to eq('Maremma: a Ruby library for simplified network calls')
+      expect(csv[6]).to eq('Fenner, Martin')
+      expect(csv[7]).to eq('DataCite')
     end
   end
 end

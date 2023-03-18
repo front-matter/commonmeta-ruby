@@ -58,7 +58,7 @@ describe Briard::Metadata, vcr: true do
       jats = Hash.from_xml(subject.jats).fetch('element_citation', {})
       expect(jats['publication_type']).to eq('chapter')
       expect(jats['chapter_title']).to eq('Physical Examinations')
-      expect(jats['source']).to eq('Jaypee Brothers Medical Publishers (P) Ltd.')
+      expect(jats['source']).to eq('Jaypee Brothers Medical Publishing')
       expect(jats.dig('person_group', 'name')).to eq('surname' => 'Saha', 'given_names' => 'Ashis')
       expect(jats['year']).to eq('iso_8601_date' => '2015', '__content__' => '2015')
       expect(jats['fpage']).to eq('27')
@@ -86,8 +86,8 @@ describe Briard::Metadata, vcr: true do
       input = "#{fixture_path}citeproc.json"
       subject = described_class.new(input: input, from: 'csl')
       jats = Hash.from_xml(subject.jats).fetch('element_citation', {})
-      expect(jats['publication_type'].nil?).to be(true)
-      expect(jats['source']).to eq('Eating your own Dog Food')
+      expect(jats['publication_type']).to eq('journal')
+      expect(jats['source']).to eq('DataCite Blog')
       expect(jats['publisher_name']).to eq('DataCite')
       expect(jats.dig('person_group',
                       'name')).to eq('surname' => 'Fenner', 'given_names' => 'Martin')
@@ -179,7 +179,7 @@ describe Briard::Metadata, vcr: true do
       input = 'https://doi.org/10.34747/g6yb-3412'
       subject = described_class.new(input: input, from: 'datacite')
       jats = Hash.from_xml(subject.jats).fetch('element_citation', {})
-      expect(jats['publication_type'].nil?).to be(true)
+      expect(jats['publication_type']).to be_blank
       expect(jats['source']).to eq('Exploring the "Many analysts, one dataset" project from COS')
       expect(jats['publisher_name']).to eq('Gigantum, Inc.')
       expect(jats.dig('person_group', 'name')).to eq('given_names' => 'Dav', 'surname' => 'Clark')

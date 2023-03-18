@@ -24,38 +24,11 @@ module Briard
 
         meta = string.present? ? JSON.parse(string) : {}
 
-        types = {
-          'resourceTypeGeneral' => 'Software',
-          'reourceType' => 'NPM Package',
-          'schemaOrg' => 'SoftwareSourceCode',
-          'citeproc' => 'article',
-          'bibtex' => 'misc',
-          'ris' => 'GEN'
-        }.compact
+        type = 'Software'
 
-        creators = if meta.fetch('author', nil).present?
-                     get_authors(Array.wrap(meta.fetch('author', nil)))
-                   else
-                     [{ 'nameType' => 'Organizational', 'name' => ':(unav)' }]
-                   end
-        # contributors = get_authors(from_citeproc(Array.wrap(meta.fetch("editor", nil))))
-        # dates = if date = get_date_from_date_parts(meta.fetch("issued", nil))
-        #           if Date.edtf(date).present?
-        #             [{ "date" => date,
-        #               "dateType" => "Issued" }]
-        #           end
-        #         end
-        # publication_year = get_date_from_date_parts(meta.fetch("issued", nil)).to_s[0..3]
-        rights_list = if meta.fetch('license', nil)
-                        [{ 'rights' => meta.fetch('license') }.compact]
-                      end
-        # related_identifiers = if meta.fetch("container-title", nil).present? && meta.fetch("ISSN", nil).present?
-        #                         [{ "type" => "Periodical",
-        #                           "relationType" => "IsPartOf",
-        #                           "relatedIdentifierType" => "ISSN",
-        #                           "title" => meta.fetch("container-title", nil),
-        #                           "relatedIdentifier" => meta.fetch("ISSN", nil) }.compact]
-        #                       end
+        creators = get_authors(Array.wrap(meta.fetch('author', nil)))
+        license =  hsh_to_spdx('rightsIdentifier' => meta.fetch('license', nil))
+
         # container = if meta.fetch("container-title", nil).present?
         #   first_page = meta.fetch("page", nil).present? ? meta.fetch("page").split("-").map(&:strip)[0] : nil
         #   last_page = meta.fetch("page", nil).present? ? meta.fetch("page").split("-").map(&:strip)[1] : nil
@@ -94,7 +67,7 @@ module Briard
         {
           # "id" => id,
           # "identifiers" => identifiers,
-          'types' => types,
+          'type' => type,
           # "doi" => doi_from_url(doi),
           # "url" => normalize_id(meta.fetch("URL", nil)),
           'titles' => [{ 'title' => meta.fetch('name', nil) }],
@@ -104,15 +77,14 @@ module Briard
           # "publisher" => meta.fetch("publisher", nil),
           # "related_identifiers" => related_identifiers,
           # "dates" => dates,
-          # "publication_year" => publication_year,
           'descriptions' => if meta.fetch('description', nil).present?
                               [{ 'description' => sanitize(meta.fetch('description')),
                                  'descriptionType' => 'Abstract' }]
                             else
                               []
                             end,
-          'rights_list' => rights_list,
-          'version_info' => meta.fetch('version', nil),
+          'license' => license,
+          'version' => meta.fetch('version', nil),
           'subjects' => subjects
           # "state" => state
         }.merge(read_options)

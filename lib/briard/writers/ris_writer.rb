@@ -7,18 +7,18 @@ module Briard
         sn = container.to_h['identifier']
         sn = sn.downcase if sn.present? && container.to_h['identifierType'] == 'DOI'
         {
-          'TY' => types['ris'],
+          'TY' => Briard::Utils::CM_TO_RIS_TRANSLATIONS.fetch(type, 'GEN'),
           'T1' => parse_attributes(titles, content: 'title', first: true),
-          'T2' => container && container['title'],
+          'T2' => container.to_h['title'],
           'AU' => to_ris(creators),
-          'DO' => doi,
+          'DO' => doi_from_url(id),
           'UR' => url,
           'AB' => parse_attributes(descriptions, content: 'description', first: true),
           'KW' => Array.wrap(subjects).map do |k|
                     parse_attributes(k, content: 'subject', first: true)
                   end.presence,
-          'PY' => publication_year,
-          'PB' => publisher,
+          'PY' => date['published'] && date['published'].split('-').first,
+          'PB' => publisher['name'],
           'LA' => language,
           'VL' => container.to_h['volume'],
           'IS' => container.to_h['issue'],

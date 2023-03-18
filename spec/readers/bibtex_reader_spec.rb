@@ -29,23 +29,15 @@ describe Briard::Metadata, vcr: true do
     it 'Crossref DOI' do
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.7554/elife.01567')
-      expect(subject.types).to eq('bibtex' => 'article', 'citeproc' => 'article-journal',
-                                  'resourceTypeGeneral' => 'JournalArticle', 'resourceType' => 'JournalArticle', 'ris' => 'JOUR', 'schemaOrg' => 'ScholarlyArticle')
+      expect(subject.type).to eq('JournalArticle')
       expect(subject.url).to eq('http://elifesciences.org/lookup/doi/10.7554/eLife.01567')
       expect(subject.creators.length).to eq(5)
       expect(subject.creators.first).to eq('familyName' => 'Sankar', 'givenName' => 'Martial',
-                                           'name' => 'Sankar, Martial', 'nameType' => 'Personal')
+                                           'type' => 'Person')
       expect(subject.titles).to eq([{ 'title' => 'Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth' }])
       expect(subject.descriptions.first['description']).to start_with('Among various advantages, their small size makes model organisms preferred subjects of investigation.')
-      expect(subject.rights_list).to eq([{ 'rights' => 'Creative Commons Attribution 3.0 Unported',
-                                           'rightsIdentifier' => 'CC-BY-3.0',
-                                           'rightsIdentifierScheme' => 'SPDX',
-                                           'rightsUri' => 'https://creativecommons.org/licenses/by/3.0/legalcode',
-                                           'schemeUri' => 'https://spdx.org/licenses/' }])
-      expect(subject.dates).to eq([{ 'date' => '2014', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq(2014)
-      expect(subject.related_identifiers).to eq([{ 'relatedIdentifier' => '2050-084X',
-                                                   'relatedIdentifierType' => 'ISSN', 'relationType' => 'IsPartOf', 'title' => 'eLife', 'type' => 'Periodical' }])
+      expect(subject.license).to eq("id"=>"CC-BY-3.0", "url"=>"https://creativecommons.org/licenses/by/3.0/legalcode")
+      expect(subject.date).to eq("published"=>"2014")
     end
 
     it 'DOI does not exist' do
@@ -55,14 +47,12 @@ describe Briard::Metadata, vcr: true do
       expect(subject.valid?).to be false
       expect(subject.state).to eq('not_found')
       expect(subject.id).to eq('https://doi.org/10.7554/elife.01567')
-      expect(subject.types).to eq('bibtex' => 'phdthesis', 'citeproc' => 'thesis',
-                                  'resourceTypeGeneral' => 'Dissertation', 'resourceType' => 'Dissertation', 'ris' => 'THES', 'schemaOrg' => 'Thesis')
+      expect(subject.type).to eq('Dissertation')
       expect(subject.creators).to eq([{ 'familyName' => 'Toparlar', 'givenName' => 'Y.',
-                                        'name' => 'Toparlar, Y.', 'nameType' => 'Personal' }])
+                                        'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'A multiscale analysis of the urban heat island effect: from city averaged temperatures to the energy demand of individual buildings' }])
       expect(subject.descriptions.first['description']).to start_with('Designing the climates of cities')
-      expect(subject.dates).to eq([{ 'date' => '2018', 'dateType' => 'Issued' }])
-      expect(subject.publication_year).to eq(2018)
+      expect(subject.date).to eq("published"=>"2018")
     end
   end
 end

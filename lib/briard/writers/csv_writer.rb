@@ -9,16 +9,14 @@ module Briard
         return nil unless valid?
 
         bib = {
-          doi: doi,
+          doi: doi_from_url(id),
           url: url,
-          registered: get_date(dates, 'Issued'),
+          registered: date['published'],
           state: state,
-          resource_type_general: types['resourceTypeGeneral'],
-          resource_type: types['resourceType'],
+          type: Briard::Utils::CM_TO_BIB_TRANSLATIONS.fetch(type, "misc"),
           title: parse_attributes(titles, content: 'title', first: true),
           author: authors_as_string(creators),
-          publisher: publisher,
-          publication_year: publication_year
+          publisher: publisher['name'],
         }.values
 
         CSV.generate { |csv| csv << bib }

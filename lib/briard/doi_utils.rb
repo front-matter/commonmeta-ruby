@@ -24,7 +24,7 @@ module Briard
 
     def doi_resolver(doi, options = {})
       sandbox = Array(/handle\.stage\.datacite\.org/.match(doi)).last
-      sandbox.present? || options[:sandbox] ? 'https://handle.stage.datacite.org/' : 'https://doi.org/'
+      sandbox.present? || options[:sandbox] ? "https://handle.stage.datacite.org/" : "https://doi.org/"
     end
 
     def datacite_api_url(doi, options = {})
@@ -50,7 +50,7 @@ module Briard
       end
 
       uri = Addressable::URI.parse(url)
-      uri.path.gsub(%r{^/}, '').downcase
+      uri.path.gsub(%r{^/}, "").downcase
     end
 
     def doi_as_url(doi)
@@ -65,7 +65,17 @@ module Briard
       url = "https://doi.org/ra/#{prefix}"
       response = HTTP.get(url)
       body = JSON.parse(response.body)
-      body.dig(0, 'RA')
+      body.dig(0, "RA")
+    end
+
+    # get Crossref member name from id
+    def get_crossref_member(member_id)
+      url = "https://api.crossref.org/members/#{member_id}"
+      response = HTTP.get(url)
+      body = JSON.parse(response.body)
+      name = body.dig("message", "primary-name")
+
+      { 'id' => "https://api.crossref.org/members/#{member_id}", 'name' => name }
     end
   end
 end

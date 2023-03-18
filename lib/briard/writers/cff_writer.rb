@@ -4,40 +4,40 @@ module Briard
   module Writers
     module CffWriter
       def cff
-        return nil unless valid? || show_errors
+        # return nil unless valid? || show_errors
 
         # only use CFF for software
-        return nil unless %w[Software Collection].include?(types['resourceTypeGeneral'])
+        return nil unless %w[Software Collection].include?(type)
 
         title = parse_attributes(titles, content: 'title', first: true)
+
         hsh = {
           'cff-version' => '1.2.0',
-          'message' => "If you use #{title} in your work, please cite it using the following metadata",
-          'doi' => normalize_doi(doi),
+          'message' => "If you use #{title} in your research, please cite it using the following metadata",
+          'doi' => normalize_doi(id),
           'repository-code' => url,
-          'title' => parse_attributes(titles, content: 'title', first: true),
+          'title' => title,
           'authors' => write_cff_creators(creators),
           'abstract' => parse_attributes(descriptions, content: 'description', first: true),
-          'version' => version_info,
+          'version' => version,
           'keywords' => if subjects.present?
                           Array.wrap(subjects).map do |k|
                             parse_attributes(k, content: 'subject', first: true)
                           end
                         end,
-          'date-released' => get_date(dates, 'Issued') || publication_year,
-          'license' => Array.wrap(rights_list).map { |l| l['rightsIdentifier'] }.compact.unwrap,
-          'references' => write_references(related_identifiers)
+          'date-released' => date['published'],
+          'license' => license.to_h['id'],
+          'references' => Array.wrap(references).map { |r| write_cff_reference(r) }
         }.compact
         hsh.to_yaml
       end
 
       def write_cff_creators(creators)
         Array.wrap(creators).map do |a|
-          if a['givenName'].present? || a['nameIdentifiers'].present?
+          if a['givenName'].present? || a['id'].present?
             { 'given-names' => a['givenName'],
               'family-names' => a['familyName'],
-              'orcid' => parse_attributes(a['nameIdentifiers'], content: 'nameIdentifier',
-                                                                first: true),
+              'orcid' => a['id'],
               'affiliation' => parse_attributes(a['affiliation'], content: 'name',
                                                                   first: true) }.compact
           else
@@ -46,16 +46,16 @@ module Briard
         end
       end
 
-      def write_references(related_identifiers)
-        return nil if related_identifiers.blank?
+      def write_cff_reference(reference)
+        puts reference
+        return nil if reference.blank?
 
         { 'identifiers' =>
-        Array.wrap(related_identifiers).map do |r|
           {
-            'type' => r['relatedIdentifierType'].downcase,
-            'value' => r['relatedIdentifierType'] == 'DOI' ? doi_from_url(r['relatedIdentifier']) : r['relatedIdentifier']
+            'type' => reference['relatedIdentifierType'].downcase,
+            'value' => rrefence['relatedIdentifierType'] == 'DOI' ? doi_from_url(reference['relatedIdentifier']) : reference['relatedIdentifier']
           }
-        end }
+        }.compact
       end
     end
   end

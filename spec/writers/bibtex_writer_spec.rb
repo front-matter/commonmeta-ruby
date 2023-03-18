@@ -16,7 +16,7 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:author]).to eq('Sankar, Martial and Nieminen, Kaisa and Ragni, Laura and Xenarios, Ioannis and Hardtke, Christian S')
       expect(bibtex[:journal]).to eq('eLife')
       expect(bibtex[:year]).to eq('2014')
-      expect(bibtex[:copyright]).to eq('Creative Commons Attribution 3.0 Unported')
+      expect(bibtex[:copyright]).to eq('CC-BY-3.0')
     end
 
     it 'with pages' do
@@ -32,7 +32,7 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:journal]).to eq('Pulmonary Medicine')
       expect(bibtex[:pages]).to eq('1-7')
       expect(bibtex[:year]).to eq('2012')
-      expect(bibtex[:copyright]).to eq('Creative Commons Attribution 3.0 Unported')
+      expect(bibtex[:copyright]).to eq('CC-BY-3.0')
     end
 
     it 'text' do
@@ -73,13 +73,14 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:publisher]).to eq('DataCite')
       expect(bibtex[:keywords]).to eq('faraday, excon, net/http')
       expect(bibtex[:year]).to eq('2017')
-      expect(bibtex[:copyright]).to eq('MIT License')
+      expect(bibtex[:copyright]).to eq('MIT')
     end
 
     it 'BlogPosting from string' do
       input = "#{fixture_path}datacite.json"
       subject = described_class.new(input: input, from: 'datacite')
-      expect(subject.valid?).to be true
+      expect(subject.valid?).to be false
+      expect(subject.errors).to eq(["root is missing required keys: url"])
       bibtex = BibTeX.parse(subject.bibtex).to_a(quotes: '').first
       expect(bibtex[:bibtex_type].to_s).to eq('article')
       expect(bibtex[:bibtex_key]).to eq('https://doi.org/10.5438/4k3m-nyvg')
@@ -114,7 +115,7 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:author]).to eq('Ollomo, Benjamin and Durand, Patrick and Prugnolle, Franck and Douzery, Emmanuel J. P. and Arnathau, Céline and Nkoghe, Dieudonné and Leroy, Eric and Renaud, François')
       expect(bibtex[:publisher]).to eq('Dryad')
       expect(bibtex[:year]).to eq('2011')
-      expect(bibtex[:copyright]).to eq('Creative Commons Zero v1.0 Universal')
+      expect(bibtex[:copyright]).to eq('CC0-1.0')
     end
 
     it 'from schema_org' do
@@ -153,7 +154,7 @@ describe Briard::Metadata, vcr: true do
       expect(bibtex[:doi]).to eq('10.1594/pangaea.721193')
       expect(bibtex[:keywords]).to start_with('Animalia, Bottles or small containers/Aquaria (&lt;20 L)')
       expect(bibtex[:year]).to eq('2007')
-      expect(bibtex[:copyright]).to eq('Creative Commons Attribution 3.0 Unported')
+      expect(bibtex[:copyright]).to eq('CC-BY-3.0')
     end
   end
 end

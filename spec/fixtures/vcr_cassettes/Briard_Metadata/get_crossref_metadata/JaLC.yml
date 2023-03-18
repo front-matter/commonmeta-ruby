@@ -273,4 +273,112 @@ http_interactions:
         \         </crossref>\r\n        </doi_record>\r\n      </query>\r\n    </body>\r\n
         \ </query_result>\r\n</crossref_result>"
   recorded_at: Sun, 12 Mar 2023 22:26:49 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/272
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Mar 2023 08:40:36 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1678836334472,"primary-name":"Japan
+        Science and Technology Agency (JST)","counts":{"current-dois":1227,"backfile-dois":14682,"total-dois":15909},"breakdowns":{"dois-by-issued-year":[[2021,1176],[2020,980],[2015,780],[2019,699],[2016,640],[2017,598],[2009,576],[2018,567],[2012,513],[2011,509],[2002,483],[2008,480],[2013,474],[2014,440],[2010,430],[2001,421],[2007,400],[2000,371],[2006,368],[2003,344],[2004,343],[2005,332],[1998,324],[1997,300],[1999,299],[1995,269],[1996,245],[1994,211],[1993,205],[1991,198],[1988,184],[1989,183],[1992,180],[1984,180],[1986,177],[1987,171],[1985,169],[1990,167],[1983,163],[1982,159],[1981,149],[2022,51],[1980,1]]},"prefixes":["10.1241","10.52926"],"coverage":{"affiliations-current":1.0,"similarity-checking-current":0.0,"descriptions-current":1.0,"ror-ids-current":0.0,"funders-backfile":0.5922898787631113,"licenses-backfile":0.0,"funders-current":1.0,"affiliations-backfile":0.597806838305408,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.0,"similarity-checking-backfile":0.2087590246560414,"references-backfile":0.1075466557689688,"descriptions-backfile":0.4946192616809699,"award-numbers-backfile":0.5922898787631113,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":1.0,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"references-current":0.0},"prefix":[{"name":"Japan
+        Science and Technology Agency","value":"10.1241"},{"name":"Japan Science and
+        Technology Agency (JST)","value":"10.52926"}],"id":272,"tokens":["japan","science","and","technology","agency","jst"],"counts-type":{"all":{"journal-article":5986,"grant":9923},"backfile":{"journal-article":5986,"grant":8696},"current":{"grant":1227}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1678836334472,"affiliations":0.0145339124624123,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.2637821583695289,"funders":0.0,"similarity-checking":0.5120280654861343,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"grant":{"last-status-check-time":1678836334472,"affiliations":0.9993953441499547,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":1.0,"similarity-checking":0.0,"award-numbers":1.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.8554872518391615}},"backfile":{"journal-article":{"last-status-check-time":1678836334472,"affiliations":0.0145339124624123,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.2637821583695289,"funders":0.0,"similarity-checking":0.5120280654861343,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"grant":{"last-status-check-time":1678836334472,"affiliations":0.999310027598896,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":1.0,"similarity-checking":0.0,"award-numbers":1.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.8350965961361546}},"current":{"grant":{"last-status-check-time":1678836334472,"affiliations":1.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":1.0,"similarity-checking":0.0,"award-numbers":1.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":1.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":false,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":true,"deposits-references-current":false,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":true,"deposits-orcids-backfile":false,"deposits-funders-backfile":true,"deposits-update-policies-current":false,"deposits-similarity-checking-current":false,"deposits-licenses-current":false},"location":"Tokyo,
+        Japan","names":["Japan Science and Technology Agency (JST)","Japan Science
+        and Technology Agency"]}}'
+  recorded_at: Wed, 15 Mar 2023 08:40:36 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1241
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Mar 2023 09:09:38 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=pjCQmkSX%2Fo5QC8PeErlnUH%2BiQZpCWcOFOloqX4q5ppBNVwj3yVKUEdkjK4TqsWrY3DWxIOZk59Ha92xebmEsjW3h6BSDup7%2BiBpknNowJj%2FgOFQGfk4FDEkVUVp%2FNVfmTT4f5U8%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a839e5fddd70a64-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.1241",
+            "RA": "JaLC"
+          }
+        ]
+  recorded_at: Wed, 15 Mar 2023 09:09:38 GMT
 recorded_with: VCR 6.1.0

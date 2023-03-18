@@ -123,4 +123,64 @@ http_interactions:
           }
         ]
   recorded_at: Sun, 12 Mar 2023 22:21:02 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/22676
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Mar 2023 21:15:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1678870156175,"primary-name":"University
+        of Bern","counts":{"current-dois":953,"backfile-dois":3329,"total-dois":4282},"breakdowns":{"dois-by-issued-year":[[2018,515],[2021,457],[2020,409],[2017,390],[2019,379],[2022,371],[2016,230],[2015,147],[2014,143],[2012,139],[2023,125],[2013,105],[2003,99],[2008,96],[2009,92],[2010,83],[2011,73],[2006,65],[2002,63],[2001,61],[2007,54],[2004,49],[2000,42],[2005,40],[1970,21],[1999,19],[1998,15]]},"prefixes":["10.21260","10.16905","10.36950","10.16910","10.12684","10.5166","10.18755","10.5450","10.22018","10.13092","10.22013","10.22012","10.24452","10.22015"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":0.85099685204617,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.0,"licenses-backfile":0.4983478522078702,"funders-current":0.0,"affiliations-backfile":0.001201562030639832,"resource-links-backfile":0.9756683688795434,"orcids-backfile":0.04505857614899369,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.2014690451206716,"similarity-checking-backfile":0.971462901772304,"references-backfile":0.005707419645539201,"descriptions-backfile":0.0,"award-numbers-backfile":0.0,"update-policies-backfile":0.0,"licenses-current":0.6516264428121721,"award-numbers-current":0.0,"abstracts-backfile":0.8555121658155602,"resource-links-current":0.8520461699895068,"abstracts-current":0.7743966421825813,"references-current":0.007345225603357817},"prefix":[{"name":"University
+        of Bern","value":"10.21260"},{"name":"University of Bern","value":"10.16905"},{"name":"University
+        of Bern","value":"10.36950"},{"name":"University of Bern","value":"10.16910"},{"name":"University
+        of Bern","value":"10.12684"},{"name":"University of Bern","value":"10.5166"},{"name":"University
+        of Bern","value":"10.18755"},{"name":"University of Bern","value":"10.5450"},{"name":"University
+        of Bern","value":"10.22018"},{"name":"University of Bern","value":"10.13092"},{"name":"University
+        of Bern","value":"10.22013"},{"name":"University of Bern","value":"10.22012"},{"name":"University
+        of Bern","value":"10.24452"},{"name":"University of Bern","value":"10.22015"}],"id":22676,"tokens":["university","of","bern"],"counts-type":{"all":{"journal-article":4270,"journal":6,"journal-issue":12},"backfile":{"journal-article":3321,"journal-issue":8},"current":{"journal-article":949,"journal-issue":4}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1678870156175,"affiliations":9.36768149882904E-4,"abstracts":0.8398126463700234,"orcids":0.08009367681498829,"licenses":0.5339578454332553,"references":0.006088992974238876,"funders":0.0,"similarity-checking":0.9473067915690867,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9508196721311475,"descriptions":0.0},"journal":{"last-status-check-time":1678870156175,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1678870156175,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1678870156175,"affiliations":0.001204456489009335,"abstracts":0.8575730201746462,"orcids":0.04516711833785005,"licenses":0.4995483288166215,"references":0.005721168322794339,"funders":0.0,"similarity-checking":0.973803071364047,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9780186690755795,"descriptions":0.0},"journal-issue":{"last-status-check-time":1678870156175,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1678870156175,"affiliations":0.0,"abstracts":0.7776606954689146,"orcids":0.20231822971549,"licenses":0.6543730242360379,"references":0.007376185458377239,"funders":0.0,"similarity-checking":0.8545837723919916,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.8556375131717597,"descriptions":0.0},"journal-issue":{"last-status-check-time":1678870156175,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":false,"deposits-resource-links-current":true,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":false,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"Bern,
+        Bern, Switzerland","names":["University of Bern"]}}'
+  recorded_at: Wed, 15 Mar 2023 21:15:13 GMT
 recorded_with: VCR 6.1.0

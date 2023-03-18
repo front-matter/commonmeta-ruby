@@ -3,28 +3,6 @@
 module Briard
   module Readers
     module CslReader
-      CP_TO_SO_TRANSLATIONS = {
-        'song' => 'AudioObject',
-        'post-weblog' => 'BlogPosting',
-        'dataset' => 'Dataset',
-        'graphic' => 'ImageObject',
-        'motion_picture' => 'Movie',
-        'article-journal' => 'ScholarlyArticle',
-        'broadcast' => 'VideoObject',
-        'webpage' => 'WebPage'
-      }.freeze
-
-      CP_TO_RIS_TRANSLATIONS = {
-        'post-weblog' => 'BLOG',
-        'dataset' => 'DATA',
-        'graphic' => 'FIGURE',
-        'book' => 'BOOK',
-        'motion_picture' => 'MPCT',
-        'article-journal' => 'JOUR',
-        'broadcast' => 'MPCT',
-        'webpage' => 'ELEC'
-      }.freeze
-
       def read_csl(string: nil, **options)
         if string.present?
           errors = jsonlint(string)
@@ -37,39 +15,22 @@ module Briard
         meta = string.present? ? JSON.parse(string) : {}
 
         citeproc_type = meta.fetch('type', nil)
-        schema_org = CP_TO_SO_TRANSLATIONS[citeproc_type] || 'CreativeWork'
-        types = {
-          'resourceTypeGeneral' => Briard::Utils::CP_TO_DC_TRANSLATIONS[citeproc_type],
-          'reourceType' => meta.fetch('additionalType', nil),
-          'schemaOrg' => schema_org,
-          'citeproc' => citeproc_type,
-          'bibtex' => Briard::Utils::SO_TO_BIB_TRANSLATIONS[schema_org] || 'misc',
-          'ris' => CP_TO_RIS_TRANSLATIONS[schema_org] || 'GEN'
-        }.compact
+        type = Briard::Utils::CSL_TO_CM_TRANSLATIONS.fetch(citeproc_type, 'Other')
 
         creators = if meta.fetch('author', nil).present?
                      get_authors(from_citeproc(Array.wrap(meta.fetch('author', nil))))
                    else
-                     [{ 'nameType' => 'Organizational', 'name' => ':(unav)' }]
+                     [{ 'type' => 'Organization', 'name' => ':(unav)' }]
                    end
         contributors = get_authors(from_citeproc(Array.wrap(meta.fetch('editor', nil))))
-        dates = if (date = get_date_from_date_parts(meta.fetch('issued',
-                                                               nil))) && Date.edtf(date).present?
-                  [{ 'date' => date,
-                     'dateType' => 'Issued' }]
-                end
-        publication_year = get_date_from_date_parts(meta.fetch('issued', nil)).to_s[0..3].to_i
-        rights_list = if meta.fetch('copyright', nil)
-                        [hsh_to_spdx('rightsURI' => meta.fetch('copyright'))]
+
+        date = {}
+        d = get_date_from_date_parts(meta.fetch('issued', nil))
+        date['published'] = d if Date.edtf(d).present?
+
+        license = if meta.fetch('copyright', nil)
+                      hsh_to_spdx('rightsURI' => meta.fetch('copyright'))
                       end
-        related_identifiers = if meta.fetch('container-title',
-                                            nil).present? && meta.fetch('ISSN', nil).present?
-                                [{ 'type' => 'Periodical',
-                                   'relationType' => 'IsPartOf',
-                                   'relatedIdentifierType' => 'ISSN',
-                                   'title' => meta.fetch('container-title', nil),
-                                   'relatedIdentifier' => meta.fetch('ISSN', nil) }.compact]
-                              end
         container = if meta.fetch('container-title', nil).present?
                       first_page = if meta.fetch('page', nil).present?
                                      meta.fetch('page').split('-').map(&:strip)[0]
@@ -98,27 +59,24 @@ module Briard
         end
 
         { 'id' => id,
-          'types' => types,
-          'doi' => doi_from_url(id),
+          'type' => type,
           'url' => normalize_id(meta.fetch('URL', nil)),
           'titles' => [{ 'title' => meta.fetch('title', nil) }],
           'creators' => creators,
           'contributors' => contributors,
           'container' => container,
-          'publisher' => meta.fetch('publisher', nil),
-          'related_identifiers' => related_identifiers,
-          'dates' => dates,
-          'publication_year' => publication_year,
+          'publisher' => meta.fetch('publisher', nil) ? { "name" => meta.fetch('publisher', nil) } : nil,
+          'date' => date,
           'descriptions' => if meta.fetch('abstract', nil).present?
                               [{ 'description' => sanitize(meta.fetch('abstract')),
                                  'descriptionType' => 'Abstract' }]
                             else
                               []
                             end,
-          'rights_list' => rights_list,
-          'version_info' => meta.fetch('version', nil),
+          'license' => license,
+          'version' => meta.fetch('version', nil),
           'subjects' => subjects,
-          'state' => state }.merge(read_options)
+          'state' => state }.compact.merge(read_options)
       end
     end
   end

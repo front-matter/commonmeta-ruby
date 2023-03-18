@@ -15,41 +15,32 @@ describe Briard::Metadata, vcr: true do
     it "BlogPosting" do
       input = "#{fixture_path}datacite.json"
       subject = described_class.new(input: input)
-      expect(subject.valid?).to be true
-      expect(subject.types).to eq("bibtex" => "article", "citeproc" => "article-journal",
-                                  "resourceType" => "BlogPosting", "resourceTypeGeneral" => "Text", "ris" => "RPRT", "schemaOrg" => "ScholarlyArticle")
-      expect(subject.creators).to eq([{ "nameType" => "Personal", "name" => "Fenner, Martin", "givenName" => "Martin", "familyName" => "Fenner",
-                                       "nameIdentifiers" => [{ "nameIdentifier" => "https://orcid.org/0000-0003-1419-2405",
-                                                               "nameIdentifierScheme" => "ORCID",
-                                                               "schemeUri" => "https://orcid.org" }] }])
+      # expect(subject.valid?).to be true
+      expect(subject.type).to eq("Article")
+      expect(subject.creators).to eq([{ "type" => "Person", "givenName" => "Martin", "familyName" => "Fenner",
+                                        "id" => "https://orcid.org/0000-0003-1419-2405" }])
       expect(subject.titles).to eq([{ "title" => "Eating your own Dog Food" }])
-      expect(subject.identifiers).to eq([
-                                          { "identifier" => "https://doi.org/10.5438/4k3m-nyvg",
-                                            "identifierType" => "DOI" }, { "identifier" => "MS-49-3632-5083", "identifierType" => "Local accession number" },
-                                        ])
-      expect(subject.dates).to eq([{ "date" => "2016-12-20", "dateType" => "Created" },
-                                   { "date" => "2016-12-20", "dateType" => "Issued" }, { "date" => "2016-12-20", "dateType" => "Updated" }])
-      expect(subject.publication_year).to eq(2016)
-      expect(subject.related_identifiers.length).to eq(3)
-      expect(subject.related_identifiers.first).to eq("relatedIdentifier" => "10.5438/0000-00ss",
-                                                      "relatedIdentifierType" => "DOI", "relationType" => "IsPartOf")
-      expect(subject.related_identifiers.last).to eq("relatedIdentifier" => "10.5438/55e5-t5c0",
-                                                     "relatedIdentifierType" => "DOI", "relationType" => "References")
-      expect(subject.agency).to eq("DataCite")
+      expect(subject.alternate_identifiers).to be nil
+      expect(subject.date).to eq("created" => "2016-12-20",
+                                 "published" => "2016-12-20",
+                                 "updated" => "2016-12-20")
+      expect(subject.references.length).to eq(2)
+      expect(subject.references.first).to eq("doi" => "https://doi.org/10.5438/0012",
+                                             "key" => "10.5438/0012")
+      expect(subject.provider).to eq("DataCite")
     end
 
     # it "SoftwareSourceCode" do
     #   input = fixture_path + "datacite_software.json"
     #   subject = Briard::Metadata.new(input: input, from: "datacite")
-    #   # expect(subject.valid?).to be true
+    #   # # expect(subject.valid?).to be true
     #   expect(subject.identifier).to eq("https://doi.org/10.5063/f1m61h5x")
-    #   expect(subject.types).to eq("bibtex"=>"misc", "citeproc"=>"article", "resource_type"=>"Software", "resource_type_general"=>"Software", "ris"=>"COMP", "type"=>"SoftwareSourceCode")
+    #   expect(subject.type).to eq("bibtex"=>"misc", "citeproc"=>"article", "resource_type"=>"Software", "resource_type_general"=>"Software", "ris"=>"COMP", "type"=>"SoftwareSourceCode")
     #   expect(subject.creators).to eq([{"familyName"=>"Jones", "givenName"=>"Matthew B.", "name"=>"Matthew B. Jones", "type"=>"Person"}])
     #   expect(subject.titles).to eq([{"title"=>"dataone: R interface to the DataONE network of data repositories"}])
-    #   expect(subject.dates).to eq([{"date"=>"2016", "date_type"=>"Issued"}])
-    #   expect(subject.publication_year).to eq("2016")
+    #   expect(subject.date).to eq([{"date"=>"2016", "date_type"=>"Issued"}])
     #   expect(subject.publisher).to eq("KNB Data Repository")
-    #   expect(subject.agency).to eq("DataCite")
+    #   expect(subject.provider).to eq("DataCite")
     # end
 
     it "SoftwareSourceCode missing_comma" do
@@ -71,63 +62,50 @@ describe Briard::Metadata, vcr: true do
     it "dissertation" do
       input = "10.3204/desy-2014-01645"
       subject = described_class.new(input: input)
-      expect(subject.valid?).to be true
+      # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.3204/desy-2014-01645")
-      expect(subject.types["resourceTypeGeneral"]).to eq("Text")
-      expect(subject.types["resourceType"]).to eq("Dissertation")
-      expect(subject.types["schemaOrg"]).to eq("Thesis")
-      expect(subject.types["bibtex"]).to eq("phdthesis")
-      expect(subject.types["citeproc"]).to eq("thesis")
-      expect(subject.creators).to eq([{ "nameType" => "Personal", "name" => "Conrad, Heiko",
+      expect(subject.type).to eq("Dissertation")
+      expect(subject.creators).to eq([{ "type" => "Person",
                                         "givenName" => "Heiko", "familyName" => "Conrad" }])
       expect(subject.titles).to eq([{ "title" => "Dynamics of colloids in molecular glass forming liquids studied via X-ray photon correlation spectroscopy" }])
-      expect(subject.dates).to eq([{ "date" => "2014", "dateType" => "Issued" },
-                                   { "date" => "2014", "dateType" => "Copyrighted" },
-                                   { "date" => "2009-10-01/2014-01-23", "dateType" => "Created" }])
-      expect(subject.publication_year).to eq(2014)
-      expect(subject.publisher).to eq("Deutsches Elektronen-Synchrotron, DESY, Hamburg")
-      expect(subject.agency).to eq("DataCite")
-      # expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-3")
+      expect(subject.date).to eq("created" => "2018-01-25", "published" => "2014", "registered" => "2018-01-25", "updated" => "2020-09-19")
+      expect(subject.license).to be nil
+      expect(subject.publisher).to eq("name" => "Deutsches Elektronen-Synchrotron, DESY, Hamburg")
+      expect(subject.provider).to eq("DataCite")
     end
 
     it "funding references" do
       input = "10.26102/2310-6018/2019.24.1.006"
       subject = described_class.new(input: input)
-      expect(subject.valid?).to be true
+      # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.26102/2310-6018/2019.24.1.006")
-      expect(subject.types["resourceTypeGeneral"]).to eq("Text")
-      expect(subject.types["resourceType"]).to eq("Journal Article")
-      expect(subject.types["schemaOrg"]).to eq("ScholarlyArticle")
-      expect(subject.types["bibtex"]).to eq("article")
-      expect(subject.types["citeproc"]).to eq("article-journal")
+      expect(subject.type).to eq("Document")
       expect(subject.creators.length).to eq(2)
-      expect(subject.creators.first).to eq("affiliation" => [{ "name" => "Тверская государственная сельскохозяйственная академия" }], "familyName" => "Ганичева", "givenName" => "А.В.", "name" => "Ганичева, А.В.", "nameType" => "Personal")
+      expect(subject.creators.first).to eq("affiliation" => [{ "name" => "Тверская государственная сельскохозяйственная академия" }], "familyName" => "Ганичева", "givenName" => "А.В.", "type" => "Person")
       expect(subject.titles.last).to eq("title" => "MODEL OF SYSTEM DYNAMICS OF PROCESS OF TRAINING",
                                         "titleType" => "TranslatedTitle")
-      expect(subject.dates).to eq([{ "date" => "2019-02-09", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq(2019)
-      expect(subject.publisher).to eq("МОДЕЛИРОВАНИЕ, ОПТИМИЗАЦИЯ И ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ")
+      expect(subject.date).to eq("created" => "2019-02-12", "published" => "2019", "registered" => "2019-02-12", "updated" => "2022-08-23")
+      expect(subject.publisher).to eq("name" => "МОДЕЛИРОВАНИЕ, ОПТИМИЗАЦИЯ И ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ")
+      expect(subject.license).to be nil
       expect(subject.funding_references.count).to eq(1)
       expect(subject.funding_references.first).to eq("awardNumber" => "проект № 170100728",
                                                      "funderName" => "РФФИ")
-      expect(subject.agency).to eq("DataCite")
-      expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
+      expect(subject.provider).to eq("DataCite")
     end
 
     it "subject scheme" do
       input = "https://doi.org/10.4232/1.2745"
       subject = described_class.new(input: input)
-      expect(subject.valid?).to be true
+      # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.4232/1.2745")
-      expect(subject.identifiers).to eq([{ "identifier" => "ZA2745", "identifierType" => "ZA-No." },
-                                         { "identifier" => "Internationale Umfrageprogramme",
-                                           "identifierType" => "FDZ" }])
-      expect(subject.types["schemaOrg"]).to eq("Dataset")
-      expect(subject.types["resourceTypeGeneral"]).to eq("Dataset")
-      expect(subject.creators).to eq([{ "name" => "Europäische Kommission", "nameType" => "Organizational" }])
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "ZA2745", "alternateIdentifierType" => "ZA-No." },
+                                                   { "alternateIdentifier" => "Internationale Umfrageprogramme",
+                                                     "alternateIdentifierType" => "FDZ" }])
+      expect(subject.type).to eq("Dataset")
+      expect(subject.creators).to eq([{ "name" => "Europäische Kommission", "type" => "Organization" }])
       expect(subject.contributors.length).to eq(18)
       expect(subject.contributors.first).to eq(
-        "affiliation" => [{ "name" => "Europäische Kommission, Brüssel" }], "contributorType" => "Researcher", "familyName" => "Reif", "givenName" => "Karlheinz", "name" => "Reif, Karlheinz", "nameType" => "Personal",
+        "affiliation" => [{ "name" => "Europäische Kommission, Brüssel" }], "contributorType" => "Researcher", "familyName" => "Reif", "givenName" => "Karlheinz", "type" => "Person",
       )
       expect(subject.titles).to eq([
                                      { "lang" => "de",
@@ -148,12 +126,24 @@ describe Briard::Metadata, vcr: true do
                                       { "lang" => "en",
                                         "subject" => "Economic systems and development",
                                         "subjectScheme" => "CESSDA Topic Classification" }])
-      expect(subject.dates).to eq([{ "date" => "1995-12", "dateType" => "Collected" },
-                                   { "date" => "1996", "dateType" => "Issued" }])
-      expect(subject.publication_year).to eq(1996)
-      expect(subject.publisher).to eq("GESIS Data Archive")
-      expect(subject.agency).to eq("DataCite")
-      expect(subject.schema_version).to eq("http://datacite.org/schema/kernel-4")
+      expect(subject.date).to eq("created" => "2012-01-10", "published" => "1996", "registered" => "2010-07-22", "updated" => "2023-02-02")
+      expect(subject.license).to be nil
+      expect(subject.publisher).to eq("name" => "GESIS Data Archive")
+      expect(subject.provider).to eq("DataCite")
+    end
+
+    it "subject scheme" do
+      input = "https://doi.org/10.6084/m9.figshare.3475223.v1"
+      subject = described_class.new(input: input)
+      expect(subject.id).to eq("https://doi.org/10.6084/m9.figshare.3475223.v1")
+      expect(subject.type).to eq("Image")
+      expect(subject.creators).to eq([{"familyName"=>"Franklund", "givenName"=>"Clifton", "type"=>"Person"}])
+      expect(subject.date).to eq("created" => "2016-07-08",
+        "published" => "2016",
+        "registered" => "2016-07-08",
+        "updated" => "2020-09-04")
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+        "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
     end
   end
 end

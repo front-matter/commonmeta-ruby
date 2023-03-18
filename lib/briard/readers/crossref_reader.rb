@@ -24,19 +24,19 @@ module Briard
         meta = string.present? ? JSON.parse(string) : {}
 
         # optionally strip out the message wrapper from API
-        meta = meta.dig('message') if meta.dig('message').present?
+        meta = meta.dig("message") if meta.dig("message").present?
 
         resource_type = meta.fetch("type", nil)
         resource_type = resource_type.present? ? resource_type.underscore.camelcase : nil
+        type = Briard::Utils::CR_TO_CM_TRANSLATIONS.fetch(resource_type, "Other")
 
-        types = {
-          "resourceTypeGeneral" => Briard::Utils::CR_TO_DC_TRANSLATIONS[resource_type] || "Text",
-          "resourceType" => resource_type,
-          "schemaOrg" => Briard::Utils::CR_TO_SO_TRANSLATIONS[resource_type] || "CreativeWork",
-          "citeproc" => Briard::Utils::CR_TO_CP_TRANSLATIONS[resource_type] || "article-journal",
-          "bibtex" => Briard::Utils::CR_TO_BIB_TRANSLATIONS[resource_type] || "misc",
-          "ris" => Briard::Utils::CR_TO_RIS_TRANSLATIONS[resource_type] || "GEN",
-        }.compact
+        member_id = meta.fetch("member", nil)
+        # TODO: get publisher from member_id almost always return publisher name, but sometimes does not
+        if member_id.present?
+          publisher = get_crossref_member(member_id)
+        else
+          publisher = meta.fetch("publisher", nil)
+        end
 
         creators = if meta.fetch("author", nil).present?
             get_authors(from_citeproc(Array.wrap(meta.fetch("author", nil))))
@@ -46,37 +46,24 @@ module Briard
         editors = Array.wrap(meta.fetch("editor", nil)).each { |e| e["contributorType"] = "Editor" }
         contributors = get_authors(from_citeproc(editors))
 
-        published_date = get_date_from_date_parts(meta.fetch("issued", nil)) || get_date_from_date_parts(meta.fetch("created", nil))
-        updated_date = get_date_from_date_parts(meta.fetch("deposited", nil))
-        dates = [{ "date" => published_date, "dateType" => "Issued" }]
-        dates << { "date" => updated_date, "dateType" => "Updated" } if updated_date.present?
-        publication_year = published_date.to_s[0..3].to_i
-        date_registered = get_date_from_date_parts(meta.fetch("registered", nil)) || get_date_from_date_parts(meta.fetch("created", nil))
+        date = {}
+        date["submitted"] = nil
+        date["accepted"] = meta.dig("accepted", "date-time")
+        date["published"] = meta.dig("issued", "date-time") || get_date_from_date_parts(meta.fetch("issued", nil)) || get_date_from_date_parts(meta.fetch("created", nil))
+        date["updated"] = meta.dig("updated", "date-time") || meta.dig("deposited", "date-time") || get_date_from_date_parts(meta.fetch("deposited", nil))
 
-        rights_list = if meta.fetch("license", nil)
-            [hsh_to_spdx("rightsURI" => meta.dig("license", 0, "URL"))]
+        # TODO: fix timestamp. Until then, remove time as this is not always stable with Crossref (different server timezones)
+        date["published"] = get_iso8601_date(date["published"]) if date["published"].present?
+        date["updated"] = get_iso8601_date(date["updated"]) if date["updated"].present?
+
+        license = if meta.fetch("license", nil)
+            hsh_to_spdx("rightsURI" => meta.dig("license", 0, "URL"))
           end
         issn = Array.wrap(meta.fetch("issn-type", nil)).find { |i| i["type"] == "electronic" } ||
                Array.wrap(meta.fetch("issn-type", nil)).find { |i| i["type"] == "print" } || {}
         issn = issn.fetch("value", nil) if issn.present?
 
-        related_identifiers = if meta.fetch("container-title",
-                                            nil).present? && issn.present?
-            [{ "relationType" => "IsPartOf",
-               "relatedIdentifierType" => "ISSN",
-               "resourceTypeGeneral" => "Collection",
-               "relatedIdentifier" => issn }.compact]
-          else
-            []
-          end
-        related_identifiers += Array.wrap(meta.fetch("reference", nil)).map do |ref|
-          doi = ref.fetch("DOI", nil)
-          next unless doi.present?
-
-          { "relationType" => "References",
-            "relatedIdentifierType" => "DOI",
-            "relatedIdentifier" => doi.downcase }
-        end.compact
+        references = Array.wrap(meta.fetch("reference", nil)).map { |r| get_reference(r) }
 
         funding_references = Array.wrap(meta.fetch("funder", nil)).reduce([]) do |sum, funding|
           funding_reference = {
@@ -113,7 +100,7 @@ module Briard
 
         container = { "type" => container_type,
                       "title" => parse_attributes(meta.fetch("container-title", nil), first: true).to_s.squish.presence,
-                      "identifier" =>issn.present? ? issn : nil,
+                      "identifier" => issn.present? ? issn : nil,
                       "identifierType" => issn.present? ? "ISSN" : nil,
                       "volume" => meta.fetch("volume", nil),
                       "issue" => meta.fetch("issue", nil),
@@ -132,35 +119,54 @@ module Briard
           sum
         end
         abstract = meta.fetch("abstract", nil)
-        agency = get_doi_ra(id)
+        provider = get_doi_ra(id)
 
         { "id" => id,
-          "types" => types,
-          "doi" => doi_from_url(id),
+          "type" => type,
           "url" => normalize_id(meta.dig("resource", "primary", "URL")),
           "titles" => [{ "title" => title }],
           "creators" => creators,
           "contributors" => contributors,
           "container" => container,
-          "publisher" => meta.fetch("publisher", nil),
-          "related_identifiers" => related_identifiers,
-          "dates" => dates,
-          "publication_year" => publication_year,
+          "publisher" => publisher,
+          "references" => references,
+          "date" => date.compact,
           "descriptions" => if abstract.present?
           [{ "description" => sanitize(abstract),
              "descriptionType" => "Abstract" }]
         else
           []
         end,
-          "rights_list" => rights_list,
-          "identifiers" => [],
+          "license" => license,
+          "alternate_identifiers" => [],
           "funding_references" => funding_references,
-          "version_info" => meta.fetch("version", nil),
+          "version" => meta.fetch("version", nil),
           "subjects" => subjects,
-          "agency" => agency,
-          "date_registered" => date_registered,
+          "provider" => provider,
           "schema_version" => "http://datacite.org/schema/kernel-4",
-          "state" => state }.merge(read_options)
+          "state" => state }.compact.merge(read_options)
+      end
+
+      def get_reference(reference)
+        return nil unless reference.present? || !reference.is_a?(Hash)
+
+        doi = reference.dig("DOI")
+        {
+          "key" => reference.dig("key"),
+          "doi" => doi ? normalize_doi(doi) : nil,
+          "creator" => reference.dig("author"),
+          "title" => reference.dig("article-title"),
+          "publisher" => reference.dig("publisher"),
+          "publicationYear" => reference.dig("year"),
+          "volume" => reference.dig("volume"),
+          "issue" => reference.dig("issue"),
+          "firstPage" => reference.dig("first-page"),
+          "lastPage" => reference.dig("last-page"),
+          "containerTitle" => reference.dig("journal-title"),
+          "edition" => nil,
+          "contributor" => nil,
+          "unstructured" => doi.nil? ? reference.dig("unstructured") : nil,
+        }.compact
       end
     end
   end

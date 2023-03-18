@@ -91,8 +91,8 @@ module Briard
     def container_title
       if container.present?
         container['title']
-      elsif types['csl'] == 'article-journal'
-        publisher
+      elsif type == 'Article'
+        publisher['name']
       end
     end
 
@@ -141,70 +141,37 @@ module Briard
                  to_citeproc(creators)
                end
 
-      type = if types['resourceTypeGeneral'] == 'Software' && version_info.present?
+      type_ = if type == 'Software' && version.present?
                'book'
              else
-               types['citeproc']
+               CM_TO_CSL_TRANSLATIONS.fetch(type, 'document')
              end
 
+      categories = Array.wrap(subjects).map do |k|
+        parse_attributes(k, content: 'subject', first: true)
+      end.presence
+
       {
-        'type' => type,
-        'id' => normalize_doi(doi),
-        'categories' => Array.wrap(subjects).map do |k|
-                          parse_attributes(k, content: 'subject', first: true)
-                        end.presence,
+        'type' => type_,
+        'id' => id,
+        'categories' => categories,
         'language' => language,
         'author' => author,
         'contributor' => to_citeproc(contributors),
-        'issued' => get_date_parts(get_date(dates, 'Issued') || publication_year.to_s),
-        'submitted' => Array.wrap(dates).find do |d|
-                         d['dateType'] == 'Submitted'
-                       end.to_h.fetch('__content__', nil),
+        'issued' => get_date_parts(date['published']),
+        'submitted' => date['submitted'] ? get_date_parts(date['submitted']) : nil,
         'abstract' => parse_attributes(descriptions, content: 'description', first: true),
         'container-title' => container_title,
-        'DOI' => doi,
+        'DOI' => doi_from_url(id),
         'volume' => container.to_h['volume'],
         'issue' => container.to_h['issue'],
         'page' => page,
-        'publisher' => publisher,
+        'publisher' => publisher['name'],
         'title' => parse_attributes(titles, content: 'title', first: true),
         'URL' => url,
-        'copyright' => Array.wrap(rights_list).map { |l| l['rights'] }.first,
-        'version' => version_info
+        'copyright' => license.to_h['id'],
+        'version' => version
       }.compact.symbolize_keys
-    end
-
-    def crosscite_hsh
-      {
-        'id' => normalize_doi(doi),
-        'doi' => doi,
-        'url' => url,
-        'types' => types,
-        'creators' => creators,
-        'titles' => titles,
-        'publisher' => publisher,
-        'container' => container,
-        'subjects' => subjects,
-        'contributors' => contributors,
-        'dates' => dates,
-        'publication_year' => publication_year,
-        'language' => language,
-        'identifiers' => identifiers,
-        'sizes' => sizes,
-        'formats' => formats,
-        'version' => version_info,
-        'rights_list' => rights_list,
-        'descriptions' => descriptions,
-        'geo_locations' => geo_locations,
-        'funding_references' => funding_references,
-        'related_identifiers' => related_identifiers,
-        'related_items' => related_items,
-        'schema_version' => schema_version,
-        'provider_id' => provider_id,
-        'client_id' => client_id,
-        'agency' => agency,
-        'state' => state
-      }.compact
     end
 
     def style

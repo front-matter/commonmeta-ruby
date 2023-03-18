@@ -86,12 +86,12 @@ module Briard
 
         meta = string.present? ? JSON.parse(string) : {}
 
-        identifiers = Array.wrap(meta.fetch("identifier", nil)).map do |r|
+        alternate_identifiers = Array.wrap(meta.fetch("identifier", nil)).map do |r|
           r = normalize_id(r) if r.is_a?(String)
           if r.is_a?(String) && URI(r).host != "doi.org"
-            { "identifierType" => "URL", "identifier" => r }
-          elsif r.is_a?(Hash)
-            { "identifierType" => get_identifier_type(r["propertyID"]), "identifier" => r["value"] }
+            { "alternate_identifier_type" => "URL", "alternate_identifier" => r }
+          elsif r.is_a?(Hash) && r["propertyID"] != "doi"
+            { "alternate_identifier_type" => get_identifier_type(r["propertyID"]), "alternate_identifier" => r["value"] }
           end
         end.compact.uniq
 
@@ -101,21 +101,14 @@ module Briard
         id = normalize_id(id)
 
         schema_org = meta.fetch("@type", nil) && meta.fetch("@type").camelcase
-        resource_type_general = Briard::Utils::SO_TO_DC_TRANSLATIONS[schema_org]
-        types = {
-          "resourceTypeGeneral" => resource_type_general,
-          "resourceType" => meta.fetch("additionalType", nil),
-          "schemaOrg" => schema_org,
-          "citeproc" => Briard::Utils::SO_TO_CP_TRANSLATIONS[schema_org] || "article-journal",
-          "bibtex" => Briard::Utils::SO_TO_BIB_TRANSLATIONS[schema_org] || "misc",
-          "ris" => Briard::Utils::SO_TO_RIS_TRANSLATIONS[resource_type_general.to_s.dasherize] || "GEN",
-        }.compact
+        type = Briard::Utils::SO_TO_CM_TRANSLATIONS[schema_org]
+        
         authors = meta.fetch("author", nil) || meta.fetch("creator", nil)
         # Authors should be an object, if it's just a plain string don't try and parse it.
         unless authors.is_a?(String)
-          creators = get_authors(from_schema_org_creators(Array.wrap(authors)))
+          creators = get_authors(from_schema_org(Array.wrap(authors)))
         end
-        contributors = get_authors(from_schema_org_contributors(Array.wrap(meta.fetch("editor",
+        contributors = get_authors(from_schema_org(Array.wrap(meta.fetch("editor",
                                                                                       nil))))
         publisher = parse_attributes(meta.fetch("publisher", nil), content: "name", first: true)
 
@@ -140,7 +133,7 @@ module Briard
             url = meta.dig("publisher", "url")
 
             {
-              "type" => "Blog",
+              "type" => "Periodical",
               "title" => meta.dig("isPartOf", "name"),
               "identifier" => issn.presence || url.presence,
               "identifierType" => issn.present? ? "ISSN" : "URL",
@@ -149,23 +142,13 @@ module Briard
             {}
           end
 
-        related_identifiers = Array.wrap(schema_org_is_identical_to(meta)) +
-                              Array.wrap(schema_org_is_part_of(meta)) +
-                              Array.wrap(schema_org_has_part(meta)) +
-                              Array.wrap(schema_org_is_previous_version_of(meta)) +
-                              Array.wrap(schema_org_is_new_version_of(meta)) +
-                              Array.wrap(schema_org_references(meta)) +
-                              Array.wrap(schema_org_is_referenced_by(meta)) +
-                              Array.wrap(schema_org_is_supplement_to(meta)) +
-                              Array.wrap(schema_org_is_supplemented_by(meta))
-
-        rights_list = Array.wrap(meta.fetch("license", nil)).compact.map do |rl|
-          if rl.is_a?(String)
-            hsh_to_spdx("rightsURI" => rl)
-          else
-            hsh_to_spdx("__content__" => rl["name"], "rightsURI" => rl["id"])
-          end
+        # treat these relationships as references
+        references = (Array.wrap(meta.fetch("citation", nil)) + Array.wrap(meta.fetch("isBasedOn", nil))).map do |r|
+          schema_org_reference(r)
         end
+
+        rights_uri = parse_attributes(meta.dig('license'), content: 'id') || meta.dig('license')
+        license = hsh_to_spdx("rightsURI" => rights_uri)
 
         funding_references = Array.wrap(meta.fetch("funder", nil)).compact.map do |fr|
           if fr["@id"].present?
@@ -180,22 +163,17 @@ module Briard
         end
 
         # strip milliseconds from iso8601, as edtf library doesn't handle them
-        dates = []
+        date = {}
         if Date.edtf(strip_milliseconds(meta.fetch("datePublished", nil))).present?
-          dates << { "date" => strip_milliseconds(meta.fetch("datePublished")),
-                     "dateType" => "Issued" }
+          date['published'] = strip_milliseconds(meta.fetch("datePublished"))
         end
         if Date.edtf(strip_milliseconds(meta.fetch("dateCreated", nil))).present?
-          dates << { "date" => strip_milliseconds(meta.fetch("dateCreated")),
-                     "dateType" => "Created" }
+          date['created'] =  strip_milliseconds(meta.fetch("dateCreated"))
         end
         if Date.edtf(strip_milliseconds(meta.fetch("dateModified", nil))).present?
-          dates << { "date" => strip_milliseconds(meta.fetch("dateModified")),
-                     "dateType" => "Updated" }
+          date['updated'] = strip_milliseconds(meta.fetch("dateModified"))
         end
-        publication_year = meta.fetch("datePublished")[0..3].to_i if meta.fetch("datePublished",
-                                                                                nil).present?
-
+        
         language = case meta.fetch("inLanguage", nil)
           when String
             meta.fetch("inLanguage")
@@ -239,9 +217,8 @@ module Briard
         schema_version = meta.fetch("schemaVersion", nil).to_s.presence || "http://datacite.org/schema/kernel-4"
 
         { "id" => id,
-          "types" => types,
-          "doi" => validate_doi(id),
-          "identifiers" => identifiers,
+          "type" => type,
+          "alternate_identifiers" => alternate_identifiers.presence,
           "url" => normalize_id(meta.fetch("url", nil)),
           "content_url" => Array.wrap(meta.fetch("contentUrl", nil)),
           "sizes" => Array.wrap(meta.fetch("contenSize", nil)),
@@ -254,18 +231,17 @@ module Briard
         end,
           "creators" => creators,
           "contributors" => contributors,
-          "publisher" => publisher,
-          "agency" => parse_attributes(meta.fetch("provider", nil), content: "name", first: true),
+          "publisher" => { 'name' => publisher },
+          "provider" => parse_attributes(meta.fetch("provider", nil), content: "name", first: true),
           "container" => container,
-          "related_identifiers" => related_identifiers,
-          "publication_year" => publication_year.to_i,
-          "dates" => dates,
+          "references" => references,
+          "date" => date,
           "descriptions" => if meta.fetch("description", nil).present?
           [{ "description" => sanitize(meta.fetch("description")),
              "descriptionType" => "Abstract" }]
         end,
-          "rights_list" => rights_list.presence,
-          "version_info" => meta.fetch("version", nil).to_s.presence,
+          "license" => license.presence,
+          "version" => meta.fetch("version", nil).to_s.presence,
           "subjects" => subjects,
           "language" => language,
           "state" => state,
@@ -274,14 +250,15 @@ module Briard
           "geo_locations" => geo_locations }.compact.merge(read_options)
       end
 
-      def schema_org_related_identifier(meta, relation_type: nil)
-        normalize_ids(ids: meta.fetch(relation_type, nil),
-                      relation_type: SO_TO_DC_RELATION_TYPES[relation_type])
-      end
+      # use separate fields for doi and url. Auto-generate key from doi or url
+      def schema_org_reference(reference)
+        id = normalize_id(reference.fetch("@id", nil))
+        doi = doi_from_url(id)
+        url = doi ? nil : normalize_url(id)
 
-      def schema_org_reverse_related_identifier(meta, relation_type: nil)
-        normalize_ids(ids: meta.dig("@reverse", relation_type),
-                      relation_type: SO_TO_DC_REVERSE_RELATION_TYPES[relation_type])
+        { "key" => id,
+          "doi" => doi,
+          "url" => url }.compact
       end
 
       def schema_org_is_identical_to(meta)

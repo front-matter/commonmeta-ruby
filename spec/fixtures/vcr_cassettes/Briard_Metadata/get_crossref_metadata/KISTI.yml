@@ -273,4 +273,58 @@ http_interactions:
         \             </journal_article>\r\n            </journal>\r\n          </crossref>\r\n
         \       </doi_record>\r\n      </query>\r\n    </body>\r\n  </query_result>\r\n</crossref_result>"
   recorded_at: Sun, 12 Mar 2023 22:26:59 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/2923
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Mar 2023 08:40:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1678837957265,"primary-name":"Korean
+        Chemical Society","counts":{"current-dois":0,"backfile-dois":9115,"total-dois":9115},"breakdowns":{"dois-by-issued-year":[[2011,1009],[2012,911],[2010,902],[2013,882],[2009,775],[2014,769],[2008,626],[2007,579],[2004,522],[2005,517],[2003,504],[2002,493],[2006,485],[2015,73],[2016,58],[2017,10]]},"prefixes":["10.5012"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":0.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.0,"licenses-backfile":0.0,"funders-current":0.0,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.0,"similarity-checking-backfile":1.0,"references-backfile":0.9804717498628635,"descriptions-backfile":0.0,"award-numbers-backfile":0.0,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.0,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"references-current":0.0},"prefix":[{"name":"Korean
+        Chemical Society","value":"10.5012"}],"id":2923,"tokens":["korean","chemical","society"],"counts-type":{"all":{"journal-article":9115},"backfile":{"journal-article":9115},"current":{}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1678837957265,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.9804717498628635,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1678837957265,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.9804717498628635,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":false,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-descriptions-current":false,"deposits-references-current":false,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":false,"deposits-licenses-current":false},"location":"South
+        Korea","names":["Korean Chemical Society"]}}'
+  recorded_at: Wed, 15 Mar 2023 08:40:19 GMT
 recorded_with: VCR 6.1.0

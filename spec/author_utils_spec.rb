@@ -10,24 +10,24 @@ describe Briard::Metadata, vcr: true do
   context "is_personal_name?" do
     it "has type organization" do
       author = { "email" => "info@ucop.edu", "name" => "University of California, Santa Barbara",
-                 "role" => { "namespace" => "http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_RoleCode", "roleCode" => "copyrightHolder" }, "nameType" => "Organizational" }
+                 "role" => { "namespace" => "http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_RoleCode", "roleCode" => "copyrightHolder" }, "type" => "Organization" }
       expect(subject.is_personal_name?(name: author["name"])).to be false
     end
 
     it "has id" do
       author = { "id" => "http://orcid.org/0000-0003-1419-2405", "givenName" => "Martin", "familyName" => "Fenner", "name" => "Martin Fenner" }
-      expect(subject.is_personal_name?(given_name: author["given_name"], name: author["name"])).to be true
+      expect(subject.is_personal_name?(name: author["name"])).to be true
     end
 
     it "has orcid id" do
       author = { "creatorName" => "Fenner, Martin", "givenName" => "Martin", "familyName" => "Fenner",
                  "nameIdentifier" => { "schemeURI" => "http://orcid.org/", "nameIdentifierScheme" => "ORCID", "__content__" => "0000-0003-1419-2405" } }
-      expect(subject.is_personal_name?(given_name: author["givenName"], name: author["creatorName"])).to be true
+      expect(subject.is_personal_name?(name: author["creatorName"])).to be true
     end
 
     it "has family name" do
       author = { "givenName" => "Martin", "familyName" => "Fenner", "name" => "Martin Fenner" }
-      expect(subject.is_personal_name?(given_name: author["givenName"], name: author["name"])).to be true
+      expect(subject.is_personal_name?(name: author["name"])).to be true
     end
 
     it "has comma" do
@@ -53,10 +53,8 @@ describe Briard::Metadata, vcr: true do
       meta = JSON.parse(subject.raw).dig("data", "attributes")
       response = subject.get_one_author(meta.dig("creators").first)
       expect(response).to eq(
-        "nameIdentifiers" => [{ "nameIdentifier" => "https://orcid.org/0000-0003-1419-2405",
-                                "nameIdentifierScheme" => "ORCID", "schemeUri" => "https://orcid.org" }],
-        "name" => "Fenner, Martin", "givenName" => "Martin", "familyName" => "Fenner",
-        "nameType" => "Personal",
+        "id" => "https://orcid.org/0000-0003-1419-2405",
+        "givenName" => "Martin", "familyName" => "Fenner", "type" => "Person",
       )
     end
 
@@ -65,15 +63,17 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input)
       meta = JSON.parse(subject.raw).dig("data", "attributes")
       response = subject.get_one_author(meta.dig("creators").first)
-      expect(response).to eq("nameType" => "Personal",
-                             "nameIdentifiers" => [{ "nameIdentifier" => "https://orcid.org/0000-0003-4881-1606", "nameIdentifierScheme" => "ORCID", "schemeUri" => "https://orcid.org" }], "name" => "Bedini, Andrea", "givenName" => "Andrea", "familyName" => "Bedini")
+      expect(response).to eq("type" => "Person",
+                             "id" => "https://orcid.org/0000-0003-4881-1606",
+                             "givenName" => "Andrea", "familyName" => "Bedini")
     end
 
     it "is organization" do
       author = { "email" => "info@ucop.edu",
-                 "creatorName" => { "__content__" => "University of California, Santa Barbara", "nameType" => "Organizational" }, "role" => { "namespace" => "http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_RoleCode", "roleCode" => "copyrightHolder" } }
+                 "name" => { "__content__" => "University of California, Santa Barbara" },
+                 "type" => "Organization", "role" => { "namespace" => "http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_RoleCode", "roleCode" => "copyrightHolder" } }
       response = subject.get_one_author(author)
-      expect(response).to eq("name" => "University of California, Santa Barbara", "nameType" => "Organizational")
+      expect(response).to eq("name" => "University of California, Santa Barbara", "type" => "Organization")
     end
 
     it "name with affiliation crossref" do
@@ -82,14 +82,15 @@ describe Briard::Metadata, vcr: true do
       response = subject.get_one_author(subject.creators.first)
       expect(response).to eq("affiliation" => [{ "name" => "Department of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland" }], "familyName" => "Sankar",
                              "givenName" => "Martial",
-                             "name" => "Sankar, Martial", "nameType" => "Personal")
+                             "type" => "Person")
     end
 
     it "only familyName and givenName" do
       input = "https://doi.pangaea.de/10.1594/PANGAEA.836178"
       subject = described_class.new(input: input, from: "schema_org")
-      expect(subject.creators.first).to eq("nameType" => "Personal", "name" => "Johansson, Emma",
-                                           "givenName" => "Emma", "familyName" => "Johansson")
+      response = subject.get_one_author(subject.creators.first)
+      expect(response).to eq("type" => "Person",
+                             "givenName" => "Emma", "familyName" => "Johansson")
     end
   end
 

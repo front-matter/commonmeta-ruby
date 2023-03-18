@@ -216,29 +216,6 @@ describe Briard::Metadata, vcr: true do
     end
   end
 
-  context "normalize ids" do
-    it "doi" do
-      ids = [{ "@type" => "CreativeWork", "@id" => "https://doi.org/10.5438/0012" },
-             { "@type" => "CreativeWork", "@id" => "https://doi.org/10.5438/55E5-T5C0" }]
-      response = subject.normalize_ids(ids: ids)
-      expect(response).to eq([{ "relatedIdentifier" => "10.5438/0012",
-                                "relatedIdentifierType" => "DOI",
-                                "resourceTypeGeneral" => "Text" },
-                              { "relatedIdentifier" => "10.5438/55e5-t5c0",
-                                "relatedIdentifierType" => "DOI",
-                                "resourceTypeGeneral" => "Text" }])
-    end
-
-    it "url" do
-      ids = [{ "@type" => "CreativeWork",
-               "@id" => "https://blog.datacite.org/eating-your-own-dog-food/" }]
-      response = subject.normalize_ids(ids: ids)
-      expect(response).to eq(
-        "relatedIdentifier" => "https://blog.datacite.org/eating-your-own-dog-food", "relatedIdentifierType" => "URL", "resourceTypeGeneral" => "Text",
-      )
-    end
-  end
-
   context "normalize url" do
     it "with trailing slash" do
       url = "http://creativecommons.org/publicdomain/zero/1.0/"
@@ -321,42 +298,6 @@ describe Briard::Metadata, vcr: true do
       response = subject.from_schema_org(author)
       expect(response).to eq("givenName" => "Martin", "familyName" => "Fenner",
                              "name" => "Martin Fenner", "type" => "Person", "id" => "http://orcid.org/0000-0003-1419-2405")
-    end
-  end
-
-  context "from_schema_org_creators" do
-    it "with affiliation" do
-      authors = [{ "@type" => "Person", "@id" => "http://orcid.org/0000-0003-1419-2405", "givenName" => "Martin", "familyName" => "Fenner", "name" => "Martin Fenner", "affiliation" => {
-        "@id" => "https://ror.org/04wxnsj81",
-        "name" => "DataCite",
-        "@type" => "Organization",
-      } }]
-      response = subject.from_schema_org_creators(authors)
-      expect(response).to eq([{ "nameType" => "Personal",
-                               "affiliation" => { "affiliationIdentifier" => "https://ror.org/04wxnsj81",
-                                                  "affiliationIdentifierScheme" => "ROR",
-                                                  "__content__" => "DataCite",
-                                                  "schemeUri" => "https://ror.org/" },
-                               "creatorName" => { "__content__" => "Martin Fenner",
-                                                  "nameType" => "Personal" },
-                               "familyName" => "Fenner",
-                               "givenName" => "Martin",
-                               "nameIdentifier" => [{ "__content__" => "http://orcid.org/0000-0003-1419-2405",
-                                                      "nameIdentifierScheme" => "ORCID",
-                                                      "schemeUri" => "https://orcid.org" }] }])
-    end
-
-    it "without affiliation" do
-      authors = [{ "@type" => "Person", "@id" => "http://orcid.org/0000-0003-1419-2405",
-                   "givenName" => "Martin", "familyName" => "Fenner", "name" => "Martin Fenner" }]
-      response = subject.from_schema_org_creators(authors)
-      expect(response).to eq([{ "nameType" => "Personal",
-                               "creatorName" => { "__content__" => "Martin Fenner", "nameType" => "Personal" },
-                               "familyName" => "Fenner",
-                               "givenName" => "Martin",
-                               "nameIdentifier" => [{ "__content__" => "http://orcid.org/0000-0003-1419-2405",
-                                                      "nameIdentifierScheme" => "ORCID",
-                                                      "schemeUri" => "https://orcid.org" }] }])
     end
   end
 
@@ -569,36 +510,37 @@ describe Briard::Metadata, vcr: true do
     it "name_to_spdx exists" do
       name = "Creative Commons Attribution 4.0 International"
       response = subject.name_to_spdx(name)
-      expect(response).to eq({ "rights" => "Creative Commons Attribution 4.0 International",
-                               "rightsUri" => "https://creativecommons.org/licenses/by/4.0/legalcode", "rightsIdentifier" => "CC-BY-4.0", "rightsIdentifierScheme" => "SPDX", "schemeUri" => "https://spdx.org/licenses/" })
+      expect(response).to eq("id" => "CC-BY-4.0",
+           "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
     end
 
     it "name_to_spdx id" do
       name = "CC-BY-4.0"
       response = subject.name_to_spdx(name)
-      expect(response).to eq({ "rights" => "Creative Commons Attribution 4.0 International",
-                               "rightsUri" => "https://creativecommons.org/licenses/by/4.0/legalcode", "rightsIdentifier" => "CC-BY-4.0", "rightsIdentifierScheme" => "SPDX", "schemeUri" => "https://spdx.org/licenses/" })
+      expect(response).to eq("id" => "CC-BY-4.0",
+                             "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
     end
 
     it "hsh_to_spdx id" do
       hsh = { "rightsIdentifier" => "CC-BY-4.0" }
       response = subject.hsh_to_spdx(hsh)
-      expect(response).to eq({ "rights" => "Creative Commons Attribution 4.0 International",
-                               "rightsUri" => "https://creativecommons.org/licenses/by/4.0/legalcode", "rightsIdentifier" => "CC-BY-4.0", "rightsIdentifierScheme" => "SPDX", "schemeUri" => "https://spdx.org/licenses/" })
+      expect(response).to eq("id" => "CC-BY-4.0",
+                             "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
     end
 
     it "hsh_to_spdx url" do
       hsh = { "rightsURI" => "http://creativecommons.org/licenses/by-nc/4.0/legalcode" }
       response = subject.hsh_to_spdx(hsh)
       expect(response).to eq(
-        "rights" => "Creative Commons Attribution Non Commercial 4.0 International", "rightsUri" => "https://creativecommons.org/licenses/by-nc/4.0/legalcode", "rightsIdentifier" => "CC-BY-NC-4.0", "rightsIdentifierScheme" => "SPDX", "schemeUri" => "https://spdx.org/licenses/",
+        "id" => "CC-BY-NC-4.0",
+        "url" => "https://creativecommons.org/licenses/by-nc/4.0/legalcode",
       )
     end
 
     it "hsh_to_spdx not found" do
       hsh = { "rightsURI" => "info:eu-repo/semantics/openAccess" }
       response = subject.hsh_to_spdx(hsh)
-      expect(response).to eq({ "rightsUri" => "info:eu-repo/semantics/openAccess" })
+      expect(response).to eq({ "url" => "info:eu-repo/semantics/openAccess" })
     end
   end
 

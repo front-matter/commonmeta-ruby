@@ -140,4 +140,60 @@ http_interactions:
           }
         ]
   recorded_at: Sun, 12 Mar 2023 22:21:21 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/1968
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 15 Mar 2023 21:14:54 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1678837341366,"primary-name":"MDPI
+        AG","counts":{"current-dois":638164,"backfile-dois":505601,"total-dois":1143765},"breakdowns":{"dois-by-issued-year":[[2022,311424],[2021,251392],[2020,175720],[2019,115014],[2023,75348],[2018,74960],[2017,41693],[2016,25840],[2015,18955],[2014,13512],[2013,10327],[2012,8225],[2011,5875],[2010,5277],[2009,3144],[2008,1977],[2007,1121],[2006,712],[2000,610],[2005,577],[2004,426],[2003,403],[2001,339],[2002,324],[1999,212],[1997,167],[1998,144],[1996,47]]},"prefixes":["10.1989","10.32545","10.20944","10.3390","10.35995"],"coverage":{"affiliations-current":0.0862568242646091,"similarity-checking-current":0.9679549457506221,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.2771454170383366,"licenses-backfile":0.9751048751881424,"funders-current":0.5476601625914342,"affiliations-backfile":7.100460639911709E-4,"resource-links-backfile":0.007185507940055498,"orcids-backfile":0.5620439832990837,"update-policies-current":0.001634376116484164,"ror-ids-backfile":0.0,"orcids-current":0.8653935352041168,"similarity-checking-backfile":0.9381528121977607,"references-backfile":0.8995413379324804,"descriptions-backfile":0.0,"award-numbers-backfile":0.2742874321846674,"update-policies-backfile":0.001861151382216412,"licenses-current":0.9922073322844911,"award-numbers-current":0.5316266664995205,"abstracts-backfile":0.673600329113273,"resource-links-current":7.521577525526354E-5,"abstracts-current":0.9845447251803612,"references-current":0.9599648366250682},"prefix":[{"name":"MDPI","value":"10.1989"},{"name":"MDPI
+        AG - Encyclopedia","value":"10.32545"},{"name":"MDPI AG","value":"10.20944"},{"name":"MDPI
+        AG","value":"10.3390"},{"name":"Journal and Article Management System","value":"10.35995"}],"id":1968,"tokens":["mdpi","ag"],"counts-type":{"all":{"monograph":3,"journal-article":1082900,"book":5864,"proceedings-article":19005,"journal":103,"component":100,"book-chapter":239,"posted-content":35717,"journal-issue":40,"dataset":1},"backfile":{"journal-article":470241,"book":2569,"proceedings-article":12602,"book-chapter":138,"posted-content":20011,"journal-issue":40},"current":{"monograph":3,"journal-article":612659,"book":3295,"proceedings-article":6403,"book-chapter":98,"posted-content":15706}},"coverage-type":{"all":{"monograph":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1678837341366,"affiliations":0.05080339828238988,"abstracts":0.8619724813002124,"orcids":0.7422975343983746,"licenses":0.9970920675962693,"references":0.9820796010711977,"funders":0.4519540123741804,"similarity-checking":0.997482685381845,"award-numbers":0.4411801643734417,"ror-ids":0.0,"update-policies":0.001829347123464771,"resource-links":0.003399205836180626,"descriptions":0.0},"book":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1678837341366,"affiliations":0.02052091554853986,"abstracts":0.0,"orcids":0.4504604051565378,"licenses":0.6246250986582478,"references":0.2067876874506709,"funders":0.01057616416732439,"similarity-checking":0.6246250986582478,"award-numbers":0.01004998684556696,"ror-ids":0.0,"update-policies":1.578531965272297E-4,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.99},"book-chapter":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.9923565808998516,"orcids":0.6730128510233222,"licenses":0.9682504129686144,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dataset":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":1.0,"references":1.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1678837341366,"affiliations":7.591851837674724E-4,"abstracts":0.6822778107395995,"orcids":0.5688870175080437,"licenses":0.9934310279197263,"references":0.9667744837221764,"funders":0.2977919832596477,"similarity-checking":0.9943305666668792,"award-numbers":0.2947403565405824,"ror-ids":0.0,"update-policies":0.001998974993673457,"resource-links":0.00772582569363369,"descriptions":0.0},"book":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1678837341366,"affiliations":1.587049674654817E-4,"abstracts":0.0,"orcids":0.333121726710046,"licenses":0.5361053800983971,"references":0.01523567687668624,"funders":0.007221076019679416,"similarity-checking":0.5361053800983971,"award-numbers":0.006427551182352008,"ror-ids":0.0,"update-policies":7.935248373274083E-5,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.9863575033731448,"orcids":0.622557593323672,"licenses":0.9547748738193993,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"monograph":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1678837341366,"affiliations":0.0892143916926055,"abstracts":0.9998955373217402,"orcids":0.8753972438175233,"licenses":0.9999020662391314,"references":0.9938269086065821,"funders":0.5702797151433342,"similarity-checking":0.9999020662391314,"award-numbers":0.5535787444565411,"ror-ids":0.0,"update-policies":0.001699150751070334,"resource-links":7.834700869488574E-5,"descriptions":0.0},"book":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1678837341366,"affiliations":0.06059659534593159,"abstracts":0.0,"orcids":0.6813993440574732,"licenses":0.7988442917382477,"references":0.583788848977042,"funders":0.01717944713415586,"similarity-checking":0.7988442917382477,"award-numbers":0.01717944713415586,"ror-ids":0.0,"update-policies":3.123535842573794E-4,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1678837341366,"affiliations":0.0,"abstracts":1.0,"orcids":0.7372978479561951,"licenses":0.9854195848720234,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"Basel,
+        Switzerland","names":["MDPI AG","MDPI","MDPI AG - Encyclopedia","Journal and
+        Article Management System"]}}'
+  recorded_at: Wed, 15 Mar 2023 21:14:54 GMT
 recorded_with: VCR 6.1.0

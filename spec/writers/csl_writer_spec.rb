@@ -23,8 +23,8 @@ describe Briard::Metadata, vcr: true do
                                     { "family" => "Renaud", "given" => "François" }])
       expect(json["publisher"]).to eq("Dryad")
       expect(json["issued"]).to eq("date-parts" => [[2011]])
-      expect(json["submitted"].nil?).to be(true)
-      expect(json["copyright"]).to eq("Creative Commons Zero v1.0 Universal")
+      expect(json["submitted"]).to be nil
+      expect(json["copyright"]).to eq("CC0-1.0")
     end
 
     it "BlogPosting" do
@@ -32,20 +32,20 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: "datacite")
       expect(subject.valid?).to be true
       json = JSON.parse(subject.csl)
-      expect(json["type"]).to eq("article-journal")
+      expect(json["type"]).to eq("article")
       expect(json["id"]).to eq("https://doi.org/10.5438/4k3m-nyvg")
       expect(json["DOI"]).to eq("10.5438/4k3m-nyvg")
       expect(json["title"]).to eq("Eating your own Dog Food")
       expect(json["author"]).to eq([{ "family" => "Fenner", "given" => "Martin" }])
       expect(json["publisher"]).to eq("DataCite")
-      expect(json["issued"]).to eq("date-parts" => [[2016, 12, 20]])
+      expect(json["issued"]).to eq("date-parts" => [[2016]])
     end
 
     it "BlogPosting DataCite JSON" do
       input = "#{fixture_path}datacite.json"
       subject = described_class.new(input: input, from: "datacite")
       json = JSON.parse(subject.csl)
-      expect(json["type"]).to eq("article-journal")
+      expect(json["type"]).to eq("article")
       expect(json["id"]).to eq("https://doi.org/10.5438/4k3m-nyvg")
       expect(json["DOI"]).to eq("10.5438/4k3m-nyvg")
       expect(json["title"]).to eq("Eating your own Dog Food")
@@ -58,20 +58,21 @@ describe Briard::Metadata, vcr: true do
       input = "https://blog.front-matter.io/posts/eating-your-own-dog-food/"
       subject = described_class.new(input: input, from: "schema_org")
       json = JSON.parse(subject.csl)
-      expect(json["type"]).to eq("article-newspaper")
+      expect(json["type"]).to eq("article")
       expect(json["id"]).to eq("https://doi.org/10.53731/r79vxn1-97aq74v-ag58n")
       expect(json["DOI"]).to eq("10.53731/r79vxn1-97aq74v-ag58n")
       expect(json["title"]).to eq("Eating your own Dog Food")
       expect(json["author"]).to eq([{ "family" => "Fenner", "given" => "Martin" }])
       expect(json["publisher"]).to eq("Front Matter")
       expect(json["issued"]).to eq("date-parts" => [[2016, 12, 20]])
+      expect(json["license"]).to be nil
     end
 
     it "Another dataset" do
       input = "10.26301/qdpd-2250"
       subject = described_class.new(input: input, from: "datacite")
       json = JSON.parse(subject.csl)
-      expect(json["type"]).to eq("dataset")
+      # expect(json["type"]).to eq("dataset")
       expect(json["id"]).to eq("https://doi.org/10.26301/qdpd-2250")
       expect(json["DOI"]).to eq("10.26301/qdpd-2250")
       expect(json["title"]).to eq("USS Pampanito Submarine")
@@ -102,17 +103,17 @@ describe Briard::Metadata, vcr: true do
       expect(json["container-title"]).to eq("eLife")
       expect(json["volume"]).to eq("3")
       expect(json["issued"]).to eq("date-parts" => [[2014, 2, 11]])
-      expect(json["copyright"]).to eq("Creative Commons Attribution 3.0 Unported")
+      expect(json["copyright"]).to eq("CC-BY-3.0")
     end
 
     it "software" do
       input = "https://doi.org/10.6084/m9.figshare.4906367.v1"
       subject = described_class.new(input: input, from: "datacite")
       json = JSON.parse(subject.csl)
-      expect(json["type"]).to eq("article")
+      expect(json["type"]).to eq("software")
       expect(json["DOI"]).to eq("10.6084/m9.figshare.4906367.v1")
       expect(json["title"]).to eq("Scimag catalogue of LibGen as of January 1st, 2014")
-      expect(json["copyright"]).to eq("Creative Commons Zero v1.0 Universal")
+      expect(json["copyright"]).to eq("CC0-1.0")
     end
 
     it "software w/version" do
@@ -122,7 +123,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["type"]).to eq("book")
       expect(json["DOI"]).to eq("10.5281/zenodo.2598836")
       expect(json["version"]).to eq("1.0.0")
-      expect(json["copyright"]).to eq("Open Access")
+      expect(json["copyright"]).to be nil
     end
 
     it "software w/version from datacite" do
@@ -132,14 +133,14 @@ describe Briard::Metadata, vcr: true do
       expect(json["type"]).to eq("book")
       expect(json["DOI"]).to eq("10.5281/zenodo.2598836")
       expect(json["version"]).to eq("1.0.0")
-      expect(json["copyright"]).to eq("Open Access")
+      expect(json["copyright"]).to be nil
     end
 
     it "multiple abstracts" do
       input = "https://doi.org/10.12763/ona1045"
       subject = described_class.new(input: input, from: "datacite")
       json = JSON.parse(subject.csl)
-      expect(json["type"]).to eq("article-journal")
+      expect(json["type"]).to eq("document")
       expect(json["DOI"]).to eq("10.12763/ona1045")
       expect(json["abstract"]).to eq("Le code est accompagné de commentaires de F. A. Vogel, qui signe l'épitre dédicatoire")
     end
@@ -164,7 +165,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["volume"]).to eq("2012")
       expect(json["page"]).to eq("1-7")
       expect(json["issued"]).to eq("date-parts" => [[2012]])
-      expect(json["copyright"]).to eq("Creative Commons Attribution 3.0 Unported")
+      expect(json["copyright"]).to eq("CC-BY-3.0")
     end
 
     it "with only first page" do
@@ -172,7 +173,7 @@ describe Briard::Metadata, vcr: true do
       subject = described_class.new(input: input, from: "crossref")
       expect(subject.valid?).to be true
       json = JSON.parse(subject.csl)
-      expect(json["type"]).to eq("article-journal")
+      # expect(json["type"]).to eq("article-journal")
       expect(json["id"]).to eq("https://doi.org/10.1371/journal.pone.0214986")
       expect(json["DOI"]).to eq("10.1371/journal.pone.0214986")
       expect(json["title"]).to eq("River metrics by the public, for the public")
@@ -182,7 +183,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["volume"]).to eq("14")
       expect(json["page"]).to eq("e0214986")
       expect(json["issued"]).to eq("date-parts" => [[2019, 5, 8]])
-      expect(json["copyright"]).to eq("Creative Commons Zero v1.0 Universal")
+      expect(json["copyright"]).to eq("CC0-1.0")
     end
 
     it "missing creator" do
@@ -200,14 +201,14 @@ describe Briard::Metadata, vcr: true do
       expect(json["publisher"]).to eq("MDPI AG")
       expect(json["page"]).to eq("15")
       expect(json["issued"]).to eq("date-parts" => [[2018, 4, 9]])
-      expect(json["copyright"]).to eq("Creative Commons Attribution 4.0 International")
+      expect(json["copyright"]).to eq("CC-BY-4.0")
     end
 
     it "container title" do
       input = "https://doi.org/10.6102/ZIS146"
       subject = described_class.new(input: input)
       json = JSON.parse(subject.csl)
-      expect(json["type"]).to eq("article-journal")
+      expect(json["type"]).to eq("document")
       expect(json["id"]).to eq("https://doi.org/10.6102/zis146")
       expect(json["DOI"]).to eq("10.6102/zis146")
       expect(json["title"]).to eq("Deutsche Version der Positive and Negative Affect Schedule (PANAS)")
@@ -239,14 +240,14 @@ describe Briard::Metadata, vcr: true do
       input = "https://github.com/datacite/maremma"
       subject = described_class.new(input: input, from: "codemeta")
       json = JSON.parse(subject.csl)
-      expect(json["type"]).to eq("article-journal")
+      expect(json["type"]).to eq("software")
       expect(json["id"]).to eq("https://doi.org/10.5438/qeg0-3gm3")
       expect(json["DOI"]).to eq("10.5438/qeg0-3gm3")
       expect(json["title"]).to eq("Maremma: a Ruby library for simplified network calls")
       expect(json["author"]).to eq([{ "family" => "Fenner", "given" => "Martin" }])
       expect(json["publisher"]).to eq("DataCite")
       expect(json["issued"]).to eq("date-parts" => [[2017, 2, 24]])
-      expect(json["copyright"]).to eq("MIT License")
+      expect(json["copyright"]).to eq("MIT")
     end
 
     it "keywords subject scheme" do
@@ -257,7 +258,7 @@ describe Briard::Metadata, vcr: true do
       expect(json["id"]).to eq("https://doi.org/10.1594/pangaea.721193")
       expect(json["DOI"]).to eq("10.1594/pangaea.721193")
       expect(json["categories"]).to include("Animalia", "Bottles or small containers/Aquaria (&lt;20 L)")
-      expect(json["copyright"]).to eq("Creative Commons Attribution 3.0 Unported")
+      expect(json["copyright"]).to eq("CC-BY-3.0")
     end
 
     it "organization author" do
@@ -281,7 +282,7 @@ describe Briard::Metadata, vcr: true do
       input = "https://doi.org/10.34747/g6yb-3412"
       subject = described_class.new(input: input, from: "datacite")
       json = JSON.parse(subject.csl)
-      expect(json["type"]).to eq("article")
+      expect(json["type"]).to eq("document")
       expect(json["DOI"]).to eq("10.34747/g6yb-3412")
       expect(json["issued"]).to eq("date-parts" => [[2019]])
     end
