@@ -703,7 +703,7 @@ module Commonmeta
 
     def to_schema_org(element)
       mapping = { "type" => "@type", "id" => "@id", "title" => "name" }
-      
+
       map_hash_keys(element: element, mapping: mapping)
     end
 
@@ -866,7 +866,7 @@ module Commonmeta
       }
     end
 
-    def from_citeproc(element)
+    def from_csl(element)
       Array.wrap(element).map do |a|
         if a["literal"].present?
           a["type"] = "Organization"
@@ -882,7 +882,7 @@ module Commonmeta
       end.unwrap
     end
 
-    def to_citeproc(element)
+    def to_csl(element)
       Array.wrap(element).map do |a|
         a["family"] = a["familyName"]
         a["given"] = a["givenName"]

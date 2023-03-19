@@ -17,8 +17,8 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input, from: "crossref_xml")
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.7554/elife.01567")
-      expect(subject.alternate_identifiers).to eq([{"alternateIdentifier"=>"e01567",
-          "alternateIdentifierType"=>"article_number"}])
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "e01567",
+                                                     "alternateIdentifierType" => "article_number" }])
       expect(subject.type).to eq("JournalArticle")
       expect(subject.url).to eq("https://elifesciences.org/articles/01567")
       expect(subject.creators.length).to eq(5)
@@ -206,7 +206,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.descriptions.first["description"]).to start_with("This article presents a practical roadmap")
       expect(subject.date).to include("published" => "2017-10-09",
                                       "registered" => "2019-07-16",
-                                      "updated" => "2020-01-18")
+                                      "updated" => "2020-01-17")
       expect(subject.publisher).to eq("name" => "Cold Spring Harbor Laboratory")
       expect(subject.provider).to eq("Crossref")
     end
@@ -306,8 +306,8 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input, from: "crossref_xml")
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1016/j.ejphar.2015.03.018")
-      expect(subject.alternate_identifiers).to eq([{"alternateIdentifier"=>"S0014299915002332",
-         "alternateIdentifierType"=>"sequence-number"}])
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "S0014299915002332",
+                                                     "alternateIdentifierType" => "sequence-number" }])
       expect(subject.url).to eq("https://linkinghub.elsevier.com/retrieve/pii/S0014299915002332")
       expect(subject.type).to eq("JournalArticle")
       expect(subject.creators.length).to eq(10)
@@ -374,8 +374,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.descriptions).to eq([{ "description" => "x-ray diffraction structure",
                                             "descriptionType" => "Other" }])
       expect(subject.date).to include("published" => "1984-07-17",
-                                      "registered" => "2023-02-07",
-                                      "updated" => "2023-02-07")
+                "registered" => "2023-03-14",
+                "updated" => "2023-03-14")
       expect(subject.publisher).to eq("name" => "Worldwide Protein Data Bank")
       expect(subject.provider).to eq("Crossref")
     end
@@ -548,8 +548,8 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input, from: "crossref_xml")
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1029/ar035")
-      expect(subject.alternate_identifiers).to eq([{"alternateIdentifier"=>"0-87590-181-6",
-          "alternateIdentifierType"=>"ISBN"}])
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "0-87590-181-6",
+                                                     "alternateIdentifierType" => "ISBN" }])
       expect(subject.url).to eq("http://doi.wiley.com/10.1029/AR035")
       expect(subject.type).to eq("Book")
       expect(subject.creators).to eq([{ "familyName" => "McGinnis", "givenName" => "Richard Frank",
@@ -577,7 +577,7 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input, from: "crossref_xml")
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.3280/ecag2018-001005")
-      expect(subject.alternate_identifiers).to eq([{"alternateIdentifier"=>"5", "alternateIdentifierType"=>"article_number"}])
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "5", "alternateIdentifierType" => "article_number" }])
       expect(subject.url).to eq("http://www.francoangeli.it/riviste/Scheda_Riviste.asp?IDArticolo=61645")
       expect(subject.type).to eq("JournalArticle")
       expect(subject.creators.length).to eq(2)
@@ -919,7 +919,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.descriptions.empty?).to be(true)
       expect(subject.date).to include("published" => "2010-01-01",
                                       "registered" => "2010-02-18",
-                                      "updated" => "2010-02-19")
+                                      "updated" => "2010-02-18")
       expect(subject.publisher).to eq("name" => "Office of Scientific and Technical Information (OSTI)")
       expect(subject.provider).to eq("Crossref")
     end

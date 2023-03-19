@@ -102,14 +102,14 @@ module Commonmeta
 
         schema_org = meta.fetch("@type", nil) && meta.fetch("@type").camelcase
         type = Commonmeta::Utils::SO_TO_CM_TRANSLATIONS[schema_org]
-        
+
         authors = meta.fetch("author", nil) || meta.fetch("creator", nil)
         # Authors should be an object, if it's just a plain string don't try and parse it.
         unless authors.is_a?(String)
           creators = get_authors(from_schema_org(Array.wrap(authors)))
         end
         contributors = get_authors(from_schema_org(Array.wrap(meta.fetch("editor",
-                                                                                      nil))))
+                                                                         nil))))
         publisher = parse_attributes(meta.fetch("publisher", nil), content: "name", first: true)
 
         ct = schema_org == "Dataset" ? "includedInDataCatalog" : "Periodical"
@@ -147,7 +147,7 @@ module Commonmeta
           schema_org_reference(r)
         end
 
-        rights_uri = parse_attributes(meta.dig('license'), content: 'id') || meta.dig('license')
+        rights_uri = parse_attributes(meta.dig("license"), content: "id") || meta.dig("license")
         license = hsh_to_spdx("rightsURI" => rights_uri)
 
         funding_references = Array.wrap(meta.fetch("funder", nil)).compact.map do |fr|
@@ -165,15 +165,15 @@ module Commonmeta
         # strip milliseconds from iso8601, as edtf library doesn't handle them
         date = {}
         if Date.edtf(strip_milliseconds(meta.fetch("datePublished", nil))).present?
-          date['published'] = strip_milliseconds(meta.fetch("datePublished"))
+          date["published"] = strip_milliseconds(meta.fetch("datePublished"))
         end
         if Date.edtf(strip_milliseconds(meta.fetch("dateCreated", nil))).present?
-          date['created'] =  strip_milliseconds(meta.fetch("dateCreated"))
+          date["created"] = strip_milliseconds(meta.fetch("dateCreated"))
         end
         if Date.edtf(strip_milliseconds(meta.fetch("dateModified", nil))).present?
-          date['updated'] = strip_milliseconds(meta.fetch("dateModified"))
+          date["updated"] = strip_milliseconds(meta.fetch("dateModified"))
         end
-        
+
         language = case meta.fetch("inLanguage", nil)
           when String
             meta.fetch("inLanguage")
@@ -231,7 +231,7 @@ module Commonmeta
         end,
           "creators" => creators,
           "contributors" => contributors,
-          "publisher" => { 'name' => publisher },
+          "publisher" => { "name" => publisher },
           "provider" => parse_attributes(meta.fetch("provider", nil), content: "name", first: true),
           "container" => container,
           "references" => references,

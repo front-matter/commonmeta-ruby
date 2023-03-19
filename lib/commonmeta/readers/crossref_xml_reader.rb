@@ -122,7 +122,7 @@ module Commonmeta
           end
 
         date = {}
-        date["published"] = crossref_date_published(bibmeta) || Array.wrap(query.to_h["crm_item"]).find { |cr| cr["name"] == "created" }
+        date["published"] = crossref_date_published(bibmeta) #|| Array.wrap(query.to_h["crm_item"]).find { |cr| cr["name"] == "created" }
         date["updated"] = parse_attributes(Array.wrap(query.to_h["crm_item"]).find { |cr| cr["name"] == "last-update" })
         date["registered"] = Array.wrap(query.to_h["crm_item"]).find do |cr|
           cr["name"] == "deposit-timestamp"
@@ -183,7 +183,6 @@ module Commonmeta
         # Let sections override this in case of alternative metadata structures, such as book chapters, which
         # have their meta inside `content_item`, but the main book indentifers inside of `book_metadata`
         alternate_identifiers ||= crossref_alternate_identifiers(bibmeta)
-        puts alternate_identifiers
         url = parse_attributes(bibmeta.dig("doi_data", "resource"),
                                first: true)
         url = normalize_url(url) if url.present?
@@ -224,7 +223,7 @@ module Commonmeta
         elsif parse_attributes(bibmeta.fetch("item_number", nil)).present?
           [{ "alternateIdentifier" => parse_attributes(bibmeta.fetch("item_number", nil)),
             "alternateIdentifierType" => parse_attributes(bibmeta.dig("item_number",
-                                                             "item_number_type")) || "Publisher ID" }]
+                                                                      "item_number_type")) || "Publisher ID" }]
         elsif parse_attributes(bibmeta.fetch("isbn", nil)).present?
           [{ "alternateIdentifier" => parse_attributes(bibmeta.fetch("isbn", nil), first: true),
              "alternateIdentifierType" => "ISBN" }]

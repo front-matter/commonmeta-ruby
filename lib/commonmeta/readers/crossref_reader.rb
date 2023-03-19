@@ -39,12 +39,12 @@ module Commonmeta
         end
 
         creators = if meta.fetch("author", nil).present?
-            get_authors(from_citeproc(Array.wrap(meta.fetch("author", nil))))
+            get_authors(from_csl(Array.wrap(meta.fetch("author", nil))))
           else
             []
           end
         editors = Array.wrap(meta.fetch("editor", nil)).each { |e| e["contributorType"] = "Editor" }
-        contributors = get_authors(from_citeproc(editors))
+        contributors = get_authors(from_csl(editors))
 
         date = {}
         date["submitted"] = nil

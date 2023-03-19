@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'commonmeta/cli'
 
 describe Commonmeta::CLI do
   context 'find_from_format_by_id', vcr: true do

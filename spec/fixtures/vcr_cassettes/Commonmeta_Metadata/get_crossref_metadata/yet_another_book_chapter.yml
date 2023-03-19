@@ -1,0 +1,324 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.4018/978-1-4666-1891-6.ch004/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:37:08 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.4018/978-1-4666-1891-6.ch004>; rel="canonical", <https://www.igi-global.com/viewtitle.aspx?TitleId=69071>;
+        version="vor"; rel="item"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIiB2ZXJzaW9uPSIzLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIGh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3NjaGVtYXMvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0My4wLnhzZCI+DQogIDxxdWVyeV9yZXN1bHQ+DQogICAgPGhlYWQ+DQogICAgICA8ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICA8cXVlcnkgc3RhdHVzPSJyZXNvbHZlZCI+DQogICAgICAgIDxkb2kgdHlwZT0iYm9va19jb250ZW50Ij4xMC40MDE4Lzk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0PC9kb2k+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJwdWJsaXNoZXItbmFtZSIgdHlwZT0ic3RyaW5nIj5JR0kgR2xvYmFsPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9InByZWZpeC1uYW1lIiB0eXBlPSJzdHJpbmciPklHSSBHbG9iYWw8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0ibWVtYmVyLWlkIiB0eXBlPSJudW1iZXIiPjI0MzI8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iY2l0YXRpb24taWQiIHR5cGU9Im51bWJlciI+NTY5ODcwMTc8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iYm9vay1pZCIgdHlwZT0ibnVtYmVyIj4xMTMxMTk4PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImRlcG9zaXQtdGltZXN0YW1wIiB0eXBlPSJudW1iZXIiPjIwMTgxMTE5MDExMjU5PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9Im93bmVyLXByZWZpeCIgdHlwZT0ic3RyaW5nIj4xMC40MDE4PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9Imxhc3QtdXBkYXRlIiB0eXBlPSJkYXRlIj4yMDE5LTA3LTAyVDE3OjE3OjIxWjwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJjcmVhdGVkIiB0eXBlPSJkYXRlIj4yMDEyLTA4LTA4VDIwOjU0OjA3WjwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJjaXRlZGJ5LWNvdW50IiB0eXBlPSJudW1iZXIiPjA8L2NybS1pdGVtPg0KICAgICAgICA8ZG9pX3JlY29yZD4NCiAgICAgICAgICA8Y3Jvc3NyZWYgeG1sbnM9Imh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3hzY2hlbWEvMS4xIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3hzY2hlbWEvMS4xIGh0dHA6Ly9kb2kuY3Jvc3NyZWYub3JnL3NjaGVtYXMvdW5peHJlZjEuMS54c2QiPg0KICAgICAgICAgICAgPGJvb2sgYm9va190eXBlPSJtb25vZ3JhcGgiPg0KICAgICAgICAgICAgICA8Ym9va19tZXRhZGF0YT4NCiAgICAgICAgICAgICAgICA8Y29udHJpYnV0b3JzPg0KICAgICAgICAgICAgICAgICAgPHBlcnNvbl9uYW1lIHNlcXVlbmNlPSJmaXJzdCIgY29udHJpYnV0b3Jfcm9sZT0iZWRpdG9yIj4NCiAgICAgICAgICAgICAgICAgICAgPGdpdmVuX25hbWU+WGlhbzwvZ2l2ZW5fbmFtZT4NCiAgICAgICAgICAgICAgICAgICAgPHN1cm5hbWU+QmFpPC9zdXJuYW1lPg0KICAgICAgICAgICAgICAgICAgICA8YWZmaWxpYXRpb24+QmVpaGFuZyBVbml2ZXJzaXR5LCBDaGluYTwvYWZmaWxpYXRpb24+DQogICAgICAgICAgICAgICAgICA8L3BlcnNvbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgPHBlcnNvbl9uYW1lIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJlZGl0b3IiPg0KICAgICAgICAgICAgICAgICAgICA8Z2l2ZW5fbmFtZT5KaWFuPC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgICA8c3VybmFtZT5DaGVuZzwvc3VybmFtZT4NCiAgICAgICAgICAgICAgICAgICAgPGFmZmlsaWF0aW9uPkNoaW5lc2UgQWNhZGVteSBvZiBTY2llbmNlcywgQ2hpbmE8L2FmZmlsaWF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iZWRpdG9yIj4NCiAgICAgICAgICAgICAgICAgICAgPGdpdmVuX25hbWU+RWR3aW48L2dpdmVuX25hbWU+DQogICAgICAgICAgICAgICAgICAgIDxzdXJuYW1lPkhhbmNvY2s8L3N1cm5hbWU+DQogICAgICAgICAgICAgICAgICAgIDxhZmZpbGlhdGlvbj5Vbml2ZXJzaXR5IG9mIFlvcmssIFVLPC9hZmZpbGlhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDwvcGVyc29uX25hbWU+DQogICAgICAgICAgICAgICAgPC9jb250cmlidXRvcnM+DQogICAgICAgICAgICAgICAgPHRpdGxlcz4NCiAgICAgICAgICAgICAgICAgIDx0aXRsZT5HcmFwaC1CYXNlZCBNZXRob2RzIGluIENvbXB1dGVyIFZpc2lvbjwvdGl0bGU+DQogICAgICAgICAgICAgICAgICA8c3VidGl0bGU+RGV2ZWxvcG1lbnRzIGFuZCBBcHBsaWNhdGlvbnM8L3N1YnRpdGxlPg0KICAgICAgICAgICAgICAgIDwvdGl0bGVzPg0KICAgICAgICAgICAgICAgIDxwdWJsaWNhdGlvbl9kYXRlPg0KICAgICAgICAgICAgICAgICAgPHllYXI+MjAxMzwveWVhcj4NCiAgICAgICAgICAgICAgICA8L3B1YmxpY2F0aW9uX2RhdGU+DQogICAgICAgICAgICAgICAgPGlzYm4+OTc4MTQ2NjYxODkxNjwvaXNibj4NCiAgICAgICAgICAgICAgICA8aXNibiBtZWRpYV90eXBlPSJlbGVjdHJvbmljIj45NzgxNDY2NjE4OTIzPC9pc2JuPg0KICAgICAgICAgICAgICAgIDxwdWJsaXNoZXI+DQogICAgICAgICAgICAgICAgICA8cHVibGlzaGVyX25hbWU+SUdJIEdsb2JhbDwvcHVibGlzaGVyX25hbWU+DQogICAgICAgICAgICAgICAgPC9wdWJsaXNoZXI+DQogICAgICAgICAgICAgICAgPGRvaV9kYXRhPg0KICAgICAgICAgICAgICAgICAgPGRvaT4xMC40MDE4Lzk3OC0xLTQ2NjYtMTg5MS02PC9kb2k+DQogICAgICAgICAgICAgICAgICA8cmVzb3VyY2U+aHR0cDovL3NlcnZpY2VzLmlnaS1nbG9iYWwuY29tL3Jlc29sdmVkb2kvcmVzb2x2ZS5hc3B4P2RvaT0xMC40MDE4Lzk3OC0xLTQ2NjYtMTg5MS02PC9yZXNvdXJjZT4NCiAgICAgICAgICAgICAgICA8L2RvaV9kYXRhPg0KICAgICAgICAgICAgICA8L2Jvb2tfbWV0YWRhdGE+DQogICAgICAgICAgICAgIDxjb250ZW50X2l0ZW0gY29tcG9uZW50X3R5cGU9ImNoYXB0ZXIiPg0KICAgICAgICAgICAgICAgIDxjb250cmlidXRvcnM+DQogICAgICAgICAgICAgICAgICA8cGVyc29uX25hbWUgc2VxdWVuY2U9ImZpcnN0IiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPg0KICAgICAgICAgICAgICAgICAgICA8Z2l2ZW5fbmFtZT5DaGFybGVzLUVkbW9uZDwvZ2l2ZW5fbmFtZT4NCiAgICAgICAgICAgICAgICAgICAgPHN1cm5hbWU+QmljaG90PC9zdXJuYW1lPg0KICAgICAgICAgICAgICAgICAgICA8YWZmaWxpYXRpb24+VW5pdmVyc2l0w6kgZGUgTHlvbiwgRnJhbmNlPC9hZmZpbGlhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDwvcGVyc29uX25hbWU+DQogICAgICAgICAgICAgICAgPC9jb250cmlidXRvcnM+DQogICAgICAgICAgICAgICAgPHRpdGxlcz4NCiAgICAgICAgICAgICAgICAgIDx0aXRsZT5VbnN1cGVydmlzZWQgYW5kIFN1cGVydmlzZWQgSW1hZ2UgU2VnbWVudGF0aW9uIFVzaW5nIEdyYXBoIFBhcnRpdGlvbmluZzwvdGl0bGU+DQogICAgICAgICAgICAgICAgICA8c3VidGl0bGUgLz4NCiAgICAgICAgICAgICAgICA8L3RpdGxlcz4NCiAgICAgICAgICAgICAgICA8amF0czphYnN0cmFjdCB4bWxuczpqYXRzPSJodHRwOi8vd3d3Lm5jYmkubmxtLm5paC5nb3YvSkFUUzEiPg0KICAgICAgICAgICAgICAgICAgPGphdHM6cD5JbWFnZSBzZWdtZW50YXRpb24gaXMgYW4gaW1wb3J0YW50IHJlc2VhcmNoIGFyZWEgaW4gY29tcHV0ZXIgdmlzaW9uIGFuZCBpdHMgYXBwbGljYXRpb25zIGluIGRpZmZlcmVudCBkaXNjaXBsaW5lcywgc3VjaCBhcyBtZWRpY2luZSwgYXJlIG9mIGdyZWF0IGltcG9ydGFuY2UuIEl0IGlzIG9mdGVuIG9uZSBvZiB0aGUgdmVyeSBmaXJzdCBzdGVwcyBvZiBjb21wdXRlciB2aXNpb24gb3IgcGF0dGVybiByZWNvZ25pdGlvbiBtZXRob2RzLiBUaGlzIGlzIGJlY2F1c2Ugc2VnbWVudGF0aW9uIGhlbHBzIHRvIGxvY2F0ZSBvYmplY3RzIGFuZCBib3VuZGFyaWVzIGludG8gaW1hZ2VzLiBUaGUgb2JqZWN0aXZlIG9mIHNlZ21lbnRpbmcgYW4gaW1hZ2UgaXMgdG8gcGFydGl0aW9uIGl0IGludG8gZGlzam9pbnQgYW5kIGhvbW9nZW5lb3VzIHNldHMgb2YgcGl4ZWxzLiBXaGVuIHNlZ21lbnRpbmcgYW4gaW1hZ2UgaXQgaXMgbmF0dXJhbCB0byB0cnkgdG8gdXNlIGdyYXBoIHBhcnRpdGlvbmluZywgYmVjYXVzZSBzZWdtZW50YXRpb24gYW5kIHBhcnRpdGlvbmluZyBzaGFyZSB0aGUgc2FtZSBoaWdoLWxldmVsIG9iamVjdGl2ZSwgdG8gcGFydGl0aW9uIGEgc2V0IGludG8gZGlzam9pbnRzIHN1YnNldHMuIEhvd2V2ZXIsIHdoZW4gdXNpbmcgZ3JhcGggcGFydGl0aW9uaW5nIGZvciBzZWdtZW50aW5nIGFuIGltYWdlLCBzZXZlcmFsIGJpZyBxdWVzdGlvbnMgcmVtYWluOiBXaGF0IGlzIHRoZSBiZXN0IHdheSB0byBjb252ZXJ0IGFuIGltYWdlIGludG8gYSBncmFwaD8gT3IgdG8gY29udmVydCBpbWFnZSBzZWdtZW50YXRpb24gb2JqZWN0aXZlcyBpbnRvIGdyYXBoIHBhcnRpdGlvbmluZyBvYmplY3RpdmVzIChub3QgdG8gbWVudGlvbiB3aGF0IGFyZSBpbWFnZSBzZWdtZW50YXRpb24gb2JqZWN0aXZlcyk/IFdoYXQgYXJlIHRoZSBiZXN0IGdyYXBoIHBhcnRpdGlvbmluZyBtZXRob2RzIGFuZCBhbGdvcml0aG1zIGZvciBzZWdtZW50aW5nIGFuIGltYWdlPyBJbiB0aGlzIGNoYXB0ZXIsIHRoZSBhdXRob3IgdHJpZXMgdG8gYW5zd2VyIHRoZXNlIHF1ZXN0aW9ucywgYm90aCBmb3IgdW5zdXBlcnZpc2VkIGFuZCBzdXBlcnZpc2VkIGltYWdlIHNlZ21lbnRhdGlvbiBhcHByb2FjaCwgYnkgcHJlc2VudGluZyBtZXRob2RzIGFuZCBhbGdvcml0aG1zIGFuZCBieSBjb21wYXJpbmcgdGhlbS48L2phdHM6cD4NCiAgICAgICAgICAgICAgICA8L2phdHM6YWJzdHJhY3Q+DQogICAgICAgICAgICAgICAgPGNvbXBvbmVudF9udW1iZXI+Y2hhcHRlciA0PC9jb21wb25lbnRfbnVtYmVyPg0KICAgICAgICAgICAgICAgIDxwYWdlcz4NCiAgICAgICAgICAgICAgICAgIDxmaXJzdF9wYWdlPjcyPC9maXJzdF9wYWdlPg0KICAgICAgICAgICAgICAgICAgPGxhc3RfcGFnZT45NDwvbGFzdF9wYWdlPg0KICAgICAgICAgICAgICAgIDwvcGFnZXM+DQogICAgICAgICAgICAgICAgPGRvaV9kYXRhPg0KICAgICAgICAgICAgICAgICAgPGRvaT4xMC40MDE4Lzk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0PC9kb2k+DQogICAgICAgICAgICAgICAgICA8cmVzb3VyY2U+aHR0cDovL3NlcnZpY2VzLmlnaS1nbG9iYWwuY29tL3Jlc29sdmVkb2kvcmVzb2x2ZS5hc3B4P2RvaT0xMC40MDE4Lzk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0PC9yZXNvdXJjZT4NCiAgICAgICAgICAgICAgICAgIDxjb2xsZWN0aW9uIHByb3BlcnR5PSJjcmF3bGVyLWJhc2VkIj4NCiAgICAgICAgICAgICAgICAgICAgPGl0ZW0gY3Jhd2xlcj0iaVBhcmFkaWdtcyI+DQogICAgICAgICAgICAgICAgICAgICAgPHJlc291cmNlPmh0dHBzOi8vd3d3LmlnaS1nbG9iYWwuY29tL3ZpZXd0aXRsZS5hc3B4P1RpdGxlSWQ9NjkwNzE8L3Jlc291cmNlPg0KICAgICAgICAgICAgICAgICAgICA8L2l0ZW0+DQogICAgICAgICAgICAgICAgICA8L2NvbGxlY3Rpb24+DQogICAgICAgICAgICAgICAgPC9kb2lfZGF0YT4NCiAgICAgICAgICAgICAgICA8Y2l0YXRpb25fbGlzdD4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li0xIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDE2LzAwOTUtODk1Nig4NSk5MDA5Mi05PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTIiPg0KICAgICAgICAgICAgICAgICAgICA8am91cm5hbF90aXRsZT5BIGdlb2Rlc2ljIGZyYW1ld29yayBmb3IgZmFzdCBpbnRlcmFjdGl2ZSBpbWFnZSBhbmQgdmlkZW8gc2VnbWVudGF0aW9uIGFuZCBtYXR0aW5nPC9qb3VybmFsX3RpdGxlPg0KICAgICAgICAgICAgICAgICAgICA8YXV0aG9yPlguQmFpPC9hdXRob3I+DQogICAgICAgICAgICAgICAgICAgIDxmaXJzdF9wYWdlPjE8L2ZpcnN0X3BhZ2U+DQogICAgICAgICAgICAgICAgICAgIDxjWWVhcj4yMDA3PC9jWWVhcj4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSI5NzgtMS00NjY2LTE4OTEtNi5jaDAwNC4tMyI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTAwMi9jcGUuNDMzMDA2MDIwMzwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li00Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDA3L3MxMDg1Mi0wMTAtOTEyNi0wPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTUiPg0KICAgICAgICAgICAgICAgICAgICA8dW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPkJpY2hvdCwgQy4tRS4sICZhbXA7IFNpYXJyeSwgUC4gKMOJZHMuKS4gKDIwMTEpLiBHcmFwaCBwYXJ0aXRpb25pbmcuIElTVEUgLSBXaWxleS48L3Vuc3RydWN0dXJlZF9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSI5NzgtMS00NjY2LTE4OTEtNi5jaDAwNC4tNiI+DQogICAgICAgICAgICAgICAgICAgIDxkb2kgcHJvdmlkZXI9ImNyb3NzcmVmIj4xMC4xMDA3Lzk3OC0zLTU0MC0yNDY3MC0xXzMzPC9kb2k+DQogICAgICAgICAgICAgICAgICAgIDx1bnN0cnVjdHVyZWRfY2l0YXRpb24+Qmxha2UsIEEuLCBSb3RoZXIsIEMuLCBCcm93biwgTS4sIFBlcmV6LCBQLiwgJmFtcDsgVG9yciwgUC4gKDIwMDQpLiBJbnRlcmFjdGl2ZSBpbWFnZSBzZWdtZW50YXRpb24gdXNpbmcgYW4gYWRhcHRpdmUgR01NUkYgbW9kZWwuIEluIFQuIFBhamRsYSwgJmFtcDsgSi4gTWF0YXMgKEVkcy4pLCBQcm9jZWVkaW5ncyBvZiB0aGUgRXVyb3BlYW4gQ29uZmVyZW5jZSBvbiBDb21wdXRlciBWaXNpb24gKEVDQ1YpIChWb2wuIDMwMjEsIHBwLiA0MjgtNDQxKS4gQmVybGluLCBHZXJtYW55IFNwcmluZ2VyLjwvdW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li03Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRvaSBwcm92aWRlcj0iY3Jvc3NyZWYiPjEwLjExMDkvSUNDVi4yMDAzLjEyMzgzMTA8L2RvaT4NCiAgICAgICAgICAgICAgICAgICAgPHVuc3RydWN0dXJlZF9jaXRhdGlvbj5Cb3lrb3YsIFkuLCAmYW1wOyBLb2xtb2dvcm92LCBWLiAoMjAwMykuIENvbXB1dGluZyBnZW9kZXNpY3MgYW5kIG1pbmltYWwgc3VyZmFjZXMgdmlhIGdyYXBoIGN1dHMuIFByb2NlZWRpbmdzIG9mIHRoZSBOaW50aCBJRUVFIEludGVybmF0aW9uYWwgQ29uZmVyZW5jZSBvbiBDb21wdXRlciBWaXNpb24sIFZvbC4gMiwgKHBwLiAyNi0zMykuIElFRUUgQ29tcHV0ZXIgU29jaWV0eS48L3Vuc3RydWN0dXJlZF9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSI5NzgtMS00NjY2LTE4OTEtNi5jaDAwNC4tOCI+DQogICAgICAgICAgICAgICAgICAgIDxkb2kgcHJvdmlkZXI9ImNyb3NzcmVmIj4xMC4xMTA5L0lDQ1YuMjAwMS45Mzc1MDU8L2RvaT4NCiAgICAgICAgICAgICAgICAgICAgPHVuc3RydWN0dXJlZF9jaXRhdGlvbj5Cb3lrb3YsIFkuIFkuLCAmYW1wOyBKb2xseSwgTS4tUC4gKDIwMDEpLiBJbnRlcmFjdGl2ZSBncmFwaCBjdXRzIGZvciBvcHRpbWFsIGJvdW5kYXJ5ICZhbXA7IHJlZ2lvbiBzZWdtZW50YXRpb24gb2Ygb2JqZWN0cyBpbiBOLUQgaW1hZ2VzLiBQcm9jZWVkaW5ncyBvZiB0aGUgRWlnaHRoIElFRUUgSW50ZXJuYXRpb25hbCBDb25mZXJlbmNlIG9uIENvbXB1dGVyIFZpc2lvbiwgVm9sLiAxLCAocHAuIDEwNS0xMTIpLjwvdW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li05Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDIzL0E6MTAwNzk3OTgyNzA0MzwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li0xMCI+DQogICAgICAgICAgICAgICAgICAgIDxkb2kgcHJvdmlkZXI9ImNyb3NzcmVmIj4xMC4xMTA5L0lDQ1YuMjAwOS41NDU5Mjg0PC9kb2k+DQogICAgICAgICAgICAgICAgICAgIDx1bnN0cnVjdHVyZWRfY2l0YXRpb24+Q291cHJpZSwgQy4sIEdyYWR5LCBMLiwgTmFqbWFuLCBMLiwgJmFtcDsgVGFsYm90LCBILiAoMjAwOSkuIFBvd2VyIHdhdGVyc2hlZHM6IEEgbmV3IGltYWdlIHNlZ21lbnRhdGlvbiBmcmFtZXdvcmsgZXh0ZW5kaW5nIGdyYXBoIGN1dHMsIHJhbmRvbSB3YWxrZXIgYW5kIG9wdGltYWwgc3Bhbm5pbmcgZm9yZXN0LCAocHAuIDczMS03MzgpLjwvdW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li0xMSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2kgcHJvdmlkZXI9ImNyb3NzcmVmIj4xMC4xMTA5L0NWUFIuMjAwNS4zMzI8L2RvaT4NCiAgICAgICAgICAgICAgICAgICAgPHVuc3RydWN0dXJlZF9jaXRhdGlvbj5Db3VyLCBULiwgQmVuZXppdCwgRi4sICZhbXA7IFNoaSwgSi4gKDIwMDUpLiBTcGVjdHJhbCBzZWdtZW50YXRpb24gd2l0aCBtdWx0aXNjYWxlIGdyYXBoIGRlY29tcG9zaXRpb24uIFByb2NlZWRpbmdzIG9mIHRoZSAyMDA1IElFRUUgQ29tcHV0ZXIgU29jaWV0eSBDb25mZXJlbmNlIG9uIENvbXB1dGVyIFZpc2lvbiBhbmQgUGF0dGVybiBSZWNvZ25pdGlvbiAocHAuIDExMjQtMTEzMSkuPC91bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTEyIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMTA5L1RQQU1JLjIwMDguMTczPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTEzIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMTA5L1RQQU1JLjIwMDcuMTExNTwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li0xNCI+DQogICAgICAgICAgICAgICAgICAgIDxqb3VybmFsX3RpdGxlPklCTSBUZWNobmljYWwgRGlzY2xvc3VyZSBCdWxsZXRpbjwvam91cm5hbF90aXRsZT4NCiAgICAgICAgICAgICAgICAgICAgPGF1dGhvcj5XLkRvbmF0aDwvYXV0aG9yPg0KICAgICAgICAgICAgICAgICAgICA8dm9sdW1lPjE1PC92b2x1bWU+DQogICAgICAgICAgICAgICAgICAgIDxmaXJzdF9wYWdlPjkzODwvZmlyc3RfcGFnZT4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjE5NzI8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgICA8YXJ0aWNsZV90aXRsZT5BbGdvcml0aG1zIGZvciBwYXJ0aXRpb25pbmcgZ3JhcGhzIGFuZCBjb21wdXRlciBsb2dpYyBiYXNlZCBvbiBlaWdlbnZlY3RvcnMgb2YgY29ubmVjdGlvbiBtYXRyaWNlcy48L2FydGljbGVfdGl0bGU+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTE1Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMTQ3L3JkLjE3NS4wNDIwPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTE2Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDA3L3MwMDIyNC0wMDMtMTA4My05PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTE3Ij4NCiAgICAgICAgICAgICAgICAgICAgPHVuc3RydWN0dXJlZF9jaXRhdGlvbj5GaWR1Y2NpYSwgQy4gTS4sICZhbXA7IE1hdHRoZXlzZXMsIFIuIE0uICgxOTgyKS4gQSBsaW5lYXItdGltZSBoZXVyaXN0aWMgZm9yIGltcHJvdmluZyBuZXR3b3JrIHBhcnRpdGlvbnMuIFByb2NlZWRpbmdzIG9mIHRoZSAxOXRoIERlc2lnbiBBdXRvbWF0aW9uIENvbmZlcmVuY2UsIChwcC4gMTc1LTE4MSkuPC91bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTE4Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRvaSBwcm92aWRlcj0iY3Jvc3NyZWYiPjEwLjExMDkvQ1ZQUi4yMDA1LjE0MzwvZG9pPg0KICAgICAgICAgICAgICAgICAgICA8dW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPkZyZWVkbWFuLCBELiwgJmFtcDsgRHJpbmVhcywgUC4gKDIwMDUpLiBFbmVyZ3kgbWluaW1pemF0aW9uIHZpYSBncmFwaCBjdXRzOiBTZXR0bGluZyB3aGF0IGlzIHBvc3NpYmxlLiBQcm9jZWVkaW5ncyBvZiB0aGUgMjAwNSBJRUVFIENvbXB1dGVyIFNvY2lldHkgQ29uZmVyZW5jZSBvbiBDb21wdXRlciBWaXNpb24gYW5kIFBhdHRlcm4gUmVjb2duaXRpb24sIChwcC4gOTM5LTk0NikuPC91bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTE5Ij4NCiAgICAgICAgICAgICAgICAgICAgPGpvdXJuYWxfdGl0bGU+TWF0cml4IGNvbXB1dGF0aW9uczwvam91cm5hbF90aXRsZT4NCiAgICAgICAgICAgICAgICAgICAgPGF1dGhvcj5HLkdvbHViPC9hdXRob3I+DQogICAgICAgICAgICAgICAgICAgIDxjWWVhcj4xOTk2PC9jWWVhcj4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSI5NzgtMS00NjY2LTE4OTEtNi5jaDAwNC4tMjAiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjExMDkvVFBBTUkuMjAwNi4yMzM8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSI5NzgtMS00NjY2LTE4OTEtNi5jaDAwNC4tMjEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjExMzcvUzA4OTU0Nzk4OTYzMTIyNjI8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSI5NzgtMS00NjY2LTE4OTEtNi5jaDAwNC4tMjIiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwMTYvUzA3MzQtMTg5WCg4NSk5MDE1My03PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTIzIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaSBwcm92aWRlcj0iY3Jvc3NyZWYiPjEwLjExNDUvMjI0MTcwLjIyNDIyODwvZG9pPg0KICAgICAgICAgICAgICAgICAgICA8dW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPkhlbmRyaWNrc29uLCBCLiwgJmFtcDsgTGVsYW5kLCBSLiBXLiAoMTk5NSkuIEEgbXVsdGlsZXZlbCBhbGdvcml0aG0gZm9yIHBhcnRpdGlvbmluZyBncmFwaHMuIFByb2NlZWRpbmdzIG9mIFN1cGVyY29tcHV0aW5nLjwvdW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li0yNCI+DQogICAgICAgICAgICAgICAgICAgIDxkb2kgcHJvdmlkZXI9ImNyb3NzcmVmIj4xMC4xMTQ1LzIyNDE3MC4yMjQyMjk8L2RvaT4NCiAgICAgICAgICAgICAgICAgICAgPHVuc3RydWN0dXJlZF9jaXRhdGlvbj5LYXJ5cGlzLCBHLiwgJmFtcDsgS3VtYXIsIFYuICgxOTk1KS4gQW5hbHlzaXMgb2YgbXVsdGlsZXZlbCBncmFwaCBwYXJ0aXRpb25pbmcuIFByb2NlZWRpbmdzIG9mIFN1cGVyY29tcHV0aW5nLjwvdW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li0yNSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTEzNy9TMTA2NDgyNzU5NTI4Nzk5NzwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li0yNiI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTAwNi9qcGRjLjE5OTcuMTQwNDwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li0yNyI+DQogICAgICAgICAgICAgICAgICAgIDxqb3VybmFsX3RpdGxlPlRoZSBCZWxsIFN5c3RlbSBUZWNobmljYWwgSm91cm5hbDwvam91cm5hbF90aXRsZT4NCiAgICAgICAgICAgICAgICAgICAgPGF1dGhvcj5CLiBXLktlcm5pZ2hhbjwvYXV0aG9yPg0KICAgICAgICAgICAgICAgICAgICA8dm9sdW1lPjQ5PC92b2x1bWU+DQogICAgICAgICAgICAgICAgICAgIDxmaXJzdF9wYWdlPjI5MTwvZmlyc3RfcGFnZT4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjE5NzA8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pIHByb3ZpZGVyPSJjcm9zc3JlZiI+MTAuMTAwMi9qLjE1MzgtNzMwNS4xOTcwLnRiMDE3NzAueDwvZG9pPg0KICAgICAgICAgICAgICAgICAgICA8YXJ0aWNsZV90aXRsZT5hbiBlZmZpY2llbnQgaGV1cmlzdGljIHByb2NlZHVyZSBmb3IgcGFydGl0aW9uaW5nIGdyYXBocy48L2FydGljbGVfdGl0bGU+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTI4Ij4NCiAgICAgICAgICAgICAgICAgICAgPGpvdXJuYWxfdGl0bGU+QSBkYXRhYmFzZSBvZiBodW1hbiBzZWdtZW50ZWQgbmF0dXJhbCBpbWFnZXMgYW5kIGl0cyBhcHBsaWNhdGlvbiB0byBldmFsdWF0aW5nIHNlZ21lbnRhdGlvbiBhbGdvcml0aG1zIGFuZCBtZWFzdXJpbmcgZWNvbG9naWNhbCBzdGF0aXN0aWNzLiBUZWNobmljYWwgcmVwb3J0PC9qb3VybmFsX3RpdGxlPg0KICAgICAgICAgICAgICAgICAgICA8YXV0aG9yPkQuIFIuTWFydGluPC9hdXRob3I+DQogICAgICAgICAgICAgICAgICAgIDxmaXJzdF9wYWdlPjQxNjwvZmlyc3RfcGFnZT4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjIwMDE8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9Ijk3OC0xLTQ2NjYtMTg5MS02LmNoMDA0Li0yOSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTE0NS8xMDE1NzA2LjEwMTU3MjA8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSI5NzgtMS00NjY2LTE4OTEtNi5jaDAwNC4tMzAiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjExMDkvMzQuODY4Njg4PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTMxIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaSBwcm92aWRlcj0iY3Jvc3NyZWYiPjEwLjExMDkvSUNDVi4yMDA3LjQ0MDg5Mjc8L2RvaT4NCiAgICAgICAgICAgICAgICAgICAgPHVuc3RydWN0dXJlZF9jaXRhdGlvbj5TaW5vcCwgQS4gSy4sICZhbXA7IEdyYWR5LCBMLiAoMjAwNykuIEEgc2VlZGVkIGltYWdlIHNlZ21lbnRhdGlvbiBmcmFtZXdvcmsgdW5pZnlpbmcgZ3JhcGggY3V0cyBhbmQgcmFuZG9tIHdhbGtlciB3aGljaCB5aWVsZHMgYSBuZXcgYWxnb3JpdGhtLiBQcm9jZWVkaW5ncyBvZiB0aGUgMjAwNyBJbnRlcm5hdGlvbmFsIENvbmZlcmVuY2Ugb24gQ29tcHV0ZXIgVmlzaW9uLCAocHAuIDEtOCkuPC91bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTMyIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMTM3L1MxMDY0ODI3NTk4MzM3MzczPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOTc4LTEtNDY2Ni0xODkxLTYuY2gwMDQuLTMzIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDE2L2ouY3ZpdS4yMDA3LjA4LjAwMzwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICA8L2NpdGF0aW9uX2xpc3Q+DQogICAgICAgICAgICAgIDwvY29udGVudF9pdGVtPg0KICAgICAgICAgICAgPC9ib29rPg0KICAgICAgICAgIDwvY3Jvc3NyZWY+DQogICAgICAgIDwvZG9pX3JlY29yZD4NCiAgICAgIDwvcXVlcnk+DQogICAgPC9ib2R5Pg0KICA8L3F1ZXJ5X3Jlc3VsdD4NCjwvY3Jvc3NyZWZfcmVzdWx0Pg==
+  recorded_at: Sun, 19 Mar 2023 17:37:08 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.4018
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:40:22 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=U15%2Br5HDePcKzb7gjULJm4a74SThkpatUKztmvZEyrCQN89wp2SCzblBrtv1MHHYUYhUbfF9rVow7t%2Bm0YjskVUbZZ3Ccu87OIxNezM9wk6yJ9L2tPl9wJDnP3EXwQlQtdsEh%2FA%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7aa780064dc0b8bb-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.4018",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 19 Mar 2023 17:40:22 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.4018/978-1-4666-1891-6.ch004
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:40:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,4,5]],"date-time":"2022-04-05T22:24:03Z","timestamp":1649197443163},"reference-count":33,"publisher":"IGI
+        Global","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"abstract":"<jats:p>Image
+        segmentation is an important research area in computer vision and its applications
+        in different disciplines, such as medicine, are of great importance. It is
+        often one of the very first steps of computer vision or pattern recognition
+        methods. This is because segmentation helps to locate objects and boundaries
+        into images. The objective of segmenting an image is to partition it into
+        disjoint and homogeneous sets of pixels. When segmenting an image it is natural
+        to try to use graph partitioning, because segmentation and partitioning share
+        the same high-level objective, to partition a set into disjoints subsets.
+        However, when using graph partitioning for segmenting an image, several big
+        questions remain: What is the best way to convert an image into a graph? Or
+        to convert image segmentation objectives into graph partitioning objectives
+        (not to mention what are image segmentation objectives)? What are the best
+        graph partitioning methods and algorithms for segmenting an image? In this
+        chapter, the author tries to answer these questions, both for unsupervised
+        and supervised image segmentation approach, by presenting methods and algorithms
+        and by comparing them.<\/jats:p>","DOI":"10.4018\/978-1-4666-1891-6.ch004","type":"book-chapter","created":{"date-parts":[[2012,8,8]],"date-time":"2012-08-08T16:54:07Z","timestamp":1344444847000},"page":"72-94","source":"Crossref","is-referenced-by-count":0,"title":["Unsupervised
+        and Supervised Image Segmentation Using Graph Partitioning"],"prefix":"10.4018","author":[{"given":"Charles-Edmond","family":"Bichot","sequence":"first","affiliation":[{"name":"Universit\u00e9
+        de Lyon, France"}]}],"member":"2432","reference":[{"key":"978-1-4666-1891-6.ch004.-1","doi-asserted-by":"publisher","DOI":"10.1016\/0095-8956(85)90092-9"},{"key":"978-1-4666-1891-6.ch004.-2","first-page":"1","author":"X.Bai","year":"2007","journal-title":"A
+        geodesic framework for fast interactive image and video segmentation and matting"},{"key":"978-1-4666-1891-6.ch004.-3","doi-asserted-by":"publisher","DOI":"10.1002\/cpe.4330060203"},{"key":"978-1-4666-1891-6.ch004.-4","doi-asserted-by":"publisher","DOI":"10.1007\/s10852-010-9126-0"},{"key":"978-1-4666-1891-6.ch004.-5","unstructured":"Bichot,
+        C.-E., & Siarry, P. (\u00c9ds.). (2011). Graph partitioning. ISTE - Wiley."},{"key":"978-1-4666-1891-6.ch004.-6","doi-asserted-by":"crossref","unstructured":"Blake,
+        A., Rother, C., Brown, M., Perez, P., & Torr, P. (2004). Interactive image
+        segmentation using an adaptive GMMRF model. In T. Pajdla, & J. Matas (Eds.),
+        Proceedings of the European Conference on Computer Vision (ECCV) (Vol. 3021,
+        pp. 428-441). Berlin, Germany Springer.","DOI":"10.1007\/978-3-540-24670-1_33"},{"key":"978-1-4666-1891-6.ch004.-7","doi-asserted-by":"crossref","unstructured":"Boykov,
+        Y., & Kolmogorov, V. (2003). Computing geodesics and minimal surfaces via
+        graph cuts. Proceedings of the Ninth IEEE International Conference on Computer
+        Vision, Vol. 2, (pp. 26-33). IEEE Computer Society.","DOI":"10.1109\/ICCV.2003.1238310"},{"key":"978-1-4666-1891-6.ch004.-8","doi-asserted-by":"crossref","unstructured":"Boykov,
+        Y. Y., & Jolly, M.-P. (2001). Interactive graph cuts for optimal boundary
+        & region segmentation of objects in N-D images. Proceedings of the Eighth
+        IEEE International Conference on Computer Vision, Vol. 1, (pp. 105-112).","DOI":"10.1109\/ICCV.2001.937505"},{"key":"978-1-4666-1891-6.ch004.-9","doi-asserted-by":"publisher","DOI":"10.1023\/A:1007979827043"},{"key":"978-1-4666-1891-6.ch004.-10","doi-asserted-by":"crossref","unstructured":"Couprie,
+        C., Grady, L., Najman, L., & Talbot, H. (2009). Power watersheds: A new image
+        segmentation framework extending graph cuts, random walker and optimal spanning
+        forest, (pp. 731-738).","DOI":"10.1109\/ICCV.2009.5459284"},{"key":"978-1-4666-1891-6.ch004.-11","doi-asserted-by":"crossref","unstructured":"Cour,
+        T., Benezit, F., & Shi, J. (2005). Spectral segmentation with multiscale graph
+        decomposition. Proceedings of the 2005 IEEE Computer Society Conference on
+        Computer Vision and Pattern Recognition (pp. 1124-1131).","DOI":"10.1109\/CVPR.2005.332"},{"key":"978-1-4666-1891-6.ch004.-12","doi-asserted-by":"publisher","DOI":"10.1109\/TPAMI.2008.173"},{"key":"978-1-4666-1891-6.ch004.-13","doi-asserted-by":"publisher","DOI":"10.1109\/TPAMI.2007.1115"},{"key":"978-1-4666-1891-6.ch004.-14","first-page":"938","article-title":"Algorithms
+        for partitioning graphs and computer logic based on eigenvectors of connection
+        matrices.","volume":"15","author":"W.Donath","year":"1972","journal-title":"IBM
+        Technical Disclosure Bulletin"},{"key":"978-1-4666-1891-6.ch004.-15","doi-asserted-by":"publisher","DOI":"10.1147\/rd.175.0420"},{"key":"978-1-4666-1891-6.ch004.-16","doi-asserted-by":"publisher","DOI":"10.1007\/s00224-003-1083-9"},{"key":"978-1-4666-1891-6.ch004.-17","unstructured":"Fiduccia,
+        C. M., & Mattheyses, R. M. (1982). A linear-time heuristic for improving network
+        partitions. Proceedings of the 19th Design Automation Conference, (pp. 175-181)."},{"key":"978-1-4666-1891-6.ch004.-18","doi-asserted-by":"crossref","unstructured":"Freedman,
+        D., & Drineas, P. (2005). Energy minimization via graph cuts: Settling what
+        is possible. Proceedings of the 2005 IEEE Computer Society Conference on Computer
+        Vision and Pattern Recognition, (pp. 939-946).","DOI":"10.1109\/CVPR.2005.143"},{"key":"978-1-4666-1891-6.ch004.-19","author":"G.Golub","year":"1996","journal-title":"Matrix
+        computations"},{"key":"978-1-4666-1891-6.ch004.-20","doi-asserted-by":"publisher","DOI":"10.1109\/TPAMI.2006.233"},{"key":"978-1-4666-1891-6.ch004.-21","doi-asserted-by":"publisher","DOI":"10.1137\/S0895479896312262"},{"key":"978-1-4666-1891-6.ch004.-22","doi-asserted-by":"publisher","DOI":"10.1016\/S0734-189X(85)90153-7"},{"key":"978-1-4666-1891-6.ch004.-23","doi-asserted-by":"crossref","unstructured":"Hendrickson,
+        B., & Leland, R. W. (1995). A multilevel algorithm for partitioning graphs.
+        Proceedings of Supercomputing.","DOI":"10.1145\/224170.224228"},{"key":"978-1-4666-1891-6.ch004.-24","doi-asserted-by":"crossref","unstructured":"Karypis,
+        G., & Kumar, V. (1995). Analysis of multilevel graph partitioning. Proceedings
+        of Supercomputing.","DOI":"10.1145\/224170.224229"},{"key":"978-1-4666-1891-6.ch004.-25","doi-asserted-by":"publisher","DOI":"10.1137\/S1064827595287997"},{"key":"978-1-4666-1891-6.ch004.-26","doi-asserted-by":"publisher","DOI":"10.1006\/jpdc.1997.1404"},{"key":"978-1-4666-1891-6.ch004.-27","doi-asserted-by":"crossref","first-page":"291","DOI":"10.1002\/j.1538-7305.1970.tb01770.x","article-title":"an
+        efficient heuristic procedure for partitioning graphs.","volume":"49","author":"B.
+        W.Kernighan","year":"1970","journal-title":"The Bell System Technical Journal"},{"key":"978-1-4666-1891-6.ch004.-28","first-page":"416","author":"D.
+        R.Martin","year":"2001","journal-title":"A database of human segmented natural
+        images and its application to evaluating segmentation algorithms and measuring
+        ecological statistics. Technical report"},{"key":"978-1-4666-1891-6.ch004.-29","doi-asserted-by":"publisher","DOI":"10.1145\/1015706.1015720"},{"key":"978-1-4666-1891-6.ch004.-30","doi-asserted-by":"publisher","DOI":"10.1109\/34.868688"},{"key":"978-1-4666-1891-6.ch004.-31","doi-asserted-by":"crossref","unstructured":"Sinop,
+        A. K., & Grady, L. (2007). A seeded image segmentation framework unifying
+        graph cuts and random walker which yields a new algorithm. Proceedings of
+        the 2007 International Conference on Computer Vision, (pp. 1-8).","DOI":"10.1109\/ICCV.2007.4408927"},{"key":"978-1-4666-1891-6.ch004.-32","doi-asserted-by":"publisher","DOI":"10.1137\/S1064827598337373"},{"key":"978-1-4666-1891-6.ch004.-33","doi-asserted-by":"publisher","DOI":"10.1016\/j.cviu.2007.08.003"}],"container-title":["Graph-Based
+        Methods in Computer Vision"],"original-title":[],"link":[{"URL":"https:\/\/www.igi-global.com\/viewtitle.aspx?TitleId=69071","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,7,2]],"date-time":"2019-07-02T13:17:21Z","timestamp":1562073441000},"score":1,"resource":{"primary":{"URL":"http:\/\/services.igi-global.com\/resolvedoi\/resolve.aspx?doi=10.4018\/978-1-4666-1891-6.ch004"}},"subtitle":[""],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":33,"URL":"http:\/\/dx.doi.org\/10.4018\/978-1-4666-1891-6.ch004","relation":{}}}'
+  recorded_at: Sun, 19 Mar 2023 17:40:22 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/2432
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:40:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1679184505229,"primary-name":"IGI
+        Global","counts":{"current-dois":37508,"backfile-dois":126616,"total-dois":164124},"breakdowns":{"dois-by-issued-year":[[2022,18855],[2021,16457],[2020,14954],[2019,13916],[2018,10739],[2017,8695],[2009,8657],[2016,8563],[2014,8126],[2013,7484],[2012,7350],[2015,7063],[2010,6178],[2008,6089],[2011,5243],[2007,3256],[2005,3143],[2006,2835],[2023,2179],[2003,972],[2004,898],[2002,858],[2001,409],[2000,396],[1999,132],[1998,95],[1993,77],[1997,76],[1995,72],[1994,71],[1996,70],[1992,58],[1991,55],[1990,46],[1989,33],[2024,15],[1988,6],[2025,2],[1900,1]]},"prefixes":["10.4018"],"coverage":{"affiliations-current":0.9241761757491735,"similarity-checking-current":0.9372133944758452,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":4.738737600303279E-5,"licenses-backfile":0.003585644784229481,"funders-current":0.0,"affiliations-backfile":0.9283029001074115,"resource-links-backfile":0.0,"orcids-backfile":0.1131531559992418,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.4681401301055775,"similarity-checking-backfile":0.906844316674038,"references-backfile":0.6495229670815695,"descriptions-backfile":0.0,"award-numbers-backfile":3.948948000252733E-5,"update-policies-backfile":5.449548240348771E-4,"licenses-current":0.08608830116241868,"award-numbers-current":0.0,"abstracts-backfile":0.8862071144247173,"resource-links-current":0.0,"abstracts-current":0.9355070918204116,"references-current":0.8385144502506132},"prefix":[{"name":"IGI
+        Global","value":"10.4018"}],"id":2432,"tokens":["igi","global"],"counts-type":{"all":{"monograph":4218,"journal-article":37315,"book":2347,"journal-volume":2227,"journal":233,"book-chapter":141173,"journal-issue":7209,"book-series":62,"edited-book":229},"backfile":{"monograph":4115,"journal-article":29417,"book":1245,"book-chapter":85551,"journal-issue":6273,"edited-book":15},"current":{"monograph":103,"journal-article":7898,"book":1102,"book-chapter":27255,"journal-issue":936,"edited-book":214}},"coverage-type":{"all":{"monograph":{"last-status-check-time":1679184505229,"affiliations":0.990990990990991,"abstracts":0.0,"orcids":0.01517306780464675,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679184505229,"affiliations":0.9735227120460941,"abstracts":0.9678681495377194,"orcids":0.2076376792174729,"licenses":0.0885434811737907,"references":0.6599758810129975,"funders":1.607932466836393E-4,"similarity-checking":0.9960605654562508,"award-numbers":1.339943722363661E-4,"ror-ids":0.0,"update-policies":0.001849122336861852,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1679184505229,"affiliations":1.0,"abstracts":0.0,"orcids":0.4567533020877716,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-volume":{"last-status-check-time":1679184505229,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1679184505229,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1679184505229,"affiliations":0.9493954226374732,"abstracts":0.96405119959199,"orcids":0.1617518930673712,"licenses":0.00268464933096272,"references":0.7691768255969627,"funders":0.0,"similarity-checking":0.9809453649068873,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1679184505229,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-series":{"last-status-check-time":1679184505229,"affiliations":0.9516129032258065,"abstracts":0.0,"orcids":0.3548387096774194,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1679184505229,"affiliations":1.0,"abstracts":0.0,"orcids":0.7292576419213974,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"monograph":{"last-status-check-time":1679184505229,"affiliations":0.9907654921020655,"abstracts":0.0,"orcids":0.004617253948967193,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679184505229,"affiliations":0.984668728966244,"abstracts":0.9594112248019852,"orcids":0.1278172485297617,"licenses":0.01138797294081653,"references":0.6911989665839481,"funders":2.039636944623857E-4,"similarity-checking":0.9950028894856716,"award-numbers":1.699697453853214E-4,"ror-ids":0.0,"update-policies":0.002345582486317435,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1679184505229,"affiliations":1.0,"abstracts":0.0,"orcids":0.344578313253012,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1679184505229,"affiliations":0.9729284286565908,"abstracts":0.9816951292211663,"orcids":0.1181868125445641,"licenses":0.001390983156245982,"references":0.7236268424682353,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1679184505229,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1679184505229,"affiliations":1.0,"abstracts":0.0,"orcids":0.5333333333333333,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"monograph":{"last-status-check-time":1679184505229,"affiliations":1.0,"abstracts":0.0,"orcids":0.4368932038834951,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679184505229,"affiliations":0.9320081033172956,"abstracts":0.9993669283362877,"orcids":0.5049379589769561,"licenses":0.3759179539123829,"references":0.543681944796151,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1679184505229,"affiliations":1.0,"abstracts":0.0,"orcids":0.5834845735027223,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1679184505229,"affiliations":0.9496973032471105,"abstracts":0.9978352595853972,"orcids":0.4668501192441754,"licenses":0.009539534030453128,"references":0.9964043294808292,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1679184505229,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1679184505229,"affiliations":1.0,"abstracts":0.0,"orcids":0.7429906542056075,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":false,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"Hershey,
+        PA, United States","names":["IGI Global"]}}'
+  recorded_at: Sun, 19 Mar 2023 17:40:23 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.4018
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:40:23 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xpYT8mRXa2h24GOipSs6sJM1XrbsnOoz6vdVyHJvqXoAmCq9W%2FXJmh9beYUlbx%2BQ%2Bd1zW6nY%2FS%2BAbOtzQ36bj%2FTV4RzkjZWD%2FhLkGXTTdxcXX6UXrswzCutRItzRn0aY06Y3SQM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7aa7800ecbc00e64-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.4018",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 19 Mar 2023 17:40:23 GMT
+recorded_with: VCR 6.1.0

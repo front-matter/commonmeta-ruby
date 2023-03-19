@@ -29,7 +29,7 @@ require 'commonmeta/metadata'
 require 'commonmeta/cli'
 require 'commonmeta/string'
 require 'commonmeta/array'
-require 'commonmeta/xml_converter'
 require 'commonmeta/whitelist_scrubber'
+require 'commonmeta/xml_converter'
 
 ENV['USER_AGENT'] ||= "Mozilla/5.0 (compatible; mailto:info@front-matter.io)"

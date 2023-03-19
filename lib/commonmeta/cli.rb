@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'thor'
+require "thor"
 
 require_relative 'doi_utils'
 require_relative 'utils'
@@ -17,17 +17,18 @@ module Commonmeta
     # from http://stackoverflow.com/questions/22809972/adding-a-version-option-to-a-ruby-thor-cli
     map %w[--version -v] => :__print_version
 
-    desc '--version, -v', 'print the version'
+    desc "--version, -v", "print the version"
+
     def __print_version
       puts Commonmeta::VERSION
     end
 
-    desc '', 'convert metadata'
-    method_option :from, aliases: '-f'
-    method_option :to, aliases: '-t', default: 'schema_org'
+    desc "", "convert metadata"
+    method_option :from, aliases: "-f"
+    method_option :to, aliases: "-t", default: "schema_org"
     method_option :regenerate, type: :boolean, force: false
-    method_option :style, aliases: '-s', default: 'apa'
-    method_option :locale, aliases: '-l', default: 'en-US'
+    method_option :style, aliases: "-s", default: "apa"
+    method_option :locale, aliases: "-l", default: "en-US"
     method_option :show_errors, type: :boolean, force: false
     method_option :depositor
     method_option :email
@@ -43,7 +44,7 @@ module Commonmeta
                               depositor: options[:depositor],
                               email: options[:email],
                               registrant: options[:registrant])
-      to = options[:to] || 'schema_org'
+      to = options[:to] || "schema_org"
 
       if options[:show_errors] && !metadata.valid?
         warn metadata.errors
@@ -52,12 +53,14 @@ module Commonmeta
       end
     end
 
-    desc '', 'encode'
+    desc "", "encode"
+
     def encode(prefix)
       puts encode_doi(prefix)
     end
 
-    desc '', 'decode'
+    desc "", "decode"
+
     def decode(doi)
       puts decode_doi(doi)
     end

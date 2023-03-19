@@ -21,8 +21,8 @@ module Commonmeta
           "contentSize" => Array.wrap(sizes).unwrap,
           "encodingFormat" => Array.wrap(formats).unwrap,
           "dateCreated" => date["created"],
-          "datePublished" => date['published'],
-          "dateModified" => date['updated'],
+          "datePublished" => date["published"],
+          "dateModified" => date["updated"],
           "pageStart" => container.to_h["firstPage"],
           "pageEnd" => container.to_h["lastPage"],
           "spatialCoverage" => to_schema_org_spatial_coverage(geo_locations),
@@ -34,8 +34,7 @@ module Commonmeta
           "includedInDataCatalog" => type == "dataset" ? to_schema_org_container(container.to_h) : nil,
           "publisher" => publisher.present? ? { "@type" => "Organization", "name" => publisher } : nil,
           "funder" => to_schema_org_funder(funding_references),
-          "provider" => provider.present? ? { "@type" => "Organization", "name" => provider } : nil
-        }.compact.presence
+          "provider" => provider.present? ? { "@type" => "Organization", "name" => provider } : nil }.compact.presence
       end
 
       def schema_org

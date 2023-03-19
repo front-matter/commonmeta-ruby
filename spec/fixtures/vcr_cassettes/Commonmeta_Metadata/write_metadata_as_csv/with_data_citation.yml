@@ -1,0 +1,247 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.7554/elife.01567
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:37:48 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,1,28]],"date-time":"2023-01-28T13:31:01Z","timestamp":1674912661129},"reference-count":27,"publisher":"eLife
+        Sciences Publications, Ltd","license":[{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"},{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"am","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"},{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"},{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"},{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"am","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"},{"start":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T00:00:00Z","timestamp":1392076800000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"funder":[{"name":"SystemsX"},{"name":"EMBO
+        longterm post-doctoral fellowships"},{"name":"Marie Heim-Voegtlin"},{"DOI":"10.13039\/501100006390","name":"University
+        of Lausanne","doi-asserted-by":"crossref"},{"name":"SystemsX"},{"DOI":"10.13039\/501100003043","name":"EMBO","doi-asserted-by":"publisher"},{"DOI":"10.13039\/501100001711","name":"Swiss
+        National Science Foundation","doi-asserted-by":"publisher"},{"DOI":"10.13039\/501100006390","name":"University
+        of Lausanne","doi-asserted-by":"crossref"}],"content-domain":{"domain":["www.elifesciences.org"],"crossmark-restriction":false},"short-container-title":[],"abstract":"<jats:p>Among
+        various advantages, their small size makes model organisms preferred subjects
+        of investigation. Yet, even in model systems detailed analysis of numerous
+        developmental processes at cellular level is severely hampered by their scale.
+        For instance, secondary growth of Arabidopsis hypocotyls creates a radial
+        pattern of highly specialized tissues that comprises several thousand cells
+        starting from a few dozen. This dynamic process is difficult to follow because
+        of its scale and because it can only be investigated invasively, precluding
+        comprehensive understanding of the cell proliferation, differentiation, and
+        patterning events involved. To overcome such limitation, we established an
+        automated quantitative histology approach. We acquired hypocotyl cross-sections
+        from tiled high-resolution images and extracted their information content
+        using custom high-throughput image processing and segmentation. Coupled with
+        automated cell type recognition through machine learning, we could establish
+        a cellular resolution atlas that reveals vascular morphodynamics during secondary
+        growth, for example equidistant phloem pole formation.<\/jats:p>","DOI":"10.7554\/elife.01567","type":"journal-article","created":{"date-parts":[[2014,2,11]],"date-time":"2014-02-11T16:29:04Z","timestamp":1392136144000},"source":"Crossref","is-referenced-by-count":27,"title":["Automated
+        quantitative histology reveals vascular morphodynamics during Arabidopsis
+        hypocotyl secondary growth"],"prefix":"10.7554","volume":"3","author":[{"given":"Martial","family":"Sankar","sequence":"first","affiliation":[{"name":"Department
+        of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland"}]},{"given":"Kaisa","family":"Nieminen","sequence":"additional","affiliation":[{"name":"Department
+        of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland"}]},{"given":"Laura","family":"Ragni","sequence":"additional","affiliation":[{"name":"Department
+        of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland"}]},{"given":"Ioannis","family":"Xenarios","sequence":"additional","affiliation":[{"name":"Vital-IT,
+        Swiss Institute of Bioinformatics, Lausanne, Switzerland"}]},{"given":"Christian
+        S","family":"Hardtke","sequence":"additional","affiliation":[{"name":"Department
+        of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland"}]}],"member":"4374","published-online":{"date-parts":[[2014,2,11]]},"reference":[{"key":"bib1","doi-asserted-by":"publisher","first-page":"181","DOI":"10.1038\/nature02100","article-title":"APL
+        regulates vascular tissue identity in Arabidopsis","volume":"426","author":"Bonke","year":"2003","journal-title":"Nature"},{"key":"bib2","doi-asserted-by":"publisher","first-page":"413","DOI":"10.1534\/genetics.109.104976","article-title":"In
+        the beginning was the worm","volume":"182","author":"Brenner","year":"2009","journal-title":"Genetics"},{"key":"bib3","doi-asserted-by":"publisher","first-page":"594","DOI":"10.1034\/j.1399-3054.2002.1140413.x","article-title":"Secondary
+        xylem development in Arabidopsis: a model for wood formation","volume":"114","author":"Chaffey","year":"2002","journal-title":"Physiologia
+        Plantarum"},{"key":"bib4","doi-asserted-by":"publisher","first-page":"2119","DOI":"10.1162\/089976601750399335","article-title":"Training
+        nu-support vector classifiers: theory and algorithms","volume":"13","author":"Chang","year":"2001","journal-title":"Neural
+        computation"},{"key":"bib5","doi-asserted-by":"crossref","first-page":"273","DOI":"10.1007\/BF00994018","article-title":"Support-vector
+        Networks","volume":"20","author":"Cortes","year":"1995","journal-title":"Machine
+        Learning"},{"key":"bib6","doi-asserted-by":"crossref","first-page":"71","DOI":"10.1242\/dev.119.1.71","article-title":"Cellular
+        organisation of the Arabidopsis thaliana root","volume":"119","author":"Dolan","year":"1993","journal-title":"Development"},{"key":"bib7","doi-asserted-by":"publisher","first-page":"1097","DOI":"10.1016\/j.semcdb.2009.09.009","article-title":"Stem
+        cell function during plant vascular development","volume":"20","author":"Elo","year":"2009","journal-title":"Seminars
+        in Cell & Developmental Biology"},{"key":"bib8","doi-asserted-by":"publisher","first-page":"2224","DOI":"10.1242\/dev.091314","article-title":"WOX4
+        and WOX14 act downstream of the PXY receptor kinase to regulate plant vascular
+        proliferation independently of any role in vascular organisation","volume":"140","author":"Etchells","year":"2013","journal-title":"Development"},{"key":"bib9","doi-asserted-by":"publisher","first-page":"e1002997","DOI":"10.1371\/journal.pgen.1002997","article-title":"Plant
+        vascular cell division is maintained by an interaction between PXY and ethylene
+        signalling","volume":"8","author":"Etchells","year":"2012","journal-title":"PLOS
+        Genetics"},{"key":"bib10","doi-asserted-by":"publisher","first-page":"370","DOI":"10.1038\/msb.2010.25","article-title":"Clustering
+        phenotype populations by genome-wide RNAi and multiparametric imaging","volume":"6","author":"Fuchs","year":"2010","journal-title":"Molecular
+        Systems Biology"},{"key":"bib11","doi-asserted-by":"publisher","first-page":"60","DOI":"10.1016\/j.biosystems.2012.07.004","article-title":"BaSAR-A
+        tool in R for frequency detection","volume":"110","author":"Granqvist","year":"2012","journal-title":"Bio
+        Systems"},{"key":"bib12","doi-asserted-by":"publisher","first-page":"55","DOI":"10.1016\/j.pbi.2005.11.013","article-title":"Developmental
+        mechanisms regulating secondary growth in woody plants","volume":"9","author":"Groover","year":"2006","journal-title":"Current
+        Opinion in Plant Biology"},{"key":"bib13","doi-asserted-by":"publisher","first-page":"2618","DOI":"10.1105\/tpc.110.076083","article-title":"TDIF
+        peptide signaling regulates vascular stem cell proliferation via the WOX4
+        homeobox gene in Arabidopsis","volume":"22","author":"Hirakawa","year":"2010","journal-title":"Plant
+        Cell"},{"key":"bib14","doi-asserted-by":"publisher","first-page":"15208","DOI":"10.1073\/pnas.0808444105","article-title":"Non-cell-autonomous
+        control of vascular stem cell fate by a CLE peptide\/receptor system","volume":"105","author":"Hirakawa","year":"2008","journal-title":"Proceedings
+        of the National Academy of Sciences of the United States of America"},{"key":"bib15","doi-asserted-by":"publisher","first-page":"263","DOI":"10.1016\/0092-8674(89)90900-8","article-title":"Arabidopsis,
+        a useful weed","volume":"56","author":"Meyerowitz","year":"1989","journal-title":"Cell"},{"key":"bib16","doi-asserted-by":"publisher","first-page":"1482","DOI":"10.1126\/science.1066609","article-title":"Plants
+        compared to animals: the broadest comparative study of development","volume":"295","author":"Meyerowitz","year":"2002","journal-title":"Science"},{"key":"bib17","doi-asserted-by":"publisher","first-page":"653","DOI":"10.1104\/pp.104.040212","article-title":"A
+        weed for wood? Arabidopsis as a genetic model for xylem development","volume":"135","author":"Nieminen","year":"2004","journal-title":"Plant
+        Physiol"},{"key":"bib18","doi-asserted-by":"publisher","first-page":"1565","DOI":"10.1038\/nbt1206-1565","article-title":"What
+        is a support vector machine?","volume":"24","author":"Noble","year":"2006","journal-title":"Nature
+        Biotechnology"},{"key":"bib19","doi-asserted-by":"publisher","first-page":"1516","DOI":"10.1073\/pnas.77.3.1516","article-title":"Classification
+        of cultured mammalian cells by shape analysis and pattern recognition","volume":"77","author":"Olson","year":"1980","journal-title":"Proceedings
+        of the National Academy of Sciences of the United States of America"},{"key":"bib20","doi-asserted-by":"publisher","first-page":"979","DOI":"10.1093\/bioinformatics\/btq046","article-title":"EBImage\u2013an
+        R package for image processing with applications to cellular phenotypes","volume":"26","author":"Pau","year":"2010","journal-title":"Bioinformatics"},{"key":"bib21","doi-asserted-by":"publisher","first-page":"1322","DOI":"10.1105\/tpc.111.084020","article-title":"Mobile
+        gibberellin directly stimulates Arabidopsis hypocotyl xylem expansion","volume":"23","author":"Ragni","year":"2011","journal-title":"Plant
+        Cell"},{"key":"bib22","doi-asserted-by":"publisher","article-title":"Data
+        from: Automated quantitative histology reveals vascular morphodynamics during
+        Arabidopsis hypocotyl secondary growth","author":"Sankar","year":"2014","journal-title":"Dryad
+        Digital Repository","DOI":"10.5061\/dryad.b835k"},{"key":"bib23","doi-asserted-by":"publisher","first-page":"458","DOI":"10.1016\/j.cub.2008.02.070","article-title":"Flowering
+        as a condition for xylem expansion in Arabidopsis hypocotyl and root","volume":"18","author":"Sibout","year":"2008","journal-title":"Current
+        Biology"},{"key":"bib24","doi-asserted-by":"publisher","first-page":"577","DOI":"10.1111\/j.1469-8137.2010.03236.x","article-title":"Evolution
+        of development of vascular cambia and secondary growth","volume":"186","author":"Spicer","year":"2010","journal-title":"The
+        New Phytologist"},{"key":"bib25","doi-asserted-by":"publisher","first-page":"659","DOI":"10.1007\/s00138-011-0345-9","article-title":"Cell
+        morphology classification and clutter mitigation in phase-contrast microscopy
+        images using machine learning","volume":"23","author":"Theriault","year":"2012","journal-title":"Machine
+        Vision and Applications"},{"key":"bib26","doi-asserted-by":"publisher","first-page":"439","DOI":"10.1016\/j.cell.2012.02.048","article-title":"Mechanical
+        stress acts via katanin to amplify differences in growth rate between adjacent
+        cells in Arabidopsis","volume":"149","author":"Uyttewaal","year":"2012","journal-title":"Cell"},{"key":"bib27","doi-asserted-by":"publisher","first-page":"860","DOI":"10.1038\/ncb2764","article-title":"A
+        screen for morphological complexity identifies regulators of switch-like transitions
+        between discrete cell shapes","volume":"15","author":"Yin","year":"2013","journal-title":"Nature
+        Cell Biology"}],"container-title":["eLife"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/cdn.elifesciences.org\/articles\/01567\/elife-01567-v1.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/cdn.elifesciences.org\/articles\/01567\/elife-01567-v1.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2022,3,26]],"date-time":"2022-03-26T09:21:50Z","timestamp":1648286510000},"score":1,"resource":{"primary":{"URL":"https:\/\/elifesciences.org\/articles\/01567"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2014,2,11]]},"references-count":27,"alternative-id":["10.7554\/eLife.01567"],"URL":"http:\/\/dx.doi.org\/10.7554\/elife.01567","archive":["CLOCKSS"],"relation":{"is-supplemented-by":[{"id-type":"doi","id":"10.5061\/dryad.b835k","asserted-by":"subject"}]},"ISSN":["2050-084X"],"issn-type":[{"value":"2050-084X","type":"electronic"}],"subject":["General
+        Immunology and Microbiology","General Biochemistry, Genetics and Molecular
+        Biology","General Medicine","General Neuroscience"],"published":{"date-parts":[[2014,2,11]]},"assertion":[{"value":"2013-09-20","order":0,"name":"received","label":"Received","group":{"name":"publication_history","label":"Publication
+        History"}},{"value":"2013-12-24","order":1,"name":"accepted","label":"Accepted","group":{"name":"publication_history","label":"Publication
+        History"}},{"value":"2014-02-11","order":2,"name":"published","label":"Published","group":{"name":"publication_history","label":"Publication
+        History"}}]}}'
+  recorded_at: Sun, 19 Mar 2023 17:37:48 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/4374
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:37:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1679189264013,"primary-name":"eLife
+        Sciences Publications, Ltd","counts":{"current-dois":14448,"backfile-dois":28272,"total-dois":42720},"breakdowns":{"dois-by-issued-year":[[2021,7221],[2022,6527],[2020,6182],[2019,4846],[2017,4117],[2018,4053],[2016,3510],[2015,2808],[2014,1786],[2013,811],[2023,700],[2012,159]]},"prefixes":["10.7554"],"coverage":{"affiliations-current":0.9873338870431894,"similarity-checking-current":0.0,"descriptions-current":0.0,"ror-ids-current":0.5564091915836102,"funders-backfile":0.3053551216751556,"licenses-backfile":0.9999646293152235,"funders-current":0.2924280177187154,"affiliations-backfile":0.9898132427843803,"resource-links-backfile":0.3482951329937748,"orcids-backfile":0.8474108658743633,"update-policies-current":0.3181755260243632,"ror-ids-backfile":0.002192982456140351,"orcids-current":0.946843853820598,"similarity-checking-backfile":0.0,"references-backfile":0.3393817204301075,"descriptions-backfile":0.0,"award-numbers-backfile":0.2867501414827391,"update-policies-backfile":0.070776740237691,"licenses-current":1.0,"award-numbers-current":0.2825996677740864,"abstracts-backfile":0.34065506508206,"resource-links-current":0.3181755260243632,"abstracts-current":0.3169988925802879,"references-current":0.3066168327796235},"prefix":[{"name":"eLife
+        Sciences Publications, Ltd.","value":"10.7554"}],"id":4374,"tokens":["elife","sciences","publications","ltd"],"counts-type":{"all":{"peer-review":28227,"journal-article":14446,"journal":1,"component":143802,"posted-content":47},"backfile":{"peer-review":18423,"journal-article":9849},"current":{"peer-review":9804,"journal-article":4597,"posted-content":47}},"coverage-type":{"all":{"peer-review":{"last-status-check-time":1679189264013,"affiliations":0.9939419704538208,"abstracts":0.0,"orcids":0.8838700534948808,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.2097282743472562,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679189264013,"affiliations":0.9792330056763118,"abstracts":0.9804790253357331,"orcids":0.8751211408002215,"licenses":0.9999307766855877,"references":0.9708569846324242,"funders":0.890073376713277,"similarity-checking":0.0,"award-numbers":0.8438322026858646,"ror-ids":0.1509760487332133,"update-policies":0.4567354284923162,"resource-links":0.9998615533711754,"descriptions":0.0},"journal":{"last-status-check-time":1679189264013,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1679189264013,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":4.867804342081473E-4,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1679189264013,"affiliations":1.0,"abstracts":1.0,"orcids":1.0,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"peer-review":{"last-status-check-time":1679189264013,"affiliations":0.997123161265809,"abstracts":0.0,"orcids":0.8637029799706888,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.003365358519242252,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679189264013,"affiliations":0.9761397096151894,"abstracts":0.9778657731749416,"orcids":0.8169357295156869,"licenses":0.9998984668494263,"references":0.9742105797542898,"funders":0.8765356889024266,"similarity-checking":0.0,"award-numbers":0.8231292517006803,"ror-ids":0.0,"update-policies":0.2031678342978983,"resource-links":0.9997969336988527,"descriptions":0.0}},"current":{"peer-review":{"last-status-check-time":1679189264013,"affiliations":0.9879640962872297,"abstracts":0.0,"orcids":0.9217666258669931,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.5975112199102407,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679189264013,"affiliations":0.9858603437024146,"abstracts":0.9860778768762236,"orcids":0.999782466826191,"licenses":1.0,"references":0.963671959973896,"funders":0.9190776593430497,"similarity-checking":0.0,"award-numbers":0.888187948662171,"ror-ids":0.4744398520774418,"update-policies":1.0,"resource-links":1.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1679189264013,"affiliations":1.0,"abstracts":1.0,"orcids":1.0,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":true,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":true,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":false,"deposits-licenses-current":true},"location":"Cambridge,
+        United Kingdom","names":["eLife Sciences Publications, Ltd","eLife Sciences
+        Publications, Ltd."]}}'
+  recorded_at: Sun, 19 Mar 2023 17:37:49 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.7554
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:37:49 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MpHYMBd2ARivQx3KdvhalQYhiv%2Fc4eGFOQNhs18g5%2B72Q5AMtAkJi1l26QY2ZLOUDnQ9b7BY9dFLBlUv%2BA9XMWAmLc1UCwwipWgoQ2Ovp%2BUW86Cwt9yuejjQgzCspjgZTq8eoe0%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7aa77c4dcea51cd2-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.7554",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 19 Mar 2023 17:37:49 GMT
+recorded_with: VCR 6.1.0

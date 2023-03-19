@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary       = 'Ruby client library for conversion of scholarly metadata'
   s.description   = 'Ruby gem and command-line utility for conversion of scholarly metadata from and to different metadata formats, including schema.org. Based on the bolognese gem, but using commonmeta as the intermediate format.'
   s.require_paths = ['lib']
-  s.version       = Commonmeta::VERSION
+  s.version       = Commonmeta::VERSION.dup
   s.extra_rdoc_files = ['README.md']
   s.license = 'MIT'
   s.required_ruby_version = '>= 3.0.0'

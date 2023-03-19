@@ -48,7 +48,7 @@ module Commonmeta
           date["updated"] = strip_milliseconds(meta.fetch("dateModified"))
         end
 
-        publisher = { 'name' => meta.fetch("publisher", nil) }.compact
+        publisher = { "name" => meta.fetch("publisher", nil) }.compact
         state = meta.present? || read_options.present? ? "findable" : "not_found"
         schema_org = meta.fetch("@type", nil)
         type = Commonmeta::Utils::SO_TO_CM_TRANSLATIONS.fetch(schema_org, "Software")

@@ -1,0 +1,530 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://blog.front-matter.io/posts/eating-your-own-dog-food
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - blog.front-matter.io
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Server:
+      - openresty
+      Status:
+      - 301 Moved Permanently
+      X-Request-Id:
+      - 0250dd585615e3bd68fdc4f20fc0517f
+      - 0250dd585615e3bd68fdc4f20fc0517f
+      Location:
+      - "/posts/eating-your-own-dog-food/"
+      Ghost-Cache:
+      - MISS
+      Cache-Control:
+      - public, max-age=31536000
+      Ghost-Age:
+      - '0'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 19 Mar 2023 17:34:35 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '452926'
+      X-Served-By:
+      - cache-ams21024-AMS
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      X-Timer:
+      - S1679247276.854574,VS0,VE1
+      Vary:
+      - Cookie
+      Ghost-Fastly:
+      - 'true'
+      Alt-Svc:
+      - clear
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Sun, 19 Mar 2023 17:34:35 GMT
+- request:
+    method: get
+    uri: https://blog.front-matter.io/posts/eating-your-own-dog-food/
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - blog.front-matter.io
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '36415'
+      Server:
+      - openresty
+      Content-Type:
+      - text/html; charset=utf-8
+      Status:
+      - 200 OK
+      X-Request-Id:
+      - 746ec0a98f0bfacbcba9e3f1bb1f54a2
+      - bcd5cedc92ee9e415619da28b6746be2
+      Etag:
+      - W/"8e3f-bQQ4ZnKSMLdEhx6qBPNeBCp6abk"
+      Ghost-Cache:
+      - HIT
+      Cache-Control:
+      - public, max-age=0
+      Ghost-Age:
+      - '58924'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Sun, 19 Mar 2023 17:34:35 GMT
+      Via:
+      - 1.1 varnish
+      Age:
+      - '271729'
+      X-Served-By:
+      - cache-ams21030-AMS
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '1'
+      X-Timer:
+      - S1679247276.981854,VS0,VE3
+      Vary:
+      - Cookie, Accept-Encoding
+      Ghost-Fastly:
+      - 'true'
+      Alt-Svc:
+      - clear
+    body:
+      encoding: UTF-8
+      string: "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"utf-8\">\n
+        \   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n
+        \   <title>Eating your own Dog Food</title>\n    <link rel=\"stylesheet\"
+        href=\"https://blog.front-matter.io/assets/built/screen.css?v=1ff70c2f6a\">\n\n
+        \   <meta name=\"citation_doi\" content=\"https://doi.org/10.53731/r79vxn1-97aq74v-ag58n\">\n
+        \   <meta name=\"citation_title\" content=\"Eating your own Dog Food\">\n
+        \   <meta name=\"citation_abstract\" content=\"Eating your own dog food is
+        a slang term to describe that an organization should itself use the products
+        and services it provides. For DataCite this means that we should use DOIs
+        with appropriate metadata and strategies for long-term preservation for the
+        scholarly outputs we produce. For the most part\">\n    <meta name=\"citation_author\"
+        content=\"Martin Fenner\">\n    <meta name=\"citation_date\" content=\"2016-12-20\"/>\n
+        \   <meta name=\"citation_keywords\" content=\"Feature\"/>\n    <meta name=\"citation_journal_title\"
+        content=\"Front Matter\"/>\n    <meta name=\"citation_language\" content=\"en\">\n\n
+        \   <meta name=\"citation_issn\" content=\"2749-9952\">\n\n    <meta name=\"dc.identifier\"
+        content=\"https://doi.org/10.53731/r79vxn1-97aq74v-ag58n\">\n    <meta name=\"dc.creator\"
+        content=\"Martin Fenner\" />\n    <meta name=\"dc.title\" content=\"Eating
+        your own Dog Food\" />\n    <meta name=\"dc.description\" content=\"Eating
+        your own dog food is a slang term to describe that an organization should
+        itself use the products and services it provides. For DataCite this means
+        that we should use DOIs with appropriate metadata and strategies for long-term
+        preservation for the scholarly outputs we produce. For the most part\" />\n
+        \   <meta name=\"dc.date\" content=\"2016-12-20\" />\n    <meta name=\"dc.subject\"
+        content=\"Feature\" />\n    <meta name=\"dc.language\" content=\"en\" />   \n
+        \   <meta name=\"dc.format\" content=\"text/html\" /> \n    <meta name=\"dc.source\"
+        content=\"Front Matter\" />\n    <meta name=\"dc.type\" content=\"article\"
+        />\n    \n    <meta name=\"dc.rights\" content=\"https://creativecommons.org/licenses/by/4.0/legalcode\"
+        />\n\n    <link rel=\"icon\" href=\"https://blog.front-matter.io/content/images/size/w256h256/2022/12/android-chrome-192x192.png\"
+        type=\"image/png\" />\n    <link rel=\"canonical\" href=\"https://doi.org/10.53731/r79vxn1-97aq74v-ag58n\"
+        />\n    <meta name=\"referrer\" content=\"no-referrer-when-downgrade\" />\n
+        \   <link rel=\"amphtml\" href=\"https://blog.front-matter.io/posts/eating-your-own-dog-food/amp/\"
+        />\n    \n    <meta property=\"og:site_name\" content=\"Front Matter\" />\n
+        \   <meta property=\"og:type\" content=\"article\" />\n    <meta property=\"og:title\"
+        content=\"Eating your own Dog Food\" />\n    <meta property=\"og:description\"
+        content=\"Eating your own dog food is a slang term to describe that an organization
+        should itself use the products and services it provides. For DataCite this
+        means that we should use DOIs with appropriate metadata and strategies for
+        long-term preservation for the scholarly outputs we produce. For the most
+        part\" />\n    <meta property=\"og:url\" content=\"https://doi.org/10.53731/r79vxn1-97aq74v-ag58n\"
+        />\n    <meta property=\"og:image\" content=\"https://blog.front-matter.io/content/images/2022/08/230785.jpeg\"
+        />\n    <meta property=\"article:published_time\" content=\"2016-12-20T00:00:00.000Z\"
+        />\n    <meta property=\"article:modified_time\" content=\"2022-08-15T09:06:22.000Z\"
+        />\n    <meta property=\"article:tag\" content=\"Feature\" />\n    \n    <meta
+        name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:title\"
+        content=\"Eating your own Dog Food\" />\n    <meta name=\"twitter:description\"
+        content=\"Eating your own dog food is a slang term to describe that an organization
+        should itself use the products and services it provides. For DataCite this
+        means that we should use DOIs with appropriate metadata and strategies for
+        long-term preservation for the scholarly outputs we produce. For the most
+        part\" />\n    <meta name=\"twitter:url\" content=\"https://doi.org/10.53731/r79vxn1-97aq74v-ag58n\"
+        />\n    <meta name=\"twitter:image\" content=\"https://blog.front-matter.io/content/images/2022/08/230785.jpeg\"
+        />\n    <meta name=\"twitter:label1\" content=\"Written by\" />\n    <meta
+        name=\"twitter:data1\" content=\"Martin Fenner\" />\n    <meta name=\"twitter:label2\"
+        content=\"Filed under\" />\n    <meta name=\"twitter:data2\" content=\"Feature\"
+        />\n    <meta property=\"og:image:width\" content=\"2000\" />\n    <meta property=\"og:image:height\"
+        content=\"1372\" />\n    \n    <script type=\"application/ld+json\">\n{\n
+        \   \"@context\": \"https://schema.org\",\n    \"@type\": \"Article\",\n    \"publisher\":
+        {\n        \"@type\": \"Organization\",\n        \"name\": \"Front Matter\",\n
+        \       \"url\": \"https://blog.front-matter.io/\",\n        \"logo\": {\n
+        \           \"@type\": \"ImageObject\",\n            \"url\": \"https://blog.front-matter.io/content/images/2022/12/logo.png\",\n
+        \           \"width\": 200,\n            \"height\": 31\n        }\n    },\n
+        \   \"author\": {\n        \"@type\": \"Person\",\n        \"name\": \"Martin
+        Fenner\",\n        \"image\": {\n            \"@type\": \"ImageObject\",\n
+        \           \"url\": \"https://www.gravatar.com/avatar/8adea77ad740876f5cb832f92d49f08d?s=250&r=x&d=mp\",\n
+        \           \"width\": 250,\n            \"height\": 250\n        },\n        \"url\":
+        \"https://blog.front-matter.io/author/martin/\",\n        \"sameAs\": [\n
+        \           \"https://orcid.org/0000-0003-1419-2405\"\n        ]\n    },\n
+        \   \"headline\": \"Eating your own Dog Food\",\n    \"url\": \"https://blog.front-matter.io/posts/eating-your-own-dog-food/\",\n
+        \   \"datePublished\": \"2016-12-20T00:00:00.000Z\",\n    \"dateModified\":
+        \"2022-08-15T09:06:22.000Z\",\n    \"image\": {\n        \"@type\": \"ImageObject\",\n
+        \       \"url\": \"https://blog.front-matter.io/content/images/2022/08/230785.jpeg\",\n
+        \       \"width\": 2000,\n        \"height\": 1372\n    },\n    \"keywords\":
+        \"Feature\",\n    \"description\": \"Eating your own dog food is a slang term
+        to describe that an organization should itself use the products and services
+        it provides. For DataCite this means that we should use DOIs with appropriate
+        metadata and strategies for long-term preservation for the scholarly outputs
+        we produce. For the most part this is not research data, but rather technical
+        documents such as the DataCite Schema and its documentation (2016).\\n\\nThese
+        outputs also include the posts on this blog, where we discuss topics relev\",\n
+        \   \"mainEntityOfPage\": {\n        \"@type\": \"WebPage\",\n        \"@id\":
+        \"https://blog.front-matter.io/\"\n    }\n}\n    </script>\n\n    <meta name=\"generator\"
+        content=\"Ghost 5.38\" />\n    <link rel=\"alternate\" type=\"application/rss+xml\"
+        title=\"Front Matter\" href=\"https://blog.front-matter.io/rss/\" />\n    <script
+        defer src=\"https://cdn.jsdelivr.net/ghost/portal@~2.25/umd/portal.min.js\"
+        data-ghost=\"https://blog.front-matter.io/\" data-key=\"d0d5aabcc0f96718307d5944b6\"
+        data-api=\"https://front-matter.ghost.io/ghost/api/content/\" crossorigin=\"anonymous\"></script><style
+        id=\"gh-members-styles\">.gh-post-upgrade-cta-content,\n.gh-post-upgrade-cta
+        {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n
+        \   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;\n    text-align:
+        center;\n    width: 100%;\n    color: #ffffff;\n    font-size: 16px;\n}\n\n.gh-post-upgrade-cta-content
+        {\n    border-radius: 8px;\n    padding: 40px 4vw;\n}\n\n.gh-post-upgrade-cta
+        h2 {\n    color: #ffffff;\n    font-size: 28px;\n    letter-spacing: -0.2px;\n
+        \   margin: 0;\n    padding: 0;\n}\n\n.gh-post-upgrade-cta p {\n    margin:
+        20px 0 0;\n    padding: 0;\n}\n\n.gh-post-upgrade-cta small {\n    font-size:
+        16px;\n    letter-spacing: -0.2px;\n}\n\n.gh-post-upgrade-cta a {\n    color:
+        #ffffff;\n    cursor: pointer;\n    font-weight: 500;\n    box-shadow: none;\n
+        \   text-decoration: underline;\n}\n\n.gh-post-upgrade-cta a:hover {\n    color:
+        #ffffff;\n    opacity: 0.8;\n    box-shadow: none;\n    text-decoration: underline;\n}\n\n.gh-post-upgrade-cta
+        a.gh-btn {\n    display: block;\n    background: #ffffff;\n    text-decoration:
+        none;\n    margin: 28px 0 0;\n    padding: 8px 18px;\n    border-radius: 4px;\n
+        \   font-size: 16px;\n    font-weight: 600;\n}\n\n.gh-post-upgrade-cta a.gh-btn:hover
+        {\n    opacity: 0.92;\n}</style><script async src=\"https://js.stripe.com/v3/\"></script>\n
+        \   <script defer src=\"https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js\"
+        data-key=\"d0d5aabcc0f96718307d5944b6\" data-styles=\"https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css\"
+        data-sodo-search=\"https://front-matter.ghost.io/\" crossorigin=\"anonymous\"></script>\n
+        \   <link href=\"https://blog.front-matter.io/webmentions/receive/\" rel=\"webmention\"
+        />\n    <script defer src=\"/public/cards.min.js?v=1ff70c2f6a\"></script>\n
+        \   <link rel=\"stylesheet\" type=\"text/css\" href=\"/public/cards.min.css?v=1ff70c2f6a\">\n
+        \   <script defer src=\"/public/comment-counts.min.js?v=1ff70c2f6a\" data-ghost-comments-counts-api=\"https://blog.front-matter.io/members/api/comments/counts/\"></script>\n
+        \   <script defer data-domain=\"blog.front-matter.io\" src=\"https://plausible.io/js/plausible.js\"></script><style>:root
+        {--ghost-accent-color: #059669;}</style>\n</head>\n\n<body class=\"post-template
+        tag-feature is-head-stacked has-serif-body\">\n<div class=\"gh-site\">\n\n
+        \   <header id=\"gh-head\" class=\"gh-head gh-outer\">\n        <div class=\"gh-head-inner
+        gh-inner\">\n            <div class=\"gh-head-brand\">\n                <div
+        class=\"gh-head-brand-wrapper\">\n                    <a class=\"gh-head-logo\"
+        href=\"https://blog.front-matter.io\">\n                            <img src=\"https://blog.front-matter.io/content/images/2022/12/logo.png\"
+        alt=\"Front Matter\">\n                    </a>\n                </div>\n
+        \               <button class=\"gh-search gh-icon-btn\" data-ghost-search><svg
+        xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"
+        stroke-width=\"2\" width=\"20\" height=\"20\"><path stroke-linecap=\"round\"
+        stroke-linejoin=\"round\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"></path></svg></button>\n
+        \               <button class=\"gh-burger\"></button>\n            </div>\n\n
+        \           <nav class=\"gh-head-menu\">\n                <ul class=\"nav\">\n
+        \   <li class=\"nav-feature\"><a href=\"https://blog.front-matter.io/tag/feature/\">Feature</a></li>\n
+        \   <li class=\"nav-news\"><a href=\"https://blog.front-matter.io/tag/news/\">News</a></li>\n
+        \   <li class=\"nav-meeting-report\"><a href=\"https://blog.front-matter.io/tag/meeting-report/\">Meeting
+        Report</a></li>\n    <li class=\"nav-interview\"><a href=\"https://blog.front-matter.io/tag/interview/\">Interview</a></li>\n
+        \   <li class=\"nav-chart\"><a href=\"https://blog.front-matter.io/tag/chart/\">Chart</a></li>\n
+        \   <li class=\"nav-science-hack\"><a href=\"https://blog.front-matter.io/tag/science-hack/\">Science
+        Hack</a></li>\n    <li class=\"nav-book-review\"><a href=\"https://blog.front-matter.io/tag/book-review/\">Book
+        Review</a></li>\n    <li class=\"nav-gazette\"><a href=\"https://blog.front-matter.io/tag/gazette/\">Gazette</a></li>\n</ul>\n\n
+        \           </nav>\n\n            <div class=\"gh-head-actions\">\n                    <button
+        class=\"gh-search gh-icon-btn\" data-ghost-search><svg xmlns=\"http://www.w3.org/2000/svg\"
+        fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\"
+        width=\"20\" height=\"20\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\"
+        d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"></path></svg></button>\n
+        \                   <div class=\"gh-head-members\">\n                                <a
+        class=\"gh-head-link\" href=\"#/portal/signin\" data-portal=\"signin\">Sign
+        in</a>\n                                <a class=\"gh-head-btn gh-btn gh-primary-btn\"
+        href=\"#/portal/signup\" data-portal=\"signup\">Subscribe</a>\n                    </div>\n
+        \           </div>\n        </div>\n    </header>\n\n    \n<main class=\"gh-main\">\n
+        \       <article class=\"gh-article post tag-feature\">\n\n            <header
+        class=\"gh-article-header gh-canvas\">\n                    <a class=\"gh-article-tag\"
+        href=\"https://blog.front-matter.io/tag/feature/\">Feature</a>\n\n                <h1
+        class=\"gh-article-title\">Eating your own Dog Food</h1>\n\n                    <aside
+        class=\"gh-article-sidebar\">\n\n        <div class=\"gh-author-image-list\">\n
+        \               <a class=\"gh-author-image\" href=\"/author/martin/\">\n                        <img
+        src=\"https://www.gravatar.com/avatar/8adea77ad740876f5cb832f92d49f08d?s&#x3D;250&amp;r&#x3D;x&amp;d&#x3D;mp\"
+        alt=\"Martin Fenner\">\n                </a>\n        </div>\n\n        <div
+        class=\"gh-author-name-list\">\n                <h4 class=\"gh-author-name\">\n
+        \                   <a href=\"/author/martin/\">Martin Fenner</a>\n                </h4>\n
+        \               \n        </div>\n\n        <div class=\"gh-article-meta\">\n
+        \           <div class=\"gh-article-meta-inner\">\n                <time class=\"gh-article-date\"
+        datetime=\"2016-12-20\">Dec 20, 2016</time>\n                    <span class=\"gh-article-meta-sep\"></span>\n
+        \                   <span class=\"gh-article-length\">4 min</span>\n            </div>\n
+        \               <a class=\"gh-card-link\" href=\"https://doi.org/10.53731/r79vxn1-97aq74v-ag58n\">https://doi.org/10.53731/r79vxn1-97aq74v-ag58n</a>\n
+        \       </div>\n\n    </aside>\n\n\n                    <figure class=\"gh-article-image\">\n
+        \       <img\n            srcset=\"/content/images/size/w300/2022/08/230785.jpeg
+        300w,\n                    /content/images/size/w720/2022/08/230785.jpeg 720w,\n
+        \                   /content/images/size/w960/2022/08/230785.jpeg 960w,\n
+        \                   /content/images/size/w1200/2022/08/230785.jpeg 1200w,\n
+        \                   /content/images/size/w2000/2022/08/230785.jpeg 2000w\"\n
+        \           sizes=\"(max-width: 1200px) 100vw, 1200px\"\n            src=\"/content/images/size/w1200/2022/08/230785.jpeg\"\n
+        \           alt=\"Eating your own Dog Food\"\n        >\n            <figcaption>Photo
+        by <a href=\"https://www.pexels.com/photo/black-and-tan-yorkshire-terrier-puppy-230785/\">Bill
+        Emrich</a>. <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\">CC
+        Zero</a>.</figcaption>\n    </figure>\n            </header>\n\n            <section
+        class=\"gh-content gh-canvas\">\n                <p><a href=\"https://newrepublic.com/article/115349/dogfooding-tech-slang-working-out-glitches\">Eating
+        your own dog food</a> is a slang term to describe that an organization should
+        itself use the products and services it provides. For DataCite this means
+        that we should use DOIs with appropriate metadata and strategies for long-term
+        preservation for the scholarly outputs we produce. For the most part this
+        is not research data, but rather technical documents such as the DataCite
+        Schema and its documentation (<a href=\"https://blog.datacite.org/eating-your-own-dog-food/#ref-https://doi.org/10.5438/0012\">2016</a>).</p><p>These
+        outputs also include the posts on this blog, where we discuss topics relevant
+        for the DataCite community, but also of broader interest to anyone who cares
+        about research data, persistent identifiers, and scholarly infrastructure.
+        And starting today all blog posts on this blog will have a DOI, metadata and
+        use a persistent storage mechanism.</p><h3 id=\"technical-implementation\">Technical
+        Implementation</h3><p>This blog is powered by the static site generator <a
+        href=\"https://middlemanapp.com/\">Middleman</a>, with blog posts written
+        in <a href=\"http://commonmark.org/\">Markdown</a> and converted to HTML using
+        <a href=\"http://pandoc.org/\">Pandoc</a> and the <a href=\"https://travis-ci.org/\">Travis
+        CI</a> continuous integration service. Static site generator means that there
+        is no database or application server powering the site, making website adminstration
+        simpler, cheaper and safer. In addition to the blog, the <a href=\"https://www.datacite.org/\">DataCite
+        homepage</a> and <a href=\"https://schema.datacite.org/\">Metadata Schema
+        subsite</a> are also generated using Middleman.</p><p>The simplicity is particularly
+        important here, as registering the DOIs and metadata can be accomplished using
+        a command line utility written by DataCite staff that doesn't need to know
+        much about the internals of Middleman, and thus can be easily adapted to other
+        static site generators such as <a href=\"http://jekyllrb.com/\">Jekyll</a>,
+        <a href=\"http://gohugo.io/\">Hugo</a> or <a href=\"https://hexo.io/\">Hexo</a>.
+        The command line utility is <a href=\"https://github.com/datacite/cirneco\">Cirneco</a>,
+        generating the metadata XML according to the DataCite Metadata Schema, and
+        registering DOI and metadata with the DataCite MDS. Like all tools mentioned
+        in this post Cirneco is open source software, please reach out to us if you
+        are interested in implementing similar functionality for your blog.</p><h3
+        id=\"generating-dois\">Generating DOIs</h3><p>The DOIs for this blog are generated
+        automatically, using a modified base32 encoding algorithm that is provided
+        by Cirneco, as discussed last week (Fenner, <a href=\"https://blog.datacite.org/eating-your-own-dog-food/#ref-https://doi.org/10.5438/55E5-T5C0\">2016</a>).
+        The DOI is generated and minted when a new post is pushed to <a href=\"https://blog.datacite.org/\">https://blog.datacite.org</a>.
+        This avoids two problems: a) DOI-like strings in the wild before publication
+        and b) the randomly generated DOI exists already (we can simply generate a
+        new one). All DOIs are short, without semantic infomation that might change
+        over time, and with a checksum to minimize transcription errors, for example
+        <strong><strong>https://doi.org/10.5438/XCBJ-G7ZY</strong></strong>. Going
+        forward we encourage users to link to the DataCite Blog using the DOI, as
+        these links will continue to work even if we ever move the blog to a different
+        location.</p><h3 id=\"generating-metadata\">Generating Metadata</h3><p>For
+        the generation of metadata, we need to strike a balance between simple author
+        provided metadata, but rich enough to aid discovery. We are doing this via
+        three mechanisms:</p><ul><li>metadata provided by the author</li><li>default
+        metadata for the blog</li><li>metadata automatically extracted from content</li></ul><p>The
+        metadata provided by the author are the typical metadata for blog posts, provided
+        via <a href=\"https://gohugo.io/content/front-matter/\">YAML front matter</a>
+        at the beginning of each post:</p><pre><code>---\nlayout: post\ntitle: Eating
+        your own Dog Food\nauthor: mfenner\ndate: 2016-12-19\ntags:\n- datacite\n-
+        doi\n- metadata\n---</code></pre><p>We can reuse all these metadata when generating
+        DataCite metadata, using the tags as <code>subjects</code>.</p><p>The default
+        metadata are metadata that always stay the same for the blog, such as <code>publisher</code>,
+        <code>HostingInstitution</code> and <code>rights</code>. We can store them
+        in a site-wide configuration file. We can also assume reasonable defaults
+        that can be overridden in the YAML front matter, e.g. <code>resourceType</code>
+        (we use <a href=\"https://schema.org/BlogPosting\">BlogPosting</a> with <code>resourceTypeGeneral</code>
+        Text) and <code>version</code>. We store more information about authors outside
+        the blog post, including <code>givenName</code>, <code>familyName</code> and
+        <code>nameIdentifier</code> (we now show the ORCID ID of every blog author
+        at the bottom of the post).</p><p>Finally, there are metadata that we can
+        automatically extract from the blog post, and we are currently doing this
+        for the <code>description</code> and <code>relatedIdentifier</code>. This
+        blog uses Pandoc and BibTex to generate the references section at the end,
+        and we can fetch this information and convert it into the format needed for
+        <code>relatedIdentifier</code>.</p><p>Taken together we can provide all metadata
+        that are <em>required</em> or <em>recommended</em> in the Metadata Schema
+        documentation (<a href=\"https://blog.datacite.org/eating-your-own-dog-food/#ref-https://doi.org/10.5438/0012\">2016</a>),
+        and we can do this without any extra effort for the author. The full XML is
+        avalailable <a href=\"https://data.crosscite.org/application/vnd.datacite.datacite+xml/10.5438/4K3M-NYVG\">here</a>.</p><p>Not
+        all blog posts need to be cited formally with metadata in a <em>references</em>
+        list formatted according to a specific citation style. But these metadata
+        greatly help with discovery, a search in DataCite Search for <a href=\"http://search.datacite.org/works?query=eating+dog+food\">eating
+        dog food</a> will for example bring up this blog post as the first hit.</p><h3
+        id=\"persistent-storage\">Persistent storage</h3><p>Using DOIs means that
+        readers not only expect rich metadata that help with citation and discovery,
+        but also that DataCite takes extra care to preserve the blog posts, thinking
+        beyond the particular technical implementation or even the contiuing existence
+        of this blog. This is an area where we do need to do more work, starting with
+        a decision about the best archival format for a blog post (HTML, PDF, <a href=\"https://jats.nlm.nih.gov/\">JATS</a>?).
+        For now blog posts are hosted in multiple Git repositories (<a href=\"https://github.com/datacite/blog\">one
+        of them on Github</a>), and in two independent Amazon S3 buckets that each
+        use <a href=\"http://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html\">versioning</a>.
+        Multiple locations with versioning are a good start, but more work is clearly
+        needed.</p><p><em>This blog post was <a href=\"https://doi.org/10.5438/4k3m-nyvg\">originally
+        published</a> on the DataCite Blog.</em></p><h2 id=\"references\">References</h2><p>DataCite
+        Metadata Working Group. (2016). DataCite metadata schema for the publication
+        and citation of research data v4.0. <em>DataCite</em>. <a href=\"https://doi.org/10.5438/0012\">https://doi.org/10.5438/0012</a></p><p>Fenner,
+        M. (2016). Cool doi’s. <em>DataCite</em>. <a href=\"https://doi.org/10.5438/55E5-T5C0\">https://doi.org/10.5438/55E5-T5C0</a></p>\n
+        \                       <div class=\"gh-license\">\n                            Copyright
+        © 2016 Martin Fenner. Distributed under the terms of the\n                            <a\n
+        \                               class=\"gh-license-link\"\n                                href=\"https://creativecommons.org/licenses/by/4.0/legalcode\"\n
+        \                           >\n                                Creative Commons
+        Attribution 4.0 License.\n                            </a>\n                        </div>\n
+        \           </section> \n            </section>\n\n        </article>\n\n
+        \               <div class=\"gh-read-next gh-canvas\">\n                <section
+        class=\"gh-pagehead\">\n                    <h4 class=\"gh-pagehead-title\">Read
+        next</h4>\n                </section>\n\n                <div class=\"gh-topic
+        gh-topic-grid\">\n                    <div class=\"gh-topic-content\">\n                            <article
+        class=\"gh-card post\">\n    <a class=\"gh-card-link\" href=\"/posts/talking-about-talbot/\">\n
+        \           <figure class=\"gh-card-image\">\n                <img\n                    srcset=\"/content/images/size/w300/2023/02/TalbotHound_Talbot_Shrewsbury_Book_1445.png
+        300w,\n                            /content/images/size/w720/2023/02/TalbotHound_Talbot_Shrewsbury_Book_1445.png
+        720w,\n                            /content/images/size/w960/2023/02/TalbotHound_Talbot_Shrewsbury_Book_1445.png
+        960w,\n                            /content/images/size/w1200/2023/02/TalbotHound_Talbot_Shrewsbury_Book_1445.png
+        1200w,\n                            /content/images/size/w2000/2023/02/TalbotHound_Talbot_Shrewsbury_Book_1445.png
+        2000w\"\n                    sizes=\"(max-width: 1200px) 100vw, 1200px\"\n
+        \                   src=\"/content/images/size/w720/2023/02/TalbotHound_Talbot_Shrewsbury_Book_1445.png\"\n
+        \                   alt=\"A talbot hound\"\n                >\n            </figure>\n\n
+        \       <div class=\"gh-card-wrapper\">\n            <header class=\"gh-card-header\">\n
+        \               <h3 class=\"gh-card-title\">Talking about Talbot</h3>\n            </header>\n\n
+        \                   <div class=\"gh-card-excerpt\">Talbot is a Python package
+        I started working on at the end of 2022 and plan to release to the Python
+        Package Index (PyPi) in March. Talbot converts scholarly metadata in various
+        formats, including Crossref, DataCite, Schema.org, BibTeX, RIS, and formatted
+        citations – the complete list of supported formats is</div>\n\n            <footer
+        class=\"gh-card-footer\">\n                <span class=\"gh-card-author\">Martin
+        Fenner</span>\n                <time class=\"gh-card-date\" datetime=\"2023-02-13\">Feb
+        13, 2023</time>\n                    <script\n    data-ghost-comment-count=\"63ea6985b3d553003d317d11\"\n
+        \   data-ghost-comment-count-empty=\"\"\n    data-ghost-comment-count-singular=\"comment\"\n
+        \   data-ghost-comment-count-plural=\"comments\"\n    data-ghost-comment-count-tag=\"span\"\n
+        \   data-ghost-comment-count-class-name=\"gh-card-comments\"\n    data-ghost-comment-count-autowrap=\"true\"\n>\n</script>\n
+        \           </footer>\n        </div>\n    </a>\n</article>                            <article
+        class=\"gh-card post\">\n    <a class=\"gh-card-link\" href=\"/posts/guidelines-for-scholarly-blogs/\">\n
+        \           <figure class=\"gh-card-image\">\n                <img\n                    srcset=\"https://images.unsplash.com/photo-1584631277142-0ca0cfc76aec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGd1aWRlbGluZXxlbnwwfHx8fDE2NzU2ODM0NDc&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300
+        300w,\n                            https://images.unsplash.com/photo-1584631277142-0ca0cfc76aec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGd1aWRlbGluZXxlbnwwfHx8fDE2NzU2ODM0NDc&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720
+        720w,\n                            https://images.unsplash.com/photo-1584631277142-0ca0cfc76aec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGd1aWRlbGluZXxlbnwwfHx8fDE2NzU2ODM0NDc&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960
+        960w,\n                            https://images.unsplash.com/photo-1584631277142-0ca0cfc76aec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGd1aWRlbGluZXxlbnwwfHx8fDE2NzU2ODM0NDc&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200
+        1200w,\n                            https://images.unsplash.com/photo-1584631277142-0ca0cfc76aec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGd1aWRlbGluZXxlbnwwfHx8fDE2NzU2ODM0NDc&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000
+        2000w\"\n                    sizes=\"(max-width: 1200px) 100vw, 1200px\"\n
+        \                   src=\"https://images.unsplash.com/photo-1584631277142-0ca0cfc76aec?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGd1aWRlbGluZXxlbnwwfHx8fDE2NzU2ODM0NDc&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720\"\n
+        \                   alt=\"Guidelines for Scholarly Blogs\"\n                >\n
+        \           </figure>\n\n        <div class=\"gh-card-wrapper\">\n            <header
+        class=\"gh-card-header\">\n                <h3 class=\"gh-card-title\">Guidelines
+        for Scholarly Blogs</h3>\n            </header>\n\n                    <div
+        class=\"gh-card-excerpt\">These guidelines are recommendations for authors
+        of scholarly blogs to help with long-term archiving, discoverability, and
+        citation of blog content.\nThey are modeled after the publication A Data Citation
+        Roadmap for Scholarly Data Repositories, where many of the same guidelines
+        apply, and where I was the first author and co-chair</div>\n\n            <footer
+        class=\"gh-card-footer\">\n                <span class=\"gh-card-author\">Martin
+        Fenner</span>\n                <time class=\"gh-card-date\" datetime=\"2023-02-06\">Feb
+        6, 2023</time>\n                    <script\n    data-ghost-comment-count=\"63e0dd6e35c7ab003d9cda81\"\n
+        \   data-ghost-comment-count-empty=\"\"\n    data-ghost-comment-count-singular=\"comment\"\n
+        \   data-ghost-comment-count-plural=\"comments\"\n    data-ghost-comment-count-tag=\"span\"\n
+        \   data-ghost-comment-count-class-name=\"gh-card-comments\"\n    data-ghost-comment-count-autowrap=\"true\"\n>\n</script>\n
+        \           </footer>\n        </div>\n    </a>\n</article>                            <article
+        class=\"gh-card post\">\n    <a class=\"gh-card-link\" href=\"/posts/need-to-fix-science-blogs/\">\n
+        \           <figure class=\"gh-card-image\">\n                <img\n                    srcset=\"https://images.unsplash.com/photo-1585838017777-5003198884b5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxicm9rZW58ZW58MHx8fHwxNjc0NjUyMTEy&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300
+        300w,\n                            https://images.unsplash.com/photo-1585838017777-5003198884b5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxicm9rZW58ZW58MHx8fHwxNjc0NjUyMTEy&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720
+        720w,\n                            https://images.unsplash.com/photo-1585838017777-5003198884b5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxicm9rZW58ZW58MHx8fHwxNjc0NjUyMTEy&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960
+        960w,\n                            https://images.unsplash.com/photo-1585838017777-5003198884b5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxicm9rZW58ZW58MHx8fHwxNjc0NjUyMTEy&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200
+        1200w,\n                            https://images.unsplash.com/photo-1585838017777-5003198884b5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxicm9rZW58ZW58MHx8fHwxNjc0NjUyMTEy&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000
+        2000w\"\n                    sizes=\"(max-width: 1200px) 100vw, 1200px\"\n
+        \                   src=\"https://images.unsplash.com/photo-1585838017777-5003198884b5?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxicm9rZW58ZW58MHx8fHwxNjc0NjUyMTEy&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720\"\n
+        \                   alt=\"Do we need to fix science blogs?\"\n                >\n
+        \           </figure>\n\n        <div class=\"gh-card-wrapper\">\n            <header
+        class=\"gh-card-header\">\n                <h3 class=\"gh-card-title\">Do
+        we need to fix science blogs?</h3>\n            </header>\n\n                    <div
+        class=\"gh-card-excerpt\">Science blogs have been around for at least 20 years
+        and have become an important part of science communication. So are there any
+        fundamental issues that need fixing?\n\n\nBarriers to Entry\n\nBlogging platforms
+        are mature at this point, and the technology is not imposing barriers to entry
+        for most people.</div>\n\n            <footer class=\"gh-card-footer\">\n
+        \               <span class=\"gh-card-author\">Martin Fenner</span>\n                <time
+        class=\"gh-card-date\" datetime=\"2023-01-25\">Jan 25, 2023</time>\n                    <script\n
+        \   data-ghost-comment-count=\"63c889b63b62db003dc5eb9c\"\n    data-ghost-comment-count-empty=\"\"\n
+        \   data-ghost-comment-count-singular=\"comment\"\n    data-ghost-comment-count-plural=\"comments\"\n
+        \   data-ghost-comment-count-tag=\"span\"\n    data-ghost-comment-count-class-name=\"gh-card-comments\"\n
+        \   data-ghost-comment-count-autowrap=\"true\"\n>\n</script>\n            </footer>\n
+        \       </div>\n    </a>\n</article>                    </div>\n                </div>\n
+        \           </div>\n\n                <div class=\"gh-comments gh-read-next
+        gh-canvas\">\n            <section class=\"gh-pagehead\">\n                <h4
+        class=\"gh-pagehead-title\">Comments (<script\n    data-ghost-comment-count=\"62d42bbd41e317003df48efd\"\n
+        \   data-ghost-comment-count-empty=\"0\"\n    data-ghost-comment-count-singular=\"\"\n
+        \   data-ghost-comment-count-plural=\"\"\n    data-ghost-comment-count-tag=\"span\"\n
+        \   data-ghost-comment-count-class-name=\"\"\n    data-ghost-comment-count-autowrap=\"true\"\n>\n</script>)</h3>\n
+        \           </section>\n            \n        <script defer src=\"https://cdn.jsdelivr.net/ghost/comments-ui@~0.12/umd/comments-ui.min.js\"
+        data-ghost-comments=\"https://blog.front-matter.io/\" data-api=\"https://front-matter.ghost.io/ghost/api/content/\"
+        data-admin=\"https://front-matter.ghost.io/ghost/\" data-key=\"d0d5aabcc0f96718307d5944b6\"
+        data-styles=\"https://cdn.jsdelivr.net/ghost/comments-ui@~0.12/umd/main.css\"
+        data-title=\"\" data-count=\"false\" data-post-id=\"62d42bbd41e317003df48efd\"
+        data-sentry-dsn=\"\" data-color-scheme=\"auto\" data-avatar-saturation=\"60\"
+        data-accent-color=\"#059669\" data-app-version=\"0.12\" data-comments-enabled=\"all\"
+        data-publication=\"Front Matter\" crossorigin=\"anonymous\"></script>\n    \n
+        \       </div>\n</main>\n\n    <footer class=\"gh-foot gh-outer\">\n        <div
+        class=\"gh-foot-inner gh-inner\">\n                <section class=\"gh-subscribe\">\n
+        \                   <h3 class=\"gh-subscribe-title\">Subscribe to Front Matter</h3>\n
+        \                       <div class=\"gh-subscribe-description\">Subscribe
+        to the Front Matter Blog to automatically receive blog posts via email newsletter.</div>\n
+        \                   <button class=\"gh-subscribe-btn gh-btn\" data-portal=\"signup\"><svg
+        width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\" stroke=\"currentColor\"
+        xmlns=\"http://www.w3.org/2000/svg\">\n    <path d=\"M3.33332 3.33334H16.6667C17.5833
+        3.33334 18.3333 4.08334 18.3333 5.00001V15C18.3333 15.9167 17.5833 16.6667
+        16.6667 16.6667H3.33332C2.41666 16.6667 1.66666 15.9167 1.66666 15V5.00001C1.66666
+        4.08334 2.41666 3.33334 3.33332 3.33334Z\" stroke-width=\"1.5\" stroke-linecap=\"round\"
+        stroke-linejoin=\"round\"/>\n    <path d=\"M18.3333 5L9.99999 10.8333L1.66666
+        5\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n</svg>
+        Subscribe now</button>\n                </section>\n\n            <nav class=\"gh-foot-menu\">\n
+        \               <ul class=\"nav\">\n    <li class=\"nav-front-matter\"><a
+        href=\"https://front-matter.io\">Front Matter</a></li>\n    <li class=\"nav-about\"><a
+        href=\"https://blog.front-matter.io/about/\">About</a></li>\n    <li class=\"nav-gazette\"><a
+        href=\"https://blog.front-matter.io/gazette/\">Gazette</a></li>\n    <li class=\"nav-privacy-policy\"><a
+        href=\"https://blog.front-matter.io/privacy-policy/\">Privacy Policy</a></li>\n
+        \   <li class=\"nav-rss\"><a href=\"https://blog.front-matter.io/rss/\">RSS</a></li>\n
+        \   <li class=\"nav-usage-stats\"><a href=\"https://plausible.io/blog.front-matter.io\">Usage
+        Stats</a></li>\n    <li class=\"nav-discord\"><a href=\"https://front-matter.io/discord\">Discord</a></li>\n</ul>\n\n
+        \           </nav>\n\n            <div class=\"gh-copyright\">\n                    Front
+        Matter © 2023. Powered by <a href=\"https://ghost.org/\" target=\"_blank\"
+        rel=\"noopener\">Ghost</a>\n            </div>\n        </div>\n    </footer>\n\n</div>\n\n
+        \   <div class=\"pswp\" tabindex=\"-1\" role=\"dialog\" aria-hidden=\"true\">\n
+        \   <div class=\"pswp__bg\"></div>\n\n    <div class=\"pswp__scroll-wrap\">\n
+        \       <div class=\"pswp__container\">\n            <div class=\"pswp__item\"></div>\n
+        \           <div class=\"pswp__item\"></div>\n            <div class=\"pswp__item\"></div>\n
+        \       </div>\n\n        <div class=\"pswp__ui pswp__ui--hidden\">\n            <div
+        class=\"pswp__top-bar\">\n                <div class=\"pswp__counter\"></div>\n\n
+        \               <button class=\"pswp__button pswp__button--close\" title=\"Close
+        (Esc)\"></button>\n                <button class=\"pswp__button pswp__button--share\"
+        title=\"Share\"></button>\n                <button class=\"pswp__button pswp__button--fs\"
+        title=\"Toggle fullscreen\"></button>\n                <button class=\"pswp__button
+        pswp__button--zoom\" title=\"Zoom in/out\"></button>\n\n                <div
+        class=\"pswp__preloader\">\n                    <div class=\"pswp__preloader__icn\">\n
+        \                       <div class=\"pswp__preloader__cut\">\n                            <div
+        class=\"pswp__preloader__donut\"></div>\n                        </div>\n
+        \                   </div>\n                </div>\n            </div>\n\n
+        \           <div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\">\n
+        \               <div class=\"pswp__share-tooltip\"></div>\n            </div>\n\n
+        \           <button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous
+        (arrow left)\"></button>\n            <button class=\"pswp__button pswp__button--arrow--right\"
+        title=\"Next (arrow right)\"></button>\n\n            <div class=\"pswp__caption\">\n
+        \               <div class=\"pswp__caption__center\"></div>\n            </div>\n
+        \       </div>\n    </div>\n</div>\n<script src=\"https://blog.front-matter.io/assets/built/main.min.js?v=1ff70c2f6a\"></script>\n\n\n\n</body>\n\n</html>\n"
+  recorded_at: Sun, 19 Mar 2023 17:34:35 GMT
+recorded_with: VCR 6.1.0

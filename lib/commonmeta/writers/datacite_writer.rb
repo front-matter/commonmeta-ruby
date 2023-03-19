@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 module Commonmeta
-  # frozen_string_literal: true
-
   module Writers
     module DataciteWriter
       def datacite
@@ -47,8 +45,8 @@ module Commonmeta
         }.compact
 
         JSON.pretty_generate hsh.transform_keys! { |key|
-                               key.camelcase(uppercase_first_letter = :lower)
-                             }
+          key.camelcase(uppercase_first_letter = :lower)
+        }
       end
 
       def datacite_contributor(contributor)
@@ -57,7 +55,7 @@ module Commonmeta
 
         contributor["name"] = [contributor["familyName"], contributor["givenName"]].join(", ") if type == "Personal"
         contributor["nameIdentifiers"] = author_name_identifiers(contributor["id"])
-        
+
         { "name" => contributor.fetch("name", nil),
           "nameType" => type,
           "givenName" => contributor.fetch("givenName", nil),

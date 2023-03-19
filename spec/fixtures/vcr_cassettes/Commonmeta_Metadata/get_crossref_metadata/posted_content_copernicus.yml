@@ -1,0 +1,297 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.5194/cp-2020-95/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:37:27 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.5194/cp-2020-95>; rel="canonical", <https://creativecommons.org/licenses/by/4.0/>;
+        version="vor"; rel="license", <http://orcid.org/0000-0001-6130-6474>; title="Jun
+        Shao"; rel="author", <http://orcid.org/0000-0002-5068-1591>; title="Laurie
+        Menviel"; rel="author", <http://orcid.org/0000-0003-3306-0969>; title="Mayhar
+        Mohtadi"; rel="author"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIiB2ZXJzaW9uPSIzLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIGh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3NjaGVtYXMvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0My4wLnhzZCI+DQogIDxxdWVyeV9yZXN1bHQ+DQogICAgPGhlYWQ+DQogICAgICA8ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICA8cXVlcnkgc3RhdHVzPSJyZXNvbHZlZCI+DQogICAgICAgIDxkb2kgdHlwZT0icG9zdGVkX2NvbnRlbnQiPjEwLjUxOTQvY3AtMjAyMC05NTwvZG9pPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0icHVibGlzaGVyLW5hbWUiIHR5cGU9InN0cmluZyI+Q29wZXJuaWN1cyBHbWJIPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9InByZWZpeC1uYW1lIiB0eXBlPSJzdHJpbmciPkNvcGVybmljdXMgR21iSDwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJtZW1iZXItaWQiIHR5cGU9Im51bWJlciI+MzE0NTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJjaXRhdGlvbi1pZCIgdHlwZT0ibnVtYmVyIj4xMTgzMTgxNTE8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iYm9vay1pZCIgdHlwZT0ibnVtYmVyIj4zNDMwMzQyPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImRlcG9zaXQtdGltZXN0YW1wIiB0eXBlPSJudW1iZXIiPjIwMjIwMzE3MTMwMDE5PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9Im93bmVyLXByZWZpeCIgdHlwZT0ic3RyaW5nIj4xMC41MTk0PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9Imxhc3QtdXBkYXRlIiB0eXBlPSJkYXRlIj4yMDIyLTAzLTE3VDEyOjAxOjA5WjwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJjcmVhdGVkIiB0eXBlPSJkYXRlIj4yMDIwLTA3LTI4VDA5OjE2OjEwWjwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJjaXRlZGJ5LWNvdW50IiB0eXBlPSJudW1iZXIiPjA8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0icmVsYXRpb24iIHR5cGU9ImRvaSIgY2xhaW09Imhhc1ByZXByaW50Ij4xMC41MTk0L2NwLTE3LTE1MDctMjAyMTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJyZWxhdGlvbiIgdHlwZT0iZG9pIiBjbGFpbT0iaXNTdXBwbGVtZW50VG8iPjEwLjUxOTQvY3AtMjAyMC05NS1zdXBwbGVtZW50PC9jcm0taXRlbT4NCiAgICAgICAgPGRvaV9yZWNvcmQ+DQogICAgICAgICAgPGNyb3NzcmVmIHhtbG5zPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy94c2NoZW1hLzEuMSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy94c2NoZW1hLzEuMSBodHRwOi8vZG9pLmNyb3NzcmVmLm9yZy9zY2hlbWFzL3VuaXhyZWYxLjEueHNkIj4NCiAgICAgICAgICAgIDxwb3N0ZWRfY29udGVudCB0eXBlPSJwcmVwcmludCI+DQogICAgICAgICAgICAgIDxncm91cF90aXRsZT5DYXJib24gQ3ljbGUvTW9kZWxsaW5nIG9ubHkvTWlsbGVuaWFsL0QtTzwvZ3JvdXBfdGl0bGU+DQogICAgICAgICAgICAgIDxjb250cmlidXRvcnM+DQogICAgICAgICAgICAgICAgPHBlcnNvbl9uYW1lIHNlcXVlbmNlPSJmaXJzdCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj4NCiAgICAgICAgICAgICAgICAgIDxnaXZlbl9uYW1lPkp1bjwvZ2l2ZW5fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxzdXJuYW1lPlNoYW88L3N1cm5hbWU+DQogICAgICAgICAgICAgICAgICA8T1JDSUQ+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTYxMzAtNjQ3NDwvT1JDSUQ+DQogICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgICA8cGVyc29uX25hbWUgc2VxdWVuY2U9ImFkZGl0aW9uYWwiIGNvbnRyaWJ1dG9yX3JvbGU9ImF1dGhvciI+DQogICAgICAgICAgICAgICAgICA8Z2l2ZW5fbmFtZT5Mb3dlbGwgRDwvZ2l2ZW5fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxzdXJuYW1lPlN0b3R0PC9zdXJuYW1lPg0KICAgICAgICAgICAgICAgIDwvcGVyc29uX25hbWU+DQogICAgICAgICAgICAgICAgPHBlcnNvbl9uYW1lIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPg0KICAgICAgICAgICAgICAgICAgPGdpdmVuX25hbWU+TGF1cmllPC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgPHN1cm5hbWU+TWVudmllbDwvc3VybmFtZT4NCiAgICAgICAgICAgICAgICAgIDxPUkNJRD5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNTA2OC0xNTkxPC9PUkNJRD4NCiAgICAgICAgICAgICAgICA8L3BlcnNvbl9uYW1lPg0KICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj4NCiAgICAgICAgICAgICAgICAgIDxnaXZlbl9uYW1lPkFuZHk8L2dpdmVuX25hbWU+DQogICAgICAgICAgICAgICAgICA8c3VybmFtZT5SaWRnd2VsbDwvc3VybmFtZT4NCiAgICAgICAgICAgICAgICA8L3BlcnNvbl9uYW1lPg0KICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj4NCiAgICAgICAgICAgICAgICAgIDxnaXZlbl9uYW1lPk1hbGluPC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgPHN1cm5hbWU+w5ZkYWxlbjwvc3VybmFtZT4NCiAgICAgICAgICAgICAgICA8L3BlcnNvbl9uYW1lPg0KICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj4NCiAgICAgICAgICAgICAgICAgIDxnaXZlbl9uYW1lPk1heWhhcjwvZ2l2ZW5fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxzdXJuYW1lPk1vaHRhZGk8L3N1cm5hbWU+DQogICAgICAgICAgICAgICAgICA8T1JDSUQ+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTMzMDYtMDk2OTwvT1JDSUQ+DQogICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgPC9jb250cmlidXRvcnM+DQogICAgICAgICAgICAgIDx0aXRsZXM+DQogICAgICAgICAgICAgICAgPHRpdGxlPlRoZSBBdG1vc3BoZXJpYyBCcmlkZ2UgQ29tbXVuaWNhdGVkIHRoZSDOtCZhbXA7bHQ7c3VwJmFtcDtndDsxMyZhbXA7bHQ7L3N1cCZhbXA7Z3Q7QyBEZWNsaW5lIGR1cmluZyB0aGUgTGFzdCBEZWdsYWNpYXRpb24gdG8gdGhlIEdsb2JhbCBVcHBlciBPY2VhbjwvdGl0bGU+DQogICAgICAgICAgICAgIDwvdGl0bGVzPg0KICAgICAgICAgICAgICA8cG9zdGVkX2RhdGU+DQogICAgICAgICAgICAgICAgPG1vbnRoPjc8L21vbnRoPg0KICAgICAgICAgICAgICAgIDxkYXk+Mjg8L2RheT4NCiAgICAgICAgICAgICAgICA8eWVhcj4yMDIwPC95ZWFyPg0KICAgICAgICAgICAgICA8L3Bvc3RlZF9kYXRlPg0KICAgICAgICAgICAgICA8amF0czphYnN0cmFjdCB4bWxuczpqYXRzPSJodHRwOi8vd3d3Lm5jYmkubmxtLm5paC5nb3YvSkFUUzEiPg0KICAgICAgICAgICAgICAgIDxqYXRzOnA+PCFbQ0RBVEFbQWJzdHJhY3QuIER1cmluZyB0aGUgZWFybHkgbGFzdCBnbGFjaWFsIHRlcm1pbmF0aW9uICgxNy4y4oCTMTXigIlrYSkgYXRtb3NwaGVyaWMgzrQxM0MgZGVjbGluZWQgc2hhcnBseSBieSAwLjPigJMwLjTigInigLAgYXMgYXRtb3NwaGVyaWMgcENPMiByb3NlLiBUaGlzIHdhcyB0aGUgaW5pdGlhbCBwYXJ0IG9mIHRoZSBhdG1vc3BoZXJpYyDOtDEzQyBleGN1cnNpb24gdGhhdCBsYXN0ZWQgZm9yIG11bHRpcGxlIHRob3VzYW5kIHllYXJzLiBBIHNpbWlsYXIgzrQxM0MgZGVjbGluZSBoYXMgYmVlbiBkb2N1bWVudGVkIGluIG1hcmluZSBwcm94eSByZWNvcmRzIGZyb20gYm90aCBzdXJmYWNlIGFuZCB0aGVybW9jbGluZS1kd2VsbGluZyBwbGFua3RpYyBmb3JhbWluaWZlcmEuIFRoZSBmb3JhbWluaWZlcmFsIM60MTNDIGRlY2xpbmUgaGFzIHByZXZpb3VzbHkgYmVlbiBhdHRyaWJ1dGVkIHRvIGEgZmx1eCBvZiByZXNwaXJlZCBjYXJib24gZnJvbSB0aGUgZGVlcCBvY2VhbiB0aGF0IHdhcyBzdWJzZXF1ZW50bHkgdHJhbnNwb3J0ZWQgd2l0aGluIHRoZSB1cHBlciBvY2VhbiAoaS5lLiBib3R0b20gdXAgdHJhbnNwb3J0KSB0byBzaXRlcyB3aGVyZSB0aGUgc2lnbmFsIGlzIHJlY29yZGVkLiBIZXJlLCB3ZSBwcm92aWRlIG1vZGVsaW5nIGV2aWRlbmNlIHRoYXQgd2hlbiByZXNwaXJlZCBjYXJib24gdXB3ZWxscyBpbiB0aGUgU291dGhlcm4gT2NlYW4sIG5lZ2F0aXZlIM60MTNDIGFub21hbGllcyBpbiB0aGUgZ2xvYmFsIHVwcGVyIG9jZWFuIHdlcmUgaW5zdGVhZCB0cmFuc2ZlcnJlZCBmcm9tIHRoZSBhdG1vc3BoZXJlIChpLmUuIHRvcCBkb3duIHRyYW5zcG9ydCkuIER1ZSB0byB0aGlzIGVmZmljaWVudCBhdG1vc3BoZXJpYyBicmlkZ2UsIHRoZSBwYXRod2F5IG9mIM60MTNDIHRyYW5zcG9ydCB3YXMgbGlrZWx5IHRvIGJlIGRpZmZlcmVudCBmcm9tIG51dHJpZW50IHRyYW5zcG9ydCBkdXJpbmcgdGhlIGVhcmx5IGRlZ2xhY2lhdGlvbi4gVGhpcyBpbXBsaWVzIHRoYXQgdGhlIHVzYWdlIG9mIHBsYW5rdGljIM60MTNDIHJlY29yZHMgZm9yIGlkZW50aWZ5aW5nIHRoZSBjYXJib24gc291cmNlKHMpIHJlc3BvbnNpYmxlIGZvciB0aGUgYXRtb3NwaGVyaWMgcENPMiByaXNlIGR1cmluZyB0aGUgZWFybHkgZGVnbGFjaWF0aW9uIGlzIGxpbWl0ZWQuIFRoZSBtb2RlbCByZXN1bHRzIGFsc28gc3VnZ2VzdCB0aGF0IHRoZXJtb2NsaW5lIHdhdGVycyBpbiB1cHdlbGxpbmcgc3lzdGVtcyBsaWtlIHRoZSBlYXN0ZXJuIGVxdWF0b3JpYWwgUGFjaWZpYywgYW5kIGV2ZW4gdXBwZXIgZGVlcCB3YXRlcnMgYWJvdmUgMjAwMOKAiW0sIGNhbiBiZSBhZmZlY3RlZCBieSB0aGlzIGF0bW9zcGhlcmljIGJyaWRnZSBkdXJpbmcgdGhlIGVhcmx5IGRlZ2xhY2lhdGlvbi4gT3VyIHJlc3VsdHMgaW1wbHkgdGhhdCBjYXV0aW9uIG11c3QgYmUgYXBwbGllZCB3aGVuIGludGVycHJldGluZyBlYXJseSBkZWdsYWNpYWwgbWFyaW5lIM60MTNDIHJlY29yZHMgZnJvbSBkZXB0aHMgdGhhdCBhcmUgcG90ZW50aWFsbHkgYWZmZWN0ZWQgYnkgdGhlIGF0bW9zcGhlcmUuXV0+PC9qYXRzOnA+DQogICAgICAgICAgICAgIDwvamF0czphYnN0cmFjdD4NCiAgICAgICAgICAgICAgPGZyOnByb2dyYW0geG1sbnM6ZnI9Imh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL2Z1bmRyZWYueHNkIiBuYW1lPSJmdW5kcmVmIj4NCiAgICAgICAgICAgICAgICA8ZnI6YXNzZXJ0aW9uIG5hbWU9ImZ1bmRncm91cCI+DQogICAgICAgICAgICAgICAgICA8ZnI6YXNzZXJ0aW9uIG5hbWU9ImZ1bmRlcl9uYW1lIj4NCiAgICAgICAgICAgICAgICAgICAgRGl2aXNpb24gb2YgT2NlYW4gU2NpZW5jZXMNCiAgICAgICAgICAgICAgICAgICAgPGZyOmFzc2VydGlvbiBuYW1lPSJmdW5kZXJfaWRlbnRpZmllciI+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTMwMzkvMTAwMDAwMTQxPC9mcjphc3NlcnRpb24+DQogICAgICAgICAgICAgICAgICA8L2ZyOmFzc2VydGlvbj4NCiAgICAgICAgICAgICAgICAgIDxmcjphc3NlcnRpb24gbmFtZT0iYXdhcmRfbnVtYmVyIj4xNTU4OTkwPC9mcjphc3NlcnRpb24+DQogICAgICAgICAgICAgICAgICA8ZnI6YXNzZXJ0aW9uIG5hbWU9ImF3YXJkX251bWJlciI+MTczNjc3MTwvZnI6YXNzZXJ0aW9uPg0KICAgICAgICAgICAgICAgIDwvZnI6YXNzZXJ0aW9uPg0KICAgICAgICAgICAgICAgIDxmcjphc3NlcnRpb24gbmFtZT0iZnVuZGdyb3VwIj4NCiAgICAgICAgICAgICAgICAgIDxmcjphc3NlcnRpb24gbmFtZT0iZnVuZGVyX25hbWUiPg0KICAgICAgICAgICAgICAgICAgICBBdXN0cmFsaWFuIFJlc2VhcmNoIENvdW5jaWwNCiAgICAgICAgICAgICAgICAgICAgPGZyOmFzc2VydGlvbiBuYW1lPSJmdW5kZXJfaWRlbnRpZmllciI+aHR0cDovL2R4LmRvaS5vcmcvMTAuMTMwMzkvNTAxMTAwMDAwOTIzPC9mcjphc3NlcnRpb24+DQogICAgICAgICAgICAgICAgICA8L2ZyOmFzc2VydGlvbj4NCiAgICAgICAgICAgICAgICAgIDxmcjphc3NlcnRpb24gbmFtZT0iYXdhcmRfbnVtYmVyIj5GVDE4MDEwMDYwNjwvZnI6YXNzZXJ0aW9uPg0KICAgICAgICAgICAgICAgICAgPGZyOmFzc2VydGlvbiBuYW1lPSJhd2FyZF9udW1iZXIiPkRQMTgwMTAwMDQ4PC9mcjphc3NlcnRpb24+DQogICAgICAgICAgICAgICAgPC9mcjphc3NlcnRpb24+DQogICAgICAgICAgICAgIDwvZnI6cHJvZ3JhbT4NCiAgICAgICAgICAgICAgPGFpOnByb2dyYW0geG1sbnM6YWk9Imh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL0FjY2Vzc0luZGljYXRvcnMueHNkIiBuYW1lPSJBY2Nlc3NJbmRpY2F0b3JzIj4NCiAgICAgICAgICAgICAgICA8YWk6ZnJlZV90b19yZWFkIHN0YXJ0X2RhdGU9IjIwMjAtMDctMjgiIC8+DQogICAgICAgICAgICAgICAgPGFpOmxpY2Vuc2VfcmVmIGFwcGxpZXNfdG89InZvciIgc3RhcnRfZGF0ZT0iMjAyMC0wNy0yOCI+aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzQuMC88L2FpOmxpY2Vuc2VfcmVmPg0KICAgICAgICAgICAgICA8L2FpOnByb2dyYW0+DQogICAgICAgICAgICAgIDxyZWw6cHJvZ3JhbSB4bWxuczpyZWw9Imh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3JlbGF0aW9ucy54c2QiIG5hbWU9InJlbGF0aW9ucyI+DQogICAgICAgICAgICAgICAgPHJlbDpyZWxhdGVkX2l0ZW0+DQogICAgICAgICAgICAgICAgICA8cmVsOmRlc2NyaXB0aW9uPlN1cHBsZW1lbnRhcnkgbWF0ZXJpYWw8L3JlbDpkZXNjcmlwdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxyZWw6aW50ZXJfd29ya19yZWxhdGlvbiBpZGVudGlmaWVyLXR5cGU9ImRvaSIgcmVsYXRpb25zaGlwLXR5cGU9ImlzU3VwcGxlbWVudGVkQnkiPjEwLjUxOTQvY3AtMjAyMC05NS1zdXBwbGVtZW50PC9yZWw6aW50ZXJfd29ya19yZWxhdGlvbj4NCiAgICAgICAgICAgICAgICA8L3JlbDpyZWxhdGVkX2l0ZW0+DQogICAgICAgICAgICAgICAgPHJlbDpyZWxhdGVkX2l0ZW0+DQogICAgICAgICAgICAgICAgICA8cmVsOmRlc2NyaXB0aW9uPlJldmlldyBvZiBDUEQgbWFudXNjcmlwdCAxMC41MTk0L2NwLTIwMjAtOTUgYnkgU2hhbyBldCBhbC48L3JlbDpkZXNjcmlwdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxyZWw6aW50ZXJfd29ya19yZWxhdGlvbiBpZGVudGlmaWVyLXR5cGU9ImRvaSIgcmVsYXRpb25zaGlwLXR5cGU9Imhhc1JldmlldyI+MTAuNTE5NC9jcC0yMDIwLTk1LVJDMTwvcmVsOmludGVyX3dvcmtfcmVsYXRpb24+DQogICAgICAgICAgICAgICAgPC9yZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICAgIDxyZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICAgICAgPHJlbDpkZXNjcmlwdGlvbj5yZXNwb25zZSB0byB0aGUgcmVmZXJlZSBjb21tZW50cyBieSBBbm9ueW1vdXMgUmVmZXJlZSAjMTwvcmVsOmRlc2NyaXB0aW9uPg0KICAgICAgICAgICAgICAgICAgPHJlbDppbnRlcl93b3JrX3JlbGF0aW9uIGlkZW50aWZpZXItdHlwZT0iZG9pIiByZWxhdGlvbnNoaXAtdHlwZT0iaGFzQ29tbWVudCI+MTAuNTE5NC9jcC0yMDIwLTk1LUFDMTwvcmVsOmludGVyX3dvcmtfcmVsYXRpb24+DQogICAgICAgICAgICAgICAgPC9yZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICAgIDxyZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICAgICAgPHJlbDpkZXNjcmlwdGlvbj5SZXZpZXcgb2YgTVMgYnkgSnVuIFNoYW8gZXQgYWwuPC9yZWw6ZGVzY3JpcHRpb24+DQogICAgICAgICAgICAgICAgICA8cmVsOmludGVyX3dvcmtfcmVsYXRpb24gaWRlbnRpZmllci10eXBlPSJkb2kiIHJlbGF0aW9uc2hpcC10eXBlPSJoYXNSZXZpZXciPjEwLjUxOTQvY3AtMjAyMC05NS1SQzI8L3JlbDppbnRlcl93b3JrX3JlbGF0aW9uPg0KICAgICAgICAgICAgICAgIDwvcmVsOnJlbGF0ZWRfaXRlbT4NCiAgICAgICAgICAgICAgICA8cmVsOnJlbGF0ZWRfaXRlbT4NCiAgICAgICAgICAgICAgICAgIDxyZWw6ZGVzY3JpcHRpb24+cmVzcG9uc2UgdG8gdGhlIHJlZmVyZWUgY29tbWVudHMgYnkgRm9ydHVuYXQgSm9vczwvcmVsOmRlc2NyaXB0aW9uPg0KICAgICAgICAgICAgICAgICAgPHJlbDppbnRlcl93b3JrX3JlbGF0aW9uIGlkZW50aWZpZXItdHlwZT0iZG9pIiByZWxhdGlvbnNoaXAtdHlwZT0iaGFzQ29tbWVudCI+MTAuNTE5NC9jcC0yMDIwLTk1LUFDMjwvcmVsOmludGVyX3dvcmtfcmVsYXRpb24+DQogICAgICAgICAgICAgICAgPC9yZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICAgIDxyZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICAgICAgPHJlbDpkZXNjcmlwdGlvbj5lZGl0b3IgYXNzZXNzZW1lbnQgb2YgdGhlIHJldmlld3M8L3JlbDpkZXNjcmlwdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxyZWw6aW50ZXJfd29ya19yZWxhdGlvbiBpZGVudGlmaWVyLXR5cGU9ImRvaSIgcmVsYXRpb25zaGlwLXR5cGU9Imhhc1JldmlldyI+MTAuNTE5NC9jcC0yMDIwLTk1LUVDMTwvcmVsOmludGVyX3dvcmtfcmVsYXRpb24+DQogICAgICAgICAgICAgICAgPC9yZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICAgIDxyZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICAgICAgPHJlbDpkZXNjcmlwdGlvbj5SZXBseSB0byBFQzwvcmVsOmRlc2NyaXB0aW9uPg0KICAgICAgICAgICAgICAgICAgPHJlbDppbnRlcl93b3JrX3JlbGF0aW9uIGlkZW50aWZpZXItdHlwZT0iZG9pIiByZWxhdGlvbnNoaXAtdHlwZT0iaGFzQ29tbWVudCI+MTAuNTE5NC9jcC0yMDIwLTk1LUFDMzwvcmVsOmludGVyX3dvcmtfcmVsYXRpb24+DQogICAgICAgICAgICAgICAgPC9yZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICAgIDxyZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICAgICAgPHJlbDppbnRyYV93b3JrX3JlbGF0aW9uIHJlbGF0aW9uc2hpcC10eXBlPSJpc1ByZXByaW50T2YiIGlkZW50aWZpZXItdHlwZT0iZG9pIj4xMC41MTk0L2NwLTE3LTE1MDctMjAyMTwvcmVsOmludHJhX3dvcmtfcmVsYXRpb24+DQogICAgICAgICAgICAgICAgPC9yZWw6cmVsYXRlZF9pdGVtPg0KICAgICAgICAgICAgICA8L3JlbDpwcm9ncmFtPg0KICAgICAgICAgICAgICA8ZG9pX2RhdGE+DQogICAgICAgICAgICAgICAgPGRvaT4xMC41MTk0L2NwLTIwMjAtOTU8L2RvaT4NCiAgICAgICAgICAgICAgICA8cmVzb3VyY2U+aHR0cHM6Ly9jcC5jb3Blcm5pY3VzLm9yZy9wcmVwcmludHMvY3AtMjAyMC05NS9jcC0yMDIwLTk1LnBkZjwvcmVzb3VyY2U+DQogICAgICAgICAgICAgIDwvZG9pX2RhdGE+DQogICAgICAgICAgICA8L3Bvc3RlZF9jb250ZW50Pg0KICAgICAgICAgIDwvY3Jvc3NyZWY+DQogICAgICAgIDwvZG9pX3JlY29yZD4NCiAgICAgIDwvcXVlcnk+DQogICAgPC9ib2R5Pg0KICA8L3F1ZXJ5X3Jlc3VsdD4NCjwvY3Jvc3NyZWZfcmVzdWx0Pg==
+  recorded_at: Sun, 19 Mar 2023 17:37:27 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.5194
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:38:18 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rs6ptqH%2FNaw3otsnXG7wGQn7BmgwlLxTXAUe%2BvwtG3eOLQC9zuoTdxOay%2F7sxwEB0nhS%2B%2BxEIikkHnpY2t%2BxnqE3pni4dHSvOsPu%2FCZnzWbqdyYDOOtzYiuDXSW370eFSJHV2EQ%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7aa77cfea819b906-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.5194",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 19 Mar 2023 17:38:18 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.5194/cp-2020-95
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:38:18 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,4,5]],"date-time":"2022-04-05T22:57:11Z","timestamp":1649199431318},"posted":{"date-parts":[[2020,7,28]]},"group-title":"Carbon
+        Cycle\/Modelling only\/Millenial\/D-O","reference-count":0,"publisher":"Copernicus
+        GmbH","license":[{"start":{"date-parts":[[2020,7,28]],"date-time":"2020-07-28T00:00:00Z","timestamp":1595894400000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"funder":[{"DOI":"10.13039\/100000141","name":"Division
+        of Ocean Sciences","doi-asserted-by":"publisher","award":["1558990","1736771"]},{"DOI":"10.13039\/501100000923","name":"Australian
+        Research Council","doi-asserted-by":"publisher","award":["FT180100606","DP180100048"]}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"abstract":"<jats:p>Abstract.
+        During the early last glacial termination (17.2\u201315\u2009ka) atmospheric
+        \u03b413C declined sharply by 0.3\u20130.4\u2009\u2030 as atmospheric pCO2
+        rose. This was the initial part of the atmospheric \u03b413C excursion that
+        lasted for multiple thousand years. A similar \u03b413C decline has been documented
+        in marine proxy records from both surface and thermocline-dwelling planktic
+        foraminifera. The foraminiferal \u03b413C decline has previously been attributed
+        to a flux of respired carbon from the deep ocean that was subsequently transported
+        within the upper ocean (i.e. bottom up transport) to sites where the signal
+        is recorded. Here, we provide modeling evidence that when respired carbon
+        upwells in the Southern Ocean, negative \u03b413C anomalies in the global
+        upper ocean were instead transferred from the atmosphere (i.e. top down transport).
+        Due to this efficient atmospheric bridge, the pathway of \u03b413C transport
+        was likely to be different from nutrient transport during the early deglaciation.
+        This implies that the usage of planktic \u03b413C records for identifying
+        the carbon source(s) responsible for the atmospheric pCO2 rise during the
+        early deglaciation is limited. The model results also suggest that thermocline
+        waters in upwelling systems like the eastern equatorial Pacific, and even
+        upper deep waters above 2000\u2009m, can be affected by this atmospheric bridge
+        during the early deglaciation. Our results imply that caution must be applied
+        when interpreting early deglacial marine \u03b413C records from depths that
+        are potentially affected by the atmosphere.\n                        <\/jats:p>","DOI":"10.5194\/cp-2020-95","type":"posted-content","created":{"date-parts":[[2020,7,28]],"date-time":"2020-07-28T09:16:10Z","timestamp":1595927770000},"source":"Crossref","is-referenced-by-count":0,"title":["The
+        Atmospheric Bridge Communicated the \u03b4&amp;lt;sup&amp;gt;13&amp;lt;\/sup&amp;gt;C
+        Decline during the Last Deglaciation to the Global Upper Ocean"],"prefix":"10.5194","author":[{"ORCID":"http:\/\/orcid.org\/0000-0001-6130-6474","authenticated-orcid":false,"given":"Jun","family":"Shao","sequence":"first","affiliation":[]},{"given":"Lowell
+        D","family":"Stott","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-5068-1591","authenticated-orcid":false,"given":"Laurie","family":"Menviel","sequence":"additional","affiliation":[]},{"given":"Andy","family":"Ridgwell","sequence":"additional","affiliation":[]},{"given":"Malin","family":"\u00d6dalen","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-3306-0969","authenticated-orcid":false,"given":"Mayhar","family":"Mohtadi","sequence":"additional","affiliation":[]}],"member":"3145","container-title":[],"original-title":[],"deposited":{"date-parts":[[2022,3,17]],"date-time":"2022-03-17T12:01:09Z","timestamp":1647518469000},"score":1,"resource":{"primary":{"URL":"https:\/\/cp.copernicus.org\/preprints\/cp-2020-95\/cp-2020-95.pdf"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2020,7,28]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.5194\/cp-2020-95","relation":{"is-supplemented-by":[{"id-type":"doi","id":"10.5194\/cp-2020-95-supplement","asserted-by":"subject"}],"has-review":[{"id-type":"doi","id":"10.5194\/cp-2020-95-RC1","asserted-by":"subject"},{"id-type":"doi","id":"10.5194\/cp-2020-95-RC2","asserted-by":"subject"},{"id-type":"doi","id":"10.5194\/cp-2020-95-EC1","asserted-by":"subject"}],"has-comment":[{"id-type":"doi","id":"10.5194\/cp-2020-95-AC1","asserted-by":"subject"},{"id-type":"doi","id":"10.5194\/cp-2020-95-AC2","asserted-by":"subject"},{"id-type":"doi","id":"10.5194\/cp-2020-95-AC3","asserted-by":"subject"}],"is-preprint-of":[{"id-type":"doi","id":"10.5194\/cp-17-1507-2021","asserted-by":"subject"}]},"published":{"date-parts":[[2020,7,28]]},"subtype":"preprint"}}'
+  recorded_at: Sun, 19 Mar 2023 17:38:18 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/3145
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:38:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1679185940918,"primary-name":"Copernicus
+        GmbH","counts":{"current-dois":119803,"backfile-dois":231000,"total-dois":350803},"breakdowns":{"dois-by-issued-year":[[2020,53766],[2021,48986],[2022,47430],[2019,30047],[2018,29934],[2017,27368],[2016,26545],[2023,23387],[2015,9309],[2014,8261],[2013,7992],[2012,7417],[2011,5438],[2010,4525],[2009,3998],[2008,2809],[2007,2339],[2006,1976],[2005,1734],[2004,1218],[2003,931],[2002,636],[2001,415],[2000,386],[1999,385],[1997,329],[1998,310],[1996,300],[1994,240],[1995,222],[1991,88],[1985,71],[1984,70],[1992,64],[1987,64],[1993,61],[1989,59],[1988,59],[1969,58],[1983,57],[1982,56],[1986,55],[1978,51],[1973,51],[1962,50],[1971,49],[1964,49],[1955,49],[1990,48],[1966,48],[1980,47],[1968,47],[1960,47],[1952,47],[1979,46],[1975,45],[1965,44],[1951,44],[1981,43],[1963,42],[1956,41],[1954,41],[1970,39],[1958,39],[1976,37],[1974,37],[1959,37],[1953,37],[1957,36],[1977,34],[1949,30],[1967,29],[1950,24],[1948,24],[1972,20],[1947,20],[1961,18],[1946,18]]},"prefixes":["10.3285","10.5194","10.7482"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":0.1102226154603808,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.09061038961038961,"licenses-backfile":0.4634675324675325,"funders-current":0.1136949825964291,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.3954458874458874,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.5240102501606805,"similarity-checking-backfile":0.4468614718614719,"references-backfile":0.2647619047619048,"descriptions-backfile":0.0,"award-numbers-backfile":0.0877965367965368,"update-policies-backfile":2.164502164502165E-5,"licenses-current":0.1871739438912214,"award-numbers-current":0.1094713821857549,"abstracts-backfile":0.5434155844155844,"resource-links-current":0.0,"abstracts-current":0.5891505221071259,"references-current":0.08149211622413462},"prefix":[{"name":"Copernicus
+        GmbH","value":"10.3285"},{"name":"Copernicus GmbH","value":"10.5194"},{"name":"Copernicus
+        GmbH","value":"10.7482"}],"id":3145,"tokens":["copernicus","gmbh"],"counts-type":{"all":{"report":1,"peer-review":76517,"journal-article":81342,"book":6,"journal":17,"component":17192,"proceedings":1,"posted-content":192804,"journal-issue":132,"dataset":2},"backfile":{"report":1,"peer-review":31681,"journal-article":68137,"book":6,"proceedings":1,"posted-content":131042,"journal-issue":132},"current":{"peer-review":44836,"journal-article":13205,"posted-content":61762}},"coverage-type":{"all":{"report":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"peer-review":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.9537016547417079,"orcids":0.4158983059182218,"licenses":0.974969880258661,"references":0.6309532590789506,"funders":0.202515305746109,"similarity-checking":0.9962626933195643,"award-numbers":0.195495561948317,"ror-ids":0.0,"update-policies":6.146885987558704E-5,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":1.0},"proceedings":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.6147953361963445,"orcids":0.6239289641293749,"licenses":0.2602591232547043,"references":0.1016576419576357,"funders":0.09376880147714778,"similarity-checking":0.1835646563349308,"award-numbers":0.09073463206157549,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dataset":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"report":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"peer-review":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.9542979585247369,"orcids":0.3555924094104525,"licenses":0.9701190249057047,"references":0.6099476055593877,"funders":0.1416264291060657,"similarity-checking":0.9955384005753115,"award-numbers":0.1373996507037293,"ror-ids":0.0,"update-policies":7.338156948500815E-5,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.4617298270783413,"orcids":0.512194563575037,"licenses":0.312571541948383,"references":0.1495703667526442,"funders":0.08608690343553975,"similarity-checking":0.2700813479647747,"award-numbers":0.08332443033531234,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"peer-review":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.950624763347217,"orcids":0.7270730783794017,"licenses":1.0,"references":0.7393411586520257,"funders":0.5166982203710716,"similarity-checking":1.0,"award-numbers":0.4952669443392654,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1679185940918,"affiliations":0.0,"abstracts":0.9395583044590525,"orcids":0.8609986723227875,"licenses":0.1492665392960073,"references":0.0,"funders":0.1100676791554678,"similarity-checking":0.0,"award-numbers":0.1064570447848191,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":false,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"Gottingen,
+        Germany","names":["Copernicus GmbH"]}}'
+  recorded_at: Sun, 19 Mar 2023 17:38:26 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.5194
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:38:27 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2BbvO0tYWIuW21uTVtJWrk1NyXpAN0qKNozmPmSroJxubBHu3oTFT1l2vPb1Rwc1Yok8jK42gQ5G4k67YpvdZXt4gQ906pnXjjLE6rYVonR7YlSuzy5D0UBxpw42kSkq%2FtXFvu8E%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7aa77d381bf306dc-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.5194",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 19 Mar 2023 17:38:27 GMT
+recorded_with: VCR 6.1.0

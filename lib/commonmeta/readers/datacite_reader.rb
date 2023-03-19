@@ -47,7 +47,7 @@ module Commonmeta
         type = additional_type if additional_type
 
         alternate_identifiers = Array.wrap(meta.fetch("alternate_identifiers", nil)).map do |i|
-          i.transform_keys! { |k| k.camelize(:lower) } 
+          i.transform_keys! { |k| k.camelize(:lower) }
         end
         url = meta.fetch("url", nil)
         titles = Array.wrap(meta.fetch("titles", nil)).map do |title|
@@ -86,7 +86,7 @@ module Commonmeta
         sizes = meta.fetch("sizes", nil)
         schema_version = meta.fetch("schema_version", nil) || "http://datacite.org/schema/kernel-4"
         state = id.present? || read_options.present? ? "findable" : "not_found"
-        puts references
+        
         { "id" => id,
           "type" => type,
           "url" => url,

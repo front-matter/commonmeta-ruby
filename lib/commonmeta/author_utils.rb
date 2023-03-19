@@ -4,10 +4,6 @@ require "namae"
 
 module Commonmeta
   module AuthorUtils
-    # include BenchmarkMethods
-    #
-    # benchmark :get_authors
-
     def get_one_author(author)
       # basic sanity checks
       return nil if author.blank?
@@ -35,7 +31,7 @@ module Commonmeta
       if id.nil? && author["nameIdentifiers"].present?
         id = Array.wrap(author.dig("nameIdentifiers")).find { |ni| ni["nameIdentifierScheme"] == "ORCID" }
         id = id["nameIdentifier"] if id.present?
-      # Crossref metadata
+        # Crossref metadata
       elsif id.nil? && author["ORCID"].present?
         id = author.fetch("ORCID")
       end
@@ -59,11 +55,11 @@ module Commonmeta
 
       # parse author contributor role
       contributor_type = parse_attributes(author.fetch("contributorType", nil))
-      
+
       name = cleanup_author(name)
 
       # split name for type Person into given/family name if not already provided
-      if type == 'Person' && given_name.blank? && family_name.blank?
+      if type == "Person" && given_name.blank? && family_name.blank?
         Namae.options[:include_particle_in_family] = true
         names = Namae.parse(name)
         parsed_name = names.first
@@ -77,7 +73,7 @@ module Commonmeta
         end
       end
 
-      # return author in commonmeta format, using name vs. given/family name 
+      # return author in commonmeta format, using name vs. given/family name
       # depending on type
       { "id" => id,
         "type" => type,

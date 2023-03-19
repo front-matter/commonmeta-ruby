@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module Commmonmeta
+module Commonmeta
   module DoiUtils
     def validate_doi(doi)
       doi = Array(%r{\A(?:(http|https):/(/)?(dx\.)?(doi\.org|handle\.stage\.datacite\.org|handle\.test\.datacite\.org)/)?(doi:)?(10\.\d{4,5}/.+)\z}.match(doi)).last
@@ -75,7 +75,7 @@ module Commmonmeta
       body = JSON.parse(response.body)
       name = body.dig("message", "primary-name")
 
-      { 'id' => "https://api.crossref.org/members/#{member_id}", 'name' => name }
+      { "id" => "https://api.crossref.org/members/#{member_id}", "name" => name }
     end
   end
 end

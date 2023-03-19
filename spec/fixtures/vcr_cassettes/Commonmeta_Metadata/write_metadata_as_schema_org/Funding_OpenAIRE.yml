@@ -1,0 +1,150 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.5281
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:34:22 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Dt8lsVPVlFrBjFtht%2BwtQx%2B91NCX4Djx7%2FeefHIRfDEd%2Ff8MIKTaWfKAiqUCZyt%2BfAFezBVLf0oMlMjs6zHpzKLrJOUE8LaQjuJKZXuwtRozXj72qR6MVZim5LJoG0GFDwROetU%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7aa7773d9b180ea0-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.5281",
+            "RA": "DataCite"
+          }
+        ]
+  recorded_at: Sun, 19 Mar 2023 17:34:22 GMT
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.5281/zenodo.1239?include=media,client
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.datacite.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:34:22 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 66b6a80b-8bb0-41c2-99ad-19c4189935fc
+      X-Download-Options:
+      - noopen
+      Etag:
+      - W/"d1881e1617799107b4890a6b0031c9a0"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.040002'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.17
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.5281/zenodo.1239","type":"dois","attributes":{"doi":"10.5281/zenodo.1239","prefix":"10.5281","suffix":"zenodo.1239","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Jahn,
+        Najko","nameType":"Personal","givenName":"Najko","familyName":"Jahn","affiliation":["Bielefeld
+        University Library"],"nameIdentifiers":[]},{"name":"Fenner, Martin","nameType":"Personal","givenName":"Martin","familyName":"Fenner","affiliation":["PLOS
+        Article Level Metrics, Public Library of Science"],"nameIdentifiers":[]},{"name":"Dimitropoulos,
+        Harry","nameType":"Personal","givenName":"Harry","familyName":"Dimitropoulos","affiliation":["MaDgIK
+        Lab, University of Athens"],"nameIdentifiers":[]},{"name":"Schirrwagen, Jochen","nameType":"Personal","givenName":"Jochen","familyName":"Schirrwagen","affiliation":["Bielefeld
+        University Library"],"nameIdentifiers":[]}],"titles":[{"title":"Publication
+        Fp7 Funding Acknowledgment - Plos Openaire"}],"publisher":"Zenodo","container":{},"publicationYear":2013,"subjects":[{"subject":"Article-Level
+        Metrics"},{"subject":"Data mining"},{"subject":"Statistical Computing Language
+        R"},{"subject":"funded research publications"}],"contributors":[],"dates":[{"date":"2013-04-03","dateType":"Issued"}],"language":"en","types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[],"relatedItems":[],"sizes":[],"formats":[],"version":null,"rightsList":[{"rights":"Creative
+        Commons Zero - CC0 1.0","rightsUri":"https://creativecommons.org/publicdomain/zero/1.0"},{"rights":"Open
+        Access","rightsUri":"info:eu-repo/semantics/openAccess"}],"descriptions":[{"description":"The
+        dataset contains a sample of metadata describing papers published in PLOS
+        and their identified grant agreement number of FP7 projects. A second file
+        shows the frequency of FP7 grants. The sample was created in July 2012.","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[{"awardUri":"info:eu-repo/grantAgreement/EC/FP7/246686/","awardTitle":"Open
+        Access Infrastructure for Research in Europe","funderName":"European Commission","awardNumber":"246686","funderIdentifier":"https://doi.org/10.13039/501100000780","funderIdentifierType":"Crossref
+        Funder ID"}],"xml":"PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MjgxL1pFTk9ETy4xMjM5PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+SmFobiwgTmFqa288L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPk5hamtvPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkphaG48L2ZhbWlseU5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5CaWVsZWZlbGQgVW5pdmVyc2l0eSBMaWJyYXJ5PC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+RmVubmVyLCBNYXJ0aW48L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPk1hcnRpbjwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5GZW5uZXI8L2ZhbWlseU5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5QTE9TIEFydGljbGUgTGV2ZWwgTWV0cmljcywgUHVibGljIExpYnJhcnkgb2YgU2NpZW5jZTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkRpbWl0cm9wb3Vsb3MsIEhhcnJ5PC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5IYXJyeTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5EaW1pdHJvcG91bG9zPC9mYW1pbHlOYW1lPgogICAgICA8YWZmaWxpYXRpb24+TWFEZ0lLIExhYiwgVW5pdmVyc2l0eSBvZiBBdGhlbnM8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5TY2hpcnJ3YWdlbiwgSm9jaGVuPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5Kb2NoZW48L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+U2NoaXJyd2FnZW48L2ZhbWlseU5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5CaWVsZWZlbGQgVW5pdmVyc2l0eSBMaWJyYXJ5PC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+UHVibGljYXRpb24gRnA3IEZ1bmRpbmcgQWNrbm93bGVkZ21lbnQgLSBQbG9zIE9wZW5haXJlPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlplbm9kbzwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAxMzwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PkFydGljbGUtTGV2ZWwgTWV0cmljczwvc3ViamVjdD4KICAgIDxzdWJqZWN0PkRhdGEgbWluaW5nPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+U3RhdGlzdGljYWwgQ29tcHV0aW5nIExhbmd1YWdlIFI8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5mdW5kZWQgcmVzZWFyY2ggcHVibGljYXRpb25zPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAxMy0wNC0wMzwvZGF0ZT4KICA8L2RhdGVzPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHJlc291cmNlVHlwZSByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0Ii8+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9InVybCI+aHR0cHM6Ly96ZW5vZG8ub3JnL3JlY29yZC8xMjM5PC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL3B1YmxpY2RvbWFpbi96ZXJvLzEuMC8iPkNyZWF0aXZlIENvbW1vbnMgWmVybyAtIENDMCAxLjA8L3JpZ2h0cz4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJpbmZvOmV1LXJlcG8vc2VtYW50aWNzL29wZW5BY2Nlc3MiPk9wZW4gQWNjZXNzPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+VGhlIGRhdGFzZXQgY29udGFpbnMgYSBzYW1wbGUgb2YgbWV0YWRhdGEgZGVzY3JpYmluZyBwYXBlcnMgcHVibGlzaGVkIGluIFBMT1MgYW5kIHRoZWlyIGlkZW50aWZpZWQgZ3JhbnQgYWdyZWVtZW50IG51bWJlciBvZiBGUDcgcHJvamVjdHMuIEEgc2Vjb25kIGZpbGUgc2hvd3MgdGhlIGZyZXF1ZW5jeSBvZiBGUDcgZ3JhbnRzLiBUaGUgc2FtcGxlIHdhcyBjcmVhdGVkIGluIEp1bHkgMjAxMi48L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgogIDxmdW5kaW5nUmVmZXJlbmNlcz4KICAgIDxmdW5kaW5nUmVmZXJlbmNlPgogICAgICA8ZnVuZGVyTmFtZT5FdXJvcGVhbiBDb21taXNzaW9uPC9mdW5kZXJOYW1lPgogICAgICA8ZnVuZGVySWRlbnRpZmllciBmdW5kZXJJZGVudGlmaWVyVHlwZT0iQ3Jvc3NyZWYgRnVuZGVyIElEIj4xMC4xMzAzOS81MDExMDAwMDA3ODA8L2Z1bmRlcklkZW50aWZpZXI+CiAgICAgIDxhd2FyZE51bWJlciBhd2FyZFVSST0iaW5mbzpldS1yZXBvL2dyYW50QWdyZWVtZW50L0VDL0ZQNy8yNDY2ODYvIj4yNDY2ODY8L2F3YXJkTnVtYmVyPgogICAgICA8YXdhcmRUaXRsZT5PcGVuIEFjY2VzcyBJbmZyYXN0cnVjdHVyZSBmb3IgUmVzZWFyY2ggaW4gRXVyb3BlPC9hd2FyZFRpdGxlPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogIDwvZnVuZGluZ1JlZmVyZW5jZXM+CjwvcmVzb3VyY2U+Cg==","url":"https://zenodo.org/record/1239","contentUrl":null,"metadataVersion":6,"schemaVersion":"http://datacite.org/schema/kernel-4","source":null,"isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2013-04-03T09:52:22.000Z","registered":"2013-04-03T09:52:22.000Z","published":"2013","updated":"2020-09-20T20:25:44.000Z"},"relationships":{"client":{"data":{"id":"cern.zenodo","type":"clients"}},"provider":{"data":{"id":"cern","type":"providers"}},"media":{"data":{"id":"10.5281/zenodo.1239","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"cern.zenodo","type":"clients","attributes":{"name":"Zenodo","symbol":"CERN.ZENODO","year":2013,"alternateName":"Research.
+        Shared","description":"ZENODO builds and operates a simple and innovative
+        service that enables researchers, scientists, EU projects and institutions
+        to share and showcase multidisciplinary research results (data and publications)
+        that are not part of the existing institutional or subject-based repositories
+        of the research communities.\r\nZENODO enables researchers, scientists, EU
+        projects and institutions to:\r\neasily share the long tail of small research
+        results in a wide variety of formats including text, spreadsheets, audio,
+        video, and images across all fields of science.\r\ndisplay their research
+        results and get credited by making the research results citable and integrate
+        them into existing reporting lines to funding agencies like the European Commission.\r\neasily
+        access and reuse shared research results.","language":["en"],"clientType":"repository","domains":"openaire.cern.ch,zenodo.org","re3data":"https://doi.org/10.17616/R3QP53","opendoar":null,"issn":{},"url":"https://zenodo.org/","created":"2013-01-28T12:07:48.000Z","updated":"2020-06-26T12:22:29.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"cern","type":"providers"}},"prefixes":{"data":[{"id":"10.5281","type":"prefixes"}]}}}]}'
+  recorded_at: Sun, 19 Mar 2023 17:34:22 GMT
+recorded_with: VCR 6.1.0

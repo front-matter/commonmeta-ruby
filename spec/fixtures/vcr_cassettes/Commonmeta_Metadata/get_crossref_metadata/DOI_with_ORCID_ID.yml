@@ -1,0 +1,337 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1155/2012/291294/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:37:07 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.1155/2012/291294>; rel="canonical", <http://downloads.hindawi.com/journals/pm/2012/291294.pdf>;
+        version="vor"; type="application/pdf"; rel="item", <http://downloads.hindawi.com/journals/pm/2012/291294.xml>;
+        version="vor"; type="application/xml"; rel="item", <http://downloads.hindawi.com/journals/pm/2012/291294.pdf>;
+        version="vor"; rel="item", <http://creativecommons.org/licenses/by/3.0/>;
+        rel="license", <http://orcid.org/0000-0003-2043-4925>; title="Beatriz Hernandez";
+        rel="author"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIiB2ZXJzaW9uPSIzLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIGh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3NjaGVtYXMvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0My4wLnhzZCI+DQogIDxxdWVyeV9yZXN1bHQ+DQogICAgPGhlYWQ+DQogICAgICA8ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICA8cXVlcnkgc3RhdHVzPSJyZXNvbHZlZCI+DQogICAgICAgIDxkb2kgdHlwZT0iam91cm5hbF9hcnRpY2xlIj4xMC4xMTU1LzIwMTIvMjkxMjk0PC9kb2k+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJwdWJsaXNoZXItbmFtZSIgdHlwZT0ic3RyaW5nIj5IaW5kYXdpIExpbWl0ZWQ8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0icHJlZml4LW5hbWUiIHR5cGU9InN0cmluZyI+SGluZGF3aSBMaW1pdGVkPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9Im1lbWJlci1pZCIgdHlwZT0ibnVtYmVyIj45ODwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJjaXRhdGlvbi1pZCIgdHlwZT0ibnVtYmVyIj41OTI5OTA2ODwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJqb3VybmFsLWlkIiB0eXBlPSJudW1iZXIiPjEwMzEyNTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJkZXBvc2l0LXRpbWVzdGFtcCIgdHlwZT0ibnVtYmVyIj4yMDE2MDgwMjAzNDEyNTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJvd25lci1wcmVmaXgiIHR5cGU9InN0cmluZyI+MTAuMTE1NTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJsYXN0LXVwZGF0ZSIgdHlwZT0iZGF0ZSI+MjAxNi0wOC0wMlQxODo0Mjo0MVo8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iY3JlYXRlZCIgdHlwZT0iZGF0ZSI+MjAxMi0xMi0zMFQyMTowNTowMVo8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iY2l0ZWRieS1jb3VudCIgdHlwZT0ibnVtYmVyIj4zMDwvY3JtLWl0ZW0+DQogICAgICAgIDxkb2lfcmVjb3JkPg0KICAgICAgICAgIDxjcm9zc3JlZiB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcveHNjaGVtYS8xLjEiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcveHNjaGVtYS8xLjEgaHR0cDovL2RvaS5jcm9zc3JlZi5vcmcvc2NoZW1hcy91bml4cmVmMS4xLnhzZCI+DQogICAgICAgICAgICA8am91cm5hbD4NCiAgICAgICAgICAgICAgPGpvdXJuYWxfbWV0YWRhdGEgbGFuZ3VhZ2U9ImVuIj4NCiAgICAgICAgICAgICAgICA8ZnVsbF90aXRsZT5QdWxtb25hcnkgTWVkaWNpbmU8L2Z1bGxfdGl0bGU+DQogICAgICAgICAgICAgICAgPGFiYnJldl90aXRsZT5QdWxtb25hcnkgTWVkaWNpbmU8L2FiYnJldl90aXRsZT4NCiAgICAgICAgICAgICAgICA8aXNzbiBtZWRpYV90eXBlPSJwcmludCI+MjA5MC0xODM2PC9pc3NuPg0KICAgICAgICAgICAgICAgIDxpc3NuIG1lZGlhX3R5cGU9ImVsZWN0cm9uaWMiPjIwOTAtMTg0NDwvaXNzbj4NCiAgICAgICAgICAgICAgPC9qb3VybmFsX21ldGFkYXRhPg0KICAgICAgICAgICAgICA8am91cm5hbF9pc3N1ZT4NCiAgICAgICAgICAgICAgICA8cHVibGljYXRpb25fZGF0ZSBtZWRpYV90eXBlPSJwcmludCI+DQogICAgICAgICAgICAgICAgICA8eWVhcj4yMDEyPC95ZWFyPg0KICAgICAgICAgICAgICAgIDwvcHVibGljYXRpb25fZGF0ZT4NCiAgICAgICAgICAgICAgICA8am91cm5hbF92b2x1bWU+DQogICAgICAgICAgICAgICAgICA8dm9sdW1lPjIwMTI8L3ZvbHVtZT4NCiAgICAgICAgICAgICAgICA8L2pvdXJuYWxfdm9sdW1lPg0KICAgICAgICAgICAgICA8L2pvdXJuYWxfaXNzdWU+DQogICAgICAgICAgICAgIDxqb3VybmFsX2FydGljbGUgcHVibGljYXRpb25fdHlwZT0iZnVsbF90ZXh0Ij4NCiAgICAgICAgICAgICAgICA8dGl0bGVzPg0KICAgICAgICAgICAgICAgICAgPHRpdGxlPkRlbGluZWF0aW5nIGEgUmV0ZXN0aW5nIFpvbmUgVXNpbmcgUmVjZWl2ZXIgT3BlcmF0aW5nIENoYXJhY3RlcmlzdGljIEFuYWx5c2lzIG9uIFNlcmlhbCBRdWFudGlGRVJPTiBUdWJlcmN1bG9zaXMgVGVzdCBSZXN1bHRzIGluIFVTIEhlYWx0aGNhcmUgV29ya2VyczwvdGl0bGU+DQogICAgICAgICAgICAgICAgPC90aXRsZXM+DQogICAgICAgICAgICAgICAgPGNvbnRyaWJ1dG9ycz4NCiAgICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iZmlyc3QiIGNvbnRyaWJ1dG9yX3JvbGU9ImF1dGhvciI+DQogICAgICAgICAgICAgICAgICAgIDxnaXZlbl9uYW1lPldlbmR5PC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgICA8c3VybmFtZT5UaGFuYXNzaTwvc3VybmFtZT4NCiAgICAgICAgICAgICAgICAgICAgPGFmZmlsaWF0aW9uPkRlcGFydG1lbnQgb2YgTWVkaWNpbmUsIFZldGVyYW5zIEFmZmFpcnMgUGFsbyBBbHRvIEhlYWx0aCBDYXJlIFN5c3RlbSwgMzgwMSBNaXJhbmRhIEF2ZW51ZSBNQy0sIFBhbG8gQWx0bywgQ0EgOTQzMDQtMTIwNywgVVNBPC9hZmZpbGlhdGlvbj4NCiAgICAgICAgICAgICAgICAgICAgPGFmZmlsaWF0aW9uPk9jY3VwYXRpb25hbCBIZWFsdGggU3RyYXRlZ2ljIEhlYWx0aCBDYXJlIEdyb3VwLCBPZmZpY2Ugb2YgUHVibGljIEhlYWx0aCwgVmV0ZXJhbnMgSGVhbHRoIEFkbWluaXN0cmF0aW9uLCBXYXNoaW5ndG9uLCBEQyAyMDAwNiwgVVNBPC9hZmZpbGlhdGlvbj4NCiAgICAgICAgICAgICAgICAgICAgPGFmZmlsaWF0aW9uPkRpdmlzaW9uIG9mIEVtZXJnZW5jeSBNZWRpY2luZSwgU3RhbmZvcmQgVW5pdmVyc2l0eSBTY2hvb2wgb2YgTWVkaWNpbmUsIFN0YW5mb3JkLCBDQSA5NDMwNCwgVVNBPC9hZmZpbGlhdGlvbj4NCiAgICAgICAgICAgICAgICAgICAgPGFmZmlsaWF0aW9uPldhciBSZWxhdGVkIElsbG5lc3MgYW5kIEluanVyeSBTdHVkeSBDZW50ZXIgKFdSSUlTQykgYW5kIE1lbnRhbCBJbGxuZXNzIFJlc2VhcmNoIEVkdWNhdGlvbiBhbmQgQ2xpbmljYWwgQ2VudGVyIChNSVJFQ0MpLCBEZXBhcnRtZW50IG9mIFZldGVyYW5zIEFmZmFpcnMsIFBhbG8gQWx0bywgQ0EgOTQzMDQsIFVTQTwvYWZmaWxpYXRpb24+DQogICAgICAgICAgICAgICAgICA8L3BlcnNvbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgPHBlcnNvbl9uYW1lIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPg0KICAgICAgICAgICAgICAgICAgICA8Z2l2ZW5fbmFtZT5BcnQ8L2dpdmVuX25hbWU+DQogICAgICAgICAgICAgICAgICAgIDxzdXJuYW1lPk5vZGE8L3N1cm5hbWU+DQogICAgICAgICAgICAgICAgICAgIDxhZmZpbGlhdGlvbj5XYXIgUmVsYXRlZCBJbGxuZXNzIGFuZCBJbmp1cnkgU3R1ZHkgQ2VudGVyIChXUklJU0MpIGFuZCBNZW50YWwgSWxsbmVzcyBSZXNlYXJjaCBFZHVjYXRpb24gYW5kIENsaW5pY2FsIENlbnRlciAoTUlSRUNDKSwgRGVwYXJ0bWVudCBvZiBWZXRlcmFucyBBZmZhaXJzLCBQYWxvIEFsdG8sIENBIDk0MzA0LCBVU0E8L2FmZmlsaWF0aW9uPg0KICAgICAgICAgICAgICAgICAgICA8YWZmaWxpYXRpb24+RGVwYXJ0bWVudCBvZiBQc3ljaGlhdHJ5IGFuZCBCZWhhdmlvcmFsIFNjaWVuY2VzLCBTdGFuZm9yZCBVbml2ZXJzaXR5IFNjaG9vbCBvZiBNZWRpY2luZSwgU3RhbmZvcmQsIENBIDk0MzA0LCBVU0E8L2FmZmlsaWF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj4NCiAgICAgICAgICAgICAgICAgICAgPGdpdmVuX25hbWU+QmVhdHJpejwvZ2l2ZW5fbmFtZT4NCiAgICAgICAgICAgICAgICAgICAgPHN1cm5hbWU+SGVybmFuZGV6PC9zdXJuYW1lPg0KICAgICAgICAgICAgICAgICAgICA8YWZmaWxpYXRpb24+V2FyIFJlbGF0ZWQgSWxsbmVzcyBhbmQgSW5qdXJ5IFN0dWR5IENlbnRlciAoV1JJSVNDKSBhbmQgTWVudGFsIElsbG5lc3MgUmVzZWFyY2ggRWR1Y2F0aW9uIGFuZCBDbGluaWNhbCBDZW50ZXIgKE1JUkVDQyksIERlcGFydG1lbnQgb2YgVmV0ZXJhbnMgQWZmYWlycywgUGFsbyBBbHRvLCBDQSA5NDMwNCwgVVNBPC9hZmZpbGlhdGlvbj4NCiAgICAgICAgICAgICAgICAgICAgPGFmZmlsaWF0aW9uPkRlcGFydG1lbnQgb2YgUHN5Y2hpYXRyeSBhbmQgQmVoYXZpb3JhbCBTY2llbmNlcywgU3RhbmZvcmQgVW5pdmVyc2l0eSBTY2hvb2wgb2YgTWVkaWNpbmUsIFN0YW5mb3JkLCBDQSA5NDMwNCwgVVNBPC9hZmZpbGlhdGlvbj4NCiAgICAgICAgICAgICAgICAgICAgPE9SQ0lEIGF1dGhlbnRpY2F0ZWQ9InRydWUiPmh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTIwNDMtNDkyNTwvT1JDSUQ+DQogICAgICAgICAgICAgICAgICA8L3BlcnNvbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgPHBlcnNvbl9uYW1lIHNlcXVlbmNlPSJhZGRpdGlvbmFsIiBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiPg0KICAgICAgICAgICAgICAgICAgICA8Z2l2ZW5fbmFtZT5KZWZmZXJ5PC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgICA8c3VybmFtZT5OZXdlbGw8L3N1cm5hbWU+DQogICAgICAgICAgICAgICAgICAgIDxhZmZpbGlhdGlvbj5XYXIgUmVsYXRlZCBJbGxuZXNzIGFuZCBJbmp1cnkgU3R1ZHkgQ2VudGVyIChXUklJU0MpIGFuZCBNZW50YWwgSWxsbmVzcyBSZXNlYXJjaCBFZHVjYXRpb24gYW5kIENsaW5pY2FsIENlbnRlciAoTUlSRUNDKSwgRGVwYXJ0bWVudCBvZiBWZXRlcmFucyBBZmZhaXJzLCBQYWxvIEFsdG8sIENBIDk0MzA0LCBVU0E8L2FmZmlsaWF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj4NCiAgICAgICAgICAgICAgICAgICAgPGdpdmVuX25hbWU+UGF1bDwvZ2l2ZW5fbmFtZT4NCiAgICAgICAgICAgICAgICAgICAgPHN1cm5hbWU+VGVycGVsdWs8L3N1cm5hbWU+DQogICAgICAgICAgICAgICAgICAgIDxhZmZpbGlhdGlvbj5EZXBhcnRtZW50IG9mIE9jY3VwYXRpb25hbCBIZWFsdGgsIFRoZSBDbGV2ZWxhbmQgQ2xpbmljLCBDbGV2ZWxhbmQsIE9IIDQ0MTk1LCBVU0E8L2FmZmlsaWF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj4NCiAgICAgICAgICAgICAgICAgICAgPGdpdmVuX25hbWU+RGF2aWQ8L2dpdmVuX25hbWU+DQogICAgICAgICAgICAgICAgICAgIDxzdXJuYW1lPk1hcmRlcjwvc3VybmFtZT4NCiAgICAgICAgICAgICAgICAgICAgPGFmZmlsaWF0aW9uPlVuaXZlcnNpdHkgSGVhbHRoIFNlcnZpY2VzLCBVbml2ZXJzaXR5IG9mIElsbGlub2lzIENoaWNhZ28sIENoaWNhZ28sIElMIDYwNjEyLCBVU0E8L2FmZmlsaWF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBzZXF1ZW5jZT0iYWRkaXRpb25hbCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj4NCiAgICAgICAgICAgICAgICAgICAgPGdpdmVuX25hbWU+SmVyb21lIEEuPC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgICA8c3VybmFtZT5ZZXNhdmFnZTwvc3VybmFtZT4NCiAgICAgICAgICAgICAgICAgICAgPGFmZmlsaWF0aW9uPldhciBSZWxhdGVkIElsbG5lc3MgYW5kIEluanVyeSBTdHVkeSBDZW50ZXIgKFdSSUlTQykgYW5kIE1lbnRhbCBJbGxuZXNzIFJlc2VhcmNoIEVkdWNhdGlvbiBhbmQgQ2xpbmljYWwgQ2VudGVyIChNSVJFQ0MpLCBEZXBhcnRtZW50IG9mIFZldGVyYW5zIEFmZmFpcnMsIFBhbG8gQWx0bywgQ0EgOTQzMDQsIFVTQTwvYWZmaWxpYXRpb24+DQogICAgICAgICAgICAgICAgICAgIDxhZmZpbGlhdGlvbj5EZXBhcnRtZW50IG9mIFBzeWNoaWF0cnkgYW5kIEJlaGF2aW9yYWwgU2NpZW5jZXMsIFN0YW5mb3JkIFVuaXZlcnNpdHkgU2Nob29sIG9mIE1lZGljaW5lLCBTdGFuZm9yZCwgQ0EgOTQzMDQsIFVTQTwvYWZmaWxpYXRpb24+DQogICAgICAgICAgICAgICAgICA8L3BlcnNvbl9uYW1lPg0KICAgICAgICAgICAgICAgIDwvY29udHJpYnV0b3JzPg0KICAgICAgICAgICAgICAgIDxqYXRzOmFic3RyYWN0IHhtbG5zOmphdHM9Imh0dHA6Ly93d3cubmNiaS5ubG0ubmloLmdvdi9KQVRTMSI+DQogICAgICAgICAgICAgICAgICA8amF0czpwPg0KICAgICAgICAgICAgICAgICAgICA8amF0czppdGFsaWM+T2JqZWN0aXZlPC9qYXRzOml0YWxpYz4NCiAgICAgICAgICAgICAgICAgICAgLiBUbyBmaW5kIGEgc3RhdGlzdGljYWxseSBzaWduaWZpY2FudCBzZXBhcmF0aW9uIHBvaW50IGZvciB0aGUgUXVhbnRpRkVST04gR29sZCBJbi1UdWJlIChRRlQpIGludGVyZmVyb24gZ2FtbWEgcmVsZWFzZSBhc3NheSB0aGF0IGNvdWxkIGRlZmluZSBhbiBvcHRpbWFsIOKAnHJldGVzdGluZyB6b25l4oCdIGZvciB1c2UgaW4gc2VyaWFsbHkgdGVzdGVkIGxvdy1yaXNrIHBvcHVsYXRpb25zIHdobyBoYXZlIHRlc3Qg4oCccmV2ZXJzaW9uc+KAnSBmcm9tIGluaXRpYWxseSBwb3NpdGl2ZSB0byBzdWJzZXF1ZW50bHkgbmVnYXRpdmUgcmVzdWx0cy4NCiAgICAgICAgICAgICAgICAgICAgPGphdHM6aXRhbGljPk1ldGhvZDwvamF0czppdGFsaWM+DQogICAgICAgICAgICAgICAgICAgIC4gVXNpbmcgcmVjZWl2ZXIgb3BlcmF0aW5nIGNoYXJhY3RlcmlzdGljIGFuYWx5c2lzIChST0MpIHRvIGFuYWx5emUgcmV0cm9zcGVjdGl2ZSBkYXRhIGNvbGxlY3RlZCBmcm9tIDMgbWFqb3IgaG9zcGl0YWxzLCB3ZSBzZWFyY2hlZCBmb3IgcHJlZGljdG9ycyBvZiByZXZlcnNpb24gdW50aWwgc3RhdGlzdGljYWxseSBzaWduaWZpY2FudCBzZXBhcmF0aW9uIHBvaW50cyB3ZXJlIHJldmVhbGVkLiBBIGNvbmZpcm1hdG9yeSByZWdyZXNzaW9uIGFuYWx5c2lzIHdhcyBwZXJmb3JtZWQgb24gYW4gYWRkaXRpb25hbCBzYW1wbGUuDQogICAgICAgICAgICAgICAgICAgIDxqYXRzOml0YWxpYz5SZXN1bHRzPC9qYXRzOml0YWxpYz4NCiAgICAgICAgICAgICAgICAgICAgLiBJbiA1NzUgaW5pdGlhbGx5IHBvc2l0aXZlIFVTIGhlYWx0aGNhcmUgd29ya2VycyAoSENXcyksIDMwMCAoNTIuMiUpIGhhZCByZXZlcnNpb25zLCB3aGlsZSAyNzUgKDQ3LjglKSBoYWQgdHdvIHNlcXVlbnRpYWwgcG9zaXRpdmUgdGVzdHMuIFRoZSBtb3N0IHN0YXRpc3RpY2FsbHkgc2lnbmlmaWNhbnQgKEthcHBh4oCJPeKAiTAuNDgsIGNoaS1zcXVhcmXigIk94oCJMTMxLjAsDQogICAgICAgICAgICAgICAgICAgIDxtbWw6bWF0aCB4bWxuczptbWw9Imh0dHA6Ly93d3cudzMub3JnLzE5OTgvTWF0aC9NYXRoTUwiIGlkPSJNMSI+DQogICAgICAgICAgICAgICAgICAgICAgPG1tbDptcm93Pg0KICAgICAgICAgICAgICAgICAgICAgICAgPG1tbDptaT5QPC9tbWw6bWk+DQogICAgICAgICAgICAgICAgICAgICAgICA8bW1sOm1vPiZsdDs8L21tbDptbz4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxtbWw6bW4+MC4wMDE8L21tbDptbj4NCiAgICAgICAgICAgICAgICAgICAgICA8L21tbDptcm93Pg0KICAgICAgICAgICAgICAgICAgICA8L21tbDptYXRoPg0KICAgICAgICAgICAgICAgICAgICApIHNlcGFyYXRpb24gcG9pbnQgaWRlbnRpZmllZCBieSB0aGUgUk9DIGZvciBwcmVkaWN0aW5nIHJldmVyc2lvbiB3YXMgdGhlIHR1YmVyY3Vsb3NpcyBhbnRpZ2VuIG1pbnVzLW5pbCAoVEJhZy1uaWwpIHZhbHVlIGF0IDEuMTEgSW50ZXJuYXRpb25hbCBVbml0cyBwZXIgbWlsbGlsaXRlciAoSVUvbUwpLiBUaGUgc2Vjb25kIHNlcGFyYXRpb24gcG9pbnQgd2FzIGZvdW5kIGF0IFRCYWctbmlsIGF0IDAuNzLigIlJVS9tTCAoS2FwcGHigIk94oCJMC4xNiwgY2hpLXNxdWFyZeKAiT3igIk4LjIsDQogICAgICAgICAgICAgICAgICAgIDxtbWw6bWF0aCB4bWxuczptbWw9Imh0dHA6Ly93d3cudzMub3JnLzE5OTgvTWF0aC9NYXRoTUwiIGlkPSJNMiI+DQogICAgICAgICAgICAgICAgICAgICAgPG1tbDptcm93Pg0KICAgICAgICAgICAgICAgICAgICAgICAgPG1tbDptaT5QPC9tbWw6bWk+DQogICAgICAgICAgICAgICAgICAgICAgICA8bW1sOm1vPiZsdDs8L21tbDptbz4NCiAgICAgICAgICAgICAgICAgICAgICAgIDxtbWw6bW4+MC4wMTwvbW1sOm1uPg0KICAgICAgICAgICAgICAgICAgICAgIDwvbW1sOm1yb3c+DQogICAgICAgICAgICAgICAgICAgIDwvbW1sOm1hdGg+DQogICAgICAgICAgICAgICAgICAgICkuIFRoZSBtb2RlbCB3YXMgdmFsaWRhdGVkIGJ5IHRoZSByZWdyZXNzaW9uIGFuYWx5c2lzIG9mIDI4N+KAiUhDV3MuDQogICAgICAgICAgICAgICAgICAgIDxqYXRzOml0YWxpYz5Db25jbHVzaW9uPC9qYXRzOml0YWxpYz4NCiAgICAgICAgICAgICAgICAgICAgLiBSZXZlcnNpb24gbGlrZWxpaG9vZCBpbmNyZWFzZXMgYXMgdGhlIFRCYWctbmlsIGFwcHJvYWNoZXMgdGhlIG1hbnVmYWN0dXJlcidzIGN1dC1wb2ludCBvZiAwLjM14oCJSVUvbUwuIFRoZSBtb3N0IHN0YXRpc3RpY2FsbHkgc2lnbmlmaWNhbnQgc2VwYXJhdGlvbiBwb2ludCBiZXR3ZWVuIHRob3NlIHdobyB0ZXN0IHJlcGVhdGVkbHkgcG9zaXRpdmUgYW5kIHRob3NlIHdobyByZXZlcnQgaXMgMS4xMeKAiUlVL21MLiBDbGluaWNpYW5zIHNob3VsZCByZXRlc3QgbG93LXJpc2sgaW5kaXZpZHVhbHMgd2l0aCBpbml0aWFsIFFGVCByZXN1bHRz4oCJJmx0O+KAiTEuMTHigIlJVS9tTC4NCiAgICAgICAgICAgICAgICAgIDwvamF0czpwPg0KICAgICAgICAgICAgICAgIDwvamF0czphYnN0cmFjdD4NCiAgICAgICAgICAgICAgICA8cHVibGljYXRpb25fZGF0ZSBtZWRpYV90eXBlPSJwcmludCI+DQogICAgICAgICAgICAgICAgICA8eWVhcj4yMDEyPC95ZWFyPg0KICAgICAgICAgICAgICAgIDwvcHVibGljYXRpb25fZGF0ZT4NCiAgICAgICAgICAgICAgICA8cGFnZXM+DQogICAgICAgICAgICAgICAgICA8Zmlyc3RfcGFnZT4xPC9maXJzdF9wYWdlPg0KICAgICAgICAgICAgICAgICAgPGxhc3RfcGFnZT43PC9sYXN0X3BhZ2U+DQogICAgICAgICAgICAgICAgPC9wYWdlcz4NCiAgICAgICAgICAgICAgICA8cHVibGlzaGVyX2l0ZW0+DQogICAgICAgICAgICAgICAgICA8aWRlbnRpZmllciBpZF90eXBlPSJwaWkiPjI5MTI5NDwvaWRlbnRpZmllcj4NCiAgICAgICAgICAgICAgICAgIDxpZGVudGlmaWVyIGlkX3R5cGU9Im90aGVyIj4yOTEyOTQ8L2lkZW50aWZpZXI+DQogICAgICAgICAgICAgICAgPC9wdWJsaXNoZXJfaXRlbT4NCiAgICAgICAgICAgICAgICA8YWk6cHJvZ3JhbSB4bWxuczphaT0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvQWNjZXNzSW5kaWNhdG9ycy54c2QiIG5hbWU9IkFjY2Vzc0luZGljYXRvcnMiPg0KICAgICAgICAgICAgICAgICAgPGFpOmxpY2Vuc2VfcmVmPmh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzMuMC88L2FpOmxpY2Vuc2VfcmVmPg0KICAgICAgICAgICAgICAgIDwvYWk6cHJvZ3JhbT4NCiAgICAgICAgICAgICAgICA8ZG9pX2RhdGE+DQogICAgICAgICAgICAgICAgICA8ZG9pPjEwLjExNTUvMjAxMi8yOTEyOTQ8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDx0aW1lc3RhbXA+MjAxNjA4MDIwMzQxMjU8L3RpbWVzdGFtcD4NCiAgICAgICAgICAgICAgICAgIDxyZXNvdXJjZT5odHRwOi8vd3d3LmhpbmRhd2kuY29tL2pvdXJuYWxzL3BtLzIwMTIvMjkxMjk0LzwvcmVzb3VyY2U+DQogICAgICAgICAgICAgICAgICA8Y29sbGVjdGlvbiBwcm9wZXJ0eT0idGV4dC1taW5pbmciIHNldGJ5SUQ9ImhpbmRhd2kiPg0KICAgICAgICAgICAgICAgICAgICA8aXRlbT4NCiAgICAgICAgICAgICAgICAgICAgICA8cmVzb3VyY2UgbWltZV90eXBlPSJhcHBsaWNhdGlvbi9wZGYiPmh0dHA6Ly9kb3dubG9hZHMuaGluZGF3aS5jb20vam91cm5hbHMvcG0vMjAxMi8yOTEyOTQucGRmPC9yZXNvdXJjZT4NCiAgICAgICAgICAgICAgICAgICAgPC9pdGVtPg0KICAgICAgICAgICAgICAgICAgICA8aXRlbT4NCiAgICAgICAgICAgICAgICAgICAgICA8cmVzb3VyY2UgbWltZV90eXBlPSJhcHBsaWNhdGlvbi94bWwiPmh0dHA6Ly9kb3dubG9hZHMuaGluZGF3aS5jb20vam91cm5hbHMvcG0vMjAxMi8yOTEyOTQueG1sPC9yZXNvdXJjZT4NCiAgICAgICAgICAgICAgICAgICAgPC9pdGVtPg0KICAgICAgICAgICAgICAgICAgPC9jb2xsZWN0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNvbGxlY3Rpb24gcHJvcGVydHk9ImNyYXdsZXItYmFzZWQiIHNldGJ5SUQ9ImhpbmRhd2kiPg0KICAgICAgICAgICAgICAgICAgICA8aXRlbSBjcmF3bGVyPSJnb29nbGUiPg0KICAgICAgICAgICAgICAgICAgICAgIDxyZXNvdXJjZT5odHRwOi8vZG93bmxvYWRzLmhpbmRhd2kuY29tL2pvdXJuYWxzL3BtLzIwMTIvMjkxMjk0LnBkZjwvcmVzb3VyY2U+DQogICAgICAgICAgICAgICAgICAgIDwvaXRlbT4NCiAgICAgICAgICAgICAgICAgICAgPGl0ZW0gY3Jhd2xlcj0ibXNuIj4NCiAgICAgICAgICAgICAgICAgICAgICA8cmVzb3VyY2U+aHR0cDovL2Rvd25sb2Fkcy5oaW5kYXdpLmNvbS9qb3VybmFscy9wbS8yMDEyLzI5MTI5NC5wZGY8L3Jlc291cmNlPg0KICAgICAgICAgICAgICAgICAgICA8L2l0ZW0+DQogICAgICAgICAgICAgICAgICAgIDxpdGVtIGNyYXdsZXI9ImFsdGF2aXN0YSI+DQogICAgICAgICAgICAgICAgICAgICAgPHJlc291cmNlPmh0dHA6Ly9kb3dubG9hZHMuaGluZGF3aS5jb20vam91cm5hbHMvcG0vMjAxMi8yOTEyOTQucGRmPC9yZXNvdXJjZT4NCiAgICAgICAgICAgICAgICAgICAgPC9pdGVtPg0KICAgICAgICAgICAgICAgICAgICA8aXRlbSBjcmF3bGVyPSJ5YWhvbyI+DQogICAgICAgICAgICAgICAgICAgICAgPHJlc291cmNlPmh0dHA6Ly9kb3dubG9hZHMuaGluZGF3aS5jb20vam91cm5hbHMvcG0vMjAxMi8yOTEyOTQucGRmPC9yZXNvdXJjZT4NCiAgICAgICAgICAgICAgICAgICAgPC9pdGVtPg0KICAgICAgICAgICAgICAgICAgICA8aXRlbSBjcmF3bGVyPSJzY2lydXMiPg0KICAgICAgICAgICAgICAgICAgICAgIDxyZXNvdXJjZT5odHRwOi8vZG93bmxvYWRzLmhpbmRhd2kuY29tL2pvdXJuYWxzL3BtLzIwMTIvMjkxMjk0LnBkZjwvcmVzb3VyY2U+DQogICAgICAgICAgICAgICAgICAgIDwvaXRlbT4NCiAgICAgICAgICAgICAgICAgICAgPGl0ZW0gY3Jhd2xlcj0iaVBhcmFkaWdtcyI+DQogICAgICAgICAgICAgICAgICAgICAgPHJlc291cmNlPmh0dHA6Ly9kb3dubG9hZHMuaGluZGF3aS5jb20vam91cm5hbHMvcG0vMjAxMi8yOTEyOTQucGRmPC9yZXNvdXJjZT4NCiAgICAgICAgICAgICAgICAgICAgPC9pdGVtPg0KICAgICAgICAgICAgICAgICAgPC9jb2xsZWN0aW9uPg0KICAgICAgICAgICAgICAgIDwvZG9pX2RhdGE+DQogICAgICAgICAgICAgICAgPGNpdGF0aW9uX2xpc3Q+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSIxIj4NCiAgICAgICAgICAgICAgICAgICAgPGpvdXJuYWxfdGl0bGU+QW1lcmljYW4gSm91cm5hbCBvZiBSZXNwaXJhdG9yeSBhbmQgQ3JpdGljYWwgQ2FyZSBNZWRpY2luZTwvam91cm5hbF90aXRsZT4NCiAgICAgICAgICAgICAgICAgICAgPHZvbHVtZT4xNzk8L3ZvbHVtZT4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjIwMDk8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjIiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjExMjgvQ1ZJLjAwMTY4LTA5PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iMyI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTE2NC9yY2NtLjIwMDYwNC00NzJPQzwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjQiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjU1ODgvaWp0bGQuMTEuMDM2NDwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjUiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjExMjgvQ1ZJLjA1MDU4LTExPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iNiI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTAwNy9zMDA0MjAtMDEwLTA1NzEteDwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjciPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwODYvNTkzOTY1PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOCI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTM3OC9jaGVzdC4wOS0yMzUwPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iOSI+DQogICAgICAgICAgICAgICAgICAgIDxqb3VybmFsX3RpdGxlPkludGVybmF0aW9uYWwgSm91cm5hbCBvZiBUdWJlcmN1bG9zaXMgYW5kIEx1bmcgRGlzZWFzZTwvam91cm5hbF90aXRsZT4NCiAgICAgICAgICAgICAgICAgICAgPHZvbHVtZT4xMjwvdm9sdW1lPg0KICAgICAgICAgICAgICAgICAgICA8aXNzdWU+MTE8L2lzc3VlPg0KICAgICAgICAgICAgICAgICAgICA8Zmlyc3RfcGFnZT4xMjM1PC9maXJzdF9wYWdlPg0KICAgICAgICAgICAgICAgICAgICA8Y1llYXI+MjAwODwvY1llYXI+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iMTAiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwNTYvTkVKTXNhMDMxNjY3PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iMTEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEzNzgvY2hlc3QuMTI4LjEuMTE2PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iMTIiPg0KICAgICAgICAgICAgICAgICAgICA8Y1llYXI+MjAxMjwvY1llYXI+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iMTMiPg0KICAgICAgICAgICAgICAgICAgICA8am91cm5hbF90aXRsZT5Nb3JiaWRpdHkgYW5kIE1vcnRhbGl0eSBXZWVrbHkgUmVwb3J0PC9qb3VybmFsX3RpdGxlPg0KICAgICAgICAgICAgICAgICAgICA8dm9sdW1lPjU5PC92b2x1bWU+DQogICAgICAgICAgICAgICAgICAgIDxpc3N1ZT41PC9pc3N1ZT4NCiAgICAgICAgICAgICAgICAgICAgPGZpcnN0X3BhZ2U+MTwvZmlyc3RfcGFnZT4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjIwMTA8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjE0Ij4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjIwMTE8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjE1Ij4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjIwMTE8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjE2Ij4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjIwMTE8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjE3Ij4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjIwMTE8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjE4Ij4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjIwMTI8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjIwIj4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjE5OTI8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjIyIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4zMjA1L2Rna2gwMDAxNDg8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSIyMyI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTM3OC9jaGVzdC4xMS0wOTkyPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iMjQiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjExODYvMTQ3MS0yMzM0LTEwLTIyMDwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjI1Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMTg2LzE3NDUtNjY3My03LTY8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSIyNyI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTEyOC9DVkkuMDAzOTgtMDc8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSIyOCI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTE2NC9yY2NtLjIwMTAwNi0wOTc0T0M8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSIyOSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTEzNi90aHguMjAxMC4xNDMxODA8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSIzMCI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTM3OC9jaGVzdC4xMi0wMDQ1PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgIDwvY2l0YXRpb25fbGlzdD4NCiAgICAgICAgICAgICAgPC9qb3VybmFsX2FydGljbGU+DQogICAgICAgICAgICA8L2pvdXJuYWw+DQogICAgICAgICAgPC9jcm9zc3JlZj4NCiAgICAgICAgPC9kb2lfcmVjb3JkPg0KICAgICAgPC9xdWVyeT4NCiAgICA8L2JvZHk+DQogIDwvcXVlcnlfcmVzdWx0Pg0KPC9jcm9zc3JlZl9yZXN1bHQ+
+  recorded_at: Sun, 19 Mar 2023 17:37:07 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1155
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:38:05 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=CuGJVTzYoKKP5XjzaDRMPFT7z4vXSu9SRMAbQlf0iHoPZB0GpzgqqL2fhQK3%2Fi3LrRPQFs28vXwlUKD%2FAfxeg5EeusFsEn7uMnJB%2BUUskm9QCiZwOc0IpaRImP5KmKNH3SW4lps%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7aa77cb02cd10df5-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.1155",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 19 Mar 2023 17:38:05 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1155/2012/291294
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:38:05 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,1,4]],"date-time":"2023-01-04T21:53:57Z","timestamp":1672869237883},"reference-count":27,"publisher":"Hindawi
+        Limited","license":[{"start":{"date-parts":[[2012,1,1]],"date-time":"2012-01-01T00:00:00Z","timestamp":1325376000000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/3.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Pulmonary
+        Medicine"],"published-print":{"date-parts":[[2012]]},"abstract":"<jats:p><jats:italic>Objective<\/jats:italic>.
+        To find a statistically significant separation point for the QuantiFERON Gold
+        In-Tube (QFT) interferon gamma release assay that could define an optimal
+        \u201cretesting zone\u201d for use in serially tested low-risk populations
+        who have test \u201creversions\u201d from initially positive to subsequently
+        negative results.<jats:italic>Method<\/jats:italic>. Using receiver operating
+        characteristic analysis (ROC) to analyze retrospective data collected from
+        3 major hospitals, we searched for predictors of reversion until statistically
+        significant separation points were revealed. A confirmatory regression analysis
+        was performed on an additional sample.<jats:italic>Results<\/jats:italic>.
+        In 575 initially positive US healthcare workers (HCWs), 300 (52.2%) had reversions,
+        while 275 (47.8%) had two sequential positive tests. The most statistically
+        significant (Kappa\u2009=\u20090.48, chi-square\u2009=\u2009131.0,<mml:math
+        xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\" id=\"M1\"><mml:mrow><mml:mi>P<\/mml:mi><mml:mo>&lt;<\/mml:mo><mml:mn>0.001<\/mml:mn><\/mml:mrow><\/mml:math>)
+        separation point identified by the ROC for predicting reversion was the tuberculosis
+        antigen minus-nil (TBag-nil) value at 1.11 International Units per milliliter
+        (IU\/mL). The second separation point was found at TBag-nil at 0.72\u2009IU\/mL
+        (Kappa\u2009=\u20090.16, chi-square\u2009=\u20098.2,<mml:math xmlns:mml=\"http:\/\/www.w3.org\/1998\/Math\/MathML\"
+        id=\"M2\"><mml:mrow><mml:mi>P<\/mml:mi><mml:mo>&lt;<\/mml:mo><mml:mn>0.01<\/mml:mn><\/mml:mrow><\/mml:math>).
+        The model was validated by the regression analysis of 287\u2009HCWs.<jats:italic>Conclusion<\/jats:italic>.
+        Reversion likelihood increases as the TBag-nil approaches the manufacturer''s
+        cut-point of 0.35\u2009IU\/mL. The most statistically significant separation
+        point between those who test repeatedly positive and those who revert is 1.11\u2009IU\/mL.
+        Clinicians should retest low-risk individuals with initial QFT results\u2009&lt;\u20091.11\u2009IU\/mL.<\/jats:p>","DOI":"10.1155\/2012\/291294","type":"journal-article","created":{"date-parts":[[2012,12,30]],"date-time":"2012-12-30T21:05:01Z","timestamp":1356901501000},"page":"1-7","source":"Crossref","is-referenced-by-count":30,"title":["Delineating
+        a Retesting Zone Using Receiver Operating Characteristic Analysis on Serial
+        QuantiFERON Tuberculosis Test Results in US Healthcare Workers"],"prefix":"10.1155","volume":"2012","author":[{"given":"Wendy","family":"Thanassi","sequence":"first","affiliation":[{"name":"Department
+        of Medicine, Veterans Affairs Palo Alto Health Care System, 3801 Miranda Avenue
+        MC-, Palo Alto, CA 94304-1207, USA"},{"name":"Occupational Health Strategic
+        Health Care Group, Office of Public Health, Veterans Health Administration,
+        Washington, DC 20006, USA"},{"name":"Division of Emergency Medicine, Stanford
+        University School of Medicine, Stanford, CA 94304, USA"},{"name":"War Related
+        Illness and Injury Study Center (WRIISC) and Mental Illness Research Education
+        and Clinical Center (MIRECC), Department of Veterans Affairs, Palo Alto, CA
+        94304, USA"}]},{"given":"Art","family":"Noda","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"},{"name":"Department of Psychiatry and Behavioral Sciences,
+        Stanford University School of Medicine, Stanford, CA 94304, USA"}]},{"ORCID":"http:\/\/orcid.org\/0000-0003-2043-4925","authenticated-orcid":true,"given":"Beatriz","family":"Hernandez","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"},{"name":"Department of Psychiatry and Behavioral Sciences,
+        Stanford University School of Medicine, Stanford, CA 94304, USA"}]},{"given":"Jeffery","family":"Newell","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"}]},{"given":"Paul","family":"Terpeluk","sequence":"additional","affiliation":[{"name":"Department
+        of Occupational Health, The Cleveland Clinic, Cleveland, OH 44195, USA"}]},{"given":"David","family":"Marder","sequence":"additional","affiliation":[{"name":"University
+        Health Services, University of Illinois Chicago, Chicago, IL 60612, USA"}]},{"given":"Jerome
+        A.","family":"Yesavage","sequence":"additional","affiliation":[{"name":"War
+        Related Illness and Injury Study Center (WRIISC) and Mental Illness Research
+        Education and Clinical Center (MIRECC), Department of Veterans Affairs, Palo
+        Alto, CA 94304, USA"},{"name":"Department of Psychiatry and Behavioral Sciences,
+        Stanford University School of Medicine, Stanford, CA 94304, USA"}]}],"member":"98","reference":[{"key":"1","volume":"179","year":"2009","journal-title":"American
+        Journal of Respiratory and Critical Care Medicine"},{"key":"2","doi-asserted-by":"publisher","DOI":"10.1128\/CVI.00168-09"},{"key":"3","doi-asserted-by":"publisher","DOI":"10.1164\/rccm.200604-472OC"},{"key":"4","doi-asserted-by":"publisher","DOI":"10.5588\/ijtld.11.0364"},{"key":"5","doi-asserted-by":"publisher","DOI":"10.1128\/CVI.05058-11"},{"key":"6","doi-asserted-by":"publisher","DOI":"10.1007\/s00420-010-0571-x"},{"key":"7","doi-asserted-by":"publisher","DOI":"10.1086\/593965"},{"key":"8","doi-asserted-by":"publisher","DOI":"10.1378\/chest.09-2350"},{"issue":"11","key":"9","first-page":"1235","volume":"12","year":"2008","journal-title":"International
+        Journal of Tuberculosis and Lung Disease"},{"key":"10","doi-asserted-by":"publisher","DOI":"10.1056\/NEJMsa031667"},{"key":"11","doi-asserted-by":"publisher","DOI":"10.1378\/chest.128.1.116"},{"key":"12","year":"2012"},{"issue":"5","key":"13","first-page":"1","volume":"59","year":"2010","journal-title":"Morbidity
+        and Mortality Weekly Report"},{"key":"14","year":"2011"},{"key":"15","year":"2011"},{"key":"16","year":"2011"},{"key":"17","year":"2011"},{"key":"18","year":"2012"},{"key":"20","year":"1992"},{"key":"22","doi-asserted-by":"publisher","DOI":"10.3205\/dgkh000148"},{"key":"23","doi-asserted-by":"publisher","DOI":"10.1378\/chest.11-0992"},{"key":"24","doi-asserted-by":"publisher","DOI":"10.1186\/1471-2334-10-220"},{"key":"25","doi-asserted-by":"publisher","DOI":"10.1186\/1745-6673-7-6"},{"key":"27","doi-asserted-by":"publisher","DOI":"10.1128\/CVI.00398-07"},{"key":"28","doi-asserted-by":"publisher","DOI":"10.1164\/rccm.201006-0974OC"},{"key":"29","doi-asserted-by":"publisher","DOI":"10.1136\/thx.2010.143180"},{"key":"30","doi-asserted-by":"publisher","DOI":"10.1378\/chest.12-0045"}],"container-title":["Pulmonary
+        Medicine"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/downloads.hindawi.com\/journals\/pm\/2012\/291294.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/pm\/2012\/291294.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/downloads.hindawi.com\/journals\/pm\/2012\/291294.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2016,8,2]],"date-time":"2016-08-02T18:42:41Z","timestamp":1470163361000},"score":1,"resource":{"primary":{"URL":"http:\/\/www.hindawi.com\/journals\/pm\/2012\/291294\/"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2012]]},"references-count":27,"alternative-id":["291294","291294"],"URL":"http:\/\/dx.doi.org\/10.1155\/2012\/291294","relation":{},"ISSN":["2090-1836","2090-1844"],"issn-type":[{"value":"2090-1836","type":"print"},{"value":"2090-1844","type":"electronic"}],"subject":["Pulmonary
+        and Respiratory Medicine","General Medicine"],"published":{"date-parts":[[2012]]}}}'
+  recorded_at: Sun, 19 Mar 2023 17:38:05 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/98
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:38:13 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1679181826722,"primary-name":"Hindawi
+        Limited","counts":{"current-dois":106102,"backfile-dois":398108,"total-dois":504210},"breakdowns":{"dois-by-issued-year":[[2022,54627],[2021,47850],[2020,43079],[2014,33557],[2013,30785],[2019,28163],[2018,27892],[2012,27711],[2015,26751],[2016,23959],[2017,22581],[2011,17395],[2009,15870],[2010,11371],[2008,6828],[2007,6239],[2006,5523],[2005,4750],[2004,4733],[2002,4642],[2001,4472],[2003,4248],[2000,4066],[2023,3625],[1998,3520],[1999,3467],[1997,2937],[1996,2881],[1995,2468],[1994,2370],[1992,2136],[1993,2102],[1991,1815],[1989,1418],[1990,1344],[1988,1297],[1987,1064],[1986,984],[1983,818],[1984,749],[1985,714],[1981,705],[1980,692],[1978,607],[1982,594],[1979,562],[1977,481],[1976,404],[1970,355],[1975,353],[1972,345],[1967,339],[1971,297],[1974,284],[1968,279],[1969,261],[1964,258],[1966,255],[1965,239],[1963,230],[1973,209],[1962,202],[1891,110],[1893,94],[1961,93],[1897,76],[1892,71],[1895,66],[1929,64],[1888,64],[1898,63],[1896,61],[1960,60],[1899,60],[1882,60],[1912,59],[1902,59],[1901,59],[1880,58],[1928,56],[1900,56],[1910,55],[1904,55],[1894,54],[1915,53],[1889,52],[1884,50],[1890,49],[1924,48],[1914,48],[1911,48],[1930,47],[1916,46],[1883,43],[1923,42],[1913,42],[1881,42],[1925,41],[1917,41],[1907,41],[1906,41],[1903,41],[1909,40],[1927,39],[1926,39],[1921,38],[1908,38],[1932,37],[1875,37],[1920,36],[1934,34],[1919,34],[1876,34],[1922,33],[1905,32],[1955,31],[1918,30],[1953,29],[1950,28],[1885,28],[1947,27],[1956,26],[1941,26],[1931,26],[1952,25],[1951,25],[1948,25],[1933,25],[1879,24],[1874,24],[1957,23],[1949,23],[1935,22],[1943,21],[1939,21],[1936,21],[1946,19],[1944,19],[1877,19],[1938,17],[1954,16],[1940,16],[1937,16],[1878,15],[1945,14],[1942,14],[1959,12],[1958,12]]},"prefixes":["10.7167","10.1100","10.1155","10.5402","10.7217","10.4061","10.6064","10.3814"],"coverage":{"affiliations-current":0.9353358089385685,"similarity-checking-current":0.9497370454845337,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.3749660896038261,"licenses-backfile":0.9748560692073508,"funders-current":0.5112250475957097,"affiliations-backfile":0.7558351000231093,"resource-links-backfile":0.9561450661629508,"orcids-backfile":0.4076531996342701,"update-policies-current":0.1930783585606303,"ror-ids-backfile":0.0,"orcids-current":0.9185123748845451,"similarity-checking-backfile":0.9572678770584866,"references-backfile":0.8178233042290032,"descriptions-backfile":0.0,"award-numbers-backfile":0.2896651159986737,"update-policies-backfile":0.06160137450139158,"licenses-current":0.9497558952705887,"award-numbers-current":0.4407645473223879,"abstracts-backfile":0.6126955499512695,"resource-links-current":0.9497370454845337,"abstracts-current":0.7391283858928202,"references-current":0.9402933026710147},"prefix":[{"name":"Hindawi
+        (Datasets International)","value":"10.7167"},{"name":"Hindawi (The Scientific
+        World)","value":"10.1100"},{"name":"Hindawi Limited","value":"10.1155"},{"name":"Hindawi
+        (International Scholarly Research Network)","value":"10.5402"},{"name":"Hindawi
+        (Conference Papers in Science)","value":"10.7217"},{"name":"Hindawi Publishing
+        Corporation (Sage-Hindawi Access to Research)","value":"10.4061"},{"name":"Hindawi
+        (Scientifica)","value":"10.6064"},{"name":"Hindawi Publishing Corporation
+        (Syrexe)","value":"10.3814"}],"id":98,"tokens":["hindawi","limited"],"counts-type":{"all":{"monograph":6,"peer-review":10621,"journal-article":485846,"book":12,"proceedings-article":561,"journal":1114,"component":303,"journal-issue":7164},"backfile":{"monograph":6,"peer-review":5885,"journal-article":385075,"book":12,"proceedings-article":561,"journal-issue":6569},"current":{"peer-review":4736,"journal-article":100771,"journal-issue":595}},"coverage-type":{"all":{"monograph":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"peer-review":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679181826722,"affiliations":0.8236045989881567,"abstracts":0.6634653779181057,"orcids":0.5346261984250154,"licenses":0.9965873960061419,"references":0.8754811195317035,"funders":0.4188961111133981,"similarity-checking":0.9898795091448731,"award-numbers":0.3336118852475887,"ror-ids":0.0,"update-policies":0.09264252458597992,"resource-links":0.981251260687543,"descriptions":0.0},"book":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.01077199281867145,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.8052805280528053},"journal-issue":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.6534059184812954,"references":0.0,"funders":0.0,"similarity-checking":0.1306532663316583,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.6534059184812954,"descriptions":0.0}},"backfile":{"monograph":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"peer-review":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679181826722,"affiliations":0.7814166071544504,"abstracts":0.633432448224372,"orcids":0.4214503668116601,"licenses":0.9956943452574174,"references":0.8455028241251704,"funders":0.3876569499448159,"similarity-checking":0.9872362526780497,"award-numbers":0.2994689346231254,"ror-ids":0.0,"update-policies":0.06368629487762124,"resource-links":0.9763500616762968,"descriptions":0.0},"book":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.7125894352260618,"references":0.0,"funders":0.0,"similarity-checking":0.1424874410108083,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.7125894352260618,"descriptions":0.0}},"current":{"peer-review":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679181826722,"affiliations":0.9848170604638239,"abstracts":0.7782298478729,"orcids":0.9671036310049518,"licenses":1.0,"references":0.9900368161475028,"funders":0.5382699387720674,"similarity-checking":0.9999801530202141,"award-numbers":0.464081928332556,"ror-ids":0.0,"update-policies":0.2032926139464727,"resource-links":0.9999801530202141,"descriptions":0.0},"journal-issue":{"last-status-check-time":1679181826722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"London,
+        United Kingdom","names":["Hindawi Limited","Hindawi (Datasets International)","Hindawi
+        (The Scientific World)","Hindawi (International Scholarly Research Network)","Hindawi
+        (Conference Papers in Science)","Hindawi Publishing Corporation (Sage-Hindawi
+        Access to Research)","Hindawi (Scientifica)","Hindawi Publishing Corporation
+        (Syrexe)"]}}'
+  recorded_at: Sun, 19 Mar 2023 17:38:13 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1155
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:38:14 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eNZiSQ8TOMbfXofe%2BfWv0N%2F%2BnJsZsTkVagmzfWGXOzLbaGFHRSVvYAIuiF%2BAtoOqOMAeIkt%2FtNjw8vMZnBnzHzjecFVz201pYVvhkxasXmJMv4qswBLpvJNIMxADhtS1Yr7WW8A%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7aa77ce62f78b7e2-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.1155",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 19 Mar 2023 17:38:14 GMT
+recorded_with: VCR 6.1.0

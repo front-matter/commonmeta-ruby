@@ -1,0 +1,110 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.26301/qdpd-2250?include=media,client
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.datacite.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:42:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 144e3225-c3db-4cae-8518-b2fe9b4d54dd
+      X-Download-Options:
+      - noopen
+      Etag:
+      - W/"24489410833d27f0334ca441e0d48ce4"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.029482'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.17
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.26301/qdpd-2250","type":"dois","attributes":{"doi":"10.26301/qdpd-2250","prefix":"10.26301","suffix":"qdpd-2250","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"USS
+        Pampanito","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://maritime.org/sub","nameIdentifierScheme":"Other"}]},{"name":"Autodesk","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://autodesk.com","nameIdentifierScheme":"Other"}]},{"name":"Topcon","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://www.topconpositioning.com","nameIdentifierScheme":"Other"}]},{"name":"3D
+        Robotics","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://3dr.com","nameIdentifierScheme":"Other"}]},{"name":"CyArk","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://cyark.org/","nameIdentifierScheme":"Other"}]},{"name":"San
+        Francisco Maritime National Park Association","nameType":"Organizational","affiliation":[],"nameIdentifiers":[{"nameIdentifier":"https://maritime.org","nameIdentifierScheme":"Other"}]}],"titles":[{"title":"USS
+        Pampanito Submarine","titleType":"Other"}],"publisher":"OpenHeritage3D","container":{},"publicationYear":2020,"subjects":[{"subject":"\\N","valueUri":"http://www.oecd.org/science/inno/38235147.pdf","schemeUri":"http://www.oecd.org/science/inno"}],"contributors":[],"dates":[{"date":"2016-11-11","dateType":"Collected","dateInformation":"Start"},{"date":"2016-11-11","dateType":"Collected","dateInformation":"End"},{"date":"2020-01-10","dateType":"Submitted","dateInformation":"Publish"},{"date":"2020","dateType":"Issued"}],"language":null,"types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceType":"Dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[],"relatedItems":[],"sizes":[],"formats":[],"version":null,"rightsList":[{"rights":"Creative
+        Commons Attribution Non Commercial Share Alike 4.0 International","rightsUri":"https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode","schemeUri":"https://spdx.org/licenses/","rightsIdentifier":"cc-by-nc-sa-4.0","rightsIdentifierScheme":"SPDX"}],"descriptions":[{"description":"USS
+        Pampanito was towed to Bay Ship Yacht shipyard and raised out of the water
+        in a dry dock for repairs. On Friday, November 11, 2016 the submarine was
+        scanned. Our goal was to create a baseline scan for future comparison, to
+        inform future repairs, to compare to her builders drawings, and to facilitate
+        interpretation and research. USS Pampanito made six patrols in the Pacific
+        during World War II during which she sank six Imperial Japanese ships and
+        damaged four others. Operated by the Maritime Park Association, Pampanito
+        hosts over 100,000 visitors a year and is one of the most popular historic
+        vessels in the country. In addition to day time visitors, over 1,500 kids
+        a year participate in Pampanito''s educational day and overnight programs.
+        Pampanito is a National Historic Landmark. External Project Link: \\N Additional
+        Info Link: https://maritime.org/sub/","descriptionType":"Abstract"}],"geoLocations":[{"geoLocationPoint":{"pointLatitude":"37.809941","pointLongitude":"-122.416395"}}],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMjYzMDEvUURQRC0yMjUwPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9Ik9yZ2FuaXphdGlvbmFsIj5VU1MgUGFtcGFuaXRvPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPdGhlciIgc2NoZW1lVVJJPSIiPmh0dHBzOi8vbWFyaXRpbWUub3JnL3N1YjwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJPcmdhbml6YXRpb25hbCI+QXV0b2Rlc2s8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik90aGVyIiBzY2hlbWVVUkk9IiI+aHR0cHM6Ly9hdXRvZGVzay5jb208L25hbWVJZGVudGlmaWVyPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iT3JnYW5pemF0aW9uYWwiPlRvcGNvbjwvY3JlYXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT3RoZXIiIHNjaGVtZVVSST0iIj5odHRwczovL3d3dy50b3Bjb25wb3NpdGlvbmluZy5jb208L25hbWVJZGVudGlmaWVyPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iT3JnYW5pemF0aW9uYWwiPjNEIFJvYm90aWNzPC9jcmVhdG9yTmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPdGhlciIgc2NoZW1lVVJJPSIiPmh0dHBzOi8vM2RyLmNvbTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJPcmdhbml6YXRpb25hbCI+Q3lBcms8L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik90aGVyIiBzY2hlbWVVUkk9IiI+aHR0cHM6Ly9jeWFyay5vcmcvPC9uYW1lSWRlbnRpZmllcj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9Ik9yZ2FuaXphdGlvbmFsIj5TYW4gRnJhbmNpc2NvIE1hcml0aW1lIE5hdGlvbmFsIFBhcmsgQXNzb2NpYXRpb248L2NyZWF0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik90aGVyIiBzY2hlbWVVUkk9IiI+aHR0cHM6Ly9tYXJpdGltZS5vcmc8L25hbWVJZGVudGlmaWVyPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZSB0aXRsZVR5cGU9Ik90aGVyIj5VU1MgUGFtcGFuaXRvIFN1Ym1hcmluZTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5PcGVuSGVyaXRhZ2UzRDwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMDwvcHVibGljYXRpb25ZZWFyPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+RGF0YXNldDwvcmVzb3VyY2VUeXBlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0IHNjaGVtZVVSST0iaHR0cDovL3d3dy5vZWNkLm9yZy9zY2llbmNlL2lubm8iIHZhbHVlVVJJPSJodHRwOi8vd3d3Lm9lY2Qub3JnL3NjaWVuY2UvaW5uby8zODIzNTE0Ny5wZGYiPlxOPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9IkNvbGxlY3RlZCIgZGF0ZUluZm9ybWF0aW9uPSJTdGFydCI+MjAxNi0xMS0xMTwvZGF0ZT4KICAgIDxkYXRlIGRhdGVUeXBlPSJDb2xsZWN0ZWQiIGRhdGVJbmZvcm1hdGlvbj0iRW5kIj4yMDE2LTExLTExPC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlN1Ym1pdHRlZCIgZGF0ZUluZm9ybWF0aW9uPSJQdWJsaXNoIj4yMDIwLTAxLTEwPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHNpemVzLz4KICA8Zm9ybWF0cy8+CiAgPHZlcnNpb24vPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS1uYy1zYS80LjAvbGVnYWxjb2RlIj5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uIE5vbiBDb21tZXJjaWFsIFNoYXJlIEFsaWtlIDQuMCBJbnRlcm5hdGlvbmFsPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+VVNTIFBhbXBhbml0byB3YXMgdG93ZWQgdG8gQmF5IFNoaXAgIFlhY2h0IHNoaXB5YXJkIGFuZCByYWlzZWQgb3V0IG9mIHRoZSB3YXRlciBpbiBhIGRyeSBkb2NrIGZvciByZXBhaXJzLiBPbiBGcmlkYXksIE5vdmVtYmVyIDExLCAyMDE2IHRoZSBzdWJtYXJpbmUgd2FzIHNjYW5uZWQuICBPdXIgZ29hbCB3YXMgdG8gY3JlYXRlIGEgYmFzZWxpbmUgc2NhbiBmb3IgZnV0dXJlIGNvbXBhcmlzb24sIHRvIGluZm9ybSBmdXR1cmUgcmVwYWlycywgdG8gY29tcGFyZSB0byBoZXIgYnVpbGRlcnMgZHJhd2luZ3MsIGFuZCB0byBmYWNpbGl0YXRlIGludGVycHJldGF0aW9uIGFuZCByZXNlYXJjaC4gVVNTIFBhbXBhbml0byBtYWRlIHNpeCBwYXRyb2xzIGluIHRoZSBQYWNpZmljIGR1cmluZyBXb3JsZCBXYXIgSUkgZHVyaW5nIHdoaWNoIHNoZSBzYW5rIHNpeCBJbXBlcmlhbCBKYXBhbmVzZSBzaGlwcyBhbmQgZGFtYWdlZCBmb3VyIG90aGVycy4gT3BlcmF0ZWQgYnkgdGhlIE1hcml0aW1lIFBhcmsgQXNzb2NpYXRpb24sIFBhbXBhbml0byBob3N0cyBvdmVyIDEwMCwwMDAgdmlzaXRvcnMgYSB5ZWFyIGFuZCBpcyBvbmUgb2YgdGhlIG1vc3QgcG9wdWxhciBoaXN0b3JpYyB2ZXNzZWxzIGluIHRoZSBjb3VudHJ5LiBJbiBhZGRpdGlvbiB0byBkYXkgdGltZSB2aXNpdG9ycywgb3ZlciAxLDUwMCBraWRzIGEgeWVhciBwYXJ0aWNpcGF0ZSBpbiBQYW1wYW5pdG8ncyBlZHVjYXRpb25hbCBkYXkgYW5kIG92ZXJuaWdodCBwcm9ncmFtcy4gUGFtcGFuaXRvIGlzIGEgTmF0aW9uYWwgSGlzdG9yaWMgTGFuZG1hcmsuIEV4dGVybmFsIFByb2plY3QgTGluazogXE4gQWRkaXRpb25hbCBJbmZvIExpbms6IGh0dHBzOi8vbWFyaXRpbWUub3JnL3N1Yi88L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgogIDxnZW9Mb2NhdGlvbnM+CiAgICA8Z2VvTG9jYXRpb24+CiAgICAgIDxnZW9Mb2NhdGlvblBvaW50PgogICAgICAgIDxwb2ludExhdGl0dWRlPjM3LjgwOTk0MTwvcG9pbnRMYXRpdHVkZT4KICAgICAgICA8cG9pbnRMb25naXR1ZGU+LTEyMi40MTYzOTU8L3BvaW50TG9uZ2l0dWRlPgogICAgICA8L2dlb0xvY2F0aW9uUG9pbnQ+CiAgICA8L2dlb0xvY2F0aW9uPgogIDwvZ2VvTG9jYXRpb25zPgo8L3Jlc291cmNlPg==","url":"https://openheritage3d.org/project/qdpd-2250","contentUrl":null,"metadataVersion":4,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"fabricaForm","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2020-01-10T18:51:00.000Z","registered":"2020-01-16T00:17:10.000Z","published":"2020","updated":"2021-11-11T17:15:02.000Z"},"relationships":{"client":{"data":{"id":"cyark.oh","type":"clients"}},"provider":{"data":{"id":"cyark","type":"providers"}},"media":{"data":{"id":"10.26301/qdpd-2250","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"cyark.oh","type":"clients","attributes":{"name":"OpenHeritage3D","symbol":"CYARK.OH","year":2019,"alternateName":"Open
+        Heritage 3D","description":"As 3D and reality capture strategies for heritage
+        documentation become more widespread and available, there has emerged a growing
+        need to assist with guiding and facilitating accessibility to data, while
+        maintaining scientific rigor, cultural and ethical sensitivity, discoverability,
+        and archival standards. In response to these areas of need, The Open Heritage
+        3D Alliance (OHA) has developed as an advisory group governing the Open Heritage
+        3D initiative. This collaborative advisory group are among some of the earliest
+        adopters of 3D heritage documentation technologies, and offer first-hand guidance
+        for best practices in data management, sharing, and dissemination approaches
+        for 3D cultural heritage projects.\n\nThe founding members of the OHA, consist
+        of experts and organizational leaders from CyArk, Historic Environment Scotland,
+        and the University of South Florida Libraries, who together have significant
+        repositories of legacy and on-going 3D research and documentation projects.
+        These groups offer unique insight into not only the best practices for 3D
+        data capture and sharing, but also have come together around concerns dealing
+        with standards, formats, approach, ethics, and archive commitment. Together,
+        the OHA has begun the journey to provide open access to cultural heritage
+        3D data, while maintaining integrity, security, and standards relating to
+        discoverable dissemination. Together, the OHA will work to provide democratized
+        access to primary heritage 3D data submitted from donors and organizations,
+        and will help to facilitate an operation platform, archive, and organization
+        of resources into the future","language":["en"],"clientType":"repository","domains":"*","re3data":null,"opendoar":null,"issn":{},"url":"https://openheritage3d.org/","created":"2019-03-26T16:21:19.000Z","updated":"2020-04-27T15:30:01.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"cyark","type":"providers"}},"prefixes":{"data":[{"id":"10.26301","type":"prefixes"}]}}}]}'
+  recorded_at: Sun, 19 Mar 2023 17:42:47 GMT
+recorded_with: VCR 6.1.0

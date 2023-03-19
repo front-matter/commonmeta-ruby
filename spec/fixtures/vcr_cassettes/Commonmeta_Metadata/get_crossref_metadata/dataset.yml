@@ -1,0 +1,300 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.2210/pdb4hhb/pdb/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:37:25 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.2210/pdb4hhb/pdb>; rel="canonical"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<crossref_result xmlns=\"http://www.crossref.org/qrschema/3.0\"
+        version=\"3.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.crossref.org/qrschema/3.0
+        http://www.crossref.org/schemas/crossref_query_output3.0.xsd\">\r\n  <query_result>\r\n
+        \   <head>\r\n      <doi_batch_id>none</doi_batch_id>\r\n    </head>\r\n    <body>\r\n
+        \     <query status=\"resolved\">\r\n        <doi type=\"component\">10.2210/pdb4hhb/pdb</doi>\r\n
+        \       <crm-item name=\"publisher-name\" type=\"string\">Worldwide Protein
+        Data Bank</crm-item>\r\n        <crm-item name=\"prefix-name\" type=\"string\">Worldwide
+        Protein Data Bank</crm-item>\r\n        <crm-item name=\"member-id\" type=\"number\">7763</crm-item>\r\n
+        \       <crm-item name=\"citation-id\" type=\"number\">19153065</crm-item>\r\n
+        \       <crm-item name=\"book-id\" type=\"number\">501074</crm-item>\r\n        <crm-item
+        name=\"deposit-timestamp\" type=\"number\">20230314102602</crm-item>\r\n        <crm-item
+        name=\"owner-prefix\" type=\"string\">10.2210</crm-item>\r\n        <crm-item
+        name=\"last-update\" type=\"date\">2023-03-14T13:26:34Z</crm-item>\r\n        <crm-item
+        name=\"created\" type=\"date\">2006-01-04T19:34:58Z</crm-item>\r\n        <crm-item
+        name=\"citedby-count\" type=\"number\">0</crm-item>\r\n        <crm-item name=\"relation\"
+        type=\"doi\" claim=\"hasComponent\">10.2210/pdb</crm-item>\r\n        <doi_record>\r\n
+        \         <crossref xmlns=\"http://www.crossref.org/xschema/1.1\" xsi:schemaLocation=\"http://www.crossref.org/xschema/1.1
+        http://doi.crossref.org/schemas/unixref1.1.xsd\">\r\n            <sa_component>\r\n
+        \             <component_list>\r\n                <component reg-agency=\"Crossref\">\r\n
+        \                 <titles>\r\n                    <title>THE CRYSTAL STRUCTURE
+        OF HUMAN DEOXYHAEMOGLOBIN AT 1.74 ANGSTROMS RESOLUTION</title>\r\n                  </titles>\r\n
+        \                 <contributors>\r\n                    <person_name sequence=\"first\"
+        contributor_role=\"author\">\r\n                      <given_name>G.</given_name>\r\n
+        \                     <surname>Fermi</surname>\r\n                    </person_name>\r\n
+        \                   <person_name sequence=\"additional\" contributor_role=\"author\">\r\n
+        \                     <given_name>M.F.</given_name>\r\n                      <surname>Perutz</surname>\r\n
+        \                   </person_name>\r\n                  </contributors>\r\n
+        \                 <publication_date media_type=\"online\">\r\n                    <month>07</month>\r\n
+        \                   <day>17</day>\r\n                    <year>1984</year>\r\n
+        \                 </publication_date>\r\n                  <description>x-ray
+        diffraction structure</description>\r\n                  <doi_data>\r\n                    <doi>10.2210/pdb4hhb/pdb</doi>\r\n
+        \                   <resource>https://www.wwpdb.org/pdb?id=pdb_00004hhb</resource>\r\n
+        \                 </doi_data>\r\n                </component>\r\n              </component_list>\r\n
+        \           </sa_component>\r\n          </crossref>\r\n        </doi_record>\r\n
+        \     </query>\r\n    </body>\r\n  </query_result>\r\n</crossref_result>"
+  recorded_at: Sun, 19 Mar 2023 17:37:25 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.2210
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:38:29 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NgYJNkk3SgcB4VgE7IGhZ8GtThiFemk0muRYmBfrHG9GEhey3BxC358pjixgw%2FU9ydCam2KUAmnBjwd%2FV%2Bbb4iYUuFkksQ4xniImDSyuIzhc3RCFrh%2F6veavuJhbXEZMSHbY4%2FM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7aa77d43ee43b8ca-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.2210",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 19 Mar 2023 17:38:29 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.2210/pdb4hhb/pdb
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:38:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,3,15]],"date-time":"2023-03-15T05:40:04Z","timestamp":1678858804310},"description":"x-ray
+        diffraction structure","reference-count":0,"publisher":"Worldwide Protein
+        Data Bank","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.2210\/pdb4hhb\/pdb","type":"component","created":{"date-parts":[[2006,1,5]],"date-time":"2006-01-05T00:34:58Z","timestamp":1136421298000},"source":"Crossref","is-referenced-by-count":0,"title":["THE
+        CRYSTAL STRUCTURE OF HUMAN DEOXYHAEMOGLOBIN AT 1.74 ANGSTROMS RESOLUTION"],"prefix":"10.2210","author":[{"given":"G.","family":"Fermi","sequence":"first","affiliation":[]},{"given":"M.F.","family":"Perutz","sequence":"additional","affiliation":[]}],"member":"7763","published-online":{"date-parts":[[1984,7,17]]},"container-title":[],"original-title":[],"deposited":{"date-parts":[[2023,3,14]],"date-time":"2023-03-14T17:26:34Z","timestamp":1678814794000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.wwpdb.org\/pdb?id=pdb_00004hhb"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[1984,7,17]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.2210\/pdb4hhb\/pdb","relation":{},"published":{"date-parts":[[1984,7,17]]}}}'
+  recorded_at: Sun, 19 Mar 2023 17:38:29 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/7763
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:39:00 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1679200873096,"primary-name":"Worldwide
+        Protein Data Bank","counts":{"current-dois":29321,"backfile-dois":179516,"total-dois":208837},"breakdowns":{"dois-by-issued-year":[[2020,14108],[2022,14003],[2021,12566],[2019,11760],[2018,11478],[2017,11278],[2016,11032],[2014,10303],[2013,9681],[2015,9478],[2012,9043],[2011,8163],[2010,8050],[2009,7500],[2007,7393],[2008,7101],[2006,6956],[2005,5647],[2004,5430],[2003,4428],[2002,3282],[2001,2948],[2000,2760],[2023,2752],[1999,2447],[1998,2135],[1997,1636],[1994,1389],[1996,1222],[1995,1011],[1993,745],[1992,220],[1991,209],[1990,161],[1989,89],[1988,79],[1983,51],[1982,45],[1987,31],[1985,30],[1977,30],[1986,29],[1984,29],[1980,26],[1976,25],[1981,21],[1978,19],[1979,17],[1973,1]]},"prefixes":["10.2210"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":0.0,"descriptions-current":0.9983970533065039,"ror-ids-current":0.0,"funders-backfile":0.0,"licenses-backfile":0.0,"funders-current":0.0,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.0,"similarity-checking-backfile":0.0,"references-backfile":0.0,"descriptions-backfile":0.9982174290871009,"award-numbers-backfile":0.0,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.0,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"references-current":0.0},"prefix":[{"name":"Worldwide
+        Protein Data Bank","value":"10.2210"}],"id":7763,"tokens":["worldwide","protein","data","bank"],"counts-type":{"all":{"journal-article":367,"component":231443,"database":1},"backfile":{"journal-article":320,"component":179196},"current":{"journal-article":47,"component":29274}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1679200873096,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1679200873096,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.9012327009242016},"database":{"last-status-check-time":1679200873096,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1679200873096,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1679200873096,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":1.0}},"current":{"journal-article":{"last-status-check-time":1679200873096,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1679200873096,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":1.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":false,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":false,"deposits-references-backfile":false,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-descriptions-current":true,"deposits-references-current":false,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":true,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":false,"deposits-licenses-current":false},"location":"Piscataway,
+        NJ, United States","names":["Worldwide Protein Data Bank"]}}'
+  recorded_at: Sun, 19 Mar 2023 17:39:00 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.2210
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 19 Mar 2023 17:39:00 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MpM3tk8%2BSYPrJZAExkazP21cwIKkgFiRwRrcv%2FXp0WPNKmwh2IIeh6R7nddgohhPcc8RGQJXhWsJaTmTcWFzUYdJDpH8OiRFY4N7uMRISSLXSQc56DWlscNlQc2CB9%2FSLJG07AU%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7aa77e066cbdb897-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.2210",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 19 Mar 2023 17:39:00 GMT
+recorded_with: VCR 6.1.0
