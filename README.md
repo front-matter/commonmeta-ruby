@@ -46,7 +46,6 @@ You can also install the gem system-wide in the usual way:
 ```bash
 gem install commonmeta-ruby
 ```
-```
 
 ## Commands
 
