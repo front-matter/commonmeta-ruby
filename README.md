@@ -6,7 +6,7 @@
 
 # commonmeta-ruby: a Ruby library for conversion of scholarly metadata
 
-Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) gem, but using [commonmeta](https://commonmeta.org) as the intermediate format.
+Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) gem, but using [commonmeta](https://commonmeta.org) as the intermediate format, and supporting additional metadata formats.
 
 ## Supported Metadata Formats
 
@@ -14,6 +14,7 @@ commonmeta-ruby reads and/or writes these metadata formats:
 
 | Format | Name | Content Type | Read | Write |
 | ------ | ---- | ------------ | ---- | ----- |
+| [Commonmeta](https://commonmeta.org) | commonmeta | application/vnd.commonmeta+json | yes | yes |
 | [CrossRef Unixref XML](https://www.crossref.org/schema/documentation/unixref1.1/unixref1.1.html) | crossref | application/vnd.crossref.unixref+xml | yes | yes |
 | [Crossref JSON](https://api.crossref.org) | crossref | application/vnd.crossref+json | yes | no |
 | [DataCite](https://api.datacite.org/) | datacite | application/vnd.datacite.datacite+json | yes | yes |
@@ -59,7 +60,7 @@ commonmeta https://doi.org/10.7554/elife.01567
 commonmeta example.xml
 ```
 
-commonmeta can read BibTeX files (file extension `.bib`), RIS files (file extension `.ris`), Crossref files (file extension `.xml`), DataCite files and CSL JSON files.
+commonmeta can read BibTeX files (file extension `.bib`), RIS files (file extension `.ris`), Crossref files (file extension `.xml`), DataCite files and CSL-JSON files.
 
 The input format (e.g. Crossref XML or BibteX) is automatically detected, but
 you can also provide the format with the `--from` or `-f` flag. The supported
