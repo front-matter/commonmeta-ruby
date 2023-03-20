@@ -35,7 +35,7 @@ module Commonmeta
           ni['nameIdentifierScheme'] == 'ORCID'
         end
         id = id['nameIdentifier'] if id.present?
-        # Crossref metadata
+      # Crossref metadata
       elsif id.nil? && author['ORCID'].present?
         id = author.fetch('ORCID')
       end

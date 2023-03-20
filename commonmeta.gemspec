@@ -28,7 +28,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'edtf', '~> 3.0', '>= 3.0.4'
   s.add_dependency 'gender_detector', '~> 2.0'
   s.add_dependency 'http', '~> 5.1', '>= 5.1.1'
-  s.add_dependency 'iso8601', '~> 0.9.1'
   s.add_dependency 'json-ld-preloaded', '~> 3.2', '>= 3.2.2'
   s.add_dependency 'jsonlint', '~> 0.3.0'
   s.add_dependency 'json_schemer', '~> 0.2.23'
