@@ -61,7 +61,7 @@ commonmeta example.xml
 
 commonmeta can read BibTeX files (file extension `.bib`), RIS files (file extension `.ris`), Crossref files (file extension `.xml`), DataCite files and CSL-JSON files.
 
-The input format (e.g. Crossref XML or BibteX) is automatically detected, but
+The input format (e.g. Crossref or BibteX) is automatically detected, but
 you can also provide the format with the `--from` or `-f` flag. The supported
 input formats are listed in the table above.
 
@@ -84,7 +84,7 @@ All input is validated against the commonmeta JSON schema.
 
 ## Examples
 
-Read Crossref XML:
+Read Crossref:
 
 ```
 commonmeta https://doi.org/10.7554/elife.01567 -t crossref
@@ -208,7 +208,7 @@ commonmeta https://doi.org/10.7554/elife.01567 -t crossref
 </doi_records>
 ```
 
-Convert Crossref XML to schema.org/JSON-LD:
+Convert Crossref to schema.org/JSON-LD:
 
 ```
 commonmeta https://doi.org/10.7554/elife.01567
@@ -406,7 +406,7 @@ commonmeta https://doi.org/10.7554/elife.01567
 }
 ```
 
-Convert Crossref XML to DataCite JSON:
+Convert Crossref to DataCite:
 
 ```
 commonmeta https://doi.org/10.7554/elife.01567 -t datacite
@@ -501,7 +501,7 @@ commonmeta https://doi.org/10.7554/elife.01567 -t datacite
 </resource>
 ```
 
-Convert Crossref XML to BibTeX:
+Convert Crossref to BibTeX:
 
 ```
 commonmeta https://doi.org/10.7554/elife.01567 -t bibtex
