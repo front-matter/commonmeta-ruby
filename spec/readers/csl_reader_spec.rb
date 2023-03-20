@@ -23,7 +23,7 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.descriptions.first['description']).to start_with('Eating your own dog food')
-      expect(subject.date).to eq("published"=>"2016-12-20")
+      expect(subject.date).to eq('published' => '2016-12-20')
       expect(subject.license).to be_nil
     end
   end
@@ -40,7 +40,7 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.descriptions.first['description']).to start_with('Eating your own dog food')
-      expect(subject.date).to eq("published"=>"2016-12-20")
+      expect(subject.date).to eq('published' => '2016-12-20')
     end
   end
 
@@ -55,7 +55,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.creators).to eq([{ 'name' => ':(unav)', 'type' => 'Organization' }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.descriptions.first['description']).to start_with('Eating your own dog food')
-      expect(subject.date).to eq("published" => "2016-12-20")
+      expect(subject.date).to eq('published' => '2016-12-20')
     end
   end
 end

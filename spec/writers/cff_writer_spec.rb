@@ -23,7 +23,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json['abstract']).to start_with('<em>PyPinT</em>')
       expect(json['date-released']).to eq('2014')
       expect(json['repository-code']).to eq('https://zenodo.org/record/10164')
-      expect(json['keywords']).to eq(["Parallel-in-Time Integration", "Spectral Deferred Corrections", "Multigrid", "Multi-Level Spectral Deferred Corrections", "Python Framework"])
+      expect(json['keywords']).to eq(['Parallel-in-Time Integration',
+                                      'Spectral Deferred Corrections', 'Multigrid', 'Multi-Level Spectral Deferred Corrections', 'Python Framework'])
       expect(json['license']).to eq('MIT')
       # expect(json['references']).to eq('identifiers' => [{ 'type' => 'url',
       #                                                      'value' => 'https://github.com/Parallel-in-Time/PyPinT/tree/release-v0.0.4' }])
@@ -53,8 +54,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json['repository-code']).to eq('https://zenodo.org/record/15497')
       expect(json['keywords'].nil?).to be(true)
       expect(json['license']).to eq('MIT')
-    #   expect(json['references']).to eq('identifiers' => [{ 'type' => 'url',
-    #                                                        'value' => 'https://github.com/woutergins/satlas/tree/v1.0.0' }])
+      #   expect(json['references']).to eq('identifiers' => [{ 'type' => 'url',
+      #                                                        'value' => 'https://github.com/woutergins/satlas/tree/v1.0.0' }])
     end
 
     it 'ruby-cff' do
@@ -108,7 +109,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json['abstract']).to eq('Jupyter notebooks that use GraphQL to implement EC-funded FREYA Project PID Graph user stories.')
       expect(json['date-released']).to eq('2020')
       expect(json['repository-code']).to eq('https://github.com/datacite/pidgraph-notebooks-python')
-      expect(json['keywords']).to eq(["pid graph", "pid", "graphql", "freya", "jupyter", "FOS: Computer and information sciences", "FOS: Computer and information sciences"])
+      expect(json['keywords']).to eq(['pid graph', 'pid', 'graphql', 'freya', 'jupyter',
+                                      'FOS: Computer and information sciences', 'FOS: Computer and information sciences'])
       expect(json['license']).to be_nil
       # expect(json['references']).to eq(true)
     end

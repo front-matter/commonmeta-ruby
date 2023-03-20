@@ -80,7 +80,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "#{fixture_path}datacite.json"
       subject = described_class.new(input: input, from: 'datacite')
       expect(subject.valid?).to be false
-      expect(subject.errors).to eq(["root is missing required keys: url"])
+      expect(subject.errors).to eq(['root is missing required keys: url'])
       bibtex = BibTeX.parse(subject.bibtex).to_a(quotes: '').first
       expect(bibtex[:bibtex_type].to_s).to eq('article')
       expect(bibtex[:bibtex_key]).to eq('https://doi.org/10.5438/4k3m-nyvg')

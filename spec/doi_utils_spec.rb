@@ -6,7 +6,7 @@ describe Commonmeta::Metadata, vcr: true do
   let(:subject) do
     described_class.new
   end
-  
+
   context 'doi resolver' do
     it 'doi' do
       doi = '10.5061/DRYAD.8515'

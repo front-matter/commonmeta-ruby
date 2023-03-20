@@ -37,7 +37,7 @@ describe Commonmeta::Metadata, vcr: true do
                                            'familyName' => 'Sankar')
       expect(subject.titles).to eq([{ 'title' => 'Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth' }])
       expect(subject.descriptions.first['description']).to start_with('Among various advantages, their small size makes model organisms preferred subjects of investigation.')
-      expect(subject.date).to eq("published" => "2014")
+      expect(subject.date).to eq('published' => '2014')
       expect(subject.container).to eq('identifier' => '2050084X', 'title' => 'eLife',
                                       'type' => 'Journal', 'volume' => '3')
     end
@@ -50,11 +50,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.state).to eq('not_found')
       expect(subject.id).to eq('https://doi.org/10.7554/elife.01567')
       expect(subject.type).to eq('Dissertation')
-      expect(subject.creators).to eq([{"name"=>"Toparlar,Y."}])
+      expect(subject.creators).to eq([{ 'name' => 'Toparlar,Y.' }])
       expect(subject.titles).to eq([{ 'title' => 'A multiscale analysis of the urban heat island effect' }])
       expect(subject.descriptions.first['description']).to start_with('Designing the climates of cities')
-      expect(subject.date).to eq("created" => "2018-04-25",
-        "published" => "2018-04-25")
+      expect(subject.date).to eq('created' => '2018-04-25', 'published' => '2018-04-25')
     end
 
     it 'RIS with Dashes' do

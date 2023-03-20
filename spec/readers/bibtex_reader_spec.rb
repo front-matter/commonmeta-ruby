@@ -36,8 +36,8 @@ describe Commonmeta::Metadata, vcr: true do
                                            'type' => 'Person')
       expect(subject.titles).to eq([{ 'title' => 'Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth' }])
       expect(subject.descriptions.first['description']).to start_with('Among various advantages, their small size makes model organisms preferred subjects of investigation.')
-      expect(subject.license).to eq("id"=>"CC-BY-3.0", "url"=>"https://creativecommons.org/licenses/by/3.0/legalcode")
-      expect(subject.date).to eq("published"=>"2014")
+      expect(subject.license).to eq('id' => 'CC-BY-3.0', 'url' => 'https://creativecommons.org/licenses/by/3.0/legalcode')
+      expect(subject.date).to eq('published' => '2014')
     end
 
     it 'DOI does not exist' do
@@ -52,7 +52,7 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'A multiscale analysis of the urban heat island effect: from city averaged temperatures to the energy demand of individual buildings' }])
       expect(subject.descriptions.first['description']).to start_with('Designing the climates of cities')
-      expect(subject.date).to eq("published"=>"2018")
+      expect(subject.date).to eq('published' => '2018')
     end
   end
 end

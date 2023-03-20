@@ -3,7 +3,7 @@
 require 'dotenv/load'
 require 'active_support/all'
 require 'nokogiri'
-ActiveSupport::XmlMini.backend='Nokogiri'
+ActiveSupport::XmlMini.backend = 'Nokogiri'
 require 'http'
 require 'multi_json'
 require 'postrank-uri'
@@ -32,4 +32,4 @@ require 'commonmeta/array'
 require 'commonmeta/whitelist_scrubber'
 require 'commonmeta/xml_converter'
 
-ENV['USER_AGENT'] ||= "Mozilla/5.0 (compatible; mailto:info@front-matter.io)"
+ENV['USER_AGENT'] ||= 'Mozilla/5.0 (compatible; mailto:info@front-matter.io)'

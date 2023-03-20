@@ -3,7 +3,7 @@
 module Commonmeta
   module Writers
     module CsvWriter
-      require "csv"
+      require 'csv'
 
       def csv
         return nil unless valid?
@@ -11,12 +11,12 @@ module Commonmeta
         bib = {
           doi: doi_from_url(id),
           url: url,
-          registered: date["published"],
+          registered: date['published'],
           state: state,
-          type: Commonmeta::Utils::CM_TO_BIB_TRANSLATIONS.fetch(type, "misc"),
-          title: parse_attributes(titles, content: "title", first: true),
+          type: Commonmeta::Utils::CM_TO_BIB_TRANSLATIONS.fetch(type, 'misc'),
+          title: parse_attributes(titles, content: 'title', first: true),
           author: authors_as_string(creators),
-          publisher: publisher["name"],
+          publisher: publisher['name']
         }.values
 
         CSV.generate { |csv| csv << bib }
