@@ -41,10 +41,9 @@ module Commonmeta
 
         resource_type_general = meta.dig("types", "resourceTypeGeneral")
         resource_type = meta.dig("types", "resourceType")
-        type = Commonmeta::Utils::DC_TO_CM_TRANSLATIONS.fetch(resource_type_general, "Other")
-        additional_type = Commonmeta::Utils::DC_TO_CM_TRANSLATIONS.fetch(resource_type, nil)
         # if resource_type is one of the new resource_type_general types introduced in schema 4.3, use it
-        type = additional_type if additional_type
+        type = Commonmeta::Utils::DC_TO_CM_TRANSLATIONS.fetch(resource_type, nil) ||
+          Commonmeta::Utils::DC_TO_CM_TRANSLATIONS.fetch(resource_type_general, "Other")
 
         alternate_identifiers = Array.wrap(meta.fetch("alternate_identifiers", nil)).map do |i|
           i.transform_keys! { |k| k.camelize(:lower) }
@@ -89,6 +88,7 @@ module Commonmeta
         
         { "id" => id,
           "type" => type,
+          "additional_type" => resource_type != type ? resource_type : nil,
           "url" => url,
           "titles" => titles,
           "creators" => creators,

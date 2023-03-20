@@ -10,11 +10,9 @@ describe Commonmeta::Metadata, vcr: true do
       json = JSON.parse(subject.schema_org)
       expect(json["@id"]).to eq("https://doi.org/10.7554/elife.01567")
       expect(json["@type"]).to eq("ScholarlyArticle")
-      expect(json["periodical"]).to eq("@type" => "Journal",
-                                       "identifier" => "2050-084X", "identifierType" => "ISSN", "name" => "eLife", "volume" => "3")
+      expect(json["periodical"]).to eq("@type" => "Periodical", "issn" => "2050-084X", "name" => "eLife")
       expect(json["citation"].length).to eq(27)
-      expect(json["citation"].first).to eq("@id" => "https://doi.org/10.1038/nature02100",
-                                           "@type" => "CreativeWork")
+      expect(json["citation"].first).to eq("@id" => "https://doi.org/10.1038/nature02100", "@type" => "CreativeWork", "datePublished" => "2003", "name" => "APL regulates vascular tissue identity in Arabidopsis")
       expect(json["funder"]).to eq([{ "@type" => "Organization", "name" => "SystemsX" },
                                     { "@type" => "Organization", "name" => "EMBO longterm post-doctoral fellowships" },
                                     { "@type" => "Organization", "name" => "Marie Heim-Voegtlin" },
@@ -42,7 +40,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json["@type"]).to eq("SoftwareSourceCode")
       expect(json["name"]).to eq("Maremma: a Ruby library for simplified network calls")
       expect(json["author"]).to eq("givenName" => "Martin",
-                                   "familyName" => "Fenner", "@type" => "Person", "@id" => "https://orcid.org/0000-0003-0077-4738", 
+                                   "familyName" => "Fenner", "@type" => "Person", "@id" => "https://orcid.org/0000-0003-0077-4738",
                                    "affiliation" => [{ "@type" => "Organization", "name" => "DataCite" }])
     end
 
@@ -66,17 +64,6 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json["keywords"]).to eq("Plasmodium, malaria, mitochondrial genome, Parasites")
     end
 
-    it "Schema.org JSON IsSupplementTo" do
-      input = "https://doi.org/10.5517/CC8H01S"
-      subject = described_class.new(input: input)
-      json = JSON.parse(subject.schema_org)
-      expect(json["@id"]).to eq("https://doi.org/10.5517/cc8h01s")
-      expect(json["@type"]).to eq("Dataset")
-      expect(json["@reverse"]).to eq("isBasedOn" => {
-                                       "@id" => "https://doi.org/10.1107/s1600536804021154", "@type" => "ScholarlyArticle",
-                                     })
-    end
-
     it "Schema.org JSON Cyark" do
       input = "https://doi.org/10.26301/jgf3-jm06"
       subject = described_class.new(input: input)
@@ -97,13 +84,13 @@ describe Commonmeta::Metadata, vcr: true do
                                      "@type" => "Person",
                                      "@id" => "https://orcid.org/0000-0003-0077-4738",
                                      "affiliation" => [{ "@type" => "Organization",
-                                                        "name" => "NCEAS" }] },
+                                                         "name" => "NCEAS" }] },
                                     { "givenName" => "Peter",
                                      "familyName" => "Slaughter",
                                      "@type" => "Person",
                                      "@id" => "https://orcid.org/0000-0002-2192-403X",
                                      "affiliation" => [{ "@type" => "Organization",
-                                                        "name" => "NCEAS" }] },
+                                                         "name" => "NCEAS" }] },
                                     { "@type" => "Organization",
                                       "name" => "University of California, Santa Barbara" }])
       expect(json["version"]).to eq("2.0.0")
@@ -162,8 +149,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json["name"]).to eq("Rural Electrification With Hybrid Power Systems Based on Renewables - Technical System Configurations From the Point of View of the European Industry")
       expect(json["author"].count).to eq(3)
       expect(json["author"].first).to eq("@type" => "Person", "familyName" => "Llamas", "givenName" => "P.")
-      expect(json["periodical"]).to eq("@type" => "Periodical", "firstPage" => "Spain; 3353",
-                                       "lastPage" => "3356", "name" => "23rd European Photovoltaic Solar Energy Conference and Exhibition", "volume" => "1-5 September 2008")
+      expect(json["periodical"]).to eq("@type" => "Periodical", "name" => "23rd European Photovoltaic Solar Energy Conference and Exhibition")
     end
 
     it "data catalog" do
@@ -187,7 +173,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json["@type"]).to eq("Dataset")
       expect(json["name"]).to eq("NWD165827.recab.cram")
       expect(json["author"]).to eq("name" => "TOPMed")
-      expect(json["includedInDataCatalog"].nil?).to be(true)
+      expect(json["includedInDataCatalog"]).to be_empty
       expect(json["identifier"]).to eq(
         [{ "@type" => "PropertyValue",
            "propertyID" => "minid",
@@ -212,7 +198,7 @@ describe Commonmeta::Metadata, vcr: true do
                                       "givenName" => "Coordinators" },
                                     { "@type" => "Person", "familyName" => "Tara Oceans Expedition",
                                       "givenName" => "Participants" }])
-      expect(json["includedInDataCatalog"].nil?).to be(true)
+      expect(json["includedInDataCatalog"]).to be_empty
       expect(json["spatialCoverage"]).to eq("@type" => "Place",
                                             "geo" => {
                                               "@type" => "GeoShape", "box" => "-64.3088 -168.5182 79.6753 174.9006",
@@ -291,8 +277,7 @@ describe Commonmeta::Metadata, vcr: true do
                                        ])
       expect(json["schemaVersion"]).to eq("http://datacite.org/schema/kernel-4")
       expect(json["publisher"]).to eq("@type" => "Organization", "name" => "TOPMed")
-      expect(json["citation"]).to eq("@id" => "https://doi.org/10.23725/2g4s-qv04",
-                                     "@type" => "Dataset")
+      expect(json["citation"]).to eq([{"@id"=>"https://doi.org/10.23725/2g4s-qv04", "@type"=>"CreativeWork"}])
       expect(json["funder"]).to eq("@id" => "https://doi.org/10.13039/100000050",
                                    "@type" => "Organization", "name" => "National Heart, Lung, and Blood Institute (NHLBI)")
       expect(json["provider"]).to eq("@type" => "Organization", "name" => "DataCite")

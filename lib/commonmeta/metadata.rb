@@ -10,7 +10,7 @@ module Commonmeta
                   :email, :registrant
     attr_reader :doc, :page_start, :page_end
     attr_writer :id, :provider_id, :client_id, :doi, :alternate_identifiers, :creators, :contributors,
-                :titles, :publisher, :license, :date, :volume, :url, :version, :subjects, :contributor, :descriptions, :language, :sizes, :formats, :schema_version, :meta, :container, :provider, :format, :funding_references, :state, :geo_locations, :type, :content_url, :references, :related_identifiers, :related_items, :style, :locale
+                :titles, :publisher, :license, :date, :volume, :url, :version, :subjects, :contributor, :descriptions, :language, :sizes, :formats, :schema_version, :meta, :container, :provider, :format, :funding_references, :state, :geo_locations, :type, :additional_type, :content_url, :references, :related_identifiers, :related_items, :style, :locale
 
     def initialize(options = {})
       options.symbolize_keys!
@@ -106,6 +106,7 @@ module Commonmeta
         :contributors,
         :titles,
         :type,
+        :additional_type,
         :container,
         :publisher,
         :funding_references,
@@ -247,6 +248,10 @@ module Commonmeta
 
     def type
       @type ||= meta.fetch("type", nil)
+    end
+
+    def additional_type
+      @additional_type ||= meta.fetch("additional_type", nil)
     end
 
     def titles

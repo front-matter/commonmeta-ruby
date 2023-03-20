@@ -102,7 +102,7 @@ module Commonmeta
 
         schema_org = meta.fetch("@type", nil) && meta.fetch("@type").camelcase
         type = Commonmeta::Utils::SO_TO_CM_TRANSLATIONS[schema_org]
-
+        additional_type = meta.fetch("additionalType", nil)
         authors = meta.fetch("author", nil) || meta.fetch("creator", nil)
         # Authors should be an object, if it's just a plain string don't try and parse it.
         unless authors.is_a?(String)
@@ -218,6 +218,7 @@ module Commonmeta
 
         { "id" => id,
           "type" => type,
+          "additional_type" => additional_type,
           "alternate_identifiers" => alternate_identifiers.presence,
           "url" => normalize_id(meta.fetch("url", nil)),
           "content_url" => Array.wrap(meta.fetch("contentUrl", nil)),

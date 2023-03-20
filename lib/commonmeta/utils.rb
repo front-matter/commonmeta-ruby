@@ -711,10 +711,16 @@ module Commonmeta
     def to_schema_org_container(element, options = {})
       return nil unless element.is_a?(Hash) || (element.nil? && options[:container_title].present?)
 
+      issn = element["identifier"] if element["identifierType"] == "ISSN"
+      id = issn.blank? ? element["identifier"] : nil
+      name = options[:container_title] || element["title"]
+      type = id || name ? options[:type] || element["type"] : nil
+
       {
-        "@id" => element["identifier"],
-        "@type" => options[:type] == "Dataset" ? "DataCatalog" : "Periodical",
-        "name" => element["title"] || options[:container_title],
+        "@id" => id,
+        "@type" => type,
+        "name" => name,
+        "issn" => issn,
       }.compact
     end
 
@@ -722,8 +728,8 @@ module Commonmeta
       Array.wrap(element).map do |ai|
         {
           "@type" => "PropertyValue",
-          "propertyID" => ai["identifierType"],
-          "value" => ai["identifier"],
+          "propertyID" => ai["alternateIdentifierType"],
+          "value" => ai["alternateIdentifier"],
         }
       end.unwrap
     end
@@ -762,6 +768,17 @@ module Commonmeta
           "name" => fr["funderName"],
         }.compact
       end.unwrap
+    end
+
+    def to_schema_org_citation(reference)
+      return nil unless reference.present?
+
+      {
+        "@type" => "CreativeWork",
+        "@id" => reference["doi"] ? normalize_id(reference["doi"]) : nil,
+        "name" => reference["title"],
+        "datePublished" => reference["publicationYear"],
+      }.compact
     end
 
     def to_schema_org_spatial_coverage(geo_location)
