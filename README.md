@@ -4,9 +4,9 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=front-matter_commonmeta-ruby&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=front-matter_commonmeta-ruby)
 ![GitHub](https://img.shields.io/github/license/front-matter/commonmeta-ruby?logo=MIT)
 
-# commonmeta-ruby: a Ruby library for conversion of scholarly metadata
+# commonmeta-ruby
 
-Ruby gem and command-line utility for conversion of DOI metadata from and to different metadata formats, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) gem, but using [commonmeta](https://commonmeta.org) as the intermediate format, and supporting additional metadata formats.
+Ruby gem and command-line utility for the conversion of scholarly metadata, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) gem, but using [commonmeta](https://commonmeta.org) as the intermediate format, and supporting additional metadata formats. A Python version is available at [commonmeta-py](https://github.com/front-matter/commonmeta-py).
 
 ## Supported Metadata Formats
 
