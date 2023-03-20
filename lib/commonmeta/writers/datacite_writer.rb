@@ -4,12 +4,13 @@ module Commonmeta
   module Writers
     module DataciteWriter
       def datacite
-        types = { "resourceTypeGeneral" => Commonmeta::Utils::CM_TO_DC_TRANSLATIONS.fetch(type, "Other"),
-                  "resourceType" => type,
+        resource_type_general = Commonmeta::Utils::CM_TO_DC_TRANSLATIONS.fetch(type, "Other")
+        types = { "resourceTypeGeneral" => resource_type_general,
+                  "resourceType" => type != resource_type_general ? type : nil,
                   "bibtex" => Commonmeta::Utils::CM_TO_BIB_TRANSLATIONS.fetch(type, "misc"),
                   "citeproc" => Commonmeta::Utils::CM_TO_CSL_TRANSLATIONS.fetch(type, "article"),
                   "ris" => Commonmeta::Utils::CM_TO_RIS_TRANSLATIONS.fetch(type, "GEN"),
-                  "schemaOrg" => Commonmeta::Utils::CM_TO_SO_TRANSLATIONS.fetch(type, "CreativeWork") }
+                  "schemaOrg" => Commonmeta::Utils::CM_TO_SO_TRANSLATIONS.fetch(type, "CreativeWork") }.compact
 
         dates = get_dates_from_date(date)
         rights_list = spdx_to_hsh(license)

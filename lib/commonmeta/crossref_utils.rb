@@ -35,7 +35,7 @@ module Commonmeta
     end
 
     def insert_crossref_work(xml)
-      return xml if doi.blank?
+      return xml if doi_from_url(id).blank?
 
       case type
       when "JournalArticle"
@@ -132,8 +132,14 @@ module Commonmeta
     def insert_citation_list(xml)
       xml.citation_list do
         references.each do |ref|
-          xml.citation do
-            xml.doi(ref["relatedIdentifier"])
+          xml.citation('key' => ref['key']) do
+            xml.journal_article(ref['journal_title'])
+            xml.author(ref['author'])
+            xml.volume(ref['volume'])
+            xml.first_page(ref['first_page'])
+            xml.cYear(ref['cYear'])
+            xml.article_title(ref['article_title'])
+            xml.doi(ref['doi']) if ref['doi'].present?
           end
         end
       end
@@ -230,26 +236,25 @@ module Commonmeta
 
     def insert_crossref_publication_date(xml)
       return xml if date["registered"].blank?
-
-      date = get_datetime_from_iso8601(date["registered"])
+      
+      date_ = get_datetime_from_iso8601(date["registered"])
 
       xml.publication_date("media_type" => "online") do
-        xml.month(date.month) if date.month.present?
-        xml.day(date.day) if date.day.present?
-        xml.year(date.year) if date.year.present?
+        xml.month(date_.month) if date_.month.present?
+        xml.day(date_.day) if date_.day.present?
+        xml.year(date_.year) if date_.year.present?
       end
     end
 
     def insert_posted_date(xml)
-      date_posted = date["published"]
-      return xml if date_posted.blank?
+      return xml if date["published"].blank?
 
-      date = get_datetime_from_iso8601(date_posted)
+      date_ = get_datetime_from_iso8601(date["published"])
 
       xml.posted_date do
-        xml.month(date.month) if date.month.present?
-        xml.day(date.day) if date.day.present?
-        xml.year(date.year) if date.year.present?
+        xml.month(date_.month) if date_.month.present?
+        xml.day(date_.day) if date_.day.present?
+        xml.year(date_.year) if date_.year.present?
       end
     end
 
@@ -275,10 +280,10 @@ module Commonmeta
       end
     end
 
-    def insert_crossref_rights_list(xml)
-      return xml unless rights_list.present?
+    def insert_crossref_license(xml)
+      return xml unless license.present?
 
-      xml.rightsList do
+      xml.license do
         rights = license
         if rights.is_a?(Hash)
           r = rights

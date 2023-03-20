@@ -25,7 +25,9 @@ module Commonmeta
                     parse_attributes(author.fetch("family", nil))
 
       # parse author identifier
-      id = author.fetch("id", nil)
+      id = parse_attributes(author.fetch("id", nil), first: true) ||
+           parse_attributes(author.fetch("identifier", nil), first: true) ||
+           parse_attributes(author.fetch("sameAs", nil), first: true)
 
       # DataCite metadata
       if id.nil? && author["nameIdentifiers"].present?

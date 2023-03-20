@@ -22,7 +22,9 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://blog.front-matter.io/posts/eating-your-own-dog-food")
       expect(subject.type).to eq("Article")
       expect(subject.creators).to eq([{ "familyName" => "Fenner",
-                                        "givenName" => "Martin", "type" => "Person" }])
+                                        "givenName" => "Martin",
+                                        "id" => "https://orcid.org/0000-0003-1419-2405",
+                                        "type" => "Person" }])
       expect(subject.titles).to eq([{ "title" => "Eating your own Dog Food" }])
       expect(subject.descriptions.first["description"]).to start_with("Eating your own dog food")
       expect(subject.subjects).to eq([{ "subject" => "feature" }])
@@ -73,7 +75,9 @@ describe Commonmeta::Metadata, vcr: true do
         expect(subject.id).to eq("https://doi.org/10.53731/r9531p1-97aq74v-ag78v")
         expect(subject.url).to eq("https://blog.front-matter.io/posts/step-forward-for-software-citation")
         expect(subject.type).to eq("Article")
-        expect(subject.creators).to eq([{ "familyName" => "Fenner", "givenName" => "Martin",
+        expect(subject.creators).to eq([{ "familyName" => "Fenner",
+                                          "givenName" => "Martin",
+                                          "id" => "https://orcid.org/0000-0003-1419-2405",
                                           "type" => "Person" }])
         expect(subject.titles).to eq([{ "title" => "A step forward for software citation: GitHub&#x27;s enhanced software citation support" }])
         expect(subject.descriptions.first["description"]).to start_with("On August 19, GitHub announced software citation")
@@ -173,9 +177,9 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.subjects).to eq([{ "subject" => "interviews" }])
       expect(subject.publisher).to eq("name" => "Upstream")
       expect(subject.date).to eq("published" => "2022-11-15T10:29:38Z",
-           "updated" => "2023-01-11T22:58:48Z")
+                                 "updated" => "2023-01-11T22:58:48Z")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
-           "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
     end
 
     # TODO: check 403 status in DOI resolver
@@ -221,7 +225,7 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input)
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.25491/d50j-3083")
-      expect(subject.alternate_identifiers).to eq([{"alternate_identifier"=>"687610993", "alternate_identifier_type"=>"md5"}])
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "687610993", "alternateIdentifierType" => "md5" }])
       expect(subject.url).to eq("https://ors.datacite.org/doi:/10.25491/d50j-3083")
       expect(subject.content_url).to eq(["https://storage.googleapis.com/gtex_analysis_v7/single_tissue_eqtl_data/GTEx_Analysis_v7_eQTL_expression_matrices.tar.gz"])
       expect(subject.type).to eq("Dataset")
@@ -243,12 +247,12 @@ describe Commonmeta::Metadata, vcr: true do
       input = "#{fixture_path}schema_org_topmed.json"
       subject = described_class.new(input: input)
       # expect(subject.valid?).to be true
-      expect(subject.alternate_identifiers).to eq([{ "alternate_identifier" => "3b33f6b9338fccab0901b7d317577ea3",
-                                                     "alternate_identifier_type" => "md5" },
-                                                   { "alternate_identifier" => "ark:/99999/fk41CrU4eszeLUDe",
-                                                     "alternate_identifier_type" => "minid" },
-                                                   { "alternate_identifier" => "dg.4503/c3d66dc9-58da-411c-83c4-dd656aa3c4b7",
-                                                     "alternate_identifier_type" => "dataguid" }])
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "3b33f6b9338fccab0901b7d317577ea3",
+                                                     "alternateIdentifierType" => "md5" },
+                                                   { "alternateIdentifier" => "ark:/99999/fk41CrU4eszeLUDe",
+                                                     "alternateIdentifierType" => "minid" },
+                                                   { "alternateIdentifier" => "dg.4503/c3d66dc9-58da-411c-83c4-dd656aa3c4b7",
+                                                     "alternateIdentifierType" => "dataguid" }])
       expect(subject.url).to eq("https://ors.datacite.org/doi:/10.23725/8na3-9s47")
       expect(subject.content_url).to eq([
                                           "s3://cgp-commons-public/topmed_open_access/197bc047-e917-55ed-852d-d563cdbc50e4/NWD165827.recab.cram", "gs://topmed-irc-share/public/NWD165827.recab.cram",
@@ -325,12 +329,12 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input)
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.23725/7jg3-v803")
-      expect(subject.alternate_identifiers).to eq([{ "alternate_identifier" => "ark:/99999/fk4E1n6n1YHKxPk",
-                                                     "alternate_identifier_type" => "minid" },
-                                                   { "alternate_identifier" => "dg.4503/01b048d0-e128-4cb0-94e9-b2d2cab7563d",
-                                                     "alternate_identifier_type" => "dataguid" },
-                                                   { "alternate_identifier" => "f9e72bdf25bf4b4f0e581d9218fec2eb",
-                                                     "alternate_identifier_type" => "md5" }])
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "ark:/99999/fk4E1n6n1YHKxPk",
+                                                     "alternateIdentifierType" => "minid" },
+                                                   { "alternateIdentifier" => "dg.4503/01b048d0-e128-4cb0-94e9-b2d2cab7563d",
+                                                     "alternateIdentifierType" => "dataguid" },
+                                                   { "alternateIdentifier" => "f9e72bdf25bf4b4f0e581d9218fec2eb",
+                                                     "alternateIdentifierType" => "md5" }])
       expect(subject.url).to eq("https://ors.datacite.org/doi:/10.23725/7jg3-v803")
       expect(subject.content_url).to eq([
                                           "s3://cgp-commons-public/topmed_open_access/44a8837b-4456-5709-b56b-54e23000f13a/NWD100953.recab.cram", "gs://topmed-irc-share/public/NWD100953.recab.cram", "dos://dos.commons.ucsc-cgp.org/01b048d0-e128-4cb0-94e9-b2d2cab7563d?version=2018-05-26T133719.491772Z",

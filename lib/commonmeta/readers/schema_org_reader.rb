@@ -89,9 +89,9 @@ module Commonmeta
         alternate_identifiers = Array.wrap(meta.fetch("identifier", nil)).map do |r|
           r = normalize_id(r) if r.is_a?(String)
           if r.is_a?(String) && URI(r).host != "doi.org"
-            { "alternate_identifier_type" => "URL", "alternate_identifier" => r }
+            { "alternateIdentifierType" => "URL", "alternateIdentifier" => r }
           elsif r.is_a?(Hash) && r["propertyID"] != "doi"
-            { "alternate_identifier_type" => get_identifier_type(r["propertyID"]), "alternate_identifier" => r["value"] }
+            { "alternateIdentifierType" => get_identifier_type(r["propertyID"]), "alternateIdentifier" => r["value"] }
           end
         end.compact.uniq
 

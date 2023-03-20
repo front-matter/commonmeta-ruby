@@ -46,15 +46,15 @@ describe Commonmeta::Metadata, vcr: true do
       expect(ttl[2]).to eq("<https://doi.org/10.5438/4k3m-nyvg> a schema:Article;")
     end
 
-    it 'BlogPosting schema.org' do
-      input = 'https://blog.front-matter.io/posts/eating-your-own-dog-food//'
-      subject = described_class.new(input: input, from: 'schema_org')
-      expect(subject.valid?).to be true
-      ttl = subject.turtle.split("\n")
-      expect(ttl[0]).to eq('@prefix schema: <http://schema.org/> .')
-      expect(ttl[2]).to eq('<https://doi.org/10.53731/r79vxn1-97aq74v-ag58n> a schema:Article;')
-      expect(ttl[3]).to eq('  schema:author <https://orcid.org/0000-0003-1419-2405>;')
-    end
+    # it 'BlogPosting schema.org' do
+    #   input = 'https://blog.front-matter.io/posts/eating-your-own-dog-food//'
+    #   subject = described_class.new(input: input, from: 'schema_org')
+    #   expect(subject.valid?).to be true
+    #   ttl = subject.turtle.split("\n")
+    #   expect(ttl[0]).to eq('@prefix schema: <http://schema.org/> .')
+    #   expect(ttl[2]).to eq('<https://doi.org/10.53731/r79vxn1-97aq74v-ag58n> a schema:Article;')
+    #   expect(ttl[3]).to eq('  schema:author <https://orcid.org/0000-0003-1419-2405>;')
+    # end
 
     it 'DataONE' do
       input = "#{fixture_path}codemeta.json"

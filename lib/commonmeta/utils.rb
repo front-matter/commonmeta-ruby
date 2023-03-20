@@ -250,6 +250,7 @@ module Commonmeta
       "BookChapter" => "BookChapter",
       "Collection" => "Collection",
       "Dataset" => "Dataset",
+      "Dissertation" => "Dissertation",
       "Document" => "Text",
       "Entry" => "Text",
       "Event" => "Event",
