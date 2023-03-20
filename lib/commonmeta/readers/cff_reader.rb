@@ -32,7 +32,7 @@ module Commonmeta
         id = normalize_id(options[:doi] || meta.fetch('doi',
                                                       nil) || Array.wrap(meta.fetch('identifiers', nil)).find do |i|
                                                                 i['type'] == 'doi'
-                                                              end.fetch('value', nil))
+                                                              end.to_h.fetch('value', nil))
         url = normalize_id(meta.fetch('repository-code', nil))
         creators = cff_creators(Array.wrap(meta.fetch('authors', nil)))
 
