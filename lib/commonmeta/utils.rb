@@ -1053,7 +1053,7 @@ module Commonmeta
     end
 
     # parsing of incomplete iso8601 timestamps such as 2015-04 is broken
-    # in standard library, so we use edtf gem
+    # in standard library, so we use the edtf gem
     # return nil if invalid iso8601 timestamp
     def get_datetime_from_iso8601(iso8601_time)
       Date.edtf(iso8601_time).to_time.utc
