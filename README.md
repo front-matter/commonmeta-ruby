@@ -84,128 +84,23 @@ All input is validated against the commonmeta JSON schema.
 
 ## Examples
 
-Read Crossref:
+Read Crossref XML and write as BibTeX:
 
 ```
-commonmeta https://doi.org/10.7554/elife.01567 -t crossref
+commonmeta https://doi.org/10.7554/elife.01567 -f crossref_xml -t bibtex
 
-<?xml version="1.0" encoding="UTF-8"?>
-<doi_records>
-  <doi_record owner="10.7554" timestamp="2015-08-11 07:35:02">
-    <crossref>
-      <journal>
-        <journal_metadata language="en">
-          <full_title>eLife</full_title>
-          <issn media_type="electronic">2050-084X</issn>
-        </journal_metadata>
-        <journal_issue>
-          <publication_date media_type="online">
-            <month>02</month>
-            <day>11</day>
-            <year>2014</year>
-          </publication_date>
-          <journal_volume>
-            <volume>3</volume>
-          </journal_volume>
-        </journal_issue>
-        <journal_article publication_type="full_text">
-          <titles>
-            <title>Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth</title>
-          </titles>
-          <contributors>
-            <person_name contributor_role="author" sequence="first">
-              <given_name>Martial</given_name>
-              <surname>Sankar</surname>
-            </person_name>
-            <person_name contributor_role="author" sequence="additional">
-              <given_name>Kaisa</given_name>
-              <surname>Nieminen</surname>
-            </person_name>
-            <person_name contributor_role="author" sequence="additional">
-              <given_name>Laura</given_name>
-              <surname>Ragni</surname>
-            </person_name>
-            <person_name contributor_role="author" sequence="additional">
-              <given_name>Ioannis</given_name>
-              <surname>Xenarios</surname>
-            </person_name>
-            <person_name contributor_role="author" sequence="additional">
-              <given_name>Christian S</given_name>
-              <surname>Hardtke</surname>
-            </person_name>
-          </contributors>
-          <publication_date media_type="online">
-            <month>02</month>
-            <day>11</day>
-            <year>2014</year>
-          </publication_date>
-          <publisher_item>
-            <identifier id_type="doi">10.7554/eLife.01567</identifier>
-          </publisher_item>
-          <crossmark>
-            <crossmark_version>1</crossmark_version>
-            <crossmark_policy>eLifesciences</crossmark_policy>
-            <crossmark_domains>
-              <crossmark_domain>
-                <domain>www.elifesciences.org</domain>
-              </crossmark_domain>
-            </crossmark_domains>
-            <crossmark_domain_exclusive>false</crossmark_domain_exclusive>
-            <custom_metadata>
-              <assertion name="received" label="Received" group_name="publication_history" group_label="Publication History" order="0">2013-09-20</assertion>
-              <assertion name="accepted" label="Accepted" group_name="publication_history" group_label="Publication History" order="1">2013-12-24</assertion>
-              <assertion name="published" label="Published" group_name="publication_history" group_label="Publication History" order="2">2014-02-11</assertion>
-              <program name="fundref">
-                <assertion name="fundgroup">
-                  <assertion name="funder_name">SystemsX</assertion>
-                </assertion>
-                <assertion name="fundgroup">
-                  <assertion name="funder_name">
-                    EMBO
-                    <assertion name="funder_identifier">http://dx.doi.org/10.13039/501100003043</assertion>
-                  </assertion>
-                </assertion>
-                <assertion name="fundgroup">
-                  <assertion name="funder_name">
-                    Swiss National Science Foundation
-                    <assertion name="funder_identifier">http://dx.doi.org/10.13039/501100001711</assertion>
-                  </assertion>
-                </assertion>
-                <assertion name="fundgroup">
-                  <assertion name="funder_name">
-                    University of Lausanne
-                    <assertion name="funder_identifier" provider="crossref">http://dx.doi.org/10.13039/501100006390</assertion>
-                  </assertion>
-                </assertion>
-              </program>
-              <program name="AccessIndicators">
-                <license_ref applies_to="vor">http://creativecommons.org/licenses/by/3.0/</license_ref>
-                <license_ref applies_to="am">http://creativecommons.org/licenses/by/3.0/</license_ref>
-                <license_ref applies_to="tdm">http://creativecommons.org/licenses/by/3.0/</license_ref>
-              </program>
-            </custom_metadata>
-          </crossmark>
-          <doi_data>
-            <doi>10.7554/eLife.01567</doi>
-            <resource>http://elifesciences.org/lookup/doi/10.7554/eLife.01567</resource>
-          </doi_data>
-          <citation_list>
-            ...
-            <citation key="22">
-              <author>Sankar</author>
-              <cYear>2014</cYear>
-              <doi>10.5061/dryad.b835k</doi>
-            </citation>
-            ...
-          </citation_list>
-          <component_list>
-           ...
-          </component_list>
-        </journal_article>
-      </journal>
-    </crossref>
-  </doi_record>
-</doi_records>
+@article{https://doi.org/10.7554/elife.01567,
+  doi = {10.7554/elife.01567},
+  url = {https://elifesciences.org/articles/01567},
+  author = {Sankar, Martial and Nieminen, Kaisa and Ragni, Laura and Xenarios, Ioannis and Hardtke, Christian S},
+  title = {Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth},
+  journal = {eLife},
+  volume = {3},
+  pages = {e01567},
+  publisher = {eLife Sciences Publications, Ltd},
+  year = {2014},
+  copyright = {CC-BY-3.0}
+}
 ```
 
 Convert Crossref to schema.org/JSON-LD:

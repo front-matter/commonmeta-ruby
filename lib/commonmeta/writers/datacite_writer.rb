@@ -72,22 +72,15 @@ module Commonmeta
       def datacite_reference(reference)
         return nil unless reference.present? || !reference.is_a?(Hash)
 
-        key = reference['relatedIdentifier']
-        doi = nil
-        url = nil
+        related_identifier = reference['doi'] || reference['url']
 
-        if key.present?
-          if key.start_with?('http')
-            url = key
-          else
-            doi = key
-          end
-        end
+        return nil unless related_identifier.present?
 
-        { 'relatedIdentifier' => doi,
-          'relatedIdentifierType' => 'DOI',
-          'relationType' => 'References',
-          'relatedMetadataScheme' => 'citeproc+json' }.compact
+        related_identifier_type = reference['doi'] ? 'DOI' : 'URL'
+
+        { 'relatedIdentifier' => related_identifier,
+          'relatedIdentifierType' => related_identifier_type,
+          'relationType' => 'References' }.compact
       end
     end
   end

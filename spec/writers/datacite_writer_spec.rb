@@ -13,6 +13,7 @@ describe Commonmeta::Metadata, vcr: true do
                                             'resourceTypeGeneral' => 'JournalArticle', 'ris' => 'JOUR', 'schemaOrg' => 'ScholarlyArticle')
       expect(datacite.fetch('titles')).to eq([{ 'title' => 'Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth' }])
       expect(datacite.fetch('relatedIdentifiers').length).to eq(27)
+      expect(datacite.fetch('relatedIdentifiers').first).to eq("relatedIdentifier"=>"https://doi.org/10.1038/nature02100", "relatedIdentifierType"=>"DOI", "relationType"=>"References")
       expect(datacite.fetch('rightsList')).to eq([{ 'rights' => 'Creative Commons Attribution 3.0 Unported',
                                                     'rightsIdentifier' => 'cc-by-3.0',
                                                     'rightsIdentifierScheme' => 'SPDX',
