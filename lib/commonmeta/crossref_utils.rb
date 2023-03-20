@@ -27,7 +27,9 @@ module Commonmeta
 
     def crossref_errors(xml: nil)
       filepath = File.expand_path('../../resources/crossref/crossref5.3.1.xsd', __dir__)
-      schema = Nokogiri::XML::Schema(open(filepath))
+      File.open(filepath, 'r') do |f|
+        schema = Nokogiri::XML::Schema(f)
+      end
 
       schema.validate(Nokogiri::XML(xml, nil, 'UTF-8')).map(&:to_s).unwrap
     rescue Nokogiri::XML::SyntaxError => e
