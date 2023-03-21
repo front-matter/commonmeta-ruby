@@ -157,9 +157,9 @@ module Commonmeta
     end
 
     # Catch errors in the reader
-    # Then validate against JSON schema for DataCite v4
+    # Then validate against JSON schema for Commonmeta
     def errors
-      meta.fetch('errors', nil) || json_schema_errors(schema_version: schema_version)
+      meta.fetch('errors', nil) || json_schema_errors
     end
 
     def descriptions

@@ -34,7 +34,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'loofah', '~> 2.19'
   s.add_dependency 'namae', '~> 1.0'
   s.add_dependency 'postrank-uri', '~> 1.1'
-  s.add_dependency 'public_suffix', '~> 4.0', '>= 4.0.7'
   s.add_dependency 'rdf-rdfxml', '~> 3.2'
   s.add_dependency 'rdf-turtle', '~> 3.2'
   s.add_dependency 'thor', '~> 1.1', '>= 1.1.0'

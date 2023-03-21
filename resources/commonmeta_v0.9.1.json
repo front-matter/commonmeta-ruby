@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://commonmeta.org/commonmeta_v0.9.json",
-  "title": "Commonmeta v0.9",
+  "title": "Commonmeta v0.9.1",
   "description": "JSON representation of the Commonmeta schema.",
   "additionalProperties": false,
   "definitions": {
@@ -17,11 +17,21 @@
       },
       "uniqueItems": true
     },
+    "latitude": {
+      "type": "number",
+      "minimum": -90,
+      "maximum": 90
+    },
+    "longitude": {
+      "type": "number",
+      "minimum": -180,
+      "maximum": 180
+    },
     "geoLocationPoint": {
       "type": "object",
       "properties": {
-        "pointLongitude": { "type": "string", "format": "longitude" },
-        "pointLatitude": { "type": "string", "format": "latitude" }
+        "pointLongitude": { "$ref": "#/definitions/longitude" },
+        "pointLatitude": { "$ref": "#/definitions/latitude" }
       },
       "required": ["pointLongitude", "pointLatitude"]
     }
@@ -318,10 +328,10 @@
           "geoLocationBox": {
             "type": "object",
             "properties": {
-              "westBoundLongitude": { "type": "string", "format": "longitude" },
-              "eastBoundLongitude": { "type": "string", "format": "longitude" },
-              "southBoundLatitude": { "type": "string", "format": "latitude" },
-              "northBoundLatitude": { "type": "string", "format": "latitude" }
+              "westBoundLongitude": { "$ref": "#/definitions/longitude" },
+              "eastBoundLongitude": { "$ref": "#/definitions/longitude" },
+              "southBoundLatitude": { "$ref": "#/definitions/latitude" },
+              "northBoundLatitude": { "$ref": "#/definitions/latitude" }
             },
             "required": [
               "westBoundLongitude",
