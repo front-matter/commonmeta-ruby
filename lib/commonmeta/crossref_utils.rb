@@ -2,9 +2,8 @@
 
 module Commonmeta
   module CrossrefUtils
-    # To configure the writing of Crossref metadata, use environmental
-    # variables CROSSREF_DEPOSITOR_NAME, CROSSREF_DEPOSITOR_EMAIL and CROSSREF_REGISTRANT,
-    # e.g. in a .env file
+    # To configure the writing of Crossref metadata, provide the following variables
+    # depositor, email, and registrant
     def write_crossref_xml
       @crossref_xml ||= Nokogiri::XML::Builder.new(encoding: 'UTF-8') do |xml|
         xml.doi_batch(crossref_root_attributes) do
@@ -13,10 +12,10 @@ module Commonmeta
             xml.doi_batch_id(SecureRandom.uuid)
             xml.timestamp(Time.now.utc.strftime('%Y%m%d%H%M%S'))
             xml.depositor do
-              xml.depositor_name(ENV.fetch('CROSSREF_DEPOSITOR_NAME', nil))
-              xml.email_address(ENV.fetch('CROSSREF_DEPOSITOR_EMAIL', nil))
+              xml.depositor_name(depositor)
+              xml.email_address(email)
             end
-            xml.registrant(ENV.fetch('CROSSREF_REGISTRANT', nil))
+            xml.registrant(registrant)
           end
           xml.body do
             insert_crossref_work(xml)

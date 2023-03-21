@@ -612,7 +612,6 @@ describe Commonmeta::Metadata, vcr: true do
     it 'encode doi' do
       prefix = '10.53731'
       response = subject.encode_doi(prefix)
-      puts response
       expect(response).to match(%r{#{prefix}/[a-z0-9]+})
       expect(response.length).to eq(36)
     end

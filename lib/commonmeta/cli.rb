@@ -41,6 +41,7 @@ module Commonmeta
                               style: options[:style],
                               locale: options[:locale],
                               show_errors: options[:show_errors],
+                              doi: options[:doi],
                               depositor: options[:depositor],
                               email: options[:email],
                               registrant: options[:registrant])
