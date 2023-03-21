@@ -30,6 +30,7 @@ module Commonmeta
     method_option :style, aliases: '-s', default: 'apa'
     method_option :locale, aliases: '-l', default: 'en-US'
     method_option :show_errors, type: :boolean, force: false
+    method_option :doi
     method_option :depositor
     method_option :email
     method_option :registrant
