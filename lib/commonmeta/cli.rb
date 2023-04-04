@@ -61,10 +61,22 @@ module Commonmeta
       puts encode_doi(prefix)
     end
 
+    desc '', 'encode_id'
+
+    def encode_id
+      puts encode_id
+    end
+
     desc '', 'decode'
 
     def decode(doi)
       puts decode_doi(doi)
+    end
+
+    desc '', 'decode_id'
+
+    def decode_id(id)
+      puts decode_id(id)
     end
 
     default_task :convert

@@ -622,10 +622,30 @@ describe Commonmeta::Metadata, vcr: true do
       expect(response).to eq(30_286_005_717_401_267_192_153_432_991)
     end
 
-    it 'decode anothe doi' do
+    it 'decode another doi' do
       doi = 'https://doi.org/10.53731/rckvde5-tzg61kj-7zvc1'
       response = subject.decode_doi(doi)
       expect(response).to eq(30_198_793_950_250_854_133_601_922_433)
+    end
+  end
+
+  context 'random id' do
+    it 'encode id' do
+      response = subject.encode_id
+      expect(response).to match(%r{[a-z0-9]+})
+      expect(response.length).to eq(7)
+    end
+
+    it 'decode id' do
+      id= '4425y27'
+      response = subject.decode_id(id)
+      expect(response).to eq(4_431_476_807)
+    end
+
+    it 'decode another id' do
+      id = 'gr1by89'
+      response = subject.decode_id(id)
+      expect(response).to eq(17_986_615_561)
     end
   end
 end
