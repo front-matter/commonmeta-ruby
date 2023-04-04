@@ -1351,14 +1351,14 @@ module Commonmeta
       Base32::URL.decode(suffix)
     end
 
-    def encode_id
+    def encode_container_id
       # suffix has 5 digits plus two checksum digits. With base32 there are
       # 32 possible digits, so 5 digits gives 32^5 possible combinations
       random_int = SecureRandom.random_number(32 ** 4..(32 ** 5) - 1)
       Base32::URL.encode(random_int, checksum: true)
     end
 
-    def decode_id(id)
+    def decode_container_id(id)
       Base32::URL.decode(id)
     end
   end

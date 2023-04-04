@@ -631,20 +631,20 @@ describe Commonmeta::Metadata, vcr: true do
 
   context 'random id' do
     it 'encode id' do
-      response = subject.encode_id
+      response = subject.encode_container_id
       expect(response).to match(%r{[a-z0-9]+})
       expect(response.length).to eq(7)
     end
 
     it 'decode id' do
       id= '4425y27'
-      response = subject.decode_id(id)
+      response = subject.decode_container_id(id)
       expect(response).to eq(4_431_476_807)
     end
 
     it 'decode another id' do
       id = 'gr1by89'
-      response = subject.decode_id(id)
+      response = subject.decode_container_id(id)
       expect(response).to eq(17_986_615_561)
     end
   end

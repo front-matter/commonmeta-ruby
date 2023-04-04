@@ -64,7 +64,7 @@ module Commonmeta
     desc '', 'encode_id'
 
     def encode_id
-      puts encode_id
+      puts encode_container_id
     end
 
     desc '', 'decode'
@@ -76,7 +76,7 @@ module Commonmeta
     desc '', 'decode_id'
 
     def decode_id(id)
-      puts decode_id(id)
+      puts decode_container_id(id)
     end
 
     default_task :convert

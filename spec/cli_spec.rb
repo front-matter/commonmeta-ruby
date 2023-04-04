@@ -306,4 +306,18 @@ describe Commonmeta::CLI do
       expect { subject.decode input }.to output(/464528469187255429864\n/).to_stdout
     end
   end
+
+  describe "encode_id" do
+    it "random" do
+      expect { subject.encode_id }.to output(/[a-z0-9]+/).to_stdout
+    end
+  end
+
+  describe "decode_id" do
+    let(:input) { "h49ct36" }
+
+    it "blog post" do
+      expect { subject.decode_id input }.to output(/18397685862\n/).to_stdout
+    end
+  end
 end
