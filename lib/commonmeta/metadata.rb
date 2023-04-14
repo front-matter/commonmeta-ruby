@@ -45,9 +45,6 @@ module Commonmeta
             'state' => options[:state],
             'provider_id' => options[:provider_id],
             'client_id' => options[:client_id],
-            'depositor' => options[:depositor],
-            'email' => options[:email],
-            'registrant' => options[:registrant],
             'content_url' => options[:content_url]
           }
           string = File.read(options[:input])
@@ -62,9 +59,6 @@ module Commonmeta
           'state' => options[:state],
           'provider_id' => options[:provider_id],
           'client_id' => options[:client_id],
-          'depositor' => options[:depositor],
-          'email' => options[:email],
-          'registrant' => options[:registrant],
           'content_url' => options[:content_url],
           'creators' => options[:creators],
           'contributors' => options[:contributors],
@@ -94,11 +88,11 @@ module Commonmeta
       @client_id = hsh.to_h['client_id'].presence
       @content_url = hsh.to_h['content_url'].presence
 
-      # options that come from the submission, needed
+      # options that come from the cli, needed
       # for crossref doi registration
-      @depositor = hsh.to_h['depositor'].presence
-      @email = hsh.to_h['email'].presence
-      @registrant = hsh.to_h['registrant'].presence
+      @depositor = options[:depositor]
+      @email = options[:email]
+      @registrant = options[:registrant]
 
       # set attributes directly
       read_options = options.slice(

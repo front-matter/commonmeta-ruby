@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'dotenv/load'
 require 'active_support/all'
 require 'nokogiri'
 ActiveSupport::XmlMini.backend = 'Nokogiri'
