@@ -11,6 +11,7 @@ describe Commonmeta::CLI do
   describe "convert from id", vcr: true do
     SCHEMA_ORG_REGEX = /"@context": "http:\/\/schema.org"/
     CROSSREF_XML_REGEX = /<doi_batch/
+    DEPOSITOR_REGEX = /<depositor_name>test<\/depositor_name>/
     DATACITE_REGEX = /"types": {/
     BIBTEX_REGEX = /@article{https:\/\/doi.org\/10.7554\/elife.01567/
     BIBTEX_DATA_REGEX = /@misc{https:\/\/doi.org\/10.5061\/dryad.8515/
@@ -141,6 +142,12 @@ describe Commonmeta::CLI do
         expect { subject.convert id }.to output(DATACITE_REGEX).to_stdout
       end
 
+      it 'to crossref_xml' do
+        subject.options = { to: "crossref_xml", depositor: "test", email: "info@example.org", registrant: "test" }
+        expect { subject.convert id }.to output(CROSSREF_XML_REGEX).to_stdout
+        expect { subject.convert id }.to output(DEPOSITOR_REGEX).to_stdout
+      end
+
       # TODO
       # it 'to bibtex' do
       #   subject.options = { to: "bibtex" }
@@ -165,6 +172,12 @@ describe Commonmeta::CLI do
       it 'to datacite' do
         subject.options = { to: "datacite" }
         expect { subject.convert file }.to output(DATACITE_REGEX).to_stdout
+      end
+
+      it 'to crossref_xml' do
+        subject.options = { to: "crossref_xml", depositor: "test", email: "info@example.org", registrant: "test" }
+        expect { subject.convert file }.to output(CROSSREF_XML_REGEX).to_stdout
+        expect { subject.convert file }.to output(DEPOSITOR_REGEX).to_stdout
       end
     end
 
@@ -209,8 +222,9 @@ describe Commonmeta::CLI do
       end
 
       it 'to crossref_xml' do
-        subject.options = { to: "crossref_xml" }
+        subject.options = { to: "crossref_xml", depositor: "test", email: "info@example.org", registrant: "test" }
         expect { subject.convert file }.to output(CROSSREF_XML_REGEX).to_stdout
+        expect { subject.convert file }.to output(DEPOSITOR_REGEX).to_stdout
       end
 
       it 'to datacite' do
@@ -244,6 +258,12 @@ describe Commonmeta::CLI do
       it 'to bibtex' do
         subject.options = { to: "bibtex" }
         expect { subject.convert file }.to output(/@article{https:\/\/doi.org\/10.5438\/4k3m-nyvg/).to_stdout
+      end
+
+      it 'to crossref_xml' do
+        subject.options = { to: "crossref_xml", depositor: "test", email: "info@example.org", registrant: "test" }
+        expect { subject.convert file }.to output(CROSSREF_XML_REGEX).to_stdout
+        expect { subject.convert file }.to output(DEPOSITOR_REGEX).to_stdout
       end
 
       it 'to datacite invalid' do

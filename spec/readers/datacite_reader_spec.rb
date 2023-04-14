@@ -47,7 +47,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "#{fixture_path}datacite_software_missing_comma.json"
       subject = described_class.new(input: input, from: 'datacite', show_errors: true)
       # expect(subject.valid?).to be false
-      expect(subject.errors).to eq(['expected comma, not a string (after doi) at line 4, column 11 [parse.c:435]'])
+      expect(subject.errors).to eq(['expected comma, not a string (after doi) at line 4, column 11 [parse.c:416]'])
       expect(subject.codemeta.nil?).to be(true)
     end
 

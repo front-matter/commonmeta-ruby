@@ -27,7 +27,7 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it 'posted_content' do
-      subject = described_class.new(input: '10.1101/2020.12.01.406702')
+      subject = described_class.new(input: '10.1101/2020.12.01.406702', depositor: 'test', email: 'info@example.org', registrant: 'test')
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.1101/2020.12.01.406702')
       expect(subject.url).to eq('http://biorxiv.org/lookup/doi/10.1101/2020.12.01.406702')
