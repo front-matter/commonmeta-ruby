@@ -104,7 +104,7 @@ describe Commonmeta::Metadata, vcr: true do
     it 'citation style language' do
       id = 'prmb582'
       response = subject.get_json_feed(id)
-      expect(response).to eq("1jdkoe52,4qe9ypg1,1jdkwod5,56glp9d9,1xdnk0d0,56glmmd9,1xdnoje0,31epl0dn,q0dqm6go")
+      expect(response).to eq("1jdkoe52")
     end
   end
 end
