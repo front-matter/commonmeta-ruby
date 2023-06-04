@@ -1,0 +1,1034 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/blogs/f0m0e38
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '91392'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 04 Jun 2023 13:34:33 GMT
+      Etag:
+      - '"vm2lu05r3q1yh2"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/blogs/[slug]"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::4lpjf-1685885673258-c641c009bf16
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":"f0m0e38","title":"Front Matter","description":"\nThe Front Matter
+        Blog covers the intersection of science and technology since 2007.","language":"en","icon":null,"favicon":"https://blog.front-matter.io/favicon.png","feed_url":"https://blog.front-matter.io/atom/","feed_format":"application/atom+xml","home_page_url":"https://blog.front-matter.io/","indexed_at":"2023-01-02","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost","category":"Engineering
+        and Technology","items":[{"id":"https://doi.org/10.53731/nfa3v-h9q90","short_id":"1xdn0e03","url":"https://blog.front-matter.io/posts/dog-food-persistent-identifiers-and-metadata/","title":"Dog
+        food, persistent identifiers, and metadata","summary":"I am a big fan of dog
+        food, and I wrote about this topic already seven years ago:Eating your own
+        dog food is a slang term to describe that an organization should itself use
+        the products and services it...","date_published":"2023-04-17T17:08:26Z","date_modified":"2023-04-17T17:20:25Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1608408891486-f5cade977d19?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fGRvZyUyMGZvb2R8ZW58MHx8fHwxNjgxNzQyOTYy&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1608408891486-f5cade977d19?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fGRvZyUyMGZvb2R8ZW58MHx8fHwxNjgxNzQyOTYy&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>I
+        am a big fan of dog food, and I <a href=\"https://doi.org/10.53731/r79vxn1-97aq74v-ag58n\">wrote
+        about this topic</a> already seven years ago:</p><blockquote><a href=\"https://newrepublic.com/article/115349/dogfooding-tech-slang-working-out-glitches\">Eating
+        your own dog food</a> is a slang term to describe that an organization should
+        itself use the products and services it provides. </blockquote><p>One of the
+        major projects I am working on right now is the <a href=\"https://rogue-scholar.org\">Rogue
+        Scholar</a> science blog archive <a href=\"https://doi.org/10.53731/z9v2s-bh329\">that
+        launched</a> at the beginning of the month. As part of this work – but also
+        because I am very interested in this – I read a lot of science blogs. And
+        today I released an update of the Rogue Scholar that makes this easier.</p><h3
+        id=\"persistent-identifiers-for-science-blogs\">Persistent identifiers for
+        science blogs</h3><p>People who know me know that I care about persistent
+        identifiers for scholarly resources. I have worked for seven years for <a
+        href=\"https://datacite.org\">DataCite</a>, a DOI registration to register
+        datasets, software, and other non-textual resources. I was involved in the
+        launch of <a href=\"https://orcid.org\">ORCID</a> (identifiers for researchers)
+        in 2012 and <a href=\"https://ror.org\">ROR</a> (identifiers for research
+        organizations) in 2019. So it shouldn''t surprise anyone that I am officially
+        announcing the Rogue Scholar identifier for science blogs today. Each blog
+        that has registered with the Rogue Scholar is uniquely identified, e.g. </p><ul><li>Upstream
+        <a href=\"https://rogue-scholar.org/pm0p222\">https://rogue-scholar.org/pm0p222</a>,</li><li>GigaBlog
+        <a href=\"https://rogue-scholar.org/3ffcd46\">https://rogue-scholar.org/3ffcd46</a>,
+        and of course</li><li>Front Matter <a href=\"https://rogue-scholar.org/f0m0e38\">https://rogue-scholar.org/f0m0e38</a></li></ul><p>Persistent
+        identifiers should not have any semantic meaning (e.g. the blog name) in them,
+        as names can change over time. And they should not be linked to a domain name,
+        (e.g. upstream.force11.org) as those might also change. The Rogue Scholar
+        identifier uses a 7-digit random string generated by the <a href=\"https://github.com/front-matter/base32-url\">base32
+        algorithm</a> and a two-digit checksum (the Front Matter identifier for example
+        was generated with the random number 16127113320). DataCite, ROR, and the
+        repository <a href=\"https://zenodo.org\">Zenodo</a> use similarly constructed
+        unique identifiers. Their main advantage over <a href=\"https://en.wikipedia.org/wiki/Universally_unique_identifier\">UUIDs</a>
+        is that they are easier to handle because of their compact size – there are
+        still more than three billion unique strings for the Rogue Scholar identifier.
+        Finally, persistent identifiers should be actionable, which means expressed
+        as URLs that a human or machine can follow.</p><p>Why did I not use International
+        Standard Serial Numbers (<a href=\"https://www.issn.org/\">ISSNs</a>), well-established
+        identifiers that also work for blogs (the Front Matter blog has ISSN <a href=\"https://portal.issn.org/resource/ISSN/2749-9952\">2749-9952</a>)?
+        Why ISSN registration can be easy and cheap, registration can become an issue,
+        especially for new blogs that are just beginning to publish. And ISSNs have
+        only the most basic metadata (e.g. title, country). And why not use digital
+        object identifiers (<a href=\"https://www.doi.org/\">DOIs</a>)? They have
+        traditionally been used for scholarly outputs such as journal articles, datasets,
+        and <a href=\"https://doi.org/10.53731/fezg09h-hgn1gzm\">blog posts</a>. While
+        you can register DOIs for serials such as journals, conference proceedings,
+        or blogs, there is currently no standard practice to do so.</p><h3 id=\"metadata-for-science-blogs\">Metadata
+        for science blogs</h3><p>Persistent identifiers are not really useful without
+        meaningful metadata. For science blogs, this means at least the following:</p><ul><li>Blog
+        name</li><li>Blog short description</li><li>Blog URL</li><li>Alternate identifiers,
+        e.g ISSN and/or DOI</li><li>Blog editor(s)</li><li>License for the content,
+        e.g Creative Commons Attribution (<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-BY</a>)</li><li>Subject
+        area(s) for the content, e.g. aligned with the <a href=\"https://en.wikipedia.org/wiki/Fields_of_Science_and_Technology\">OECD
+        Fields of Science and Technology</a></li></ul><p>For the blogs participating
+        in the Rogue Scholar, I am collecting this information and will make it available
+        in the Rogue Scholar search. To not start from scratch, I am using the metadata
+        available from most blogs via <a href=\"https://doi.org/10.53731/d6vdvbt-tffmezj\">RSS
+        or Atom feed</a>. For some information, e.g. license or subject area, I need
+        to ask additional questions to the blog editor.</p><p>RSS and Atom both use
+        XML, rather than JSON, which is much more pleasant to work with. Therefore
+        – after the initial conversion of RSS or Atom XML – I can use <a href=\"https://www.jsonfeed.org/\">JSON
+        Feed</a> to describe blog metadata, and the format can be extended to the
+        needs of the Rogue Scholar. To fetch the JSON Feed of a blog included in the
+        Rogue Scholar, use the identifier. Either by appending <code>.json</code>
+        to the identifier (e.g. <a href=\"https://rogue-scholar.org/h56tk29.json\">https://rogue-scholar.org/h56tk29.json</a>)
+        or by entering the identifier (<a href=\"https://rogue-scholar.org/h56tk29.json\">https://rogue-scholar.org/h56tk29</a>)
+        in your RSS reader. The reader will automatically find the JSON Feed via the
+        link tag in the page header:</p><pre><code><link rel=\"alternate\" title=\"Jabberwocky
+        Ecology\" type=\"application/feed+json\" href=\"https://rogue-scholar.org/h56tk29.json\"/></code></pre><p>The
+        RSS Reader (assuming it supports JSON Feed, as most readers do) will subscribe
+        you to the JSON Feed of the blog, simplifying the reading of science blogs.
+        More work is needed to polish the RSS/Atom Feed conversion to JSON Feed done
+        by the Rogue Scholar and streamline subscribing to multiple blogs at once,
+        e.g. using <a href=\"https://doi.org/10.53731/wa7k5-v4t16\">OPML</a>. </p><p>JSON
+        Feed can also be used for the metadata and content of blog posts, so again
+        I don''t need to use XML, e.g. Journal Article Tag Suite (<a href=\"https://jats.nlm.nih.gov/\">JATS</a>).
+        For blog posts, I will continue to <a href=\"https://doi.org/10.53731/rb7xw01-97aq74v-ag7qh\">use
+        DOIs</a>, as they work well, and I am making progress with Rogue Scholar integration
+        (see for example this blog using DOIs already: <a href=\"https://rogue-scholar.org/f4wdg32\">https://rogue-scholar.org/f4wdg32</a>)</p><h3
+        id=\"bringing-everything-together\">Bringing everything together</h3><p>How
+        does the above help with finding, reading, sharing, or otherwise reusing science
+        blogs? The work released today should make it easier to find interesting science
+        blogs via the Rogue Scholar and subscribe to them via your RSS reader of choice.
+        Over time we will hopefully see evolving community standards regarding blog
+        persistent identifiers and metadata, following the <a href=\"https://www.go-fair.org/fair-principles/\">FAIR
+        Principles</a>, while at the same time pushing hard for <a href=\"https://www.scienceeurope.org/our-priorities/open-access/diamond-open-access/\">Diamond
+        Open Access</a>, keeping the cost and technical complexity affordable.</p>
+        ","tags":["Feature"],"language":"en"},{"id":"https://doi.org/10.53731/z9v2s-bh329","short_id":"y2d1rjgr","url":"https://blog.front-matter.io/posts/rogue-scholar-open-for-business/","title":"The
+        Rogue Scholar is now open for business","summary":"The Rogue Scholar science
+        blog archive launched with limited functionality on April 3rd. Interested
+        science blogs can go to the sign-up page, provide some basic information via
+        the sign-up form, and then will...","date_published":"2023-04-04T08:43:36Z","date_modified":"2023-04-04T09:31:14Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1575663620136-5ebbfcc2c597?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fG9wZW4lMjBmb3IlMjBidXNpbmVzc3xlbnwwfHx8fDE2ODA1OTI3NTU&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1575663620136-5ebbfcc2c597?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDR8fG9wZW4lMjBmb3IlMjBidXNpbmVzc3xlbnwwfHx8fDE2ODA1OTI3NTU&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>The
+        <a href=\"https://rogue-scholar.org/\">Rogue Scholar</a> science blog archive
+        launched with limited functionality on April 3rd. Interested science blogs
+        can go to the sign-up page, provide some basic information via the <a href=\"https://jvinjjenjik.typeform.com/to/uxgAsHPl\">sign-up
+        form</a>, and then will be added to the Rogue Scholar archive within two business
+        days. </p><p>To be included in the service, your blog needs to:</p><ul><li>be
+        about science or scholarship and written in English or German (more languages
+        will follow later, reach out to me if you can help),</li><li>make the full-text
+        content available via RSS feed and distributed under the terms of the Creative
+        Commons Attribution license (<a href=\"https://creativecommons.org/licenses/by/4.0/legalcode\">CC-BY</a>).</li></ul><p>Blogs
+        that have signed up for the service (more than twenty so far) are listed in
+        the <a href=\"https://rogue-scholar.org/blogs\">Rogue Scholar catalog of science
+        blogs</a> that <a href=\"https://doi.org/10.53731/n7vvs-h6995\">launched last
+        week</a>. And since yesterday summaries of the latest fifteen blog posts of
+        each blog are also available.</p><figure class=\"kg-card kg-image-card kg-card-hascaption\"><img
+        src=\"https://blog.front-matter.io/content/images/2023/04/Bildschirmfoto-2023-04-04-um-10.12.58.png\"
+        class=\"kg-image\" alt loading=\"lazy\" width=\"1882\" height=\"1428\" srcset=\"https://blog.front-matter.io/content/images/size/w600/2023/04/Bildschirmfoto-2023-04-04-um-10.12.58.png
+        600w, https://blog.front-matter.io/content/images/size/w1000/2023/04/Bildschirmfoto-2023-04-04-um-10.12.58.png
+        1000w, https://blog.front-matter.io/content/images/size/w1600/2023/04/Bildschirmfoto-2023-04-04-um-10.12.58.png
+        1600w, https://blog.front-matter.io/content/images/2023/04/Bildschirmfoto-2023-04-04-um-10.12.58.png
+        1882w\" sizes=\"(min-width: 720px) 720px\"><figcaption><a href=\"https://rogue-scholar.org/blogs/pm0p222\">Blog
+        posts displayed at the Rogue Scholar</a></figcaption></figure><p>These summaries
+        (precisely the information you get in the RSS feed) serve two purposes:</p><ul><li>for
+        readers: learn more about that particular science blog. Reading the full-text
+        post or other blog posts is only one click away</li><li>for blog authors and
+        Rogue Scholar staff: tweak the blog and/or Rogue Scholar if there are issues
+        with archiving. </li></ul><p>The screenshot highlights several considerations
+        when using the RSS Feed to archive a science blog in the Rogue Scholar:</p><ul><li>optional
+        but desired metadata, e.g logo, description, and language for blogs or description,
+        tags, and feature image for blog posts</li><li>handling authors, including
+        full names instead of usernames, multiple authors, and author identifiers
+        (ORCID)</li><li>handling DOIs, including exposing them in the RSS feed, and
+        making sure no DOI exists for the post yet</li></ul><p>The Rogue Scholar is
+        now open for business, and I hope the limited functionality (or <a href=\"https://www.zentao.pm/blog/mvp-minimum-viable-product-965.html\">minimum
+        viable product</a>) launched this week makes it an attractive service for
+        blog readers and authors to try out. The next big milestone is the launch
+        of the full-text index for searching and archiving, and that is planned to
+        happen within the next three months. Followed by DOI registration for blog
+        posts.</p> ","tags":["News"],"language":null},{"id":"https://doi.org/10.53731/h4b6c-h1444","short_id":"j3ejvwep","url":"https://blog.front-matter.io/posts/feedback-for-blog-publishers/","title":"Feedback
+        for science blog publishers","summary":"The Rogue Scholar science blog archive
+        launched last week. Going forward the focus is on improving the service and
+        adding more blogs. This includes giving blog authors feedback on how they
+        can improve their...","date_published":"2023-04-11T12:31:40Z","date_modified":"2023-04-14T20:50:32Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://blog.front-matter.io/content/images/2023/04/Bildschirmfoto-2023-04-11-um-13.14.02.png","content_html":"
+        <p><img src=\"https://blog.front-matter.io/content/images/2023/04/Bildschirmfoto-2023-04-11-um-13.14.02.png\"></p><p>The
+        <a href=\"https://rogue-scholar.org/\">Rogue Scholar</a> science blog archive
+        <a href=\"https://doi.org/10.53731/z9v2s-bh329\">launched last week</a>. Going
+        forward the focus is on improving the service and adding more blogs. This
+        includes giving blog authors feedback on how they can improve their RSS/Atom
+        feeds – used by the Rogue Scholar to collect and archive the blog content.</p><h3
+        id=\"feedback-for-science-blog-publishers\">Feedback for science blog publishers</h3><p>A
+        good starting point is author information, which often can be improved. The
+        first step is to support multiple authors and support their full (given and
+        family) names instead of usernames. It is useful to include ORCID author identifiers,
+        best done by using the author website field of the blogging platform. This
+        information can then be included in the blog <a href=\"https://www.rfc-editor.org/rfc/rfc4287\">Atom
+        feed</a>, which works better for this than <a href=\"https://en.wikipedia.org/wiki/RSS\">RSS
+        feeds</a>.</p><p>The blog (RSS or Atom) feed includes a link for each blog
+        post but also an <strong>id</strong> (Atom) or <strong>guid</strong> (RSS).
+        Ideally, this id/guid is globally unique, does not change over time, and can
+        be used as a web link. <a href=\"https://ask.library.uic.edu/faq/345899\">DOIs</a>
+        are a perfect fit for this id/guid field, and several blogs included in the
+        Rogue Scholar do this already (<a href=\"https://rogue-scholar.org/blogs/f0m0e38\">this
+        blog</a> but also <a href=\"https://rogue-scholar.org/blogs/pm0p222\">Upstream</a>).
+        Many blogging platforms have a <a href=\"https://developer.wordpress.org/reference/functions/wp_get_canonical_url/\">canonical_url</a>
+        field that can be used to store the DOI, separate from the URL.</p><p>Abstracts
+        are useful for blog posts and widely supported. Unfortunately, there is no
+        standard way to provide them in RSS or Atom feeds. A good practice is to use
+        text and not HTML and to limit the total number of characters (the Rogue Scholar
+        limits abstracts to 210 characters).</p><p>Feature images for blog posts are
+        again widely used but there is no standard way to do this in RSS or Atom feeds.
+        Examples of Rogue Scholar blogs using feature images are <a href=\"https://rogue-scholar.org/blogs/n6x4a73\">Chris
+        Hartgerink</a>, <a href=\"https://rogue-scholar.org/blogs/h7bpg11\">OA.Works</a>
+        and <a href=\"https://rogue-scholar.org/blogs/f4wdg32\">Syldavia Gazette</a>.</p><h3
+        id=\"blog-statistics\">Blog statistics</h3><p>This week I added <a href=\"https://rogue-scholar.org/#stats\">basic
+        statistics</a> for the Rogue Scholar that give preliminary insights into the
+        kind of science blogs covered by the Rogue Scholar. The <strong>category</strong>
+        is the top-level classification of the <a href=\"https://www.oecd.org/science/inno/38235147.pdf\">OECD
+        Fields of Science and Technology</a>. Many blogs cover Natural Sciences, Engineering
+        and Technology, Social Sciences – Health and Medical Sciences, Humanities,
+        and Agricultural Sciences are covered less. Almost all currently included
+        blogs are in the English <strong>language</strong>, please reach out if you
+        manage a blog in another language. Knowing the blogging <strong>platform</strong>
+        helps integrate the various RSS feeds into the Rogue Scholar, and the results
+        are as expected. Wordpress is the most popular blogging platform,  but science
+        blogs also use a variety of other platforms, including Ghost, Medium, and
+        Blogger. Another interesting key performance indicator (KPI) is the total
+        number of blogs and blog posts included, but this needs more work as this
+        information is not immediately available.</p><figure class=\"kg-card kg-image-card
+        kg-card-hascaption\"><img src=\"https://blog.front-matter.io/content/images/2023/04/Bildschirmfoto-2023-04-11-um-13.19.27.png\"
+        class=\"kg-image\" alt loading=\"lazy\" width=\"2000\" height=\"716\" srcset=\"https://blog.front-matter.io/content/images/size/w600/2023/04/Bildschirmfoto-2023-04-11-um-13.19.27.png
+        600w, https://blog.front-matter.io/content/images/size/w1000/2023/04/Bildschirmfoto-2023-04-11-um-13.19.27.png
+        1000w, https://blog.front-matter.io/content/images/size/w1600/2023/04/Bildschirmfoto-2023-04-11-um-13.19.27.png
+        1600w, https://blog.front-matter.io/content/images/2023/04/Bildschirmfoto-2023-04-11-um-13.19.27.png
+        2152w\" sizes=\"(min-width: 720px) 720px\"><figcaption><a href=\"https://rogue-scholar.org/#stats\">Basic
+        statistics for the Rogue Scholar</a></figcaption></figure><h3 id=\"usage-statistics\">Usage
+        statistics</h3><p>The Usage Stats for the Rogue Scholar are publicly available
+        <a href=\"https://plausible.io/rogue-scholar.org\">here</a>. The numbers are
+        still small and don''t cover individual posts, or usage numbers from the blog
+        itself, both of which may come over time. The Rogue Scholar intentionally
+        isn''t collecting any personal information or using any cookies, but the available
+        public information can give important insights (e.g. the countries or referer
+        pages where users come from).</p><figure class=\"kg-card kg-image-card kg-card-hascaption\"><img
+        src=\"https://blog.front-matter.io/content/images/2023/04/Bildschirmfoto-2023-04-11-um-13.18.09.png\"
+        class=\"kg-image\" alt loading=\"lazy\" width=\"2000\" height=\"1146\" srcset=\"https://blog.front-matter.io/content/images/size/w600/2023/04/Bildschirmfoto-2023-04-11-um-13.18.09.png
+        600w, https://blog.front-matter.io/content/images/size/w1000/2023/04/Bildschirmfoto-2023-04-11-um-13.18.09.png
+        1000w, https://blog.front-matter.io/content/images/size/w1600/2023/04/Bildschirmfoto-2023-04-11-um-13.18.09.png
+        1600w, https://blog.front-matter.io/content/images/2023/04/Bildschirmfoto-2023-04-11-um-13.18.09.png
+        2038w\" sizes=\"(min-width: 720px) 720px\"><figcaption><a href=\"https://plausible.io/rogue-scholar.org\">Daily
+        traffic to the Rogue Scholar</a></figcaption></figure> ","tags":["Feature"],"language":"en"},{"id":"https://doi.org/10.53731/br4gac1-1k9ptea","short_id":"1jdk0oe5","url":"https://blog.front-matter.io/posts/talking-about-talbot/","title":"Talking
+        about Talbot","summary":"Talbot is a Python package I started working on at
+        the end of 2022 and plan to release to the Python Package Index (PyPi) in
+        March. Talbot converts scholarly metadata in various formats, including Crossref,...","date_published":"2023-02-13T19:19:08Z","date_modified":"2023-02-13T19:20:04Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://blog.front-matter.io/content/images/2023/02/TalbotHound_Talbot_Shrewsbury_Book_1445.png","content_html":"
+        <p><img src=\"https://blog.front-matter.io/content/images/2023/02/TalbotHound_Talbot_Shrewsbury_Book_1445.png\"></p><p><a
+        href=\"https://github.com/front-matter/talbot\">Talbot</a> is a Python package
+        I started working on at the end of 2022 and plan to release to the Python
+        Package Index (<a href=\"https://pypi.org/\">PyPi</a>) in March. Talbot converts
+        scholarly metadata in various formats, including Crossref, DataCite, Schema.org,
+        BibTeX, RIS, and formatted citations – the complete list of supported formats
+        is <a href=\"https://docs.front-matter.io/talbot#supported-metadata-formats\">here</a>.
+        Talbot is a Python version of the <a href=\"https://github.com/datacite/bolognese\">Bolognese
+        Ruby gem</a> that I worked on with my DataCite colleagues starting in 2018.
+        After leaving DataCite in 2021 I <a href=\"https://doi.org/10.53731/rdv0jyq-vpb7a9j-zwqzg\">wrote
+        a fork called Briard</a> that added important metadata conversions, namely
+        writing Crossref XML for DOI registration and reading/writing Citation File
+        Format (<a href=\"https://citation-file-format.github.io/\">CFF</a>) for software
+        metadata.</p><p>Talbot, Bolognese, and Briard are all names for dog breeds,
+        the naming convention I have used for most of the Open Source software I have
+        written since releasing the Open Source software <a href=\"https://github.com/lagotto/lagotto\">Lagotto</a>
+        for tracking article-level metrics in 2012.</p><p>My two main use cases for
+        Talbot (and Bolognese) are <a href=\"https://citation.crosscite.org/docs.html\">DOI
+        content negotiation</a>, using DOI metadata to generate metadata in other
+        formats such as BibTeX or as formatted citation in one of the thousands of
+        available citation styles. The Python version will enhance the <a href=\"https://inveniordm.docs.cern.ch/\">InvenioRDM</a>
+        Open Source repository platform, e.g. adding RIS and Schema.org JSON-LD to
+        the supported export formats. The other main use case is supporting DOI registration
+        via multiple input formats. Since 2021 the Briard gem for example allows me
+        to register DOIs for this blog as well as the <a href=\"https://upstream.force11.org/\">Force11
+        Upstream blog</a> using metadata in Schema.org format. With Talbot I want
+        to enable Crossref DOI registration in the InvenioRDM platform for use cases
+        where this makes sense, e.g blog posts or preprints. Talbot will help register
+        DOIs from RSS feeds as part of <a href=\"https://rogue-scholar.org/\">the
+        Rogue Scholar </a>blog archive I am launching in Q2 2023. </p><p>One lesson
+        learned with Bolognese/Briard is that the platform/language matters. The InvenioRDM
+        backend is written in Python (the Frontend is in Javascript/React). And while
+        Bolognese/Briard can be used via the command line or in environments such
+        as GitHub Actions that use Docker-based microservices where the language doesn''t
+        really matter, having the scholarly metadata conversion available in a Python
+        environment makes a huge difference. So I took the plunge of rewriting a fairly
+        complex library in another language. I am fully aware that there are more
+        languages used for writing scholarly infrastructure code, but for the next
+        few years, Python addresses my needs and is hopefully useful to other infrastructure
+        projects.</p><p>While the overall architecture for the evolving Talbot library
+        looks rather similar to Briard, I am making some changes based on my experience
+        over the last five years of working on generic scholarly metadata conversions:</p><ul><li><strong>JSON
+        is the core serialization format</strong>. Metadata in XML format (e.g. DataCite,
+        Crossref, JATS) are important, but no longer used internally for Talbot validation.
+        I will instead migrate to JSON schema for metadata validations in Talbot.
+        DataCite, Crossref, and InvenioRDM use Elasticsearch/OpenSearch and thus JSON
+        to index metadata. DataCite XML is still widely used but deprecated for several
+        years, as on submission the XML is converted to JSON internally.</li><li><strong>Type
+        hints. </strong>Support for static typing is a trend in dynamic languages
+        Javascript (where Typescript is very popular), Ruby (since Ruby 3.0), and
+        also Python. Talbot uses type hints for linting and that helps with error
+        checking.</li><li><strong>Support unstructured references</strong>. Before
+        DataCite Metadata Schema 4.4 (released in April 2021), only references providing
+        an identifier such as a DOI were supported. Crossref has always supported
+        unstructured references, and an identifier isn''t available unless content
+        exists in digital form. In the first Talbot release, I take the \"fallback
+        solution\" approach, providing unstructured metadata if a DOI or other persistent
+        identifier for a reference doesn''t exist.</li><li><strong>Author names are
+        hard</strong>. One of the biggest challenges with scholarly metadata is author
+        names. In formatted citations and BibTeX separate given and family names are
+        important, and a single name field for both given and family names is a constant
+        source of errors and frustrations. In Talbot I follow both Crossref and Citeproc
+        JSON metadata in that you need either a single name or separate given and
+        family names.</li><li><strong>Dates are hard</strong>. Dates are surprisingly
+        hard in scholarly metadata. There are multiple kinds of dates not always used
+        consistently, and incomplete dates such as year-only are very common. One
+        approach to dealing with incomplete dates is encoding the parts year, month,
+        and day separately, used by Citeproc JSON and Crossref in their REST API.
+        The better solution is to use the ISO8601 standard that supports incomplete
+        dates. Other challenges are approximate dates (e.g. <em>circa 1650</em>) and
+        date ranges. These kinds of dates are supported via the Extended Date and
+        Time Format (<a href=\"https://www.loc.gov/standards/datetime/\">EDTF</a>),
+        but working with EDTF is hard in code.</li><li><strong>Idiosyncrasies and
+        inconsistencies</strong>. There is always a balancing act between supporting
+        a metadata standard thoughtfully and not getting lost in edge cases. DataCite
+        metadata (via Dublin Core on which it is based) makes it hard to work with
+        some of the bibliographic metadata common for books, articles, and other textual
+        resources. For example page numbers or the journal name. Crossref metadata
+        has the tendency to treat things differently depending on the content type,
+        e.g. the ISSN. After working on Bolognese for five ideas I will make some
+        changes to how to best support metadata across different formats. It is clear
+        that there is no single overarching scholarly metadata format, the internal
+        format used by Bolognese, Briard, and now Talbot is a pragmatic mix of the
+        different implementations.</li></ul> ","tags":["Feature"],"language":"en"},{"id":"https://doi.org/10.53731/cp7apdj-jk5f471","short_id":"56gl49d9","url":"https://blog.front-matter.io/posts/announcing-commonmeta/","title":"Announcing
+        Commonmeta","summary":"This week I launched Commonmeta, a new scholarly metadata
+        standard described at https://commonmeta.org. Commonmeta is the result of
+        working on conversion tools for scholarly metadata for many years. One...","date_published":"2023-03-09T17:36:44Z","date_modified":"2023-03-09T17:36:44Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://blog.front-matter.io/content/images/2023/03/standards_2x.png","content_html":"
+        <p><img src=\"https://blog.front-matter.io/content/images/2023/03/standards_2x.png\"></p><p>This
+        week I launched <strong>Commonmeta</strong>, a new scholarly metadata standard
+        described at <a href=\"https://commonmeta.org/\">https://commonmeta.org</a>.
+        Commonmeta is the result of working on conversion tools for scholarly metadata
+        for many years. One conclusion early on was that these conversions are many-to-many,
+        so it becomes much easier to have an internal format that is the intermediate
+        step for these conversions.</p><p>Commonmeta is inspired by two initiatives:
+        <a href=\"https://codemeta.github.io/\">Codemeta</a> and <a href=\"https://commonmark.org\">Commonmark</a>.
+        CodeMeta contributors are creating a minimal metadata schema for science software
+        and code, in JSON and XML. The goal of CodeMeta is to create a concept vocabulary
+        that can be used to standardize the exchange of software metadata across repositories
+        and organizations. Commonmark is a strongly defined, highly compatible specification
+        of Markdown, along with a suite of comprehensive tests to validate Markdown
+        implementations against this specification. </p><p>These two specifications
+        not only inspired the name but also the principles of how I want to see Commonmeta
+        operate:</p><ul><li>driven by real-world implementations and not committees</li><li>features
+        that focus on what is common in existing implementations/formats</li><li>a
+        testable specification</li></ul><p>The website goes into a little bit more
+        detail about why I didn''t pick any the existing standards but instead came
+        up with a new metadata standard. This is a familiar pattern made famous by
+        the XKCD comic shown above.</p><p>As I want this to be driven by real-world
+        implementations and not committees, I also in the last few weeks launched<a
+        href=\"https://github.com/front-matter/commonmeta-py\"> commonmeta-py</a>,
+        a Python implementation of the standard available on <a href=\"https://pypi.org/project/commonmeta-py/\">PyPi</a>.
+        And in a few months, I hope to have tweaked the <a href=\"https://github.com/front-matter/briard\">Ruby
+        Gem</a> that I originally wrote a few years ago to support Commonmeta as the
+        internal format.</p><p>With testable specification, I mean both a JSON Schema
+        to describe Commonmeta and many, many tests that validate the conversions
+        with real-world data. The JSON Schema is available <a href=\"https://commonmeta.org/schema\">here</a>,
+        and will become stable once it reaches version 1.0. commonmeta-py comes with
+        lots of tests, but I hope to further improve the test coverage.</p><p>Please
+        reach out to me if you want to help with Commonmeta, in particular, work on
+        implementations in other languages, such as Javascript, PHP, or Java.</p>
+        ","tags":["News"],"language":"en"},{"id":"https://doi.org/10.53731/eyf75cj-jsgv26c","short_id":"9memqjg2","url":"https://blog.front-matter.io/posts/building-blocks/","title":"Building
+        Blocks for a Scholarly Blog Archive","summary":"Another follow-up post, extending
+        three earlier posts (see references), on the Scholarly Blog Archive that Front
+        Matter is building and that I plan to launch in the first half of 2023. I
+        have been thinking...","date_published":"2022-12-21T14:23:47Z","date_modified":"2022-12-21T20:57:38Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://blog.front-matter.io/content/images/2022/12/James_Brown_-55208420--1.jpeg","content_html":"
+        <p><img src=\"https://blog.front-matter.io/content/images/2022/12/James_Brown_-55208420--1.jpeg\"></p><p>Another
+        follow-up post, extending three earlier posts (see references), on the Scholarly
+        Blog Archive that Front Matter is building and that I plan to launch in the
+        first half of 2023. I have been thinking about the building blocks that make
+        this blog archive work:</p><h3 id=\"diamond-open-access\">Diamond Open Access</h3><blockquote>Diamond
+        open access (OA) is an open access business model in which no fees are charged
+        to either authors or readers. <a href=\"https://www.dfg.de/en/research_funding/announcements_proposals/2022/info_wissenschaft_22_26/index.html\">German
+        Research Foundation</a></blockquote><p>Using this term sounds strange in the
+        context of scholarly blog posts, but it means that scholarly blog infrastructure
+        should be free to publish and free to read. One challenge with Open Access
+        for publications, particularly in disciplines such as medicine and life sciences
+        where there is a lot of money, is that there are no drivers for driving down
+        cost, and subscription fees have often been converted to article processing
+        charges (APC). And instead of technological advances making scholarly publishing
+        cheaper over time, the costs for authors and readers (and their institutions
+        and funders who ultimately pay for this) are only increasing.</p><p>There
+        is of course already a lot of Diamond Open Access, and infrastructures for
+        research data and research software also typically don''t charge authors or
+        readers. This causes other problems in terms of sustainable scholarly infrastructure
+        and innovation, but I think it is an essential building block for the science
+        blog archive Front Matter is building. A lot of work is needed in 2023 to
+        come up with a strategy for sustaining the Front Matter science blog archive
+        in the long run, all I can say now is that it will not use advertising.</p><h3
+        id=\"creative-commons-license\">Creative Commons License</h3><p>For content
+        that is free to read we need a license that specifies that. The blog archive
+        needs clear conditions for what it can do with the content, and the same is
+        true for downstream users and services. History tells us that licenses should
+        be clear and simple, so for scholarly blog posts I will aim to use the <a
+        href=\"https://creativecommons.org/licenses/by/4.0/legalcode\">Creative Commons
+        Attribution 4.0 License</a> (CC-BY 4.0) for all content. </p><figure class=\"kg-card
+        kg-image-card\"><img src=\"https://blog.front-matter.io/content/images/2022/12/cc-by.png\"
+        class=\"kg-image\" alt loading=\"lazy\" width=\"250\" height=\"88\"></figure><h3
+        id=\"central-blog-archive\">Central Blog Archive</h3><p>As I <a href=\"https://doi.org/10.53731/br9f5xa-a556w2t\">explained
+        in a post last week</a>, a central blog archive for blog content published
+        in many different places makes the most sense for science blog posts – a model
+        also used by <a href=\"https://www.ncbi.nlm.nih.gov/pmc/\">PubMed Central
+        </a>for a free full-text archive of biomedical and life sciences journal articles.
+        The <a href=\"https://inveniordm.docs.cern.ch/\">InvenioRDM</a> Open Source
+        software is a good fit for this use case.</p><figure class=\"kg-card kg-image-card\"><img
+        src=\"https://blog.front-matter.io/content/images/2022/12/Download--4--1.png\"
+        class=\"kg-image\" alt loading=\"lazy\" width=\"372\" height=\"120\"></figure><p>Starting
+        a science blog is straightforward. There are plenty of cheap and free options
+        available from <a href=\"https://wordpress.org/\">Wordpress</a> to <a href=\"https://pages.github.com/\">GitHub
+        Pages</a>. You might run your blog as part of a larger platform, together
+        with collaborators, or all for yourself.</p><h3 id=\"digital-object-identifier-doi-and-metadata\">Digital
+        Object Identifier (DOI) and Metadata</h3><p>DOIs are frequently used as persistent
+        identifiers for scholarly content and are integrated into the InvenioRDM platform.
+        The blog archive can either archive blog posts with DOIs, or it can issue
+        DOIs for existing blogs not using DOIs. In the latter case it is important
+        that the DOI resolves to the original content in the hosting blog platform,
+        and redirects to the blog platform only when the original blog is no longer
+        available. </p><p>DOIs (e.g. from DataCite or Crossref) have a required set
+        of metadata that makes sense for scholarly blogs. Optional metadata that are
+        desired for the blog archive are license (see above), abstract, subject area
+        (using the 43 <a href=\"https://en.wikipedia.org/wiki/Fields_of_Science_and_Technology\">OECD
+        Fields of Science and Technology</a>), keywords, language, and persistent
+        identifiers for the blog (<a href=\"https://www.issn.org/\">ISSN</a>), author
+        (<a href=\"https://orcid.org/\">ORCID</a>) and affiliated institution (<a
+        href=\"https://ror.org/\">ROR</a>).</p><h3 id=\"rich-site-summary-rss\">Rich
+        Site Summary (RSS)</h3><p><a href=\"https://en.wikipedia.org/wiki/RSS\">RSS</a>
+        is the standard protocol for distributing and consuming blog content. It is
+        actually a group of protocols (Atom and multiple flavors of the RSS format),
+        but they have been around for so long that the popular tools and services
+        support the various protocols. RSS will be the standard way how content is
+        ingested by the blog archive, and probably also how in turn content in the
+        central blog archive is consumed, e.g. as an automated feed of all new science
+        blog posts in a particular subject area and language.</p><figure class=\"kg-card
+        kg-image-card\"><img src=\"https://blog.front-matter.io/content/images/2022/12/images--1-.png\"
+        class=\"kg-image\" alt loading=\"lazy\" width=\"128\" height=\"128\"></figure><p>Because
+        RSS is so widely supported, other ways of registering content – e.g. via web
+        form, API, or webhook – are less critical for the blog archive. Work is needed
+        on the InvenioRDM software to add strong support for RSS feeds, but would
+        allow the automation of a lot of the work needed to build and maintain the
+        blog archive.</p><h3 id=\"markdown-and-pdf\">Markdown and PDF</h3><p><a href=\"https://daringfireball.net/projects/markdown/\">Markdown</a>
+        is a markup language popular with many blogging platforms. It is typically
+        used for editing blog posts and other documents in online environments but
+        is not really used for consuming blog content via RSS. Markdown has<a href=\"https://pandoc.org/\">
+        been extended</a> to support features needed for scholarly documents, e.g.
+        tables and references, but the uptake of this added functionality in science
+        blogs has been slow. </p><p>PDF is commonly used for reading scholarly publications.
+        The workflows for submitting manuscripts to journals and preprint archives
+        in PDF format are broken because it is tricky to extract structured documents
+        from PDFs. The blog archive will support PDF as an output format at some point
+        but is not a high priority. Blog posts are typically consumed via blog reader
+        or email (if the blog produces a newsletter) rather than as PDF printed out
+        on paper. There is work needed on the InvenioRDM platform to display full-text
+        content rendered as HTML.</p><h3 id=\"curation-and-community\">Curation and
+        Community</h3><p>Science blog posts typically see a lightweight review workflow
+        before publication, and often receive feedback in the form of comments and/or
+        social media mentions. For the Front Matter science blog archive, I want to
+        keep that approach and not build any hurdles for inclusion. Some level of
+        curation is needed, not only to check for quackery and hate speech but also
+        to improve metadata that help with discovery, and to find blogs that should
+        be included. Ideally we can build a community around the science blog archive,
+        taking advantage of the <a href=\"https://inveniordm.web.cern.ch/communities\">communities</a>
+        (focussing on different languages and subject areas) feature recently added
+        to the InvenioRDM software.</p><h3 id=\"flashback\">Flashback?</h3><p>If reading
+        this post feels like it is 2006 – the year <a href=\"https://en.wikipedia.org/wiki/James_Brown\">James
+        Brown</a> (used for the feature image of this post) died – again with talk
+        about blogs, RSS, Markdown, Creative Commons, and related technologies (I
+        for example didn''t mention Zotero, XML, or Wordpress), you are right. This
+        is intentional, these technologies are not as sexy as using artificial intelligence
+        or cryptocurrencies to drive this, but I want the Science Blog archive to
+        become a scholarly resource that is useful, open, and inclusive.</p><h3 id=\"references\">References</h3><p>Fenner,
+        M. (2022, September 28). Starting Work on the Front Matter Archive. <em>Front
+        Matter</em>. <a href=\"https://doi.org/10.53731/9z6rz5d-djbay0y\">https://doi.org/10.53731/9z6rz5d-djbay0y</a></p><p>Fenner,
+        M. (2022, December 12). Building an archive for scholarly blog posts. <em>Front
+        Matter</em>. <a href=\"https://doi.org/10.53731/br9f5xa-a556w2t\">https://doi.org/10.53731/br9f5xa-a556w2t</a></p><p>Fenner,
+        M. (2022, December 19). Launching the Front Matter Roadmap. <em>Front Matter</em>.
+        <a href=\"https://doi.org/10.53731/cbdtfp1-1798beh\">https://doi.org/10.53731/cbdtfp1-1798beh</a></p><p>Fenner,
+        M. (2010, October 6). Beyond the PDF – it is time for a workshop. <em>Front
+        Matter</em>. <a href=\"https://doi.org/10.53731/r294649-6f79289-8cw7z\">https://doi.org/10.53731/r294649-6f79289-8cw7z</a></p><p>Fenner,
+        M. (2013, June 19). Citations in Scholarly Markdown. <em>Front Matter</em>.
+        <a href=\"https://doi.org/10.53731/r294649-6f79289-8cw1b\">https://doi.org/10.53731/r294649-6f79289-8cw1b</a></p>
+        ","tags":["Feature"],"language":"en"},{"id":"https://doi.org/10.53731/avg2ykg-gdxppcd","short_id":"j3ejvvep","url":"https://blog.front-matter.io/posts/need-to-fix-science-blogs/","title":"Do
+        we need to fix science blogs?","summary":"Science blogs have been around for
+        at least 20 years and have become an important part of science communication.
+        So are there any fundamental issues that need fixing?Barriers to EntryBlogging
+        platforms are...","date_published":"2023-01-25T15:14:17Z","date_modified":"2023-02-01T15:43:22Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1585838017777-5003198884b5?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxicm9rZW58ZW58MHx8fHwxNjc0NjUyMTEy&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1585838017777-5003198884b5?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMyfHxicm9rZW58ZW58MHx8fHwxNjc0NjUyMTEy&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>Science
+        blogs have been around for at least 20 years and have become an important
+        part of science communication. So are there any fundamental issues that need
+        fixing?</p><h3 id=\"barriers-to-entry\">Barriers to Entry</h3><p>Blogging
+        platforms are mature at this point, and the technology is not imposing barriers
+        to entry for most people. The user experience has greatly improved over the
+        last few years and there are a number of affordable ways for hosting a blog
+        that also work for science blogs, including free options such as <a href=\"https://pages.github.com/\">GitHub
+        Pages</a>.</p><h3 id=\"open-access\">Open Access</h3><p>Science blogs have
+        traditionally been free to read, but there is a general trend towards subscriptions
+        for blogs (and related newsletters), as the advertising business model isn''t
+        really working for niche content such as most science. How to sustain science
+        blogging in the long run is an unresolved question, and charging authors (beyond
+        a nominal hosting fee) doesn''t look like a path forward. Luckily the costs
+        of publishing science blogs are very reasonable compared to journal publishing
+        or hosting research data and code.</p><h3 id=\"missing-functionality\">Missing
+        Functionality</h3><p>The basic functionality of formatted text with embedded
+        figures and links is supported by many blogging platforms. The requirements
+        of data-intensive science, e.g. interactive visualizations, can be a challenge,
+        but that is also true for publishing journal articles. Interactive environments
+        such as <a href=\"https://jupyter.org/\">Jupyter Notebooks</a> might be a
+        better fit for these use cases. </p><p>Reference management is probably the
+        biggest gap in science blogging, as handling more than a few references in
+        standard ways is not easily done by hand.</p><h3 id=\"impact-or-credit\">Impact
+        or Credit</h3><p>Unfortunately a lot of the activities of scholars are driven
+        by perceived <em>Impact </em>or<em> Credit</em>, and science blogs typically
+        don''t score high in this regard – with the exception of some disciplines
+        such as mathematics. There is probably no short-term solution, and I am not
+        even sure it is a problem that needs fixing. </p><p>The long-term solution
+        should focus on increasing the visibility and thus discoverability of science
+        blogs to reach a larger audience. As I discussed in a <a href=\"https://doi.org/10.53731/br9f5xa-a556w2t\">previous
+        post</a>, my preferred approach is a central repository for science blog content
+        originally published in many different locations (the PubMed/PubMed Central)
+        model.</p><h3 id=\"persistence\">Persistence</h3><p>This leaves persistence
+        as the other main problem with science blogs besides discoverability that
+        needs fixing. Link rot (the resource identified by a URI vanishes from the
+        web) and content drift (the resource identified by a URI changes over time)
+        are <a href=\"https://ceur-ws.org/Vol-3246/10_Paper3.pdf\">well-known problems
+        with digital content</a>, from <a href=\"https://www.theverge.com/2021/5/21/22447690/link-rot-research-new-york-times-domain-hijacking\">newspapers</a>
+        to scholarly content. There are mainly two approaches to address this problem:</p><ul><li><strong>Archiving</strong>
+        using generic services such as the <a href=\"https://archive.org/\">Internet
+        Archive</a> and specialized services such as <a href=\"https://www.softwareheritage.org/\">Software
+        Heritage</a> for software source code or <a href=\"https://www.portico.org/\">Portico</a>
+        for scholarly content.</li><li><strong>Persistent Identifiers</strong> by
+        maintaining links independent of URL host and path, both of which may change
+        over time. This <a href=\"https://doi.org/10.53731/r294649-6f79289-8cw1h\">blog
+        post of mine</a> is almost 14 years old, and the URL has changed at least
+        four times as I changed blogging platforms. Since 2021 the post has had a
+        persistent identifier in form of a DOI, and that DOI will not change going
+        forward, eventually pointing to an archive when I retire.</li></ul><p>Some
+        science blog content is ephemeral and may not be worth archiving, but a lot
+        of content is still worth reading years later (the <a href=\"ttps://doi.org/10.53731/r294649-6f79289-8cw1q\">first
+        post of this blog</a> is more than 15 years old), even if only to provide
+        historical context.</p><h3 id=\"conclusions\">Conclusions</h3><p>In summary,
+        we don''t need to <em>fix everything</em> with science blogs but rather focus
+        on two aspects: discoverability and persistence. In doing that we also need
+        to sort out better sustainability for science blogs, and as an added bonus
+        improve their reference management.</p><p>Discoverability and persistence
+        are an issue for all science blogs, and we are trying to fix them by launching
+        the <a href=\"https://rogue-scholar.org/\">Rogue Scholar</a> in the second
+        quarter of 2023. If you are managing a science blog and care about discoverability
+        and persistence, sign up for the <a href=\"https://rogue-scholar.org/\">Rogue
+        Scholar waitlist</a>. Particularly if your blog is no longer actively maintained,
+        for example blogs hosted by grant-funded projects that have ended or are ending
+        soon.</p><p>Today I launched the <a href=\"https://docs.rogue-scholar.org\">Rogue
+        Scholar Documentation</a> site, where I will document how to use the Rogue
+        Scholar, e.g. what you can do to prepare your science blog for Rogue Scholar
+        archiving. The site is written in markdown and hosted on GitHub, so feel free
+        to ask questions or suggest additions via the links provided by the documentation
+        site.</p> ","tags":["Feature"],"language":"en"},{"id":"https://doi.org/10.53731/n7vvs-h6995","short_id":"zkevm5e3","url":"https://blog.front-matter.io/posts/rogue-scholar-releases-first-catalog/","title":"The
+        Rogue Scholar releases its first catalog of science blogs","summary":"The
+        Rogue Scholar blog archive today released its first catalog of science blogs,
+        a total of nineteen science blogs that signed up for the Rogue Scholar via
+        submission form and met the inclusion criteria: The...","date_published":"2023-03-29T20:46:54Z","date_modified":"2023-04-04T09:22:41Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1662582632158-7f0f6e9a617b?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMzfHxjYXRhbG9nfGVufDB8fHx8MTY4MDEyMTQ2MQ&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1662582632158-7f0f6e9a617b?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDMzfHxjYXRhbG9nfGVufDB8fHx8MTY4MDEyMTQ2MQ&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>The
+        Rogue Scholar blog archive today released its <a href=\"https://rogue-scholar.org/blogs\">first
+        catalog of science blogs</a>, a total of nineteen science blogs that signed
+        up for the Rogue Scholar via <a href=\"https://jvinjjenjik.typeform.com/to/uxgAsHPl\">submission
+        form</a> and met the inclusion criteria: </p><ul><li>The blog is about science
+        and in English or German (more languages will follow later, reach out to me
+        if you can help).</li><li>The full-text content is available via RSS feed
+        and distributed using a Creative Commons Attribution license (<a href=\"https://creativecommons.org/licenses/by/4.0/legalcode\">CC-BY</a>).</li></ul><p>The
+        Rogue Scholar will launch in the second quarter of this year, and this list
+        of science blogs is an important step. The RSS feeds of the included blogs
+        will be used to archive content and register DOIs, and they contain important
+        information that I will include over time, including license, language, blog
+        description, blog logo, contact person, and blogging platform.</p><figure
+        class=\"kg-card kg-image-card kg-card-hascaption\"><img src=\"https://blog.front-matter.io/content/images/2023/03/Bildschirmfoto-2023-03-29-um-22.38.08.png\"
+        class=\"kg-image\" alt loading=\"lazy\" width=\"2000\" height=\"841\" srcset=\"https://blog.front-matter.io/content/images/size/w600/2023/03/Bildschirmfoto-2023-03-29-um-22.38.08.png
+        600w, https://blog.front-matter.io/content/images/size/w1000/2023/03/Bildschirmfoto-2023-03-29-um-22.38.08.png
+        1000w, https://blog.front-matter.io/content/images/size/w1600/2023/03/Bildschirmfoto-2023-03-29-um-22.38.08.png
+        1600w, https://blog.front-matter.io/content/images/size/w2400/2023/03/Bildschirmfoto-2023-03-29-um-22.38.08.png
+        2400w\" sizes=\"(min-width: 720px) 720px\"><figcaption>Subset of the blogs
+        included in the first <a href=\"https://rogue-scholar.org/blogs\">Rogue Scholar
+        catalog</a></figcaption></figure><p>The first Rogue Scholar catalog can be
+        used as a starting point to find interesting science blogs, but more importantly,
+        the catalog is available as an <a href=\"https://doi.org/10.53731/wa7k5-v4t16\">OPML
+        file</a> for download and can be imported (and modified) into any blog reader.</p>
+        ","tags":["News"],"language":"en"},{"id":"https://doi.org/10.53731/d6vdvbt-tffmezj","short_id":"5ldw65eo","url":"https://blog.front-matter.io/posts/rss-atom-jsonfeed/","title":"RSS,
+        Atom, JSON Feed","summary":"As I discussed in a recent post, RSS is an essential
+        building block for the upcoming Rogue Scholar Scholarly Blog Archive. RSS
+        makes it easy to import blog posts (both metadata and content) automatically
+        and...","date_published":"2023-01-16T16:57:54Z","date_modified":"2023-01-16T17:06:53Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1597092451116-27787c07901d?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGFyY2hpdmV8ZW58MHx8fHwxNjczODg2NDI2&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1597092451116-27787c07901d?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGFyY2hpdmV8ZW58MHx8fHwxNjczODg2NDI2&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>As
+        I discussed in a <a href=\"https://doi.org/10.53731/eyf75cj-jsgv26c\">recent
+        post</a>, RSS is an essential building block for the upcoming <a href=\"https://rogue-scholar.org\">Rogue
+        Scholar</a> Scholarly Blog Archive. RSS makes it easy to import blog posts
+        (both metadata and content) automatically and is supported by all blogging
+        platforms. This kind of automation is critical to keep the costs of running
+        the Rogue Scholar low, allowing it to scale to cover a substantial number
+        of science blog posts, and hopefully becoming an important Open Science resource.</p><p>But
+        there are also challenges with using RSS:</p><ul><li>RSS is not a single standard
+        but comes in multiple flavors: multiple versions of RSS, Atom, and the newer
+        <a href=\"https://www.jsonfeed.org/\">JSON Feed</a>. Most libraries for consuming
+        RSS (e.g. the Python <a href=\"https://github.com/kurtmckee/feedparser\">feedparser</a>)
+        can handle RSS and Atom, and fewer tools (e.g. the Python <a href=\"https://pypi.org/project/reader/\">feeder</a>)
+        also support the newer JSON Feed.</li><li>The Rogue Scholar will use the <a
+        href=\"https://inveniordm.docs.cern.ch/\">InvenioRDM</a> open source platform,
+        which uses <a href=\"https://opensearch.org/\">OpenSearch</a> to index content
+        and metadata. OpenSearch – just like Elasticsearch on which it is based –
+        works with JSON. Indexing and archiving science blogs therefore should first
+        convert RSS and Atom feeds onto JSON, and JSON Feed, <a href=\"https://www.jsonfeed.org/mappingrssandatom/\">which
+        has been mapped from RSS and Atom</a>, is the obvious choice.</li><li>Some
+        blogs prefer to only publish summaries in their RSS feeds, there have been
+        many discussions on this topic over the years. It would complicate the operation
+        of the Rogue Scholar if full-text content has to retrieved by other means,
+        and archiving full-text content is the primary goal for the Rogue Scholar.
+        The Rogue Scholar needs one feed that provides the full-text content, it doesn''t
+        have to be the default blog feed.</li><li>Blogs, in particular personal blogs,
+        may publish content that is out of the scope of the main science topics of
+        the blog. Occasional out-of-scope posts, e.g. talking about major events such
+        as job changes, sickness, or travel, are probably ok, and add a personal note.
+        If this is frequently the case, and this has come up twice in initial Rogue
+        Scholar discussions, it probably makes sense to provide a filtered RSS feed
+        (e.g. using tags) with only a subset of posts.</li><li>Describing a blog and
+        associated metadata (e.g. name, feed URL, language, license, contact) is not
+        something that easily maps how InvenioRDM is modeled. The obvious choice would
+        be <a href=\"https://inveniordm.web.cern.ch/communities\">communities</a>,
+        but they can also be seen as a higher level of aggregation, e.g. all blog
+        posts about biodiversity independent of the blog source. For now I will work
+        with communities and enhance the InvenioRDM functionality where it also makes
+        sense for other InvenioRDM use cases, of course coordinating with the InvenioRDM
+        community.</li></ul><p>Two weeks ago I opened up the <a href=\"https://jvinjjenjik.typeform.com/to/uxgAsHPl\">waitlist</a>
+        for the Rogue Scholar, and I am happy with the feedback I have received so
+        far: sixteen submissions and a number of encouraging discussions. Consider
+        adding your science blog to the waitlist, or learn more at the <a href=\"https://rogue-scholar.org\">Rogue
+        Scholar</a> website. If you have questions, post them in the comments or join
+        the <a href=\"https://discord.gg/wZcqPt4p\">Discord channel </a>(renamed from
+        Front Matter to Rogue Scholar).</p><p>It has not escaped our notice that the
+        specific use of RSS we have postulated immediately suggests a possible mechanism
+        for the archiving and DOI registration of other scholarly content.</p> ","tags":["Feature"],"language":"en"},{"id":"https://doi.org/10.53731/88drdpz-znvdjr9","short_id":"qlgxvqdm","url":"https://blog.front-matter.io/posts/launching-the-front-matter-gazette/","title":"Launching
+        the Front Matter Gazette","summary":"On Wednesday this week I am launching
+        the Front Matter Gazette, a weekly newsletter that highlights exciting science
+        stories from around the web. The linked content highlighted in the newsletter
+        is published...","date_published":"2023-01-30T12:48:26Z","date_modified":"2023-01-30T12:48:26Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1521134976835-9963f2185519?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxqb3VybmFsfGVufDB8fHx8MTY3NTAxMzMwNA&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1521134976835-9963f2185519?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxqb3VybmFsfGVufDB8fHx8MTY3NTAxMzMwNA&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>On
+        Wednesday this week I am launching the <em>Front Matter Gazette</em>, a weekly
+        newsletter that highlights exciting science stories from around the web. The
+        linked content highlighted in the newsletter is published elsewhere and is
+        free to read whenever possible. The newsletter requires a paid subscription
+        (<a href=\"https://blog.front-matter.io/#/portal/signup\">available here</a>),
+        5 €/month or 50 €/year with a thirty-day free trial and free subscriptions
+        on request. The subscription fees help pay for the curation effort – finding
+        and summarizing the most exciting science stories. </p><h3 id=\"why-do-we-need-to-highlight-the-most-interesting-science\">Why
+        do we need to highlight the most interesting science?</h3><p>With the <em>Front
+        Matter Gazette,</em> I try a new approach to addressing an old problem: information
+        overload.</p><figure class=\"kg-card kg-embed-card kg-card-hascaption\"><iframe
+        width=\"200\" height=\"150\" src=\"https://www.youtube.com/embed/LabqeJEOQyI?feature=oembed\"
+        frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media;
+        gyroscope; picture-in-picture; web-share\" allowfullscreen title=\"Web 2.0
+        Expo NY: Clay Shirky (shirky.com) It''s Not Information Overload. It''s Filter
+        Failure.\"></iframe><figcaption>Web 2.0 Expo NY: Clay Shirky (shirky.com)
+        It''s Not Information Overload. It''s Filter Failure.</figcaption></figure><p>The
+        approach traditionally often used in science has been to use journals as a
+        filter. There are many reasons why this approach has failed, described for
+        example in <a href=\"https://asapbio.org/addressing-information-overload-in-scholarly-literature\">this
+        2021 post on the ASAPbio blog</a> by Christine Ferguson and me. Three important
+        limitations are:</p><ul><li><strong>Delays</strong>. The time from submission
+        to publication for peer-reviewed journal articles can be significant, which
+        causes critical issues in situations that need quick actions based on science
+        such as in the COVID pandemic, but also for early career researchers.</li><li><strong>Focus
+        on the journal article</strong>. Journal articles are the main channel of
+        scientific communication in many disciplines, but large parts of scholarship
+        focus on something else, for example, conference proceedings in computer science
+        or books in the humanities. In addition, newer outputs of scholarship such
+        as research data or software source code are left out or only captured <em>by
+        proxy</em>, publishing journals with articles describing software or data.</li><li><strong>Not
+        Open Science</strong>. Leaving the decision to what is important in science
+        to journal publishers, often commercial, instead of the scientists themselves,
+        is the wrong choice as other interests interfere, and marginalized communities
+        and regions are left out not only of science publishing but also of what science
+        is highlighted and promoted.</li></ul><p>Two alternative approaches to journals
+        as a filter are <strong>automation</strong> and <strong>curation</strong>.
+        In the ASAPbio blog post mentioned earlier, Christine and I discussed an automation
+        approach we tried out in 2021, filtering relevant biomedical preprints by
+        the attention they received on Twitter immediately after publication. We have
+        not continued this activity beyond early 2022 for two reasons: a) I spent
+        the first <a href=\"https://doi.org/10.53731/bkkzj8g-gd14mb6\">five months
+        of 2022 in the hospital</a>, and b) in November 2022 I left Twitter and moved
+        to <a href=\"https://hachyderm.io/@mfenner\">Mastodon</a> after the change
+        in Twitter ownership.</p><p>There are many initiatives in this space that
+        try to use computer algorithms to find the most relevant scholarly content,
+        but Christine and I felt that this was only the first step and that <strong>curation</strong>
+        was key to finding what is interesting and relevant. Curation is what journal
+        editors have always done, and what is helped with peer review since it became
+        increasingly required in the 1960s, but when curation is used to find what
+        is interesting and relevant, and not what should be published, there is no
+        longer a need to leave the curation exclusively up to journals.</p><p>An Open
+        Science approach to curation has many elements, but a newsletter feels like
+        a good fit. It is a low-tech approach that works even for the busiest scientists,
+        and it can be combined with the automation approaches discussed earlier. And
+        curated newsletters about Science and Scholarship work with preprints, research
+        data, source code, and other forms of scholarship. A related activity, no
+        longer so low-tech, is science podcasts, which arguably are currently more
+        popular than science newsletters.</p><h3 id=\"and-who-is-going-to-pay-for-this\">And
+        who is going to pay for this?</h3><p>There are two elephants in the room for
+        paying for this activity: advertising and grant funding. Advertising is not
+        only a frustrating experience for readers and authors, but also doesn''t really
+        work in a niche market such as science. The current issues at the German <a
+        href=\"https://scienceblogs.de/\">scienceblogs.de</a> are only the latest
+        example of the difficulties sustaining science blogging infrastructure.</p><p>Grant
+        funding is a well-established strategy to pay for Open Science activities,
+        but has two major limitations: a) it is not a good fit for the long tail of
+        science (Front Matter for example is not (yet) a non-profit organization because
+        the time and money required to start a non-profit in Germany are far from
+        trivial), and b) grant funding likes to pay for innovation and research, getting
+        funding for open scholarly infrastructure is much harder.</p><p>Of course
+        Front Matter is open for startup funding for the <em>Front Matter Gazette</em>,
+        but it should not be a requirement to get the <em>Gazette</em> started, and
+        I can not promise any financial returns for an investment.</p><p>Paying even
+        a small fee of 5 € per month for a useful Open Science resource can be a hurdle,
+        as <a href=\"https://blog.impactstory.org/subscription-announcement\">Impactstory
+        can attest</a>. That is why we offer a no-questions-asked fee waiver, and
+        why we start the Gazette as an experiment where we don''t know the outcome
+        yet.</p><h3 id=\"will-the-front-matter-gazette-work\">Will the Front Matter
+        Gazette work?</h3><p>Only time will tell whether the Gazette can attract enough
+        readers to become a sustainable operation, and I will work on the Gazette
+        until 2024 to make that call. The <a href=\"https;//ghost.org\">Ghost publishing
+        platform</a> powering this blog since 2021 is for people who believe in this
+        vision (mostly in domains other than science):</p><blockquote>Ghost is a powerful
+        app for new-media creators to publish, share, and grow a business around their
+        content. It comes with modern tools to build a website, publish content, send
+        newsletters & offer paid subscriptions to members. – <a href=\"https://ghost.org/\">Ghost
+        Homepage</a></blockquote><p>Future plans for the <em>Front Matter Gazette</em>
+        in case of a successful start focus on expanding the coverage – five stories
+        a week is not even the tip of the iceberg of what''s happening every week
+        in scholarship.</p><h3 id=\"what-is-the-relationship-to-the-rogue-scholar\">What
+        is the relationship to the Rogue Scholar?</h3><p><a href=\"https://rogue-scholar.org/\">The
+        Rogue Scholar</a> is a science blog archive that I am working on and plan
+        to launch in Q2 2023. Making sure that science blogs can be found over time
+        with the help of full-text search, DOIs plus metadata, and long-term archiving
+        is the first critical step. Using this open content in creative ways is the
+        next step, and curation is one important aspect that I try to start addressing
+        with the <em>Front Matter Gazette</em>. The <em>Front Matter Gazette</em>
+        will highlight all kinds of scholarly content, not just blogs, and not only
+        content archived in the Rogue Scholar, but there are of course synergies that
+        I will try to explore.</p><h3 id=\"what-is-in-the-first-issue-of-the-front-matter-gazette\">What
+        is in the first issue of the Front Matter Gazette?</h3><p>In the February
+        1st issue I will talk about Neanderthal families, ChatGPT in science publishing,
+        the Tidyverse, eradicating an infectious disease, and medieval manuscripts.</p>
+        ","tags":["News"],"language":"en"},{"id":"https://doi.org/10.53731/wa7k5-v4t16","short_id":"wneyvxe4","url":"https://blog.front-matter.io/posts/starting-the-rogue-scholar-opml-feed/","title":"Starting
+        the Rogue Scholar OPML Feed","summary":"While the launch of the Rogue Scholar
+        blog archive is still a few months away (happening in the second quarter of
+        this year), I want to give an update on the ongoing work.The Rogue Scholar
+        blog archive will...","date_published":"2023-03-22T10:42:17Z","date_modified":"2023-03-22T10:42:17Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1611864581049-aca018410b97?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDQzfHxmZWVkfGVufDB8fHx8MTY3OTQ3NDc2NQ&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1611864581049-aca018410b97?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDQzfHxmZWVkfGVufDB8fHx8MTY3OTQ3NDc2NQ&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>While
+        the launch of the <a href=\"https://rogue-scholar.org/\">Rogue Scholar</a>
+        blog archive is still a few months away (happening in the second quarter of
+        this year), I want to give an update on the ongoing work.</p><p>The <em>Rogue
+        Scholar</em> blog archive will improve science blogs in important ways,<br>including
+        full-text search, DOIs and metadata, and long-term archiving. The central
+        piece of the underlying infrastructure is the <a href=\"https://inveniosoftware.org/products/rdm/\">InvenioRDM
+        </a>open source repository software. Front Matter is one of the organizations
+        helping with InvenioRDM development. For the <em>Rogue Scholar,</em> the specific
+        work needed includes the following:</p><h3 id=\"support-for-rss-feeds\">Support
+        for RSS Feeds</h3><p>All blogs provide RSS feeds, which will be central to
+        automatically fetching metadata and content for the <em>Rogue Scholar</em>.
+        RSS is not built into InvenioRDM and is not needed by most organizations planning
+        to run InvenioRDM. I will therefore build a separate service for this functionality,
+        integrating with InvenioRDM via its REST API. For a blog to be archived and
+        indexed in the <em>Rogue Scholar</em>, users will use this RSS service, providing
+        basic information such as RSS feed URL, language, license, and contact person
+        – basically the information collected for the <em>Rogue Scholar</em> <a href=\"https://jvinjjenjik.typeform.com/to/uxgAsHPl?typeform-source=rogue-scholar.org\">waitlist</a>
+        (feel free to sign up your blog if you haven''t already).</p><p>Next Tuesday
+        I will publish an <a href=\"https://en.wikipedia.org/wiki/OPML\">OPML</a>
+        (Outline Processor Markup Language) file with all blogs on the <em>Rogue Scholar</em>
+        waitlist. OPML is the standard for importing and exporting lists of blogs,
+        e.g. when switching from one RSS reader to another. It is a natural fit for
+        managing blogs in <em>Rogue Scholar</em>, and hopefully helps people sign
+        up for interesting science blogs they want to read. If you are on the <em>Rogue
+        Scholar </em>waitlist, please make sure your RSS Feed URL and Home Page URL
+        are correct, and – if you haven''t done so already – pick one (and only one)
+        of the top-level categories from the <a href=\"https://www.oecd.org/science/inno/38235147.pdf\">OECD
+        Fields of Science and Technology</a>:</p><ul><li>Natural Sciences</li><li>Engineering
+        and Technology</li><li>Medical and Health Sciences</li><li>Agricultural Sciences</li><li>Social
+        Sciences</li><li>Humanities</li></ul><p>The OPML file (and your RSS reader
+        if you import that file) will group science blogs into these categories. Many
+        blogs fall into more than one category, but that isn''t supported by OPML.
+        </p><h3 id=\"hosting-rogue-scholar-infrastructure\">Hosting Rogue Scholar
+        infrastructure</h3><p>There are <a href=\"https://inveniordm.docs.cern.ch/install/\">several
+        ways</a> to run InvenioRDM repository software, obviously depending on the
+        resources available at the hosting organization, and the size and complexity
+        of the repository. A small data repository for a university department has
+        different needs than <a href=\"https://zenodo.org/\">Zenodo</a>, one of the
+        most popular generalist repositories with almost three million records. The
+        <em>Rogue Scholar</em> sits in the middle, a small to medium-sized repository,
+        anticipating 2,000 to 20,000 blog posts twelve months after launch. InvenioRDM
+        relies on <a href=\"https://www.docker.com/\">Docker</a> and Kubernetes for
+        running production services. This makes sense for large instances such as
+        Zenodo but adds unnecessary complexity to smaller instances such as the <em>Rogue
+        Scholar</em>.</p><p>After a substantial amount of deliberation and discussion,
+        I decided to use a different approach for the <em>Rogue Scholar</em>, and
+        this might potentially be of interest to other organizations planning to use
+        InvenioRDM:</p><ul><li>Using virtual machines instead of Docker containers</li><li>Automation
+        of virtual machine building with <a href=\"https://www.packer.io/\">Packer</a>
+        and <a href=\"https://www.ansible.com/\">Ansible</a></li><li>Hosting of virtual
+        machines by cloud provider <a href=\"https://www.digitalocean.com/\">DigitalOcean</a>,
+        fundamentally similar to hosting a Wordpress or Ghost blog</li><li>Making
+        the automation generic to also work for other InvenioRDM instances, and other
+        infrastructure providers, e.g. <a href=\"https://www.openstack.org/\">Openstack</a></li></ul><p>This
+        will be the focus of my work in the next three months, and luckily I have
+        learned a lot about infrastructure automation in my previous jobs at <a href=\"https://plos.org/\">PLOS</a>
+        and <a href=\"https://datacite.org/\">DataCite</a>.</p><h3 id=\"support-for-crossref-doi-registration\">Support
+        for Crossref DOI registration</h3><p>By default, InvenioRDM uses DataCite
+        DOIs, but <em>Rogue Scholar</em> will use Crossref DOIs for blogs that don''t
+        already use DOIs. The Crossref pricing is much more favorable for startups
+        such as Front Matter, and for annual DOI registration numbers that at least
+        initially will be in the 100s or low 1000s. I spent a good part of January
+        and February writing a Python scholarly metadata conversion library that I
+        released two weeks ago (<a href=\"https://pypi.org/project/commonmeta-py/\">commonmeta-py</a>).
+        Among other things, commonmeta-py can read and write Crossref metadata and
+        can enable Crossref DOI registrations in InvenioRDM – which is written in
+        Python (and Javascript for the frontend).</p><p>As always, reach out to me
+        with questions and comments.</p> ","tags":[],"language":"en"},{"id":"https://doi.org/10.53731/cbvm43q-qdk3s1s","short_id":"nodz2pdp","url":"https://blog.front-matter.io/posts/science-blog-archive-waitlist/","title":"Sign
+        up for the science blog archive waitlist","summary":"The science blog archive
+        that I have started to work on (see previous posts) finally has a name: the
+        Rogue Scholar. I picked this name because I liked the description in the Urban
+        Dictionary.A person with...","date_published":"2023-01-02T11:31:52Z","date_modified":"2023-01-02T11:31:52Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1577046823799-58b2d217d508?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGhhcHB5JTIwbmV3JTIweWVhcnxlbnwwfHx8fDE2NzI2NTY4MzQ&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1577046823799-58b2d217d508?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGhhcHB5JTIwbmV3JTIweWVhcnxlbnwwfHx8fDE2NzI2NTY4MzQ&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>The
+        science blog archive that I have started to work on (<a href=\"https://doi.org/10.53731/eyf75cj-jsgv26c\">see
+        previous posts</a>) finally has a name: the <em>Rogue Scholar</em>. I picked
+        this name because I liked the description in the <a href=\"https://www.urbandictionary.com/define.php?term=rogue%20scholar\">Urban
+        Dictionary</a>.</p><blockquote>A person with extensive knowledge pertaining
+        to various subject matters that extends beyond formal education. This person
+        often <strong>gathers</strong> knowledge from various sources, such as media,
+        friends, casual reading or the internet.</blockquote><p>And I started a waitlist
+        for people interested in having their science blog archived in the <em>Rogue
+        Scholar</em>. There is still a lot of work to do, but I hope to launch the
+        archive in the second quarter of 2023 with these core features:</p><ul><li>based
+        on the <a href=\"https://inveniordm.docs.cern.ch/\">InvenioRDM</a> open source
+        software, hosted by Front Matter</li><li>free to archive 50 blog posts per
+        year. For larger blogs or a backfile of several years, the Rogue Scholar will
+        charge a one-time fee of 1 € per blog post, and I have started to work on
+        securing additional funding for this.</li><li>Full-text search of blog content,
+        typically not available on self-hosted blogs</li><li>DOI registration for
+        blog posts, facilitating discovery and integration of blogs into the scholarly
+        record</li><li>free to read and reuse forever, using the Creative Commons
+        Attribution (<a href=\"https://creativecommons.org/licenses/by/4.0/\">CC-BY</a>)
+        license</li><li>initially support English and German language posts</li></ul><p>The
+        form to sign up for the waitlist is available <a href=\"https://jvinjjenjik.typeform.com/to/uxgAsHPl\">here</a>.</p>
+        ","tags":["News"],"language":"en"},{"id":"https://doi.org/10.53731/a0d9m3n-n7r8h0m","short_id":"3ng2zrg1","url":"https://blog.front-matter.io/posts/guidelines-for-scholarly-blogs/","title":"Guidelines
+        for Scholarly Blogs","summary":"These guidelines are recommendations for authors
+        of scholarly blogs to help with long-term archiving, discoverability, and
+        citation of blog content.They are modeled after the publication A Data Citation...","date_published":"2023-02-06T11:52:24Z","date_modified":"2023-02-06T11:52:24Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1584631277142-0ca0cfc76aec?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGd1aWRlbGluZXxlbnwwfHx8fDE2NzU2ODM0NDc&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1584631277142-0ca0cfc76aec?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDZ8fGd1aWRlbGluZXxlbnwwfHx8fDE2NzU2ODM0NDc&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>These
+        guidelines are recommendations for authors of scholarly blogs to help with
+        long-term archiving, discoverability, and citation of blog content.<br>They
+        are modeled after the publication <a href=\"https://doi.org/10.1038/s41597-019-0031-8\">A
+        Data Citation Roadmap for Scholarly Data Repositories</a>, where many of the
+        same guidelines apply, and where I was the first author and <a href=\"https://force11.org/group/data-citation-implementation-group/\">co-chair
+        of the corresponding Force11 working group.</a></p><p>These guidelines focus
+        on the required or recommended work for scholarly blog authors. For scholarly
+        blog archives such as the <a href=\"https://rogue-scholar.org\">Rogue Scholar</a>,
+        additional guidelines are in development.</p><!--kg-card-begin: html--><table>\n<thead>\n<tr>\n<th>Level</th>\n<th
+        style=\"text-align: right\">#</th>\n<th>Guideline</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Required</td>\n<td
+        style=\"text-align: right\">1</td>\n<td>The full-text content <em>must</em>
+        be made available via public RSS feed (in RSS, Atom or JSON Feed format).</td>\n</tr>\n<tr>\n<td>Required</td>\n<td
+        style=\"text-align: right\">2</td>\n<td>Each blog post in the RSS feed <em>must</em>
+        have a title, author(s), and publication date.</td>\n</tr>\n<tr>\n<td>Required</td>\n<td
+        style=\"text-align: right\">3</td>\n<td>Each blog post <em>must</em> have
+        a URL that resolves to a public landing page specific for that blog post.</td>\n</tr>\n<tr>\n<td>Required</td>\n<td
+        style=\"text-align: right\">4</td>\n<td>The full-text content <em>must</em>
+        be made available via a Creative Commons Attribution (CC-BY) license.</td>\n</tr>\n<tr>\n<td>Required</td>\n<td
+        style=\"text-align: right\">5</td>\n<td>The blog must provide documentation
+        about long-term archiving, discoverability, and citation.</td>\n</tr>\n<tr>\n<td>Recommended</td>\n<td
+        style=\"text-align: right\">6</td>\n<td>Each blog post in the RSS feed <em>should</em>
+        have a persistent identifier, description, language, and last updated date.</td>\n</tr>\n<tr>\n<td>Recommended</td>\n<td
+        style=\"text-align: right\">7</td>\n<td>The landing page <em>should</em> include
+        metadata required for citation, and ideally also metadata facilitating discovery,
+        in human-readable and machine-readable format.</td>\n</tr>\n<tr>\n<td>Recommended</td>\n<td
+        style=\"text-align: right\">8</td>\n<td>The machine-readable metadata <em>should</em>
+        use schema.org markup in JSON-LD format.</td>\n</tr>\n<tr>\n<td>Recommended</td>\n<td
+        style=\"text-align: right\">9</td>\n<td>Metadata <em>should</em> be made available
+        via HTML meta tags to facilitate use by reference managers.</td>\n</tr>\n<tr>\n<td>Recommended</td>\n<td
+        style=\"text-align: right\">10</td>\n<td>Metadata <em>should</em> be made
+        available for download in BibTeX and/or another standard bibliographic format.</td>\n</tr>\n</tbody>\n</table><!--kg-card-end:
+        html--><p>The requirement for full-text content via RSS feed and with a CC-BY
+        license comes from the need to make archiving and indexing as simple (and
+        cheap) as possible. Dealing with multiple licenses, private feeds, and private
+        content adds an extra level of complexity and is not supportive of Open Science.</p><p>Metadata
+        via HTML meta tags and JSON-LD (using schema.org markup) are two main strategies
+        to embed metadata in web pages, to support reference managers but also indexers.
+        Schema.org is simpler to work with, e.g. for more complex author information
+        such as separate given and family names, author identifiers such as ORCID,
+        and affiliation information. On the other hand, reference managers and Google
+        Scholar currently use HTML meta tags, and it is sometimes easier to add this
+        information to a blog.</p><p>Registration of DOIs as other persistent identifiers
+        for blog posts is something that I want to provide via the Rogue Scholar archive,
+        as the effort required is not trivial. The information required (mainly title,
+        author(s), publication date, and URL) is readily available via the RSS feed.
+        Of course, displaying these DOIs on the blog is recommended, and for the DOIs
+        to resolve to the blog itself rather than the blog archive at the Rogue Scholar
+        or elsewhere.</p><p>The recommended or optional metadata for science blog
+        posts is of course a big topic that needs more discussion. Description, language,
+        and last updated date seem desired and readily available. References used
+        in blog posts would be fantastic to be included in the metadata, but there
+        is currently no easy and standard way of doing this. For better discoverability,
+        it would make sense to provide geo coordinates and/or temporal information,
+        and all blogs would benefit from using subject classification such as the
+        <a href=\"https://www.oecd.org/science/inno/38235147.pdf\">OECD Fields of
+        Science and Technology</a>, but all this would require significantly more
+        effort.</p><p>These guidelines are a work in progress and are made available
+        as part of the <a href=\"https://docs.rogue-scholar.org/guidelines\">Rogue
+        Scholar Documentation</a>. Feedback is greatly appreciated.</p> ","tags":["Feature"],"language":"en"},{"id":"https://doi.org/10.53731/4nwxn-frt36","short_id":"1jgo8yel","url":"https://blog.front-matter.io/posts/does-it-compose/","title":"Does
+        it compose?","summary":"One question I have increasingly asked myself in the
+        past few years. Meaning Can I run this open source software using Docker containers
+        and a Docker Compose file?As the Docker project turned ten this...","date_published":"2023-05-16T11:36:56Z","date_modified":"2023-05-16T11:36:56Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1523351964962-1ee5847816c3?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDUzfHxjb250YWluZXJ8ZW58MHx8fHwxNjg0MjMyMTQ0fDA&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1523351964962-1ee5847816c3?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDUzfHxjb250YWluZXJ8ZW58MHx8fHwxNjg0MjMyMTQ0fDA&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>One
+        question I have increasingly asked myself in the past few years. Meaning </p><blockquote>Can
+        I run this open source software  using Docker containers and a Docker Compose
+        file?</blockquote><p>As the Docker project <a href=\"https://snyk.io/blog/the-docker-project-turns-10/\">turned
+        ten this spring</a>, it has become standard practice to distribute open source
+        software via Docker images and to provide a <a href=\"https://docs.docker.com/compose/\">Docker
+        Compose</a> file to run the software together with other dependencies. The
+        <a href=\"https://github.com/docker/awesome-compose\">Awesome Compose</a>
+        project has collected many examples, and all you need is a <code>docker-compose.yml</code>file
+        and a recent installation of Docker, e.g. <a href=\"https://www.docker.com/products/docker-desktop/\">Docker
+        Desktop</a>. Be aware that Docker Compose has evolved over the years. It started
+        out as a dedicated Python application but was later integrated into the Docker
+        application (written in Go) as Compose V2.</p><p>Docker and Docker Compose
+        allow you to run pretty complex applications without first addressing a long
+        list of requirements (which might conflict with other software you have installed),
+        or needing a long and complex build step where many things can go wrong. For
+        example a self-hosted instance of Supabase (a hosted Postgres database with
+        additional features) that I installed last week following <a href=\"https://supabase.com/docs/guides/self-hosting/docker\">these
+        instructions</a>.</p><p>An important open source project that I am involved
+        in is <a href=\"https://inveniordm.docs.cern.ch/\">InvenioRDM</a>, the turn-key
+        research data management repository. InvenioRDM started in 2019, with a first
+        production-suitable version in August 2021, and the <a href=\"https://inveniosoftware.org/products/rdm/#status\">next
+        major goal </a>is to have the large and popular <a href=\"https://zenodo.org/\">Zenodo</a>
+        repository running on top of InvenioRDM. Zenodo <a href=\"https://blog.zenodo.org/2023/05/08/2023-05-08-10years/\">turned
+        ten last week</a>, a few weeks after Docker. Interestingly, my personal tenth
+        anniversary was last year in May as I became a full-time software developer
+        and left academic medicine as a medical doctor treating cancer patients in
+        <a href=\"https://doi.org/10.53731/r294649-6f79289-8cw2j\">May 2012</a>.</p><p>Unfortunately,
+        InvenioRDM \"doesn''t compose\" yet. It is very close, but there are no ready-made
+        Docker images to download, and the <a href=\"https://inveniordm.docs.cern.ch/install/\">installation
+        instructions</a> start with installing a Python command-line tool (invenio-cli).
+        So if you have 1-2 hours to play with InvenioRDM and get a first impression,
+        there is no official solution from the InvenioRDM project yet. For this reason,
+        I started the <a href=\"https://github.com/front-matter/docker-invenio-rdm\">docker-invenio-rdm</a>
+        repository on Github. It contains a Docker Compose file that uses pre-built
+        Docker images, and using that file with a <code>docker compose up</code>command
+        on your local computer should give you a running InvenioRDM within 15 minutes:</p><figure
+        class=\"kg-card kg-image-card\"><img src=\"https://blog.front-matter.io/content/images/2023/05/Bildschirmfoto-2023-05-11-um-10.37.55.png\"
+        class=\"kg-image\" alt loading=\"lazy\" width=\"2000\" height=\"1210\" srcset=\"https://blog.front-matter.io/content/images/size/w600/2023/05/Bildschirmfoto-2023-05-11-um-10.37.55.png
+        600w, https://blog.front-matter.io/content/images/size/w1000/2023/05/Bildschirmfoto-2023-05-11-um-10.37.55.png
+        1000w, https://blog.front-matter.io/content/images/size/w1600/2023/05/Bildschirmfoto-2023-05-11-um-10.37.55.png
+        1600w, https://blog.front-matter.io/content/images/2023/05/Bildschirmfoto-2023-05-11-um-10.37.55.png
+        2193w\" sizes=\"(min-width: 720px) 720px\"></figure><p>I started this recently
+        and obviously want to move forward in two directions:</p><ul><li>fine-tune
+        the initial configuration to provide a great initial experience with InvenioRDM,
+        e.g. making it easy to <a href=\"https://inveniordm.docs.cern.ch/develop/topics/theming/\">theme</a>
+        the InvenioRDM instance</li><li>make this an official part of the InvenioRDM
+        project, extending the <a href=\"https://github.com/inveniosoftware/docker-invenio\">docker-invenio</a>
+        GitHub repository that provides Docker base images for InvenioRDM and other
+        projects using the Invenio software.</li></ul><p>But of course, Docker Compose
+        is not the answer to all questions regarding running Docker-based infrastructure.
+        For production environments, most people shy away from using Docker Compose.
+        The reasons for that and the alternatives will be the topic of a future blog
+        post (spoiler: there is exciting news).</p><p>Docker Compose also needs more
+        work to be set up correctly for development environments. It is a common practice
+        and a workflow I used while working at DataCite (where we launched Docker-based
+        infrastructure in 2016), but for now, the easiest way to set up InvenioRDM
+        development environments is using the <a href=\"https://inveniordm.docs.cern.ch/install/\">invenio-cli
+        tool with a local development environment</a>.</p><p>Please reach out to me
+        with feedback on running Docker Compose for InvenioRDM (use the <a href=\"https://github.com/front-matter/docker-invenio-rdm/discussions\">discussions</a>
+        feature in the GitHub repo), or if you have questions about running InvenioRDM
+        in production.</p> ","tags":["News"],"language":"en"},{"id":"https://doi.org/10.53731/fawv321-14359c4","short_id":"56gl1qd9","url":"https://blog.front-matter.io/posts/announcing-commonmeta-ruby/","title":"Announcing
+        commonmeta-ruby","summary":"Following recent announcements of the commonmeta
+        standard for scholarly metadata and a Python package that converts several
+        metadata formats (commonmeta-py), today I am happy to announce commonmeta-ruby,
+        a...","date_published":"2023-03-20T14:54:00Z","date_modified":"2023-03-22T12:32:52Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1676284572206-2501ff5c6956?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDUwfHxiaWtlJTIwbSVDMyVCQ25zdGVyfGVufDB8fHx8MTY3OTMyMTU4MA&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","content_html":"
+        <p><img src=\"https://images.unsplash.com/photo-1676284572206-2501ff5c6956?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDUwfHxiaWtlJTIwbSVDMyVCQ25zdGVyfGVufDB8fHx8MTY3OTMyMTU4MA&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\"></p><p>Following
+        recent announcements of the <a href=\"https://commonmeta.org\">commonmeta</a>
+        standard for scholarly metadata and a Python package that converts several
+        metadata formats (<a href=\"https://github.com/front-matter/commonmeta-py\">commonmeta-py</a>),
+        today I am happy to announce <a href=\"https://github.com/front-matter/commonmeta-ruby\">commonmeta-ruby</a>,
+        a Ruby gem and command-line tool to convert scholarly metadata using commonmeta
+        as the internal format. commonmeta-ruby is based on the <a href=\"https://github.com/datacite/bolognese\">bolognese
+        Ruby library</a> that I started a few ago while working at DataCite, but is
+        a major rewrite that uses commonmeta as its intermediary conversion format.</p><p>Originally
+        planned for later this year, I decided to speed up the release as Ruby version
+        2.x (currently 2.7.7) reaches its <a href=\"https://endoflife.date/ruby\">end
+        of life</a> this month, and <a href=\"https://rubygems.org/gems/briard\">briard</a>
+        (the fork I wrote to support additional metadata conversions such as <a href=\"https://citation-file-format.github.io/\">Citation
+        File Format</a> and Crossref DOI registrations) didn''t fully work with Ruby
+        3.x. In addition to supporting Ruby 3.x and validating with the <a href=\"https://commonmeta.org/schema\">commonmeta
+        JSON Schema</a>, commonmeta-ruby dropped support for DataCite XML. The DataCite
+        REST API has always been a JSON API, and DOI registration using DataCite XML
+        for many years has used JSON under the hood. Metadata conversion using XML
+        is painful, and focussing on JSON metadata simplifies further development.</p><p>The
+        next steps for commonmeta are:</p><ul><li>Refine the commonmeta-py and commonmeta-ruby
+        libraries by adding tests and real-world implementations (such as the DOI
+        registration for this blog post, which was done using commonmeta-ruby)</li><li>Work
+        towards a commonmeta v1.0 JSON Schema</li><li>Add support for bibliographies
+        (lists of resources) to commonmeta.</li><li>Commonmeta implementations in
+        additional languages, in particular Javascript/Typescript.</li></ul> ","tags":["News"],"language":"en"}]}'
+  recorded_at: Sun, 04 Jun 2023 13:34:34 GMT
+recorded_with: VCR 6.1.0

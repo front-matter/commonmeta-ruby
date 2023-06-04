@@ -13,7 +13,7 @@ require_relative 'readers/codemeta_reader'
 require_relative 'readers/crossref_reader'
 require_relative 'readers/crossref_xml_reader'
 require_relative 'readers/datacite_reader'
-require_relative 'readers/json_post_reader'
+require_relative 'readers/json_feed_reader'
 require_relative 'readers/npm_reader'
 require_relative 'readers/ris_reader'
 require_relative 'readers/schema_org_reader'
@@ -47,7 +47,7 @@ module Commonmeta
     include Commonmeta::Readers::CrossrefXmlReader
     include Commonmeta::Readers::CslReader
     include Commonmeta::Readers::DataciteReader
-    include Commonmeta::Readers::JsonPostReader
+    include Commonmeta::Readers::JsonFeedReader
     include Commonmeta::Readers::NpmReader
     include Commonmeta::Readers::RisReader
     include Commonmeta::Readers::SchemaOrgReader

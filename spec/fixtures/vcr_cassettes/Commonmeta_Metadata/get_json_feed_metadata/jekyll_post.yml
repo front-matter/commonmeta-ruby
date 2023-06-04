@@ -2,6 +2,53 @@
 http_interactions:
 - request:
     method: get
+    uri: https://rogue-scholar.org/api/blogs/https://rogue-scholar.org/api/posts/1jdkwod5
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 308
+      message: Permanent Redirect
+    headers:
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Type:
+      - text/plain
+      Date:
+      - Sun, 04 Jun 2023 13:19:22 GMT
+      Location:
+      - "/api/blogs/https:/rogue-scholar.org/api/posts/1jdkwod5"
+      Refresh:
+      - 0;url=/api/blogs/https:/rogue-scholar.org/api/posts/1jdkwod5
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::b86qp-1685884762624-ef647a1e8361
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: 'Redirecting to /api/blogs/https:/rogue-scholar.org/api/posts/1jdkwod5
+        (308)
+
+        '
+  recorded_at: Sun, 04 Jun 2023 13:19:22 GMT
+- request:
+    method: get
     uri: https://rogue-scholar.org/api/posts/1jdkwod5
     body:
       encoding: UTF-8
@@ -27,7 +74,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 04 Jun 2023 11:24:20 GMT
+      - Sun, 04 Jun 2023 13:22:56 GMT
       Etag:
       - '"15ahqsuw1ek2q9"'
       Server:
@@ -39,7 +86,7 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::kp8s8-1685877860461-9c83d98ce0ae
+      - fra1::iad1::4g2bf-1685884976137-f69c39b47476
       Connection:
       - close
     body:
@@ -83,52 +130,5 @@ http_interactions:
         official YAML representation, which can be validated with the same JSON schemas.</li>\n    </ul>\n  </li>\n</ul>","tags":[],"language":"en","blog_id":"prmb582","blog":{"id":"prmb582","title":"Citation
         Style Language","language":"en","favicon":null,"feed_url":"https://citationstyles.org/feed.xml","home_page_url":"https://citationstyles.org/","license":"https://creativecommons.org/licenses/by/4.0/legalcode","category":"Engineering
         and Technology"}}'
-  recorded_at: Sun, 04 Jun 2023 11:24:20 GMT
-- request:
-    method: get
-    uri: https://rogue-scholar.org/api/blogs/https://rogue-scholar.org/api/posts/1jdkwod5
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - rogue-scholar.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 308
-      message: Permanent Redirect
-    headers:
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Type:
-      - text/plain
-      Date:
-      - Sun, 04 Jun 2023 13:17:11 GMT
-      Location:
-      - "/api/blogs/https:/rogue-scholar.org/api/posts/1jdkwod5"
-      Refresh:
-      - 0;url=/api/blogs/https:/rogue-scholar.org/api/posts/1jdkwod5
-      Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::t5nh7-1685884631747-c6100cb2ebac
-      Connection:
-      - close
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: 'Redirecting to /api/blogs/https:/rogue-scholar.org/api/posts/1jdkwod5
-        (308)
-
-        '
-  recorded_at: Sun, 04 Jun 2023 13:17:11 GMT
+  recorded_at: Sun, 04 Jun 2023 13:22:56 GMT
 recorded_with: VCR 6.1.0

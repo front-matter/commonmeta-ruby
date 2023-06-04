@@ -340,4 +340,12 @@ describe Commonmeta::CLI do
       expect { subject.decode_id input }.to output(/18397685862\n/).to_stdout
     end
   end
+
+  describe "json_feed", vcr: true do
+    let(:input) { "prmb582" }
+
+    it "blog post" do
+      expect { subject.json_feed input }.to output(/1jdkoe52,4qe9ypg1,1jdkwod5,56glp9d9,1xdnk0d0,56glmmd9,1xdnoje0,31epl0dn,q0dqm6go\n/).to_stdout
+    end
+  end
 end

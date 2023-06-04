@@ -3,9 +3,9 @@
 require 'spec_helper'
 
 describe Commonmeta::Metadata, vcr: true do
-  subject { described_class.new(input: input, from: 'json_feed') }
+  subject { described_class.new }
 
-  context 'get json_post metadata' do
+  context 'get json_feed_item metadata' do
     it 'blogger post' do
       input = 'https://rogue-scholar.org/api/posts/1jgo59el'
       subject = described_class.new(input: input)
@@ -69,6 +69,7 @@ describe Commonmeta::Metadata, vcr: true do
     it 'jekyll post' do
       input = 'https://rogue-scholar.org/api/posts/1jdkwod5'
       subject = described_class.new(input: input)
+      puts subject.errors
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2')
       expect(subject.url).to eq('https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2')
@@ -85,5 +86,25 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.language).to eq('en')
       expect(subject.container).to eq("identifier"=>"https://citationstyles.org/", "identifierType"=>"URL", "title"=>"Citation Style Language", "type"=>"Periodical")
     end 
+  end
+
+  context 'get json_feed' do
+    it 'front-matter blog' do
+      id = 'f0m0e38'
+      response = subject.get_json_feed(id)
+      expect(response).to be_nil
+    end
+
+    it 'upstream' do
+      id = 'pm0p222'
+      response = subject.get_json_feed(id)
+      expect(response).to be_nil
+    end
+
+    it 'citation style language' do
+      id = 'prmb582'
+      response = subject.get_json_feed(id)
+      expect(response).to eq("1jdkoe52,4qe9ypg1,1jdkwod5,56glp9d9,1xdnk0d0,56glmmd9,1xdnoje0,31epl0dn,q0dqm6go")
+    end
   end
 end

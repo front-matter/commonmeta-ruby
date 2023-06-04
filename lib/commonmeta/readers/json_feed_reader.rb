@@ -2,8 +2,8 @@
 
 module Commonmeta
   module Readers
-    module JsonPostReader
-      def get_json_post(id: nil, **_options)
+    module JsonFeedReader
+      def get_json_feed_item(id: nil, **_options)
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
         url = normalize_id(id)
@@ -13,7 +13,7 @@ module Commonmeta
         { "string" => response.body.to_s }
       end
 
-      def read_json_post(string: nil, **options)
+      def read_json_feed_item(string: nil, **options)
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
 
@@ -23,7 +23,7 @@ module Commonmeta
         url = normalize_url(meta.fetch("url", nil))
         type = "Article"
         creators = if meta.fetch("authors", nil).present?
-            get_authors(from_json_post(Array.wrap(meta.fetch("authors"))))
+            get_authors(from_json_feed(Array.wrap(meta.fetch("authors"))))
           else
             [{ "type" => "Organization", "name" => ":(unav)" }]
           end
@@ -72,6 +72,18 @@ module Commonmeta
           "license" => license,
           "subjects" => subjects.presence,
           "state" => state }.compact.merge(read_options)
+      end
+
+      def get_json_feed(id)
+        # get JSON Feed items not registered as DOIs
+        return { "string" => nil, "state" => "not_found" } unless id.present?
+
+        url = json_feed_url(id)
+        response = HTTP.get(url)
+        return { "string" => nil, "state" => "not_found" } unless response.status.success?
+
+        blog = JSON.parse(response.body.to_s)
+        blog["items"].select { |item| !validate_doi(item["id"]) }.map { |item| item["short_id"] }.join(",").presence
       end
     end
   end

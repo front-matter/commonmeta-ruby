@@ -2,6 +2,53 @@
 http_interactions:
 - request:
     method: get
+    uri: https://rogue-scholar.org/api/blogs/https://rogue-scholar.org/api/posts/1jgo8yel
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 308
+      message: Permanent Redirect
+    headers:
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Type:
+      - text/plain
+      Date:
+      - Sun, 04 Jun 2023 13:19:22 GMT
+      Location:
+      - "/api/blogs/https:/rogue-scholar.org/api/posts/1jgo8yel"
+      Refresh:
+      - 0;url=/api/blogs/https:/rogue-scholar.org/api/posts/1jgo8yel
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::6rk6m-1685884762980-dd5e259acd6c
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: 'Redirecting to /api/blogs/https:/rogue-scholar.org/api/posts/1jgo8yel
+        (308)
+
+        '
+  recorded_at: Sun, 04 Jun 2023 13:19:22 GMT
+- request:
+    method: get
     uri: https://rogue-scholar.org/api/posts/1jgo8yel
     body:
       encoding: UTF-8
@@ -27,7 +74,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 04 Jun 2023 11:24:21 GMT
+      - Sun, 04 Jun 2023 13:22:55 GMT
       Etag:
       - '"r1h98s95tn5bh"'
       Server:
@@ -39,7 +86,7 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::bd5vk-1685877861203-5afd4143bb69
+      - fra1::iad1::x6k7h-1685884975263-355ba84ed0b5
       Connection:
       - close
     body:
@@ -113,52 +160,5 @@ http_interactions:
         in production.</p> ","tags":["News"],"language":"en","blog_id":"f0m0e38","blog":{"id":"f0m0e38","title":"Front
         Matter","language":"en","favicon":"https://blog.front-matter.io/favicon.png","feed_url":"https://blog.front-matter.io/atom/","home_page_url":"https://blog.front-matter.io/","license":"https://creativecommons.org/licenses/by/4.0/legalcode","category":"Engineering
         and Technology"}}'
-  recorded_at: Sun, 04 Jun 2023 11:24:21 GMT
-- request:
-    method: get
-    uri: https://rogue-scholar.org/api/blogs/https://rogue-scholar.org/api/posts/1jgo8yel
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - rogue-scholar.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 308
-      message: Permanent Redirect
-    headers:
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Type:
-      - text/plain
-      Date:
-      - Sun, 04 Jun 2023 13:17:11 GMT
-      Location:
-      - "/api/blogs/https:/rogue-scholar.org/api/posts/1jgo8yel"
-      Refresh:
-      - 0;url=/api/blogs/https:/rogue-scholar.org/api/posts/1jgo8yel
-      Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::n9c8v-1685884631577-4ed855e8d109
-      Connection:
-      - close
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: 'Redirecting to /api/blogs/https:/rogue-scholar.org/api/posts/1jgo8yel
-        (308)
-
-        '
-  recorded_at: Sun, 04 Jun 2023 13:17:11 GMT
+  recorded_at: Sun, 04 Jun 2023 13:22:55 GMT
 recorded_with: VCR 6.1.0

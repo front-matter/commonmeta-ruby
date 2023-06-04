@@ -170,7 +170,7 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Deep dive into ethics of Contributor Roles: report of a FORCE11 workshop")
     end
 
-    it "json_post from upstream blog" do
+    it "json_feed_item from upstream blog" do
       input = "https://rogue-scholar.org/api/posts/wve6rep4"
       subject = described_class.new(input: input)
 
@@ -193,7 +193,7 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Attempts at automating journal subject classification")
     end
 
-    it "json_post from rogue scholar with doi" do
+    it "json_feed_item from rogue scholar with doi" do
       input = "https://rogue-scholar.org/api/posts/zkevlyd3"
       subject = described_class.new(input: input, doi: "10.59350/9ry27-7cz42")
 

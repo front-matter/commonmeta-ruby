@@ -469,7 +469,7 @@ module Commonmeta
       elsif %r{\A(http|https):/(/)?github\.com/(.+)\z}.match?(id)
         "cff"
       elsif %r{\A(http|https):/(/)?rogue-scholar\.org/api/posts/(.+)\z}.match?(id)
-        "json_post"
+        "json_feed_item"
       else
         "schema_org"
       end
@@ -877,7 +877,7 @@ module Commonmeta
       }
     end
 
-    def from_json_post(element)
+    def from_json_feed(element)
       mapping = { "url" => "id" }
 
       map_hash_keys(element: element, mapping: mapping)
@@ -1379,6 +1379,10 @@ module Commonmeta
 
     def decode_container_id(id)
       Base32::URL.decode(id)
+    end
+
+    def json_feed_url(id)
+      "https://rogue-scholar.org/api/blogs/#{id}"
     end
   end
 end

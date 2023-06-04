@@ -2,6 +2,53 @@
 http_interactions:
 - request:
     method: get
+    uri: https://rogue-scholar.org/api/blogs/https://rogue-scholar.org/api/posts/1jgo59el
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 308
+      message: Permanent Redirect
+    headers:
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Type:
+      - text/plain
+      Date:
+      - Sun, 04 Jun 2023 13:19:22 GMT
+      Location:
+      - "/api/blogs/https:/rogue-scholar.org/api/posts/1jgo59el"
+      Refresh:
+      - 0;url=/api/blogs/https:/rogue-scholar.org/api/posts/1jgo59el
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::c9dh9-1685884762805-30abff0801ab
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: 'Redirecting to /api/blogs/https:/rogue-scholar.org/api/posts/1jgo59el
+        (308)
+
+        '
+  recorded_at: Sun, 04 Jun 2023 13:19:22 GMT
+- request:
+    method: get
     uri: https://rogue-scholar.org/api/posts/1jgo59el
     body:
       encoding: UTF-8
@@ -27,7 +74,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 04 Jun 2023 11:24:19 GMT
+      - Sun, 04 Jun 2023 13:22:53 GMT
       Etag:
       - '"r6tc4lxjtm4ak"'
       Server:
@@ -39,7 +86,7 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::8p5l9-1685877859105-b60703704b92
+      - fra1::iad1::p4k6f-1685884969654-20804225b67a
       Connection:
       - close
     body:
@@ -90,52 +137,5 @@ http_interactions:
         is also a simple app to demonstrate these links, see <a href=\"https://species-cite.herokuapp.com\">https://species-cite.herokuapp.com</a>.\n\n\n\n<blockquote>\n<p>Written
         with <a href=\"https://stackedit.io/\">StackEdit</a>.</p>\n</blockquote>","tags":[],"language":"en","blog_id":"tyfqw20","blog":{"id":"tyfqw20","title":"iPhylo","language":"en","favicon":null,"feed_url":"https://iphylo.blogspot.com/feeds/posts/default?alt=rss","home_page_url":"https://iphylo.blogspot.com/","license":"https://creativecommons.org/licenses/by/4.0/legalcode","category":"Natural
         Sciences"}}'
-  recorded_at: Sun, 04 Jun 2023 11:24:19 GMT
-- request:
-    method: get
-    uri: https://rogue-scholar.org/api/blogs/https://rogue-scholar.org/api/posts/1jgo59el
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - rogue-scholar.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 308
-      message: Permanent Redirect
-    headers:
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Type:
-      - text/plain
-      Date:
-      - Sun, 04 Jun 2023 13:17:11 GMT
-      Location:
-      - "/api/blogs/https:/rogue-scholar.org/api/posts/1jgo59el"
-      Refresh:
-      - 0;url=/api/blogs/https:/rogue-scholar.org/api/posts/1jgo59el
-      Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::rkkzk-1685884631381-9f6a9ad54465
-      Connection:
-      - close
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: 'Redirecting to /api/blogs/https:/rogue-scholar.org/api/posts/1jgo59el
-        (308)
-
-        '
-  recorded_at: Sun, 04 Jun 2023 13:17:11 GMT
+  recorded_at: Sun, 04 Jun 2023 13:22:53 GMT
 recorded_with: VCR 6.1.0

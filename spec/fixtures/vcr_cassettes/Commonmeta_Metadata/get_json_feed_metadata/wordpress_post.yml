@@ -2,6 +2,53 @@
 http_interactions:
 - request:
     method: get
+    uri: https://rogue-scholar.org/api/blogs/https://rogue-scholar.org/api/posts/zkevlyd3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 308
+      message: Permanent Redirect
+    headers:
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Type:
+      - text/plain
+      Date:
+      - Sun, 04 Jun 2023 13:19:23 GMT
+      Location:
+      - "/api/blogs/https:/rogue-scholar.org/api/posts/zkevlyd3"
+      Refresh:
+      - 0;url=/api/blogs/https:/rogue-scholar.org/api/posts/zkevlyd3
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::ms7l2-1685884763155-405b12e832e6
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: 'Redirecting to /api/blogs/https:/rogue-scholar.org/api/posts/zkevlyd3
+        (308)
+
+        '
+  recorded_at: Sun, 04 Jun 2023 13:19:23 GMT
+- request:
+    method: get
     uri: https://rogue-scholar.org/api/posts/zkevlyd3
     body:
       encoding: UTF-8
@@ -27,7 +74,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 04 Jun 2023 11:24:20 GMT
+      - Sun, 04 Jun 2023 13:22:54 GMT
       Etag:
       - '"aszzwmkdb8oo"'
       Server:
@@ -39,7 +86,7 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::9dl4r-1685877859737-fbfae72f0a8a
+      - fra1::iad1::gg2gd-1685884974165-ff7502004c05
       Connection:
       - close
     body:
@@ -159,52 +206,5 @@ http_interactions:
         einen deutlichen Aufschwung geben.</p>\n","tags":["Open Access","Open Access
         Transformation","Open Science","EU"],"language":"de","blog_id":"34zkv26","blog":{"id":"34zkv26","title":"wisspub.net","language":"de","favicon":null,"feed_url":"https://wisspub.net/feed/atom/","home_page_url":"https://wisspub.net/","license":"https://creativecommons.org/licenses/by/4.0/legalcode","category":"Engineering
         and Technology"}}'
-  recorded_at: Sun, 04 Jun 2023 11:24:20 GMT
-- request:
-    method: get
-    uri: https://rogue-scholar.org/api/blogs/https://rogue-scholar.org/api/posts/zkevlyd3
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - rogue-scholar.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 308
-      message: Permanent Redirect
-    headers:
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Type:
-      - text/plain
-      Date:
-      - Sun, 04 Jun 2023 13:17:11 GMT
-      Location:
-      - "/api/blogs/https:/rogue-scholar.org/api/posts/zkevlyd3"
-      Refresh:
-      - 0;url=/api/blogs/https:/rogue-scholar.org/api/posts/zkevlyd3
-      Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::9pxgs-1685884631922-648860dba4cc
-      Connection:
-      - close
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: 'Redirecting to /api/blogs/https:/rogue-scholar.org/api/posts/zkevlyd3
-        (308)
-
-        '
-  recorded_at: Sun, 04 Jun 2023 13:17:11 GMT
+  recorded_at: Sun, 04 Jun 2023 13:22:54 GMT
 recorded_with: VCR 6.1.0

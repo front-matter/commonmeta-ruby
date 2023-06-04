@@ -664,4 +664,12 @@ describe Commonmeta::Metadata, vcr: true do
       expect(response).to eq(17_986_615_561)
     end
   end
+
+  context 'json_feed_url' do
+    it 'front-matter blog' do
+      id = 'f0m0e38'
+      response = subject.json_feed_url(id)
+      expect(response).to eq("https://rogue-scholar.org/api/blogs/f0m0e38")
+    end
+  end
 end

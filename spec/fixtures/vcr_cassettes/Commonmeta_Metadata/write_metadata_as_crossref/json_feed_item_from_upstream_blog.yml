@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 04 Jun 2023 11:24:14 GMT
+      - Sun, 04 Jun 2023 13:23:08 GMT
       Etag:
       - '"kt29he0my7ygld"'
       Server:
@@ -39,7 +39,7 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::phng5-1685877849305-cfc71cd9006a
+      - fra1::iad1::4g2bf-1685884987322-8525eba36f6c
       Connection:
       - close
     body:
@@ -239,52 +239,5 @@ http_interactions:
         was an interesting exercise for the author to get acquainted with machine
         learning and become familiar with some of the available techniques.</p><p></p>
         ","tags":["Original Research"],"language":"en","blog_id":"pm0p222","blog":{"id":"pm0p222","title":"Upstream","language":"en","favicon":"https://upstream.force11.org/favicon.png","feed_url":"https://upstream.force11.org/atom/","home_page_url":"https://upstream.force11.org","license":"https://creativecommons.org/licenses/by/4.0/legalcode","category":"Humanities"}}'
-  recorded_at: Sun, 04 Jun 2023 11:24:15 GMT
-- request:
-    method: get
-    uri: https://rogue-scholar.org/api/blogs/https://rogue-scholar.org/api/posts/wve6rep4
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - rogue-scholar.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 308
-      message: Permanent Redirect
-    headers:
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Type:
-      - text/plain
-      Date:
-      - Sun, 04 Jun 2023 13:17:12 GMT
-      Location:
-      - "/api/blogs/https:/rogue-scholar.org/api/posts/wve6rep4"
-      Refresh:
-      - 0;url=/api/blogs/https:/rogue-scholar.org/api/posts/wve6rep4
-      Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::zpxrc-1685884632711-2572b6e572f4
-      Connection:
-      - close
-      Transfer-Encoding:
-      - chunked
-    body:
-      encoding: ASCII-8BIT
-      string: 'Redirecting to /api/blogs/https:/rogue-scholar.org/api/posts/wve6rep4
-        (308)
-
-        '
-  recorded_at: Sun, 04 Jun 2023 13:17:12 GMT
+  recorded_at: Sun, 04 Jun 2023 13:23:08 GMT
 recorded_with: VCR 6.1.0

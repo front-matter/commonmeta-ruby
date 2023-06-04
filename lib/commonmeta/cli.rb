@@ -9,6 +9,7 @@ module Commonmeta
   class CLI < Thor
     include Commonmeta::DoiUtils
     include Commonmeta::Utils
+    include Commonmeta::Readers::JsonFeedReader
 
     def self.exit_on_failure?
       true
@@ -77,6 +78,12 @@ module Commonmeta
 
     def decode_id(id)
       puts decode_container_id(id)
+    end
+
+    desc '', 'feed'
+
+    def json_feed(id)
+      puts get_json_feed(id)
     end
 
     default_task :convert
