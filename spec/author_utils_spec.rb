@@ -40,6 +40,16 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.is_personal_name?(name: author['name'])).to be true
     end
 
+    it 'has unknown given name' do
+      author = { 'name' => 'Rintze Zelle' }
+      expect(subject.is_personal_name?(name: author['name'])).to be false
+    end
+
+    it 'has middle initial' do
+      author = { 'name' => 'Martin H. Fenner' }
+      expect(subject.is_personal_name?(name: author['name'])).to be true
+    end
+
     it 'has no info' do
       author = { 'name' => 'M Fenner' }
       expect(subject.is_personal_name?(name: author['name'])).to be false

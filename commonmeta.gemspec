@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'http', '~> 5.1', '>= 5.1.1'
   s.add_dependency 'json-ld-preloaded', '~> 3.2', '>= 3.2.2'
   s.add_dependency 'jsonlint', '~> 0.3.0'
-  s.add_dependency 'json_schemer', '~> 0.2.23'
+  s.add_dependency 'json_schemer', '~> 1.0.1'
   s.add_dependency 'loofah', '~> 2.19'
   s.add_dependency 'namae', '~> 1.0'
   s.add_dependency 'postrank-uri', '~> 1.1'

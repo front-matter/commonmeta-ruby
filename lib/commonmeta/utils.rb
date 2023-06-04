@@ -468,6 +468,8 @@ module Commonmeta
         "cff"
       elsif %r{\A(http|https):/(/)?github\.com/(.+)\z}.match?(id)
         "cff"
+      elsif %r{\A(http|https):/(/)?rogue-scholar\.org/api/posts/(.+)\z}.match?(id)
+        "json_post"
       else
         "schema_org"
       end
@@ -875,6 +877,12 @@ module Commonmeta
       }
     end
 
+    def from_json_post(element)
+      mapping = { "url" => "id" }
+
+      map_hash_keys(element: element, mapping: mapping)
+    end
+
     def from_csl(element)
       Array.wrap(element).map do |a|
         if a["literal"].present?
@@ -1068,6 +1076,8 @@ module Commonmeta
 
       return iso8601_time.split(".").first + "Z" if iso8601_time.to_s.include? "."
 
+      return iso8601_time.split("+").first + "Z" if iso8601_time.to_s.include? "+"
+
       iso8601_time
     end
 
@@ -1082,6 +1092,15 @@ module Commonmeta
     def get_date(dates, date_type)
       dd = Array.wrap(dates).find { |d| d["dateType"] == date_type } || {}
       dd.fetch("date", nil)
+    end
+
+    def get_link(links, link_type)
+      ll = Array.wrap(links).find { |d| d["rel"] == link_type } || {}
+      ll.fetch("href", nil)
+    end
+
+    def rogue_scholar_api_url(id, _options = {})
+      "https://rogue-scholar.org/api/posts/#{id}"
     end
 
     # convert commonmeta dates to DataCite format
