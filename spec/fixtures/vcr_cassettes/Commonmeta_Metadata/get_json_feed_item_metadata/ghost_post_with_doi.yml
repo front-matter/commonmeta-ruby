@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/1jgo8yel
+    uri: https://rogue-scholar.org/api/posts/5bb66e92-5cb9-4659-8aca-20e486b695c9
     body:
       encoding: UTF-8
       string: ''
@@ -23,13 +23,13 @@ http_interactions:
       Cache-Control:
       - public, max-age=0, must-revalidate
       Content-Length:
-      - '6894'
+      - '6918'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 04 Jun 2023 13:30:02 GMT
+      - Mon, 05 Jun 2023 08:32:18 GMT
       Etag:
-      - '"r1h98s95tn5bh"'
+      - '"9ujegqu4sc5c5"'
       Server:
       - Vercel
       Strict-Transport-Security:
@@ -39,12 +39,12 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::5t8md-1685885401941-150a0c6eedd7
+      - fra1::iad1::c4p7x-1685953938405-740ca131cc87
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"id":"https://doi.org/10.53731/4nwxn-frt36","short_id":"1jgo8yel","url":"https://blog.front-matter.io/posts/does-it-compose/","title":"Does
+      string: '{"id":"https://doi.org/10.53731/4nwxn-frt36","uuid":"5bb66e92-5cb9-4659-8aca-20e486b695c9","url":"https://blog.front-matter.io/posts/does-it-compose/","title":"Does
         it compose?","summary":"One question I have increasingly asked myself in the
         past few years. Meaning Can I run this open source software using Docker containers
         and a Docker Compose file?As the Docker project turned ten this...","date_published":"2023-05-16T11:36:56Z","date_modified":"2023-05-16T11:36:56Z","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
@@ -113,5 +113,5 @@ http_interactions:
         in production.</p> ","tags":["News"],"language":"en","blog_id":"f0m0e38","blog":{"id":"f0m0e38","title":"Front
         Matter","language":"en","favicon":"https://blog.front-matter.io/favicon.png","feed_url":"https://blog.front-matter.io/atom/","home_page_url":"https://blog.front-matter.io/","license":"https://creativecommons.org/licenses/by/4.0/legalcode","category":"Engineering
         and Technology"}}'
-  recorded_at: Sun, 04 Jun 2023 13:30:02 GMT
+  recorded_at: Mon, 05 Jun 2023 08:32:18 GMT
 recorded_with: VCR 6.1.0

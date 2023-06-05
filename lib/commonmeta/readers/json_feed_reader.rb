@@ -83,7 +83,7 @@ module Commonmeta
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
         blog = JSON.parse(response.body.to_s)
-        blog["items"].select { |item| !validate_doi(item["id"]) }.map { |item| item["short_id"] }.first
+        blog["items"].select { |item| !validate_doi(item["id"]) }.map { |item| item["uuid"] }.first
       end
     end
   end

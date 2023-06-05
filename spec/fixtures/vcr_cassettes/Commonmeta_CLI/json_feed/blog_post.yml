@@ -23,13 +23,13 @@ http_interactions:
       Cache-Control:
       - public, max-age=0, must-revalidate
       Content-Length:
-      - '29830'
+      - '30046'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 04 Jun 2023 14:05:32 GMT
+      - Mon, 05 Jun 2023 08:27:03 GMT
       Etag:
-      - '"pp488uitdomy8"'
+      - '"3osxmn59l4n48"'
       Server:
       - Vercel
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::wc5sv-1685887531972-fdcad9a39325
+      - fra1::iad1::djztz-1685953622736-2b55f4de8668
       Connection:
       - close
     body:
@@ -47,7 +47,7 @@ http_interactions:
       string: '{"id":"prmb582","title":"Citation Style Language","description":"CitationStyles.org,
         home of the Citation Style Language (CSL), a popular open XML-based language
         to describe the formatting of citations and bibliographies.","language":"en","icon":null,"favicon":null,"feed_url":"https://citationstyles.org/feed.xml","feed_format":"application/atom+xml","home_page_url":"https://citationstyles.org/","indexed_at":"2023-04-25","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Jekyll","category":"Engineering
-        and Technology","items":[{"id":"https://citationstyles.org/2014/01/29/mendeley-donates-to-the-csl-project/","short_id":"1jdkoe52","url":"https://citationstyles.org/2014/01/29/mendeley-donates-to-the-csl-project/","title":"Mendeley
+        and Technology","items":[{"id":"https://citationstyles.org/2014/01/29/mendeley-donates-to-the-csl-project/","uuid":"89a326c6-f5d1-443a-99b8-ea75e705ce11","url":"https://citationstyles.org/2014/01/29/mendeley-donates-to-the-csl-project/","title":"Mendeley
         Donates to the CSL Project","summary":"CSL has seen a lot of growth in recent
         years: more than 20 software products use CSL (see the citationstyles.org
         frontpage), and we offer over 6750 free citation styles, covering thousands
@@ -82,7 +82,7 @@ http_interactions:
         citing items in multiple languages.\nWe’ll of course continue to maintain
         the project website and documentation, and handle style submissions to the
         repository.\nFinally, we’ll keep reaching out to publishers to further increase
-        the number of journals covered by CSL styles.</p>","tags":[],"language":"en"},{"id":"https://citationstyles.org/2010/03/22/citation-style-language-1-0/","short_id":"4qe9ypg1","url":"https://citationstyles.org/2010/03/22/citation-style-language-1-0/","title":"Citation
+        the number of journals covered by CSL styles.</p>","tags":[],"language":"en"},{"id":"https://citationstyles.org/2010/03/22/citation-style-language-1-0/","uuid":"6cb26c61-ef77-4b7f-9d60-9925298ed738","url":"https://citationstyles.org/2010/03/22/citation-style-language-1-0/","title":"Citation
         Style Language 1.0","summary":"The Citation Style Language (CSL) team is proud
         to announce CSL 1.0, a free and open XML language for the formatting of citations
         and bibliographies. A New Home CitationStyles.org is the new home of the CSL...","date_published":"2010-03-22T00:00:00Z","date_modified":"2010-03-22T00:00:00Z","authors":[{"url":null,"name":"Rintze
@@ -125,7 +125,7 @@ http_interactions:
         upgrade the more than thousand CSL 0.8 styles hosted in the <a href=\"http://zotero.org/styles\">Zotero
         Style Repository</a>.\nTo upgrade a CSL 0.8 style yourself, follow the <a
         href=\"http://citationstyles.org/downloads/upgrade-notes.html#updating-csl-0-8-styles\">upgrade
-        procedure</a>.</p>","tags":[],"language":"en"},{"id":"https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2/","short_id":"1jdkwod5","url":"https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2/","title":"Seeking
+        procedure</a>.</p>","tags":[],"language":"en"},{"id":"https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2/","uuid":"efdacb04-bcec-49d7-b689-ab3eab0634bf","url":"https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2/","title":"Seeking
         Public Comment on CSL 1.0.2 Release","summary":"Over the past few months,
         Citation Style Language developers have worked to address a backlog of feature
         requests. This work will be reflected in two upcoming releases. The first
@@ -161,7 +161,7 @@ http_interactions:
         approximate qualifiers, and decades and centuries.</li>\n      <li>A new “custom”
         property to add extension metadata.</li>\n      <li>New related modelling
         to match the new style attribute (as above, still in discussion).</li>\n      <li>An
-        official YAML representation, which can be validated with the same JSON schemas.</li>\n    </ul>\n  </li>\n</ul>","tags":[],"language":"en"},{"id":"https://citationstyles.org/2015/05/20/papers-and-springer-donation/","short_id":"56glp9d9","url":"https://citationstyles.org/2015/05/20/papers-and-springer-donation/","title":"Papers
+        official YAML representation, which can be validated with the same JSON schemas.</li>\n    </ul>\n  </li>\n</ul>","tags":[],"language":"en"},{"id":"https://citationstyles.org/2015/05/20/papers-and-springer-donation/","uuid":"e185bf99-5d57-49ef-ae77-f30dd838f53a","url":"https://citationstyles.org/2015/05/20/papers-and-springer-donation/","title":"Papers
         and Springer Donation","summary":"Today, with 30 software products using the
         Citation Style Language (CSL), and a style repository with over 7700 styles,
         we are excited to announce that Papers and Springer have made a $5000 donation
@@ -194,7 +194,7 @@ http_interactions:
         these automated reports into easy-to-understand feedback, and provide contributors
         with detailed instructions on how to correct their submissions.\nAnd last
         but not least, we also hope to pick up the pace again on creating the next
-        version of CSL.</p>","tags":[],"language":"en"},{"id":"https://citationstyles.org/2010/05/30/csl-1-0-specification-update-2010-05-30/","short_id":"1xdnk0d0","url":"https://citationstyles.org/2010/05/30/csl-1-0-specification-update-2010-05-30/","title":"CSL
+        version of CSL.</p>","tags":[],"language":"en"},{"id":"https://citationstyles.org/2010/05/30/csl-1-0-specification-update-2010-05-30/","uuid":"3f903896-a7bc-4342-ab5a-6f9ce57c9683","url":"https://citationstyles.org/2010/05/30/csl-1-0-specification-update-2010-05-30/","title":"CSL
         1.0 Specification Update 2010-05-30","summary":"Changelog The CSL 1.0 specification
         update of 2010-05-30 includes the following changes:  clarified behavior of
         the line-spacing and entry-spacing attributes [diff]  clarified behavior of
@@ -223,7 +223,7 @@ http_interactions:
         to the CSL schema will be accompanied by an updated CSL specification.\nIn
         addition, minor date-versioned updates to the CSL specification can be released
         without accompanying changes to the CSL schema (as is the case for the current
-        specification update).</p>","tags":[],"language":null},{"id":"https://citationstyles.org/2015/07/21/mendeley-and-elsevier-donation-for-2015/","short_id":"56glmmd9","url":"https://citationstyles.org/2015/07/21/mendeley-and-elsevier-donation-for-2015/","title":"Mendeley
+        specification update).</p>","tags":[],"language":null},{"id":"https://citationstyles.org/2015/07/21/mendeley-and-elsevier-donation-for-2015/","uuid":"f520b59c-db35-4b19-9085-8f7ac35e0532","url":"https://citationstyles.org/2015/07/21/mendeley-and-elsevier-donation-for-2015/","title":"Mendeley
         and Elsevier Donation for 2015","summary":"For a second year, Mendeley and
         Elsevier have generously supported the CSL project with a $5,000 donation.
         Donations like these allow us to dedicate time to the project, cover expenses,
@@ -254,7 +254,7 @@ http_interactions:
         for a new maintainer/developer of the <a href=\"http://editor.citationstyles.org/about/\">Visual
         CSL Editor</a>.\nThanks to the donations made to the CSL project, we are able
         to offer (limited) funding to anybody willing to take over this work from
-        Steve Ridout, the editor’s original developer.</p>","tags":[],"language":null},{"id":"https://citationstyles.org/2016/10/06/mendeley-and-elsevier-donation-for-2016/","short_id":"1xdnoje0","url":"https://citationstyles.org/2016/10/06/mendeley-and-elsevier-donation-for-2016/","title":"Mendeley
+        Steve Ridout, the editor’s original developer.</p>","tags":[],"language":null},{"id":"https://citationstyles.org/2016/10/06/mendeley-and-elsevier-donation-for-2016/","uuid":"a30f5f1d-0b27-44f8-ad16-d41ed1cbd0ed","url":"https://citationstyles.org/2016/10/06/mendeley-and-elsevier-donation-for-2016/","title":"Mendeley
         and Elsevier Donation for 2016","summary":"For their third straight year,
         Mendeley and Elsevier have kindly supported the open source Citation Style
         Language project with a $5000 donation. Donations allow us to hire developers
@@ -289,7 +289,7 @@ http_interactions:
         multiple citation formats are used across your collection, an indication of
         which journal uses which citation format.\nWe’ll gladly (and without charge)
         use this metadata to generate CSL styles for all your journals.\nYou can also
-        help us by standardizing citation formats across your journals.</p>","tags":[],"language":null},{"id":"https://citationstyles.org/2012/09/03/citation-style-language-1-0-1-update/","short_id":"31epl0dn","url":"https://citationstyles.org/2012/09/03/citation-style-language-1-0-1-update/","title":"Citation
+        help us by standardizing citation formats across your journals.</p>","tags":[],"language":null},{"id":"https://citationstyles.org/2012/09/03/citation-style-language-1-0-1-update/","uuid":"7555e981-a931-4df1-adc0-1cdc4a1b417a","url":"https://citationstyles.org/2012/09/03/citation-style-language-1-0-1-update/","title":"Citation
         Style Language 1.0.1 Update","summary":"The Citation Style Language (CSL)
         team is happy to announce CSL 1.0.1. CSL 1.0.1 is an (almost completely) backwards
         compatible release, and CSL 1.0 styles and locale files don’t have to be updated
@@ -330,7 +330,7 @@ http_interactions:
         quite the challenge).\nAnother exciting development is the work of Frank Bennett
         on his forks of Zotero and CSL to revolutionize the field of multilingual
         and legal citation management, the progress of which can be followed on his
-        website <a href=\"http://citationstylist.org/\">citationstylist.org</a>.</p>","tags":[],"language":"en"},{"id":"https://citationstyles.org/2011/03/18/csl-1-0-first-anniversary/","short_id":"q0dqm6go","url":"https://citationstyles.org/2011/03/18/csl-1-0-first-anniversary/","title":"CSL
+        website <a href=\"http://citationstylist.org/\">citationstylist.org</a>.</p>","tags":[],"language":"en"},{"id":"https://citationstyles.org/2011/03/18/csl-1-0-first-anniversary/","uuid":"031faba3-3a6e-49d1-a540-26523be2fd09","url":"https://citationstyles.org/2011/03/18/csl-1-0-first-anniversary/","title":"CSL
         1.0 First Anniversary","summary":"It’s been a year since version 1.0 of the
         Citation Style Language was released, but now is as an exciting time as ever.
         Zotero 2.1, Mendeley 0.9.8 and Papers2 now all use CSL 1.0 for citation formatting...","date_published":"2011-03-18T00:00:00Z","date_modified":"2011-03-18T00:00:00Z","authors":[{"url":null,"name":"Rintze
@@ -356,5 +356,5 @@ http_interactions:
         preview and install styles.\nInterested parties are strongly invited to participate
         in the <a href=\"http://sourceforge.net/mail/?group_id=117435\">xbiblio mailing
         list</a> to discuss and help out with these future improvements.</p>","tags":[],"language":"en"}]}'
-  recorded_at: Sun, 04 Jun 2023 14:05:32 GMT
+  recorded_at: Mon, 05 Jun 2023 08:27:03 GMT
 recorded_with: VCR 6.1.0

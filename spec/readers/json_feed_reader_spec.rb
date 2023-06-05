@@ -7,7 +7,7 @@ describe Commonmeta::Metadata, vcr: true do
 
   context 'get json_feed_item metadata' do
     it 'blogger post' do
-      input = 'https://rogue-scholar.org/api/posts/1jgo59el'
+      input = 'https://rogue-scholar.org/api/posts/f3629c86-06e0-42c0-844a-266b03a91ef1'
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://iphylo.blogspot.com/2023/05/ten-years-and-million-links.html')
@@ -27,7 +27,7 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it 'ghost post with doi' do
-      input = 'https://rogue-scholar.org/api/posts/1jgo8yel'
+      input = 'https://rogue-scholar.org/api/posts/5bb66e92-5cb9-4659-8aca-20e486b695c9'
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.53731/4nwxn-frt36')
@@ -47,10 +47,10 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it 'wordpress post' do
-      input = 'https://rogue-scholar.org/api/posts/zkevlyd3'
+      input = 'https://rogue-scholar.org/api/posts/1c578558-1324-4493-b8af-84c49eabc52f'
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq('https://wisspub.net/2023/05/23/eu-mitgliedstaaten-betonen-die-rolle-von-wissenschaftsgeleiteten-open-access-modellen-jenseits-von-apcs')
+      expect(subject.id).to eq('https://doi.org/10.59350/kz04m-s8z58')
       expect(subject.url).to eq('https://wisspub.net/2023/05/23/eu-mitgliedstaaten-betonen-die-rolle-von-wissenschaftsgeleiteten-open-access-modellen-jenseits-von-apcs')
       expect(subject.type).to eq('Article')
       expect(subject.creators.length).to eq(1)
@@ -65,9 +65,9 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.language).to eq('de')
       expect(subject.container).to eq("identifier"=>"https://wisspub.net/", "identifierType"=>"URL", "title"=>"wisspub.net", "type"=>"Periodical")
     end
-    
+
     it 'jekyll post' do
-      input = 'https://rogue-scholar.org/api/posts/1jdkwod5'
+      input = 'https://rogue-scholar.org/api/posts/efdacb04-bcec-49d7-b689-ab3eab0634bf'
       subject = described_class.new(input: input)
       puts subject.errors
       expect(subject.valid?).to be true
@@ -85,7 +85,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.subjects).to be_nil
       expect(subject.language).to eq('en')
       expect(subject.container).to eq("identifier"=>"https://citationstyles.org/", "identifierType"=>"URL", "title"=>"Citation Style Language", "type"=>"Periodical")
-    end 
+    end
   end
 
   context 'get json_feed' do
@@ -101,10 +101,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(response).to be_nil
     end
 
-    it 'citation style language' do
-      id = 'prmb582'
+    it 'behind the science' do
+      id = '468ap65'
       response = subject.get_json_feed(id)
-      expect(response).to eq("1jdkoe52")
+      expect(response).to eq("84651758-f820-4e18-ae5f-4483ff4f4e92")
     end
   end
 end

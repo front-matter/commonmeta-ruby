@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/1jdkwod5
+    uri: https://rogue-scholar.org/api/posts/efdacb04-bcec-49d7-b689-ab3eab0634bf
     body:
       encoding: UTF-8
       string: ''
@@ -23,13 +23,13 @@ http_interactions:
       Cache-Control:
       - public, max-age=0, must-revalidate
       Content-Length:
-      - '3559'
+      - '3583'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 04 Jun 2023 13:30:03 GMT
+      - Mon, 05 Jun 2023 08:32:19 GMT
       Etag:
-      - '"15ahqsuw1ek2q9"'
+      - '"6qyocmbrvc2qx"'
       Server:
       - Vercel
       Strict-Transport-Security:
@@ -39,12 +39,12 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::ktw92-1685885403189-3c58654a0f55
+      - fra1::iad1::shc62-1685953939037-af1e2358cc5f
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"id":"https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2/","short_id":"1jdkwod5","url":"https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2/","title":"Seeking
+      string: '{"id":"https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2/","uuid":"efdacb04-bcec-49d7-b689-ab3eab0634bf","url":"https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2/","title":"Seeking
         Public Comment on CSL 1.0.2 Release","summary":"Over the past few months,
         Citation Style Language developers have worked to address a backlog of feature
         requests. This work will be reflected in two upcoming releases. The first
@@ -83,5 +83,5 @@ http_interactions:
         official YAML representation, which can be validated with the same JSON schemas.</li>\n    </ul>\n  </li>\n</ul>","tags":[],"language":"en","blog_id":"prmb582","blog":{"id":"prmb582","title":"Citation
         Style Language","language":"en","favicon":null,"feed_url":"https://citationstyles.org/feed.xml","home_page_url":"https://citationstyles.org/","license":"https://creativecommons.org/licenses/by/4.0/legalcode","category":"Engineering
         and Technology"}}'
-  recorded_at: Sun, 04 Jun 2023 13:30:03 GMT
+  recorded_at: Mon, 05 Jun 2023 08:32:19 GMT
 recorded_with: VCR 6.1.0

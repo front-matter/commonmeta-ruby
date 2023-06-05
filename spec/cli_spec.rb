@@ -345,7 +345,7 @@ describe Commonmeta::CLI do
     let(:input) { "prmb582" }
 
     it "blog post" do
-      expect { subject.json_feed input }.to output(/1jdkoe52\n/).to_stdout
+      expect { subject.json_feed input }.to output(/89a326c6-f5d1-443a-99b8-ea75e705ce11\n/).to_stdout
     end
   end
 end

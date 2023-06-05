@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/1jgo59el
+    uri: https://rogue-scholar.org/api/posts/f3629c86-06e0-42c0-844a-266b03a91ef1
     body:
       encoding: UTF-8
       string: ''
@@ -23,13 +23,13 @@ http_interactions:
       Cache-Control:
       - public, max-age=0, must-revalidate
       Content-Length:
-      - '5576'
+      - '5600'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 04 Jun 2023 13:30:02 GMT
+      - Mon, 05 Jun 2023 08:32:17 GMT
       Etag:
-      - '"r6tc4lxjtm4ak"'
+      - '"w8lx6j7dgj4b8"'
       Server:
       - Vercel
       Strict-Transport-Security:
@@ -39,12 +39,12 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::q6kqg-1685885402698-be8aec609306
+      - fra1::iad1::d8547-1685953936768-f6b887a2cfc5
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"id":"https://iphylo.blogspot.com/2023/05/ten-years-and-million-links.html","short_id":"1jgo59el","url":"https://iphylo.blogspot.com/2023/05/ten-years-and-million-links.html","title":"Ten
+      string: '{"id":"https://iphylo.blogspot.com/2023/05/ten-years-and-million-links.html","uuid":"f3629c86-06e0-42c0-844a-266b03a91ef1","url":"https://iphylo.blogspot.com/2023/05/ten-years-and-million-links.html","title":"Ten
         years and a million links","summary":"As trailed on a Twitter thread last
         week I’ve been working on a manuscript describing the efforts to map taxonomic
         names to their original descriptions in the taxonomic literature. Putting
@@ -90,5 +90,5 @@ http_interactions:
         is also a simple app to demonstrate these links, see <a href=\"https://species-cite.herokuapp.com\">https://species-cite.herokuapp.com</a>.\n\n\n\n<blockquote>\n<p>Written
         with <a href=\"https://stackedit.io/\">StackEdit</a>.</p>\n</blockquote>","tags":[],"language":"en","blog_id":"tyfqw20","blog":{"id":"tyfqw20","title":"iPhylo","language":"en","favicon":null,"feed_url":"https://iphylo.blogspot.com/feeds/posts/default?alt=rss","home_page_url":"https://iphylo.blogspot.com/","license":"https://creativecommons.org/licenses/by/4.0/legalcode","category":"Natural
         Sciences"}}'
-  recorded_at: Sun, 04 Jun 2023 13:30:02 GMT
+  recorded_at: Mon, 05 Jun 2023 08:32:17 GMT
 recorded_with: VCR 6.1.0
