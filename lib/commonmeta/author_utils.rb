@@ -49,6 +49,8 @@ module Commonmeta
 
       if type.blank? && id.is_a?(String) && URI.parse(id).host == 'ror.org'
         type = 'Organization'
+      elsif type.blank? && author['type'] == 'Organization'
+        type = 'Organization'
       elsif type.blank? && id.is_a?(String) && URI.parse(id).host == 'orcid.org'
         type = 'Person'
       elsif type.blank? && (given_name.present? || family_name.present?)
@@ -107,6 +109,15 @@ module Commonmeta
     # https://github.com/bmuller/gender_detector
     def is_personal_name?(name: nil)
       return true if name_exists?(name.to_s.split.first) || name_exists?(name.to_s.split(', ').last)
+
+      # check if a name has only one word, e.g. "FamousOrganization"
+      return false if name.to_s.split(' ').size == 1
+
+      # check of name can be parsed into given/family name
+      Namae.options[:include_particle_in_family] = true
+      names = Namae.parse(name)
+      parsed_name = names.first
+      return true if parsed_name && parsed_name.given
 
       false
     end

@@ -46,6 +46,26 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.container).to eq("identifier"=>"https://blog.front-matter.io/", "identifierType"=>"URL", "title"=>"Front Matter", "type"=>"Periodical")
     end
 
+    it 'ghost post without doi' do
+      input = 'https://rogue-scholar.org/api/posts/c3095752-2af0-40a4-a229-3ceb7424bce2'
+      subject = described_class.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq('https://www.ideasurg.pub/residency-visual-abstract')
+      expect(subject.url).to eq('https://www.ideasurg.pub/residency-visual-abstract')
+      expect(subject.type).to eq('Article')
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("familyName"=>"Sathe", "givenName"=>"Tejas S.", "type"=>"Person")
+      expect(subject.titles).to eq([{"title"=>"The Residency Visual Abstract"}])
+      expect(subject.license).to eq('id' => 'CC-BY-4.0',
+                                    'url' => 'https://creativecommons.org/licenses/by/4.0/legalcode')
+      expect(subject.date).to eq('published' => '2023-04-08')
+      expect(subject.descriptions).to eq([{"description"=>"A graphical, user-friendly tool for programs to highlight important data to prospective applicants", "descriptionType"=>"Abstract"}])
+      expect(subject.publisher).to eq('name' => 'I.D.E.A.S.')
+      expect(subject.subjects).to be_nil
+      expect(subject.language).to eq('en')
+      expect(subject.container).to eq("identifier"=>"https://www.ideasurg.pub/", "identifierType"=>"URL", "title"=>"I.D.E.A.S.", "type"=>"Periodical")
+    end
+
     it 'wordpress post' do
       input = 'https://rogue-scholar.org/api/posts/1c578558-1324-4493-b8af-84c49eabc52f'
       subject = described_class.new(input: input)
@@ -105,6 +125,11 @@ describe Commonmeta::Metadata, vcr: true do
       id = '468ap65'
       response = subject.get_json_feed(id)
       expect(response).to eq("84651758-f820-4e18-ae5f-4483ff4f4e92")
+    end
+
+    it 'all posts' do
+      response = subject.get_json_feed
+      expect(response).to eq("c801dbdf-6bde-4de4-9455-2ba21c11d4c6")
     end
   end
 end

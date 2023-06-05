@@ -74,16 +74,20 @@ module Commonmeta
           "state" => state }.compact.merge(read_options)
       end
 
-      def get_json_feed(id)
+      def get_json_feed(id = nil)
         # get JSON Feed items not registered as DOIs
-        return { "string" => nil, "state" => "not_found" } unless id.present?
-
+       
         url = json_feed_url(id)
         response = HTTP.get(url)
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
-        blog = JSON.parse(response.body.to_s)
-        blog["items"].select { |item| !validate_doi(item["id"]) }.map { |item| item["uuid"] }.first
+        if id.present?
+          blog = JSON.parse(response.body.to_s)
+          blog["items"].select { |item| !validate_doi(item["id"]) }.map { |item| item["uuid"] }.first
+        else
+          posts = JSON.parse(response.body.to_s)
+          posts.select { |post| !validate_doi(post["id"]) }.map { |post| post["uuid"] }.first
+        end
       end
     end
   end

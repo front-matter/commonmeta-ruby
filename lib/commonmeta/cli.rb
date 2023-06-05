@@ -83,7 +83,11 @@ module Commonmeta
     desc '', 'feed'
 
     def json_feed(id)
-      puts get_json_feed(id)
+      if id.present?
+        puts get_json_feed(id)
+      else
+        puts get_json_feed
+      end
     end
 
     default_task :convert

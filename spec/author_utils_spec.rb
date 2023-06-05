@@ -8,12 +8,6 @@ describe Commonmeta::Metadata, vcr: true do
   end
 
   context 'is_personal_name?' do
-    it 'has type organization' do
-      author = { 'email' => 'info@ucop.edu', 'name' => 'University of California, Santa Barbara',
-                 'role' => { 'namespace' => 'http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_RoleCode', 'roleCode' => 'copyrightHolder' }, 'type' => 'Organization' }
-      expect(subject.is_personal_name?(name: author['name'])).to be false
-    end
-
     it 'has id' do
       author = { 'id' => 'http://orcid.org/0000-0003-1419-2405', 'givenName' => 'Martin', 'familyName' => 'Fenner', 'name' => 'Martin Fenner' }
       expect(subject.is_personal_name?(name: author['name'])).to be true
@@ -42,7 +36,7 @@ describe Commonmeta::Metadata, vcr: true do
 
     it 'has unknown given name' do
       author = { 'name' => 'Rintze Zelle' }
-      expect(subject.is_personal_name?(name: author['name'])).to be false
+      expect(subject.is_personal_name?(name: author['name'])).to be true
     end
 
     it 'has middle initial' do
@@ -52,11 +46,18 @@ describe Commonmeta::Metadata, vcr: true do
 
     it 'has no info' do
       author = { 'name' => 'M Fenner' }
-      expect(subject.is_personal_name?(name: author['name'])).to be false
+      expect(subject.is_personal_name?(name: author['name'])).to be true
     end
   end
 
   context 'get_one_author' do
+    it 'has type organization' do
+      author = { 'email' => 'info@ucop.edu', 'name' => 'University of California, Santa Barbara',
+                 'role' => { 'namespace' => 'http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_RoleCode', 'roleCode' => 'copyrightHolder' }, 'type' => 'Organization' }
+      response = subject.get_one_author(author)
+      expect(response).to eq('name' => 'University of California, Santa Barbara', 'type' => 'Organization')
+    end
+
     it 'has familyName' do
       input = 'https://doi.org/10.5438/4K3M-NYVG'
       subject = described_class.new(input: input)
