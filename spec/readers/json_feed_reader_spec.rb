@@ -129,7 +129,7 @@ describe Commonmeta::Metadata, vcr: true do
 
     it 'all posts' do
       response = subject.get_json_feed
-      expect(response).to eq("c801dbdf-6bde-4de4-9455-2ba21c11d4c6")
+      expect(response).to eq("e4872b3e-cd15-407d-8406-33642c1a98b0")
     end
   end
 end
