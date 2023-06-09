@@ -1381,9 +1381,7 @@ module Commonmeta
       Base32::URL.decode(id)
     end
 
-    def json_feed_url(id = nil)
-      return "https://rogue-scholar.org/api/blogs/#{id}" if id.present?
-
+    def json_feed_url
       "https://rogue-scholar.org/api/posts/unregistered"
     end
   end

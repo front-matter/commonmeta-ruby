@@ -109,24 +109,6 @@ describe Commonmeta::Metadata, vcr: true do
   end
 
   context 'get json_feed' do
-    it 'front-matter blog' do
-      id = 'f0m0e38'
-      response = subject.get_json_feed(id)
-      expect(response).to be_nil
-    end
-
-    it 'upstream' do
-      id = 'pm0p222'
-      response = subject.get_json_feed(id)
-      expect(response).to be_nil
-    end
-
-    it 'behind the science' do
-      id = '468ap65'
-      response = subject.get_json_feed(id)
-      expect(response).to eq("84651758-f820-4e18-ae5f-4483ff4f4e92")
-    end
-
     it 'all posts' do
       response = subject.get_json_feed
       expect(response).to eq("e4872b3e-cd15-407d-8406-33642c1a98b0")
