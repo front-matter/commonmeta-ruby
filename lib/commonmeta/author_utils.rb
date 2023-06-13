@@ -98,6 +98,9 @@ module Commonmeta
         author = author.gsub(/[[:space:]]([A-Z]\.)?(-?[A-Z]\.)$/, ', \1\2')
       end
 
+      # strip suffixes, e.g. "John Smith, MD" as the named parser doesn't handle them
+      author = author.split(',').first if %w[MD PhD].include? author.split(', ').last
+
       # remove spaces around hyphens
       author = author.gsub(' - ', '-')
 
@@ -113,12 +116,16 @@ module Commonmeta
       # check if a name has only one word, e.g. "FamousOrganization"
       return false if name.to_s.split(' ').size == 1
 
+      # check for suffixes, e.g. "John Smith, MD"
+      return true if %w[MD PhD].include? name.split(', ').last
+
       # check of name can be parsed into given/family name
       Namae.options[:include_particle_in_family] = true
       names = Namae.parse(name)
+
       parsed_name = names.first
       return true if parsed_name && parsed_name.given
-
+      
       false
     end
 

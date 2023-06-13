@@ -665,9 +665,9 @@ describe Commonmeta::Metadata, vcr: true do
     end
   end
 
-  context 'json_feed_url' do
+  context 'json_feed_unregistered_url' do
     it 'all posts' do
-      response = subject.json_feed_url
+      response = subject.json_feed_unregistered_url
       expect(response).to eq("https://rogue-scholar.org/api/posts/unregistered")
     end
   end

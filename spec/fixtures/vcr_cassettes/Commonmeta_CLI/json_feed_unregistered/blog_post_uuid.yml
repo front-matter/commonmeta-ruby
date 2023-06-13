@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/posts/unregistered
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '2'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 10 Jun 2023 08:41:01 GMT
+      Etag:
+      - '"38jmpejbxv2"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/posts/unregistered"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::zmnzt-1686386457205-d9f9a0745c33
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: "[]"
+  recorded_at: Sat, 10 Jun 2023 08:41:01 GMT
+recorded_with: VCR 6.1.0

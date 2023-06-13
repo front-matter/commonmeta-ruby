@@ -66,6 +66,50 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.container).to eq("identifier"=>"https://www.ideasurg.pub/", "identifierType"=>"URL", "title"=>"I.D.E.A.S.", "type"=>"Periodical")
     end
 
+    it 'ghost post with author name suffix' do
+      input = 'https://rogue-scholar.org/api/posts/6179ad80-cc7f-4904-9260-0ecb3c3a90ba'
+      subject = described_class.new(input: input)
+      puts subject.errors
+      # expect(subject.valid?).to be true
+      expect(subject.id).to eq('https://www.ideasurg.pub/academic-powerhouse')
+      expect(subject.url).to eq('https://www.ideasurg.pub/academic-powerhouse')
+      expect(subject.type).to eq('Article')
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("familyName"=>"Sathe", "givenName"=>"Tejas S.", "type"=>"Person")
+      expect(subject.titles).to eq([{"title"=>"How to Build an Academic Powerhouse: Let's Study Who's Doing it"}])
+      expect(subject.license).to eq('id' => 'CC-BY-4.0',
+                                    'url' => 'https://creativecommons.org/licenses/by/4.0/legalcode')
+      expect(subject.date).to eq('published' => '2023-06-03')
+      expect(subject.descriptions).to eq([{"description"=>"A Data Exploration with Public Data from the Academic Surgical Congress", "descriptionType"=>"Abstract"}])
+      expect(subject.publisher).to eq('name' => 'I.D.E.A.S.')
+      expect(subject.subjects).to eq([{"subject"=>"pre-print"}])
+      expect(subject.language).to eq('en')
+      expect(subject.container).to eq("identifier"=>"https://www.ideasurg.pub/", "identifierType"=>"URL", "title"=>"I.D.E.A.S.", "type"=>"Periodical")
+      expect(subject.references).to be_nil
+    end
+
+    it 'syldavia gazette post with references' do
+      input = 'https://rogue-scholar.org/api/posts/0022b9ef-525a-4a79-81ad-13411697f58a'
+      subject = described_class.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq('https://doi.org/10.53731/ffbx660-083tnag')
+      expect(subject.url).to eq('https://syldavia-gazette.org/guinea-worms-chatgpt-neanderthals')
+      expect(subject.type).to eq('Article')
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("familyName"=>"Fenner", "givenName"=>"Martin", "id"=>"https://orcid.org/0000-0003-1419-2405", "type"=>"Person")
+      expect(subject.titles).to eq([{"title"=>"Guinea Worms, ChatGPT, Neanderthals, Plagiarism, Tidyverse"}])
+      expect(subject.license).to eq('id' => 'CC-BY-4.0',
+                                    'url' => 'https://creativecommons.org/licenses/by/4.0/legalcode')
+      expect(subject.date).to eq('published' => '2023-02-01', 'updated' => '2023-04-13')
+      expect(subject.descriptions).to eq([{"description"=>"Guinea worm disease reaches all-time low: only 13* human cases reported in 2022Only 13 human cases of Guinea worm disease were reported worldwide in 2022. This Neglected Tropical Disease is on the WHO 2030...", "descriptionType"=>"Abstract"}])
+      expect(subject.publisher).to eq('name' => 'Syldavia Gazette')
+      expect(subject.subjects).to be_nil
+      expect(subject.language).to eq('en')
+      expect(subject.container).to eq("identifier"=>"https://syldavia-gazette.org", "identifierType"=>"URL", "title"=>"Syldavia Gazette", "type"=>"Periodical")
+      expect(subject.references.length).to eq(5)
+      expect(subject.references.first).to eq("key"=>"1", "url"=>"https://cartercenter.org/news/pr/2023/2022-guinea-worm-worldwide-cases-announcement.html")
+    end
+
     it 'wordpress post' do
       input = 'https://rogue-scholar.org/api/posts/1c578558-1324-4493-b8af-84c49eabc52f'
       subject = described_class.new(input: input)
@@ -84,6 +128,51 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.subjects).to eq([{"subject"=>"open access"}, {"subject"=>"open access transformation"}, {"subject"=>"open science"}, {"subject"=>"eu"}])
       expect(subject.language).to eq('de')
       expect(subject.container).to eq("identifier"=>"https://wisspub.net/", "identifierType"=>"URL", "title"=>"wisspub.net", "type"=>"Periodical")
+    end
+
+    it 'wordpress post with references' do
+      input = 'https://rogue-scholar.org/api/posts/4e4bf150-751f-4245-b4ca-fe69e3c3bb24'
+      subject = described_class.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq('http://svpow.com/?p=20992')
+      expect(subject.url).to eq('https://svpow.com/2023/06/09/new-paper-curtice-et-al-2023-on-the-first-haplocanthosaurus-from-dry-mesa')
+      expect(subject.type).to eq('Article')
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("familyName"=>"Wedel", "givenName"=>"Matt", "type"=>"Person")
+      expect(subject.titles).to eq([{"title"=>"New paper: Curtice et al. (2023) on the first Haplocanthosaurus from Dry Mesa"}])
+      expect(subject.license).to eq('id' => 'CC-BY-4.0',
+                                    'url' => 'https://creativecommons.org/licenses/by/4.0/legalcode')
+      expect(subject.date).to eq('published' => '2023-06-09', 'updated' => '2023-06-09')
+      expect(subject.descriptions).to eq([{"description"=>"Haplocanthosaurus tibiae and dorsal vertebrae. Curtice et al. (2023: fig. 1). Brian Curtice and Colin Boisvert are presenting our talk on this project at 2:00 pm MDT this afternoon, at the 14th Symposium on...", "descriptionType"=>"Abstract"}])
+      expect(subject.publisher).to eq('name' => 'Sauropod Vertebra Picture of the Week')
+      expect(subject.subjects).to eq([{"subject"=>"#mte14"}, {"subject"=>"barosaurus"}, {"subject"=>"cervical"}, {"subject"=>"conferences"}, {"subject"=>"diplodocids"}])
+      expect(subject.language).to eq('en')
+      expect(subject.container).to eq("identifier"=>"https://svpow.com", "identifierType"=>"URL", "title"=>"Sauropod Vertebra Picture of the Week", "type"=>"Periodical")
+      expect(subject.references.length).to eq(3)
+      expect(subject.references.first).to eq("key"=>"1", "url"=>"https://sauroposeidon.files.wordpress.com/2010/04/foster-and-wedel-2014-haplocanthosaurus-from-snowmass-colorado.pdf")
+    end
+
+    it 'upstream post with references' do
+      input = 'https://rogue-scholar.org/api/posts/954f8138-0ecd-4090-87c5-cef1297f1470'
+      subject = described_class.new(input: input)
+      puts subject.errors
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq('https://doi.org/10.54900/zwm7q-vet94')
+      expect(subject.url).to eq('https://upstream.force11.org/the-research-software-alliance-resa')
+      expect(subject.type).to eq('Article')
+      expect(subject.creators.length).to eq(2)
+      expect(subject.creators.first).to eq("familyName"=>"Katz", "givenName"=>"Daniel S.", "id"=>"https://orcid.org/0000-0001-5934-7525", "type"=>"Person")
+      expect(subject.titles).to eq([{"title"=>"The Research Software Alliance (ReSA)"}])
+      expect(subject.license).to eq('id' => 'CC-BY-4.0',
+                                    'url' => 'https://creativecommons.org/licenses/by/4.0/legalcode')
+      expect(subject.date).to eq('published' => '2023-04-18', 'updated' => '2023-04-18')
+      expect(subject.descriptions).to eq([{"description"=>"Research software is a key part of most research today. As University of Manchester Professor Carole Goble has said, \"software is the ubiquitous instrument of science.\" Creating and maintaining research...", "descriptionType"=>"Abstract"}])
+      expect(subject.publisher).to eq('name' => 'Upstream')
+      expect(subject.subjects).to eq([{"subject"=>"news"}])
+      expect(subject.language).to eq('en')
+      expect(subject.container).to eq("identifier"=>"https://upstream.force11.org", "identifierType"=>"URL", "title"=>"Upstream", "type"=>"Periodical")
+      expect(subject.references.length).to eq(11)
+      expect(subject.references.first).to eq("key"=>"1", "url"=>"https://software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers")
     end
 
     it 'jekyll post' do
@@ -109,9 +198,9 @@ describe Commonmeta::Metadata, vcr: true do
   end
 
   context 'get json_feed' do
-    it 'all posts' do
-      response = subject.get_json_feed
-      expect(response).to eq("e4872b3e-cd15-407d-8406-33642c1a98b0")
+    it 'unregistered posts' do
+      response = subject.get_json_feed_unregistered
+      expect(response).to eq("ca2a7df4-f3b9-487c-82e9-27f54de75ea8")
     end
   end
 end

@@ -604,6 +604,12 @@ module Commonmeta
       # clean up URL
       uri.path = PostRank::URI.clean(uri.path)
 
+      # optionally remove query and fragment
+      if options[:remove_query_string]
+        uri.query = nil
+        uri.fragment = nil
+      end
+
       uri.to_s
     rescue Addressable::URI::InvalidURIError
       nil
@@ -1381,7 +1387,7 @@ module Commonmeta
       Base32::URL.decode(id)
     end
 
-    def json_feed_url
+    def json_feed_unregistered_url
       "https://rogue-scholar.org/api/posts/unregistered"
     end
   end

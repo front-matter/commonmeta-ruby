@@ -44,9 +44,36 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.is_personal_name?(name: author['name'])).to be true
     end
 
+    it 'has unknown given name and middle initial' do
+      author = { 'name' => 'Tejas S. Sathe' }
+      expect(subject.is_personal_name?(name: author['name'])).to be true
+    end
+
     it 'has no info' do
       author = { 'name' => 'M Fenner' }
       expect(subject.is_personal_name?(name: author['name'])).to be true
+    end
+
+    it 'name with title' do
+      author = { 'name' => 'Tejas S. Sathe, MD' }
+      expect(subject.is_personal_name?(name: author['name'])).to be true
+    end
+  end
+
+  context 'cleanup_author' do
+    it 'Smith J.' do
+      author = 'Smith J.'
+      expect(subject.cleanup_author(author)).to eq('Smith, J.')
+    end
+
+    it 'Smith, John' do
+      author = 'Smith, John'
+      expect(subject.cleanup_author(author)).to eq('Smith, John')
+    end
+
+    it 'John Smith' do
+      author = 'John Smith'
+      expect(subject.cleanup_author(author)).to eq('John Smith')
     end
   end
 
@@ -67,6 +94,12 @@ describe Commonmeta::Metadata, vcr: true do
         'id' => 'https://orcid.org/0000-0003-1419-2405',
         'givenName' => 'Martin', 'familyName' => 'Fenner', 'type' => 'Person'
       )
+    end
+
+    it 'has name with title' do
+      author = { 'name' => "Tejas S. Sathe, MD" }
+      response = subject.get_one_author(author)
+      expect(response).to eq('givenName' => 'Tejas S.', 'familyName' => 'Sathe', 'type' => 'Person')
     end
 
     it 'has name in display-order with ORCID' do

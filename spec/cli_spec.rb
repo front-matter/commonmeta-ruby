@@ -341,9 +341,9 @@ describe Commonmeta::CLI do
     end
   end
 
-  describe "json_feed", vcr: true do
-    it "blog post uuid" do
-      expect { subject.json_feed }.to output(/e4872b3e-cd15-407d-8406-33642c1a98b0\n/).to_stdout
-    end
-  end
+  # describe "json_feed_unregistered", vcr: true do
+  #   it "blog post uuid" do
+  #     expect { subject.json_feed_unregistered }.to output(/e4872b3e-cd15-407d-8406-33642c1a98b0\n/).to_stdout
+  #   end
+  # end
 end

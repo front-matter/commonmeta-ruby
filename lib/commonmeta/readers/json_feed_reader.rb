@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require "uri"
 
 module Commonmeta
   module Readers
@@ -58,6 +59,7 @@ module Commonmeta
 
           sum
         end
+        references = get_references(meta)
 
         { "id" => id,
           "type" => type,
@@ -71,13 +73,34 @@ module Commonmeta
           "descriptions" => descriptions,
           "license" => license,
           "subjects" => subjects.presence,
+          "references" => references.presence,
           "state" => state }.compact.merge(read_options)
       end
 
-      def get_json_feed
+      def get_references(meta)
+        # check that references resolve
+        Array.wrap(meta['references']).reduce([]) do |sum, reference|
+          sum << reference if [200, 301, 302].include? HTTP.head(reference['doi'] || reference['url']).status
+
+          sum
+        end
+      end
+
+      def get_json_feed_unregistered
         # get JSON Feed items not registered as DOIs
 
-        url = json_feed_url
+        url = json_feed_unregistered_url
+        response = HTTP.get(url)
+        return { "string" => nil, "state" => "not_found" } unless response.status.success?
+
+        posts = JSON.parse(response.body.to_s)
+        posts.map { |post| post["uuid"] }.first
+      end
+
+      def get_json_feed_updated
+        # get JSON Feed items updated since last check
+
+        url = json_feed_unregistered_url
         response = HTTP.get(url)
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
