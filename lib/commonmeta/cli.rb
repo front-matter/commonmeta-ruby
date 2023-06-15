@@ -80,13 +80,19 @@ module Commonmeta
       puts decode_container_id(id)
     end
 
-    desc "", "json_feed"
+    desc "", "json_feed_unregistered"
 
     def json_feed_unregistered
       puts get_json_feed_unregistered
     end
 
-    desc "", "json_feed"
+    desc "", "json_feed_updated"
+
+    def json_feed_updated
+      puts get_json_feed_updated
+    end
+
+    desc "", "json_feed_by_blog"
 
     def json_feed_by_blog(id)
       puts get_json_feed_by_blog(id)

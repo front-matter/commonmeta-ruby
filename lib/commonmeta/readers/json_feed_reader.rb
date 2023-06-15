@@ -96,18 +96,18 @@ module Commonmeta
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
         posts = JSON.parse(response.body.to_s)
-        posts.map { |post| post["uuid"] }.first
+        posts.map { |post| post["uuid"] }.join('\n')
       end
 
       def get_json_feed_updated
         # get JSON Feed items updated since last check
 
-        url = json_feed_unregistered_url
+        url = json_feed_updated_url
         response = HTTP.get(url)
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
         posts = JSON.parse(response.body.to_s)
-        posts.map { |post| post["uuid"] }.first
+        posts.map { |post| post["uuid"] }.join('\n')
       end
 
       def get_json_feed_by_blog(blog_id)

@@ -1401,6 +1401,10 @@ module Commonmeta
       Base32::URL.decode(id)
     end
 
+    def json_feed_updated_url
+      "https://rogue-scholar.org/api/posts/updated"
+    end
+
     def json_feed_unregistered_url
       "https://rogue-scholar.org/api/posts/unregistered"
     end
