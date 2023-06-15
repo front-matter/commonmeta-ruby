@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   # Declare dependencies here, rather than in the Gemfile
   s.add_dependency 'activesupport', '>= 4.2.5', '< 8.0'
   s.add_dependency 'addressable', '~> 2.8.1', '< 2.8.2'
-  s.add_dependency 'base32-url', '>= 0.5.0', '< 1'
+  s.add_dependency 'base32-url', '>= 0.7.0', '< 1'
   s.add_dependency 'bibtex-ruby', '~> 6.0'
   s.add_dependency 'builder', '~> 3.2', '>= 3.2.4'
   s.add_dependency 'citeproc-ruby', '~> 2.0'

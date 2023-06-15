@@ -3,12 +3,12 @@
 module Commonmeta
   module CrossrefUtils
     def write_crossref_xml
-      @crossref_xml ||= Nokogiri::XML::Builder.new(encoding: 'UTF-8') do |xml|
+      @crossref_xml ||= Nokogiri::XML::Builder.new(encoding: "UTF-8") do |xml|
         xml.doi_batch(crossref_root_attributes) do
           xml.head do
             # we use a uuid as batch_id
             xml.doi_batch_id(SecureRandom.uuid)
-            xml.timestamp(Time.now.utc.strftime('%Y%m%d%H%M%S'))
+            xml.timestamp(Time.now.utc.strftime("%Y%m%d%H%M%S"))
             xml.depositor do
               xml.depositor_name(depositor)
               xml.email_address(email)
@@ -23,12 +23,12 @@ module Commonmeta
     end
 
     def crossref_errors(xml: nil)
-      filepath = File.expand_path('../../resources/crossref/crossref5.3.1.xsd', __dir__)
-      File.open(filepath, 'r') do |f|
+      filepath = File.expand_path("../../resources/crossref/crossref5.3.1.xsd", __dir__)
+      File.open(filepath, "r") do |f|
         schema = Nokogiri::XML::Schema(f)
       end
 
-      schema.validate(Nokogiri::XML(xml, nil, 'UTF-8')).map(&:to_s).unwrap
+      schema.validate(Nokogiri::XML(xml, nil, "UTF-8")).map(&:to_s).unwrap
     rescue Nokogiri::XML::SyntaxError => e
       e.message
     end
@@ -37,9 +37,9 @@ module Commonmeta
       return xml if doi_from_url(id).blank?
 
       case type
-      when 'JournalArticle'
+      when "JournalArticle"
         insert_journal(xml)
-      when 'Article'
+      when "Article"
         insert_posted_content(xml)
       end
     end
@@ -47,21 +47,21 @@ module Commonmeta
     def insert_journal(xml)
       xml.journal do
         if language.present?
-          xml.journal_metadata('language' => language[0..1]) do
-            xml.full_title(container['title'])
+          xml.journal_metadata("language" => language[0..1]) do
+            xml.full_title(container["title"])
           end
         else
           xml.journal_metadata do
-            xml.full_title(container['title'])
+            xml.full_title(container["title"])
           end
         end
-        xml.journal_article('publication_type' => 'full_text') do
+        xml.journal_article("publication_type" => "full_text") do
           insert_crossref_titles(xml)
           insert_crossref_creators(xml)
           insert_crossref_publication_date(xml)
           insert_crossref_abstract(xml)
           insert_crossref_issn(xml)
-          insert_publisher_item(xml)
+          insert_item_number(xml)
           insert_crossref_access_indicators(xml)
           insert_doi_data(xml)
           insert_citation_list(xml)
@@ -70,7 +70,7 @@ module Commonmeta
     end
 
     def insert_posted_content(xml)
-      posted_content = { 'type' => 'other', 'language' => language ? language[0..1] : nil }.compact
+      posted_content = { "type" => "other", "language" => language ? language[0..1] : nil }.compact
 
       xml.posted_content(posted_content) do
         insert_group_title(xml)
@@ -78,7 +78,7 @@ module Commonmeta
         insert_crossref_titles(xml)
         insert_posted_date(xml)
         insert_institution(xml)
-        insert_publisher_item(xml)
+        insert_item_number(xml)
         insert_crossref_abstract(xml)
         insert_crossref_access_indicators(xml)
         insert_doi_data(xml)
@@ -89,14 +89,14 @@ module Commonmeta
     def insert_group_title(xml)
       return xml if subjects.blank?
 
-      xml.group_title(subjects.first['subject'].titleize)
+      xml.group_title(subjects.first["subject"].titleize)
     end
 
     def insert_crossref_creators(xml)
       xml.contributors do
         Array.wrap(creators).each_with_index do |person, index|
-          xml.person_name('contributor_role' => 'author',
-                          'sequence' => index.zero? ? 'first' : 'additional') do
+          xml.person_name("contributor_role" => "author",
+                          "sequence" => index.zero? ? "first" : "additional") do
             insert_crossref_person(xml, person)
           end
         end
@@ -104,15 +104,15 @@ module Commonmeta
     end
 
     def insert_crossref_person(xml, person)
-      xml.given_name(person['givenName']) if person['givenName'].present?
-      xml.surname(person['familyName']) if person['familyName'].present?
-      if person.dig('id') && URI.parse(person.dig('id')).host == 'orcid.org'
-        xml.ORCID(person.dig('id'))
+      xml.given_name(person["givenName"]) if person["givenName"].present?
+      xml.surname(person["familyName"]) if person["familyName"].present?
+      if person.dig("id") && URI.parse(person.dig("id")).host == "orcid.org"
+        xml.ORCID(person.dig("id"))
       end
-      Array.wrap(person['affiliation']).each do |affiliation|
-        attributes = { 'affiliationIdentifier' => affiliation['affiliationIdentifier'],
-                       'affiliationIdentifierScheme' => affiliation['affiliationIdentifierScheme'], 'schemeURI' => affiliation['schemeUri'] }.compact
-        xml.affiliation(affiliation['name'], attributes)
+      Array.wrap(person["affiliation"]).each do |affiliation|
+        attributes = { "affiliationIdentifier" => affiliation["affiliationIdentifier"],
+                       "affiliationIdentifierScheme" => affiliation["affiliationIdentifierScheme"], "schemeURI" => affiliation["schemeUri"] }.compact
+        xml.affiliation(affiliation["name"], attributes)
       end
     end
 
@@ -120,7 +120,7 @@ module Commonmeta
       xml.titles do
         Array.wrap(titles).each do |title|
           if title.is_a?(Hash)
-            xml.title(title['title'])
+            xml.title(title["title"])
           else
             xml.title(title)
           end
@@ -131,15 +131,15 @@ module Commonmeta
     def insert_citation_list(xml)
       xml.citation_list do
         Array.wrap(references).each do |ref|
-          xml.citation('key' => ref['key']) do
-            xml.journal_article(ref['journal_title']) if ref['journal_title'].present?
-            xml.author(ref['author']) if ref['author'].present?
-            xml.volume(ref['volume']) if ref['volume'].present?
-            xml.first_page(ref['first_page']) if ref['first_page'].present?
-            xml.cYear(ref['cYear']) if ref['cYear'].present?
-            xml.article_title(ref['article_title']) if ref['article_title'].present?
-            xml.doi(doi_from_url(ref['doi'])) if ref['doi'].present?
-            xml.unstructured_citation(ref['url']) if ref['url'].present?
+          xml.citation("key" => ref["key"]) do
+            xml.journal_article(ref["journal_title"]) if ref["journal_title"].present?
+            xml.author(ref["author"]) if ref["author"].present?
+            xml.volume(ref["volume"]) if ref["volume"].present?
+            xml.first_page(ref["first_page"]) if ref["first_page"].present?
+            xml.cYear(ref["cYear"]) if ref["cYear"].present?
+            xml.article_title(ref["article_title"]) if ref["article_title"].present?
+            xml.doi(doi_from_url(ref["doi"])) if ref["doi"].present?
+            xml.unstructured_citation(ref["url"]) if ref["url"].present?
           end
         end
       end
@@ -163,12 +163,12 @@ module Commonmeta
     def insert_crossref_access_indicators(xml)
       return xml if license.blank?
 
-      rights_uri = license['url']
+      rights_uri = license["url"]
 
-      xml.program('xmlns' => 'http://www.crossref.org/AccessIndicators.xsd',
-                  'name' => 'AccessIndicators') do
-        xml.license_ref(rights_uri, 'applies_to' => 'vor')
-        xml.license_ref(rights_uri, 'applies_to' => 'tdm')
+      xml.program("xmlns" => "http://www.crossref.org/AccessIndicators.xsd",
+                  "name" => "AccessIndicators") do
+        xml.license_ref(rights_uri, "applies_to" => "vor")
+        xml.license_ref(rights_uri, "applies_to" => "tdm")
       end
     end
 
@@ -204,7 +204,7 @@ module Commonmeta
       xml.subjects do
         subjects.each do |subject|
           if subject.is_a?(Hash)
-            xml.subject(subject['subject'])
+            xml.subject(subject["subject"])
           else
             xml.subject(subject)
           end
@@ -225,11 +225,11 @@ module Commonmeta
     end
 
     def insert_crossref_publication_date(xml)
-      return xml if date['registered'].blank?
+      return xml if date["registered"].blank?
 
-      date_ = get_datetime_from_iso8601(date['registered'])
+      date_ = get_datetime_from_iso8601(date["registered"])
 
-      xml.publication_date('media_type' => 'online') do
+      xml.publication_date("media_type" => "online") do
         xml.month(date_.month) if date_.month.present?
         xml.day(date_.day) if date_.day.present?
         xml.year(date_.year) if date_.year.present?
@@ -237,9 +237,9 @@ module Commonmeta
     end
 
     def insert_posted_date(xml)
-      return xml if date['published'].blank?
+      return xml if date["published"].blank?
 
-      date_ = get_datetime_from_iso8601(date['published'])
+      date_ = get_datetime_from_iso8601(date["published"])
 
       xml.posted_date do
         xml.month(date_.month) if date_.month.present?
@@ -252,24 +252,22 @@ module Commonmeta
       return xml if publisher.blank?
 
       xml.institution do
-        xml.institution_name(publisher['name'])
+        xml.institution_name(publisher["name"])
       end
     end
 
-    def insert_publisher_item(xml)
+    def insert_item_number(xml)
       return xml if alternate_identifiers.blank?
 
-      xml.publisher_item do
-        alternate_identifiers.each do |alternate_identifier|
-          attributes = {
-            'item_number_type' => alternate_identifier['alternateIdentifierType'] ? alternate_identifier['alternateIdentifierType'].downcase : nil
-          }.compact
-          
-          # remove dashes from UUIDs, as item_number can only be 32 characters long
-          alternate_identifier['alternateIdentifier'].gsub!('-', '') if alternate_identifier['alternateIdentifierType'] == 'UUID'
+      alternate_identifiers.each do |alternate_identifier|
+        attributes = {
+          "item_number_type" => alternate_identifier["alternateIdentifierType"] ? alternate_identifier["alternateIdentifierType"].downcase : nil,
+        }.compact
 
-          xml.item_number(alternate_identifier['alternateIdentifier'], attributes)
-        end
+        # convert UUIDs into base32 encoded strings, as item_number can only be 32 characters long (UUIDv4 is 36 characters long)
+        alternate_identifier["alternateIdentifier"] = Base32::URL.encode_uuid(alternate_identifier["alternateIdentifier"], split: 7, checksum: true) if alternate_identifier["alternateIdentifierType"] == "UUID"
+
+        xml.item_number(alternate_identifier["alternateIdentifier"], attributes)
       end
     end
 
@@ -279,9 +277,9 @@ module Commonmeta
       xml.doi_data do
         xml.doi(doi_from_url(id).downcase)
         xml.resource(url)
-        xml.collection('property' => 'text-mining') do
+        xml.collection("property" => "text-mining") do
           xml.item do
-            xml.resource(url, 'mime_type' => 'text/html')
+            xml.resource(url, "mime_type" => "text/html")
           end
         end
       end
@@ -296,26 +294,26 @@ module Commonmeta
           r = rights
         else
           r = {}
-          r['rights'] = rights
-          r['rightsUri'] = normalize_id(rights)
+          r["rights"] = rights
+          r["rightsUri"] = normalize_id(rights)
         end
 
         attributes = {
-          'rightsURI' => r['rightsUri'],
-          'rightsIdentifier' => r['rightsIdentifier'],
-          'rightsIdentifierScheme' => r['rightsIdentifierScheme'],
-          'schemeURI' => r['schemeUri'],
-          'xml:lang' => r['lang']
+          "rightsURI" => r["rightsUri"],
+          "rightsIdentifier" => r["rightsIdentifier"],
+          "rightsIdentifierScheme" => r["rightsIdentifierScheme"],
+          "schemeURI" => r["schemeUri"],
+          "xml:lang" => r["lang"],
         }.compact
 
-        xml.rights(r['rights'], attributes)
+        xml.rights(r["rights"], attributes)
       end
     end
 
     def insert_crossref_issn(xml)
-      issn = if container.to_h.fetch('identifierType', nil) == 'ISSN'
-               container.to_h.fetch('identifier', nil)
-             end
+      issn = if container.to_h.fetch("identifierType", nil) == "ISSN"
+          container.to_h.fetch("identifier", nil)
+        end
 
       return xml if issn.blank?
 
@@ -329,22 +327,22 @@ module Commonmeta
         d = descriptions.first
       else
         d = {}
-        d['description'] = descriptions.first
+        d["description"] = descriptions.first
       end
 
-      xml.abstract('xmlns' => 'http://www.ncbi.nlm.nih.gov/JATS1') do
-        xml.p(d['description'])
+      xml.abstract("xmlns" => "http://www.ncbi.nlm.nih.gov/JATS1") do
+        xml.p(d["description"])
       end
     end
 
     def crossref_root_attributes
-      { 'xmlns:xsi': 'http://www.w3.org/2001/XMLSchema-instance',
-        'xsi:schemaLocation': 'http://www.crossref.org/schema/5.3.1 https://www.crossref.org/schemas/crossref5.3.1.xsd',
-        xmlns: 'http://www.crossref.org/schema/5.3.1',
-        'xmlns:jats': 'http://www.ncbi.nlm.nih.gov/JATS1',
-        'xmlns:fr': 'http://www.crossref.org/fundref.xsd',
-        'xmlns:mml': 'http://www.w3.org/1998/Math/MathML',
-        version: '5.3.1' }
+      { 'xmlns:xsi': "http://www.w3.org/2001/XMLSchema-instance",
+        'xsi:schemaLocation': "http://www.crossref.org/schema/5.3.1 https://www.crossref.org/schemas/crossref5.3.1.xsd",
+        xmlns: "http://www.crossref.org/schema/5.3.1",
+        'xmlns:jats': "http://www.ncbi.nlm.nih.gov/JATS1",
+        'xmlns:fr': "http://www.crossref.org/fundref.xsd",
+        'xmlns:mml': "http://www.w3.org/1998/Math/MathML",
+        version: "5.3.1" }
     end
   end
 end

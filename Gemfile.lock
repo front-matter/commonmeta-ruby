@@ -1,10 +1,10 @@
 PATH
   remote: .
   specs:
-    commonmeta-ruby (3.2.8)
+    commonmeta-ruby (3.2.10)
       activesupport (>= 4.2.5, < 8.0)
       addressable (~> 2.8.1, < 2.8.2)
-      base32-url (>= 0.5.0, < 1)
+      base32-url (>= 0.7.0, < 1)
       bibtex-ruby (~> 6.0)
       builder (~> 3.2, >= 3.2.4)
       citeproc-ruby (~> 2.0)
@@ -34,7 +34,8 @@ GEM
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
-    base32-url (0.6.0)
+    base32-url (0.7.0)
+      uuidtools (~> 2.1, >= 2.1.5)
     bibtex-ruby (6.0.0)
       latex-decode (~> 0.0)
     builder (3.2.4)
@@ -241,6 +242,7 @@ GEM
     unf_ext (0.0.8.2)
     unicode-display_width (2.4.2)
     unicode-types (1.8.0)
+    uuidtools (2.2.0)
     vcr (6.1.0)
     webmock (3.18.1)
       addressable (>= 2.8.0)

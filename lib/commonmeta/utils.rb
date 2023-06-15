@@ -1367,19 +1367,27 @@ module Commonmeta
       end
     end
 
-    def encode_doi(prefix)
+    def encode_doi(prefix, options = {})
       # DOI suffix is a generated from a random number, encoded in base32
       # suffix has 8 digits plus two checksum digits. With base32 there are
       # 32 possible digits, so 8 digits gives 32^8 possible combinations
-      random_int = SecureRandom.random_number(32 ** 7..(32 ** 8) - 1)
-      suffix = Base32::URL.encode(random_int, checksum: true)
-      str = "#{suffix[0, 5]}-#{suffix[5, 10]}"
+      if options[:uuid]
+        str = Base32::URL.encode_uuid(options[:uuid], split: 7, checksum: true)
+      else
+        random_int = SecureRandom.random_number(32 ** 7..(32 ** 8) - 1)
+        suffix = Base32::URL.encode(random_int, checksum: true)
+        str = "#{suffix[0, 5]}-#{suffix[5, 10]}"
+      end
       "https://doi.org/#{prefix}/#{str}"
     end
 
-    def decode_doi(doi)
+    def decode_doi(doi, options = {})
       suffix = doi.split("/", 5).last
-      Base32::URL.decode(suffix)
+      if options[:uuid]
+        Base32::URL.decode_uuid(suffix)
+      else
+        Base32::URL.decode(suffix)
+      end
     end
 
     def encode_container_id

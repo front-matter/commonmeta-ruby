@@ -191,6 +191,7 @@ describe Commonmeta::Metadata, vcr: true do
                                          "person_name")).first).to eq("ORCID" => "https://orcid.org/0000-0001-9165-2757", "contributor_role" => "author", "given_name" => "Esha", "sequence" => "first", "surname" => "Datta")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("Attempts at automating journal subject classification")
+      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"2x2kzts-edc9rgb-vg6s4j6-z9t0d56", "item_number_type"=>"uuid")
     end
 
     it "json_feed_item with references" do
@@ -218,7 +219,7 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("The Research Software Alliance (ReSA)")
       expect(crossref_xml.dig("citation_list", "citation").length).to eq(11)
       expect(crossref_xml.dig("citation_list", "citation").last).to eq("doi"=>"10.5281/zenodo.3699950", "key"=>"ref11")
-      expect(crossref_xml.dig('publisher_item', 'item_number')).to eq("__content__"=>"954f81380ecd409087c5cef1297f1470", "item_number_type"=>"uuid")
+      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"4n9y0kg-3pd8288-fheey4m-qy53g93", "item_number_type"=>"uuid")
     end
 
     it "json_feed_item from rogue scholar with doi" do
@@ -242,6 +243,7 @@ describe Commonmeta::Metadata, vcr: true do
                                          "person_name")).first).to eq("ORCID"=>"https://orcid.org/0000-0003-3334-2771", "contributor_role"=>"author", "given_name"=>"Heinz", "sequence"=>"first", "surname"=>"Pampel")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("EU-Mitgliedstaaten betonen die Rolle von wissenschaftsgeleiteten Open-Access-Modellen jenseits von APCs")
+      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"way2ng-4s48j9v-hbw4rjf-aqh9f33", "item_number_type"=>"uuid")
     end
   end
 end

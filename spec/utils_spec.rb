@@ -650,6 +650,15 @@ describe Commonmeta::Metadata, vcr: true do
       expect(response.length).to eq(36)
     end
 
+    it "encode doi from uuid" do
+      prefix = "10.53731"
+      uuid = "c3095752-2af0-40a4-a229-3ceb7424bce2"
+      response = subject.encode_doi(prefix, uuid: uuid)
+      puts response
+      expect(response).to match(%r{#{prefix}/[a-z0-9]+})
+      expect(response.length).to eq(56)
+    end
+
     it "decode doi" do
       doi = "https://doi.org/10.53731/revzwnv-rpd913d-8drwz"
       response = subject.decode_doi(doi)
@@ -660,6 +669,12 @@ describe Commonmeta::Metadata, vcr: true do
       doi = "https://doi.org/10.53731/rckvde5-tzg61kj-7zvc1"
       response = subject.decode_doi(doi)
       expect(response).to eq(30_198_793_950_250_854_133_601_922_433)
+    end
+
+    it "decode doi to uuid" do
+      doi = "https://doi.org/10.53731/6315bn4-aqg82ja-4a9wxdt-29f7279"
+      response = subject.decode_doi(doi, uuid: true)
+      expect(response).to eq('255d48ab-c102-9288-a4f3-add092f388e9')
     end
   end
 
