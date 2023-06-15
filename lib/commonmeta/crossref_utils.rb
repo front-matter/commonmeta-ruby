@@ -61,6 +61,7 @@ module Commonmeta
           insert_crossref_publication_date(xml)
           insert_crossref_abstract(xml)
           insert_crossref_issn(xml)
+          insert_publisher_item(xml)
           insert_crossref_access_indicators(xml)
           insert_doi_data(xml)
           insert_citation_list(xml)
@@ -137,7 +138,7 @@ module Commonmeta
             xml.first_page(ref['first_page']) if ref['first_page'].present?
             xml.cYear(ref['cYear']) if ref['cYear'].present?
             xml.article_title(ref['article_title']) if ref['article_title'].present?
-            xml.doi(ref['doi']) if ref['doi'].present?
+            xml.doi(doi_from_url(ref['doi'])) if ref['doi'].present?
             xml.unstructured_citation(ref['url']) if ref['url'].present?
           end
         end
@@ -263,6 +264,9 @@ module Commonmeta
           attributes = {
             'item_number_type' => alternate_identifier['alternateIdentifierType'] ? alternate_identifier['alternateIdentifierType'].downcase : nil
           }.compact
+          
+          # remove dashes from UUIDs, as item_number can only be 32 characters long
+          alternate_identifier['alternateIdentifier'].gsub!('-', '') if alternate_identifier['alternateIdentifierType'] == 'UUID'
 
           xml.item_number(alternate_identifier['alternateIdentifier'], attributes)
         end

@@ -217,8 +217,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(crossref_xml.dig("titles",
                               "title")).to eq("The Research Software Alliance (ReSA)")
       expect(crossref_xml.dig("citation_list", "citation").length).to eq(11)
-      expect(crossref_xml.dig("citation_list", "citation").last).to eq("doi"=>"https://doi.org/10.5281/zenodo.3699950", "key"=>"ref11")
-      expect(crossref_xml.dig('publisher_item', 'item_number')).to eq("__content__"=>"954f8138-0ecd-4090-87c5-cef1297f1470", "item_number_type"=>"uuid")
+      expect(crossref_xml.dig("citation_list", "citation").last).to eq("doi"=>"10.5281/zenodo.3699950", "key"=>"ref11")
+      expect(crossref_xml.dig('publisher_item', 'item_number')).to eq("__content__"=>"954f81380ecd409087c5cef1297f1470", "item_number_type"=>"uuid")
     end
 
     it "json_feed_item from rogue scholar with doi" do
