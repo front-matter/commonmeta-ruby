@@ -60,6 +60,7 @@ module Commonmeta
           sum
         end
         references = get_references(meta)
+        alternate_identifiers = [{ "alternateIdentifier" => meta["uuid"], "alternateIdentifierType" => "UUID" }]
 
         { "id" => id,
           "type" => type,
@@ -74,13 +75,14 @@ module Commonmeta
           "license" => license,
           "subjects" => subjects.presence,
           "references" => references.presence,
+          "alternate_identifiers" => alternate_identifiers,
           "state" => state }.compact.merge(read_options)
       end
 
       def get_references(meta)
         # check that references resolve
-        Array.wrap(meta['references']).reduce([]) do |sum, reference|
-          sum << reference if [200, 301, 302].include? HTTP.head(reference['doi'] || reference['url']).status
+        Array.wrap(meta["references"]).reduce([]) do |sum, reference|
+          sum << reference if [200, 301, 302].include? HTTP.head(reference["doi"] || reference["url"]).status
 
           sum
         end

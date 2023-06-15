@@ -61,7 +61,6 @@ module Commonmeta
           insert_crossref_publication_date(xml)
           insert_crossref_abstract(xml)
           insert_crossref_issn(xml)
-          insert_crossref_alternate_identifiers(xml)
           insert_crossref_access_indicators(xml)
           insert_doi_data(xml)
           insert_citation_list(xml)
@@ -78,8 +77,8 @@ module Commonmeta
         insert_crossref_titles(xml)
         insert_posted_date(xml)
         insert_institution(xml)
+        insert_publisher_item(xml)
         insert_crossref_abstract(xml)
-        insert_crossref_alternate_identifiers(xml)
         insert_crossref_access_indicators(xml)
         insert_doi_data(xml)
         insert_citation_list(xml)
@@ -132,13 +131,14 @@ module Commonmeta
       xml.citation_list do
         Array.wrap(references).each do |ref|
           xml.citation('key' => ref['key']) do
-            xml.journal_article(ref['journal_title'])
-            xml.author(ref['author'])
-            xml.volume(ref['volume'])
-            xml.first_page(ref['first_page'])
-            xml.cYear(ref['cYear'])
-            xml.article_title(ref['article_title'])
+            xml.journal_article(ref['journal_title']) if ref['journal_title'].present?
+            xml.author(ref['author']) if ref['author'].present?
+            xml.volume(ref['volume']) if ref['volume'].present?
+            xml.first_page(ref['first_page']) if ref['first_page'].present?
+            xml.cYear(ref['cYear']) if ref['cYear'].present?
+            xml.article_title(ref['article_title']) if ref['article_title'].present?
             xml.doi(ref['doi']) if ref['doi'].present?
+            xml.unstructured_citation(ref['url']) if ref['url'].present?
           end
         end
       end
@@ -158,16 +158,6 @@ module Commonmeta
     #   xml.resourceType(types["resourceType"] || types["schemaOrg"],
     #     'resourceTypeGeneral' => types["resourceTypeGeneral"] || Metadata::SO_TO_DC_TRANSLATIONS[types["schemaOrg"]] || "Other")
     # end
-
-    def insert_crossref_alternate_identifiers(xml)
-      alternate_identifier = Array.wrap(alternate_identifiers).reject do |r|
-        %w[DOI, URL].include?(r['alternate_identifier_type'])
-      end.first
-      return xml if alternate_identifier.blank?
-
-      xml.item_number(alternate_identifier['alternateIdentifier'],
-                      'item_number_type' => alternate_identifier['alternateIdentifierType'])
-    end
 
     def insert_crossref_access_indicators(xml)
       return xml if license.blank?
@@ -262,6 +252,20 @@ module Commonmeta
 
       xml.institution do
         xml.institution_name(publisher['name'])
+      end
+    end
+
+    def insert_publisher_item(xml)
+      return xml if alternate_identifiers.blank?
+
+      xml.publisher_item do
+        alternate_identifiers.each do |alternate_identifier|
+          attributes = {
+            'item_number_type' => alternate_identifier['alternateIdentifierType'] ? alternate_identifier['alternateIdentifierType'].downcase : nil
+          }.compact
+
+          xml.item_number(alternate_identifier['alternateIdentifier'], attributes)
+        end
       end
     end
 

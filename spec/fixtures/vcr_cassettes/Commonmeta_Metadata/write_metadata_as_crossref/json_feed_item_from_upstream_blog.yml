@@ -23,13 +23,13 @@ http_interactions:
       Cache-Control:
       - public, max-age=0, must-revalidate
       Content-Length:
-      - '1607861'
+      - '4'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 04 Jun 2023 13:23:08 GMT
+      - Wed, 14 Jun 2023 08:10:43 GMT
       Etag:
-      - '"kt29he0my7ygld"'
+      - '"wm6yxsynvh4"'
       Server:
       - Vercel
       Strict-Transport-Security:
@@ -39,12 +39,58 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::4g2bf-1685884987322-8525eba36f6c
+      - fra1::iad1::4f9kc-1686730243125-bd2945293712
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"id":"https://doi.org/10.54900/g0qks-tcz98","short_id":"wve6rep4","url":"https://upstream.force11.org/attempts-at-automating-journal-subject-classification/","title":"Attempts
+      string: 'null'
+  recorded_at: Wed, 14 Jun 2023 08:10:43 GMT
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/posts/5d14ffac-b9ac-4e20-bdc0-d9248df4e80d
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '1608266'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 14 Jun 2023 08:17:05 GMT
+      Etag:
+      - '"h1ncgg2hjwygwm"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/posts/[slug]"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::jbgtt-1686730623677-c08ee07ed31b
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":"https://doi.org/10.54900/g0qks-tcz98","uuid":"5d14ffac-b9ac-4e20-bdc0-d9248df4e80d","url":"https://upstream.force11.org/attempts-at-automating-journal-subject-classification/","title":"Attempts
         at automating journal subject classification","summary":"Traditionally, journal
         subject classification was done manually at varying levels of granularity,
         depending on the use case for the institution. Subject classification is done
@@ -238,6 +284,8 @@ http_interactions:
         a very good understanding of what is happening within the algorithm.</p><p>This
         was an interesting exercise for the author to get acquainted with machine
         learning and become familiar with some of the available techniques.</p><p></p>
-        ","tags":["Original Research"],"language":"en","blog_id":"pm0p222","blog":{"id":"pm0p222","title":"Upstream","language":"en","favicon":"https://upstream.force11.org/favicon.png","feed_url":"https://upstream.force11.org/atom/","home_page_url":"https://upstream.force11.org","license":"https://creativecommons.org/licenses/by/4.0/legalcode","category":"Humanities"}}'
-  recorded_at: Sun, 04 Jun 2023 13:23:08 GMT
+        ","tags":["Original Research"],"language":"en","references":[],"blog_id":"pm0p222","blog":{"id":"pm0p222","title":"Upstream","description":"The
+        community blog for all things Open Research.","language":"en","favicon":"https://upstream.force11.org/favicon.png","feed_url":"https://upstream.force11.org/atom/","home_page_url":"https://upstream.force11.org","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T07:23:49+00:00","indexed_at":"2023-01-13","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
+        5.25","category":"Humanities","prefix":"10.54900","modified_at":"2023-06-06T08:00:49+00:00","version":"https://jsonfeed.org/version/1.1","backlog":true}}'
+  recorded_at: Wed, 14 Jun 2023 08:17:06 GMT
 recorded_with: VCR 6.1.0

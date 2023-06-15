@@ -27,7 +27,7 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 15 Jun 2023 05:34:50 GMT
+      - Thu, 15 Jun 2023 12:31:02 GMT
       Etag:
       - '"10spi59ymnvfk5"'
       Server:
@@ -39,7 +39,7 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::97lns-1686807286943-4707fc59686f
+      - fra1::iad1::jgfvq-1686832259234-c24beb176790
       Connection:
       - close
     body:
@@ -245,7 +245,7 @@ http_interactions:
         ","tags":["News"],"language":"en","references":[{"key":"ref1","url":"https://software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers"},{"doi":"https://doi.org/10.6084/m9.figshare.5328442.v3","key":"ref2"},{"doi":"https://doi.org/10.54900/9akm9y5-5ject5y","key":"ref3"},{"doi":"https://doi.org/10.5281/zenodo.7740084","key":"ref4"},{"doi":"https://doi.org/10.5281/zenodo.6859709","key":"ref5"},{"doi":"https://doi.org/10.5281/zenodo.7179892","key":"ref6"},{"doi":"https://doi.org/10.5281/zenodo.3884311","key":"ref7"},{"doi":"https://doi.org/10.15497/rda00052","key":"ref8"},{"doi":"https://doi.org/10.15497/rda00068","key":"ref9"},{"doi":"https://doi.org/10.5281/zenodo.6239373","key":"ref10"},{"doi":"https://doi.org/10.5281/zenodo.3699950","key":"ref11"}],"blog_id":"pm0p222","blog":{"id":"pm0p222","title":"Upstream","description":"The
         community blog for all things Open Research.","language":"en","favicon":"https://upstream.force11.org/favicon.png","feed_url":"https://upstream.force11.org/atom/","home_page_url":"https://upstream.force11.org","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T07:23:49+00:00","indexed_at":"2023-01-13","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
         5.25","category":"Humanities","prefix":"10.54900","modified_at":"2023-06-06T08:00:49+00:00","version":"https://jsonfeed.org/version/1.1","backlog":true}}'
-  recorded_at: Thu, 15 Jun 2023 05:34:50 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:03 GMT
 - request:
     method: head
     uri: https://software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers
@@ -265,7 +265,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:51 GMT
+      - Thu, 15 Jun 2023 12:31:03 GMT
       Server:
       - Apache
       X-Content-Type-Options:
@@ -284,15 +284,15 @@ http_interactions:
       Expires:
       - Sun, 19 Nov 1978 05:00:00 GMT
       Last-Modified:
-      - Wed, 14 Jun 2023 08:10:46 GMT
+      - Thu, 15 Jun 2023 12:31:03 GMT
       Etag:
-      - '"1686730246"'
+      - '"1686832263"'
       Vary:
       - Cookie,Accept-Encoding
       X-Generator:
       - Drupal 9 (https://www.drupal.org)
       X-Drupal-Cache:
-      - HIT
+      - MISS
       Connection:
       - close
       Content-Type:
@@ -300,7 +300,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:51 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:03 GMT
 - request:
     method: head
     uri: https://doi.org/10.6084/m9.figshare.5328442.v3
@@ -320,7 +320,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:51 GMT
+      - Thu, 15 Jun 2023 12:31:03 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -332,13 +332,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 15 Jun 2023 05:42:40 GMT
+      - Thu, 15 Jun 2023 12:37:21 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uml0LMLTR5a9YqCPEJKvF3TX0Rp80EB1zvafARKj8blnE8Ug6cWPH%2Fakb3s1fgtLuEtkIJ5OmkKynqEF2pJ%2Bw0N6vDC%2F0vPzfVYC9VbHNWeKMtMyN17RTm6EznyamacvmqR%2BgAs%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=UaGn0tfdT%2FTeKIeqioMPaKI1Q3knKH9%2F%2FF5RRAUC7%2FCi2%2FgOI%2F6kyT0EuCHZcOJcswjuznxBTgmv2%2FGLFZqUVTC%2FtPbYoLPhm8%2B3gpIbqpcQdzQr97qhK3ZaONF2tRgi6OYnk%2B4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -346,13 +346,13 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d7872438df4b8c0-AMS
+      - 7d7ad3f068bfb8df-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:51 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:03 GMT
 - request:
     method: head
     uri: https://doi.org/10.54900/9akm9y5-5ject5y
@@ -372,7 +372,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:51 GMT
+      - Thu, 15 Jun 2023 12:31:04 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -384,13 +384,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 15 Jun 2023 06:28:08 GMT
+      - Thu, 15 Jun 2023 12:41:56 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=PA2DN9sE1KxGRzzcZYwzhDRLF41iy26af%2Bk7aF%2FuCBy8forG%2Fdbf6KAIUnehv%2FyaOXx%2BytFHFH8B2QX5mcFqo6beHfRsnjzt5BSHcz6zTjR%2FGAGfHR%2FKGAOhUob4dYHaoz7rXFo%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gjApORZyWvsmLu%2F1BufP1FYJIwvYoFH1OhoqodwBA38cO0G74YWYCJ8KDrCXCAC2%2FYO5GO2aktLTKFijhsR0gjWM4gEbmgdWPkCB4Vl5jPSTKg5S82woPtn4R6jUAobnAAAq8To%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -398,13 +398,13 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d7872454f940c85-AMS
+      - 7d7ad3f23b11b89a-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:51 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:04 GMT
 - request:
     method: head
     uri: https://doi.org/10.5281/zenodo.7740084
@@ -424,7 +424,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:52 GMT
+      - Thu, 15 Jun 2023 12:31:04 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -436,13 +436,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 15 Jun 2023 06:28:50 GMT
+      - Thu, 15 Jun 2023 12:42:48 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2F9oUgHq5prhvib2607i2m6XAXHGHOKDwfDAjaTcuRKb4xNVYDecOqRfQq1pSL%2Fwu6DS9Cm%2FtqyRAkPDJ5VyDw6MypLRn8N96ohKXD4A1mRt5wukqxcfZ%2FQ65UwRxtGzSxsvhVns%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YhvxUYWfM7Z7DKMbOkhS8PeyDtjXE%2F5oDim3n%2Fi7tepuiiyRtLrROJ6VHp%2BTqoQR5RpOXJT%2BFaFa8BaJjiCFAViD%2BOpgMDa2KhqBGBJ%2FVKab2y2U8gUzGaUGO2z%2BFAzlpkziFJ0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -450,13 +450,13 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d7872477c120df5-AMS
+      - 7d7ad3f40a63b890-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:52 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:04 GMT
 - request:
     method: head
     uri: https://doi.org/10.5281/zenodo.6859709
@@ -476,7 +476,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:52 GMT
+      - Thu, 15 Jun 2023 12:31:04 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -488,13 +488,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 15 Jun 2023 05:42:40 GMT
+      - Thu, 15 Jun 2023 12:42:48 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2F1U1BSjvw6xMaDQcHb6K9OhU%2BoeP4hgDPT4FiXO9lUSH36FK4IxisBIDLtcYWe7otlaEevcZvzSdHjCTMEiI6tuOo84haRelWQjpqxGz1w45pfUhgdtTI3Y5TprbHwWA42cOBzk%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ta83hnPqP5nYVdAraG5IZm5dMs5nCrab79T1ITt7he9oen3R%2FFsVIWwCJiWqVovla2OV%2FJQNpZ1861O2uBjQbfb%2FleLK8r80mPtVrN0tWXkuqyNncWRFysRlokc25KvPoB1yqDA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -502,13 +502,13 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d7872493bfcb8b5-AMS
+      - 7d7ad3f56c550a57-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:52 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:04 GMT
 - request:
     method: head
     uri: https://doi.org/10.5281/zenodo.7179892
@@ -528,7 +528,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:52 GMT
+      - Thu, 15 Jun 2023 12:31:04 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -540,13 +540,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 15 Jun 2023 05:37:12 GMT
+      - Thu, 15 Jun 2023 12:37:21 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BQnuXh94KkHtxee5GZc88aiwIlgah%2F%2FOwdTajMJZsWzIovl%2FlhKAsMF3AVQ7dHywL%2B%2BpV9VVCrwERpsvMP3X03Kx0PCL9vBnZclnyRGoUHTc8balMmDRly0YEgv2FWfQGoksPcs%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vDuiohlb0KKU%2FRdWTo94rH8YpH0jx8zqxhDZz3r2SUvLy8WhizPudzmPK4Q8HsIHwN7D3%2FyxkEQomjPg0ofNfAHTVd4lp6slRbPsuaM8RNGam2u12jgHmtl5h3PkeOBNXIYX1XY%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -554,13 +554,13 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d78724b0b101ca5-AMS
+      - 7d7ad3f74a630e7e-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:52 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:04 GMT
 - request:
     method: head
     uri: https://doi.org/10.5281/zenodo.3884311
@@ -580,7 +580,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:53 GMT
+      - Thu, 15 Jun 2023 12:31:05 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -592,13 +592,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 15 Jun 2023 05:37:12 GMT
+      - Thu, 15 Jun 2023 12:57:43 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Eb3cNs67ZgJ9UyUwAK3EWZUuqsPuMlutj8ftjGxeM63BAin6NTorLRWp4zq6btl%2FEk0z8rwOoWwhDr969%2For7jPMucnTXM17HFy79A2Rw%2BSIBEpiShMuwaVXJ49Xv%2F6OnUAxd9s%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ks9JN9L%2FJxttxL2SouHQU3FotT1isp2Jn283qaFRe5v6s4cdOuwdHZvRO5V6OXpoIwKLZnPiYut55zKMIGP1RhHANjOAr1uuzDKooqNzjOkv8Hr7VCuuqAmVgq9dSLp43cyUmEI%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -606,13 +606,13 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d78724cb866b760-AMS
+      - 7d7ad3f8ee911c81-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:52 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:05 GMT
 - request:
     method: head
     uri: https://doi.org/10.15497/rda00052
@@ -632,7 +632,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:53 GMT
+      - Thu, 15 Jun 2023 12:31:05 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -644,13 +644,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 15 Jun 2023 06:28:50 GMT
+      - Thu, 15 Jun 2023 12:37:21 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=oeYVkHw2WbZLoqXPMUVSBaCeVWSIeRqXLI4zrr4QwgTMLfMr0RXWfppIlmiLu9tMitfOYeJljlb4X4zuoBGoIKLrJv2Ws0cPqd1QpzE%2FwLF5o07iyaWXLZWao%2Biu034LdvtEqNA%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0Tb%2F%2FlwAIcHKjUTP3hKtR8VbdrYyPXjC0jeS5YvF5crrfMCecrGJ%2B2FzZ8oWZYXHvC9i0gntI%2Bgv%2FkZPnMj4XmQQCZvGf9lMFuzFo7WhuOUrMX%2FM%2FuyXT%2BvSQYQI8zX%2Bj74bA2Y%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -658,13 +658,13 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d78724f3b7e0e18-AMS
+      - 7d7ad3fa89c41c7e-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:53 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:05 GMT
 - request:
     method: head
     uri: https://doi.org/10.15497/rda00068
@@ -684,7 +684,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:53 GMT
+      - Thu, 15 Jun 2023 12:31:05 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -696,13 +696,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 15 Jun 2023 05:37:12 GMT
+      - Thu, 15 Jun 2023 12:56:53 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=EGuL2ohX3wAgTWQOz0wAjqt%2FwJM1b8sm%2BBGKw0%2FMLWaWERBM9tOfU2ic8UZEHZgbf1EJr1baKyJQtNWwEMWycD8uqg8ppRr0wunt2VkzT4KzywQsJ7WPn21dA3lyp3pGOwEX2eU%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4pX8kQFW%2BqQ6PffPo1gyXoGk5FSpFDQaWjUepUDfLm%2Fa4JOQk%2Fo1dQRDsA3eEcQ%2FLmsEQtXFrv4ZoxY6NAnvlqpPS3eZSWqVtA8RWb1KiCmciDeGqNFBc4iKK7pJ%2Bg0A8KBAckI%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -710,13 +710,13 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d7872518de01c82-AMS
+      - 7d7ad3fc1a4c1c8c-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:53 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:05 GMT
 - request:
     method: head
     uri: https://doi.org/10.5281/zenodo.6239373
@@ -736,7 +736,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:54 GMT
+      - Thu, 15 Jun 2023 12:31:06 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -748,13 +748,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 15 Jun 2023 06:28:50 GMT
+      - Thu, 15 Jun 2023 12:35:58 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gtpiQVLTj%2B0gZnZW4CGsFYyYwd5uHA9AtX55Z%2FvuKUZrJYIvR763lnOQtoiPnJLRSHNah5ANYCHZ3JM%2BDg9cwX8cKoSVZBravafkVsD%2BCXgpcW3WvenDk78DcT7qKC%2FyiAdYckw%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=GvxGwYOu9dexaCINzl9pVosXMzGpExrhxj0eC3DgptbQAqnpe7RR4etfUBFrm2FUeEx%2BQ0V1OIFnxFW5Tw8XZNb1CwVv6BVSzBXLNBrr3P6OSxh%2F2RUlANg9A3LbmTgc0RGpAVo%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -762,13 +762,13 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d787253bcc54196-AMS
+      - 7d7ad3fe3fc6b8eb-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:54 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:06 GMT
 - request:
     method: head
     uri: https://doi.org/10.5281/zenodo.3699950
@@ -788,7 +788,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 15 Jun 2023 05:34:54 GMT
+      - Thu, 15 Jun 2023 12:31:06 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -800,13 +800,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 15 Jun 2023 05:37:12 GMT
+      - Thu, 15 Jun 2023 12:42:48 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ngs0cjLXYAdguFVsaUjkkLvdI8Hu%2BfaW0wY4Q5Kw4ZIrUwO5yPyR6SSkiHTPatAt6ms5jn%2F2%2Bcjg3PCtnMXkL0jBlSD80fQ1u8Lz4A2zCsLh%2BtQerk66aVCugUGSbFBKxvBNvvY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KQoOG%2BP6Qoi2H%2FQ46mUQsjcBGkFClhKA1YFSJHXDR2EmIsG%2FczimYbq4vb017QYlO2uJpy9OU%2FGH7IXIUNll0zLaQhvxBsufY3JXytFNH%2FA1cA7Pzf2Gow%2Br98RW35ybqVMd6qg%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -814,11 +814,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d787255cbab0e90-AMS
+      - 7d7ad4000c78b8a8-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 15 Jun 2023 05:34:54 GMT
+  recorded_at: Thu, 15 Jun 2023 12:31:06 GMT
 recorded_with: VCR 6.1.0

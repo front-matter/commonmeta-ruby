@@ -90,7 +90,7 @@ describe Commonmeta::Metadata, vcr: true do
                                         "id" => "https://orcid.org/0000-0003-1419-2405",
                                         "type" => "Person" }])
       expect(subject.subjects).to eq([{ "subject" => "interview" }])
-      expect(subject.container).to eq("identifier" => "2749-9952", "identifierType" => "ISSN",
+      expect(subject.container).to eq("identifier" => "https://blog.front-matter.io/", "identifierType" => "URL",
                                       "title" => "Front Matter", "type" => "Periodical")
       expect(subject.language).to eq("en")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
@@ -171,7 +171,7 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it "json_feed_item from upstream blog" do
-      input = "https://rogue-scholar.org/api/posts/wve6rep4"
+      input = "https://rogue-scholar.org/api/posts/5d14ffac-b9ac-4e20-bdc0-d9248df4e80d"
       subject = described_class.new(input: input)
 
       expect(subject.valid?).to be true
@@ -193,8 +193,36 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Attempts at automating journal subject classification")
     end
 
+    it "json_feed_item with references" do
+      input = "https://rogue-scholar.org/api/posts/954f8138-0ecd-4090-87c5-cef1297f1470"
+      subject = described_class.new(input: input)
+
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://doi.org/10.54900/zwm7q-vet94")
+      expect(subject.url).to eq("https://upstream.force11.org/the-research-software-alliance-resa")
+      expect(subject.alternate_identifiers).to eq([{"alternateIdentifier"=>"954f8138-0ecd-4090-87c5-cef1297f1470", "alternateIdentifierType"=>"UUID"}])
+      expect(subject.type).to eq("Article")
+      expect(subject.titles).to eq([{ "title" => "The Research Software Alliance (ReSA)" }])
+      expect(subject.creators.length).to eq(2)
+      expect(subject.creators.first).to eq("familyName"=>"Katz", "givenName"=>"Daniel S.", "id"=>"https://orcid.org/0000-0001-5934-7525", "type"=>"Person")
+      expect(subject.subjects).to eq([{ "subject" => "news" }])
+      expect(subject.language).to eq("en")
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.references.length).to eq(11)
+      crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
+      expect(Array.wrap(crossref_xml.dig("contributors", "person_name")).length).to eq(2)
+      expect(Array.wrap(crossref_xml.dig("contributors",
+                                         "person_name")).first).to eq("ORCID" => "https://orcid.org/0000-0001-5934-7525", "contributor_role" => "author", "given_name" => "Daniel S.", "sequence" => "first", "surname" => "Katz")
+      expect(crossref_xml.dig("titles",
+                              "title")).to eq("The Research Software Alliance (ReSA)")
+      expect(crossref_xml.dig("citation_list", "citation").length).to eq(11)
+      expect(crossref_xml.dig("citation_list", "citation").last).to eq("doi"=>"https://doi.org/10.5281/zenodo.3699950", "key"=>"ref11")
+      expect(crossref_xml.dig('publisher_item', 'item_number')).to eq("__content__"=>"954f8138-0ecd-4090-87c5-cef1297f1470", "item_number_type"=>"uuid")
+    end
+
     it "json_feed_item from rogue scholar with doi" do
-      input = "https://rogue-scholar.org/api/posts/zkevlyd3"
+      input = "https://rogue-scholar.org/api/posts/1c578558-1324-4493-b8af-84c49eabc52f"
       subject = described_class.new(input: input, doi: "10.59350/9ry27-7cz42")
 
       expect(subject.valid?).to be true

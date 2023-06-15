@@ -27,8 +27,8 @@ http_interactions:
       Status:
       - 301 Moved Permanently
       X-Request-Id:
-      - 3aab0d89d2e9b06ce62792d9c0dc27e5
-      - 3aab0d89d2e9b06ce62792d9c0dc27e5
+      - c91506d5-898f-40ef-9a9b-fd38c7a1ed31
+      - c91506d5-898f-40ef-9a9b-fd38c7a1ed31
       Location:
       - "/posts/dryad-interview-jen-gibson/"
       Ghost-Cache:
@@ -37,22 +37,22 @@ http_interactions:
       - public, max-age=31536000
       Ghost-Age:
       - '0'
+      Via:
+      - 1.1 varnish, 1.1 varnish
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 19 Mar 2023 17:36:01 GMT
-      Via:
-      - 1.1 varnish
+      - Wed, 14 Jun 2023 08:10:52 GMT
       Age:
-      - '2161074'
+      - '15316'
       X-Served-By:
-      - cache-ams21054-AMS
+      - cache-ams12723-AMS, cache-mad2200133-MAD
       X-Cache:
-      - HIT
+      - HIT, MISS
       X-Cache-Hits:
-      - '1'
+      - 1, 0
       X-Timer:
-      - S1679247362.993026,VS0,VE1
+      - S1686730253.723182,VS0,VE30
       Vary:
       - Cookie
       Ghost-Fastly:
@@ -62,7 +62,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: ''
-  recorded_at: Sun, 19 Mar 2023 17:36:01 GMT
+  recorded_at: Wed, 14 Jun 2023 08:10:52 GMT
 - request:
     method: get
     uri: https://blog.front-matter.io/posts/dryad-interview-jen-gibson/
@@ -84,7 +84,7 @@ http_interactions:
       Connection:
       - close
       Content-Length:
-      - '34507'
+      - '34394'
       Server:
       - openresty
       Content-Type:
@@ -92,32 +92,32 @@ http_interactions:
       Status:
       - 200 OK
       X-Request-Id:
-      - 371358741fee9c87dafc84418a015c46
-      - fe4117f5d918ec9d7bbffbcbfd65ae0b
+      - 4b74f2b6-176b-4907-956d-96cd3a3011a8
+      - 4b74f2b6-176b-4907-956d-96cd3a3011a8
       Etag:
-      - W/"86cb-EC3VLdP+618g1eeAoAKxNKS0Sew"
+      - W/"865a-CTHHKK8ejks2uoPyRJpjsWSCeV8"
       Ghost-Cache:
-      - HIT
+      - MISS
       Cache-Control:
       - public, max-age=0
       Ghost-Age:
-      - '39422'
+      - '0'
+      Via:
+      - 1.1 varnish, 1.1 varnish
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 19 Mar 2023 17:36:02 GMT
-      Via:
-      - 1.1 varnish
+      - Wed, 14 Jun 2023 08:10:53 GMT
       Age:
-      - '271890'
+      - '0'
       X-Served-By:
-      - cache-ams21020-AMS
+      - cache-ams12745-AMS, cache-mad22089-MAD
       X-Cache:
-      - HIT
+      - MISS, MISS
       X-Cache-Hits:
-      - '1'
+      - 0, 0
       X-Timer:
-      - S1679247362.116354,VS0,VE1
+      - S1686730253.835976,VS0,VE246
       Vary:
       - Cookie, Accept-Encoding
       Ghost-Fastly:
@@ -129,7 +129,7 @@ http_interactions:
       string: "<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"utf-8\">\n
         \   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n
         \   <title>Dryad: Interview with Jen Gibson</title>\n    <link rel=\"stylesheet\"
-        href=\"https://blog.front-matter.io/assets/built/screen.css?v=1ff70c2f6a\">\n\n
+        href=\"https://blog.front-matter.io/assets/built/screen.css?v=d369441f44\">\n\n
         \   <meta name=\"citation_doi\" content=\"https://doi.org/10.53731/rceh7pn-tzg61kj-7zv63\">\n
         \   <meta name=\"citation_title\" content=\"Dryad: Interview with Jen Gibson\">\n
         \   <meta name=\"citation_abstract\" content=\"In October Jen Gibson started
@@ -139,49 +139,48 @@ http_interactions:
         as I served on the Dryad\">\n    <meta name=\"citation_author\" content=\"Martin
         Fenner\">\n    <meta name=\"citation_date\" content=\"2021-11-15\"/>\n    <meta
         name=\"citation_keywords\" content=\"Interview\"/>\n    <meta name=\"citation_journal_title\"
-        content=\"Front Matter\"/>\n    <meta name=\"citation_language\" content=\"en\">\n\n
-        \   <meta name=\"citation_issn\" content=\"2749-9952\">\n\n    <meta name=\"dc.identifier\"
-        content=\"https://doi.org/10.53731/rceh7pn-tzg61kj-7zv63\">\n    <meta name=\"dc.creator\"
-        content=\"Martin Fenner\" />\n    <meta name=\"dc.title\" content=\"Dryad:
-        Interview with Jen Gibson\" />\n    <meta name=\"dc.description\" content=\"In
-        October Jen Gibson started as the new Executive Director for the Dryad Data
-        Repository. I used the opportunity to ask Jen a few questions about Dryad,
-        challenges with data sharing, and ideas about moving Dryad forward. I was
-        particularly interested in the interview as I served on the Dryad\" />\n    <meta
-        name=\"dc.date\" content=\"2021-11-15\" />\n    <meta name=\"dc.subject\"
+        content=\"Front Matter\"/>\n    <meta name=\"citation_language\" content=\"en\">\n\n\n
+        \   <meta name=\"dc.identifier\" content=\"https://doi.org/10.53731/rceh7pn-tzg61kj-7zv63\">\n
+        \   <meta name=\"dc.creator\" content=\"Martin Fenner\" />\n    <meta name=\"dc.title\"
+        content=\"Dryad: Interview with Jen Gibson\" />\n    <meta name=\"dc.description\"
+        content=\"In October Jen Gibson started as the new Executive Director for
+        the Dryad Data Repository. I used the opportunity to ask Jen a few questions
+        about Dryad, challenges with data sharing, and ideas about moving Dryad forward.
+        I was particularly interested in the interview as I served on the Dryad\"
+        />\n    <meta name=\"dc.date\" content=\"2021-11-15\" />\n    <meta name=\"dc.subject\"
         content=\"Interview\" />\n    <meta name=\"dc.language\" content=\"en\" />
         \  \n    <meta name=\"dc.format\" content=\"text/html\" /> \n    <meta name=\"dc.source\"
         content=\"Front Matter\" />\n    <meta name=\"dc.type\" content=\"article\"
         />\n    \n    <meta name=\"dc.rights\" content=\"https://creativecommons.org/licenses/by/4.0/legalcode\"
-        />\n\n    <link rel=\"icon\" href=\"https://blog.front-matter.io/content/images/size/w256h256/2022/12/android-chrome-192x192.png\"
-        type=\"image/png\" />\n    <link rel=\"canonical\" href=\"https://doi.org/10.53731/rceh7pn-tzg61kj-7zv63\"
-        />\n    <meta name=\"referrer\" content=\"no-referrer-when-downgrade\" />\n
-        \   <link rel=\"amphtml\" href=\"https://blog.front-matter.io/posts/dryad-interview-jen-gibson/amp/\"
-        />\n    \n    <meta property=\"og:site_name\" content=\"Front Matter\" />\n
-        \   <meta property=\"og:type\" content=\"article\" />\n    <meta property=\"og:title\"
-        content=\"Dryad: Interview with Jen Gibson\" />\n    <meta property=\"og:description\"
+        />\n\n    <link rel=\"icon\" href=\"https://blog.front-matter.io/content/images/size/w256h256/2023/04/front-matter.png\"
+        type=\"image/png\">\n    <link rel=\"canonical\" href=\"https://doi.org/10.53731/rceh7pn-tzg61kj-7zv63\">\n
+        \   <meta name=\"referrer\" content=\"no-referrer-when-downgrade\">\n    <link
+        rel=\"amphtml\" href=\"https://blog.front-matter.io/posts/dryad-interview-jen-gibson/amp/\">\n
+        \   \n    <meta property=\"og:site_name\" content=\"Front Matter\">\n    <meta
+        property=\"og:type\" content=\"article\">\n    <meta property=\"og:title\"
+        content=\"Dryad: Interview with Jen Gibson\">\n    <meta property=\"og:description\"
         content=\"In October Jen Gibson started as the new Executive Director for
         the Dryad Data Repository. I used the opportunity to ask Jen a few questions
         about Dryad, challenges with data sharing, and ideas about moving Dryad forward.
-        I was particularly interested in the interview as I served on the Dryad\"
-        />\n    <meta property=\"og:url\" content=\"https://doi.org/10.53731/rceh7pn-tzg61kj-7zv63\"
-        />\n    <meta property=\"og:image\" content=\"https://blog.front-matter.io/content/images/2022/07/jgibson.png\"
-        />\n    <meta property=\"article:published_time\" content=\"2021-11-15T10:52:02.000Z\"
-        />\n    <meta property=\"article:modified_time\" content=\"2022-08-15T18:56:27.000Z\"
-        />\n    <meta property=\"article:tag\" content=\"Interview\" />\n    \n    <meta
-        name=\"twitter:card\" content=\"summary_large_image\" />\n    <meta name=\"twitter:title\"
-        content=\"Dryad: Interview with Jen Gibson\" />\n    <meta name=\"twitter:description\"
+        I was particularly interested in the interview as I served on the Dryad\">\n
+        \   <meta property=\"og:url\" content=\"https://doi.org/10.53731/rceh7pn-tzg61kj-7zv63\">\n
+        \   <meta property=\"og:image\" content=\"https://blog.front-matter.io/content/images/2022/07/jgibson.png\">\n
+        \   <meta property=\"article:published_time\" content=\"2021-11-15T10:52:02.000Z\">\n
+        \   <meta property=\"article:modified_time\" content=\"2022-08-15T18:56:27.000Z\">\n
+        \   <meta property=\"article:tag\" content=\"Interview\">\n    \n    <meta
+        name=\"twitter:card\" content=\"summary_large_image\">\n    <meta name=\"twitter:title\"
+        content=\"Dryad: Interview with Jen Gibson\">\n    <meta name=\"twitter:description\"
         content=\"In October Jen Gibson started as the new Executive Director for
         the Dryad Data Repository. I used the opportunity to ask Jen a few questions
         about Dryad, challenges with data sharing, and ideas about moving Dryad forward.
-        I was particularly interested in the interview as I served on the Dryad\"
-        />\n    <meta name=\"twitter:url\" content=\"https://doi.org/10.53731/rceh7pn-tzg61kj-7zv63\"
-        />\n    <meta name=\"twitter:image\" content=\"https://blog.front-matter.io/content/images/2022/07/jgibson.png\"
-        />\n    <meta name=\"twitter:label1\" content=\"Written by\" />\n    <meta
-        name=\"twitter:data1\" content=\"Martin Fenner\" />\n    <meta name=\"twitter:label2\"
-        content=\"Filed under\" />\n    <meta name=\"twitter:data2\" content=\"Interview\"
-        />\n    <meta property=\"og:image:width\" content=\"640\" />\n    <meta property=\"og:image:height\"
-        content=\"480\" />\n    \n    <script type=\"application/ld+json\">\n{\n    \"@context\":
+        I was particularly interested in the interview as I served on the Dryad\">\n
+        \   <meta name=\"twitter:url\" content=\"https://doi.org/10.53731/rceh7pn-tzg61kj-7zv63\">\n
+        \   <meta name=\"twitter:image\" content=\"https://blog.front-matter.io/content/images/2022/07/jgibson.png\">\n
+        \   <meta name=\"twitter:label1\" content=\"Written by\">\n    <meta name=\"twitter:data1\"
+        content=\"Martin Fenner\">\n    <meta name=\"twitter:label2\" content=\"Filed
+        under\">\n    <meta name=\"twitter:data2\" content=\"Interview\">\n    <meta
+        property=\"og:image:width\" content=\"640\">\n    <meta property=\"og:image:height\"
+        content=\"480\">\n    \n    <script type=\"application/ld+json\">\n{\n    \"@context\":
         \"https://schema.org\",\n    \"@type\": \"Article\",\n    \"publisher\": {\n
         \       \"@type\": \"Organization\",\n        \"name\": \"Front Matter\",\n
         \       \"url\": \"https://blog.front-matter.io/\",\n        \"logo\": {\n
@@ -205,12 +204,11 @@ http_interactions:
         as I served on the Dryad Board of Directors from 2013 to 2016. In fact, one
         post on this blog is about a presentation I gave in 2013 (Metrics and attribution:
         my thoughts for the panel at the ORCID-Dryad symposium on research attri\",\n
-        \   \"mainEntityOfPage\": {\n        \"@type\": \"WebPage\",\n        \"@id\":
-        \"https://blog.front-matter.io/\"\n    }\n}\n    </script>\n\n    <meta name=\"generator\"
-        content=\"Ghost 5.38\" />\n    <link rel=\"alternate\" type=\"application/rss+xml\"
-        title=\"Front Matter\" href=\"https://blog.front-matter.io/rss/\" />\n    <script
-        defer src=\"https://cdn.jsdelivr.net/ghost/portal@~2.25/umd/portal.min.js\"
-        data-ghost=\"https://blog.front-matter.io/\" data-key=\"d0d5aabcc0f96718307d5944b6\"
+        \   \"mainEntityOfPage\": \"https://blog.front-matter.io/posts/dryad-interview-jen-gibson/\"\n}\n
+        \   </script>\n\n    <meta name=\"generator\" content=\"Ghost 5.51\">\n    <link
+        rel=\"alternate\" type=\"application/rss+xml\" title=\"Front Matter\" href=\"https://blog.front-matter.io/rss/\">\n
+        \   <script defer src=\"https://cdn.jsdelivr.net/ghost/portal@~2.33/umd/portal.min.js\"
+        data-i18n=\"false\" data-ghost=\"https://blog.front-matter.io/\" data-key=\"d0d5aabcc0f96718307d5944b6\"
         data-api=\"https://front-matter.ghost.io/ghost/api/content/\" crossorigin=\"anonymous\"></script><style
         id=\"gh-members-styles\">.gh-post-upgrade-cta-content,\n.gh-post-upgrade-cta
         {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n
@@ -232,47 +230,48 @@ http_interactions:
         \   <script defer src=\"https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/sodo-search.min.js\"
         data-key=\"d0d5aabcc0f96718307d5944b6\" data-styles=\"https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css\"
         data-sodo-search=\"https://front-matter.ghost.io/\" crossorigin=\"anonymous\"></script>\n
-        \   <link href=\"https://blog.front-matter.io/webmentions/receive/\" rel=\"webmention\"
-        />\n    <script defer src=\"/public/cards.min.js?v=1ff70c2f6a\"></script>\n
-        \   <link rel=\"stylesheet\" type=\"text/css\" href=\"/public/cards.min.css?v=1ff70c2f6a\">\n
-        \   <script defer src=\"/public/comment-counts.min.js?v=1ff70c2f6a\" data-ghost-comments-counts-api=\"https://blog.front-matter.io/members/api/comments/counts/\"></script>\n
-        \   <script defer data-domain=\"blog.front-matter.io\" src=\"https://plausible.io/js/plausible.js\"></script><style>:root
-        {--ghost-accent-color: #059669;}</style>\n</head>\n\n<body class=\"post-template
-        tag-interview is-head-stacked has-serif-body\">\n<div class=\"gh-site\">\n\n
-        \   <header id=\"gh-head\" class=\"gh-head gh-outer\">\n        <div class=\"gh-head-inner
-        gh-inner\">\n            <div class=\"gh-head-brand\">\n                <div
-        class=\"gh-head-brand-wrapper\">\n                    <a class=\"gh-head-logo\"
-        href=\"https://blog.front-matter.io\">\n                            <img src=\"https://blog.front-matter.io/content/images/2022/12/logo.png\"
-        alt=\"Front Matter\">\n                    </a>\n                </div>\n
-        \               <button class=\"gh-search gh-icon-btn\" data-ghost-search><svg
-        xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\"
-        stroke-width=\"2\" width=\"20\" height=\"20\"><path stroke-linecap=\"round\"
-        stroke-linejoin=\"round\" d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"></path></svg></button>\n
-        \               <button class=\"gh-burger\"></button>\n            </div>\n\n
-        \           <nav class=\"gh-head-menu\">\n                <ul class=\"nav\">\n
-        \   <li class=\"nav-feature\"><a href=\"https://blog.front-matter.io/tag/feature/\">Feature</a></li>\n
+        \   \n    <link href=\"https://blog.front-matter.io/webmentions/receive/\"
+        rel=\"webmention\">\n    <script defer src=\"/public/cards.min.js?v=d369441f44\"></script>\n
+        \   <link rel=\"stylesheet\" type=\"text/css\" href=\"/public/cards.min.css?v=d369441f44\">\n
+        \   <script defer src=\"/public/comment-counts.min.js?v=d369441f44\" data-ghost-comments-counts-api=\"https://blog.front-matter.io/members/api/comments/counts/\"></script>\n
+        \   <link href=\"/atom/\" type=\"application/atom+xml\" rel=\"alternate\"
+        title=\"Atom feed\" />\n<script defer data-domain=\"blog.front-matter.io\"
+        src=\"https://plausible.io/js/plausible.js\"></script><style>:root {--ghost-accent-color:
+        #059669;}</style>\n</head>\n\n<body class=\"post-template tag-interview is-head-stacked
+        has-serif-body\">\n<div class=\"gh-site\">\n\n    <header id=\"gh-head\" class=\"gh-head
+        gh-outer\">\n        <div class=\"gh-head-inner gh-inner\">\n            <div
+        class=\"gh-head-brand\">\n                <div class=\"gh-head-brand-wrapper\">\n
+        \                   \n                    <a class=\"gh-head-logo\" href=\"https://blog.front-matter.io\">\n
+        \                           <img src=\"https://blog.front-matter.io/content/images/2022/12/logo.png\"
+        alt=\"Front Matter\">\n                    </a>\n                    \n                </div>\n
+        \               <button class=\"gh-search gh-icon-btn\" aria-label=\"Search
+        this site\" data-ghost-search><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\"
+        viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\" width=\"20\"
+        height=\"20\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21
+        21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"></path></svg></button>\n                <button
+        class=\"gh-burger\"></button>\n            </div>\n\n            <nav class=\"gh-head-menu\">\n
+        \               <ul class=\"nav\">\n    <li class=\"nav-feature\"><a href=\"https://blog.front-matter.io/tag/feature/\">Feature</a></li>\n
         \   <li class=\"nav-news\"><a href=\"https://blog.front-matter.io/tag/news/\">News</a></li>\n
         \   <li class=\"nav-meeting-report\"><a href=\"https://blog.front-matter.io/tag/meeting-report/\">Meeting
         Report</a></li>\n    <li class=\"nav-interview\"><a href=\"https://blog.front-matter.io/tag/interview/\">Interview</a></li>\n
         \   <li class=\"nav-chart\"><a href=\"https://blog.front-matter.io/tag/chart/\">Chart</a></li>\n
         \   <li class=\"nav-science-hack\"><a href=\"https://blog.front-matter.io/tag/science-hack/\">Science
         Hack</a></li>\n    <li class=\"nav-book-review\"><a href=\"https://blog.front-matter.io/tag/book-review/\">Book
-        Review</a></li>\n    <li class=\"nav-gazette\"><a href=\"https://blog.front-matter.io/tag/gazette/\">Gazette</a></li>\n</ul>\n\n
-        \           </nav>\n\n            <div class=\"gh-head-actions\">\n                    <button
-        class=\"gh-search gh-icon-btn\" data-ghost-search><svg xmlns=\"http://www.w3.org/2000/svg\"
-        fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\"
-        width=\"20\" height=\"20\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\"
-        d=\"M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"></path></svg></button>\n
-        \                   <div class=\"gh-head-members\">\n                                <a
-        class=\"gh-head-link\" href=\"#/portal/signin\" data-portal=\"signin\">Sign
-        in</a>\n                                <a class=\"gh-head-btn gh-btn gh-primary-btn\"
-        href=\"#/portal/signup\" data-portal=\"signup\">Subscribe</a>\n                    </div>\n
-        \           </div>\n        </div>\n    </header>\n\n    \n<main class=\"gh-main\">\n
-        \       <article class=\"gh-article post tag-interview\">\n\n            <header
-        class=\"gh-article-header gh-canvas\">\n                    <a class=\"gh-article-tag\"
-        href=\"https://blog.front-matter.io/tag/interview/\">Interview</a>\n\n                <h1
-        class=\"gh-article-title\">Dryad: Interview with Jen Gibson</h1>\n\n                    <aside
-        class=\"gh-article-sidebar\">\n\n        <div class=\"gh-author-image-list\">\n
+        Review</a></li>\n</ul>\n\n            </nav>\n\n            <div class=\"gh-head-actions\">\n
+        \                   <button class=\"gh-search gh-icon-btn\" aria-label=\"Search
+        this site\" data-ghost-search><svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\"
+        viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\" width=\"20\"
+        height=\"20\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M21
+        21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z\"></path></svg></button>\n                    <div
+        class=\"gh-head-members\">\n                                <a class=\"gh-head-link\"
+        href=\"#/portal/signin\" data-portal=\"signin\">Sign in</a>\n                                <a
+        class=\"gh-head-btn gh-btn gh-primary-btn\" href=\"#/portal/signup\" data-portal=\"signup\">Subscribe</a>\n
+        \                   </div>\n            </div>\n        </div>\n    </header>\n\n
+        \   \n<main class=\"gh-main\">\n        <article class=\"gh-article post tag-interview\">\n\n
+        \           <header class=\"gh-article-header gh-canvas\">\n                    <a
+        class=\"gh-article-tag\" href=\"https://blog.front-matter.io/tag/interview/\">Interview</a>\n\n
+        \               <h1 class=\"gh-article-title\">Dryad: Interview with Jen Gibson</h1>\n\n
+        \                   <aside class=\"gh-article-sidebar\">\n\n        <div class=\"gh-author-image-list\">\n
         \               <a class=\"gh-author-image\" href=\"/author/martin/\">\n                        <img
         src=\"https://www.gravatar.com/avatar/8adea77ad740876f5cb832f92d49f08d?s&#x3D;250&amp;r&#x3D;x&amp;d&#x3D;mp\"
         alt=\"Martin Fenner\">\n                </a>\n        </div>\n\n        <div
@@ -506,10 +505,9 @@ http_interactions:
         Subscribe now</button>\n                </section>\n\n            <nav class=\"gh-foot-menu\">\n
         \               <ul class=\"nav\">\n    <li class=\"nav-front-matter\"><a
         href=\"https://front-matter.io\">Front Matter</a></li>\n    <li class=\"nav-about\"><a
-        href=\"https://blog.front-matter.io/about/\">About</a></li>\n    <li class=\"nav-gazette\"><a
-        href=\"https://blog.front-matter.io/gazette/\">Gazette</a></li>\n    <li class=\"nav-privacy-policy\"><a
+        href=\"https://blog.front-matter.io/about/\">About</a></li>\n    <li class=\"nav-privacy-policy\"><a
         href=\"https://blog.front-matter.io/privacy-policy/\">Privacy Policy</a></li>\n
-        \   <li class=\"nav-rss\"><a href=\"https://blog.front-matter.io/rss/\">RSS</a></li>\n
+        \   <li class=\"nav-rss\"><a href=\"https://blog.front-matter.io/atom/\">RSS</a></li>\n
         \   <li class=\"nav-usage-stats\"><a href=\"https://plausible.io/blog.front-matter.io\">Usage
         Stats</a></li>\n    <li class=\"nav-discord\"><a href=\"https://front-matter.io/discord\">Discord</a></li>\n</ul>\n\n
         \           </nav>\n\n            <div class=\"gh-copyright\">\n                    Front
@@ -536,6 +534,6 @@ http_interactions:
         (arrow left)\"></button>\n            <button class=\"pswp__button pswp__button--arrow--right\"
         title=\"Next (arrow right)\"></button>\n\n            <div class=\"pswp__caption\">\n
         \               <div class=\"pswp__caption__center\"></div>\n            </div>\n
-        \       </div>\n    </div>\n</div>\n<script src=\"https://blog.front-matter.io/assets/built/main.min.js?v=1ff70c2f6a\"></script>\n\n\n\n</body>\n\n</html>\n"
-  recorded_at: Sun, 19 Mar 2023 17:36:02 GMT
+        \       </div>\n    </div>\n</div>\n<script src=\"https://blog.front-matter.io/assets/built/main.min.js?v=d369441f44\"></script>\n\n\n\n</body>\n\n</html>\n"
+  recorded_at: Wed, 14 Jun 2023 08:10:53 GMT
 recorded_with: VCR 6.1.0

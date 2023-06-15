@@ -3,9 +3,7 @@
 require "spec_helper"
 
 describe Commonmeta::Metadata, vcr: true do
-  subject { described_class.new(input: input, from: "crossref") }
-
-  let(:input) { "https://doi.org/10.1101/097196" }
+  subject { described_class.new }
 
   context "validate url" do
     it "DOI" do
@@ -30,6 +28,26 @@ describe Commonmeta::Metadata, vcr: true do
       str = "eating-your-own-dog-food"
       response = subject.validate_url(str)
       expect(response.nil?).to be(true)
+    end
+  end
+
+  context "validate_email" do
+    it "validate email" do
+      str = "noreply@blogger.com"
+      response = subject.validate_email(str)
+      expect(response).to eq("noreply@blogger.com")
+    end
+
+    it "validate email with name" do
+      str = "Roderic Page <noreply@blogger.com>"
+      response = subject.validate_email(str)
+      expect(response).to eq("noreply@blogger.com")
+    end
+
+    it "validate blogger email format" do
+      str = "noreply@blogger.com (Roderic Page)"
+      response = subject.validate_email(str)
+      expect(response).to eq("noreply@blogger.com")
     end
   end
 

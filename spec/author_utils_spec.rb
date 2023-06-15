@@ -75,6 +75,11 @@ describe Commonmeta::Metadata, vcr: true do
       author = 'John Smith'
       expect(subject.cleanup_author(author)).to eq('John Smith')
     end
+
+    it 'with email' do
+      author = 'noreply@blogger.com (Roderic Page)'
+      expect(subject.cleanup_author(author)).to eq('Roderic Page')
+    end
   end
 
   context 'get_one_author' do

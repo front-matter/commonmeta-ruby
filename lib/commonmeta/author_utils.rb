@@ -24,6 +24,8 @@ module Commonmeta
       family_name = parse_attributes(author.fetch('familyName', nil)) ||
                     parse_attributes(author.fetch('family', nil))
 
+      name = cleanup_author(name)
+
       # parse author identifier
       id = parse_attributes(author.fetch('id', nil), first: true) ||
            parse_attributes(author.fetch('identifier', nil), first: true) ||
@@ -62,8 +64,6 @@ module Commonmeta
       # parse author contributor role
       contributor_type = parse_attributes(author.fetch('contributorType', nil))
 
-      name = cleanup_author(name)
-
       # split name for type Person into given/family name if not already provided
       if type == 'Person' && given_name.blank? && family_name.blank?
         Namae.options[:include_particle_in_family] = true
@@ -100,6 +100,16 @@ module Commonmeta
 
       # strip suffixes, e.g. "John Smith, MD" as the named parser doesn't handle them
       author = author.split(',').first if %w[MD PhD].include? author.split(', ').last
+
+      # remove email addresses
+      email = validate_email(author)
+      author = author.gsub(email, '') if email.present?
+
+      # strip spaces at the beginning and end of string
+      author = author.strip
+
+      # remove parentheses around names
+      author = author[1..-2] if author[0] == '(' && author[-1] == ')'
 
       # remove spaces around hyphens
       author = author.gsub(' - ', '-')
