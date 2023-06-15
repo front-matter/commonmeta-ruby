@@ -654,7 +654,6 @@ describe Commonmeta::Metadata, vcr: true do
       prefix = "10.53731"
       uuid = "c3095752-2af0-40a4-a229-3ceb7424bce2"
       response = subject.encode_doi(prefix, uuid: uuid)
-      puts response
       expect(response).to match(%r{#{prefix}/[a-z0-9]+})
       expect(response.length).to eq(56)
     end

@@ -109,6 +109,17 @@ module Commonmeta
         posts = JSON.parse(response.body.to_s)
         posts.map { |post| post["uuid"] }.first
       end
+
+      def get_json_feed_by_blog(blog_id)
+        # get all JSON Feed items from a particular blog
+
+        url = json_feed_by_blog_url(blog_id)
+        response = HTTP.get(url)
+        return { "string" => nil, "state" => "not_found" } unless response.status.success?
+
+        blog = JSON.parse(response.body.to_s)
+        blog["items"].map { |item| item["uuid"] }.join('\n')
+      end
     end
   end
 end

@@ -86,6 +86,12 @@ module Commonmeta
       puts get_json_feed_unregistered
     end
 
+    desc "", "json_feed"
+
+    def json_feed_by_blog(id)
+      puts get_json_feed_by_blog(id)
+    end
+
     default_task :convert
   end
 end

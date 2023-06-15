@@ -1404,5 +1404,9 @@ module Commonmeta
     def json_feed_unregistered_url
       "https://rogue-scholar.org/api/posts/unregistered"
     end
+
+    def json_feed_by_blog_url(blog_id)
+      "https://rogue-scholar.org/api/blogs/#{blog_id}"
+    end
   end
 end
