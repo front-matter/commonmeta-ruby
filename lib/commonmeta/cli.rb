@@ -86,10 +86,10 @@ module Commonmeta
       puts get_json_feed_unregistered
     end
 
-    desc "", "json_feed_updated"
+    desc "", "json_feed_not_indexed"
 
-    def json_feed_updated
-      puts get_json_feed_updated
+    def json_feed_not_indexed(date_indexed)
+      puts get_json_feed_not_indexed(date_indexed)
     end
 
     desc "", "json_feed_by_blog"

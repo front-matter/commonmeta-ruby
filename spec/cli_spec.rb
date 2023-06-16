@@ -342,6 +342,15 @@ describe Commonmeta::CLI do
   end
 
   describe "json_feed", vcr: true do
+    it "json_feed_unregistered" do
+      expect { subject.json_feed_unregistered }.to output(/031faba3-3a6e-49d1-a540-26523be2fd09/).to_stdout
+    end
+    
+    it "json_feed_not_indexed" do
+      input = "2023-01-01"
+      expect { subject.json_feed_not_indexed input }.to output(/ab58e412-06eb-42b7-b81a-d340825b9d48/).to_stdout
+    end
+
     it "json_feed_by_blog" do
       input = "tyfqw20"
       expect { subject.json_feed_by_blog input }.to output(/3e1278f6-e7c0-43e1-bb54-6829e1344c0d/).to_stdout

@@ -208,10 +208,14 @@ describe Commonmeta::Metadata, vcr: true do
       expect(response).to eq("ca2a7df4-f3b9-487c-82e9-27f54de75ea8")
     end
 
+    it 'not indexed posts' do
+      response = subject.get_json_feed_not_indexed('2023-01-01')
+      expect(response).to eq("ab58e412-06eb-42b7-b81a-d340825b9d48")
+    end
+
     it 'by blog_id' do
-      response = subject.get_json_feed_by_blog('tyfqw20').split('\n')
-      expect(response.length).to eq(25)
-      expect(response.first).to eq("3e1278f6-e7c0-43e1-bb54-6829e1344c0d")
+      response = subject.get_json_feed_by_blog('tyfqw20')
+      expect(response).to eq("3e1278f6-e7c0-43e1-bb54-6829e1344c0d")
     end
   end
 end

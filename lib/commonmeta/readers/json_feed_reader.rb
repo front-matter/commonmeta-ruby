@@ -96,18 +96,18 @@ module Commonmeta
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
         posts = JSON.parse(response.body.to_s)
-        posts.map { |post| post["uuid"] }.join('\n')
+        posts.map { |post| post["uuid"] }.first
       end
 
-      def get_json_feed_updated
-        # get JSON Feed items updated since last check
+      def get_json_feed_not_indexed(date_indexed)
+        # get JSON Feed items not indexed in Crossref since a particular date
 
-        url = json_feed_updated_url
+        url = json_feed_not_indexed_url(date_indexed)
         response = HTTP.get(url)
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
         posts = JSON.parse(response.body.to_s)
-        posts.map { |post| post["uuid"] }.join('\n')
+        posts.map { |post| post["uuid"] }.first
       end
 
       def get_json_feed_by_blog(blog_id)
@@ -118,7 +118,7 @@ module Commonmeta
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
         blog = JSON.parse(response.body.to_s)
-        blog["items"].map { |item| item["uuid"] }.join('\n')
+        blog["items"].map { |item| item["uuid"] }.first
       end
     end
   end
