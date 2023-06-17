@@ -15,7 +15,7 @@ module Commonmeta
           'UR' => url,
           'AB' => parse_attributes(descriptions, content: 'description', first: true),
           'KW' => Array.wrap(subjects).map do |k|
-            parse_attributes(k, content: 'subject', first: true)
+            parse_attributes(k, content: 'subject', first: true).capitalize
           end.presence,
           'PY' => date['published'] && date['published'].split('-').first,
           'PB' => publisher['name'],

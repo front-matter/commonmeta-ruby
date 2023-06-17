@@ -64,7 +64,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json['@id']).to eq('https://doi.org/10.5061/dryad.8515')
       expect(json['@type']).to eq('Dataset')
       expect(json['license']).to eq('https://creativecommons.org/publicdomain/zero/1.0/legalcode')
-      expect(json['keywords']).to eq('Plasmodium, malaria, mitochondrial genome, Parasites')
+      expect(json['keywords']).to eq('Plasmodium, malaria, mitochondrial genome, parasites')
     end
 
     it 'Schema.org JSON Cyark' do
@@ -97,7 +97,7 @@ describe Commonmeta::Metadata, vcr: true do
                                     { '@type' => 'Organization',
                                       'name' => 'University of California, Santa Barbara' }])
       expect(json['version']).to eq('2.0.0')
-      expect(json['keywords']).to eq('data sharing, data repository, dataone')
+      expect(json['keywords']).to eq('Data sharing, data repository, dataone')
     end
 
     it 'Funding' do
@@ -129,7 +129,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json['@id']).to eq('https://doi.org/10.4232/1.2745')
       expect(json['@type']).to eq('Dataset')
       expect(json['name']).to eq('Flash Eurobarometer 54 (Madrid Summit)')
-      expect(json['keywords']).to eq('KAT12 International Institutions, Relations, Conditions, Internationale Politik und Internationale Organisationen, Wirtschaftssysteme und wirtschaftliche Entwicklung, International politics and organisations, Economic systems and development')
+      expect(json['keywords']).to eq('Kat12 international institutions, relations, conditions, internationale politik und internationale organisationen, wirtschaftssysteme und wirtschaftliche entwicklung, international politics and organisations, economic systems and development')
     end
 
     it 'subject scheme multiple keywords' do
@@ -139,7 +139,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json['@id']).to eq('https://doi.org/10.1594/pangaea.721193')
       expect(json['@type']).to eq('Dataset')
       expect(json['name']).to eq('Seawater carbonate chemistry and processes during experiments with Crassostrea gigas, 2007')
-      expect(json['keywords']).to include('Animalia, Bottles or small containers/Aquaria (&lt;20 L)')
+      expect(json['keywords']).to include('Animalia, bottles or small containers/aquaria (&lt;20 l)')
       expect(json['license']).to eq('https://creativecommons.org/licenses/by/3.0/legalcode')
     end
 
@@ -224,7 +224,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json['name']).to eq('Fully processed, filtered and normalized gene expression matrices (in BED format) for each tissue, which were used as input into FastQTL for eQTL discovery')
       expect(json['version']).to eq('v7')
       expect(json['author']).to eq('@type' => 'Organization', 'name' => 'The GTEx Consortium')
-      expect(json['keywords']).to eq('gtex, annotation, phenotype, gene regulation, transcriptomics')
+      expect(json['keywords']).to eq('Gtex, annotation, phenotype, gene regulation, transcriptomics')
       expect(json['datePublished']).to eq('2017')
       expect(json['contentUrl']).to eq('https://storage.googleapis.com/gtex_analysis_v7/single_tissue_eqtl_data/GTEx_Analysis_v7_eQTL_expression_matrices.tar.gz')
       expect(json['schemaVersion']).to eq('http://datacite.org/schema/kernel-4')
@@ -275,7 +275,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json['additionalType']).to eq('CRAM file')
       expect(json['name']).to eq('NWD165827.recab.cram')
       expect(json['author']).to eq('@type' => 'Organization', 'name' => 'TOPMed IRC')
-      expect(json['keywords']).to eq('topmed, whole genome sequencing')
+      expect(json['keywords']).to eq('Topmed, whole genome sequencing')
       expect(json['datePublished']).to eq('2017-11-30')
       expect(json['contentUrl']).to eq([
                                          's3://cgp-commons-public/topmed_open_access/197bc047-e917-55ed-852d-d563cdbc50e4/NWD165827.recab.cram', 'gs://topmed-irc-share/public/NWD165827.recab.cram'

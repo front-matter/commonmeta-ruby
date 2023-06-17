@@ -582,7 +582,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "name_to_fos match" do
       name = "Biological sciences"
       response = subject.name_to_fos(name)
-      expect(response).to eq([{ "subject" => "biological sciences" },
+      expect(response).to eq([{ "subject" => "Biological sciences" },
                               { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
                                 "subject" => "FOS: Biological sciences",
                                 "subjectScheme" => "Fields of Science and Technology (FOS)" }])
@@ -591,7 +591,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "name_to_fos for match" do
       name = "Statistics"
       response = subject.name_to_fos(name)
-      expect(response).to eq([{ "subject" => "statistics" },
+      expect(response).to eq([{ "subject" => "Statistics" },
                               { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
                                 "subject" => "FOS: Mathematics",
                                 "subjectScheme" => "Fields of Science and Technology (FOS)" }])
@@ -600,7 +600,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "name_to_fos no match" do
       name = "Random tag"
       response = subject.name_to_fos(name)
-      expect(response).to eq([{ "subject" => "random tag" }])
+      expect(response).to eq([{ "subject" => "Random tag" }])
     end
 
     it "hsh_to_fos match" do

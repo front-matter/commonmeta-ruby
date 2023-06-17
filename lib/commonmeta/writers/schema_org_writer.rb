@@ -19,7 +19,7 @@ module Commonmeta
           'keywords' => if subjects.present?
                           Array.wrap(subjects).map do |k|
                             parse_attributes(k, content: 'subject', first: true)
-                          end.join(', ')
+                          end.join(', ').capitalize
                         end,
           'inLanguage' => language,
           'contentSize' => Array.wrap(sizes).unwrap,

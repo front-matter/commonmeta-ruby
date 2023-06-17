@@ -71,7 +71,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(bibtex[:title]).to eq('Maremma: a Ruby library for simplified network calls')
       expect(bibtex[:author]).to eq('Fenner, Martin')
       expect(bibtex[:publisher]).to eq('DataCite')
-      expect(bibtex[:keywords]).to eq('faraday, excon, net/http')
+      expect(bibtex[:keywords]).to eq('Faraday, excon, net/http')
       expect(bibtex[:year]).to eq('2017')
       expect(bibtex[:copyright]).to eq('MIT')
     end
@@ -128,7 +128,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(bibtex[:title]).to eq('Eating your own Dog Food')
       expect(bibtex[:author]).to eq('Fenner, Martin')
       expect(bibtex[:publisher]).to eq('Front Matter')
-      expect(bibtex[:keywords]).to eq('feature')
+      expect(bibtex[:keywords]).to eq('Feature')
       expect(bibtex[:year]).to eq('2016')
     end
 
@@ -152,7 +152,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(bibtex[:bibtex_type].to_s).to eq('misc')
       expect(bibtex[:bibtex_key]).to eq('https://doi.org/10.1594/pangaea.721193')
       expect(bibtex[:doi]).to eq('10.1594/pangaea.721193')
-      expect(bibtex[:keywords]).to start_with('Animalia, Bottles or small containers/Aquaria (&lt;20 L)')
+      expect(bibtex[:keywords]).to start_with('Animalia, bottles or small containers/aquaria (&lt;20 l)')
       expect(bibtex[:year]).to eq('2007')
       expect(bibtex[:copyright]).to eq('CC-BY-3.0')
     end

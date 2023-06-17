@@ -208,7 +208,7 @@ module Commonmeta
 
         # handle keywords as array and as comma-separated string
         subjects = meta.fetch('keywords', nil)
-        subjects = subjects.to_s.downcase.split(', ') if subjects.is_a?(String)
+        subjects = subjects.to_s.split(', ') if subjects.is_a?(String)
         subjects = Array.wrap(subjects).reduce([]) do |sum, subject|
           sum += name_to_fos(subject)
           sum

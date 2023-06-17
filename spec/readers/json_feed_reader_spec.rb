@@ -22,7 +22,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.date).to eq('published' => '2023-05-31')
       expect(subject.descriptions.first['description']).to start_with("As trailed on a Twitter thread last week I’ve been working on a manuscript describing the efforts to map taxonomic names to their original descriptions in the taxonomic literature.")
       expect(subject.publisher).to eq('name' => 'iPhylo')
-      expect(subject.subjects).to be_nil
+      expect(subject.subjects).to eq([{"subject"=>"Natural sciences"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Natural sciences",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq('en')
       expect(subject.container).to eq("identifier"=>"https://iphylo.blogspot.com/", "identifierType"=>"URL", "title"=>"iPhylo", "type"=>"Periodical")
     end
@@ -43,7 +46,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.date).to eq('published' => '2023-05-16', 'updated' => '2023-05-16')
       expect(subject.descriptions.first['description']).to start_with("One question I have increasingly asked myself in the past few years. Meaning Can I run this open source software using Docker containers and a Docker Compose file?")
       expect(subject.publisher).to eq('name' => 'Front Matter')
-      expect(subject.subjects).to eq([{"subject"=>"news"}])
+      expect(subject.subjects).to eq([{"subject"=>"Engineering and technology"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Engineering and technology",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq('en')
       expect(subject.container).to eq("identifier"=>"https://blog.front-matter.io", "identifierType"=>"URL", "title"=>"Front Matter", "type"=>"Periodical")
     end
@@ -64,7 +70,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.date).to eq('published' => '2023-04-08')
       expect(subject.descriptions.first['description']).to start_with("A graphical, user-friendly tool for programs to highlight important data to prospective applicants")
       expect(subject.publisher).to eq('name' => 'I.D.E.A.S.')
-      expect(subject.subjects).to be_nil
+      expect(subject.subjects).to eq([{"subject"=>"Medical and health sciences"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Medical and health sciences",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq('en')
       expect(subject.container).to eq("identifier"=>"https://www.ideasurg.pub/", "identifierType"=>"URL", "title"=>"I.D.E.A.S.", "type"=>"Periodical")
     end
@@ -85,7 +94,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.date).to eq('published' => '2023-06-03')
       expect(subject.descriptions.first['description']).to start_with("A Data Exploration with Public Data from the Academic Surgical Congress")
       expect(subject.publisher).to eq('name' => 'I.D.E.A.S.')
-      expect(subject.subjects).to eq([{"subject"=>"pre-print"}])
+      expect(subject.subjects).to eq([{"subject"=>"Medical and health sciences"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Medical and health sciences",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq('en')
       expect(subject.container).to eq("identifier"=>"https://www.ideasurg.pub/", "identifierType"=>"URL", "title"=>"I.D.E.A.S.", "type"=>"Periodical")
       expect(subject.references).to be_nil
@@ -107,7 +119,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.date).to eq('published' => '2023-02-01', 'updated' => '2023-04-13')
       expect(subject.descriptions.first['description']).to start_with("Guinea worm disease reaches all-time low: only 13* human cases reported in 2022")
       expect(subject.publisher).to eq('name' => 'Syldavia Gazette')
-      expect(subject.subjects).to be_nil
+      expect(subject.subjects).to eq([{"subject"=>"Humanities"}, {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf", "subject"=>"FOS: Humanities", "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq('en')
       expect(subject.container).to eq("identifier"=>"https://syldavia-gazette.org", "identifierType"=>"URL", "title"=>"Syldavia Gazette", "type"=>"Periodical")
       expect(subject.references.length).to eq(5)
@@ -130,7 +142,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.date).to eq('published' => '2023-05-23', 'updated' => '2023-05-23')
       expect(subject.descriptions.first['description']).to start_with("Die EU-Wissenschaftsministerien haben sich auf ihrer heutigen Sitzung in Brüssel unter dem Titel “Council conclusions on high-quality, transparent, open, trustworthy and equitable scholarly publishing”")
       expect(subject.publisher).to eq('name' => 'wisspub.net')
-      expect(subject.subjects).to eq([{"subject"=>"open access"}, {"subject"=>"open access transformation"}, {"subject"=>"open science"}, {"subject"=>"eu"}])
+      expect(subject.subjects).to eq([{"subject"=>"Engineering and technology"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Engineering and technology",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq('de')
       expect(subject.container).to eq("identifier"=>"https://wisspub.net", "identifierType"=>"URL", "title"=>"wisspub.net", "type"=>"Periodical")
     end
@@ -150,7 +165,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.date).to eq('published' => '2023-06-09', 'updated' => '2023-06-09')
       expect(subject.descriptions.first['description']).to start_with("Haplocanthosaurus tibiae and dorsal vertebrae.")
       expect(subject.publisher).to eq('name' => 'Sauropod Vertebra Picture of the Week')
-      expect(subject.subjects).to eq([{"subject"=>"#mte14"}, {"subject"=>"barosaurus"}, {"subject"=>"cervical"}, {"subject"=>"conferences"}, {"subject"=>"diplodocids"}])
+      expect(subject.subjects).to eq([{"subject"=>"Natural sciences"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Natural sciences",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq('en')
       expect(subject.container).to eq("identifier"=>"https://svpow.com", "identifierType"=>"URL", "title"=>"Sauropod Vertebra Picture of the Week", "type"=>"Periodical")
       expect(subject.references.length).to eq(3)
@@ -173,7 +191,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.date).to eq('published' => '2023-04-18', 'updated' => '2023-04-18')
       expect(subject.descriptions.first['description']).to start_with("Research software is a key part of most research today. As University of Manchester Professor Carole Goble has said, \"software is the ubiquitous instrument of science.\"")
       expect(subject.publisher).to eq('name' => 'Upstream')
-      expect(subject.subjects).to eq([{"subject"=>"news"}])
+      expect(subject.subjects).to eq([{"subject"=>"Humanities"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Humanities",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq('en')
       expect(subject.container).to eq("identifier"=>"https://upstream.force11.org", "identifierType"=>"URL", "title"=>"Upstream", "type"=>"Periodical")
       expect(subject.references.length).to eq(11)
@@ -196,7 +217,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.date).to eq('published' => '2020-07-11', 'updated' => '2020-07-11')
       expect(subject.descriptions.first['description']).to start_with("Over the past few months, Citation Style Language developers have worked to address a backlog of feature requests. This work will be reflected in two upcoming releases.")
       expect(subject.publisher).to eq('name' => 'Citation Style Language')
-      expect(subject.subjects).to be_nil
+      expect(subject.subjects).to eq([{"subject"=>"Engineering and technology"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Engineering and technology",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq('en')
       expect(subject.container).to eq("identifier"=>"https://citationstyles.org/", "identifierType"=>"URL", "title"=>"Citation Style Language", "type"=>"Periodical")
     end

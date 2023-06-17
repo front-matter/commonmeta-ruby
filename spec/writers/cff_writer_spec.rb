@@ -73,8 +73,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json['abstract']).to eq('This library provides a Ruby interface to manipulate Citation File Format files')
       expect(json['date-released']).to eq('2022-11-05')
       expect(json['repository-code']).to eq('https://github.com/citation-file-format/ruby-cff')
-      expect(json['keywords']).to eq(['ruby', 'credit', 'software citation', 'research software',
-                                      'software sustainability', 'metadata', 'citation file format', 'cff'])
+      expect(json['keywords']).to eq(['Ruby', 'Credit', 'Software citation', 'Research software',
+                                      'Software sustainability', 'Metadata', 'Citation file format', 'Cff'])
       expect(json['license']).to eq('Apache-2.0')
       expect(json['references']).to eq('identifiers' => [{ 'type' => 'doi',
                                                            'value' => '10.5281/zenodo.1003149' }])

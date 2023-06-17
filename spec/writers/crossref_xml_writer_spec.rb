@@ -68,7 +68,7 @@ describe Commonmeta::Metadata, vcr: true do
                                         "givenName" => "Martin",
                                         "id" => "https://orcid.org/0000-0003-1419-2405",
                                         "type" => "Person" }])
-      expect(subject.subjects).to eq([{ "subject" => "news" }])
+      expect(subject.subjects).to eq([{ "subject" => "News" }])
       expect(subject.language).to eq("en")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -89,7 +89,7 @@ describe Commonmeta::Metadata, vcr: true do
                                         "givenName" => "Martin",
                                         "id" => "https://orcid.org/0000-0003-1419-2405",
                                         "type" => "Person" }])
-      expect(subject.subjects).to eq([{ "subject" => "interview" }])
+      expect(subject.subjects).to eq([{ "subject" => "Interview" }])
       expect(subject.container).to eq("identifier" => "https://blog.front-matter.io/", "identifierType" => "URL",
                                       "title" => "Front Matter", "type" => "Periodical")
       expect(subject.language).to eq("en")
@@ -157,7 +157,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.creators.first).to eq("familyName" => "Hosseini",
                                            "givenName" => "Mohammad",
                                            "type" => "Person")
-      expect(subject.subjects).to eq([{ "subject" => "news" }])
+      expect(subject.subjects).to eq([{ "subject" => "News" }])
       expect(subject.language).to eq("en")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -181,7 +181,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Attempts at automating journal subject classification" }])
       expect(subject.creators.length).to eq(1)
       expect(subject.creators.first).to eq("familyName" => "Datta", "givenName" => "Esha", "id" => "https://orcid.org/0000-0001-9165-2757", "type" => "Person")
-      expect(subject.subjects).to eq([{ "subject" => "original research" }])
+      expect(subject.subjects).to eq([{"subject"=>"Humanities"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Humanities",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq("en")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -191,7 +194,8 @@ describe Commonmeta::Metadata, vcr: true do
                                          "person_name")).first).to eq("ORCID" => "https://orcid.org/0000-0001-9165-2757", "contributor_role" => "author", "given_name" => "Esha", "sequence" => "first", "surname" => "Datta")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("Attempts at automating journal subject classification")
-      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"2x2kzts-edc9rgb-vg6s4j6-z9t0d56", "item_number_type"=>"uuid")
+      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"5d14ffacb9ac4e20bdc0d9248df4e80d", "item_number_type"=>"uuid")
+      expect(crossref_xml.dig('group_title')).to eq('Humanities')
     end
 
     it "json_feed_item with references" do
@@ -206,7 +210,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "The Research Software Alliance (ReSA)" }])
       expect(subject.creators.length).to eq(2)
       expect(subject.creators.first).to eq("familyName"=>"Katz", "givenName"=>"Daniel S.", "id"=>"https://orcid.org/0000-0001-5934-7525", "type"=>"Person")
-      expect(subject.subjects).to eq([{ "subject" => "news" }])
+      expect(subject.subjects).to eq([{"subject"=>"Humanities"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Humanities",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq("en")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -219,7 +226,8 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("The Research Software Alliance (ReSA)")
       expect(crossref_xml.dig("citation_list", "citation").length).to eq(11)
       expect(crossref_xml.dig("citation_list", "citation").last).to eq("doi"=>"10.5281/zenodo.3699950", "key"=>"ref11")
-      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"4n9y0kg-3pd8288-fheey4m-qy53g93", "item_number_type"=>"uuid")
+      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"954f81380ecd409087c5cef1297f1470", "item_number_type"=>"uuid")
+      expect(crossref_xml.dig('group_title')).to eq('Humanities')
     end
 
     it "json_feed_item from rogue scholar with doi" do
@@ -233,7 +241,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "EU-Mitgliedstaaten betonen die Rolle von wissenschaftsgeleiteten Open-Access-Modellen jenseits von APCs" }])
       expect(subject.creators.length).to eq(1)
       expect(subject.creators.first).to eq("familyName"=>"Pampel", "givenName"=>"Heinz", "id"=>"https://orcid.org/0000-0003-3334-2771", "type"=>"Person")
-      expect(subject.subjects).to eq([{"subject"=>"open access"}, {"subject"=>"open access transformation"}, {"subject"=>"open science"}, {"subject"=>"eu"}])
+      expect(subject.subjects).to eq([{"subject"=>"Engineering and technology"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Engineering and technology",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
       expect(subject.language).to eq("de")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -243,7 +254,8 @@ describe Commonmeta::Metadata, vcr: true do
                                          "person_name")).first).to eq("ORCID"=>"https://orcid.org/0000-0003-3334-2771", "contributor_role"=>"author", "given_name"=>"Heinz", "sequence"=>"first", "surname"=>"Pampel")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("EU-Mitgliedstaaten betonen die Rolle von wissenschaftsgeleiteten Open-Access-Modellen jenseits von APCs")
-      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"way2ng-4s48j9v-hbw4rjf-aqh9f33", "item_number_type"=>"uuid")
+      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"1c57855813244493b8af84c49eabc52f", "item_number_type"=>"uuid")
+      expect(crossref_xml.dig('group_title')).to eq('Engineering and technology')
     end
   end
 end

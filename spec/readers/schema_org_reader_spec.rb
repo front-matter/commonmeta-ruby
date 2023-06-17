@@ -27,7 +27,7 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.descriptions.first['description']).to start_with('Eating your own dog food')
-      expect(subject.subjects).to eq([{ 'subject' => 'feature' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Feature' }])
       expect(subject.date).to eq('published' => '2016-12-20T00:00:00Z',
                                  'updated' => '2022-08-15T09:06:22Z')
       expect(subject.references.length).to eq(0)
@@ -56,8 +56,8 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.descriptions.first['description']).to start_with('Eating your own dog food')
-      expect(subject.subjects).to eq([{ 'subject' => 'datacite' }, { 'subject' => 'doi' },
-                                      { 'subject' => 'metadata' }, { 'subject' => 'featured' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Datacite' }, { 'subject' => 'Doi' },
+                                      { 'subject' => 'Metadata' }, { 'subject' => 'Featured' }])
       expect(subject.date).to eq('created' => '2016-12-20',
                                  'published' => '2016-12-20',
                                  'updated' => '2016-12-20')
@@ -81,7 +81,7 @@ describe Commonmeta::Metadata, vcr: true do
                                           'type' => 'Person' }])
         expect(subject.titles).to eq([{ 'title' => 'A step forward for software citation: GitHub&#x27;s enhanced software citation support' }])
         expect(subject.descriptions.first['description']).to start_with('On August 19, GitHub announced software citation')
-        expect(subject.subjects).to eq([{ 'subject' => 'news' }])
+        expect(subject.subjects).to eq([{ 'subject' => 'News' }])
         expect(subject.date).to eq('published' => '2021-08-24T16:57:24Z',
                                    'updated' => '2022-08-15T19:05:14Z')
         expect(subject.references.length).to eq(0)
@@ -104,18 +104,18 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.creators.first).to eq('type' => 'Person', 'givenName' => 'Matthias',
                                            'familyName' => 'Staib', 'id' => 'https://orcid.org/0000-0001-9688-838X', 'affiliation' => [{ 'name' => 'University of Zurich, Zurich, Switzerland' }])
       expect(subject.publisher).to eq('name' => 'Zenodo')
-      expect(subject.subjects).to eq([{ 'subject' => 'pupil size response' },
-                                      { 'subject' => 'skin conductance response' },
-                                      { 'subject' => 'electrocardiogram' },
-                                      { 'subject' => 'electromyogram' },
-                                      { 'subject' => 'electrodermal activity' },
-                                      { 'subject' => 'galvanic skin response' },
-                                      { 'subject' => 'psr' },
-                                      { 'subject' => 'scr' },
-                                      { 'subject' => 'ecg' },
-                                      { 'subject' => 'emg' },
-                                      { 'subject' => 'eda' },
-                                      { 'subject' => 'gsr' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Pupil size response' },
+                                      { 'subject' => 'Skin conductance response' },
+                                      { 'subject' => 'Electrocardiogram' },
+                                      { 'subject' => 'Electromyogram' },
+                                      { 'subject' => 'Electrodermal activity' },
+                                      { 'subject' => 'Galvanic skin response' },
+                                      { 'subject' => 'Psr' },
+                                      { 'subject' => 'Scr' },
+                                      { 'subject' => 'Ecg' },
+                                      { 'subject' => 'Emg' },
+                                      { 'subject' => 'Eda' },
+                                      { 'subject' => 'Gsr' }])
     end
 
     it 'pangaea' do
@@ -157,15 +157,15 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.creators).to eq([{
                                        'name' => 'International Genetics of Ankylosing Spondylitis Consortium (IGAS)'
                                      }])
-      expect(subject.subjects).to eq([{ 'subject' => 'medicine, health and life sciences' },
+      expect(subject.subjects).to eq([{ 'subject' => 'Medicine, health and life sciences' },
                                       { 'subject' => 'genome-wide association studies' },
-                                      { 'subject' => 'ankylosing spondylitis' }])
+                                      { 'subject' => 'Ankylosing spondylitis' }])
     end
 
     it 'upstream blog' do
       input = 'https://upstream.force11.org/elife-reviewed-preprints-interview-with-fiona-hutton'
       subject = described_class.new(input: input, from: 'schema_org')
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.54900/8d7emer-rm2pg72')
       expect(subject.type).to eq('Article')
       expect(subject.titles).to eq([{ 'title' => 'eLife Reviewed Preprints: Interview with Fiona Hutton' }])
@@ -175,7 +175,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.creators.first).to eq('familyName' => 'Hutton',
                                            'givenName' => 'Fiona',
                                            'type' => 'Person')
-      expect(subject.subjects).to eq([{ 'subject' => 'interviews' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Interviews' }])
       expect(subject.publisher).to eq('name' => 'Upstream')
       expect(subject.date).to eq('published' => '2022-11-15T10:29:38Z',
                                  'updated' => '2023-01-11T22:58:48Z')
@@ -210,8 +210,8 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'Eating your own Dog Food' }])
       expect(subject.descriptions.first['description']).to start_with('Eating your own dog food')
-      expect(subject.subjects).to eq([{ 'subject' => 'datacite' }, { 'subject' => 'doi' },
-                                      { 'subject' => 'metadata' }, { 'subject' => 'featured' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Datacite' }, { 'subject' => 'Doi' },
+                                      { 'subject' => 'Metadata' }, { 'subject' => 'Featured' }])
       expect(subject.date).to eq('created' => '2016-12-20',
                                  'published' => '2016-12-20',
                                  'updated' => '2016-12-20')
@@ -235,8 +235,8 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Organization' }])
       expect(subject.titles).to eq([{ 'title' => 'Fully processed, filtered and normalized gene expression matrices (in BED format) for each tissue, which were used as input into FastQTL for eQTL discovery' }])
       expect(subject.version).to eq('v7')
-      expect(subject.subjects).to eq([{ 'subject' => 'gtex' }, { 'subject' => 'annotation' },
-                                      { 'subject' => 'phenotype' }, { 'subject' => 'gene regulation' }, { 'subject' => 'transcriptomics' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Gtex' }, { 'subject' => 'Annotation' },
+                                      { 'subject' => 'Phenotype' }, { 'subject' => 'Gene regulation' }, { 'subject' => 'Transcriptomics' }])
       expect(subject.date).to eq('published' => '2017')
       expect(subject.container).to eq('title' => 'GTEx', 'type' => 'DataRepository')
       expect(subject.publisher).to eq('name' => 'GTEx')
@@ -263,8 +263,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.type).to eq('Dataset')
       expect(subject.creators).to eq([{ 'name' => 'TOPMed IRC', 'type' => 'Organization' }])
       expect(subject.titles).to eq([{ 'title' => 'NWD165827.recab.cram' }])
-      expect(subject.subjects).to eq([{ 'subject' => 'topmed' },
-                                      { 'subject' => 'whole genome sequencing' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Topmed' },
+                                      { 'subject' => 'Whole genome sequencing' }])
       expect(subject.date).to eq('published' => '2017-11-30')
       expect(subject.publisher).to eq('name' => 'TOPMed')
       expect(subject.references).to eq([{ 'doi' => '10.23725/2g4s-qv04',
@@ -292,14 +292,14 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.creators.first).to eq('familyName' => 'Bales', 'givenName' => 'Roger',
                                            'type' => 'Person')
       expect(subject.titles).to eq([{ 'title' => 'Southern Sierra Critical Zone Observatory (SSCZO), Providence Creek meteorological data, soil moisture and temperature, snow depth and air temperature' }])
-      expect(subject.subjects).to eq([{ 'subject' => 'earth sciences' },
-                                      { 'subject' => 'soil moisture' },
-                                      { 'subject' => 'soil temperature' },
-                                      { 'subject' => 'snow depth' },
-                                      { 'subject' => 'air temperature' },
-                                      { 'subject' => 'water balance' },
-                                      { 'subject' => 'nevada' },
-                                      { 'subject' => 'sierra (mountain range)' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Earth sciences' },
+                                      { 'subject' => 'Soil moisture' },
+                                      { 'subject' => 'Soil temperature' },
+                                      { 'subject' => 'Snow depth' },
+                                      { 'subject' => 'Air temperature' },
+                                      { 'subject' => 'Water balance' },
+                                      { 'subject' => 'Nevada' },
+                                      { 'subject' => 'Sierra (mountain range)' }])
       expect(subject.date).to eq('published' => '2013', 'updated' => '2014-10-17')
       expect(subject.publisher).to eq('name' => 'UC Merced')
       expect(subject.funding_references).to eq([{ 'funderName' => 'National Science Foundation, Division of Earth Sciences, Critical Zone Observatories' }])
@@ -347,8 +347,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.type).to eq('Dataset')
       expect(subject.creators).to eq([{ 'name' => 'TOPMed', 'type' => 'Organization' }])
       expect(subject.titles).to eq([{ 'title' => 'NWD100953.recab.cram' }])
-      expect(subject.subjects).to eq([{ 'subject' => 'topmed' },
-                                      { 'subject' => 'whole genome sequencing' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Topmed' },
+                                      { 'subject' => 'Whole genome sequencing' }])
       expect(subject.date).to eq('published' => '2017-11-30')
       expect(subject.publisher).to eq('name' => 'TOPMed')
       expect(subject.funding_references).to eq([{
@@ -367,8 +367,8 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.creators).to eq([{"familyName"=>"Lindman", "givenName"=>"Karin", "name"=>"Lindman, Karin", "nameIdentifiers"=>[{"nameIdentifier"=> "https://orcid.org/0000-0003-1298-517X", "nameIdentifierScheme"=>"ORCID", "schemeUri"=>"https://orcid.org"}], "type"=>"Person"}])
       expect(subject.titles).to eq([{ 'title' => 'Ovary data from the Visual Sweden project DROID' }])
       expect(subject.version).to eq('1.0')
-      expect(subject.subjects).to eq([{ 'subject' => 'pathology' }, { 'subject' => 'whole slide imaging' },
-                                      { 'subject' => 'annotated' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Pathology' }, { 'subject' => 'Whole slide imaging' },
+                                      { 'subject' => 'Annotated' }])
       expect(subject.date).to eq('created' => '2019-01-09',
                                  'published' => '2019-01-09',
                                  'updated' => '2019-01-09')

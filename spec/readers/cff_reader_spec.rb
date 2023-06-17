@@ -20,14 +20,14 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Organization' }])
       expect(subject.titles).to eq([{ 'title' => 'Ruby CFF Library' }])
       expect(subject.descriptions.first['description']).to start_with('This library provides a Ruby interface to manipulate Citation File Format files')
-      expect(subject.subjects).to eq([{ 'subject' => 'ruby' },
-                                      { 'subject' => 'credit' },
-                                      { 'subject' => 'software citation' },
-                                      { 'subject' => 'research software' },
-                                      { 'subject' => 'software sustainability' },
-                                      { 'subject' => 'metadata' },
-                                      { 'subject' => 'citation file format' },
-                                      { 'subject' => 'cff' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Ruby' },
+                                      { 'subject' => 'Credit' },
+                                      { 'subject' => 'Software citation' },
+                                      { 'subject' => 'Research software' },
+                                      { 'subject' => 'Software sustainability' },
+                                      { 'subject' => 'Metadata' },
+                                      { 'subject' => 'Citation file format' },
+                                      { 'subject' => 'Cff' }])
       expect(subject.version).to eq('1.0.1')
       expect(subject.date).to eq('published' => '2022-11-05')
       expect(subject.publisher).to eq('name' => 'GitHub')
@@ -69,15 +69,15 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'cffconvert' }])
       expect(subject.descriptions.first['description']).to start_with('Command line program to validate and convert CITATION.cff files')
-      expect(subject.subjects).to eq([{ 'subject' => 'bibliography' },
-                                      { 'subject' => 'bibtex' },
-                                      { 'subject' => 'cff' },
-                                      { 'subject' => 'citation' },
-                                      { 'subject' => 'citation.cff' },
-                                      { 'subject' => 'codemeta' },
-                                      { 'subject' => 'endnote' },
-                                      { 'subject' => 'ris' },
-                                      { 'subject' => 'citation file format' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Bibliography' },
+                                      { 'subject' => 'Bibtex' },
+                                      { 'subject' => 'Cff' },
+                                      { 'subject' => 'Citation' },
+                                      { 'subject' => 'Citation.cff' },
+                                      { 'subject' => 'Codemeta' },
+                                      { 'subject' => 'Endnote' },
+                                      { 'subject' => 'Ris' },
+                                      { 'subject' => 'Citation file format' }])
       expect(subject.version).to eq('2.0.0')
       expect(subject.date).to eq('published' => '2021-09-22')
       expect(subject.publisher).to eq('name' => 'GitHub')
@@ -98,14 +98,14 @@ describe Commonmeta::Metadata, vcr: true do
                                         'id' => 'https://orcid.org/0000-0002-9538-7919', 'type' => 'Person' }, { 'name' => 'The Ruby Citation File Format Developers', 'type' => 'Organization' }])
       expect(subject.titles).to eq([{ 'title' => 'Ruby CFF Library' }])
       expect(subject.descriptions.first['description']).to start_with('This library provides a Ruby interface to manipulate Citation File Format files')
-      expect(subject.subjects).to eq([{ 'subject' => 'ruby' },
-                                      { 'subject' => 'credit' },
-                                      { 'subject' => 'software citation' },
-                                      { 'subject' => 'research software' },
-                                      { 'subject' => 'software sustainability' },
-                                      { 'subject' => 'metadata' },
-                                      { 'subject' => 'citation file format' },
-                                      { 'subject' => 'cff' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Ruby' },
+                                      { 'subject' => 'Credit' },
+                                      { 'subject' => 'Software citation' },
+                                      { 'subject' => 'Research software' },
+                                      { 'subject' => 'Software sustainability' },
+                                      { 'subject' => 'Metadata' },
+                                      { 'subject' => 'Citation file format' },
+                                      { 'subject' => 'Cff' }])
       expect(subject.version).to eq('1.0.1')
       expect(subject.date).to eq('published' => '2022-11-05')
       expect(subject.publisher).to eq('name' => 'GitHub')
@@ -127,14 +127,14 @@ describe Commonmeta::Metadata, vcr: true do
                                         'id' => 'https://orcid.org/0000-0002-9538-7919', 'type' => 'Person' }, { 'name' => 'The Ruby Citation File Format Developers', 'type' => 'Organization' }])
       expect(subject.titles).to eq([{ 'title' => 'Ruby CFF Library' }])
       expect(subject.descriptions.first['description']).to start_with('This library provides a Ruby interface to manipulate Citation File Format files')
-      expect(subject.subjects).to eq([{ 'subject' => 'ruby' },
-                                      { 'subject' => 'credit' },
-                                      { 'subject' => 'software citation' },
-                                      { 'subject' => 'research software' },
-                                      { 'subject' => 'software sustainability' },
-                                      { 'subject' => 'metadata' },
-                                      { 'subject' => 'citation file format' },
-                                      { 'subject' => 'cff' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Ruby' },
+                                      { 'subject' => 'Credit' },
+                                      { 'subject' => 'Software citation' },
+                                      { 'subject' => 'Research software' },
+                                      { 'subject' => 'Software sustainability' },
+                                      { 'subject' => 'Metadata' },
+                                      { 'subject' => 'Citation file format' },
+                                      { 'subject' => 'Cff' }])
       expect(subject.version).to eq('1.0.1')
       expect(subject.date).to eq('published' => '2022-11-05')
       expect(subject.publisher).to eq('name' => 'GitHub')

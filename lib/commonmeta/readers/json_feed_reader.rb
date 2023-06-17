@@ -54,7 +54,7 @@ module Commonmeta
           end
         language = meta.fetch("language", nil) || meta.dig("blog", "language")
         state = id.present? || read_options.present? ? "findable" : "not_found"
-        subjects = Array.wrap(meta.fetch("tags", nil)).reduce([]) do |sum, subject|
+        subjects = Array.wrap(meta.dig("blog", "category")).reduce([]) do |sum, subject|
           sum += name_to_fos(subject)
 
           sum

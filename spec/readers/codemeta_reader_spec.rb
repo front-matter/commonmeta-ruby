@@ -28,8 +28,8 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'Maremma: a Ruby library for simplified network calls' }])
       expect(subject.descriptions.first['description']).to start_with('Ruby utility library for network requests')
-      expect(subject.subjects).to eq([{ 'subject' => 'faraday' }, { 'subject' => 'excon' },
-                                      { 'subject' => 'net/http' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Faraday' }, { 'subject' => 'Excon' },
+                                      { 'subject' => 'Net/http' }])
       expect(subject.date).to eq('created' => '2015-11-28',
                                  'published' => '2017-02-24',
                                  'updated' => '2017-02-24')
@@ -57,8 +57,8 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Organization' }])
       expect(subject.titles).to eq([{ 'title' => 'R Interface to the DataONE REST API' }])
       expect(subject.descriptions.first['description']).to start_with('Provides read and write access to data and metadata')
-      expect(subject.subjects).to eq([{ 'subject' => 'data sharing' }, { 'subject' => 'data repository' },
-                                      { 'subject' => 'dataone' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Data sharing' }, { 'subject' => 'Data repository' },
+                                      { 'subject' => 'Dataone' }])
       expect(subject.version).to eq('2.0.0')
       expect(subject.date).to eq('created' => '2016-05-27',
                                  'published' => '2016-05-27',
@@ -82,8 +82,8 @@ describe Commonmeta::Metadata, vcr: true do
                                         'type' => 'Person' }])
       expect(subject.titles).to eq([{ 'title' => 'Maremma: a Ruby library for simplified network calls' }])
       expect(subject.descriptions.first['description']).to start_with('Simplifies network calls')
-      expect(subject.subjects).to eq([{ 'subject' => 'faraday' }, { 'subject' => 'excon' },
-                                      { 'subject' => 'net/http' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Faraday' }, { 'subject' => 'Excon' },
+                                      { 'subject' => 'Net/http' }])
       expect(subject.date).to eq('created' => '2015-11-28',
                                  'published' => '2017-02-24',
                                  'updated' => '2017-02-24')
@@ -104,8 +104,8 @@ describe Commonmeta::Metadata, vcr: true do
                                           'type' => 'Person')
       expect(subject.titles).to eq([{ 'title' => 'DOI Registrations for Software' }])
       expect(subject.descriptions.first['description']).to start_with('Analysis of DataCite DOIs registered for software')
-      expect(subject.subjects).to eq([{ 'subject' => 'doi' }, { 'subject' => 'software' },
-                                      { 'subject' => 'codemeta' }])
+      expect(subject.subjects).to eq([{ 'subject' => 'Doi' }, { 'subject' => 'Software' },
+                                      { 'subject' => 'Codemeta' }])
       expect(subject.date).to eq('created' => '2018-03-09',
                                  'published' => '2018-05-17',
                                  'updated' => '2018-05-17')

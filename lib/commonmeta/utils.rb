@@ -1253,6 +1253,9 @@ module Commonmeta
     end
 
     def name_to_fos(name)
+      # make sure name is capitalized
+      name = name.capitalize
+
       # first find subject in Fields of Science (OECD)
       fos = JSON.load(File.read(File.expand_path("../../resources/oecd/fos-mappings.json",
                                                  __dir__))).fetch("fosFields")
@@ -1261,7 +1264,7 @@ module Commonmeta
 
       if subject
         return [{
-                 "subject" => sanitize(name).downcase,
+                 "subject" => sanitize(name),
                },
                 {
                  "subject" => "FOS: " + subject["fosLabel"],
@@ -1282,7 +1285,7 @@ module Commonmeta
 
       if subject
         [{
-          "subject" => sanitize(name).downcase,
+          "subject" => sanitize(name),
         },
          {
           "subject" => "FOS: " + subject["fosLabel"],
@@ -1290,7 +1293,7 @@ module Commonmeta
           "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
         }]
       else
-        [{ "subject" => sanitize(name).downcase }]
+        [{ "subject" => sanitize(name) }]
       end
     end
 

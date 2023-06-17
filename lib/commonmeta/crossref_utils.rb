@@ -89,7 +89,7 @@ module Commonmeta
     def insert_group_title(xml)
       return xml if subjects.blank?
 
-      xml.group_title(subjects.first["subject"].titleize)
+      xml.group_title(subjects.first["subject"])
     end
 
     def insert_crossref_creators(xml)
@@ -264,8 +264,8 @@ module Commonmeta
           "item_number_type" => alternate_identifier["alternateIdentifierType"] ? alternate_identifier["alternateIdentifierType"].downcase : nil,
         }.compact
 
-        # convert UUIDs into base32 encoded strings, as item_number can only be 32 characters long (UUIDv4 is 36 characters long)
-        alternate_identifier["alternateIdentifier"] = Base32::URL.encode_uuid(alternate_identifier["alternateIdentifier"], split: 7, checksum: true) if alternate_identifier["alternateIdentifierType"] == "UUID"
+        # strip hyphen from UUIDs, as item_number can only be 32 characters long (UUIDv4 is 36 characters long)
+        alternate_identifier["alternateIdentifier"] = alternate_identifier["alternateIdentifier"].gsub('-','') if alternate_identifier["alternateIdentifierType"] == "UUID"
 
         xml.item_number(alternate_identifier["alternateIdentifier"], attributes)
       end
