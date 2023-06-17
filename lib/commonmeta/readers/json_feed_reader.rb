@@ -82,7 +82,11 @@ module Commonmeta
       def get_references(meta)
         # check that references resolve
         Array.wrap(meta["references"]).reduce([]) do |sum, reference|
-          sum << reference if [200, 301, 302].include? HTTP.head(reference["doi"] || reference["url"]).status
+          if reference["doi"] && validate_doi(reference["doi"])
+            sum << reference if [200, 301, 302].include? HTTP.head(reference["doi"]).status
+          elsif reference["url"] && validate_url(reference["url"]) == "URL"
+            sum << reference if [200, 301, 302].include? HTTP.head(reference["url"]).status
+          end
 
           sum
         end
