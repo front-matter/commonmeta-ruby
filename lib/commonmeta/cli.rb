@@ -115,10 +115,14 @@ module Commonmeta
       puts get_json_feed_by_blog(id)
     end
 
-    desc "", "ghost_token"
+    desc "", "update_ghost_post"
 
-    def ghost_token(admin_api_key)
-      puts generate_ghost_token(admin_api_key)
+    method_option :api_key, required: true
+    method_option :api_url, required: true
+    method_option :doi, required: true
+
+    def update_ghost_post(uuid)
+      puts update_ghost_post(uuid: uuid, api_key: options[:api_key], api_url: options[:api_url], doi: options[:doi])
     end
 
     default_task :convert

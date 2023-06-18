@@ -1472,5 +1472,39 @@ module Commonmeta
       # Create the token (including decoding secret)
       JWT.encode payload, [secret].pack("H*"), "HS256", header
     end
+
+    def update_ghost_post(uuid: nil, **options)
+      return nil unless uuid.present? && options[:api_key].present? && options[:api_url].present? && options[:doi].present?
+
+      # generate short lived jwt for ghost admin api
+      ghost_jwt = generate_ghost_token(options[:api_key])
+
+      # get post url from Rogue Scholar API
+      url = json_feed_item_by_uuid_url(uuid)
+      response = HTTP.get(url)
+      return nil unless response.status.success?
+
+      post = JSON.parse(response.body.to_s)
+      url = post.to_h.dig("url")
+
+      return nil unless url.present?
+
+      # get id and updated_at from ghost api
+      slug = url.chomp("/").split("/").last
+      ghost_url = "#{options[:api_url]}/ghost/api/admin/posts/slug/#{slug}/"
+      response = HTTP.auth("Ghost #{ghost_jwt}").get(ghost_url)
+      return nil unless response.status.success?
+
+      ghost_post = JSON.parse(response.body.to_s).dig("posts").first
+      id = ghost_post.dig("id")
+      updated_at = ghost_post.dig("updated_at")
+
+      return nil unless id.present? && updated_at.present?
+
+      # update post canonical_url with new doi
+      ghost_url = "#{options[:api_url]}/ghost/api/admin/posts/#{id}/"
+      response = HTTP.auth("Ghost #{ghost_jwt}").headers('Content-Type' => "application/json", 'Accept-Version' => 'v5').put(ghost_url, :json => { 'posts' => [{ 'canonical_url' => options[:doi], 'updated_at' => updated_at }] })
+      "#{response.status} DOI #{options[:doi]} updated for post #{uuid}"
+    end
   end
 end

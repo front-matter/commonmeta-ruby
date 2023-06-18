@@ -4,7 +4,7 @@ require "uri"
 module Commonmeta
   module Readers
     module JsonFeedReader
-      def get_json_feed_item(id: nil, **_options)
+      def get_json_feed_item(id: nil, **options)
         return { "string" => nil, "state" => "not_found" } unless id.present?
 
         url = normalize_id(id)

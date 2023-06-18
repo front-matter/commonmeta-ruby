@@ -2,7 +2,7 @@
 
 require "spec_helper"
 
-describe Commonmeta::Metadata, vcr: true do
+describe Commonmeta::Metadata do
   subject { described_class.new }
 
   context "validate url" do
