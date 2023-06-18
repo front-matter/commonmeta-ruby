@@ -20,8 +20,10 @@ module Commonmeta
 
         meta = string.present? ? JSON.parse(string) : {}
 
-        id = options[:doi] ? normalize_doi(options[:doi]) : normalize_id(meta.fetch("id", nil))
         url = normalize_url(meta.fetch("url", nil))
+        id = options[:doi] ? normalize_doi(options[:doi]) : normalize_id(meta.fetch("id", nil))
+        id = url if id.blank? && url.present?
+
         type = "Article"
         creators = if meta.fetch("authors", nil).present?
             get_authors(from_json_feed(Array.wrap(meta.fetch("authors"))))
@@ -123,6 +125,28 @@ module Commonmeta
 
         blog = JSON.parse(response.body.to_s)
         blog["items"].map { |item| item["uuid"] }.first
+      end
+
+      def get_doi_prefix_by_blog_id(blog_id)
+        # for generating a random DOI.
+
+        url = json_feed_by_blog_url(blog_id)
+        response = HTTP.get(url)
+        return { "string" => nil, "state" => "not_found" } unless response.status.success?
+
+        post = JSON.parse(response.body.to_s)
+        post.dig('prefix')
+      end
+
+      def get_doi_prefix_by_json_feed_item_uuid(uuid)
+        # for generating a random DOI. Prefix is based on the blog id.
+
+        url = json_feed_item_by_uuid_url(uuid)
+        response = HTTP.get(url)
+        return { "string" => nil, "state" => "not_found" } unless response.status.success?
+
+        post = JSON.parse(response.body.to_s)
+        post.dig('blog', 'prefix')
       end
     end
   end

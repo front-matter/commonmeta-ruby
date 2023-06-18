@@ -257,5 +257,33 @@ describe Commonmeta::Metadata, vcr: true do
       expect(crossref_xml.dig('item_number')).to eq("__content__"=>"1c57855813244493b8af84c49eabc52f", "item_number_type"=>"uuid")
       expect(crossref_xml.dig('group_title')).to eq('Engineering and technology')
     end
+
+    it "json_feed_item from rogue scholar with organizational author" do
+      input = "https://rogue-scholar.org/api/posts/5561f8e4-2ff1-4186-a8d5-8dacb3afe414"
+      subject = described_class.new(input: input, doi: "10.59350/9ry27-7cz42")
+
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://doi.org/10.59350/9ry27-7cz42")
+      expect(subject.url).to eq("https://libscie.org/ku-leuven-supports-researchequals")
+      expect(subject.type).to eq("Article")
+      expect(subject.titles).to eq([{ "title" => "KU Leuven supports ResearchEquals" }])
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("id"=>"https://ror.org/0342dzm54", "name"=>"Liberate Science", "type"=>"Organization")
+      expect(subject.subjects).to eq([{"subject"=>"Social sciences"},
+        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
+         "subject"=>"FOS: Social sciences",
+         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
+      expect(subject.language).to eq("en")
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
+      expect(Array.wrap(crossref_xml.dig("contributors", "organization")).length).to eq(1)
+      expect(Array.wrap(crossref_xml.dig("contributors",
+                                         "organization")).first).to eq("contributor_role"=>"author", "name"=>"Liberate Science", "sequence"=>"first")
+      expect(crossref_xml.dig("titles",
+                              "title")).to eq("KU Leuven supports ResearchEquals")
+      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"5561f8e42ff14186a8d58dacb3afe414", "item_number_type"=>"uuid")
+      expect(crossref_xml.dig('group_title')).to eq('Social sciences')
+    end
   end
 end

@@ -311,11 +311,20 @@ describe Commonmeta::CLI do
     # end
   end
 
-  describe "encode" do
-    let(:input) { "10.53731" }
-
+  describe "encode", vcr: true do
     it "blog prefix" do
+      input = "10.53731"
       expect { subject.encode input }.to output(/https:\/\/doi.org\/10.53731/).to_stdout
+    end
+
+    it "by_blog" do
+      input = "tyfqw20"
+      expect { subject.encode_by_blog input }.to output(/https:\/\/doi.org\/10.59350/).to_stdout
+    end
+
+    it "by_uuid" do
+      input = "2b22bbba-bcba-4072-94cc-3f88442fff88"
+      expect { subject.encode_by_uuid input }.to output(/https:\/\/doi.org\/10.54900/).to_stdout
     end
   end
 

@@ -543,6 +543,11 @@ module Commonmeta
       orcid.gsub(/[[:space:]]/, "-") if orcid.present?
     end
 
+    def validate_ror(ror)
+      ror = Array(%r{\A(?:(?:http|https)://ror\.org/)?([0-9a-z]{7}\d{2})\z}.match(ror)).last
+      ror.gsub(/[[:space:]]/, "-") if ror.present?
+    end
+
     def validate_orcid_scheme(orcid_scheme)
       Array(%r{\A(http|https)://(www\.)?(orcid\.org)}.match(orcid_scheme)).last
     end
@@ -632,6 +637,14 @@ module Commonmeta
 
       # turn ORCID ID into URL
       "https://orcid.org/" + Addressable::URI.encode(orcid)
+    end
+
+    def normalize_ror(ror)
+      ror = validate_ror(ror)
+      return nil unless ror.present?
+
+      # turn ROR ID into URL
+      "https://ror.org/" + Addressable::URI.encode(ror)
     end
 
     # pick electronic issn if there are multiple
@@ -1384,6 +1397,23 @@ module Commonmeta
       "https://doi.org/#{prefix}/#{str}"
     end
 
+    def encode_doi_for_uuid(uuid, options = {})
+      # look up prefix for rogue scholar blog associated with uuid
+      # returns nil if unknown uuid or doi registration is not enabled for blog
+      json_feed_by_uuid(uuid)
+      # DOI suffix is a generated from a random number, encoded in base32
+      # suffix has 8 digits plus two checksum digits. With base32 there are
+      # 32 possible digits, so 8 digits gives 32^8 possible combinations
+      if options[:uuid]
+        str = Base32::URL.encode_uuid(options[:uuid], split: 7, checksum: true)
+      else
+        random_int = SecureRandom.random_number(32 ** 7..(32 ** 8) - 1)
+        suffix = Base32::URL.encode(random_int, checksum: true)
+        str = "#{suffix[0, 5]}-#{suffix[5, 10]}"
+      end
+      "https://doi.org/#{prefix}/#{str}"
+    end
+
     def decode_doi(doi, options = {})
       suffix = doi.split("/", 5).last
       if options[:uuid]
@@ -1414,6 +1444,10 @@ module Commonmeta
 
     def json_feed_by_blog_url(blog_id)
       "https://rogue-scholar.org/api/blogs/#{blog_id}"
+    end
+
+    def json_feed_item_by_uuid_url(uuid)
+      "https://rogue-scholar.org/api/posts/#{uuid}"
     end
   end
 end

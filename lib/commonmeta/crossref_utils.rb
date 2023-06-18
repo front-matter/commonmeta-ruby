@@ -94,25 +94,67 @@ module Commonmeta
 
     def insert_crossref_creators(xml)
       xml.contributors do
-        Array.wrap(creators).each_with_index do |person, index|
-          xml.person_name("contributor_role" => "author",
-                          "sequence" => index.zero? ? "first" : "additional") do
-            insert_crossref_person(xml, person)
+        Array.wrap(creators).each_with_index do |creator, index|
+          if creator["type"] == "Organization"
+            xml.organization("contributor_role" => "author",
+                             "sequence" => index.zero? ? "first" : "additional") do
+              insert_crossref_organization(xml, creator)
+            end
+          elsif creator["givenName"].present? || creator["familyName"].present?
+            xml.person_name("contributor_role" => "author",
+                            "sequence" => index.zero? ? "first" : "additional") do
+              insert_crossref_person(xml, creator)
+            end
+          else
+            xml.unknown("contributor_role" => "author",
+                        "sequence" => index.zero? ? "first" : "additional") do
+              insert_crossref_anonymous(xml, creator)
+            end
           end
         end
       end
     end
 
-    def insert_crossref_person(xml, person)
-      xml.given_name(person["givenName"]) if person["givenName"].present?
-      xml.surname(person["familyName"]) if person["familyName"].present?
-      if person.dig("id") && URI.parse(person.dig("id")).host == "orcid.org"
-        xml.ORCID(person.dig("id"))
+    def insert_crossref_person(xml, creator)
+      xml.given_name(creator["givenName"]) if creator["givenName"].present?
+      xml.surname(creator["familyName"]) if creator["familyName"].present?
+      if creator.dig("id") && URI.parse(creator.dig("id")).host == "orcid.org"
+        xml.ORCID(creator.dig("id"))
       end
-      Array.wrap(person["affiliation"]).each do |affiliation|
-        attributes = { "affiliationIdentifier" => affiliation["affiliationIdentifier"],
-                       "affiliationIdentifierScheme" => affiliation["affiliationIdentifierScheme"], "schemeURI" => affiliation["schemeUri"] }.compact
-        xml.affiliation(affiliation["name"], attributes)
+      if creator["affiliation"].present?
+        xml.affiliations do
+          xml.institution do
+            xml.institution_name(creator.dig("affiliation", 0, "name")) if creator.dig("affiliation", 0, "name").present?
+            xml.institution_id(creator.dig("affiliation", 0, "affiliationIdentifier"), "type" => creator.dig("affiliation", 0, "affiliationIdentifierScheme")) if creator.dig("affiliation", 0, "affiliationIdentifier").present?
+          end
+        end
+      end
+    end
+
+    def insert_crossref_organization(xml, creator)
+      xml.name(creator["name"]) if creator["name"].present?
+      if creator["affiliation"].present?
+        xml.affiliations do
+          xml.institution do
+            xml.institution_name(creator.dig("affiliation", 0, "name")) if creator.dig("affiliation", 0, "name").present?
+            xml.institution_id(creator.dig("affiliation", 0, "affiliationIdentifier"), "type" => creator.dig("affiliation", 0, "affiliationIdentifierScheme")) if creator.dig("affiliation", 0, "affiliationIdentifier").present?
+          end
+        end
+      end
+    end
+
+    def insert_crossref_anonymous(xml, creator)
+      if person["affiliation"].present?
+        xml.anonymous do
+          xml.affiliations do
+            xml.institution do
+              xml.institution_name(creator.dig("affiliation", 0, "name")) if creator.dig("affiliation", 0, "name").present?
+              xml.institution_id(creator.dig("affiliation", 0, "affiliationIdentifier"), "type" => creator.dig("affiliation", 0, "affiliationIdentifierScheme")) if creator.dig("affiliation", 0, "affiliationIdentifier").present?
+            end
+          end
+        end
+      else
+        xml.anonymous
       end
     end
 
@@ -265,7 +307,7 @@ module Commonmeta
         }.compact
 
         # strip hyphen from UUIDs, as item_number can only be 32 characters long (UUIDv4 is 36 characters long)
-        alternate_identifier["alternateIdentifier"] = alternate_identifier["alternateIdentifier"].gsub('-','') if alternate_identifier["alternateIdentifierType"] == "UUID"
+        alternate_identifier["alternateIdentifier"] = alternate_identifier["alternateIdentifier"].gsub("-", "") if alternate_identifier["alternateIdentifierType"] == "UUID"
 
         xml.item_number(alternate_identifier["alternateIdentifier"], attributes)
       end

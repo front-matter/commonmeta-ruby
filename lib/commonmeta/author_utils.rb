@@ -41,7 +41,7 @@ module Commonmeta
       elsif id.nil? && author['ORCID'].present?
         id = author.fetch('ORCID')
       end
-      id = normalize_orcid(id)
+      id = normalize_orcid(id) || normalize_ror(id)
 
       # parse author type, i.e. "Person", "Organization" or not specified
       type = author.fetch('type', nil)

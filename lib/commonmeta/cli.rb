@@ -68,6 +68,20 @@ module Commonmeta
       puts encode_container_id
     end
 
+    desc "", "encode_by_blog"
+
+    def encode_by_blog(blog_id)
+      prefix = get_doi_prefix_by_blog_id(blog_id)
+      puts encode_doi(prefix)
+    end
+
+    desc "", "encode_by_uuid"
+
+    def encode_by_uuid(uuid)
+      prefix = get_doi_prefix_by_json_feed_item_uuid(uuid)
+      puts encode_doi(prefix)
+    end
+
     desc "", "decode"
 
     def decode(doi)

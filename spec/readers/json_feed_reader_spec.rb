@@ -225,6 +225,57 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.container).to eq("identifier" => "https://citationstyles.org/", "identifierType" => "URL", "title" => "Citation Style Language", "type" => "Periodical")
     end
 
+    it "ghost post with organizational author" do
+      input = "https://rogue-scholar.org/api/posts/5561f8e4-2ff1-4186-a8d5-8dacb3afe414"
+      subject = described_class.new(input: input)
+      puts subject.errors
+      # expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://libscie.org/ku-leuven-supports-researchequals")
+      expect(subject.url).to eq("https://libscie.org/ku-leuven-supports-researchequals")
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "5561f8e4-2ff1-4186-a8d5-8dacb3afe414", "alternateIdentifierType" => "UUID" }])
+      expect(subject.type).to eq("Article")
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("id"=>"https://ror.org/0342dzm54", "name"=>"Liberate Science", "type"=>"Organization")
+      expect(subject.titles).to eq([{ "title" => "KU Leuven supports ResearchEquals" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published" => "2023-05-09")
+      expect(subject.descriptions.first["description"]).to start_with("KU Leuven is now an inaugural supporting member of ResearchEquals")
+      expect(subject.publisher).to eq("name" => "Liberate Science")
+      expect(subject.subjects).to eq([{ "subject" => "Social sciences" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Social sciences",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.container).to eq("identifier" => "https://libscie.org/", "identifierType" => "URL", "title" => "Liberate Science", "type" => "Periodical")
+      expect(subject.references).to be_nil
+    end
+
+    it "blog post with non-url id" do
+      input = "https://rogue-scholar.org/api/posts/1898d2d7-4d87-4487-96c4-3073cf99e9a5"
+      subject = described_class.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq("http://sfmatheson.blogspot.com/2023/01/quintessence-of-dust-2023-restart-why.html")
+      expect(subject.url).to eq("http://sfmatheson.blogspot.com/2023/01/quintessence-of-dust-2023-restart-why.html")
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "1898d2d7-4d87-4487-96c4-3073cf99e9a5", "alternateIdentifierType" => "UUID" }])
+      expect(subject.type).to eq("Article")
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("familyName"=>"Matheson", "givenName"=>"Stephen", "type"=>"Person")
+      expect(subject.titles).to eq([{ "title" => "Quintessence of Dust 2023 restart: the why" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published"=>"2023-01-09", "updated"=>"2023-04-02")
+      expect(subject.descriptions.first["description"]).to start_with("It's early January 2023, a little before sunset in Tucson.")
+      expect(subject.publisher).to eq("name" => "Quintessence of Dust")
+      expect(subject.subjects).to eq([{ "subject" => "Social sciences" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Social sciences",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.container).to eq("identifier" => "http://sfmatheson.blogspot.com/", "identifierType" => "URL", "title" => "Quintessence of Dust", "type" => "Periodical")
+      expect(subject.references).to be_nil
+    end
+
     it "substack post with broken reference" do
       input = "https://rogue-scholar.org/api/posts/2b105b29-acbc-4eae-9ff1-368803f36a4d"
       subject = described_class.new(input: input)
@@ -266,6 +317,23 @@ describe Commonmeta::Metadata, vcr: true do
     it "by blog_id" do
       response = subject.get_json_feed_by_blog("tyfqw20")
       expect(response).to eq("3e1278f6-e7c0-43e1-bb54-6829e1344c0d")
+    end
+  end
+
+  context "get doi_prefix for blog" do
+    it "by blog_id" do
+      response = subject.get_doi_prefix_by_blog_id("tyfqw20")
+      expect(response).to eq("10.59350")
+    end
+
+    it "by blog post uuid" do
+      response = subject.get_doi_prefix_by_json_feed_item_uuid("1898d2d7-4d87-4487-96c4-3073cf99e9a5")
+      expect(response).to eq("10.59350")
+    end
+
+    it "by blog post uuid specific prefix" do
+      response = subject.get_doi_prefix_by_json_feed_item_uuid("2b22bbba-bcba-4072-94cc-3f88442fff88")
+      expect(response).to eq("10.54900")
     end
   end
 end

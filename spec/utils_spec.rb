@@ -101,6 +101,14 @@ describe Commonmeta::Metadata, vcr: true do
     end
   end
 
+  context "validate_ror" do
+    it "validate_ror" do
+      ror = "https://ror.org/0342dzm54"
+      response = subject.validate_ror(ror)
+      expect(response).to eq("0342dzm54")
+    end
+  end
+
   context "validate_orcid_scheme" do
     it "validate_orcid_scheme" do
       orcid = "http://orcid.org"
