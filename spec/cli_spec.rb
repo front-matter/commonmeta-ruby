@@ -312,13 +312,13 @@ describe Commonmeta::CLI do
   end
 
   describe "encode", vcr: true do
-    it "blog prefix" do
+    it "valid doi prefix" do
       input = "10.53731"
       expect { subject.encode input }.to output(/https:\/\/doi.org\/10.53731/).to_stdout
     end
 
-    it "blog prefix missing" do
-      input = ""
+    it "invalid doi prefix" do
+      input = "11.1234"
       expect { subject.encode input }.to output("").to_stdout
     end
 

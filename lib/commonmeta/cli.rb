@@ -59,7 +59,7 @@ module Commonmeta
     desc "", "encode"
 
     def encode(prefix)
-      return nil unless prefix.present?
+      return nil unless validate_prefix(prefix).present?
       puts encode_doi(prefix)
     end
 
