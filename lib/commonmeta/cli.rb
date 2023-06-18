@@ -115,6 +115,12 @@ module Commonmeta
       puts get_json_feed_by_blog(id)
     end
 
+    desc "", "ghost_token"
+
+    def ghost_token(admin_api_key)
+      puts generate_ghost_token(admin_api_key)
+    end
+
     default_task :convert
   end
 end

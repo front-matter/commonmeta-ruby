@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    commonmeta-ruby (3.3.2)
+    commonmeta-ruby (3.3.3)
       activesupport (>= 4.2.5, < 8.0)
       addressable (~> 2.8.1, < 2.8.2)
       base32-url (>= 0.7.0, < 1)
@@ -16,6 +16,7 @@ PATH
       json-ld-preloaded (~> 3.2, >= 3.2.2)
       json_schemer (~> 1.0.1)
       jsonlint (~> 0.3.0)
+      jwt (~> 2.7, >= 2.7.1)
       loofah (~> 2.19)
       namae (~> 1.0)
       postrank-uri (~> 1.1)
@@ -111,6 +112,7 @@ GEM
     jsonlint (0.3.0)
       oj (~> 3)
       optimist (~> 3)
+    jwt (2.7.1)
     latex-decode (0.4.0)
     link_header (0.0.8)
     llhttp-ffi (0.4.0)

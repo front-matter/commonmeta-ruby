@@ -2,7 +2,7 @@
 
 require File.expand_path("../../lib/commonmeta", __FILE__)
 
-if (ARGV & %w(--version -v help --help encode decode encode_id decode_id encode_by_blog encode_by_uuid json_feed_not_indexed json_feed_unregistered json_feed_by_blog)).empty?
+if (ARGV & %w(--version -v help --help encode decode encode_id decode_id encode_by_blog encode_by_uuid json_feed_not_indexed json_feed_unregistered json_feed_by_blog ghost_token)).empty?
   Commonmeta::CLI.start(ARGV.dup.unshift("convert"))
 else
   Commonmeta::CLI.start

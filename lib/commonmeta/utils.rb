@@ -1385,7 +1385,7 @@ module Commonmeta
 
     def encode_doi(prefix, options = {})
       return nil unless prefix.present?
-      
+
       # DOI suffix is a generated from a random number, encoded in base32
       # suffix has 8 digits plus two checksum digits. With base32 there are
       # 32 possible digits, so 8 digits gives 32^8 possible combinations
@@ -1451,6 +1451,26 @@ module Commonmeta
 
     def json_feed_item_by_uuid_url(uuid)
       "https://rogue-scholar.org/api/posts/#{uuid}"
+    end
+
+    def generate_ghost_token(admin_api_key)
+      # from https://ghost.org/docs/admin-api/
+
+      # Split the key into ID and SECRET
+      id, secret = admin_api_key.split(":")
+
+      # Prepare header and payload
+      iat = Time.now.to_i
+
+      header = { alg: "HS256", typ: "JWT", kid: id }
+      payload = {
+        iat: iat,
+        exp: iat + 5 * 60,
+        aud: "/admin/",
+      }
+
+      # Create the token (including decoding secret)
+      JWT.encode payload, [secret].pack("H*"), "HS256", header
     end
   end
 end
