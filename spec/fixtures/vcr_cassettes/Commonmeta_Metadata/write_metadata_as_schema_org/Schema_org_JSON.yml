@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.5281/zenodo.48440?include=media,client
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.datacite.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:24:58 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - ca25fec1-524b-4953-935f-4ca24474c69c
+      X-Download-Options:
+      - noopen
+      Etag:
+      - W/"d2428706cc22c4314f0a482e20c548bf"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.040847'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.17
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.5281/zenodo.48440","type":"dois","attributes":{"doi":"10.5281/zenodo.48440","prefix":"10.5281","suffix":"zenodo.48440","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Garza,
+        Kristian","nameType":"Personal","givenName":"Kristian","familyName":"Garza","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"Analysis
+        Tools for Crossover Experiment of UI using Choice Architecture"}],"publisher":"Zenodo","container":{},"publicationYear":2016,"subjects":[{"subject":"choice
+        architecture"},{"subject":"crossover experiment"},{"subject":"hci"}],"contributors":[],"dates":[{"date":"2016-03-27","dateType":"Issued"}],"language":null,"types":{"ris":"COMP","bibtex":"misc","citeproc":"article","schemaOrg":"SoftwareSourceCode","resourceTypeGeneral":"Software"},"relatedIdentifiers":[{"relationType":"IsSupplementTo","relatedIdentifier":"https://github.com/kjgarza/frame_experiment_analysis/tree/v1.0","relatedIdentifierType":"URL"}],"relatedItems":[],"sizes":[],"formats":[],"version":"v1.0","rightsList":[{"rights":"Creative
+        Commons Attribution Non Commercial Share Alike 4.0 International","rightsUri":"https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode","schemeUri":"https://spdx.org/licenses/","rightsIdentifier":"cc-by-nc-sa-4.0","rightsIdentifierScheme":"SPDX"},{"rights":"Open
+        Access","rightsUri":"info:eu-repo/semantics/openAccess"}],"descriptions":[{"description":"This
+        tools are used to analyse the data produced by the Crosssover Experiment I
+        designed to test Choice Architecture techniques as UI interventions in a SEEk4Science
+        data catalogue. It contains: - Data structures for the experimental data.<br>
+        - Visualisation functions<br> - Analysis functions ## Installation - R<br>
+        - python<br> - ipython 4 Clone and use. ## Usage <br> ```python<br> source(''parallel_plot.r'')<br>
+        with(z, parallelset(trt,response, freq=count, alpha=0.2))<br> ``` <br> ##
+        Contributing 1. Fork it!<br> 2. Create your feature branch: `git checkout
+        -b my-new-feature`<br> 3. Commit your changes: `git commit -am ''Add some
+        feature''`<br> 4. Push to the branch: `git push origin my-new-feature`<br>
+        5. Submit a pull request :D <br> ## License This work supports my PhD Thesis
+        at University of Manchester.","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MjgxL1pFTk9ETy40ODQ0MDwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPktyaXN0aWFuIEdhcnphPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICA8L2NyZWF0b3JzPgogIDx0aXRsZXM+CiAgICA8dGl0bGU+QW5hbHlzaXMgVG9vbHMgZm9yIENyb3Nzb3ZlciBFeHBlcmltZW50IG9mIFVJIHVzaW5nIENob2ljZSBBcmNoaXRlY3R1cmU8L3RpdGxlPgogIDwvdGl0bGVzPgogIDxwdWJsaXNoZXI+WmVub2RvPC9wdWJsaXNoZXI+CiAgPHB1YmxpY2F0aW9uWWVhcj4yMDE2PC9wdWJsaWNhdGlvblllYXI+CiAgPHN1YmplY3RzPgogICAgPHN1YmplY3Q+Y2hvaWNlIGFyY2hpdGVjdHVyZTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PmNyb3Nzb3ZlciBleHBlcmltZW50PC9zdWJqZWN0PgogICAgPHN1YmplY3Q+aGNpPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGRhdGVzPgogICAgPGRhdGUgZGF0ZVR5cGU9Iklzc3VlZCI+MjAxNi0wMy0yNzwvZGF0ZT4KICA8L2RhdGVzPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iU29mdHdhcmUiLz4KICA8YWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgICA8YWx0ZXJuYXRlSWRlbnRpZmllciBhbHRlcm5hdGVJZGVudGlmaWVyVHlwZT0idXJsIj5odHRwczovL3plbm9kby5vcmcvcmVjb3JkLzQ4NDQwPC9hbHRlcm5hdGVJZGVudGlmaWVyPgogIDwvYWx0ZXJuYXRlSWRlbnRpZmllcnM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IlVSTCIgcmVsYXRpb25UeXBlPSJJc1N1cHBsZW1lbnRUbyI+aHR0cHM6Ly9naXRodWIuY29tL2tqZ2FyemEvZnJhbWVfZXhwZXJpbWVudF9hbmFseXNpcy90cmVlL3YxLjA8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDx2ZXJzaW9uPnYxLjA8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9sZWdhbGNvZGUiPkNyZWF0aXZlIENvbW1vbnMgQXR0cmlidXRpb24gTm9uIENvbW1lcmNpYWwgU2hhcmUgQWxpa2UgNC4wIEludGVybmF0aW9uYWw8L3JpZ2h0cz4KICAgIDxyaWdodHMgcmlnaHRzVVJJPSJpbmZvOmV1LXJlcG8vc2VtYW50aWNzL29wZW5BY2Nlc3MiPk9wZW4gQWNjZXNzPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+Jmx0O3AmZ3Q7JmFtcDtuYnNwOyZsdDsvcCZndDsKCiZsdDtwJmd0O1RoaXMgdG9vbHMgYXJlIHVzZWQgdG8gYW5hbHlzZSB0aGUgZGF0YSBwcm9kdWNlZCBieSB0aGUgQ3Jvc3Nzb3ZlciBFeHBlcmltZW50IEkgZGVzaWduZWQgdG8gdGVzdCBDaG9pY2UgQXJjaGl0ZWN0dXJlIHRlY2huaXF1ZXMgYXMgVUkgaW50ZXJ2ZW50aW9ucyBpbiBhIFNFRWs0U2NpZW5jZSBkYXRhIGNhdGFsb2d1ZS4gSXQgY29udGFpbnM6Jmx0Oy9wJmd0OwoKJmx0O3AmZ3Q7LSBEYXRhIHN0cnVjdHVyZXMgZm9yIHRoZSBleHBlcmltZW50YWwgZGF0YS4mbHQ7YnIgLyZndDsKLSBWaXN1YWxpc2F0aW9uIGZ1bmN0aW9ucyZsdDticiAvJmd0OwotIEFuYWx5c2lzIGZ1bmN0aW9ucyZsdDsvcCZndDsKCiZsdDtwJmd0OyMjIEluc3RhbGxhdGlvbiZsdDsvcCZndDsKCiZsdDtwJmd0Oy0gUiZsdDticiAvJmd0OwotIHB5dGhvbiZsdDticiAvJmd0OwotIGlweXRob24gNCZsdDsvcCZndDsKCiZsdDtwJmd0O0Nsb25lIGFuZCB1c2UuJmx0Oy9wJmd0OwoKJmx0O3AmZ3Q7IyMgVXNhZ2UmbHQ7L3AmZ3Q7CgombHQ7cCZndDsmbHQ7YnIgLyZndDsKYGBgcHl0aG9uJmx0O2JyIC8mZ3Q7CnNvdXJjZSgmYW1wOyMzOTtwYXJhbGxlbF9wbG90LnImYW1wOyMzOTspJmx0O2JyIC8mZ3Q7CndpdGgoeiwgcGFyYWxsZWxzZXQodHJ0LHJlc3BvbnNlLCBmcmVxPWNvdW50LCBhbHBoYT0wLjIpKSZsdDticiAvJmd0OwpgYGAmbHQ7L3AmZ3Q7CgombHQ7cCZndDsmbHQ7YnIgLyZndDsKIyMgQ29udHJpYnV0aW5nJmx0Oy9wJmd0OwoKJmx0O3AmZ3Q7MS4gRm9yayBpdCEmbHQ7YnIgLyZndDsKMi4gQ3JlYXRlIHlvdXIgZmVhdHVyZSBicmFuY2g6IGBnaXQgY2hlY2tvdXQgLWIgbXktbmV3LWZlYXR1cmVgJmx0O2JyIC8mZ3Q7CjMuIENvbW1pdCB5b3VyIGNoYW5nZXM6IGBnaXQgY29tbWl0IC1hbSAmYW1wOyMzOTtBZGQgc29tZSBmZWF0dXJlJmFtcDsjMzk7YCZsdDticiAvJmd0Owo0LiBQdXNoIHRvIHRoZSBicmFuY2g6IGBnaXQgcHVzaCBvcmlnaW4gbXktbmV3LWZlYXR1cmVgJmx0O2JyIC8mZ3Q7CjUuIFN1Ym1pdCBhIHB1bGwgcmVxdWVzdCA6RCZsdDsvcCZndDsKCiZsdDtwJmd0OyZsdDticiAvJmd0OwojIyBMaWNlbnNlJmx0Oy9wJmd0OwoKJmx0O3AmZ3Q7VGhpcyB3b3JrIHN1cHBvcnRzIG15IFBoRCBUaGVzaXMgYXQgVW5pdmVyc2l0eSBvZiBNYW5jaGVzdGVyLiZsdDsvcCZndDs8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgo8L3Jlc291cmNlPg==","url":"https://zenodo.org/record/48440","contentUrl":null,"metadataVersion":11,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2016-03-27T22:18:37.000Z","registered":"2016-03-27T22:18:38.000Z","published":"2016","updated":"2023-04-25T22:26:51.000Z"},"relationships":{"client":{"data":{"id":"cern.zenodo","type":"clients"}},"provider":{"data":{"id":"cern","type":"providers"}},"media":{"data":{"id":"10.5281/zenodo.48440","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"cern.zenodo","type":"clients","attributes":{"name":"Zenodo","symbol":"CERN.ZENODO","year":2013,"alternateName":"Research.
+        Shared","description":"ZENODO builds and operates a simple and innovative
+        service that enables researchers, scientists, EU projects and institutions
+        to share and showcase multidisciplinary research results (data and publications)
+        that are not part of the existing institutional or subject-based repositories
+        of the research communities.\r\nZENODO enables researchers, scientists, EU
+        projects and institutions to:\r\neasily share the long tail of small research
+        results in a wide variety of formats including text, spreadsheets, audio,
+        video, and images across all fields of science.\r\ndisplay their research
+        results and get credited by making the research results citable and integrate
+        them into existing reporting lines to funding agencies like the European Commission.\r\neasily
+        access and reuse shared research results.","language":["en"],"clientType":"repository","domains":"openaire.cern.ch,zenodo.org","re3data":"https://doi.org/10.17616/R3QP53","opendoar":null,"issn":{},"url":"https://zenodo.org/","created":"2013-01-28T12:07:48.000Z","updated":"2020-06-26T12:22:29.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"cern","type":"providers"}},"prefixes":{"data":[{"id":"10.5281","type":"prefixes"}]}}}]}'
+  recorded_at: Sun, 18 Jun 2023 15:24:58 GMT
+recorded_with: VCR 6.1.0

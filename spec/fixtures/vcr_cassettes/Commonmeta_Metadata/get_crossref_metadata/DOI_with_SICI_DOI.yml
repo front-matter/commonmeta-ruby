@@ -1,0 +1,347 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1890
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:20:57 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AGkahy717UV2VHsva4OIrj5X9lHn9RB8135p4sg1WC%2BFZbFOZNlnw8PTklw1uDB0Fihi9vHs5xVmXenk6GM3nx1gkIJafOGajqyv6b7m1Np1Xu6WrHOFER8aVFwIIMWKYv0cHw8%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7d9484f12d4b1c14-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.1890",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 18 Jun 2023 15:20:57 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1890/0012-9658(2006)87%5B2832:tiopma%5D2.0.co;2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:20:58 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,6,10]],"date-time":"2023-06-10T12:26:22Z","timestamp":1686399982719},"reference-count":39,"publisher":"Wiley","issue":"11","license":[{"start":{"date-parts":[[2015,9,1]],"date-time":"2015-09-01T00:00:00Z","timestamp":1441065600000},"content-version":"tdm","delay-in-days":3226,"URL":"http:\/\/doi.wiley.com\/10.1002\/tdm_license_1.1"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Ecology"],"published-print":{"date-parts":[[2006,11]]},"DOI":"10.1890\/0012-9658(2006)87[2832:tiopma]2.0.co;2","type":"journal-article","created":{"date-parts":[[2007,6,4]],"date-time":"2007-06-04T19:36:12Z","timestamp":1180985772000},"page":"2832-2841","source":"Crossref","is-referenced-by-count":72,"title":["THE
+        IMPACT OF PARASITE MANIPULATION AND PREDATOR FORAGING BEHAVIOR ON PREDATOR\u2013PREY
+        COMMUNITIES"],"prefix":"10.1002","volume":"87","author":[{"given":"A.","family":"Fenton","sequence":"first","affiliation":[]},{"given":"S.
+        A.","family":"Rands","sequence":"additional","affiliation":[]}],"member":"311","reference":[{"key":"i0012-9658-87-11-2832-anderson1","doi-asserted-by":"publisher","DOI":"10.2307\/3933"},{"key":"i0012-9658-87-11-2832-anderson2","doi-asserted-by":"publisher","DOI":"10.1098\/rstb.1981.0005"},{"key":"i0012-9658-87-11-2832-bethel1","doi-asserted-by":"publisher","DOI":"10.2307\/3278623"},{"key":"i0012-9658-87-11-2832-bowers1","doi-asserted-by":"publisher","DOI":"10.1016\/S0022-5193(05)80240-1"},{"key":"i0012-9658-87-11-2832-brown1","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.1999.0864"},{"key":"i0012-9658-87-11-2832-brown2","doi-asserted-by":"publisher","DOI":"10.1017\/S0031182001008678"},{"key":"i0012-9658-87-11-2832-brown3","doi-asserted-by":"publisher","DOI":"10.1016\/S0020-7519(02)00013-9"},{"key":"i0012-9658-87-11-2832-damsgaard1","doi-asserted-by":"publisher","DOI":"10.1016\/j.seares.2005.04.001"},{"key":"i0012-9658-87-11-2832-dobson2","doi-asserted-by":"publisher","DOI":"10.1086\/415837"},{"key":"i0012-9658-87-11-2832-dobson1","doi-asserted-by":"publisher","DOI":"10.1086\/424681"},{"key":"i0012-9658-87-11-2832-dobson3","doi-asserted-by":"publisher","DOI":"10.2307\/5339"},{"key":"i0012-9658-87-11-2832-dobson4","unstructured":"A.
+        P. Dobson, and A. E. Keymer .1985 .Life history models .Pages347 -384inD.
+        W. T. Crompton and B. B. Nickol, editorsBiology of the Acanthocephala Cambridge
+        University Press, Cambridge, UK."},{"key":"i0012-9658-87-11-2832-fenton1","doi-asserted-by":"publisher","DOI":"10.1016\/j.ijpara.2004.02.003"},{"key":"i0012-9658-87-11-2832-franz1","doi-asserted-by":"publisher","DOI":"10.1017\/S0031182002001932"},{"key":"i0012-9658-87-11-2832-getz1","doi-asserted-by":"publisher","DOI":"10.1086\/284112"},{"key":"i0012-9658-87-11-2832-holling1","doi-asserted-by":"publisher","DOI":"10.4039\/Ent91385-7"},{"key":"i0012-9658-87-11-2832-holt1","doi-asserted-by":"publisher","DOI":"10.1086\/284153"},{"key":"i0012-9658-87-11-2832-holt2","doi-asserted-by":"publisher","DOI":"10.1086\/284409"},{"key":"i0012-9658-87-11-2832-hudson1","doi-asserted-by":"publisher","DOI":"10.1126\/science.282.5397.2256"},{"key":"i0012-9658-87-11-2832-hudson2","unstructured":"P.
+        J. Hudson, A. Rizzoli, B. T. Grenfell, H. Heesterbeek, and A. P. Dobson .2002
+        .The ecology of wildlife diseases Oxford University Press, Oxford, UK."},{"key":"i0012-9658-87-11-2832-keeling1","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.1999.0716"},{"key":"i0012-9658-87-11-2832-lacroix1","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pbio.0030298"},{"key":"i0012-9658-87-11-2832-lafferty1","doi-asserted-by":"publisher","DOI":"10.1086\/285444"},{"key":"i0012-9658-87-11-2832-mccallum1","doi-asserted-by":"publisher","DOI":"10.1016\/S0169-5347(01)02144-9"},{"key":"i0012-9658-87-11-2832-moore1","doi-asserted-by":"publisher","DOI":"10.2307\/1937807"},{"key":"i0012-9658-87-11-2832-moore2","doi-asserted-by":"publisher","DOI":"10.1086\/284224"},{"key":"i0012-9658-87-11-2832-moore3","unstructured":"J.
+        Moore, 2002 .Parasites and the behavior of animals Oxford University Press,
+        New York, New York, USA."},{"key":"i0012-9658-87-11-2832-morand1","doi-asserted-by":"publisher","DOI":"10.1016\/S0304-3800(96)00028-2"},{"key":"i0012-9658-87-11-2832-poulin1","doi-asserted-by":"crossref","unstructured":"R.
+        Poulin, 1994 .The evolution of parasite manipulation of host behaviour: a
+        theoretical analysis .Parasitology,109:S109 -S118 .","DOI":"10.1017\/S0031182000085127"},{"key":"i0012-9658-87-11-2832-rands1","doi-asserted-by":"publisher","DOI":"10.1006\/jtbi.1999.1048"},{"key":"i0012-9658-87-11-2832-seppala1","doi-asserted-by":"publisher","DOI":"10.1016\/j.anbehav.2005.01.020"},{"key":"i0012-9658-87-11-2832-stephens1","unstructured":"D.
+        W. Stephens, and J. R. Krebs .1986 .Foraging theory Princeton University Press,
+        Princeton, New Jersey, USA."},{"key":"i0012-9658-87-11-2832-swinton1","doi-asserted-by":"publisher","DOI":"10.1046\/j.1365-2656.1998.00176.x"},{"key":"i0012-9658-87-11-2832-thomas1","doi-asserted-by":"publisher","DOI":"10.1016\/j.beproc.2004.06.010"},{"key":"i0012-9658-87-11-2832-thomas2","doi-asserted-by":"publisher","DOI":"10.1016\/S1471-4922(02)02339-5"},{"key":"i0012-9658-87-11-2832-thomas3","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.1998.0403"},{"key":"i0012-9658-87-11-2832-tompkins1","doi-asserted-by":"publisher","DOI":"10.1111\/j.1420-9101.2003.00688.x"},{"key":"i0012-9658-87-11-2832-turner1","doi-asserted-by":"publisher","DOI":"10.1098\/rspb.2002.2213"},{"key":"i0012-9658-87-11-2832-ydenberg1","unstructured":"R.
+        C. Ydenberg, 1998 .Behavioral decisions about foraging and predator avoidance
+        .Pages343 -378inR. Dukas, editorCognitive ecology: the evolutionary ecology
+        of information processing and decision making University of Chicago Press,
+        Chicago, Illinois, USA."}],"container-title":["Ecology"],"original-title":[],"language":"en","link":[{"URL":"https:\/\/api.wiley.com\/onlinelibrary\/tdm\/v1\/articles\/10.1890%2F0012-9658(2006)87%5B2832:TIOPMA%5D2.0.CO;2","content-type":"unspecified","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/onlinelibrary.wiley.com\/doi\/full\/10.1890\/0012-9658(2006)87%5B2832:TIOPMA%5D2.0.CO;2","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,4,28]],"date-time":"2019-04-28T13:51:50Z","timestamp":1556459510000},"score":1,"resource":{"primary":{"URL":"http:\/\/doi.wiley.com\/10.1890\/0012-9658(2006)87[2832:TIOPMA]2.0.CO;2"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2006,11]]},"references-count":39,"journal-issue":{"issue":"11","published-print":{"date-parts":[[2006,11]]}},"alternative-id":["10.1890\/0012-9658(2006)87[2832:TIOPMA]2.0.CO;2"],"URL":"http:\/\/dx.doi.org\/10.1890\/0012-9658(2006)87[2832:tiopma]2.0.co;2","relation":{},"ISSN":["0012-9658"],"issn-type":[{"value":"0012-9658","type":"print"}],"subject":["Ecology,
+        Evolution, Behavior and Systematics"],"published":{"date-parts":[[2006,11]]}}}'
+  recorded_at: Sun, 18 Jun 2023 15:20:58 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/311
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:20:59 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687044242249,"primary-name":"Wiley","counts":{"current-dois":845927,"backfile-dois":9260400,"total-dois":10106327},"breakdowns":{"dois-by-issued-year":[[2010,518425],[2020,373778],[2021,356844],[2009,343310],[2022,342603],[2015,323764],[2012,305588],[2019,292973],[2008,292395],[2007,286221],[2018,282946],[2013,276801],[2014,275525],[2016,274491],[2011,269686],[2017,269323],[2006,248211],[2004,220598],[2005,214180],[2003,171309],[2002,150657],[2023,146479],[2001,145827],[2000,138392],[1999,125101],[1998,118113],[1997,116126],[1996,115269],[1995,112064],[1990,111762],[1989,107255],[1994,104803],[1993,102230],[1988,101967],[1992,98431],[1987,98425],[1986,95269],[1991,93271],[1985,90299],[1984,87412],[1983,83957],[1982,81361],[1981,80437],[1980,77794],[1979,74959],[1978,73069],[1977,70948],[1975,69635],[1974,68517],[1973,68082],[1976,67355],[1972,64848],[1971,59517],[1970,58091],[1969,35862],[1968,34183],[1967,31715],[1966,29888],[1965,28410],[1964,26622],[1963,24481],[1962,21946],[1961,20381],[1960,19073],[1959,18633],[1958,17707],[1957,16914],[1956,15923],[1955,15298],[1954,14385],[1953,13487],[1951,12504],[1950,12137],[1952,12047],[1949,10730],[1938,10160],[1936,9997],[1931,9817],[1930,9707],[1937,9649],[1939,9587],[1933,9385],[1932,9270],[1934,9220],[1935,9179],[1948,9162],[1929,9055],[1928,8582],[1927,8448],[1940,8329],[1941,8111],[1947,8106],[1926,8085],[1924,7905],[1925,7833],[1923,7196],[1942,7018],[1943,6971],[1946,6567],[1922,6545],[1921,6205],[1944,5881],[1908,5618],[1909,5502],[1907,5443],[1906,5220],[1945,5187],[1911,5187],[1905,5075],[1914,5058],[1912,5010],[1920,5009],[1913,4998],[1903,4870],[1904,4859],[1899,4851],[1902,4794],[1910,4731],[1915,4359],[1919,4262],[1901,4239],[1898,4133],[1918,4088],[1900,4087],[1897,3875],[1917,3770],[1916,3650],[1896,3395],[1894,3309],[1895,3101],[1884,3013],[1891,2891],[1893,2878],[1889,2850],[1890,2780],[1883,2709],[1892,2665],[1887,2600],[1888,2544],[1881,2516],[1878,2473],[1886,2460],[1879,2400],[1885,2379],[1880,2335],[1873,2334],[1874,2325],[1882,2295],[1877,2274],[1876,2172],[1875,2044],[1869,1962],[1846,1920],[1858,1875],[1865,1871],[1868,1838],[1855,1775],[1859,1750],[1854,1722],[1870,1718],[1848,1699],[1853,1677],[1864,1639],[1867,1630],[1871,1604],[1863,1583],[1872,1577],[1856,1576],[1849,1567],[1866,1561],[1857,1549],[1862,1543],[1851,1539],[1844,1517],[1861,1515],[1852,1491],[1860,1466],[1843,1448],[1847,1407],[1845,1359],[1839,1344],[1850,1343],[1842,1292],[1841,1286],[1835,1251],[1836,1234],[1838,1218],[1840,1211],[1837,1141],[1834,1134],[1828,887],[1827,849],[1829,772],[1833,757],[1831,716],[1826,701],[1825,689],[1824,689],[1823,545],[1832,479],[1830,412],[1822,275],[1803,218],[1805,183],[1800,183],[1811,170],[1821,164],[1820,150],[1806,147],[1808,137],[1809,129],[1818,128],[1807,126],[1804,126],[1819,125],[1812,123],[1816,121],[1810,120],[1801,120],[1817,116],[1815,112],[1813,112],[1814,107],[1802,106],[1799,93],[2024,1],[1512,1]]},"prefixes":["10.1506","10.1901","10.3401","10.1301","10.1348","10.2755","10.4218","10.3405","10.3162","10.3322","10.1581","10.1516","10.1113","10.1112","10.1634","10.1359","10.1118","10.2966","10.1592","10.1196","10.21815","10.2164","10.1111","10.1034","10.3170","10.14814","10.2136","10.1002","10.1046","10.2135","10.4319","10.1526","10.1889","10.7863","10.4195","10.18934","10.2134","10.2903","10.1256","10.1576","10.1897","10.2746","10.5694","10.1096","10.5054","10.4284","10.1890","10.4004","10.1892"],"coverage":{"affiliations-current":0.657158360000331,"similarity-checking-current":0.7934467158513678,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.07775322880221157,"licenses-backfile":0.9076938361193901,"funders-current":0.2746300803733656,"affiliations-backfile":0.2125167379378861,"resource-links-backfile":0.9145856550472982,"orcids-backfile":0.06167757332296661,"update-policies-current":0.5174619086516922,"ror-ids-backfile":0.0,"orcids-current":0.5443944926689892,"similarity-checking-backfile":0.9264699149064834,"references-backfile":0.6455277309835428,"descriptions-backfile":0.0,"award-numbers-backfile":0.05737937886052438,"update-policies-backfile":0.05055407973737636,"licenses-current":0.8090946381898202,"award-numbers-current":0.2268659115975728,"abstracts-backfile":2.729903675867133E-4,"resource-links-current":0.7291811231938453,"abstracts-current":3.830117728834758E-4,"references-current":0.6504509254344643},"prefix":[{"name":"Wiley
+        (Canadian Academic Accounting Association)","value":"10.1506"},{"name":"Society
+        for the Experimental Analysis of Behavior","value":"10.1901"},{"name":"Wiley
+        (Production and Operations Management)","value":"10.3401"},{"name":"Wiley
+        (International Life Sciences Institute)","value":"10.1301"},{"name":"Wiley
+        (British Psychological Society)","value":"10.1348"},{"name":"Wiley Blackwell
+        (Blackwell Publishing - Foundation for Cellular and Molecular Medicine)","value":"10.2755"},{"name":"Electronics
+        and Telecommunications Research Institute","value":"10.4218"},{"name":"Wiley
+        (New York Academy of Sciences E-Briefings)","value":"10.3405"},{"name":"Wiley
+        (Comparative Legislative Research Center)","value":"10.3162"},{"name":"Wiley
+        (American Cancer Society) ","value":"10.3322"},{"name":"Wiley (Robotic Publications)","value":"10.1581"},{"name":"Wiley
+        (International Journal of Psychoanalysis)","value":"10.1516"},{"name":"Wiley
+        (The Physiological Society)","value":"10.1113"},{"name":"London Mathematical
+        Society","value":"10.1112"},{"name":"Alphamed Press","value":"10.1634"},{"name":"Wiley(American
+        Society Bone & Mineral Research)","value":"10.1359"},{"name":"American Association
+        of Physicists in Medicine","value":"10.1118"},{"name":"Wiley (AHRC Research
+        Centre)","value":"10.2966"},{"name":"Pharmacotherapy","value":"10.1592"},{"name":"Wiley
+        (New York Academy of Sciences)","value":"10.1196"},{"name":"American Dental
+        Education Association","value":"10.21815"},{"name":"American Society of Andrology","value":"10.2164"},{"name":"Wiley
+        (Blackwell Publishing)","value":"10.1111"},{"name":"Wiley (Munksgaard)","value":"10.1034"},{"name":"Wiley
+        (Opulus Press)","value":"10.3170"},{"name":"Wiley (Physiological Reports)","value":"10.14814"},{"name":"Soil
+        Science Society of America","value":"10.2136"},{"name":"Wiley (John Wiley
+        & Sons)","value":"10.1002"},{"name":"Wiley (Blackwell Publishing)","value":"10.1046"},{"name":"Crop
+        Science Society of America","value":"10.2135"},{"name":"American Society of
+        Limnology and Oceanography, Inc.","value":"10.4319"},{"name":"Wiley (Rural
+        Sociological Society)","value":"10.1526"},{"name":"Society for Information
+        Display","value":"10.1889"},{"name":"American Institute of Ultrasound in Medicine","value":"10.7863"},{"name":"American
+        Society of Agronomy","value":"10.4195"},{"name":"Wiley","value":"10.18934"},{"name":"American
+        Society of Agronomy","value":"10.2134"},{"name":"Publications Office of the
+        European Union","value":"10.2903"},{"name":"Wiley (Royal Meteorological Society)
+        ","value":"10.1256"},{"name":"Wiley Blackwell (Royal College of Obstetricians
+        & Gynecologist)","value":"10.1576"},{"name":"Wiley (Society of Environmental
+        Toxicology and Chemistry)","value":"10.1897"},{"name":"Wiley (Equine Veterinary
+        Journal)","value":"10.2746"},{"name":"Australasian Medical Publishing Co.
+        Pty. Ltd.","value":"10.5694"},{"name":"Federation of American Society for
+        Experimental Biology","value":"10.1096"},{"name":"Wiley (Teachers of English
+        to Speakers of Other Languages, Inc.)","value":"10.5054"},{"name":"Southern
+        Economic Association","value":"10.4284"},{"name":"Ecological Society of America","value":"10.1890"},{"name":"Wiley
+        (The Wildlife Society)","value":"10.4004"},{"name":"Wiley (American College
+        of Veterinary Internal Medicine)","value":"10.1892"}],"id":311,"tokens":["wiley"],"counts-type":{"all":{"monograph":8667,"report":14,"peer-review":170910,"journal-article":8730950,"other":214757,"book":13559,"reference-entry":238864,"proceedings-article":12,"journal":2296,"component":1383,"book-chapter":412598,"report-series":1,"proceedings":2,"reference-book":524,"posted-content":13248,"journal-issue":403564,"dataset":677,"book-series":33,"edited-book":3905},"backfile":{"monograph":7688,"report":14,"peer-review":59156,"journal-article":8088110,"other":167351,"book":13040,"reference-entry":238678,"proceedings-article":12,"book-chapter":306791,"proceedings":2,"reference-book":515,"posted-content":4968,"journal-issue":370663,"dataset":86,"edited-book":3326},"current":{"monograph":979,"peer-review":111754,"journal-article":642839,"other":47406,"book":519,"book-chapter":73,"reference-book":9,"posted-content":8280,"journal-issue":32901,"dataset":588,"edited-book":579}},"coverage-type":{"all":{"monograph":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.8737740856120918,"references":0.0144225222106842,"funders":0.0,"similarity-checking":0.9996538594669436,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.8703126802815276,"descriptions":0.0},"report":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.07142857142857142,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"peer-review":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687044242249,"affiliations":0.2808835235570012,"abstracts":3.190947147790332E-4,"orcids":0.1166492764246731,"licenses":0.9849516948327502,"references":0.6950421202732807,"funders":0.1085452327639031,"similarity-checking":0.9574198683992005,"award-numbers":0.08230811080123011,"ror-ids":0.0,"update-policies":0.1037553759900125,"resource-links":0.9633106362996008,"descriptions":0.0},"other":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.001159449983004046,"licenses":0.9863427036138519,"references":0.6629260047402413,"funders":0.0,"similarity-checking":0.9999115279129435,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9851553150770406,"descriptions":0.0},"book":{"last-status-check-time":1687044242249,"affiliations":0.04454605796887676,"abstracts":0.0,"orcids":0.0,"licenses":0.314551220591489,"references":0.00243380780293532,"funders":0.0,"similarity-checking":0.9724168449000664,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.314551220591489,"descriptions":0.0},"reference-entry":{"last-status-check-time":1687044242249,"affiliations":0.1496583830129279,"abstracts":0.0,"orcids":2.093241342353808E-4,"licenses":0.0,"references":0.6728975483957398,"funders":0.0,"similarity-checking":0.9941891620336258,"award-numbers":0.0,"ror-ids":0.0,"update-policies":1.255944805412285E-5,"resource-links":0.2182580882845469,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.8333333333333333,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.002613240418118467,"references":0.0,"funders":0.0,"similarity-checking":0.3501742160278746,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.002613240418118467,"descriptions":0.0},"component":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":7.230657989877079E-4,"references":0.0,"funders":0.0,"similarity-checking":0.4237165582067968,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":7.230657989877079E-4,"descriptions":0.1988430947216197},"book-chapter":{"last-status-check-time":1687044242249,"affiliations":0.05346123829974939,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.3704138168386662,"funders":0.0,"similarity-checking":0.9971061420559479,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.3245992467244146,"descriptions":0.0},"report-series":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-book":{"last-status-check-time":1687044242249,"affiliations":0.0133587786259542,"abstracts":0.0,"orcids":0.0,"licenses":0.4179389312977099,"references":0.0,"funders":0.0,"similarity-checking":0.9770992366412214,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.001908396946564885,"descriptions":0.0},"posted-content":{"last-status-check-time":1687044242249,"affiliations":0.9947161835748792,"abstracts":0.004981884057971014,"orcids":0.9751660628019324,"licenses":9.057971014492754E-4,"references":0.2866847826086957,"funders":0.3502415458937198,"similarity-checking":0.1472675120772947,"award-numbers":0.3502415458937198,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687044242249,"affiliations":2.527480151847043E-4,"abstracts":0.0,"orcids":0.0,"licenses":0.6520155415250121,"references":0.0,"funders":0.0,"similarity-checking":0.261539681438384,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.6516289857370826,"descriptions":0.0},"dataset":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.002954209748892171,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-series":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.9090909090909091,"references":0.0,"funders":0.0,"similarity-checking":0.7272727272727273,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.8852752880921895,"references":0.0,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.8701664532650448,"descriptions":0.0}},"backfile":{"monograph":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.8652445369406868,"references":0.01625910509885536,"funders":0.0,"similarity-checking":0.9997398543184183,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.8614724245577523,"descriptions":0.0},"report":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.07142857142857142,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"peer-review":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687044242249,"affiliations":0.2355061936595818,"abstracts":3.125575690736155E-4,"orcids":0.07001339002560548,"licenses":0.9843598813567076,"references":0.686786406218511,"funders":0.08883299064923697,"similarity-checking":0.9566540267132865,"award-numbers":0.0655061565680981,"ror-ids":0.0,"update-policies":0.05788101299314673,"resource-links":0.9693347395126921,"descriptions":0.0},"other":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.001093510047743963,"licenses":0.9996653739744609,"references":0.647286242687525,"funders":0.0,"similarity-checking":0.9999940245352582,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9995100118911748,"descriptions":0.0},"book":{"last-status-check-time":1687044242249,"affiliations":0.04631901840490798,"abstracts":0.0,"orcids":0.0,"licenses":0.2872699386503067,"references":0.002530674846625767,"funders":0.0,"similarity-checking":0.971319018404908,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.2872699386503067,"descriptions":0.0},"reference-entry":{"last-status-check-time":1687044242249,"affiliations":0.1490250462966842,"abstracts":0.0,"orcids":2.094872589849085E-4,"licenses":0.0,"references":0.6726426398746428,"funders":0.0,"similarity-checking":0.9941846336905789,"award-numbers":0.0,"ror-ids":0.0,"update-policies":1.256923553909451E-5,"resource-links":0.2177326774985545,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.8333333333333333,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1687044242249,"affiliations":0.07174265216385096,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.4979383358703482,"funders":0.0,"similarity-checking":0.9961798097075859,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.4363100612469075,"descriptions":0.0},"proceedings":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-book":{"last-status-check-time":1687044242249,"affiliations":0.01359223300970874,"abstracts":0.0,"orcids":0.0,"licenses":0.4077669902912621,"references":0.0,"funders":0.0,"similarity-checking":0.9941747572815534,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.001941747572815534,"descriptions":0.0},"posted-content":{"last-status-check-time":1687044242249,"affiliations":0.9859098228663447,"abstracts":0.0,"orcids":0.9359903381642511,"licenses":0.0,"references":0.2518115942028986,"funders":0.3089774557165862,"similarity-checking":0.3927133655394525,"award-numbers":0.3089774557165862,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687044242249,"affiliations":2.751825782449287E-4,"abstracts":0.0,"orcids":0.0,"licenses":0.709890115819491,"references":0.0,"funders":0.0,"similarity-checking":0.2847546153783895,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.7094692483468811,"descriptions":0.0},"dataset":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.8911605532170775,"references":0.0,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.8737221888153939,"descriptions":0.0}},"current":{"monograph":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.940755873340143,"references":0.0,"funders":0.0,"similarity-checking":0.9989785495403473,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9397344228804902,"descriptions":0.0},"peer-review":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687044242249,"affiliations":0.8518151512276013,"abstracts":4.013446601715204E-4,"orcids":0.7034156297299946,"licenses":0.9923977854486115,"references":0.7989154360578621,"funders":0.3565620629737773,"similarity-checking":0.9670555146778587,"award-numbers":0.2937080668721095,"ror-ids":0.0,"update-policies":0.6809403287603895,"resource-links":0.8875161587893703,"descriptions":0.0},"other":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.001392228831793444,"licenses":0.9393114795595494,"references":0.7181369446905455,"funders":0.0,"similarity-checking":0.9996203012276927,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.934480867400751,"descriptions":0.0},"book":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":1.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1687044242249,"affiliations":0.6575342465753425,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.9452054794520548,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":1.0,"descriptions":0.0},"reference-book":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1687044242249,"affiliations":1.0,"abstracts":0.007971014492753623,"orcids":0.9986714975845411,"licenses":0.001449275362318841,"references":0.3076086956521739,"funders":0.375,"similarity-checking":0.0,"award-numbers":0.375,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dataset":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1687044242249,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.8514680483592401,"references":0.0,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.849740932642487,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"Hoboken,
+        NJ, United States","names":["Wiley","Wiley (Canadian Academic Accounting Association)","Society
+        for the Experimental Analysis of Behavior","Wiley (Production and Operations
+        Management)","Wiley (International Life Sciences Institute)","Wiley (British
+        Psychological Society)","Wiley Blackwell (Blackwell Publishing - Foundation
+        for Cellular and Molecular Medicine)","Electronics and Telecommunications
+        Research Institute","Wiley (New York Academy of Sciences E-Briefings)","Wiley
+        (Comparative Legislative Research Center)","Wiley (American Cancer Society)","Wiley
+        (Robotic Publications)","Wiley (International Journal of Psychoanalysis)","Wiley
+        (The Physiological Society)","London Mathematical Society","Alphamed Press","Wiley(American
+        Society Bone & Mineral Research)","American Association of Physicists in Medicine","Wiley
+        (AHRC Research Centre)","Pharmacotherapy","Wiley (New York Academy of Sciences)","American
+        Dental Education Association","American Society of Andrology","Wiley (Blackwell
+        Publishing)","Wiley (Munksgaard)","Wiley (Opulus Press)","Wiley (Physiological
+        Reports)","Soil Science Society of America","Wiley (John Wiley & Sons)","Crop
+        Science Society of America","American Society of Limnology and Oceanography,
+        Inc.","Wiley (Rural Sociological Society)","Society for Information Display","American
+        Institute of Ultrasound in Medicine","American Society of Agronomy","Publications
+        Office of the European Union","Wiley (Royal Meteorological Society)","Wiley
+        Blackwell (Royal College of Obstetricians & Gynecologist)","Wiley (Society
+        of Environmental Toxicology and Chemistry)","Wiley (Equine Veterinary Journal)","Australasian
+        Medical Publishing Co. Pty. Ltd.","Federation of American Society for Experimental
+        Biology","Wiley (Teachers of English to Speakers of Other Languages, Inc.)","Southern
+        Economic Association","Ecological Society of America","Wiley (The Wildlife
+        Society)","Wiley (American College of Veterinary Internal Medicine)"]}}'
+  recorded_at: Sun, 18 Jun 2023 15:20:59 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1890
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:20:59 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5lmIBlwDiESOq5txcTa4eUH2l1JAVJKUWJpdYweYK64UrrCAj07B7l9SAUQqSAs4qfTpRTDiosIirpGBr2AFS5kZ0YrIVrnPSoWXlDhBIY3SHNCqcWmd9w1b6zls6MJdI8k7gkw%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7d9484fca8150c35-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.1890",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 18 Jun 2023 15:20:59 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1890/0012-9658(2006)87%5B2832:tiopma%5D2.0.co;2/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:25:30 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.1890/0012-9658(2006)87[2832:tiopma]2.0.co;2>; rel="canonical",
+        <https://api.wiley.com/onlinelibrary/tdm/v1/articles/10.1890%2F0012-9658(2006)87%5B2832:TIOPMA%5D2.0.CO;2>;
+        version="vor"; rel="item", <https://onlinelibrary.wiley.com/doi/full/10.1890/0012-9658(2006)87%5B2832:TIOPMA%5D2.0.CO;2>;
+        version="vor"; rel="item", <http://doi.wiley.com/10.1002/tdm_license_1.1>;
+        version="tdm"; rel="license"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIiB2ZXJzaW9uPSIzLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIGh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3NjaGVtYXMvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0My4wLnhzZCI+DQogIDxxdWVyeV9yZXN1bHQ+DQogICAgPGhlYWQ+DQogICAgICA8ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICA8cXVlcnkgc3RhdHVzPSJyZXNvbHZlZCI+DQogICAgICAgIDxkb2kgdHlwZT0iam91cm5hbF9hcnRpY2xlIj4xMC4xODkwLzAwMTItOTY1OCgyMDA2KTg3WzI4MzI6VElPUE1BXTIuMC5DTzsyPC9kb2k+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJwdWJsaXNoZXItbmFtZSIgdHlwZT0ic3RyaW5nIj5XaWxleTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJwcmVmaXgtbmFtZSIgdHlwZT0ic3RyaW5nIj5XaWxleSAoSm9obiBXaWxleSAmYW1wOyBTb25zKTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJtZW1iZXItaWQiIHR5cGU9Im51bWJlciI+MzExPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImNpdGF0aW9uLWlkIiB0eXBlPSJudW1iZXIiPjI3NjQ5NDkwPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImpvdXJuYWwtaWQiIHR5cGU9Im51bWJlciI+NTU0MTA8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iZGVwb3NpdC10aW1lc3RhbXAiIHR5cGU9Im51bWJlciI+MjAxMTAyMjAxMDA4NDEwNzc2PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9Im93bmVyLXByZWZpeCIgdHlwZT0ic3RyaW5nIj4xMC4xMDAyPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9Imxhc3QtdXBkYXRlIiB0eXBlPSJkYXRlIj4yMDE5LTA0LTI4VDEzOjUxOjUwWjwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJjcmVhdGVkIiB0eXBlPSJkYXRlIj4yMDA3LTA2LTA0VDE5OjM2OjEyWjwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJjaXRlZGJ5LWNvdW50IiB0eXBlPSJudW1iZXIiPjcyPC9jcm0taXRlbT4NCiAgICAgICAgPGRvaV9yZWNvcmQ+DQogICAgICAgICAgPGNyb3NzcmVmIHhtbG5zPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy94c2NoZW1hLzEuMSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy94c2NoZW1hLzEuMSBodHRwOi8vZG9pLmNyb3NzcmVmLm9yZy9zY2hlbWFzL3VuaXhyZWYxLjEueHNkIj4NCiAgICAgICAgICAgIDxqb3VybmFsPg0KICAgICAgICAgICAgICA8am91cm5hbF9tZXRhZGF0YSBsYW5ndWFnZT0iZW4iPg0KICAgICAgICAgICAgICAgIDxmdWxsX3RpdGxlPkVjb2xvZ3k8L2Z1bGxfdGl0bGU+DQogICAgICAgICAgICAgICAgPGFiYnJldl90aXRsZT5FY29sb2d5PC9hYmJyZXZfdGl0bGU+DQogICAgICAgICAgICAgICAgPGlzc24gbWVkaWFfdHlwZT0icHJpbnQiPjAwMTItOTY1ODwvaXNzbj4NCiAgICAgICAgICAgICAgPC9qb3VybmFsX21ldGFkYXRhPg0KICAgICAgICAgICAgICA8am91cm5hbF9pc3N1ZT4NCiAgICAgICAgICAgICAgICA8cHVibGljYXRpb25fZGF0ZSBtZWRpYV90eXBlPSJwcmludCI+DQogICAgICAgICAgICAgICAgICA8bW9udGg+MTE8L21vbnRoPg0KICAgICAgICAgICAgICAgICAgPHllYXI+MjAwNjwveWVhcj4NCiAgICAgICAgICAgICAgICA8L3B1YmxpY2F0aW9uX2RhdGU+DQogICAgICAgICAgICAgICAgPGpvdXJuYWxfdm9sdW1lPg0KICAgICAgICAgICAgICAgICAgPHZvbHVtZT44Nzwvdm9sdW1lPg0KICAgICAgICAgICAgICAgIDwvam91cm5hbF92b2x1bWU+DQogICAgICAgICAgICAgICAgPGlzc3VlPjExPC9pc3N1ZT4NCiAgICAgICAgICAgICAgPC9qb3VybmFsX2lzc3VlPg0KICAgICAgICAgICAgICA8am91cm5hbF9hcnRpY2xlIHB1YmxpY2F0aW9uX3R5cGU9ImZ1bGxfdGV4dCI+DQogICAgICAgICAgICAgICAgPHRpdGxlcz4NCiAgICAgICAgICAgICAgICAgIDx0aXRsZT5USEUgSU1QQUNUIE9GIFBBUkFTSVRFIE1BTklQVUxBVElPTiBBTkQgUFJFREFUT1IgRk9SQUdJTkcgQkVIQVZJT1IgT04gUFJFREFUT1LigJNQUkVZIENPTU1VTklUSUVTPC90aXRsZT4NCiAgICAgICAgICAgICAgICA8L3RpdGxlcz4NCiAgICAgICAgICAgICAgICA8Y29udHJpYnV0b3JzPg0KICAgICAgICAgICAgICAgICAgPHBlcnNvbl9uYW1lIHNlcXVlbmNlPSJmaXJzdCIgY29udHJpYnV0b3Jfcm9sZT0iYXV0aG9yIj4NCiAgICAgICAgICAgICAgICAgICAgPGdpdmVuX25hbWU+QS48L2dpdmVuX25hbWU+DQogICAgICAgICAgICAgICAgICAgIDxzdXJuYW1lPkZlbnRvbjwvc3VybmFtZT4NCiAgICAgICAgICAgICAgICAgIDwvcGVyc29uX25hbWU+DQogICAgICAgICAgICAgICAgICA8cGVyc29uX25hbWUgc2VxdWVuY2U9ImFkZGl0aW9uYWwiIGNvbnRyaWJ1dG9yX3JvbGU9ImF1dGhvciI+DQogICAgICAgICAgICAgICAgICAgIDxnaXZlbl9uYW1lPlMuIEEuPC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgICA8c3VybmFtZT5SYW5kczwvc3VybmFtZT4NCiAgICAgICAgICAgICAgICAgIDwvcGVyc29uX25hbWU+DQogICAgICAgICAgICAgICAgPC9jb250cmlidXRvcnM+DQogICAgICAgICAgICAgICAgPHB1YmxpY2F0aW9uX2RhdGUgbWVkaWFfdHlwZT0icHJpbnQiPg0KICAgICAgICAgICAgICAgICAgPG1vbnRoPjExPC9tb250aD4NCiAgICAgICAgICAgICAgICAgIDx5ZWFyPjIwMDY8L3llYXI+DQogICAgICAgICAgICAgICAgPC9wdWJsaWNhdGlvbl9kYXRlPg0KICAgICAgICAgICAgICAgIDxwYWdlcz4NCiAgICAgICAgICAgICAgICAgIDxmaXJzdF9wYWdlPjI4MzI8L2ZpcnN0X3BhZ2U+DQogICAgICAgICAgICAgICAgICA8bGFzdF9wYWdlPjI4NDE8L2xhc3RfcGFnZT4NCiAgICAgICAgICAgICAgICA8L3BhZ2VzPg0KICAgICAgICAgICAgICAgIDxwdWJsaXNoZXJfaXRlbT4NCiAgICAgICAgICAgICAgICAgIDxpZGVudGlmaWVyIGlkX3R5cGU9ImRvaSI+MTAuMTg5MC8wMDEyLTk2NTgoMjAwNik4N1syODMyOlRJT1BNQV0yLjAuQ087MjwvaWRlbnRpZmllcj4NCiAgICAgICAgICAgICAgICA8L3B1Ymxpc2hlcl9pdGVtPg0KICAgICAgICAgICAgICAgIDxhaTpwcm9ncmFtIHhtbG5zOmFpPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy9BY2Nlc3NJbmRpY2F0b3JzLnhzZCIgbmFtZT0iQWNjZXNzSW5kaWNhdG9ycyI+DQogICAgICAgICAgICAgICAgICA8YWk6bGljZW5zZV9yZWYgYXBwbGllc190bz0idGRtIiBzdGFydF9kYXRlPSIyMDE1LTA5LTAxIj5odHRwOi8vZG9pLndpbGV5LmNvbS8xMC4xMDAyL3RkbV9saWNlbnNlXzEuMTwvYWk6bGljZW5zZV9yZWY+DQogICAgICAgICAgICAgICAgPC9haTpwcm9ncmFtPg0KICAgICAgICAgICAgICAgIDxkb2lfZGF0YT4NCiAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTg5MC8wMDEyLTk2NTgoMjAwNik4N1syODMyOlRJT1BNQV0yLjAuQ087MjwvZG9pPg0KICAgICAgICAgICAgICAgICAgPHJlc291cmNlPmh0dHA6Ly9kb2kud2lsZXkuY29tLzEwLjE4OTAvMDAxMi05NjU4KDIwMDYpODdbMjgzMjpUSU9QTUFdMi4wLkNPOzI8L3Jlc291cmNlPg0KICAgICAgICAgICAgICAgICAgPGNvbGxlY3Rpb24gcHJvcGVydHk9ImNyYXdsZXItYmFzZWQiPg0KICAgICAgICAgICAgICAgICAgICA8aXRlbSBjcmF3bGVyPSJpUGFyYWRpZ21zIj4NCiAgICAgICAgICAgICAgICAgICAgICA8cmVzb3VyY2U+aHR0cHM6Ly9vbmxpbmVsaWJyYXJ5LndpbGV5LmNvbS9kb2kvZnVsbC8xMC4xODkwLzAwMTItOTY1OCgyMDA2KTg3JTVCMjgzMjpUSU9QTUElNUQyLjAuQ087MjwvcmVzb3VyY2U+DQogICAgICAgICAgICAgICAgICAgIDwvaXRlbT4NCiAgICAgICAgICAgICAgICAgIDwvY29sbGVjdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjb2xsZWN0aW9uIHByb3BlcnR5PSJ0ZXh0LW1pbmluZyI+DQogICAgICAgICAgICAgICAgICAgIDxpdGVtPg0KICAgICAgICAgICAgICAgICAgICAgIDxyZXNvdXJjZSBjb250ZW50X3ZlcnNpb249InZvciI+aHR0cHM6Ly9hcGkud2lsZXkuY29tL29ubGluZWxpYnJhcnkvdGRtL3YxL2FydGljbGVzLzEwLjE4OTAlMkYwMDEyLTk2NTgoMjAwNik4NyU1QjI4MzI6VElPUE1BJTVEMi4wLkNPOzI8L3Jlc291cmNlPg0KICAgICAgICAgICAgICAgICAgICA8L2l0ZW0+DQogICAgICAgICAgICAgICAgICA8L2NvbGxlY3Rpb24+DQogICAgICAgICAgICAgICAgPC9kb2lfZGF0YT4NCiAgICAgICAgICAgICAgICA8Y2l0YXRpb25fbGlzdD4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi1hbmRlcnNvbjEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjIzMDcvMzkzMzwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi1hbmRlcnNvbjIiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwOTgvcnN0Yi4xOTgxLjAwMDU8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJpMDAxMi05NjU4LTg3LTExLTI4MzItYmV0aGVsMSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMjMwNy8zMjc4NjIzPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLWJvd2VyczEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwMTYvUzAwMjItNTE5MygwNSk4MDI0MC0xPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLWJyb3duMSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTA5OC9yc3BiLjE5OTkuMDg2NDwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi1icm93bjIiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwMTcvUzAwMzExODIwMDEwMDg2Nzg8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJpMDAxMi05NjU4LTg3LTExLTI4MzItYnJvd24zIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDE2L1MwMDIwLTc1MTkoMDIpMDAwMTMtOTwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi1kYW1zZ2FhcmQxIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDE2L2ouc2VhcmVzLjIwMDUuMDQuMDAxPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLWRvYnNvbjIiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwODYvNDE1ODM3PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLWRvYnNvbjEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwODYvNDI0NjgxPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLWRvYnNvbjMiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjIzMDcvNTMzOTwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi1kb2Jzb240Ij4NCiAgICAgICAgICAgICAgICAgICAgPHVuc3RydWN0dXJlZF9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgICAgICBBLiBQLiBEb2Jzb24sIGFuZCBBLiBFLiBLZXltZXIgLjE5ODUgLkxpZmUgaGlzdG9yeSBtb2RlbHMgLlBhZ2VzMzQ3IC0zODQNCiAgICAgICAgICAgICAgICAgICAgICA8aT5pbjwvaT4NCiAgICAgICAgICAgICAgICAgICAgICBELiBXLiBULiBDcm9tcHRvbiBhbmQgQi4gQi4gTmlja29sLCBlZGl0b3JzQmlvbG9neSBvZiB0aGUgQWNhbnRob2NlcGhhbGEgQ2FtYnJpZGdlIFVuaXZlcnNpdHkgUHJlc3MsIENhbWJyaWRnZSwgVUsuDQogICAgICAgICAgICAgICAgICAgIDwvdW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi1mZW50b24xIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDE2L2ouaWpwYXJhLjIwMDQuMDIuMDAzPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLWZyYW56MSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTAxNy9TMDAzMTE4MjAwMjAwMTkzMjwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi1nZXR6MSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTA4Ni8yODQxMTI8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJpMDAxMi05NjU4LTg3LTExLTI4MzItaG9sbGluZzEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjQwMzkvRW50OTEzODUtNzwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi1ob2x0MSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTA4Ni8yODQxNTM8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJpMDAxMi05NjU4LTg3LTExLTI4MzItaG9sdDIiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwODYvMjg0NDA5PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLWh1ZHNvbjEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjExMjYvc2NpZW5jZS4yODIuNTM5Ny4yMjU2PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLWh1ZHNvbjIiPg0KICAgICAgICAgICAgICAgICAgICA8dW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPlAuIEouIEh1ZHNvbiwgQS4gUml6em9saSwgQi4gVC4gR3JlbmZlbGwsIEguIEhlZXN0ZXJiZWVrLCBhbmQgQS4gUC4gRG9ic29uIC4yMDAyIC5UaGUgZWNvbG9neSBvZiB3aWxkbGlmZSBkaXNlYXNlcyBPeGZvcmQgVW5pdmVyc2l0eSBQcmVzcywgT3hmb3JkLCBVSy48L3Vuc3RydWN0dXJlZF9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJpMDAxMi05NjU4LTg3LTExLTI4MzIta2VlbGluZzEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwOTgvcnNwYi4xOTk5LjA3MTY8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJpMDAxMi05NjU4LTg3LTExLTI4MzItbGFjcm9peDEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEzNzEvam91cm5hbC5wYmlvLjAwMzAyOTg8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJpMDAxMi05NjU4LTg3LTExLTI4MzItbGFmZmVydHkxIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDg2LzI4NTQ0NDwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi1tY2NhbGx1bTEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwMTYvUzAxNjktNTM0NygwMSkwMjE0NC05PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLW1vb3JlMSI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMjMwNy8xOTM3ODA3PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLW1vb3JlMiI+DQogICAgICAgICAgICAgICAgICAgIDxkb2k+MTAuMTA4Ni8yODQyMjQ8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJpMDAxMi05NjU4LTg3LTExLTI4MzItbW9vcmUzIj4NCiAgICAgICAgICAgICAgICAgICAgPHVuc3RydWN0dXJlZF9jaXRhdGlvbj5KLiBNb29yZSwgMjAwMiAuUGFyYXNpdGVzIGFuZCB0aGUgYmVoYXZpb3Igb2YgYW5pbWFscyBPeGZvcmQgVW5pdmVyc2l0eSBQcmVzcywgTmV3IFlvcmssIE5ldyBZb3JrLCBVU0EuPC91bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLW1vcmFuZDEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwMTYvUzAzMDQtMzgwMCg5NikwMDAyOC0yPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLXBvdWxpbjEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pIHByb3ZpZGVyPSJjcm9zc3JlZiI+MTAuMTAxNy9TMDAzMTE4MjAwMDA4NTEyNzwvZG9pPg0KICAgICAgICAgICAgICAgICAgICA8dW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgICAgIFIuIFBvdWxpbiwgMTk5NCAuVGhlIGV2b2x1dGlvbiBvZiBwYXJhc2l0ZSBtYW5pcHVsYXRpb24gb2YgaG9zdCBiZWhhdmlvdXI6IGEgdGhlb3JldGljYWwgYW5hbHlzaXMgLlBhcmFzaXRvbG9neSwNCiAgICAgICAgICAgICAgICAgICAgICA8Yj4xMDk8L2I+DQogICAgICAgICAgICAgICAgICAgICAgOlMxMDkgLVMxMTggLg0KICAgICAgICAgICAgICAgICAgICA8L3Vuc3RydWN0dXJlZF9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJpMDAxMi05NjU4LTg3LTExLTI4MzItcmFuZHMxIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDA2L2p0YmkuMTk5OS4xMDQ4PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLXNlcHBhbGExIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDE2L2ouYW5iZWhhdi4yMDA1LjAxLjAyMDwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi1zdGVwaGVuczEiPg0KICAgICAgICAgICAgICAgICAgICA8dW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPkQuIFcuIFN0ZXBoZW5zLCBhbmQgSi4gUi4gS3JlYnMgLjE5ODYgLkZvcmFnaW5nIHRoZW9yeSBQcmluY2V0b24gVW5pdmVyc2l0eSBQcmVzcywgUHJpbmNldG9uLCBOZXcgSmVyc2V5LCBVU0EuPC91bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLXN3aW50b24xIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDQ2L2ouMTM2NS0yNjU2LjE5OTguMDAxNzYueDwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi10aG9tYXMxIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDE2L2ouYmVwcm9jLjIwMDQuMDYuMDEwPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLXRob21hczIiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwMTYvUzE0NzEtNDkyMigwMikwMjMzOS01PC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLXRob21hczMiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwOTgvcnNwYi4xOTk4LjA0MDM8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJpMDAxMi05NjU4LTg3LTExLTI4MzItdG9tcGtpbnMxIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMTExL2ouMTQyMC05MTAxLjIwMDMuMDA2ODgueDwvZG9pPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9ImkwMDEyLTk2NTgtODctMTEtMjgzMi10dXJuZXIxIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDk4L3JzcGIuMjAwMi4yMjEzPC9kb2k+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iaTAwMTItOTY1OC04Ny0xMS0yODMyLXlkZW5iZXJnMSI+DQogICAgICAgICAgICAgICAgICAgIDx1bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICAgICAgUi4gQy4gWWRlbmJlcmcsIDE5OTggLkJlaGF2aW9yYWwgZGVjaXNpb25zIGFib3V0IGZvcmFnaW5nIGFuZCBwcmVkYXRvciBhdm9pZGFuY2UgLlBhZ2VzMzQzIC0zNzgNCiAgICAgICAgICAgICAgICAgICAgICA8aT5pbjwvaT4NCiAgICAgICAgICAgICAgICAgICAgICBSLiBEdWthcywgZWRpdG9yQ29nbml0aXZlIGVjb2xvZ3k6IHRoZSBldm9sdXRpb25hcnkgZWNvbG9neSBvZiBpbmZvcm1hdGlvbiBwcm9jZXNzaW5nIGFuZCBkZWNpc2lvbiBtYWtpbmcgVW5pdmVyc2l0eSBvZiBDaGljYWdvIFByZXNzLCBDaGljYWdvLCBJbGxpbm9pcywgVVNBLg0KICAgICAgICAgICAgICAgICAgICA8L3Vuc3RydWN0dXJlZF9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgPC9jaXRhdGlvbl9saXN0Pg0KICAgICAgICAgICAgICA8L2pvdXJuYWxfYXJ0aWNsZT4NCiAgICAgICAgICAgIDwvam91cm5hbD4NCiAgICAgICAgICA8L2Nyb3NzcmVmPg0KICAgICAgICA8L2RvaV9yZWNvcmQ+DQogICAgICA8L3F1ZXJ5Pg0KICAgIDwvYm9keT4NCiAgPC9xdWVyeV9yZXN1bHQ+DQo8L2Nyb3NzcmVmX3Jlc3VsdD4=
+  recorded_at: Sun, 18 Jun 2023 15:25:30 GMT
+recorded_with: VCR 6.1.0

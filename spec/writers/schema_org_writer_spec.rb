@@ -53,7 +53,7 @@ describe Commonmeta::Metadata, vcr: true do
       json = JSON.parse(subject.schema_org)
       expect(json['@id']).to eq('https://doi.org/10.5281/zenodo.48440')
       expect(json['@type']).to eq('SoftwareSourceCode')
-      expect(json['name']).to eq('Analysis Tools For Crossover Experiment Of Ui Using Choice Architecture')
+      expect(json['name']).to eq('Analysis Tools for Crossover Experiment of UI using Choice Architecture')
       expect(json['license']).to eq('https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode')
     end
 

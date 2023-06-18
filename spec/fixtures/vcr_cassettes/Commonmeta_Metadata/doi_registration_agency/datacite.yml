@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.5061
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:23:33 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LO0E5x2Ide%2FfTSfo6MZSVLMPxNHUrtYMb1TS8VCFIQMfBG1jT5%2F1CpN5DzVo%2BR3xzFUaEr95j9aeThC0LTJM%2Bjpt6uorV7EXP4NAdC1BLclOQ2%2BSaXA6IJ8zPbWHRA0dmB%2FekmM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7d9488bf4c1eb93f-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.5061",
+            "RA": "DataCite"
+          }
+        ]
+  recorded_at: Sun, 18 Jun 2023 15:23:33 GMT
+recorded_with: VCR 6.1.0

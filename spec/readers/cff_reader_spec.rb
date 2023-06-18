@@ -28,8 +28,8 @@ describe Commonmeta::Metadata, vcr: true do
                                       { 'subject' => 'Metadata' },
                                       { 'subject' => 'Citation file format' },
                                       { 'subject' => 'Cff' }])
-      expect(subject.version).to eq('1.0.1')
-      expect(subject.date).to eq('published' => '2022-11-05')
+      expect(subject.version).to eq('1.1.0')
+      expect(subject.date).to eq('published' => '2023-04-10')
       expect(subject.publisher).to eq('name' => 'GitHub')
       expect(subject.license).to eq('id' => 'Apache-2.0',
                                     'url' => 'http://www.apache.org/licenses/LICENSE-2.0')
@@ -106,8 +106,8 @@ describe Commonmeta::Metadata, vcr: true do
                                       { 'subject' => 'Metadata' },
                                       { 'subject' => 'Citation file format' },
                                       { 'subject' => 'Cff' }])
-      expect(subject.version).to eq('1.0.1')
-      expect(subject.date).to eq('published' => '2022-11-05')
+      expect(subject.version).to eq('1.1.0')
+      expect(subject.date).to eq('published' => '2023-04-10')
       expect(subject.publisher).to eq('name' => 'GitHub')
       expect(subject.license).to eq('id' => 'Apache-2.0',
                                     'url' => 'http://www.apache.org/licenses/LICENSE-2.0')
@@ -135,8 +135,8 @@ describe Commonmeta::Metadata, vcr: true do
                                       { 'subject' => 'Metadata' },
                                       { 'subject' => 'Citation file format' },
                                       { 'subject' => 'Cff' }])
-      expect(subject.version).to eq('1.0.1')
-      expect(subject.date).to eq('published' => '2022-11-05')
+      expect(subject.version).to eq('1.1.0')
+      expect(subject.date).to eq('published' => '2023-04-10')
       expect(subject.publisher).to eq('name' => 'GitHub')
       expect(subject.license).to eq('id' => 'Apache-2.0',
                                     'url' => 'http://www.apache.org/licenses/LICENSE-2.0')

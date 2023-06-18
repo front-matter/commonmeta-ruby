@@ -1,0 +1,270 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.6002
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:21:57 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=z0L2EeYPc6zzQsnD%2F46f5%2FscNTyC1QjC0T9jVmtSHvdUkwg7nFuxlGUU3ZuDmdXLa1VIlgEfqN2lzIechCXzXnZh3pJRZ1kbDkDqHSJ9g73FZ5gREt%2FoQsoQHboWJ41Vh%2BOn%2B3g%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7d948668095dfa58-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.6002",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 18 Jun 2023 15:21:57 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.6002/ect.2015.0371
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:21:58 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,4,1]],"date-time":"2022-04-01T21:22:48Z","timestamp":1648848168259},"reference-count":1,"publisher":"Baskent
+        University","issue":"5","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Exp
+        Clin Transplant"],"published-print":{"date-parts":[[2018,10]]},"DOI":"10.6002\/ect.2015.0371","type":"journal-issue","created":{"date-parts":[[2018,10,3]],"date-time":"2018-10-03T12:09:12Z","timestamp":1538568552000},"source":"Crossref","is-referenced-by-count":1,"title":[],"prefix":"10.6002","volume":"16","member":"4021","reference":[{"issue":"10","key":"ref0","doi-asserted-by":"publisher","first-page":"1421","DOI":"10.1080\/001401398186180","article-title":"Manual
+        performance in cold conditions while wearing NBC clothing","volume":"41","author":"IMAMURA","year":"1998","unstructured":"IMAMURA,
+        R., RISSANEN, S., KINNUNEN, M., & RINTAMAKI, H. (1998). Manual performance
+        in cold conditions while wearing NBC clothing. Ergonomics, 41(10), 1421\u20131432.","journal-title":"Ergonomics"}],"container-title":["Experimental
+        and Clinical Transplantation"],"original-title":[],"deposited":{"date-parts":[[2018,10,3]],"date-time":"2018-10-03T12:09:12Z","timestamp":1538568552000},"score":1,"resource":{"primary":{"URL":"http:\/\/ectrx.org\/forms\/ectrxcontentshow.php?doi_id=10.6002\/ect.2015.0371"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2018,10]]},"references-count":1,"journal-issue":{"issue":"5","published-print":{"date-parts":[[2018,10]]}},"URL":"http:\/\/dx.doi.org\/10.6002\/ect.2015.0371","relation":{},"ISSN":["1304-0855","2146-8427"],"issn-type":[{"value":"1304-0855","type":"print"},{"value":"2146-8427","type":"electronic"}],"subject":["Transplantation"],"published":{"date-parts":[[2018,10]]}}}'
+  recorded_at: Sun, 18 Jun 2023 15:21:58 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/4021
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:21:58 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687045037243,"primary-name":"Baskent
+        University","counts":{"current-dois":613,"backfile-dois":1611,"total-dois":2224},"breakdowns":{"dois-by-issued-year":[[2022,288],[2021,240],[2015,230],[2017,215],[2019,207],[2018,205],[2020,204],[2016,162],[2014,157],[2012,132],[2013,99],[2023,85]]},"prefixes":["10.6002"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":0.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.0,"licenses-backfile":0.0,"funders-current":0.0,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.0,"similarity-checking-backfile":0.0,"references-backfile":0.9776536312849162,"descriptions-backfile":0.0,"award-numbers-backfile":0.0,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.0,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"references-current":0.9885807504078303},"prefix":[{"name":"Baskent
+        University Publishers","value":"10.6002"}],"id":4021,"tokens":["baskent","university"],"counts-type":{"all":{"journal-article":1326,"journal":1,"journal-issue":898},"backfile":{"journal-article":713,"journal-issue":898},"current":{"journal-article":613}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1687045037243,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.9834087481146305,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1687045037243,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687045037243,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.9766146993318486,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1687045037243,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.9789621318373072,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687045037243,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.9766146993318486,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1687045037243,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.9885807504078303,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":false,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":false,"deposits-licenses-current":false},"location":"Ankara,
+        Turkey","names":["Baskent University","Baskent University Publishers"]}}'
+  recorded_at: Sun, 18 Jun 2023 15:21:58 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.6002
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:21:59 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fV42J9pek1YXJABm4jGpn%2BlZppxMeDALsAhox%2BmkwvAmuqPj3Fg7xj%2FjX%2BbF3QdJyOSg5rBInR9HsKdFYrLzoJO0Lc6NWeIDLWQqQNnJKqHX53W3kOA8TajDfaS%2Ft88WTHkzC%2B4%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7d948673affb0b7c-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.6002",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 18 Jun 2023 15:21:59 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.6002/ect.2015.0371/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:25:16 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.6002/ect.2015.0371>; rel="canonical"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIiB2ZXJzaW9uPSIzLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIGh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3NjaGVtYXMvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0My4wLnhzZCI+DQogIDxxdWVyeV9yZXN1bHQ+DQogICAgPGhlYWQ+DQogICAgICA8ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICA8cXVlcnkgc3RhdHVzPSJyZXNvbHZlZCI+DQogICAgICAgIDxkb2kgdHlwZT0iam91cm5hbF9pc3N1ZSI+MTAuNjAwMi9lY3QuMjAxNS4wMzcxPC9kb2k+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJwdWJsaXNoZXItbmFtZSIgdHlwZT0ic3RyaW5nIj5CYXNrZW50IFVuaXZlcnNpdHk8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0icHJlZml4LW5hbWUiIHR5cGU9InN0cmluZyI+QmFza2VudCBVbml2ZXJzaXR5IFB1Ymxpc2hlcnM8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0ibWVtYmVyLWlkIiB0eXBlPSJudW1iZXIiPjQwMjE8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iY2l0YXRpb24taWQiIHR5cGU9Im51bWJlciI+ODM2MDE1MjE8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iam91cm5hbC1pZCIgdHlwZT0ibnVtYmVyIj4xNjA4MjY8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iZGVwb3NpdC10aW1lc3RhbXAiIHR5cGU9Im51bWJlciI+MjAxODEwMDMwNDI3PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9Im93bmVyLXByZWZpeCIgdHlwZT0ic3RyaW5nIj4xMC42MDAyPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9Imxhc3QtdXBkYXRlIiB0eXBlPSJkYXRlIj4yMDE4LTEwLTAzVDA4OjA5OjEyWjwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJjaXRlZGJ5LWNvdW50IiB0eXBlPSJudW1iZXIiPjE8L2NybS1pdGVtPg0KICAgICAgICA8ZG9pX3JlY29yZD4NCiAgICAgICAgICA8Y3Jvc3NyZWYgeG1sbnM9Imh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3hzY2hlbWEvMS4xIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3hzY2hlbWEvMS4xIGh0dHA6Ly9kb2kuY3Jvc3NyZWYub3JnL3NjaGVtYXMvdW5peHJlZjEuMS54c2QiPg0KICAgICAgICAgICAgPGpvdXJuYWw+DQogICAgICAgICAgICAgIDxqb3VybmFsX21ldGFkYXRhPg0KICAgICAgICAgICAgICAgIDxmdWxsX3RpdGxlPkV4cGVyaW1lbnRhbCBhbmQgQ2xpbmljYWwgVHJhbnNwbGFudGF0aW9uPC9mdWxsX3RpdGxlPg0KICAgICAgICAgICAgICAgIDxhYmJyZXZfdGl0bGU+RXhwIENsaW4gVHJhbnNwbGFudDwvYWJicmV2X3RpdGxlPg0KICAgICAgICAgICAgICAgIDxpc3NuIG1lZGlhX3R5cGU9InByaW50Ij4xMzA0MDg1NTwvaXNzbj4NCiAgICAgICAgICAgICAgICA8aXNzbiBtZWRpYV90eXBlPSJlbGVjdHJvbmljIj4yMTQ2ODQyNzwvaXNzbj4NCiAgICAgICAgICAgICAgICA8ZG9pX2RhdGE+DQogICAgICAgICAgICAgICAgICA8ZG9pPjEwLjYwMDIvZWN0PC9kb2k+DQogICAgICAgICAgICAgICAgICA8cmVzb3VyY2U+aHR0cDovL3d3dy5lY3RyeC5vcmcvPC9yZXNvdXJjZT4NCiAgICAgICAgICAgICAgICA8L2RvaV9kYXRhPg0KICAgICAgICAgICAgICA8L2pvdXJuYWxfbWV0YWRhdGE+DQogICAgICAgICAgICAgIDxqb3VybmFsX2lzc3VlPg0KICAgICAgICAgICAgICAgIDxwdWJsaWNhdGlvbl9kYXRlIG1lZGlhX3R5cGU9InByaW50Ij4NCiAgICAgICAgICAgICAgICAgIDxtb250aD4xMDwvbW9udGg+DQogICAgICAgICAgICAgICAgICA8eWVhcj4yMDE4PC95ZWFyPg0KICAgICAgICAgICAgICAgIDwvcHVibGljYXRpb25fZGF0ZT4NCiAgICAgICAgICAgICAgICA8am91cm5hbF92b2x1bWU+DQogICAgICAgICAgICAgICAgICA8dm9sdW1lPjE2PC92b2x1bWU+DQogICAgICAgICAgICAgICAgPC9qb3VybmFsX3ZvbHVtZT4NCiAgICAgICAgICAgICAgICA8aXNzdWU+NTwvaXNzdWU+DQogICAgICAgICAgICAgICAgPGRvaV9kYXRhPg0KICAgICAgICAgICAgICAgICAgPGRvaT4xMC42MDAyL2VjdC4yMDE1LjAzNzE8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDxyZXNvdXJjZT5odHRwOi8vZWN0cngub3JnL2Zvcm1zL2VjdHJ4Y29udGVudHNob3cucGhwP2RvaV9pZD0xMC42MDAyL2VjdC4yMDE1LjAzNzE8L3Jlc291cmNlPg0KICAgICAgICAgICAgICAgIDwvZG9pX2RhdGE+DQogICAgICAgICAgICAgICAgPGNpdGF0aW9uX2xpc3Q+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSJyZWYwIj4NCiAgICAgICAgICAgICAgICAgICAgPGpvdXJuYWxfdGl0bGU+RXJnb25vbWljczwvam91cm5hbF90aXRsZT4NCiAgICAgICAgICAgICAgICAgICAgPGF1dGhvcj5JTUFNVVJBPC9hdXRob3I+DQogICAgICAgICAgICAgICAgICAgIDx2b2x1bWU+NDE8L3ZvbHVtZT4NCiAgICAgICAgICAgICAgICAgICAgPGlzc3VlPjEwPC9pc3N1ZT4NCiAgICAgICAgICAgICAgICAgICAgPGZpcnN0X3BhZ2U+MTQyMTwvZmlyc3RfcGFnZT4NCiAgICAgICAgICAgICAgICAgICAgPGNZZWFyPjE5OTg8L2NZZWFyPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pPjEwLjEwODAvMDAxNDAxMzk4MTg2MTgwPC9kb2k+DQogICAgICAgICAgICAgICAgICAgIDxhcnRpY2xlX3RpdGxlPk1hbnVhbCBwZXJmb3JtYW5jZSBpbiBjb2xkIGNvbmRpdGlvbnMgd2hpbGUgd2VhcmluZyBOQkMgY2xvdGhpbmc8L2FydGljbGVfdGl0bGU+DQogICAgICAgICAgICAgICAgICAgIDx1bnN0cnVjdHVyZWRfY2l0YXRpb24+SU1BTVVSQSwgUi4sIFJJU1NBTkVOLCBTLiwgS0lOTlVORU4sIE0uLCAmYW1wOyBSSU5UQU1BS0ksIEguICgxOTk4KS4gTWFudWFsIHBlcmZvcm1hbmNlIGluIGNvbGQgY29uZGl0aW9ucyB3aGlsZSB3ZWFyaW5nIE5CQyBjbG90aGluZy4gRXJnb25vbWljcywgNDEoMTApLCAxNDIx4oCTMTQzMi48L3Vuc3RydWN0dXJlZF9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgPC9jaXRhdGlvbl9saXN0Pg0KICAgICAgICAgICAgICA8L2pvdXJuYWxfaXNzdWU+DQogICAgICAgICAgICA8L2pvdXJuYWw+DQogICAgICAgICAgPC9jcm9zc3JlZj4NCiAgICAgICAgPC9kb2lfcmVjb3JkPg0KICAgICAgPC9xdWVyeT4NCiAgICA8L2JvZHk+DQogIDwvcXVlcnlfcmVzdWx0Pg0KPC9jcm9zc3JlZl9yZXN1bHQ+
+  recorded_at: Sun, 18 Jun 2023 15:25:16 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,584 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/blogs/tyfqw20
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '49530'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 18 Jun 2023 15:24:19 GMT
+      Etag:
+      - '"xv42bhvvc21253"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/blogs/[slug]"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::6gh26-1687101859043-0548b5ea306e
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":"tyfqw20","title":"iPhylo","description":"Rants, raves (and occasionally
+        considered opinions) on phyloinformatics, taxonomy, and biodiversity informatics.  For
+        more ranty and less considered opinions, see my <a href=\"https://twitter.com/rdmpage\">Twitter
+        feed</a>.<br>ISSN 2051-8188. Written content on this site is licensed under
+        a <a href=\"https://creativecommons.org/licenses/by/4.0/\">Creative Commons
+        Attribution 4.0 International license</a>.","language":"en","favicon":null,"feed_url":"https://iphylo.blogspot.com/feeds/posts/default","feed_format":"application/atom+xml","home_page_url":"https://iphylo.blogspot.com/","indexed_at":"2023-02-06","modified_at":"2023-05-31T17:26:00+00:00","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Blogger
+        7.00","category":"Natural Sciences","backlog":true,"prefix":"10.59350","items":[{"id":"https://doi.org/10.59350/ymc6x-rx659","uuid":"0807f515-f31d-4e2c-9e6f-78c3a9668b9d","url":"https://iphylo.blogspot.com/2022/09/dna-barcoding-as-intergenerational.html","title":"DNA
+        barcoding as intergenerational transfer of taxonomic knowledge","summary":"I
+        tweeted about this but want to bookmark it for later as well. The paper “A
+        molecular-based identification resource for the arthropods of Finland” doi:10.1111/1755-0998.13510
+        contains the following: …the annotated barcode records assembled by FinBOL
+        participants represent a tremendous intergenerational transfer of taxonomic
+        knowledge … the time contributed by current taxonomists in identifying and
+        contributing voucher specimens represents a great gift to future generations
+        who will benefit...","date_published":"2022-09-14T10:12:00Z","date_modified":"2022-09-29T13:57:30Z","date_indexed":"1909-06-16T11:02:21+00:00","authors":[{"url":null,"name":"Roderic
+        Page"}],"image":null,"content_html":"<p>I <a href=\"https://twitter.com/rdmpage/status/1569738844416638981?s=21&amp;t=9OVXuoUEwZtQt-Ldzlutfw\">tweeted
+        about this</a> but want to bookmark it for later as well. The paper “A molecular-based
+        identification resource for the arthropods of Finland” <a href=\"https://doi.org/10.1111/1755-0998.13510\">doi:10.1111/1755-0998.13510</a>
+        contains the following:</p>\n<blockquote>\n<p>…the annotated barcode records
+        assembled by FinBOL participants represent a tremendous <mark>intergenerational
+        transfer of taxonomic knowledge</mark> … the time contributed by current taxonomists
+        in identifying and contributing voucher specimens represents a great gift
+        to future generations who will benefit from their expertise when they are
+        no longer able to process new material.</p>\n</blockquote>\n<p>I think this
+        is a very clever way to characterise the project. In an age of machine learning
+        this may be commonest way to share knowledge , namely as expert-labelled training
+        data used to build tools for others. Of course, this means the expertise itself
+        may be lost, which has implications for updating the models if the data isn’t
+        complete. But it speaks to Charles Godfrey’s theme of  <a href=\"https://biostor.org/reference/250587\">“Taxonomy
+        as information science”</a>.</p>\n<p>Note that the knowledge is also transformed
+        in the sense that the underlying expertise of interpreting morphology, ecology,
+        behaviour, genomics, and the past literature is not what is being passed on.
+        Instead it is probabilities that a DNA sequence belongs to a particular taxon.</p>\n<p>This
+        feels is different to, say iNaturalist, where there is a machine learning
+        model to identify images. In that case, the model is built on something the
+        community itself has created, and continues to create. Yes, the underlying
+        idea is that same: “experts” have labelled the data, a model is trained, the
+        model is used. But the benefits of the <a href=\"https://www.inaturalist.org\">iNaturalist</a>
+        model are immediately applicable to the people whose data built the model.
+        In the case of barcoding, because the technology itself is still not in the
+        hands of many (relative to, say, digital imaging), the benefits are perhaps
+        less tangible. Obviously researchers working with environmental DNA will find
+        it very useful, but broader impact may await the arrival of citizen science
+        DNA barcoding.</p>\n<p>The other consideration is whether the barcoding helps
+        taxonomists. Is it to be used to help prioritise future work (“we are getting
+        lots of unknown sequences in these taxa, lets do some taxonomy there”), or
+        is it simply capturing the knowledge of a generation that won’t be replaced:</p>\n<blockquote>\n<p>The
+        need to capture such knowledge is essential because there are, for example,
+        no young Finnish taxonomists who can critically identify species in many key
+        groups of ar- thropods (e.g., aphids, chewing lice, chalcid wasps, gall midges,
+        most mite lineages).</p>\n</blockquote>\n<p>The cycle of collect data, test
+        and refine model, collect more data, rinse and repeat that happens with iNaturalist
+        creates a feedback loop. It’s not clear that a similar cycle exists for DNA
+        barcoding.</p>\n<blockquote>\n<p>Written with <a href=\"https://stackedit.io/\">StackEdit</a>.</p>\n</blockquote>","tags":[],"language":"en","references":[]},{"id":"https://doi.org/10.59350/d3dc0-7an69","uuid":"545c177f-cea5-4b79-b554-3ccae9c789d7","url":"https://iphylo.blogspot.com/2021/10/reflections-on-macroscope-tool-for-21st.html","title":"Reflections
+        on \"The Macroscope\" - a tool for the 21st Century?","summary":"This is a
+        guest post by Tony Rees. It would be difficult to encounter a scientist, or
+        anyone interested in science, who is not familiar with the microscope, a tool
+        for making objects visible that are otherwise too small to be properly seen
+        by the unaided eye, or to reveal otherwise invisible fine detail in larger
+        objects. A select few with a particular interest in microscopy may also have
+        encountered the Wild-Leica \"Macroscope\", a specialised type of benchtop
+        microscope optimised for...","date_published":"2021-10-07T12:38:00Z","date_modified":"2021-10-08T10:26:22Z","date_indexed":"1909-06-16T10:02:25+00:00","authors":[{"url":null,"name":"Roderic
+        Page"}],"image":null,"content_html":"<p><img src=\"https://lh3.googleusercontent.com/-A99btr6ERMs/Vl1Wvjp2OtI/AAAAAAAAEFI/7bKdRjNG5w0/ytNkVT2U.jpg?imgmax=800\"
+        alt=\"YtNkVT2U\" title=\"ytNkVT2U.jpg\" border=\"0\" width=\"128\" height=\"128\"
+        style=\"float:right;\" /> This is a guest post by <a href=\"https://about.me/TonyRees\">Tony
+        Rees</a>.</p>\n\n<p>It would be difficult to encounter a scientist, or anyone
+        interested in science, who is not familiar with the microscope, a tool for
+        making objects visible that are otherwise too small to be properly seen by
+        the unaided eye, or to reveal otherwise invisible fine detail in larger objects.
+        A select few with a particular interest in microscopy may also have encountered
+        the Wild-Leica \"Macroscope\", a specialised type of benchtop microscope optimised
+        for low-power macro-photography. However in this overview I discuss the \"Macroscope\"
+        in a different sense, which is that of the antithesis to the microscope: namely
+        a method for visualizing subjects too large to be encompassed by a single
+        field of vision, such as the Earth or some subset of its phenomena (the biosphere,
+        for example), or conceptually, the universe.</p>\n\n<p><div class=\"separator\"
+        style=\"clear: both;\"><a href=\"https://1.bp.blogspot.com/-xXxH9aJn1tY/YV7vnKGQWPI/AAAAAAAAgyQ/7CSJJ663Ry4IXtav54nLcLiI0kda5_L7ACLcBGAsYHQ/s500/2020045672.jpg\"
+        style=\"display: block; padding: 1em 0; text-align: center; clear: right;
+        float: right;\"><img alt=\"\" border=\"0\" height=\"320\" data-original-height=\"500\"
+        data-original-width=\"303\" src=\"https://1.bp.blogspot.com/-xXxH9aJn1tY/YV7vnKGQWPI/AAAAAAAAgyQ/7CSJJ663Ry4IXtav54nLcLiI0kda5_L7ACLcBGAsYHQ/s320/2020045672.jpg\"/></a></div>My
+        introduction to the term was via addresses given by Jesse Ausubel in the formative
+        years of the 2001-2010 <a href=\"http://www.coml.org\">Census of Marine Life</a>,
+        for which he was a key proponent. In Ausubel''s view, the Census would perform
+        the function of a macroscope, permitting a view of everything that lives in
+        the global ocean (or at least, that subset which could realistically be sampled
+        in the time frame available) as opposed to more limited subsets available
+        via previous data collection efforts. My view (which could, of course, be
+        wrong) was that his thinking had been informed by a work entitled \"Le macroscope,
+        vers une vision globale\" published in 1975 by the French thinker Joël de
+        Rosnay, who had expressed such a concept as being globally applicable in many
+        fields, including the physical and natural worlds but also extending to human
+        society, the growth of cities, and more. Yet again, some ecologists may also
+        have encountered the term, sometimes in the guise of \"Odum''s macroscope\",
+        as an approach for obtaining \"big picture\" analyses of macroecological processes
+        suitable for mathematical modelling, typically by elimination of fine detail
+        so that only the larger patterns remain, as initially advocated by Howard
+        T. Odum in his 1971 book \"Environment, Power, and Society\".</p>\n\n<p>From
+        the standpoint of the 21st century, it seems that we are closer to achieving
+        a \"macroscope\" (or possibly, multiple such tools) than ever before, based
+        on the availability of existing and continuing new data streams, improved
+        technology for data assembly and storage, and advanced ways to query and combine
+        these large streams of data to produce new visualizations, data products,
+        and analytical findings. I devote the remainder of this article to examples
+        where either particular workers have employed \"macroscope\" terminology to
+        describe their activities, or where potentially equivalent actions are taking
+        place without the explicit \"macroscope\" association, but are equally worthy
+        of consideration. To save space here, references cited here (most or all)
+        can be found via a Wikipedia article entitled \"<a href=\"https://en.wikipedia.org/wiki/Macroscope_(science_concept)\">Macroscope
+        (science concept)</a>\" that I authored on the subject around a year ago,
+        and have continued to add to on occasion as new thoughts or information come
+        to hand (see <a href=\"https://en.wikipedia.org/w/index.php?title=Macroscope_(science_concept)&offset=&limit=500&action=history\">edit
+        history for the article</a>).</p>\n\n<p>First, one can ask, what constitutes
+        a macroscope, in the present context? In the Wikipedia article I point to
+        a book \"Big Data - Related Technologies, Challenges and Future Prospects\"
+        by Chen <em>et al.</em> (2014) (<a href=\"https://doi.org/10.1007/978-3-319-06245-7\">doi:10.1007/978-3-319-06245-7</a>),
+        in which the \"value chain of big data\" is characterised as divisible into
+        four phases, namely data generation, data acquisition (aka data assembly),
+        data storage, and data analysis. To my mind, data generation (which others
+        may term acquisition, differently from the usage by Chen <em>et al.</em>)
+        is obviously the first step, but does not in itself constitute the macroscope,
+        except in rare cases - such as Landsat imagery, perhaps - where on its own,
+        a single co-ordinated data stream is sufficient to meet the need for a particular
+        type of \"global view\". A variant of this might be a coordinated data collection
+        program - such as that of the ten year Census of Marine Life - which might
+        produce the data required for the desired global view; but again, in reality,
+        such data are collected in a series of discrete chunks, in many and often
+        disparate data formats, and must be \"wrangled\" into a more coherent whole
+        before any meaningful \"macroscope\" functionality becomes available.</p>\n\n<p>Here
+        we come to what, in my view, constitutes the heart of the \"macroscope\":
+        an intelligently organized (i.e. indexable and searchable), coherent data
+        store or repository (where \"data\" may include imagery and other non numeric
+        data forms, but much else besides). Taking the Census of Marine Life example,
+        the data repository for that project''s data (plus other available sources
+        as inputs) is the <a href=\"https://obis.org\">Ocean Biodiversity Information
+        System</a> or OBIS (previously the Ocean Biogeographic Information System),
+        which according to this view forms the \"macroscope\" for which the Census
+        data is a feed. (For non habitat-specific biodiversity data, <a href=\"https://www.gbif.org\">GBIF</a>
+        is an equivalent, and more extensive, operation). Other planetary scale \"macroscopes\",
+        by this definition (which may or may not have an explicit geographic, i.e.
+        spatial, component) would include inventories of biological taxa such as the
+        <a href=\"https://www.catalogueoflife.org\">Catalogue of Life</a> and so on,
+        all the way back to the pioneering compendia published by Linnaeus in the
+        eighteenth century; while for cartography and topographic imagery, the current
+        \"blockbuster\" of <a href=\"http://earth.google.com\">Google Earth</a> and
+        its predecessors also come well into public consciousness.</p>\n\n<p>In the
+        view of some workers and/or operations, both of these phases are precursors
+        to the real \"work\" of the macroscope which is to reveal previously unseen
+        portions of the \"big picture\" by means either of the availability of large,
+        synoptic datasets, or fusion between different data streams to produce novel
+        insights. Companies such as IBM and Microsoft have used phraseology such as:</p>\n\n<blockquote>By
+        2022 we will use machine-learning algorithms and software to help us organize
+        information about the physical world, helping bring the vast and complex data
+        gathered by billions of devices within the range of our vision and understanding.
+        We call this a \"macroscope\" – but unlike the microscope to see the very
+        small, or the telescope that can see far away, it is a system of software
+        and algorithms to bring all of Earth''s complex data together to analyze it
+        by space and time for meaning.\" (IBM)</blockquote>\n\n<blockquote>As the
+        Earth becomes increasingly instrumented with low-cost, high-bandwidth sensors,
+        we will gain a better understanding of our environment via a virtual, distributed
+        whole-Earth \"macroscope\"... Massive-scale data analytics will enable real-time
+        tracking of disease and targeted responses to potential pandemics. Our virtual
+        \"macroscope\" can now be used on ourselves, as well as on our planet.\" (Microsoft)
+        (references available via the Wikipedia article cited above).</blockquote>\n\n<p>Whether
+        or not the analytical capabilities described here are viewed as being an integral
+        part of the \"macroscope\" concept, or are maybe an add-on, is ultimately
+        a question of semantics and perhaps, personal opinion. Continuing the Census
+        of Marine Life/OBIS example, OBIS offers some (arguably rather basic) visualization
+        and summary tools, but also makes its data available for download to users
+        wishing to analyse it further according to their own particular interests;
+        using OBIS data in this manner, Mark Costello et al. in 2017 were able to
+        demarcate a finite number of data-supported marine biogeographic realms for
+        the first time (Costello et al. 2017: Nature Communications. 8: 1057. <a href=\"https://doi.org/10.1038/s41467-017-01121-2\">doi:10.1038/s41467-017-01121-2</a>),
+        a project which I was able to assist in a small way in an advisory capacity.
+        In a case such as this, perhaps the final function of the macroscope, namely
+        data visualization and analysis, was outsourced to the authors'' own research
+        institution. Similarly at an earlier phase, \"data aggregation\" can also
+        be virtual rather than actual, i.e. avoiding using a single physical system
+        to hold all the data, enabled by open web mapping standards WMS (web map service)
+        and WFS (web feature service) to access a set of distributed data stores,
+        e.g. as implemented on the portal for the <a href=\"https://portal.aodn.org.au/\">Australian
+        Ocean Data Network</a>.</p>\n\n<p>So, as we pass through the third decade
+        of the twenty first century, what developments await us in the \"macroscope\"
+        area\"? In the biodiversity space, one can reasonably presume that the existing
+        \"macroscopic\" data assembly projects such as OBIS and GBIF will continue,
+        and hopefully slowly fill current gaps in their coverage - although in the
+        marine area, strategic new data collection exercises may be required (Census
+        2020, or 2025, anyone?), while (again hopefully), the Catalogue of Life will
+        continue its progress towards a \"complete\" species inventory for the biosphere.
+        The Landsat project, with imagery dating back to 1972, continues with the
+        launch of its latest satellite Landsat 9 just this year (21 September 2021)
+        with a planned mission duration for the next 5 years, so the \"macroscope\"
+        functionality of that project seems set to continue for the medium term at
+        least. Meanwhile the ongoing development of sensor networks, both on land
+        and in the ocean, offers an exciting new method of \"instrumenting the earth\"
+        to obtain much more real time data than has ever been available in the past,
+        offering scope for many more, use case-specific \"macroscopes\" to be constructed
+        that can fuse (e.g.) satellite imagery with much more that is happening at
+        a local level.</p>\n\n<p>So, the \"macroscope\" concept appears to be alive
+        and well, even though the nomenclature can change from time to time (IBM''s
+        \"Macroscope\", foreshadowed in 2017, became the \"IBM Pairs Geoscope\" on
+        implementation, and is now simply the \"Geospatial Analytics component within
+        the IBM Environmental Intelligence Suite\" according to available IBM publicity
+        materials). In reality this illustrates a new dichotomy: even if \"everyone\"
+        in principle has access to huge quantities of publicly available data, maybe
+        only a few well funded entities now have the computational ability to make
+        sense of it, and can charge clients a good fee for their services...</p>\n\n<p>I
+        present this account partly to give a brief picture of \"macroscope\" concepts
+        today and in the past, for those who may be interested, and partly to present
+        a few personal views which would be out of scope in a \"neutral point of view\"
+        article such as is required on Wikipedia; also to see if readers of this blog
+        would like to contribute further to discussion of any of the concepts traversed
+        herein.</p>","tags":["guest post","macroscope"],"language":"en","references":[]},{"id":"https://doi.org/10.59350/gf1dw-n1v47","uuid":"a41163e0-9c9a-41e0-a141-f772663f2f32","url":"https://iphylo.blogspot.com/2023/03/dugald-stuart-page-1936-2022.html","title":"Dugald
+        Stuart Page 1936-2022","summary":"My dad died last weekend. Below is a notice
+        in today''s New Zealand Herald. I''m in New Zealand for his funeral. Don''t
+        really have the words for this right now.","date_published":"2023-03-14T03:00:00Z","date_modified":"2023-03-22T07:25:56Z","date_indexed":"1909-06-16T10:41:55+00:00","authors":[{"url":null,"name":"Roderic
+        Page"}],"image":null,"content_html":"<div class=\"separator\" style=\"clear:
+        both;\"><a href=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZweukxntl7R5jnk3knVFVrqZ5RxC7mPZBV4gKeDIglbFzs2O442nbxqs8t8jV2tLqCU24K6gS32jW-Pe8q3O_5JR1Ms3qW1aQAZ877cKkFfcUydqUba9HsgNlX-zS9Ne92eLxRGS8F-lStTecJw2oalp3u58Yoc0oM7CUin5LKPeFIJ7Rzg/s3454/_DSC5106.jpg\"
+        style=\"display: block; padding: 1em 0; text-align: center; \"><img alt=\"\"
+        border=\"0\" width=\"400\" data-original-height=\"2582\" data-original-width=\"3454\"
+        src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZweukxntl7R5jnk3knVFVrqZ5RxC7mPZBV4gKeDIglbFzs2O442nbxqs8t8jV2tLqCU24K6gS32jW-Pe8q3O_5JR1Ms3qW1aQAZ877cKkFfcUydqUba9HsgNlX-zS9Ne92eLxRGS8F-lStTecJw2oalp3u58Yoc0oM7CUin5LKPeFIJ7Rzg/s400/_DSC5106.jpg\"/></a></div>\n\nMy
+        dad died last weekend. Below is a notice in today''s New Zealand Herald. I''m
+        in New Zealand for his funeral. Don''t really have the words for this right
+        now.\n\n<div class=\"separator\" style=\"clear: both;\"><a href=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRUTOFF1VWHCl8dg3FQuaWy5LM7aX8IivdRpTtzgrdQTEymsA5bLTZE3cSQf1WQIP3XrC46JsLScP8BxTK9C5a-B1i51yg8WGSJD0heJVaoDLnerv0lD1o3qloDjqEuuyfX4wagHB5YYBmjWnGeVQvyYVngvDDf9eM6pmMtZ7x94Y4jSVrug/s3640/IMG_2870.jpeg\"
+        style=\"display: block; padding: 1em 0; text-align: center; \"><img alt=\"\"
+        border=\"0\" height=\"320\" data-original-height=\"3640\" data-original-width=\"1391\"
+        src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiRUTOFF1VWHCl8dg3FQuaWy5LM7aX8IivdRpTtzgrdQTEymsA5bLTZE3cSQf1WQIP3XrC46JsLScP8BxTK9C5a-B1i51yg8WGSJD0heJVaoDLnerv0lD1o3qloDjqEuuyfX4wagHB5YYBmjWnGeVQvyYVngvDDf9eM6pmMtZ7x94Y4jSVrug/s320/IMG_2870.jpeg\"/></a></div>","tags":[],"language":"en","references":[]},{"id":"https://doi.org/10.59350/cbzgz-p8428","uuid":"a93134aa-8b33-4dc7-8cd4-76cdf64732f4","url":"https://iphylo.blogspot.com/2023/04/library-interfaces-knowledge-graphs-and.html","title":"Library
+        interfaces, knowledge graphs, and Miller columns","summary":"Some quick notes
+        on interface ideas for digital libraries and/or knowledge graphs. Recently
+        there’s been something of an explosion in bibliographic tools to explore the
+        literature. Examples include: Elicit which uses AI to search for and summarise
+        papers _scite which uses AI to do sentiment analysis on citations (does paper
+        A cite paper B favourably or not?) ResearchRabbit which uses lists, networks,
+        and timelines to discover related research Scispace which navigates connections
+        between...","date_published":"2023-04-25T13:01:00Z","date_modified":"2023-04-27T14:51:08Z","date_indexed":"1909-06-16T11:25:14+00:00","authors":[{"url":null,"name":"Roderic
+        Page"}],"image":null,"content_html":"<p>Some quick notes on interface ideas
+        for digital libraries and/or knowledge graphs.</p>\n<p>Recently there’s been
+        something of an explosion in bibliographic tools to explore the literature.
+        Examples include:</p>\n<ul>\n<li><a href=\"https://elicit.org\">Elicit</a>
+        which uses AI to search for and summarise papers</li>\n<li><a href=\"https://scite.ai\">_scite</a>
+        which uses AI to do sentiment analysis on citations (does paper A cite paper
+        B favourably or not?)</li>\n<li><a href=\"https://www.researchrabbit.ai\">ResearchRabbit</a>
+        which uses lists, networks, and timelines to discover related research</li>\n<li><a
+        href=\"https://typeset.io\">Scispace</a> which navigates connections between
+        papers, authors, topics, etc., and provides AI summaries.</li>\n</ul>\n<p>As
+        an aside, I think these (and similar tools) are a great example of how bibliographic
+        data such as abstracts, the citation graph and - to a lesser extent - full
+        text - have become commodities. That is, what was once proprietary information
+        is now free to anyone, which in turns means a whole ecosystem of new tools
+        can emerge. If I was clever I’d be building a <a href=\"https://en.wikipedia.org/wiki/Wardley_map\">Wardley
+        map</a> to explore this. Note that a decade or so ago reference managers like
+        <a href=\"https://www.zotero.org\">Zotero</a> were made possible by publishers
+        exposing basic bibliographic data on their articles. As we move to <a href=\"https://i4oc.org\">open
+        citations</a> we are seeing the next generation of tools.</p>\n<p>Back to
+        my main topic. As usual, rather than focus on what these tools do I’m more
+        interested in how they <strong>look</strong>. I have history here, when the
+        iPad came out I was intrigued by the possibilities it offered for displaying
+        academic articles, as discussed <a href=\"https://iphylo.blogspot.com/2010/08/viewing-scientific-articles-on-ipad.html\">here</a>,
+        <a href=\"https://iphylo.blogspot.com/2010/09/viewing-scientific-articles-on-ipad.html\">here</a>,
+        <a href=\"https://iphylo.blogspot.com/2010/08/viewing-scientific-articles-on-ipad_24.html\">here</a>,
+        <a href=\"https://iphylo.blogspot.com/2010/08/viewing-scientific-articles-on-ipad_3052.html\">here</a>,
+        and <a href=\"https://iphylo.blogspot.com/2010/08/viewing-scientific-articles-on-ipad_31.html\">here</a>.
+        ResearchRabbit looks like this:</p>\n<div style=\"padding:86.91% 0 0 0;position:relative;\"><iframe
+        src=\"https://player.vimeo.com/video/820871442?h=23b05b0dae&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\"
+        frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen
+        style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"ResearchRabbit\"></iframe></div><script
+        src=\"https://player.vimeo.com/api/player.js\"></script>\n<p>Scispace’s <a
+        href=\"https://typeset.io/explore/journals/parassitologia-1ieodjwe\">“trace”
+        view</a> looks like this:</p>\n<div style=\"padding:84.55% 0 0 0;position:relative;\"><iframe
+        src=\"https://player.vimeo.com/video/820871348?h=2db7b661ef&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\"
+        frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen
+        style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Scispace
+        screencast\"></iframe></div><script src=\"https://player.vimeo.com/api/player.js\"></script>\n<p>What
+        is interesting about both is that they display content from left to right
+        in vertical columns, rather than the more common horizontal rows. This sort
+        of display is sometimes called <a href=\"https://en.wikipedia.org/wiki/Miller_columns\">Miller
+        columns</a> or a <a href=\"https://web.archive.org/web/20210726134921/http://designinginterfaces.com/firstedition/index.php?page=Cascading_Lists\">cascading
+        list</a>.</p>\n\n<div class=\"separator\" style=\"clear: both;\"><a href=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBPnV9fRBcvm-BX5PjzfG5Cff9PerCLsTW8d5ZbsL6b41t7ypD7ovmcgfTf3b4b34mbq8NM4sfwOHkgEq32FLYnD497RFQD4HQmYmh5Eveu1zWdDVyKyDtPyE98QoxTaOEnLA5kK0fnl3dOOEgUvtVKlTZ8bt1gj2v_8tDRWl9f50ybyei3A/s1024/GNUstep-liveCD.png\"
+        style=\"display: block; padding: 1em 0; text-align: center; \"><img alt=\"\"
+        border=\"0\" width=\"400\" data-original-height=\"768\" data-original-width=\"1024\"
+        src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBPnV9fRBcvm-BX5PjzfG5Cff9PerCLsTW8d5ZbsL6b41t7ypD7ovmcgfTf3b4b34mbq8NM4sfwOHkgEq32FLYnD497RFQD4HQmYmh5Eveu1zWdDVyKyDtPyE98QoxTaOEnLA5kK0fnl3dOOEgUvtVKlTZ8bt1gj2v_8tDRWl9f50ybyei3A/s400/GNUstep-liveCD.png\"/></a></div>\n\n<p>By
+        Gürkan Sengün (talk) - Own work, Public Domain, <a href=\"https://commons.wikimedia.org/w/index.php?curid=594715\">https://commons.wikimedia.org/w/index.php?curid=594715</a></p>\n<p>I’ve
+        always found displaying a knowledge graph to be a challenge, as discussed
+        <a href=\"https://iphylo.blogspot.com/2019/07/notes-on-collections-knowledge-graphs.html\">elsewhere
+        on this blog</a> and in my paper on <a href=\"https://peerj.com/articles/6739/#p-29\">Ozymandias</a>.
+        Miller columns enable one to drill down in increasing depth, but it doesn’t
+        need to be a tree, it can be a path within a network. What I like about ResearchRabbit
+        and the original Scispace interface is that they present the current item
+        together with a list of possible connections (e.g., authors, citations) that
+        you can drill down on. Clicking on these will result in a new column being
+        appended to the right, with a view (typically a list) of the next candidates
+        to visit. In graph terms, these are adjacent nodes to the original item.  The
+        clickable badges on each item can be thought of as sets of edges that have
+        the same label (e.g., “authored by”, “cites”, “funded”, “is about”, etc.).
+        Each of these nodes itself becomes a starting point for further exploration.
+        Note that the original starting point isn’t privileged, other than being the
+        starting point. That is, each time we drill down we are seeing the same type
+        of information displayed in the same way. Note also that the navigation can
+        be though of as a <strong>card</strong> for a node, with <strong>buttons</strong>
+        grouping the adjacent nodes. When we click on an individual button, it expands
+        into a <strong>list</strong> in the next column. This can be thought of as
+        a preview for each adjacent node. Clicking on an element in the list generates
+        a new card (we are viewing a single node) and we get another set of buttons
+        corresponding to the adjacent nodes.</p>\n<p>One important behaviour in a
+        Miller column interface is that the current path can be pruned at any point.
+        If we go back (i.e., scroll to the left) and click on another tab on an item,
+        everything downstream of that item (i.e., to the right) gets deleted and replaced
+        by a new set of nodes. This could make retrieving a particular history of
+        browsing a bit tricky, but encourages exploration. Both Scispace and ResearchRabbit  have
+        the ability to add items to a collection, so you can keep track of things
+        you discover.</p>\n<p>Lots of food for thought, I’m assuming that there is
+        some user interface/experience research on Miller columns. One thing to remember
+        is that Miller columns are most often associated with trees, but in this case
+        we are exploring a network. That means that potentially there is no limit
+        to the number of columns being generated as we wander through the graph. It
+        will be interesting to think about what the average depth is likely to be,
+        in other words, how deep down the rabbit hole will be go?</p>\n\n<h3>Update</h3>\n<p>Should
+        add link to David Regev''s explorations of <a href=\"https://medium.com/david-regev-on-ux/flow-browser-b730daf0f717\">Flow
+        Browser</a>.\n\n<blockquote>\n<p>Written with <a href=\"https://stackedit.io/\">StackEdit</a>.</p>\n</blockquote>","tags":["cards","flow","Knowledge
+        Graph","Miller column","RabbitResearch"],"language":"en","references":[]},{"id":"https://doi.org/10.59350/t6fb9-4fn44","uuid":"8bc3fea6-cb86-4344-8dad-f312fbf58041","url":"https://iphylo.blogspot.com/2021/12/the-business-of-extracting-knowledge.html","title":"The
+        Business of Extracting Knowledge from Academic Publications","summary":"Markus
+        Strasser (@mkstra write a fascinating article entitled \"The Business of Extracting
+        Knowledge from Academic Publications\". I spent months working on domain-specific
+        search engines and knowledge discovery apps for biomedicine and eventually
+        figured that synthesizing \"insights\" or building knowledge graphs by machine-reading
+        the academic literature (papers) is *barely useful* :https://t.co/eciOg30Odc—
+        Markus Strasser (@mkstra) December 7, 2021 His TL;DR: TL;DR: I worked on biomedical...","date_published":"2021-12-11T00:01:00Z","date_modified":"2021-12-11T00:01:21Z","date_indexed":"1909-06-16T11:32:09+00:00","authors":[{"url":null,"name":"Roderic
+        Page"}],"image":null,"content_html":"<p>Markus Strasser (<a href=\"https://twitter.com/mkstra\">@mkstra</a>
+        write a fascinating article entitled <a href=\"https://markusstrasser.org/extracting-knowledge-from-literature/\">\"The
+        Business of Extracting Knowledge from Academic Publications\"</a>.</p>\n\n<blockquote
+        class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">I spent months working
+        on domain-specific search engines and knowledge discovery apps for biomedicine
+        and eventually figured that synthesizing &quot;insights&quot; or building
+        knowledge graphs by machine-reading the academic literature (papers) is *barely
+        useful* :<a href=\"https://t.co/eciOg30Odc\">https://t.co/eciOg30Odc</a></p>&mdash;
+        Markus Strasser (@mkstra) <a href=\"https://twitter.com/mkstra/status/1468334482113523716?ref_src=twsrc%5Etfw\">December
+        7, 2021</a></blockquote> <script async src=\"https://platform.twitter.com/widgets.js\"
+        charset=\"utf-8\"></script>\n\n<p>His TL;DR:</p>\n\n<p><blockquote>\nTL;DR:
+        I worked on biomedical literature search, discovery and recommender web applications
+        for many months and concluded that extracting, structuring or synthesizing
+        \"insights\" from academic publications (papers) or building knowledge bases
+        from a domain corpus of literature has negligible value in industry.</p>\n\n<p>Close
+        to nothing of what makes science actually work is published as text on the
+        web.\n</blockquote></p>\n\n<p>After recounting the many problems of knowledge
+        extraction - including a swipe at nanopubs which \"are ... dead in my view
+        (without admitting it)\" - he concludes:</p>\n\n<p><blockquote>\nI’ve been
+        flirting with this entire cluster of ideas including open source web annotation,
+        semantic search and semantic web, public knowledge graphs, nano-publications,
+        knowledge maps, interoperable protocols and structured data, serendipitous
+        discovery apps, knowledge organization, communal sense making and academic
+        literature/publishing toolchains for a few years on and off ... nothing of
+        it will go anywhere.</p>\n\n<p>Don’t take that as a challenge. Take it as
+        a red flag and run. Run towards better problems.\n</blockquote></p>\n\n<p>Well
+        worth a read, and much food for thought.</p>","tags":["ai","business model","text
+        mining"],"language":"en","references":[]},{"id":"https://doi.org/10.59350/463yw-pbj26","uuid":"dc829ab3-f0f1-40a4-b16d-a36dc0e34166","url":"https://iphylo.blogspot.com/2022/12/david-remsen.html","title":"David
+        Remsen","summary":"I heard yesterday from Martin Kalfatovic (BHL) that David
+        Remsen has died. Very sad news. It''s starting to feel like iPhylo might end
+        up being a list of obituaries of people working on biodiversity informatics
+        (e.g., Scott Federhen). I spent several happy visits at MBL at Woods Hole
+        talking to Dave at the height of the uBio project, which really kickstarted
+        large scale indexing of taxonomic names, and the use of taxonomic name finding
+        tools to index the literature. His work on uBio with David...","date_published":"2022-12-16T17:54:00Z","date_modified":"2022-12-17T08:12:23Z","date_indexed":"1909-06-16T11:41:39+00:00","authors":[{"url":null,"name":"Roderic
+        Page"}],"image":null,"content_html":"<p>I heard yesterday from Martin Kalfatovic
+        (BHL) that David Remsen has died. Very sad news. It''s starting to feel like
+        iPhylo might end up being a list of obituaries of people working on biodiversity
+        informatics (e.g., <a href=\"https://iphylo.blogspot.com/2016/05/scott-federhen-rip.html\">Scott
+        Federhen</a>).</p>\n\n<p>I spent several happy visits at MBL at Woods Hole
+        talking to Dave at the height of the uBio project, which really kickstarted
+        large scale indexing of taxonomic names, and the use of taxonomic name finding
+        tools to index the literature. His work on uBio with David (\"Paddy\") Patterson
+        led to the <a href=\"https://eol.org\">Encyclopedia of Life</a> (EOL).</p>\n\n<p>A
+        number of the things I''m currently working on are things Dave started. For
+        example, I recently uploaded a version of his dataset for Nomenclator Zoologicus[1]
+        to <a href=\"https://www.checklistbank.org/dataset/126539/about\">ChecklistBank</a>
+        where I''m working on augmenting that original dataset by adding links to
+        the taxonomic literature. My <a href=\"https://biorss.herokuapp.com/?feed=Y291bnRyeT1XT1JMRCZwYXRoPSU1QiUyMkJJT1RBJTIyJTVE\">BioRSS
+        project</a> is essentially an attempt to revive uBioRSS[2] (see <a href=\"https://iphylo.blogspot.com/2021/11/revisiting-rss-to-monitor-latests.html\">Revisiting
+        RSS to monitor the latest taxonomic research</a>).</p>\n\n<p>I have fond memories
+        of those visits to Woods Hole. A very sad day indeed.</p>\n\n<p><b>Update:</b>
+        The David Remsen Memorial Fund has been set up on <a href=\"https://www.gofundme.com/f/david-remsen-memorial-fund\">GoFundMe</a>.</p>\n\n<p>1.
+        Remsen, D. P., Norton, C., & Patterson, D. J. (2006). Taxonomic Informatics
+        Tools for the Electronic Nomenclator Zoologicus. The Biological Bulletin,
+        210(1), 18–24. https://doi.org/10.2307/4134533</p>\n\n<p>2. Patrick R. Leary,
+        David P. Remsen, Catherine N. Norton, David J. Patterson, Indra Neil Sarkar,
+        uBioRSS: Tracking taxonomic literature using RSS, Bioinformatics, Volume 23,
+        Issue 11, June 2007, Pages 1434–1436, https://doi.org/10.1093/bioinformatics/btm109</p>","tags":["David
+        Remsen","obituary","uBio"],"language":"en","references":[]},{"id":"https://doi.org/10.59350/3s376-6bm21","uuid":"62e7b438-67a3-44ac-a66d-3f5c278c949e","url":"https://iphylo.blogspot.com/2022/02/deduplicating-bibliographic-data.html","title":"Deduplicating
+        bibliographic data","summary":"There are several instances where I have a
+        collection of references that I want to deduplicate and merge. For example,
+        in Zootaxa has no impact factor I describe a dataset of the literature cited
+        by articles in the journal Zootaxa. This data is available on Figshare (https://doi.org/10.6084/m9.figshare.c.5054372.v4),
+        as is the equivalent dataset for Phytotaxa (https://doi.org/10.6084/m9.figshare.c.5525901.v1).
+        Given that the same articles may be cited many times, these datasets have
+        lots of...","date_published":"2022-02-03T15:09:00Z","date_modified":"2022-02-03T15:11:29Z","date_indexed":"1909-06-16T10:22:30+00:00","authors":[{"url":null,"name":"Roderic
+        Page"}],"image":null,"content_html":"<p>There are several instances where
+        I have a collection of references that I want to deduplicate and merge. For
+        example, in <a href=\"https://iphylo.blogspot.com/2020/07/zootaxa-has-no-impact-factor.html\">Zootaxa
+        has no impact factor</a> I describe a dataset of the literature cited by articles
+        in the journal <i>Zootaxa</i>. This data is available on Figshare (<a href=\"https://doi.org/10.6084/m9.figshare.c.5054372.v4\">https://doi.org/10.6084/m9.figshare.c.5054372.v4</a>),
+        as is the equivalent dataset for <i>Phytotaxa</i> (<a href=\"https://doi.org/10.6084/m9.figshare.c.5525901.v1\">https://doi.org/10.6084/m9.figshare.c.5525901.v1</a>).
+        Given that the same articles may be cited many times, these datasets have
+        lots of duplicates. Similarly, articles in <a href=\"https://species.wikimedia.org\">Wikispecies</a>
+        often have extensive lists of references cited, and the same reference may
+        appear on multiple pages (for an initial attempt to extract these references
+        see <a href=\"https://doi.org/10.5281/zenodo.5801661\">https://doi.org/10.5281/zenodo.5801661</a>
+        and <a href=\"https://github.com/rdmpage/wikispecies-parser\">https://github.com/rdmpage/wikispecies-parser</a>).</p>\n\n<p>There
+        are several reasons I want to merge these references. If I want to build a
+        citation graph for <i>Zootaxa</i> or <i>Phytotaxa</i> I need to merge references
+        that are the same so that I can accurate count citations. I am also interested
+        in harvesting the metadata to help find those articles in the <a href=\"https://www.biodiversitylibrary.org\">Biodiversity
+        Heritage Library</a> (BHL), and the literature cited section of scientific
+        articles is a potential goldmine of bibliographic metadata, as is Wikispecies.</p>\n\n<p>After
+        various experiments and false starts I''ve created a repository <a href=\"https://github.com/rdmpage/bib-dedup\">https://github.com/rdmpage/bib-dedup</a>
+        to host a series of PHP scripts to deduplicate bibliographics data. I''ve
+        settled on using CSL-JSON as the format for bibliographic data. Because deduplication
+        relies on comparing pairs of references, the standard format for most of the
+        scripts is a JSON array containing a pair of CSL-JSON objects to compare.
+        Below are the steps the code takes.</p>\n\n<h2>Generating pairs to compare</h2>\n\n<p>The
+        first step is to take a list of references and generate the pairs that will
+        be compared. I started with this approach as I wanted to explore machine learning
+        and wanted a simple format for training data, such as an array of two CSL-JSON
+        objects and an integer flag representing whether the two references were the
+        same of different.</p>\n\n<p>There are various ways to generate CSL-JSON for
+        a reference. I use a tool I wrote (see <a href=\"https://iphylo.blogspot.com/2021/07/citation-parsing-released.html\">Citation
+        parsing tool released</a>) that has a simple API where you parse one or more
+        references and it returns that reference as structured data in CSL-JSON.</p>\n\n<p>Attempting
+        to do all possible pairwise comparisons rapidly gets impractical as the number
+        of references increases, so we need some way to restrict the number of comparisons
+        we make. One approach I''ve explored is the “sorted neighbourhood method”
+        where we sort the references 9for example by their title) then move a sliding
+        window down the list of references, comparing all references within that window.
+        This greatly reduces the number of pairwise comparisons. So the first step
+        is to sort the references, then run a sliding window over them, output all
+        the pairs in each window (ignoring in pairwise comparisons already made in
+        a previous window). Other methods of \"blocking\" could also be used, such
+        as only including references in a particular year, or a particular journal.</p>\n\n<p>So,
+        the output of this step is a set of JSON arrays, each with a pair of references
+        in CSL-JSON format. Each array is stored on a single line in the same file
+        in <a href=\"https://en.wikipedia.org/wiki/JSON_streaming#Line-delimited_JSON_2\">line-delimited
+        JSON</a> (JSONL).</p>\n\n<h2>Comparing pairs</h2>\n\n<p>The next step is to
+        compare each pair of references and decide whether they are a match or not.
+        Initially I explored a machine learning approach used in the following paper:</p>\n\n<blockquote>\nWilson
+        DR. 2011. Beyond probabilistic record linkage: Using neural networks and complex
+        features to improve genealogical record linkage. In: The 2011 International
+        Joint Conference on Neural Networks. 9–14. DOI: <a href=\"https://doi.org/10.1109/IJCNN.2011.6033192\">10.1109/IJCNN.2011.6033192</a>\n</blockquote>\n\n<p>Initial
+        experiments using <a href=\"https://github.com/jtet/Perceptron\">https://github.com/jtet/Perceptron</a>
+        were promising and I want to play with this further, but I deciding to skip
+        this for now and just use simple string comparison. So for each CSL-JSON object
+        I generate a citation string in the same format using CiteProc, then compute
+        the <a href=\"https://en.wikipedia.org/wiki/Levenshtein_distance\">Levenshtein
+        distance</a> between the two strings. By normalising this distance by the
+        length of the two strings being compared I can use an arbitrary threshold
+        to decide if the references are the same or not.</p>\n\n<h2>Clustering</h2>\n\n<p>For
+        this step we read the JSONL file produced above and record whether the two
+        references are a match or not. Assuming each reference has a unique identifier
+        (needs only be unique within the file) then we can use those identifier to
+        record the clusters each reference belongs to. I do this using a <a href=\"https://en.wikipedia.org/wiki/Disjoint-set_data_structure\">Disjoint-set
+        data structure</a>. For each reference start with a graph where each node
+        represents a reference, and each node has a pointer to a parent node. Initially
+        the reference is its own parent. A simple implementation is to have an array
+        index by reference identifiers and where the value of each cell in the array
+        is the node''s parent.</p>\n\n<p>As we discover pairs we update the parents
+        of the nodes to reflect this, such that once all the comparisons are done
+        we have a one or more sets of clusters corresponding to the references that
+        we think are the same. Another way to think of this is that we are getting
+        the components of a graph where each node is a reference and pair of references
+        that match are connected by an edge.</p>\n\n<p>In the code I''m using I write
+        this graph in <a href=\"https://en.wikipedia.org/wiki/Trivial_Graph_Format\">Trivial
+        Graph Format</a> (TGF) which can be visualised using a tools such as <a href=\"https://www.yworks.com/products/yed\">yEd</a>.</p>\n\n<h2>Merging</h2>\n\n<p>Now
+        that we have a graph representing the sets of references that we think are
+        the same we need to merge them. This is where things get interesting as the
+        references are similar (by definition) but may differ in some details. The
+        paper below describes a simple Bayesian approach for merging records:</p>\n\n<blockquote>\nCouncill
+        IG, Li H, Zhuang Z, Debnath S, Bolelli L, Lee WC, Sivasubramaniam A, Giles
+        CL. 2006. Learning Metadata from the Evidence in an On-line Citation Matching
+        Scheme. In: Proceedings of the 6th ACM/IEEE-CS Joint Conference on Digital
+        Libraries. JCDL ’06. New York, NY, USA: ACM, 276–285. DOI: <a href=\"https://doi.org/10.1145/1141753.1141817\">10.1145/1141753.1141817</a>.\n</blockquote>\n\n<p>So
+        the next step is to read the graph with the clusters, generate the sets of
+        bibliographic references that correspond to each cluster, then use the method
+        described in Councill et al. to produce a single bibliographic record for
+        that cluster. These records could then be used to, say locate the corresponding
+        article in BHL, or populate Wikidata with missing references.</p>\n\n<p>Obviously
+        there is always the potential for errors, such as trying to merge references
+        that are not the same. As a quick and dirty check I flag as dubious any cluster
+        where the page numbers vary among members of the cluster. More sophisticated
+        checks are possible, especially if I go down the ML route (i.e., I would have
+        evidence for the probability that the same reference can disagree on some
+        aspects of metadata).</p>\n\n<h2>Summary</h2>\n\n<p>At this stage the code
+        is working well enough for me to play with and explore some example datasets.
+        The focus is on structured bibliographic metadata, but I may simplify things
+        and have a version that handles simple string matching, for example to cluster
+        together different abbreviations of the same journal name.</p>","tags":["data
+        cleaning","deduplication","Phytotaxa","Wikispecies","Zootaxa"],"language":"en","references":[]},{"id":"https://doi.org/10.59350/c79vq-7rr11","uuid":"3cb94422-5506-4e24-a41c-a250bb521ee0","url":"https://iphylo.blogspot.com/2021/12/graphql-for-wikidata-wikicite.html","title":"GraphQL
+        for WikiData (WikiCite)","summary":"I''ve released a very crude GraphQL endpoint
+        for WikiData. More precisely, the endpoint is for a subset of the entities
+        that are of interest to WikiCite, such as scholarly articles, people, and
+        journals. There is a crude demo at https://wikicite-graphql.herokuapp.com.
+        The endpoint itself is at https://wikicite-graphql.herokuapp.com/gql.php.
+        There are various ways to interact with the endpoint, personally I like the
+        Altair GraphQL Client by Samuel Imolorhe. As I''ve mentioned earlier it''s
+        taken...","date_published":"2021-12-20T13:16:00Z","date_modified":"2021-12-20T13:20:05Z","date_indexed":"1909-06-16T10:52:00+00:00","authors":[{"url":null,"name":"Roderic
+        Page"}],"image":null,"content_html":"<div class=\"separator\" style=\"clear:
+        both;\"><a href=\"https://blogger.googleusercontent.com/img/a/AVvXsEh7WW8TlfN2u3xe_E-sH5IK6AWYnAoWaKrP2b32UawUeqMpPlq6ZFk5BtJVZsMmCNh5j3QRsTj5H0Ee55RRGntnc9yjj_mNB8KHmH2dzocCgyLS2VFOxsBji6u4Ey6qxlDAnT-zrsBpnDcTchbhgt1x0Sf7RkmIMkS1y4-_3KCQian-SeIF-g=s1000\"
+        style=\"display: block; padding: 1em 0; text-align: center; clear: right;
+        float: right;\"><img alt=\"\" border=\"0\" width=\"128\" data-original-height=\"1000\"
+        data-original-width=\"1000\" src=\"https://blogger.googleusercontent.com/img/a/AVvXsEh7WW8TlfN2u3xe_E-sH5IK6AWYnAoWaKrP2b32UawUeqMpPlq6ZFk5BtJVZsMmCNh5j3QRsTj5H0Ee55RRGntnc9yjj_mNB8KHmH2dzocCgyLS2VFOxsBji6u4Ey6qxlDAnT-zrsBpnDcTchbhgt1x0Sf7RkmIMkS1y4-_3KCQian-SeIF-g=s200\"/></a></div><p>I''ve
+        released a very crude GraphQL endpoint for WikiData. More precisely, the endpoint
+        is for a subset of the entities that are of interest to WikiCite, such as
+        scholarly articles, people, and journals. There is a crude demo at <a href=\"https://wikicite-graphql.herokuapp.com\">https://wikicite-graphql.herokuapp.com</a>.
+        The endpoint itself is at <a href=\"https://wikicite-graphql.herokuapp.com/gql.php\">https://wikicite-graphql.herokuapp.com/gql.php</a>.
+        There are various ways to interact with the endpoint, personally I like the
+        <a href=\"https://altair.sirmuel.design\">Altair GraphQL Client</a> by <a
+        href=\"https://github.com/imolorhe\">Samuel Imolorhe</a>.</p>\n\n<p>As I''ve
+        <a href=\"https://iphylo.blogspot.com/2021/04/it-been-while.html\">mentioned
+        earlier</a> it''s taken me a while to see the point of GraphQL. But it is
+        clear it is gaining traction in the biodiversity world (see for example the
+        <a href=\"https://dev.gbif.org/hosted-portals.html\">GBIF Hosted Portals</a>)
+        so it''s worth exploring. My take on GraphQL is that it is a way to create
+        a self-describing API that someone developing a web site can use without them
+        having to bury themselves in the gory details of how data is internally modelled.
+        For example, WikiData''s query interface uses SPARQL, a powerful language
+        that has a steep learning curve (in part because of the administrative overhead
+        brought by RDF namespaces, etc.). In my previous SPARQL-based projects such
+        as <a href=\"https://ozymandias-demo.herokuapp.com\">Ozymandias</a> and <a
+        href=\"http://alec-demo.herokuapp.com\">ALEC</a> I have either returned SPARQL
+        results directly (Ozymandias) or formatted SPARQL results as <a href=\"https://schema.org/DataFeed\">schema.org
+        DataFeeds</a> (equivalent to RSS feeds) (ALEC). Both approaches work, but
+        they are project-specific and if anyone else tried to build based on these
+        projects they might struggle for figure out what was going on. I certainly
+        struggle, and I wrote them!</p>\n\n<p>So it seems worthwhile to explore this
+        approach a little further and see if I can develop a GraphQL interface that
+        can be used to build the sort of rich apps that I want to see. The demo I''ve
+        created uses SPARQL under the hood to provide responses to the GraphQL queries.
+        So in this sense it''s not replacing SPARQL, it''s simply providing a (hopefully)
+        simpler overlay on top of SPARQL so that we can retrieve the data we want
+        without having to learn the intricacies of SPARQL, nor how Wikidata models
+        publications and people.</p>","tags":["GraphQL","SPARQL","WikiCite","Wikidata"],"language":"en","references":[]}]}'
+  recorded_at: Sun, 18 Jun 2023 15:24:19 GMT
+recorded_with: VCR 6.1.0

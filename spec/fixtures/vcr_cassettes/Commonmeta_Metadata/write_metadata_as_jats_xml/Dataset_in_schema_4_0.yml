@@ -1,0 +1,120 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.5061/dryad.8515?include=media,client
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.datacite.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:23:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 615fce95-f1e2-479c-8ea1-98aef6df2523
+      X-Download-Options:
+      - noopen
+      Etag:
+      - W/"004baec6a0baa430227ac1b37b5ba49d"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.029873'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.17
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.5061/dryad.8515","type":"dois","attributes":{"doi":"10.5061/dryad.8515","prefix":"10.5061","suffix":"dryad.8515","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Ollomo,
+        Benjamin","nameType":"Personal","givenName":"Benjamin","familyName":"Ollomo","affiliation":["Centre
+        International de Recherches Médicales de Franceville"],"nameIdentifiers":[]},{"name":"Durand,
+        Patrick","nameType":"Personal","givenName":"Patrick","familyName":"Durand","affiliation":["French
+        National Centre for Scientific Research"],"nameIdentifiers":[]},{"name":"Prugnolle,
+        Franck","nameType":"Personal","givenName":"Franck","familyName":"Prugnolle","affiliation":["French
+        National Centre for Scientific Research"],"nameIdentifiers":[]},{"name":"Douzery,
+        Emmanuel J. P.","nameType":"Personal","givenName":"Emmanuel J. P.","familyName":"Douzery","affiliation":[],"nameIdentifiers":[]},{"name":"Arnathau,
+        Céline","nameType":"Personal","givenName":"Céline","familyName":"Arnathau","affiliation":["French
+        National Centre for Scientific Research"],"nameIdentifiers":[]},{"name":"Nkoghe,
+        Dieudonné","nameType":"Personal","givenName":"Dieudonné","familyName":"Nkoghe","affiliation":["Centre
+        International de Recherches Médicales de Franceville"],"nameIdentifiers":[]},{"name":"Leroy,
+        Eric","nameType":"Personal","givenName":"Eric","familyName":"Leroy","affiliation":["Centre
+        International de Recherches Médicales de Franceville"],"nameIdentifiers":[]},{"name":"Renaud,
+        François","nameType":"Personal","givenName":"François","familyName":"Renaud","affiliation":["French
+        National Centre for Scientific Research"],"nameIdentifiers":[]}],"titles":[{"title":"Data
+        from: A new malaria agent in African hominids."}],"publisher":"Dryad","container":{},"publicationYear":2011,"subjects":[{"subject":"Plasmodium"},{"subject":"malaria"},{"subject":"mitochondrial
+        genome"},{"subject":"Parasites"}],"contributors":[],"dates":[{"date":"2011-02-01T17:22:41Z","dateType":"Available"},{"date":"2011","dateType":"Issued"}],"language":"en","types":{"ris":"DATA","bibtex":"misc","citeproc":"dataset","schemaOrg":"Dataset","resourceType":"dataset","resourceTypeGeneral":"Dataset"},"relatedIdentifiers":[{"relationType":"IsCitedBy","relatedIdentifier":"10.1371/journal.ppat.1000446","relatedIdentifierType":"DOI"}],"relatedItems":[],"sizes":["107328
+        bytes"],"formats":[],"version":"1","rightsList":[{"rights":"Creative Commons
+        Zero v1.0 Universal","rightsUri":"https://creativecommons.org/publicdomain/zero/1.0/legalcode","schemeUri":"https://spdx.org/licenses/","rightsIdentifier":"cc0-1.0","rightsIdentifierScheme":"SPDX"}],"descriptions":[{"description":"Plasmodium
+        falciparum is the major human malaria agent responsible for 200 to 300 million
+        infections and one to three million deaths annually, mainly among African
+        infants. The origin and evolution of this pathogen within the human lineage
+        is still unresolved. A single species, P. reichenowi, which infects chimpanzees,
+        is known to be a close sister lineage of P. falciparum. Here we report the
+        discovery of a new Plasmodium species infecting Hominids. This new species
+        has been isolated in two chimpanzees (Pan troglodytes) kept as pets by villagers
+        in Gabon (Africa). Analysis of its complete mitochondrial genome (5529 nucleotides
+        including Cyt b, Cox I and Cox III genes) reveals an older divergence of this
+        lineage from the clade that includes P. falciparum and P. reichenowi (approximately
+        21+/-9 Myrs ago using Bayesian methods and considering that the divergence
+        between P. falciparum and P. reichenowi occurred 4 to 7 million years ago
+        as generally considered in the literature). This time frame would be congruent
+        with the radiation of hominoids, suggesting that this Plasmodium lineage might
+        have been present in early hominoids and that they may both have experienced
+        a simultaneous diversification. Investigation of the nuclear genome of this
+        new species will further the understanding of the genetic adaptations of P.
+        falciparum to humans. The risk of transfer and emergence of this new species
+        in humans must be now seriously considered given that it was found in two
+        chimpanzees living in contact with humans and its close relatedness to the
+        most virulent agent of malaria.","descriptionType":"Abstract"},{"description":"Ollomo_PLoSPathog_2009Nucleotide
+        alignment concatenation of 4 mitochondrial genes for 17 Plasmodium species
+        and one outgroup.Ollomo_PLoSPathog_2009_PHYMLMaximum likelihood tree inferred
+        from the 4-gene concatenation using PHYML.","descriptionType":"Other"}],"geoLocations":[{"geoLocationPlace":"Africa"}],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuNTA2MS9EUllBRC44NTE1PC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+T2xsb21vLCBCZW5qYW1pbjwvY3JlYXRvck5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wMXd5cWI5OTciIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIj5DZW50cmUgSW50ZXJuYXRpb25hbCBkZSBSZWNoZXJjaGVzIE3DqWRpY2FsZXMgZGUgRnJhbmNldmlsbGU8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5EdXJhbmQsIFBhdHJpY2s8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDJmZWFodzczIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiI+RnJlbmNoIE5hdGlvbmFsIENlbnRyZSBmb3IgU2NpZW50aWZpYyBSZXNlYXJjaDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPlBydWdub2xsZSwgRnJhbmNrPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzAyZmVhaHc3MyIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiPkZyZW5jaCBOYXRpb25hbCBDZW50cmUgZm9yIFNjaWVudGlmaWMgUmVzZWFyY2g8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5Eb3V6ZXJ5LCBFbW1hbnVlbCBKLiBQLjwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkFybmF0aGF1LCBDw6lsaW5lPC9jcmVhdG9yTmFtZT4KICAgICAgPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzAyZmVhaHc3MyIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiPkZyZW5jaCBOYXRpb25hbCBDZW50cmUgZm9yIFNjaWVudGlmaWMgUmVzZWFyY2g8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5Oa29naGUsIERpZXVkb25uw6k8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDF3eXFiOTk3IiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiI+Q2VudHJlIEludGVybmF0aW9uYWwgZGUgUmVjaGVyY2hlcyBNw6lkaWNhbGVzIGRlIEZyYW5jZXZpbGxlPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+TGVyb3ksIEVyaWM8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDF3eXFiOTk3IiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiI+Q2VudHJlIEludGVybmF0aW9uYWwgZGUgUmVjaGVyY2hlcyBNw6lkaWNhbGVzIGRlIEZyYW5jZXZpbGxlPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWU+UmVuYXVkLCBGcmFuw6dvaXM8L2NyZWF0b3JOYW1lPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDJmZWFodzczIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiI+RnJlbmNoIE5hdGlvbmFsIENlbnRyZSBmb3IgU2NpZW50aWZpYyBSZXNlYXJjaDwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkRhdGEgZnJvbTogQSBuZXcgbWFsYXJpYSBhZ2VudCBpbiBBZnJpY2FuIGhvbWluaWRzLjwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5EcnlhZDwvcHVibGlzaGVyPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iRGF0YXNldCI+ZGF0YXNldDwvcmVzb3VyY2VUeXBlPgogIDxwdWJsaWNhdGlvblllYXI+MjAxMTwvcHVibGljYXRpb25ZZWFyPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PlBsYXNtb2RpdW08L3N1YmplY3Q+CiAgICA8c3ViamVjdD5tYWxhcmlhPC9zdWJqZWN0PgogICAgPHN1YmplY3Q+bWl0b2Nob25kcmlhbCBnZW5vbWU8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5QYXJhc2l0ZXM8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iQXZhaWxhYmxlIj4yMDExLTAyLTAxVDE3OjIyOjQxWjwvZGF0ZT4KICA8L2RhdGVzPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGlvblR5cGU9IklzQ2l0ZWRCeSIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJET0kiPmh0dHBzOi8vZG9pLm9yZy8xMC4xMzcxL2pvdXJuYWwucHBhdC4xMDAwNDQ2PC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8c2l6ZXM+CiAgICA8c2l6ZT4xMDczMjggYnl0ZXM8L3NpemU+CiAgPC9zaXplcz4KICA8dmVyc2lvbj4xPC92ZXJzaW9uPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9wdWJsaWNkb21haW4vemVyby8xLjAvIj5DQzAgMS4wIFVuaXZlcnNhbCAoQ0MwIDEuMCkgUHVibGljIERvbWFpbiBEZWRpY2F0aW9uPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+CiAgICAgIFBsYXNtb2RpdW0gZmFsY2lwYXJ1bSBpcyB0aGUgbWFqb3IgaHVtYW4gbWFsYXJpYSBhZ2VudCByZXNwb25zaWJsZSBmb3IgMjAwCiAgICAgIHRvIDMwMCBtaWxsaW9uIGluZmVjdGlvbnMgYW5kIG9uZSB0byB0aHJlZSBtaWxsaW9uIGRlYXRocyBhbm51YWxseSwgbWFpbmx5CiAgICAgIGFtb25nIEFmcmljYW4gaW5mYW50cy4gVGhlIG9yaWdpbiBhbmQgZXZvbHV0aW9uIG9mIHRoaXMgcGF0aG9nZW4gd2l0aGluCiAgICAgIHRoZSBodW1hbiBsaW5lYWdlIGlzIHN0aWxsIHVucmVzb2x2ZWQuIEEgc2luZ2xlIHNwZWNpZXMsIFAuIHJlaWNoZW5vd2ksCiAgICAgIHdoaWNoIGluZmVjdHMgY2hpbXBhbnplZXMsIGlzIGtub3duIHRvIGJlIGEgY2xvc2Ugc2lzdGVyIGxpbmVhZ2Ugb2YgUC4KICAgICAgZmFsY2lwYXJ1bS4gSGVyZSB3ZSByZXBvcnQgdGhlIGRpc2NvdmVyeSBvZiBhIG5ldyBQbGFzbW9kaXVtIHNwZWNpZXMKICAgICAgaW5mZWN0aW5nIEhvbWluaWRzLiBUaGlzIG5ldyBzcGVjaWVzIGhhcyBiZWVuIGlzb2xhdGVkIGluIHR3byBjaGltcGFuemVlcwogICAgICAoUGFuIHRyb2dsb2R5dGVzKSBrZXB0IGFzIHBldHMgYnkgdmlsbGFnZXJzIGluIEdhYm9uIChBZnJpY2EpLiBBbmFseXNpcyBvZgogICAgICBpdHMgY29tcGxldGUgbWl0b2Nob25kcmlhbCBnZW5vbWUgKDU1MjkgbnVjbGVvdGlkZXMgaW5jbHVkaW5nIEN5dCBiLCBDb3ggSQogICAgICBhbmQgQ294IElJSSBnZW5lcykgcmV2ZWFscyBhbiBvbGRlciBkaXZlcmdlbmNlIG9mIHRoaXMgbGluZWFnZSBmcm9tIHRoZQogICAgICBjbGFkZSB0aGF0IGluY2x1ZGVzIFAuIGZhbGNpcGFydW0gYW5kIFAuIHJlaWNoZW5vd2kgKGFwcHJveGltYXRlbHkgMjErLy05CiAgICAgIE15cnMgYWdvIHVzaW5nIEJheWVzaWFuIG1ldGhvZHMgYW5kIGNvbnNpZGVyaW5nIHRoYXQgdGhlIGRpdmVyZ2VuY2UKICAgICAgYmV0d2VlbiBQLiBmYWxjaXBhcnVtIGFuZCBQLiByZWljaGVub3dpIG9jY3VycmVkIDQgdG8gNyBtaWxsaW9uIHllYXJzIGFnbwogICAgICBhcyBnZW5lcmFsbHkgY29uc2lkZXJlZCBpbiB0aGUgbGl0ZXJhdHVyZSkuIFRoaXMgdGltZSBmcmFtZSB3b3VsZCBiZQogICAgICBjb25ncnVlbnQgd2l0aCB0aGUgcmFkaWF0aW9uIG9mIGhvbWlub2lkcywgc3VnZ2VzdGluZyB0aGF0IHRoaXMgUGxhc21vZGl1bQogICAgICBsaW5lYWdlIG1pZ2h0IGhhdmUgYmVlbiBwcmVzZW50IGluIGVhcmx5IGhvbWlub2lkcyBhbmQgdGhhdCB0aGV5IG1heSBib3RoCiAgICAgIGhhdmUgZXhwZXJpZW5jZWQgYSBzaW11bHRhbmVvdXMgZGl2ZXJzaWZpY2F0aW9uLiBJbnZlc3RpZ2F0aW9uIG9mIHRoZQogICAgICBudWNsZWFyIGdlbm9tZSBvZiB0aGlzIG5ldyBzcGVjaWVzIHdpbGwgZnVydGhlciB0aGUgdW5kZXJzdGFuZGluZyBvZiB0aGUKICAgICAgZ2VuZXRpYyBhZGFwdGF0aW9ucyBvZiBQLiBmYWxjaXBhcnVtIHRvIGh1bWFucy4gVGhlIHJpc2sgb2YgdHJhbnNmZXIgYW5kCiAgICAgIGVtZXJnZW5jZSBvZiB0aGlzIG5ldyBzcGVjaWVzIGluIGh1bWFucyBtdXN0IGJlIG5vdyBzZXJpb3VzbHkgY29uc2lkZXJlZAogICAgICBnaXZlbiB0aGF0IGl0IHdhcyBmb3VuZCBpbiB0d28gY2hpbXBhbnplZXMgbGl2aW5nIGluIGNvbnRhY3Qgd2l0aCBodW1hbnMKICAgICAgYW5kIGl0cyBjbG9zZSByZWxhdGVkbmVzcyB0byB0aGUgbW9zdCB2aXJ1bGVudCBhZ2VudCBvZiBtYWxhcmlhLgogICAgPC9kZXNjcmlwdGlvbj4KICAgIDxkZXNjcmlwdGlvbiBkZXNjcmlwdGlvblR5cGU9Ik90aGVyIj4KICAgICAgT2xsb21vX1BMb1NQYXRob2dfMjAwOU51Y2xlb3RpZGUgYWxpZ25tZW50IGNvbmNhdGVuYXRpb24gb2YgNAogICAgICBtaXRvY2hvbmRyaWFsIGdlbmVzIGZvciAxNyBQbGFzbW9kaXVtIHNwZWNpZXMgYW5kIG9uZQogICAgICBvdXRncm91cC5PbGxvbW9fUExvU1BhdGhvZ18yMDA5X1BIWU1MTWF4aW11bSBsaWtlbGlob29kIHRyZWUgaW5mZXJyZWQgZnJvbQogICAgICB0aGUgNC1nZW5lIGNvbmNhdGVuYXRpb24gdXNpbmcgUEhZTUwuCiAgICA8L2Rlc2NyaXB0aW9uPgogIDwvZGVzY3JpcHRpb25zPgogIDxnZW9Mb2NhdGlvbnM+CiAgICA8Z2VvTG9jYXRpb24+CiAgICAgIDxnZW9Mb2NhdGlvblBsYWNlPkFmcmljYTwvZ2VvTG9jYXRpb25QbGFjZT4KICAgIDwvZ2VvTG9jYXRpb24+CiAgPC9nZW9Mb2NhdGlvbnM+CjwvcmVzb3VyY2U+","url":"https://datadryad.org/stash/dataset/doi:10.5061/dryad.8515","contentUrl":null,"metadataVersion":21,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"viewCount":223,"viewsOverTime":[{"yearMonth":"2014-11","total":1},{"yearMonth":"2015-03","total":4},{"yearMonth":"2015-04","total":4},{"yearMonth":"2015-05","total":3},{"yearMonth":"2015-08","total":8},{"yearMonth":"2015-09","total":4},{"yearMonth":"2015-11","total":1},{"yearMonth":"2016-01","total":2},{"yearMonth":"2016-04","total":2},{"yearMonth":"2016-08","total":1},{"yearMonth":"2017-01","total":19},{"yearMonth":"2017-02","total":26},{"yearMonth":"2017-03","total":13},{"yearMonth":"2017-04","total":8},{"yearMonth":"2017-05","total":8},{"yearMonth":"2017-06","total":5},{"yearMonth":"2017-08","total":2},{"yearMonth":"2017-09","total":5},{"yearMonth":"2018-01","total":4},{"yearMonth":"2018-02","total":1},{"yearMonth":"2018-04","total":1},{"yearMonth":"2018-10","total":2},{"yearMonth":"2018-12","total":1},{"yearMonth":"2019-01","total":2},{"yearMonth":"2019-02","total":1},{"yearMonth":"2019-04","total":5},{"yearMonth":"2019-05","total":1},{"yearMonth":"2019-06","total":2},{"yearMonth":"2019-07","total":2},{"yearMonth":"2019-08","total":1},{"yearMonth":"2019-10","total":4},{"yearMonth":"2019-12","total":3},{"yearMonth":"2020-01","total":3},{"yearMonth":"2020-02","total":4},{"yearMonth":"2020-03","total":1},{"yearMonth":"2020-04","total":4},{"yearMonth":"2020-05","total":6},{"yearMonth":"2020-07","total":6},{"yearMonth":"2020-08","total":1},{"yearMonth":"2020-09","total":2},{"yearMonth":"2020-10","total":4},{"yearMonth":"2020-11","total":4},{"yearMonth":"2020-12","total":2},{"yearMonth":"2021-01","total":11},{"yearMonth":"2021-02","total":1},{"yearMonth":"2021-03","total":2},{"yearMonth":"2021-04","total":6},{"yearMonth":"2021-06","total":6},{"yearMonth":"2021-07","total":3},{"yearMonth":"2021-08","total":3},{"yearMonth":"2021-09","total":1},{"yearMonth":"2023-04","total":2},{"yearMonth":"2023-05","total":5}],"downloadCount":25,"downloadsOverTime":[{"yearMonth":"2014-11","total":1},{"yearMonth":"2015-03","total":1},{"yearMonth":"2015-04","total":2},{"yearMonth":"2015-08","total":2},{"yearMonth":"2015-09","total":2},{"yearMonth":"2017-02","total":2},{"yearMonth":"2017-04","total":2},{"yearMonth":"2017-05","total":2},{"yearMonth":"2017-06","total":1},{"yearMonth":"2019-10","total":1},{"yearMonth":"2020-02","total":1},{"yearMonth":"2020-05","total":1},{"yearMonth":"2020-11","total":1},{"yearMonth":"2021-01","total":5},{"yearMonth":"2021-02","total":1}],"referenceCount":1,"citationCount":1,"citationsOverTime":[{"year":"2019","total":1}],"partCount":2,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2011-11-22T18:34:51.000Z","registered":"2011-02-01T17:32:02.000Z","published":"2011","updated":"2023-06-14T00:05:14.000Z"},"relationships":{"client":{"data":{"id":"dryad.dryad","type":"clients"}},"provider":{"data":{"id":"dryad","type":"providers"}},"media":{"data":{"id":"10.5061/dryad.8515","type":"media"}},"references":{"data":[{"id":"10.1371/journal.ppat.1000446","type":"dois"}]},"citations":{"data":[{"id":"10.1371/journal.ppat.1000446","type":"dois"}]},"parts":{"data":[{"id":"10.5061/dryad.8515/1","type":"dois"},{"id":"10.5061/dryad.8515/2","type":"dois"}]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"dryad.dryad","type":"clients","attributes":{"name":"DRYAD","symbol":"DRYAD.DRYAD","year":2018,"alternateName":null,"description":"DataDryad.org
+        is a curated general-purpose repository that makes the data underlying scientific
+        publications discoverable, freely reusable, and citable.\r\nDryad is an international
+        repository of data underlying peer-reviewed scientific and medical literature,
+        particularly data for which no specialized repository exists. The content
+        is considered to be integral to the published research. All material in Dryad
+        is associated with a scholarly publication","language":[],"clientType":"repository","domains":"*","re3data":"https://doi.org/10.17616/R34S33","opendoar":null,"issn":{},"url":"https://datadryad.org","created":"2018-04-24T20:59:15.000Z","updated":"2023-03-16T09:26:32.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"dryad","type":"providers"}},"prefixes":{"data":[{"id":"10.5061","type":"prefixes"},{"id":"10.15146","type":"prefixes"}]}}}]}'
+  recorded_at: Sun, 18 Jun 2023 15:23:42 GMT
+recorded_with: VCR 6.1.0

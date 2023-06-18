@@ -19,7 +19,7 @@ describe Commonmeta::Metadata, vcr: true do
                                      { 'affiliation' => 'Juelich Supercomputing Centre, Jülich, Germany',
                                        'family-names' => 'Speck',
                                        'given-names' => 'Robert' }])
-      expect(json['title']).to eq('Pypint -- Python Framework For Parallel-In-Time Methods')
+      expect(json['title']).to eq('PyPinT -- Python Framework for Parallel-in-Time Methods')
       expect(json['abstract']).to start_with('<em>PyPinT</em>')
       expect(json['date-released']).to eq('2014')
       expect(json['repository-code']).to eq('https://zenodo.org/record/10164')
@@ -48,7 +48,7 @@ describe Commonmeta::Metadata, vcr: true do
                                       'Instituut voor Kern- en Stralingsfysica, KU Leuven, 3001 Leuven, België',
                                        'family-names' => 'Heylen',
                                        'given-names' => 'Hanne' }])
-      expect(json['title']).to eq('Satlas: Simulation And Analysis Toolbox For Laser Spectroscopy And Nmr Experiments')
+      expect(json['title']).to eq('satlas: Simulation and Analysis Toolbox for Laser Spectroscopy and NMR experiments')
       expect(json['abstract']).to eq('Initial release of the satlas Python package for the analysis and simulation for laser spectroscopy experiments. For the documentation, see http://woutergins.github.io/satlas/')
       expect(json['date-released']).to eq('2015')
       expect(json['repository-code']).to eq('https://zenodo.org/record/15497')
@@ -71,7 +71,7 @@ describe Commonmeta::Metadata, vcr: true do
                                      { 'name' => 'The Ruby Citation File Format Developers' }])
       expect(json['title']).to eq('Ruby CFF Library')
       expect(json['abstract']).to eq('This library provides a Ruby interface to manipulate Citation File Format files')
-      expect(json['date-released']).to eq('2022-11-05')
+      expect(json['date-released']).to eq('2023-04-10')
       expect(json['repository-code']).to eq('https://github.com/citation-file-format/ruby-cff')
       expect(json['keywords']).to eq(['Ruby', 'Credit', 'Software citation', 'Research software',
                                       'Software sustainability', 'Metadata', 'Citation file format', 'Cff'])

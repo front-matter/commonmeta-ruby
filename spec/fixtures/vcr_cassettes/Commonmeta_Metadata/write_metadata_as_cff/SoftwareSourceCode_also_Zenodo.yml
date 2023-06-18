@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.5281/zenodo.15497?include=media,client
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.datacite.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:23:30 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 8a5c8b80-e028-419b-b8ce-dd24d8b93904
+      X-Download-Options:
+      - noopen
+      Etag:
+      - W/"9049092b37a269564c2fb4fa3e2e89f5"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.050097'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.17
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.5281/zenodo.15497","type":"dois","attributes":{"doi":"10.5281/zenodo.15497","prefix":"10.5281","suffix":"zenodo.15497","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Gins,
+        Wouter","givenName":"Wouter","familyName":"Gins","affiliation":["Instituut
+        voor Kern- en Stralingsfysica, KU Leuven, 3001 Leuven, België"],"nameIdentifiers":[]},{"name":"de
+        Groote, Ruben","givenName":"Ruben","familyName":"de Groote","affiliation":["Instituut
+        voor Kern- en Stralingsfysica, KU Leuven, 3001 Leuven, België"],"nameIdentifiers":[]},{"name":"Heylen,
+        Hanne","givenName":"Hanne","familyName":"Heylen","affiliation":["Instituut
+        voor Kern- en Stralingsfysica, KU Leuven, 3001 Leuven, België"],"nameIdentifiers":[]}],"titles":[{"title":"satlas:
+        Simulation and Analysis Toolbox for Laser Spectroscopy and NMR experiments"}],"publisher":"Zenodo","container":{},"publicationYear":2015,"subjects":[],"contributors":[],"dates":[{"date":"2015-02-18","dateType":"Issued"}],"language":null,"types":{"ris":"COMP","bibtex":"misc","citeproc":"article","schemaOrg":"SoftwareSourceCode","resourceTypeGeneral":"Software"},"relatedIdentifiers":[{"relationType":"IsSupplementTo","relatedIdentifier":"https://github.com/woutergins/satlas/tree/v1.0.0","relatedIdentifierType":"URL"}],"relatedItems":[],"sizes":[],"formats":[],"version":null,"rightsList":[{"rights":"MIT
+        License","rightsUri":"https://opensource.org/licenses/MIT","schemeUri":"https://spdx.org/licenses/","rightsIdentifier":"mit","rightsIdentifierScheme":"SPDX"},{"rights":"Open
+        Access","rightsUri":"info:eu-repo/semantics/openAccess"}],"descriptions":[{"description":"Initial
+        release of the satlas Python package for the analysis and simulation for laser
+        spectroscopy experiments. For the documentation, see http://woutergins.github.io/satlas/","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC41MjgxL1pFTk9ETy4xNTQ5NzwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lPkdpbnMsIFdvdXRlcjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+V291dGVyPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkdpbnM8L2ZhbWlseU5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5JbnN0aXR1dXQgdm9vciBLZXJuLSBlbiBTdHJhbGluZ3NmeXNpY2EsIEtVIExldXZlbiwgMzAwMSBMZXV2ZW4sIEJlbGdpw6s8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5kZSBHcm9vdGUsIFJ1YmVuPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5SdWJlbjwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5kZSBHcm9vdGU8L2ZhbWlseU5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5JbnN0aXR1dXQgdm9vciBLZXJuLSBlbiBTdHJhbGluZ3NmeXNpY2EsIEtVIExldXZlbiwgMzAwMSBMZXV2ZW4sIEJlbGdpw6s8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5IZXlsZW4sIEhhbm5lPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5IYW5uZTwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5IZXlsZW48L2ZhbWlseU5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbj5JbnN0aXR1dXQgdm9vciBLZXJuLSBlbiBTdHJhbGluZ3NmeXNpY2EsIEtVIExldXZlbiwgMzAwMSBMZXV2ZW4sIEJlbGdpw6s8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5zYXRsYXM6IFNpbXVsYXRpb24gYW5kIEFuYWx5c2lzIFRvb2xib3ggZm9yIExhc2VyIFNwZWN0cm9zY29weSBhbmQgTk1SIGV4cGVyaW1lbnRzPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPlplbm9kbzwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAxNTwvcHVibGljYXRpb25ZZWFyPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMTUtMDItMTg8L2RhdGU+CiAgPC9kYXRlcz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IlNvZnR3YXJlIi8+CiAgPGFsdGVybmF0ZUlkZW50aWZpZXJzPgogICAgPGFsdGVybmF0ZUlkZW50aWZpZXIgYWx0ZXJuYXRlSWRlbnRpZmllclR5cGU9InVybCI+aHR0cHM6Ly96ZW5vZG8ub3JnL3JlY29yZC8xNTQ5NzwvYWx0ZXJuYXRlSWRlbnRpZmllcj4KICA8L2FsdGVybmF0ZUlkZW50aWZpZXJzPgogIDxyZWxhdGVkSWRlbnRpZmllcnM+CiAgICA8cmVsYXRlZElkZW50aWZpZXIgcmVsYXRlZElkZW50aWZpZXJUeXBlPSJVUkwiIHJlbGF0aW9uVHlwZT0iSXNTdXBwbGVtZW50VG8iPmh0dHBzOi8vZ2l0aHViLmNvbS93b3V0ZXJnaW5zL3NhdGxhcy90cmVlL3YxLjAuMDwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cHM6Ly9vcGVuc291cmNlLm9yZy9saWNlbnNlcy9NSVQiPk1JVCBMaWNlbnNlPC9yaWdodHM+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaW5mbzpldS1yZXBvL3NlbWFudGljcy9vcGVuQWNjZXNzIj5PcGVuIEFjY2VzczwvcmlnaHRzPgogIDwvcmlnaHRzTGlzdD4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPiZsdDtwJmd0O0luaXRpYWwgcmVsZWFzZSBvZiB0aGUgc2F0bGFzIFB5dGhvbiBwYWNrYWdlIGZvciB0aGUgYW5hbHlzaXMgYW5kIHNpbXVsYXRpb24gZm9yIGxhc2VyIHNwZWN0cm9zY29weSZhbXA7bmJzcDtleHBlcmltZW50cy4gRm9yIHRoZSBkb2N1bWVudGF0aW9uLCBzZWUmYW1wO25ic3A7aHR0cDovL3dvdXRlcmdpbnMuZ2l0aHViLmlvL3NhdGxhcy8mbHQ7L3AmZ3Q7PC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=","url":"https://zenodo.org/record/15497","contentUrl":null,"metadataVersion":6,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":1,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2015-02-18T16:41:02.000Z","registered":"2015-02-18T16:41:03.000Z","published":"2015","updated":"2023-04-25T21:10:25.000Z"},"relationships":{"client":{"data":{"id":"cern.zenodo","type":"clients"}},"provider":{"data":{"id":"cern","type":"providers"}},"media":{"data":{"id":"10.5281/zenodo.15497","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"cern.zenodo","type":"clients","attributes":{"name":"Zenodo","symbol":"CERN.ZENODO","year":2013,"alternateName":"Research.
+        Shared","description":"ZENODO builds and operates a simple and innovative
+        service that enables researchers, scientists, EU projects and institutions
+        to share and showcase multidisciplinary research results (data and publications)
+        that are not part of the existing institutional or subject-based repositories
+        of the research communities.\r\nZENODO enables researchers, scientists, EU
+        projects and institutions to:\r\neasily share the long tail of small research
+        results in a wide variety of formats including text, spreadsheets, audio,
+        video, and images across all fields of science.\r\ndisplay their research
+        results and get credited by making the research results citable and integrate
+        them into existing reporting lines to funding agencies like the European Commission.\r\neasily
+        access and reuse shared research results.","language":["en"],"clientType":"repository","domains":"openaire.cern.ch,zenodo.org","re3data":"https://doi.org/10.17616/R3QP53","opendoar":null,"issn":{},"url":"https://zenodo.org/","created":"2013-01-28T12:07:48.000Z","updated":"2020-06-26T12:22:29.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"cern","type":"providers"}},"prefixes":{"data":[{"id":"10.5281","type":"prefixes"}]}}}]}'
+  recorded_at: Sun, 18 Jun 2023 15:23:30 GMT
+recorded_with: VCR 6.1.0

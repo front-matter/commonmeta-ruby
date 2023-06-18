@@ -10,7 +10,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/f3629c86-06e0-42c0-844a-266b03a91ef1"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://iphylo.blogspot.com/2023/05/ten-years-and-million-links.html")
+      expect(subject.id).to eq("https://doi.org/10.59350/37y2z-gre70")
       expect(subject.url).to eq("https://iphylo.blogspot.com/2023/05/ten-years-and-million-links.html")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "f3629c86-06e0-42c0-844a-266b03a91ef1", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -19,7 +19,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Ten years and a million links" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2023-05-31")
+      expect(subject.date).to eq("published"=>"2023-05-31", "updated"=>"2023-05-31")
       expect(subject.descriptions.first["description"]).to start_with("As trailed on a Twitter thread last week I’ve been working on a manuscript describing the efforts to map taxonomic names to their original descriptions in the taxonomic literature.")
       expect(subject.publisher).to eq("name" => "iPhylo")
       expect(subject.subjects).to eq([{ "subject" => "Natural sciences" },
@@ -58,7 +58,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/c3095752-2af0-40a4-a229-3ceb7424bce2"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://www.ideasurg.pub/residency-visual-abstract")
+      expect(subject.id).to eq("https://doi.org/10.59350/kj95y-gp867")
       expect(subject.url).to eq("https://www.ideasurg.pub/residency-visual-abstract")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "c3095752-2af0-40a4-a229-3ceb7424bce2", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -82,7 +82,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/6179ad80-cc7f-4904-9260-0ecb3c3a90ba"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://www.ideasurg.pub/academic-powerhouse")
+      expect(subject.id).to eq("https://doi.org/10.59350/ytvy2-59450")
       expect(subject.url).to eq("https://www.ideasurg.pub/academic-powerhouse")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "6179ad80-cc7f-4904-9260-0ecb3c3a90ba", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -130,7 +130,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/1c578558-1324-4493-b8af-84c49eabc52f"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("http://wisspub.net/?p=20455")
+      expect(subject.id).to eq("https://doi.org/10.59350/kz04m-s8z58")
       expect(subject.url).to eq("https://wisspub.net/2023/05/23/eu-mitgliedstaaten-betonen-die-rolle-von-wissenschaftsgeleiteten-open-access-modellen-jenseits-von-apcs")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "1c578558-1324-4493-b8af-84c49eabc52f", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -154,7 +154,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/4e4bf150-751f-4245-b4ca-fe69e3c3bb24"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("http://svpow.com/?p=20992")
+      expect(subject.id).to eq("https://doi.org/10.59350/hke8v-d1e66")
       expect(subject.url).to eq("https://svpow.com/2023/06/09/new-paper-curtice-et-al-2023-on-the-first-haplocanthosaurus-from-dry-mesa")
       expect(subject.type).to eq("Article")
       expect(subject.creators.length).to eq(1)
@@ -205,7 +205,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/efdacb04-bcec-49d7-b689-ab3eab0634bf"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2")
+      expect(subject.id).to eq("https://doi.org/10.59350/zwdq7-waa43")
       expect(subject.url).to eq("https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "efdacb04-bcec-49d7-b689-ab3eab0634bf", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -255,7 +255,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/1898d2d7-4d87-4487-96c4-3073cf99e9a5"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("http://sfmatheson.blogspot.com/2023/01/quintessence-of-dust-2023-restart-why.html")
+      expect(subject.id).to eq("https://doi.org/10.59350/63055-a8604")
       expect(subject.url).to eq("http://sfmatheson.blogspot.com/2023/01/quintessence-of-dust-2023-restart-why.html")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "1898d2d7-4d87-4487-96c4-3073cf99e9a5", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -303,24 +303,24 @@ describe Commonmeta::Metadata, vcr: true do
     end
   end
 
-  context "get json_feed" do
+  context "get json_feed", vcr: true do
     it "unregistered posts" do
       response = subject.get_json_feed_unregistered
-      expect(response).to eq("ca2a7df4-f3b9-487c-82e9-27f54de75ea8")
+      expect(response).to be_nil
     end
 
     it "not indexed posts" do
       response = subject.get_json_feed_not_indexed("2023-01-01")
-      expect(response).to eq("ab58e412-06eb-42b7-b81a-d340825b9d48")
+      expect(response).to eq("ca2a7df4-f3b9-487c-82e9-27f54de75ea8")
     end
 
     it "by blog_id" do
       response = subject.get_json_feed_by_blog("tyfqw20")
-      expect(response).to eq("3e1278f6-e7c0-43e1-bb54-6829e1344c0d")
+      expect(response).to eq("0807f515-f31d-4e2c-9e6f-78c3a9668b9d")
     end
   end
 
-  context "get doi_prefix for blog" do
+  context "get doi_prefix for blog", vcr: true do
     it "by blog_id" do
       response = subject.get_doi_prefix_by_blog_id("tyfqw20")
       expect(response).to eq("10.59350")

@@ -85,8 +85,7 @@ describe Commonmeta::Metadata, vcr: true do
         expect(subject.date).to eq('published' => '2021-08-24T16:57:24Z',
                                    'updated' => '2022-08-15T19:05:14Z')
         expect(subject.references.length).to eq(0)
-        expect(subject.container).to eq('identifier' => '2749-9952', 'identifierType' => 'ISSN',
-                                        'title' => 'Front Matter', 'type' => 'Periodical')
+        expect(subject.container).to eq("identifier"=>"https://blog.front-matter.io/", "identifierType"=>"URL", "title"=>"Front Matter", "type"=>"Periodical")
         expect(subject.publisher).to eq('name' => 'Front Matter')
       end
     end
@@ -178,7 +177,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.subjects).to eq([{ 'subject' => 'Interviews' }])
       expect(subject.publisher).to eq('name' => 'Upstream')
       expect(subject.date).to eq('published' => '2022-11-15T10:29:38Z',
-                                 'updated' => '2023-01-11T22:58:48Z')
+                                 'updated' => '2023-06-17T20:18:54Z')
       expect(subject.license).to eq('id' => 'CC-BY-4.0',
                                     'url' => 'https://creativecommons.org/licenses/by/4.0/legalcode')
     end

@@ -206,7 +206,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.descriptions.first['description']).to start_with('This article presents a practical roadmap')
       expect(subject.date).to include('published' => '2017-10-09',
                                       'registered' => '2019-07-16',
-                                      'updated' => '2020-01-17')
+                                      'updated' => '2020-01-18')
       expect(subject.publisher).to eq('name' => 'Cold Spring Harbor Laboratory')
       expect(subject.provider).to eq('Crossref')
     end
@@ -336,7 +336,7 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'crossref_xml')
       # expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.1038/hdy.2013.26')
-      expect(subject.url).to eq('http://www.nature.com/articles/hdy201326')
+      expect(subject.url).to eq('https://www.nature.com/articles/hdy201326')
       expect(subject.type).to eq('JournalArticle')
       expect(subject.creators.length).to eq(2)
       expect(subject.creators.first).to eq('familyName' => 'Gross', 'givenName' => 'J B',
@@ -344,7 +344,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ 'title' => 'Albinism in phylogenetically and geographically distinct populations of Astyanax cavefish arises through the same loss-of-function Oca2 allele' }])
       expect(subject.date).to include('published' => '2013-04-10',
                                       'registered' => '2019-04-16',
-                                      'updated' => '2021-12-02')
+                                      'updated' => '2023-05-18')
       expect(subject.publisher).to eq('name' => 'Springer Science and Business Media LLC')
       expect(subject.references.size).to eq(41)
       expect(subject.references.last).to eq('containerTitle' => 'Biol J Linn Soc',
@@ -603,7 +603,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ 'title' => 'Synthesis, Crystal Structure and Theoretical Calculation of a Novel Nickel(II) Complex with Dibromotyrosine and 1,10-Phenanthroline' }])
       expect(subject.date).to eq('published' => '2013-10-20',
                                  'registered' => '2013-11-25',
-                                 'updated' => '2016-12-15')
+                                 'updated' => '2016-12-14')
       expect(subject.publisher).to eq('name' => 'Korean Chemical Society')
       expect(subject.provider).to eq('KISTI')
     end
@@ -654,7 +654,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([
                                      { 'title' => 'Distances, absence, proximités et présences : des concepts en déplacement' }, { 'title' => 'Distance(s), proximity and presence(s): evolving concepts' }
                                    ])
-      expect(subject.date).to include('published' => '2014-12-14', 'updated' => '2022-05-02')
+      expect(subject.date).to include('published' => '2014-12-14', 'updated' => '2023-06-14')
       expect(subject.publisher).to eq('name' => 'OpenEdition')
       expect(subject.provider).to eq('Crossref')
     end
@@ -783,14 +783,14 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input, from: 'crossref_xml')
       # expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.1038/ng.3834')
-      expect(subject.url).to eq('http://www.nature.com/articles/ng.3834')
+      expect(subject.url).to eq('https://www.nature.com/articles/ng.3834')
       expect(subject.type).to eq('JournalArticle')
       expect(subject.creators.length).to eq(14)
       expect(subject.creators.last).to eq('name' => 'GTEx Consortium', 'type' => 'Organization')
       expect(subject.titles).to eq([{ 'title' => 'The impact of structural variation on human gene expression' }])
       expect(subject.date).to include('published' => '2017-04-03',
                                       'registered' => '2019-11-02',
-                                      'updated' => '2021-12-02')
+                                      'updated' => '2023-05-18')
       expect(subject.publisher).to eq('name' => 'Springer Science and Business Media LLC')
       expect(subject.provider).to eq('Crossref')
     end

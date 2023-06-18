@@ -339,7 +339,7 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.1038/hdy.2013.26')
-      expect(subject.url).to eq('http://www.nature.com/articles/hdy201326')
+      expect(subject.url).to eq('https://www.nature.com/articles/hdy201326')
       expect(subject.type).to eq('JournalArticle')
       expect(subject.creators.length).to eq(2)
       expect(subject.creators.first).to eq('type' => 'Person', 'familyName' => 'Gross',
@@ -638,7 +638,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.type).to eq('JournalArticle')
       expect(subject.creators).to eq([{ 'familyName' => 'Peraya', 'givenName' => 'Daniel',
                                         'type' => 'Person' }])
-      expect(subject.titles).to eq([{ 'title' => 'Distances, absence, proximités et présences : des concepts en déplacement' }])
+      expect(subject.titles).to eq([{ 'title' => 'Distance(s), proximity and presence(s): evolving concepts' }])
       expect(subject.date).to include('published' => '2014-12-14')
       expect(subject.publisher).to eq('id' => 'https://api.crossref.org/members/2399',
                                       'name' => 'OpenEdition')
@@ -753,7 +753,7 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq('https://doi.org/10.1038/ng.3834')
-      expect(subject.url).to eq('http://www.nature.com/articles/ng.3834')
+      expect(subject.url).to eq('https://www.nature.com/articles/ng.3834')
       expect(subject.type).to eq('JournalArticle')
       expect(subject.creators.length).to eq(14)
       expect(subject.creators[1]).to eq('name' => 'GTEx Consortium', 'type' => 'Organization')

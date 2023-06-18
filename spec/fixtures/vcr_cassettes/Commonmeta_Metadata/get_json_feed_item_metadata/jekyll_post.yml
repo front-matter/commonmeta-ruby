@@ -1,0 +1,92 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/posts/efdacb04-bcec-49d7-b689-ab3eab0634bf
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '4392'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 18 Jun 2023 15:23:55 GMT
+      Etag:
+      - '"ycacoeuxrd3dc"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/posts/[slug]"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::ggx5p-1687101834699-a0c68d92d540
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":"https://doi.org/10.59350/zwdq7-waa43","uuid":"efdacb04-bcec-49d7-b689-ab3eab0634bf","url":"https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2/","title":"Seeking
+        Public Comment on CSL 1.0.2 Release","summary":"Over the past few months,
+        Citation Style Language developers have worked to address a backlog of feature
+        requests. This work will be reflected in two upcoming releases. The first
+        of these, 1.0.2, is slated for release shortly. Its focus is on easy to implement,
+        non-controversial additions, principally new item types, fields, and terms.
+        We’re seeking public comment on the planned released from now until July 26,
+        2020, 12pm EDT. A non-technical summary of the release can be found in a google...","date_published":"2020-07-11T00:00:00Z","date_modified":"2020-07-11T00:00:00Z","date_indexed":"2023-06-16T11:41:56.92011+00:00","authors":[{"url":null,"name":"Sebastian
+        Karcher"}],"image":null,"content_html":"<p>Over the past few months, Citation
+        Style Language developers have worked to address a backlog of feature requests.
+        This work will be reflected in two upcoming releases. The first of these,
+        1.0.2, is slated for release shortly. Its focus is on easy to implement, non-controversial
+        additions, principally new item types, fields, and terms. We’re seeking public
+        comment on the planned released from now until <strong>July 26, 2020, 12pm
+        EDT</strong>.</p>\n\n<p>A non-technical summary of the release can be found
+        in a <a href=\"https://docs.google.com/document/d/1wY1cOOamDYYh8VNW7h_uleqieBDGOa_LYsRiVdQy1RI/edit#heading=h.wsywjzy5t4j6\">google
+        doc here</a>. For more technical details, you can follow the development on
+        the <a href=\"https://github.com/orgs/citation-style-language/projects/3\">github
+        project board</a>. We welcome feedback directly on the google doc, in specific
+        github issues, or on our <a href=\"https://discourse.citationstyles.org/\">forums</a>.</p>\n\n<p>Tremendous
+        thanks to Bruce D’Arcus, Denis Maier, and Brenton Wiernik, who did the bulk
+        of the work of organizing proposals accumulated over the last 8 years and
+        preparing the release.</p>\n\n<h2 id=\"previewing-csl-11\">Previewing CSL
+        1.1</h2>\n<p>CSL 1.1, slated for release later this year, will include more
+        significant extensions of CSL functionality. While we’ll have a separate public
+        comment period for this release, we’re happy for input on the ongoing discussions
+        on github and the forums. In particular, we’re eager to hear from projects
+        implementing CSL styles, both in a citeproc and in user-facing applications
+        such as reference managers or citation formatters.</p>\n\n<p>This release
+        will primarily add the following new features:</p>\n<ul>\n  <li>Full support
+        for narrative citation styles (“Like Doe (2018)”).</li>\n  <li>Ability to
+        specify more complex conditional logic.</li>\n  <li>Ability to independently
+        format subtitles and main titles.</li>\n  <li>A new “related” attribute to
+        express related reviewed and original items (still in discussion).</li>\n  <li>Improvements
+        to the CSL input format(s):\n    <ul>\n      <li>Adopting the new EDTF ISO
+        standard, which offers full support for date ranges, seasons, uncertain and
+        approximate qualifiers, and decades and centuries.</li>\n      <li>A new “custom”
+        property to add extension metadata.</li>\n      <li>New related modelling
+        to match the new style attribute (as above, still in discussion).</li>\n      <li>An
+        official YAML representation, which can be validated with the same JSON schemas.</li>\n    </ul>\n  </li>\n</ul>","tags":[],"language":"en","references":[],"blog_id":"prmb582","blog":{"id":"prmb582","title":"Citation
+        Style Language","description":"CitationStyles.org, home of the Citation Style
+        Language (CSL), a popular open XML-based language to describe the formatting
+        of citations and bibliographies.","language":"en","favicon":null,"feed_url":"https://citationstyles.org/feed.xml","home_page_url":"https://citationstyles.org/","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T08:18:29+00:00","indexed_at":"2023-04-25","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Jekyll
+        3.9.3","category":"Engineering and Technology","prefix":"10.59350","modified_at":"2020-07-11T00:00:00+00:00","version":"https://jsonfeed.org/version/1.1","backlog":false,"authors":null}}'
+  recorded_at: Sun, 18 Jun 2023 15:23:55 GMT
+recorded_with: VCR 6.1.0

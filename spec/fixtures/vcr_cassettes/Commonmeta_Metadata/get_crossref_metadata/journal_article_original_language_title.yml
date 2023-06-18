@@ -1,0 +1,276 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.7600
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:21:32 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=V8XZsy6K3L46AGaICHaAHYEnLz60dJHyLv0in82NjK1QsIe5vGpkZBiU0DJgfI1qyLeSVhfUFYDB7%2BoK%2BqiuUVX251KnQ%2BPQQcOwvil%2FSw8by3%2BfpAqgcqjp%2BBTWWuzTM9dOrNU%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7d9485c8e8490e84-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.7600",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 18 Jun 2023 15:21:32 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.7600/jspfsm.56.60
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:21:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,4,3]],"date-time":"2022-04-03T07:37:27Z","timestamp":1648971447572},"reference-count":7,"publisher":"The
+        Japanese Society of Physical Fitness and Sports Medicine","issue":"1","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":["Tairyoku
+        Kagaku","Jpn. J. Phys. Fitness Sports Med."],"published-print":{"date-parts":[[2007]]},"DOI":"10.7600\/jspfsm.56.60","type":"journal-article","created":{"date-parts":[[2012,8,30]],"date-time":"2012-08-30T04:10:55Z","timestamp":1346299855000},"page":"60-60","source":"Crossref","is-referenced-by-count":0,"title":[""],"prefix":"10.7600","volume":"56","member":"4426","reference":[{"key":"1","doi-asserted-by":"crossref","unstructured":"Seals
+        DR Esler MD J Physiol. 528 : 407-417, 2000","DOI":"10.1111\/j.1469-7793.2000.00407.x"},{"key":"2","doi-asserted-by":"crossref","unstructured":"Akselrod
+        S et al. Science 213 : 220-222, 1981","DOI":"10.1126\/science.6166045"},{"key":"3","doi-asserted-by":"crossref","unstructured":"Parati
+        G et al. J Hypertens. 18 : 7-19, 2000","DOI":"10.1097\/00004872-200018010-00003"},{"key":"4","doi-asserted-by":"crossref","unstructured":"Yamamoto
+        K et al. MSSE. 33 : 1496-502, 2001","DOI":"10.1097\/00005768-200109000-00012"},{"key":"5","doi-asserted-by":"crossref","unstructured":"Parati
+        G, Bernardi L. J Hypertens. 24 : 1009-1012, 2006","DOI":"10.1097\/01.hjh.0000226186.83192.93"},{"key":"6","doi-asserted-by":"crossref","unstructured":"Miyachi
+        et al. Circulation. 110(18): 2858-2863, 2004","DOI":"10.1161\/01.CIR.0000146380.08401.99"},{"key":"7","doi-asserted-by":"crossref","unstructured":"Cheitlin
+        MD et al. Circulation 95 : 1686-1744, 1997","DOI":"10.1161\/01.CIR.95.6.1686"}],"container-title":["Japanese
+        Journal of Physical Fitness and Sports Medicine"],"original-title":["\u81ea\u5f8b\u795e\u7d4c\u30fb\u5faa\u74b0\u5668\u5fdc\u7b54"],"language":"en","link":[{"URL":"https:\/\/www.jstage.jst.go.jp\/article\/jspfsm\/56\/1\/56_1_60\/_pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,5,20]],"date-time":"2021-05-20T22:32:01Z","timestamp":1621549921000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.jstage.jst.go.jp\/article\/jspfsm\/56\/1\/56_1_60\/_article\/-char\/ja\/"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2007]]},"references-count":7,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2007]]}},"URL":"http:\/\/dx.doi.org\/10.7600\/jspfsm.56.60","relation":{},"ISSN":["0039-906X","1881-4751"],"issn-type":[{"value":"0039-906X","type":"print"},{"value":"1881-4751","type":"electronic"}],"subject":["Physical
+        Therapy, Sports Therapy and Rehabilitation","Orthopedics and Sports Medicine"],"published":{"date-parts":[[2007]]}}}'
+  recorded_at: Sun, 18 Jun 2023 15:21:32 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/4426
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:21:33 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687045141008,"primary-name":"The
+        Japanese Society of Physical Fitness and Sports Medicine","counts":{"current-dois":659,"backfile-dois":5116,"total-dois":5775},"breakdowns":{"dois-by-issued-year":[[2014,299],[2016,284],[2013,274],[2022,265],[2020,237],[2015,231],[2012,227],[2017,204],[2006,201],[2023,197],[2021,197],[2018,195],[2019,175],[2011,151],[2010,148],[2007,147],[2008,144],[2009,115],[2005,99],[2003,94],[1998,67],[2001,66],[1992,66],[1999,63],[1993,62],[1997,61],[1996,59],[1958,57],[2004,56],[2000,56],[1985,56],[1994,54],[1995,52],[1991,50],[1960,47],[1990,46],[2002,45],[1988,44],[1982,41],[1956,41],[1987,38],[1952,36],[1959,35],[1986,34],[1981,34],[1951,34],[1963,30],[1984,29],[1961,29],[1980,27],[1976,27],[1955,27],[1983,26],[1979,26],[1954,26],[1950,26],[1964,25],[1989,24],[1973,23],[1953,23],[1977,22],[1971,22],[1978,21],[1974,21],[1972,20],[1975,17],[1966,15],[1957,14],[1965,13],[1962,13],[1970,12],[1968,11],[1967,11],[1969,10],[1949,1]]},"prefixes":["10.7600"],"coverage":{"affiliations-current":0.7374810318664643,"similarity-checking-current":1.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.0,"licenses-backfile":0.0,"funders-current":0.0,"affiliations-backfile":0.3299452697419859,"resource-links-backfile":0.0,"orcids-backfile":0.0,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.0,"similarity-checking-backfile":1.0,"references-backfile":0.2703283815480844,"descriptions-backfile":0.0,"award-numbers-backfile":0.0,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.0,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"references-current":0.3156297420333839},"prefix":[{"name":"The
+        Japanese Society of Physical Fitness and Sports Medicine","value":"10.7600"}],"id":4426,"tokens":["the","japanese","society","of","physical","fitness","and","sports","medicine"],"counts-type":{"all":{"journal-article":5775},"backfile":{"journal-article":5116},"current":{"journal-article":659}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1687045141008,"affiliations":0.3764502164502165,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.2754978354978355,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1687045141008,"affiliations":0.3299452697419859,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.2703283815480844,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1687045141008,"affiliations":0.7374810318664643,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.3156297420333839,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":false,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":false,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":true,"deposits-licenses-current":false},"location":"Japan","names":["The
+        Japanese Society of Physical Fitness and Sports Medicine"]}}'
+  recorded_at: Sun, 18 Jun 2023 15:21:33 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.7600
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:21:33 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=PRRRJHtZE23szMqRr1BC%2FF8%2BNc22F5qqXeEDrCC3lP9ljxqBrsNNxd2DHirPVcGa0%2BxReOReKYJP5XEqFGN4q9t6y54npIPaKoWGDHQOPEs2oufT6lcFgUoeffuYZGIOyAxNSag%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7d9485d1c8760a6d-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.7600",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 18 Jun 2023 15:21:33 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.7600/jspfsm.56.60/transform/application/vnd.crossref.unixsd+xml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:25:27 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.7600/jspfsm.56.60>; rel="canonical", <https://www.jstage.jst.go.jp/article/jspfsm/56/1/56_1_60/_pdf>;
+        version="vor"; rel="item"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIiB2ZXJzaW9uPSIzLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIGh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3NjaGVtYXMvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0My4wLnhzZCI+DQogIDxxdWVyeV9yZXN1bHQ+DQogICAgPGhlYWQ+DQogICAgICA8ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICA8cXVlcnkgc3RhdHVzPSJyZXNvbHZlZCI+DQogICAgICAgIDxkb2kgdHlwZT0iam91cm5hbF9hcnRpY2xlIj4xMC43NjAwL2pzcGZzbS41Ni42MDwvZG9pPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0icHVibGlzaGVyLW5hbWUiIHR5cGU9InN0cmluZyI+VGhlIEphcGFuZXNlIFNvY2lldHkgb2YgUGh5c2ljYWwgRml0bmVzcyBhbmQgU3BvcnRzIE1lZGljaW5lPC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9InByZWZpeC1uYW1lIiB0eXBlPSJzdHJpbmciPlRoZSBKYXBhbmVzZSBTb2NpZXR5IG9mIFBoeXNpY2FsIEZpdG5lc3MgYW5kIFNwb3J0cyBNZWRpY2luZTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJtZW1iZXItaWQiIHR5cGU9Im51bWJlciI+NDQyNjwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJjaXRhdGlvbi1pZCIgdHlwZT0ibnVtYmVyIj41NzI4MDA0MTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJqb3VybmFsLWlkIiB0eXBlPSJudW1iZXIiPjE4NDY0NTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJkZXBvc2l0LXRpbWVzdGFtcCIgdHlwZT0ibnVtYmVyIj4yMDEzMDkxMDA4MjAzMDwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJvd25lci1wcmVmaXgiIHR5cGU9InN0cmluZyI+MTAuNzYwMDwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJsYXN0LXVwZGF0ZSIgdHlwZT0iZGF0ZSI+MjAyMS0wNS0yMFQyMjozMjowMVo8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iY3JlYXRlZCIgdHlwZT0iZGF0ZSI+MjAxMi0wOC0zMFQwNDoxMDo1NVo8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iY2l0ZWRieS1jb3VudCIgdHlwZT0ibnVtYmVyIj4wPC9jcm0taXRlbT4NCiAgICAgICAgPGRvaV9yZWNvcmQ+DQogICAgICAgICAgPGNyb3NzcmVmIHhtbG5zPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy94c2NoZW1hLzEuMSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy94c2NoZW1hLzEuMSBodHRwOi8vZG9pLmNyb3NzcmVmLm9yZy9zY2hlbWFzL3VuaXhyZWYxLjEueHNkIj4NCiAgICAgICAgICAgIDxqb3VybmFsPg0KICAgICAgICAgICAgICA8am91cm5hbF9tZXRhZGF0YSBsYW5ndWFnZT0iZW4iPg0KICAgICAgICAgICAgICAgIDxmdWxsX3RpdGxlPkphcGFuZXNlIEpvdXJuYWwgb2YgUGh5c2ljYWwgRml0bmVzcyBhbmQgU3BvcnRzIE1lZGljaW5lPC9mdWxsX3RpdGxlPg0KICAgICAgICAgICAgICAgIDxhYmJyZXZfdGl0bGU+SnBuLiBKLiBQaHlzLiBGaXRuZXNzIFNwb3J0cyBNZWQuPC9hYmJyZXZfdGl0bGU+DQogICAgICAgICAgICAgICAgPGFiYnJldl90aXRsZT5UYWlyeW9rdSBLYWdha3U8L2FiYnJldl90aXRsZT4NCiAgICAgICAgICAgICAgICA8aXNzbiBtZWRpYV90eXBlPSJwcmludCI+MDAzOS05MDZYPC9pc3NuPg0KICAgICAgICAgICAgICAgIDxpc3NuIG1lZGlhX3R5cGU9ImVsZWN0cm9uaWMiPjE4ODEtNDc1MTwvaXNzbj4NCiAgICAgICAgICAgICAgPC9qb3VybmFsX21ldGFkYXRhPg0KICAgICAgICAgICAgICA8am91cm5hbF9pc3N1ZT4NCiAgICAgICAgICAgICAgICA8cHVibGljYXRpb25fZGF0ZSBtZWRpYV90eXBlPSJwcmludCI+DQogICAgICAgICAgICAgICAgICA8eWVhcj4yMDA3PC95ZWFyPg0KICAgICAgICAgICAgICAgIDwvcHVibGljYXRpb25fZGF0ZT4NCiAgICAgICAgICAgICAgICA8am91cm5hbF92b2x1bWU+DQogICAgICAgICAgICAgICAgICA8dm9sdW1lPjU2PC92b2x1bWU+DQogICAgICAgICAgICAgICAgPC9qb3VybmFsX3ZvbHVtZT4NCiAgICAgICAgICAgICAgICA8aXNzdWU+MTwvaXNzdWU+DQogICAgICAgICAgICAgIDwvam91cm5hbF9pc3N1ZT4NCiAgICAgICAgICAgICAgPGpvdXJuYWxfYXJ0aWNsZSBwdWJsaWNhdGlvbl90eXBlPSJmdWxsX3RleHQiPg0KICAgICAgICAgICAgICAgIDx0aXRsZXM+DQogICAgICAgICAgICAgICAgICA8dGl0bGUgLz4NCiAgICAgICAgICAgICAgICAgIDxvcmlnaW5hbF9sYW5ndWFnZV90aXRsZSBsYW5ndWFnZT0iamEiPuiHquW+i+elnue1jOODu+W+queSsOWZqOW/nOetlDwvb3JpZ2luYWxfbGFuZ3VhZ2VfdGl0bGU+DQogICAgICAgICAgICAgICAgPC90aXRsZXM+DQogICAgICAgICAgICAgICAgPHB1YmxpY2F0aW9uX2RhdGUgbWVkaWFfdHlwZT0icHJpbnQiPg0KICAgICAgICAgICAgICAgICAgPHllYXI+MjAwNzwveWVhcj4NCiAgICAgICAgICAgICAgICA8L3B1YmxpY2F0aW9uX2RhdGU+DQogICAgICAgICAgICAgICAgPHBhZ2VzPg0KICAgICAgICAgICAgICAgICAgPGZpcnN0X3BhZ2U+NjA8L2ZpcnN0X3BhZ2U+DQogICAgICAgICAgICAgICAgICA8bGFzdF9wYWdlPjYwPC9sYXN0X3BhZ2U+DQogICAgICAgICAgICAgICAgPC9wYWdlcz4NCiAgICAgICAgICAgICAgICA8ZG9pX2RhdGE+DQogICAgICAgICAgICAgICAgICA8ZG9pPjEwLjc2MDAvanNwZnNtLjU2LjYwPC9kb2k+DQogICAgICAgICAgICAgICAgICA8dGltZXN0YW1wPjIwMTMwOTEwMDgyMDMwPC90aW1lc3RhbXA+DQogICAgICAgICAgICAgICAgICA8cmVzb3VyY2U+aHR0cHM6Ly93d3cuanN0YWdlLmpzdC5nby5qcC9hcnRpY2xlL2pzcGZzbS81Ni8xLzU2XzFfNjAvX2FydGljbGUvLWNoYXIvamEvPC9yZXNvdXJjZT4NCiAgICAgICAgICAgICAgICAgIDxjb2xsZWN0aW9uIHByb3BlcnR5PSJjcmF3bGVyLWJhc2VkIj4NCiAgICAgICAgICAgICAgICAgICAgPGl0ZW0gY3Jhd2xlcj0iaVBhcmFkaWdtcyI+DQogICAgICAgICAgICAgICAgICAgICAgPHJlc291cmNlPmh0dHBzOi8vd3d3LmpzdGFnZS5qc3QuZ28uanAvYXJ0aWNsZS9qc3Bmc20vNTYvMS81Nl8xXzYwL19wZGY8L3Jlc291cmNlPg0KICAgICAgICAgICAgICAgICAgICA8L2l0ZW0+DQogICAgICAgICAgICAgICAgICA8L2NvbGxlY3Rpb24+DQogICAgICAgICAgICAgICAgPC9kb2lfZGF0YT4NCiAgICAgICAgICAgICAgICA8Y2l0YXRpb25fbGlzdD4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjEiPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pIHByb3ZpZGVyPSJjcm9zc3JlZiI+MTAuMTExMS9qLjE0NjktNzc5My4yMDAwLjAwNDA3Lng8L2RvaT4NCiAgICAgICAgICAgICAgICAgICAgPHVuc3RydWN0dXJlZF9jaXRhdGlvbj5TZWFscyBEUiBFc2xlciBNRCBKIFBoeXNpb2wuIDUyOCA6IDQwNy00MTcsIDIwMDA8L3Vuc3RydWN0dXJlZF9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSIyIj4NCiAgICAgICAgICAgICAgICAgICAgPGRvaSBwcm92aWRlcj0iY3Jvc3NyZWYiPjEwLjExMjYvc2NpZW5jZS42MTY2MDQ1PC9kb2k+DQogICAgICAgICAgICAgICAgICAgIDx1bnN0cnVjdHVyZWRfY2l0YXRpb24+QWtzZWxyb2QgUyBldCBhbC4gU2NpZW5jZSAyMTMgOiAyMjAtMjIyLCAxOTgxPC91bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iMyI+DQogICAgICAgICAgICAgICAgICAgIDxkb2kgcHJvdmlkZXI9ImNyb3NzcmVmIj4xMC4xMDk3LzAwMDA0ODcyLTIwMDAxODAxMC0wMDAwMzwvZG9pPg0KICAgICAgICAgICAgICAgICAgICA8dW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPlBhcmF0aSBHIGV0IGFsLiBKIEh5cGVydGVucy4gMTggOiA3LTE5LCAyMDAwPC91bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iNCI+DQogICAgICAgICAgICAgICAgICAgIDxkb2kgcHJvdmlkZXI9ImNyb3NzcmVmIj4xMC4xMDk3LzAwMDA1NzY4LTIwMDEwOTAwMC0wMDAxMjwvZG9pPg0KICAgICAgICAgICAgICAgICAgICA8dW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPllhbWFtb3RvIEsgZXQgYWwuIE1TU0UuIDMzIDogMTQ5Ni01MDIsIDIwMDE8L3Vuc3RydWN0dXJlZF9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDwvY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8Y2l0YXRpb24ga2V5PSI1Ij4NCiAgICAgICAgICAgICAgICAgICAgPGRvaSBwcm92aWRlcj0iY3Jvc3NyZWYiPjEwLjEwOTcvMDEuaGpoLjAwMDAyMjYxODYuODMxOTIuOTM8L2RvaT4NCiAgICAgICAgICAgICAgICAgICAgPHVuc3RydWN0dXJlZF9jaXRhdGlvbj5QYXJhdGkgRywgQmVybmFyZGkgTC4gSiBIeXBlcnRlbnMuIDI0IDogMTAwOS0xMDEyLCAyMDA2PC91bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPGNpdGF0aW9uIGtleT0iNiI+DQogICAgICAgICAgICAgICAgICAgIDxkb2kgcHJvdmlkZXI9ImNyb3NzcmVmIj4xMC4xMTYxLzAxLkNJUi4wMDAwMTQ2MzgwLjA4NDAxLjk5PC9kb2k+DQogICAgICAgICAgICAgICAgICAgIDx1bnN0cnVjdHVyZWRfY2l0YXRpb24+TWl5YWNoaSBldCBhbC4gQ2lyY3VsYXRpb24uIDExMCgxOCk6IDI4NTgtMjg2MywgMjAwNDwvdW5zdHJ1Y3R1cmVkX2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgICAgPC9jaXRhdGlvbj4NCiAgICAgICAgICAgICAgICAgIDxjaXRhdGlvbiBrZXk9IjciPg0KICAgICAgICAgICAgICAgICAgICA8ZG9pIHByb3ZpZGVyPSJjcm9zc3JlZiI+MTAuMTE2MS8wMS5DSVIuOTUuNi4xNjg2PC9kb2k+DQogICAgICAgICAgICAgICAgICAgIDx1bnN0cnVjdHVyZWRfY2l0YXRpb24+Q2hlaXRsaW4gTUQgZXQgYWwuIENpcmN1bGF0aW9uIDk1IDogMTY4Ni0xNzQ0LCAxOTk3PC91bnN0cnVjdHVyZWRfY2l0YXRpb24+DQogICAgICAgICAgICAgICAgICA8L2NpdGF0aW9uPg0KICAgICAgICAgICAgICAgIDwvY2l0YXRpb25fbGlzdD4NCiAgICAgICAgICAgICAgPC9qb3VybmFsX2FydGljbGU+DQogICAgICAgICAgICA8L2pvdXJuYWw+DQogICAgICAgICAgPC9jcm9zc3JlZj4NCiAgICAgICAgPC9kb2lfcmVjb3JkPg0KICAgICAgPC9xdWVyeT4NCiAgICA8L2JvZHk+DQogIDwvcXVlcnlfcmVzdWx0Pg0KPC9jcm9zc3JlZl9yZXN1bHQ+
+  recorded_at: Sun, 18 Jun 2023 15:25:27 GMT
+recorded_with: VCR 6.1.0

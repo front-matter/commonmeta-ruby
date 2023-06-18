@@ -150,7 +150,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(ris[8]).to eq('PY  - 2016')
       expect(ris[9]).to eq('PB  - Front Matter')
       expect(ris[10]).to eq('LA  - en')
-      expect(ris[11]).to eq('SN  - 2749-9952')
+      expect(ris[11]).to eq('SN  - https://blog.front-matter.io/')
       expect(ris[12]).to eq('ER  - ')
     end
 
@@ -163,7 +163,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(ris[1]).to eq('T1  - Data from: A new malaria agent in African hominids.')
       expect(ris[2]).to eq('AU  - Ollomo, Benjamin')
       expect(ris[10]).to eq('DO  - 10.5061/dryad.8515')
-      expect(ris[11]).to eq('UR  - http://datadryad.org/stash/dataset/doi:10.5061/dryad.8515')
+      expect(ris[11]).to eq('UR  - https://datadryad.org/stash/dataset/doi:10.5061/dryad.8515')
       expect(ris[13]).to eq('KW  - Plasmodium')
       expect(ris[18]).to eq('PB  - Dryad')
       expect(ris[19]).to eq('LA  - en')

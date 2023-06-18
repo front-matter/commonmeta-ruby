@@ -1,0 +1,165 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.5005/jp/books/12414_3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:23:41 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,3,30]],"date-time":"2022-03-30T03:38:02Z","timestamp":1648611482713},"reference-count":0,"publisher":"Jaypee
+        Brothers Medical Publishers (P) Ltd.","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.5005\/jp\/books\/12414_3","type":"book-chapter","created":{"date-parts":[[2016,1,20]],"date-time":"2016-01-20T23:44:05Z","timestamp":1453333445000},"page":"27-27","source":"Crossref","is-referenced-by-count":0,"title":["Physical
+        Examinations"],"prefix":"10.5005","author":[{"given":"Ashis","family":"Saha","sequence":"first","affiliation":[]}],"member":"2914","published-online":{"date-parts":[[2015]]},"container-title":["Clinical
+        Methods and Interpretation in Medicine"],"original-title":[],"deposited":{"date-parts":[[2019,8,3]],"date-time":"2019-08-03T10:10:08Z","timestamp":1564827008000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.jaypeedigital.com\/book\/9789351526285\/chapter\/ch2"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2015]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.5005\/jp\/books\/12414_3","relation":{},"published":{"date-parts":[[2015]]}}}'
+  recorded_at: Sun, 18 Jun 2023 15:23:41 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/2914
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:23:42 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687044716974,"primary-name":"Jaypee
+        Brothers Medical Publishing","counts":{"current-dois":6414,"backfile-dois":111154,"total-dois":117568},"breakdowns":{"dois-by-issued-year":[[2013,12227],[2014,10363],[2016,9960],[2015,9527],[2012,7708],[2018,7309],[2011,7232],[2017,7139],[2010,6640],[2007,5803],[2008,5682],[2009,5384],[2006,3928],[2022,3204],[2005,3012],[2004,2465],[2021,2147],[2003,1991],[2020,1882],[2019,1675],[2023,1063],[2002,609],[2001,302],[2000,105],[1999,95],[1998,88],[1995,28]]},"prefixes":["10.5005","10.59556"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":0.9561895852821952,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":4.498263670223294E-5,"licenses-backfile":0.002698958202133976,"funders-current":0.0,"affiliations-backfile":0.0,"resource-links-backfile":0.002698958202133976,"orcids-backfile":8.996527340446589E-6,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":1.559089491736826E-4,"similarity-checking-backfile":0.1654281447361319,"references-backfile":0.1333285351854184,"descriptions-backfile":0.0,"award-numbers-backfile":2.698958202133976E-5,"update-policies-backfile":0.001151555499577163,"licenses-current":0.0,"award-numbers-current":0.0,"abstracts-backfile":0.06747395505334941,"resource-links-current":0.0,"abstracts-current":0.0313376987839102,"references-current":0.8928905519176801},"prefix":[{"name":"Jaypee
+        Brothers Medical Publishing","value":"10.5005"},{"name":"Journal of Association
+        of Physicians of India","value":"10.59556"}],"id":2914,"tokens":["jaypee","brothers","medical","publishing"],"counts-type":{"all":{"journal-article":26188,"book":3230,"journal":85,"book-chapter":88150},"backfile":{"journal-article":19774,"book":3230,"book-chapter":88150},"current":{"journal-article":6414}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1687044716974,"affiliations":0.0,"abstracts":0.2940659844203452,"orcids":7.63708568810142E-5,"licenses":0.01145562853215213,"references":0.7845959981670994,"funders":1.909271422025355E-4,"similarity-checking":0.9363448907896748,"award-numbers":1.145562853215213E-4,"ror-ids":0.0,"update-policies":0.004887734840384909,"resource-links":0.01145562853215213,"descriptions":0.0},"book":{"last-status-check-time":1687044716974,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1687044716974,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.08235294117647059,"funders":0.0,"similarity-checking":0.08235294117647059,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1687044716974,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1687044716974,"affiliations":0.0,"abstracts":0.379285931020532,"orcids":5.057145746940427E-5,"licenses":0.01517143724082128,"references":0.7494689996965713,"funders":2.528572873470213E-4,"similarity-checking":0.9299079599474057,"award-numbers":1.517143724082128E-4,"ror-ids":0.0,"update-policies":0.006473146556083746,"resource-links":0.01517143724082128,"descriptions":0.0},"book":{"last-status-check-time":1687044716974,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1687044716974,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1687044716974,"affiliations":0.0,"abstracts":0.0313376987839102,"orcids":1.559089491736826E-4,"licenses":0.0,"references":0.8928905519176801,"funders":0.0,"similarity-checking":0.9561895852821952,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":false,"deposits-similarity-checking-current":true,"deposits-licenses-current":false},"location":"New
+        Delhi, India","names":["Jaypee Brothers Medical Publishing","Journal of Association
+        of Physicians of India"]}}'
+  recorded_at: Sun, 18 Jun 2023 15:23:42 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.5005
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Jun 2023 15:23:42 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XtOEFZfZnvTKwDeJvn0%2BvZooiOgfWylbm4JOwkLn5bv8Z0ET4XDqnD3WfOcuO3dV1oUdJhhfeU%2FOnN88D3zmh7ZV7nes7mjuEXC%2BK%2Ff3JmMH6V1OtxdA502Oe7qe0cCigrfNl%2FY%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7d9488f5d81b0a5c-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.5005",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Sun, 18 Jun 2023 15:23:42 GMT
+recorded_with: VCR 6.1.0
