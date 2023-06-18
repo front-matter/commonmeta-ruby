@@ -38,7 +38,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'postrank-uri', '~> 1.1'
   s.add_dependency 'rdf-rdfxml', '~> 3.2'
   s.add_dependency 'rdf-turtle', '~> 3.2'
-  s.add_dependency 'thor', '~> 1.1', '>= 1.1.0'
+  s.add_dependency 'thor', '~> 1.2', '>= 1.2.2'
   s.add_development_dependency 'bundler', '~> 2.3', '>= 2.3.1'
   s.add_development_dependency 'code-scanning-rubocop', '~> 0.6.1'
   s.add_development_dependency 'hashdiff', '~> 1.0.1'
