@@ -118,7 +118,7 @@ module Commonmeta
     desc "", "update_ghost_post"
 
     def update_ghost_post(uuid)
-      puts update_ghost_post(uuid)
+      puts update_ghost_post_via_api(uuid)
     end
 
     default_task :convert

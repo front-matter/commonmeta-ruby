@@ -1473,7 +1473,7 @@ module Commonmeta
       JWT.encode payload, [secret].pack("H*"), "HS256", header
     end
 
-    def update_ghost_post(uuid)
+    def update_ghost_post_via_api(uuid)
       api_key = ENV["API_KEY"]
       api_url = ENV["API_URL"]
 
@@ -1491,7 +1491,7 @@ module Commonmeta
       url = post.to_h.dig("url")
       doi = validate_doi(post.to_h.dig("id"))
       doi = doi_as_url(doi)
-      
+
       return nil unless url.present? && doi.present?
 
       # get id and updated_at from ghost api
