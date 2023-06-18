@@ -1473,25 +1473,30 @@ module Commonmeta
       JWT.encode payload, [secret].pack("H*"), "HS256", header
     end
 
-    def update_ghost_post(uuid: nil, **options)
-      return nil unless uuid.present? && options[:api_key].present? && options[:api_url].present? && options[:doi].present?
+    def update_ghost_post(uuid)
+      api_key = ENV["API_KEY"]
+      api_url = ENV["API_URL"]
+
+      return nil unless uuid.present? && api_key.present? && api_url.present?
 
       # generate short lived jwt for ghost admin api
-      ghost_jwt = generate_ghost_token(options[:api_key])
+      ghost_jwt = generate_ghost_token(api_key)
 
-      # get post url from Rogue Scholar API
+      # get post url and doi from Rogue Scholar API
       url = json_feed_item_by_uuid_url(uuid)
       response = HTTP.get(url)
       return nil unless response.status.success?
 
       post = JSON.parse(response.body.to_s)
       url = post.to_h.dig("url")
-
-      return nil unless url.present?
+      doi = validate_doi(post.to_h.dig("id"))
+      doi = doi_as_url(doi)
+      
+      return nil unless url.present? && doi.present?
 
       # get id and updated_at from ghost api
       slug = url.chomp("/").split("/").last
-      ghost_url = "#{options[:api_url]}/ghost/api/admin/posts/slug/#{slug}/"
+      ghost_url = "#{api_url}/ghost/api/admin/posts/slug/#{slug}/"
       response = HTTP.auth("Ghost #{ghost_jwt}").get(ghost_url)
       return nil unless response.status.success?
 
@@ -1502,9 +1507,9 @@ module Commonmeta
       return nil unless id.present? && updated_at.present?
 
       # update post canonical_url with new doi
-      ghost_url = "#{options[:api_url]}/ghost/api/admin/posts/#{id}/"
-      response = HTTP.auth("Ghost #{ghost_jwt}").headers('Content-Type' => "application/json", 'Accept-Version' => 'v5').put(ghost_url, :json => { 'posts' => [{ 'canonical_url' => options[:doi], 'updated_at' => updated_at }] })
-      "#{response.status} DOI #{options[:doi]} updated for post #{uuid}"
+      ghost_url = "#{api_url}/ghost/api/admin/posts/#{id}/"
+      response = HTTP.auth("Ghost #{ghost_jwt}").headers('Content-Type' => "application/json", 'Accept-Version' => 'v5').put(ghost_url, :json => { 'posts' => [{ 'canonical_url' => doi, 'updated_at' => updated_at }] })
+      "#{response.status} DOI #{doi} added to post #{uuid}"
     end
   end
 end
