@@ -59,6 +59,7 @@ module Commonmeta
     desc "", "encode"
 
     def encode(prefix)
+      return nil unless prefix.present?
       puts encode_doi(prefix)
     end
 
@@ -72,6 +73,7 @@ module Commonmeta
 
     def encode_by_blog(blog_id)
       prefix = get_doi_prefix_by_blog_id(blog_id)
+      return nil unless prefix.present?
       puts encode_doi(prefix)
     end
 
@@ -79,6 +81,7 @@ module Commonmeta
 
     def encode_by_uuid(uuid)
       prefix = get_doi_prefix_by_json_feed_item_uuid(uuid)
+      return nil unless prefix.present?
       puts encode_doi(prefix)
     end
 

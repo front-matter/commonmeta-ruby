@@ -317,14 +317,29 @@ describe Commonmeta::CLI do
       expect { subject.encode input }.to output(/https:\/\/doi.org\/10.53731/).to_stdout
     end
 
+    it "blog prefix missing" do
+      input = ""
+      expect { subject.encode input }.to output("").to_stdout
+    end
+
     it "by_blog" do
       input = "tyfqw20"
       expect { subject.encode_by_blog input }.to output(/https:\/\/doi.org\/10.59350/).to_stdout
     end
 
+    it "by_blog unknown blog_id" do
+      input = "tyfqw"
+      expect { subject.encode_by_blog input }.to output("").to_stdout
+    end
+
     it "by_uuid" do
       input = "2b22bbba-bcba-4072-94cc-3f88442fff88"
       expect { subject.encode_by_uuid input }.to output(/https:\/\/doi.org\/10.54900/).to_stdout
+    end
+
+    it "by_uuid unknown uuid" do
+      input = "2b22bbba-bcba-4072-94cc-3f88442"
+      expect { subject.encode_by_uuid input }.to output("").to_stdout
     end
   end
 

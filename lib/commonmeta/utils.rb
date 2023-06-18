@@ -1384,11 +1384,14 @@ module Commonmeta
     end
 
     def encode_doi(prefix, options = {})
+      return nil unless prefix.present?
+      
       # DOI suffix is a generated from a random number, encoded in base32
       # suffix has 8 digits plus two checksum digits. With base32 there are
       # 32 possible digits, so 8 digits gives 32^8 possible combinations
       if options[:uuid]
         str = Base32::URL.encode_uuid(options[:uuid], split: 7, checksum: true)
+        return nil unless str.present?
       else
         random_int = SecureRandom.random_number(32 ** 7..(32 ** 8) - 1)
         suffix = Base32::URL.encode(random_int, checksum: true)

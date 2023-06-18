@@ -132,10 +132,10 @@ module Commonmeta
 
         url = json_feed_by_blog_url(blog_id)
         response = HTTP.get(url)
-        return { "string" => nil, "state" => "not_found" } unless response.status.success?
+        return nil unless response.status.success?
 
         post = JSON.parse(response.body.to_s)
-        post.dig('prefix')
+        post.to_h.dig('prefix')
       end
 
       def get_doi_prefix_by_json_feed_item_uuid(uuid)
@@ -143,10 +143,10 @@ module Commonmeta
 
         url = json_feed_item_by_uuid_url(uuid)
         response = HTTP.get(url)
-        return { "string" => nil, "state" => "not_found" } unless response.status.success?
+        return nil unless response.status.success?
 
         post = JSON.parse(response.body.to_s)
-        post.dig('blog', 'prefix')
+        post.to_h.dig('blog', 'prefix')
       end
     end
   end
