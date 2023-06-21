@@ -49,7 +49,11 @@ module Commonmeta
       # DataCite metadata
       type = type[0..-3] if type.is_a?(String) && type.end_with?('al')
 
-      if type.blank? && id.is_a?(String) && URI.parse(id).host == 'ror.org'
+      if type.blank? && name.blank? && id.is_a?(String) && URI.parse(id).host == 'ror.org'
+        type = 'Person'
+        author['affiliation'] = { 'affiliationIdentifier' => id }
+        id = nil
+      elsif type.blank? && id.is_a?(String) && URI.parse(id).host == 'ror.org'
         type = 'Organization'
       elsif type.blank? && author['type'] == 'Organization'
         type = 'Organization'
@@ -65,7 +69,7 @@ module Commonmeta
       contributor_type = parse_attributes(author.fetch('contributorType', nil))
 
       # split name for type Person into given/family name if not already provided
-      if type == 'Person' && given_name.blank? && family_name.blank?
+      if type == 'Person' && name.present? && given_name.blank? && family_name.blank?
         Namae.options[:include_particle_in_family] = true
         names = Namae.parse(name)
         parsed_name = names.first
@@ -181,9 +185,7 @@ module Commonmeta
           name = (a['name'] || a['__content__']).to_s.squish.presence
         end
 
-        next unless name.present?
-
-        { 'id' => affiliation_identifier, 'name' => name }.compact
+        { 'id' => affiliation_identifier, 'name' => name }.compact.presence
       end.compact.presence
     end
 

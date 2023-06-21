@@ -95,21 +95,22 @@ module Commonmeta
     def insert_crossref_creators(xml)
       xml.contributors do
         Array.wrap(creators).each_with_index do |creator, index|
-          if creator["type"] == "Organization"
-            xml.organization("contributor_role" => "author",
-                             "sequence" => index.zero? ? "first" : "additional") do
-              insert_crossref_organization(xml, creator)
-            end
+          if creator["type"] == "Organization" && creator["name"].present?
+            xml.organization(creator["name"], "contributor_role" => "author",
+                             "sequence" => index.zero? ? "first" : "additional")
           elsif creator["givenName"].present? || creator["familyName"].present?
             xml.person_name("contributor_role" => "author",
                             "sequence" => index.zero? ? "first" : "additional") do
               insert_crossref_person(xml, creator)
             end
-          else
-            xml.unknown("contributor_role" => "author",
-                        "sequence" => index.zero? ? "first" : "additional") do
+          elsif creator["affiliation"].present?
+            xml.anonymous("contributor_role" => "author",
+                          "sequence" => index.zero? ? "first" : "additional") do
               insert_crossref_anonymous(xml, creator)
             end
+          else
+            xml.anonymous("contributor_role" => "author",
+                          "sequence" => index.zero? ? "first" : "additional")
           end
         end
       end
@@ -125,36 +126,18 @@ module Commonmeta
         xml.affiliations do
           xml.institution do
             xml.institution_name(creator.dig("affiliation", 0, "name")) if creator.dig("affiliation", 0, "name").present?
-            xml.institution_id(creator.dig("affiliation", 0, "affiliationIdentifier"), "type" => creator.dig("affiliation", 0, "affiliationIdentifierScheme")) if creator.dig("affiliation", 0, "affiliationIdentifier").present?
-          end
-        end
-      end
-    end
-
-    def insert_crossref_organization(xml, creator)
-      xml.name(creator["name"]) if creator["name"].present?
-      if creator["affiliation"].present?
-        xml.affiliations do
-          xml.institution do
-            xml.institution_name(creator.dig("affiliation", 0, "name")) if creator.dig("affiliation", 0, "name").present?
-            xml.institution_id(creator.dig("affiliation", 0, "affiliationIdentifier"), "type" => creator.dig("affiliation", 0, "affiliationIdentifierScheme")) if creator.dig("affiliation", 0, "affiliationIdentifier").present?
+            xml.institution_id(creator.dig("affiliation", 0, "id"), 'type' => "ror") if creator.dig("affiliation", 0, "id").present?
           end
         end
       end
     end
 
     def insert_crossref_anonymous(xml, creator)
-      if person["affiliation"].present?
-        xml.anonymous do
-          xml.affiliations do
-            xml.institution do
-              xml.institution_name(creator.dig("affiliation", 0, "name")) if creator.dig("affiliation", 0, "name").present?
-              xml.institution_id(creator.dig("affiliation", 0, "affiliationIdentifier"), "type" => creator.dig("affiliation", 0, "affiliationIdentifierScheme")) if creator.dig("affiliation", 0, "affiliationIdentifier").present?
-            end
-          end
+      xml.affiliations do
+        xml.institution do
+          xml.institution_name(creator.dig("affiliation", 0, "name")) if creator.dig("affiliation", 0, "name").present?
+          xml.institution_id(creator.dig("affiliation", 0, "id"), 'type' => "ror") if creator.dig("affiliation", 0, "id").present?
         end
-      else
-        xml.anonymous
       end
     end
 

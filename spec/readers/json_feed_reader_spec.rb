@@ -228,8 +228,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "ghost post with organizational author" do
       input = "https://rogue-scholar.org/api/posts/5561f8e4-2ff1-4186-a8d5-8dacb3afe414"
       subject = described_class.new(input: input)
-      puts subject.errors
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://libscie.org/ku-leuven-supports-researchequals")
       expect(subject.url).to eq("https://libscie.org/ku-leuven-supports-researchequals")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "5561f8e4-2ff1-4186-a8d5-8dacb3afe414", "alternateIdentifierType" => "UUID" }])
@@ -248,6 +247,31 @@ describe Commonmeta::Metadata, vcr: true do
                                         "subjectScheme" => "Fields of Science and Technology (FOS)" }])
       expect(subject.language).to eq("en")
       expect(subject.container).to eq("identifier" => "https://libscie.org/", "identifierType" => "URL", "title" => "Liberate Science", "type" => "Periodical")
+      expect(subject.references).to be_nil
+    end
+
+    it "jekyll post with anonymous author" do
+      input = "https://rogue-scholar.org/api/posts/a163e340-5b3c-4736-9ab0-8c54fdff6a3c"
+      subject = described_class.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://doi.org/10.59350/g6bth-b6f85")
+      expect(subject.url).to eq("https://lab.sub.uni-goettingen.de/welcome.html")
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "a163e340-5b3c-4736-9ab0-8c54fdff6a3c", "alternateIdentifierType" => "UUID" }])
+      expect(subject.type).to eq("Article")
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("affiliation"=>[{"id"=>"https://ror.org/05745n787"}], "type"=>"Person")
+      expect(subject.titles).to eq([{ "title" => "Welcome to the Lab" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published"=>"2017-01-01", "updated"=>"2017-01-01")
+      expect(subject.descriptions.first["description"]).to start_with("Welcome everyone!")
+      expect(subject.publisher).to eq("name" => "lab.sub - Articles")
+      expect(subject.subjects).to eq([{ "subject" => "Engineering and technology" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Engineering and technology",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.container).to eq("identifier" => "https://lab.sub.uni-goettingen.de/", "identifierType" => "URL", "title" => "lab.sub - Articles", "type" => "Periodical")
       expect(subject.references).to be_nil
     end
 

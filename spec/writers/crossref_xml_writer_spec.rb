@@ -279,11 +279,44 @@ describe Commonmeta::Metadata, vcr: true do
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
       expect(Array.wrap(crossref_xml.dig("contributors", "organization")).length).to eq(1)
       expect(Array.wrap(crossref_xml.dig("contributors",
-                                         "organization")).first).to eq("contributor_role"=>"author", "name"=>"Liberate Science", "sequence"=>"first")
+                                         "organization")).first).to eq("__content__"=>"Liberate Science", "contributor_role"=>"author", "sequence"=>"first")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("KU Leuven supports ResearchEquals")
       expect(crossref_xml.dig('item_number')).to eq("__content__"=>"5561f8e42ff14186a8d58dacb3afe414", "item_number_type"=>"uuid")
       expect(crossref_xml.dig('group_title')).to eq('Social sciences')
+    end
+
+    it "json_feed_item from rogue scholar with anonymous author" do
+      input = "https://rogue-scholar.org/api/posts/a163e340-5b3c-4736-9ab0-8c54fdff6a3c"
+      subject = described_class.new(input: input, doi: "10.59350/9ry27-7cz42")
+
+      expect(subject.id).to eq("https://doi.org/10.59350/9ry27-7cz42")
+      expect(subject.url).to eq("https://lab.sub.uni-goettingen.de/welcome.html")
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "a163e340-5b3c-4736-9ab0-8c54fdff6a3c", "alternateIdentifierType" => "UUID" }])
+      expect(subject.type).to eq("Article")
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("affiliation"=>[{"id"=>"https://ror.org/05745n787"}], "type"=>"Person")
+      expect(subject.titles).to eq([{ "title" => "Welcome to the Lab" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published"=>"2017-01-01", "updated"=>"2017-01-01")
+      expect(subject.descriptions.first["description"]).to start_with("Welcome everyone!")
+      expect(subject.publisher).to eq("name" => "lab.sub - Articles")
+      expect(subject.subjects).to eq([{ "subject" => "Engineering and technology" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Engineering and technology",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.container).to eq("identifier" => "https://lab.sub.uni-goettingen.de/", "identifierType" => "URL", "title" => "lab.sub - Articles", "type" => "Periodical")
+      expect(subject.references).to be_nil
+      crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
+      expect(Array.wrap(crossref_xml.dig("contributors", "anonymous")).length).to eq(1)
+      expect(Array.wrap(crossref_xml.dig("contributors",
+                                         "anonymous")).first).to eq("affiliations"=>{"institution"=>{"institution_id"=>{"__content__"=>"https://ror.org/05745n787", "type"=>"ror"}}}, "contributor_role"=>"author", "sequence"=>"first")
+      expect(crossref_xml.dig("titles",
+                              "title")).to eq("Welcome to the Lab")
+      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"a163e3405b3c47369ab08c54fdff6a3c", "item_number_type"=>"uuid")
+      expect(crossref_xml.dig('group_title')).to eq('Engineering and technology')
     end
   end
 end

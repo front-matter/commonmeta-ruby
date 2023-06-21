@@ -1,0 +1,303 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1177
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Jun 2023 06:59:57 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WU%2FllRC0hBlvN%2BLUIqA5%2BpFmmTvjgA9UpuYKwtTSGR9wNtn%2BBm3WDuXw0nJZp2KAsMUk8vPlHwYo2DVBHZraAkB9xnnlHKWG2wDoY0OuZx%2BWIjgu%2FJoB62ox8a%2FaYk%2B%2BNrCbUYE%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7daa5f2ad84d0a69-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.1177",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Wed, 21 Jun 2023 06:59:57 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1177/0042098011428175
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Jun 2023 06:59:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,5,7]],"date-time":"2023-05-07T19:48:38Z","timestamp":1683488918534},"reference-count":54,"publisher":"SAGE
+        Publications","issue":"11","license":[{"start":{"date-parts":[[2011,12,22]],"date-time":"2011-12-22T00:00:00Z","timestamp":1324512000000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/journals.sagepub.com\/page\/policies\/text-and-data-mining-license"}],"content-domain":{"domain":["journals.sagepub.com"],"crossmark-restriction":true},"short-container-title":["Urban
+        Studies"],"published-print":{"date-parts":[[2012,11]]},"abstract":"<jats:p>
+        In this article, the case of Cluj\/Kolozsvar, regional capital of Transylvania,
+        is analysed in order to uncover the geographies of power in which the workers,
+        a category that has often been analytically silenced, have had an important
+        role in reframing the landscape of the city. Principal component analysis
+        is used to clarify the city\u2019s socialist and post-socialist urbanisation
+        processes, and the qualitative data show how the workers appropriated the
+        urban space in a nationalist manner. The workers\u2019 tactics had an important
+        impact, from a relational perspective, on the spatial strategies of the emerging
+        post-socialist middle class. <\/jats:p>","DOI":"10.1177\/0042098011428175","type":"journal-article","created":{"date-parts":[[2011,12,23]],"date-time":"2011-12-23T05:16:52Z","timestamp":1324617412000},"page":"2377-2397","update-policy":"http:\/\/dx.doi.org\/10.1177\/sage-journals-update-policy","source":"Crossref","is-referenced-by-count":16,"title":["Workers
+        and the City: Rethinking the Geographies of Power in Post-socialist Urbanisation"],"prefix":"10.1177","volume":"49","author":[{"given":"Norbert","family":"Petrovici","sequence":"first","affiliation":[{"name":"\u00a0"}]}],"member":"179","published-online":{"date-parts":[[2011,12,22]]},"reference":[{"issue":"3","key":"atypb1","first-page":"110","volume":"5","author":"Belkis\u00a0D.","year":"2003","journal-title":"IDEA
+        Arta \u015fi Societate"},{"key":"atypb2","unstructured":"Bodnar\u00a0J.Evil
+        Paradises: Dreamworlds of Neoliberalism. Davis\u00a0M., Monk\u00a0D., ed.
+        New York: New Press; 2007:140-151."},{"issue":"2","key":"atypb3","first-page":"53","volume":"19","author":"Burawoy\u00a0M.","year":"1989","journal-title":"Socialist
+        Review"},{"issue":"4","key":"atypb4","doi-asserted-by":"crossref","first-page":"1099","DOI":"10.1086\/320299","volume":"106","author":"Burawoy\u00a0M.","year":"2001","journal-title":"American
+        Journal of Sociology"},{"key":"atypb5","doi-asserted-by":"publisher","DOI":"10.1086\/210402"},{"key":"atypb6","doi-asserted-by":"publisher","DOI":"10.1017\/S0010417503000331"},{"key":"atypb7","volume-title":"Privatizing
+        Poland: Baby Food, Big Business, and the Remaking of Labor","author":"Dunn\u00a0E.
+        C.","year":"2004"},{"key":"atypb8","volume-title":"Making Capitalism without
+        Capitalists: Class Formation and Elite Struggles in Post-communist Central
+        Europe","author":"Eyal\u00a0G.","year":"1998"},{"key":"atypb9","doi-asserted-by":"publisher","DOI":"10.1086\/320300"},{"key":"atypb10","volume-title":"From
+        the Cult of Waste to the Trash Heap of History: The Politics of Waste in Socialist
+        and Postsocialist Hungary","author":"Gille\u00a0Z.","year":"2007"},{"key":"atypb11","volume-title":"Transformation
+        of Cities in Central and Eastern Europe","author":"Hamilton\u00a0F. E. I.","year":"2006"},{"key":"atypb12","doi-asserted-by":"publisher","DOI":"10.1080\/13604810903298672"},{"key":"atypb13","doi-asserted-by":"publisher","DOI":"10.1080\/13604810903579287"},{"key":"atypb14","doi-asserted-by":"publisher","DOI":"10.1525\/9780520936102"},{"key":"atypb15","doi-asserted-by":"publisher","DOI":"10.1017\/S0020859009990630"},{"key":"atypb16","unstructured":"Hirt\u00a0S.,Kovachev\u00a0A.The
+        Urban Mosaic of Post-socialist Eastern Europe. Tsenkova\u00a0S., Nedovic-Budic\u00a0Z.,
+        ed. Dordrecht: Springer; 2006:112-130."},{"key":"atypb17","doi-asserted-by":"publisher","DOI":"10.1017\/S0147547905000189"},{"key":"atypb18","doi-asserted-by":"publisher","DOI":"10.1146\/annurev.so.06.080180.002245"},{"key":"atypb19","doi-asserted-by":"publisher","DOI":"10.1007\/BF00993596"},{"key":"atypb20","volume-title":"Expanding
+        Class: Power and Everyday Politics in Industrial Communities","author":"Kalb\u00a0D.","year":"1997"},{"key":"atypb21","volume-title":"Working-class
+        Formation: Nineteenth-century Patterns in Western Europe and the United States","author":"Katznelson\u00a0I.","year":"1986"},{"issue":"4","key":"atypb22","first-page":"399","volume":"12","author":"Kideckel\u00a0D.","year":"1988","journal-title":"Dialectical
+        Anthropology"},{"key":"atypb23","unstructured":"Kideckel\u00a0D.Postsocialism:
+        Ideals, Ideologies, and Practices in Eurasia. Hann\u00a0C., ed. London: Routledge;
+        2002:114-132."},{"key":"atypb24","volume-title":"Getting by in Postsocialist
+        Romania: Labor, the Body, and Working Class Culture","author":"Kideckel\u00a0D.","year":"2008"},{"key":"atypb25","doi-asserted-by":"publisher","DOI":"10.1016\/j.cities.2006.02.002"},{"key":"atypb26","first-page":"70","volume":"46","author":"Lascu\u00a0N.","year":"2006","journal-title":"Arhitectura"},{"key":"atypb27","first-page":"13","volume":"1","author":"Lascu\u00a0N.","year":"1979","journal-title":"Arhitectura"},{"key":"atypb28","first-page":"125","volume":"15","author":"Lazar\u00a0M.","year":"2003","journal-title":"IDEA
+        Arts and Society"},{"key":"atypb29","volume-title":"Vital statistics in the
+        city of Cluj-Napoca","year":"2007"},{"key":"atypb30","volume-title":"The Social
+        Impact of Informal Economies in Eastern Europe","author":"Neef\u00a0R.","year":"2002"},{"key":"atypb31","volume-title":"The
+        Defeat of Solidarity: Anger and Politics in Postcommunist Europe","author":"Ost\u00a0D.","year":"2005"},{"issue":"2","key":"atypb32","first-page":"9","volume":"53","author":"Ourednicek\u00a0M.","year":"2009","journal-title":"Studia
+        Sociologie"},{"key":"atypb33","doi-asserted-by":"publisher","DOI":"10.4324\/9780203881927"},{"key":"atypb34","unstructured":"Petrovici\u00a0N.Headlines
+        of Nationalism, Subtexts of Class. Kalb\u00a0D., Halmai\u00a0G., ed. New York:
+        Berghahn Books; 2011:57-77."},{"key":"atypb35","doi-asserted-by":"publisher","DOI":"10.1017\/S0147547905000165"},{"issue":"1","key":"atypb36","doi-asserted-by":"crossref","first-page":"130","DOI":"10.1163\/187633009X411539","volume":"36","author":"Poenaru\u00a0F.","year":"2009","journal-title":"East
+        Central Europe"},{"issue":"1","key":"atypb37","first-page":"55","volume":"17","author":"Riabchuk\u00a0A.","year":"2009","journal-title":"Debatte"},{"key":"atypb38","doi-asserted-by":"publisher","DOI":"10.1023\/A:1022435000258"},{"key":"atypb39","doi-asserted-by":"publisher","DOI":"10.1177\/0011392104046619"},{"key":"atypb40","doi-asserted-by":"publisher","DOI":"10.1080\/13604810902982250"},{"key":"atypb41","doi-asserted-by":"publisher","DOI":"10.1080\/13604811003633719"},{"key":"atypb42","doi-asserted-by":"publisher","DOI":"10.1111\/j.1467-8330.2008.00592.x"},{"key":"atypb43","doi-asserted-by":"publisher","DOI":"10.1002\/9780470712733.ch3"},{"key":"atypb44","doi-asserted-by":"publisher","DOI":"10.1007\/978-1-4020-6053-3"},{"key":"atypb45","doi-asserted-by":"publisher","DOI":"10.1111\/j.1467-8330.2008.00573.x"},{"key":"atypb46","doi-asserted-by":"publisher","DOI":"10.1080\/02673039982678"},{"key":"atypb47","unstructured":"Szel\u00e9nyi\u00a0I.,Kostello\u00a0E.The
+        New Institutionalism in Sociology. Nee\u00a0V., Brinton\u00a0M., ed. New York:
+        Russell Sage Foundation; 1998:305-326."},{"key":"atypb48","volume-title":"The
+        Poverty of Theory and Other Essays","author":"Thompson\u00a0E. P.","year":"1978"},{"key":"atypb49","volume-title":"Stalinism
+        for All Seasons: A Political History of Romanian Communism","author":"Tism\u0103neanu\u00a0V.","year":"2003"},{"key":"atypb50","unstructured":"Tosics\u00a0I.Transformation
+        of Cities in Central and Eastern Europe. Hamilton\u00a0F. E. I., Dimitrowska
+        Andrews\u00a0K., Pichler-Milanovic\u00a0N., ed. Tokyo: United Nations University
+        Press; 2006:47-78."},{"key":"atypb51","volume-title":"S\u0103p\u0103tor \u00een
+        Pia\u0163a Discordiei","author":"Tripon\u00a0M.","year":"2005"},{"issue":"3","key":"atypb52","first-page":"130","volume":"5","author":"Troc\u00a0G.","year":"2003","journal-title":"IDEA
+        Arta \u015fi Societate"},{"key":"atypb53","doi-asserted-by":"publisher","DOI":"10.1007\/3-7908-1727-9"},{"key":"atypb54","doi-asserted-by":"publisher","DOI":"10.1017\/S0010417500019903"}],"container-title":["Urban
+        Studies"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/journals.sagepub.com\/doi\/pdf\/10.1177\/0042098011428175","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/journals.sagepub.com\/doi\/pdf\/10.1177\/0042098011428175","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,5,16]],"date-time":"2021-05-16T13:53:27Z","timestamp":1621173207000},"score":1,"resource":{"primary":{"URL":"http:\/\/journals.sagepub.com\/doi\/10.1177\/0042098011428175"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2011,12,22]]},"references-count":54,"journal-issue":{"issue":"11","published-print":{"date-parts":[[2012,11]]}},"alternative-id":["10.1177\/0042098011428175"],"URL":"http:\/\/dx.doi.org\/10.1177\/0042098011428175","relation":{},"ISSN":["0042-0980","1360-063X"],"issn-type":[{"value":"0042-0980","type":"print"},{"value":"1360-063X","type":"electronic"}],"subject":["Urban
+        Studies","Environmental Science (miscellaneous)"],"published":{"date-parts":[[2011,12,22]]}}}'
+  recorded_at: Wed, 21 Jun 2023 06:59:57 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/179
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Jun 2023 06:59:58 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687303488709,"primary-name":"SAGE
+        Publications","counts":{"current-dois":212065,"backfile-dois":2784347,"total-dois":2996412},"breakdowns":{"dois-by-issued-year":[[2020,91760],[2022,87882],[2021,86441],[2014,86188],[2016,84799],[2013,82548],[2017,82500],[2018,80619],[2019,80361],[2012,79247],[2009,76596],[2011,76586],[2015,76217],[2010,75226],[2008,74866],[2007,68850],[2006,65904],[2005,65225],[2004,63509],[2003,55361],[2002,53945],[2001,51620],[2000,50472],[1999,47214],[1998,44564],[1997,44102],[1996,42534],[1995,39264],[2023,37732],[1993,37730],[1994,37125],[1992,35237],[1991,33677],[1990,33622],[1989,31761],[1988,30972],[1987,29341],[1986,27580],[1985,25638],[1984,25249],[1983,24813],[1982,23828],[1981,22728],[1980,22144],[1979,21740],[1978,21186],[1977,20376],[1976,19956],[1974,19050],[1975,18677],[1973,18466],[1972,18370],[1971,16532],[1970,16120],[1969,16059],[1968,15300],[1967,14944],[1966,14403],[1965,13894],[1964,13126],[1963,12000],[1962,11394],[1961,10670],[1960,10444],[1959,9742],[1958,9005],[1957,8667],[1956,7941],[1955,7757],[1954,7639],[1953,6995],[1951,6892],[1952,6747],[1950,6551],[1949,6338],[1948,5844],[1939,5417],[1947,5211],[1930,5117],[1938,5020],[1931,4982],[1941,4851],[1936,4823],[1940,4736],[1935,4689],[1928,4633],[1946,4630],[1929,4583],[1942,4582],[1937,4557],[1933,4546],[1927,4451],[1932,4398],[1934,4358],[1926,4278],[1945,4173],[1924,4015],[1944,4008],[1943,3997],[1925,3994],[1921,3774],[1922,3719],[1923,3691],[1914,3646],[1913,3378],[1920,3362],[1909,3324],[1915,3231],[1912,3138],[1911,3113],[1919,3080],[1910,3051],[1916,3026],[1908,3016],[1917,2930],[1918,2640],[1906,2434],[1907,2428],[1904,2023],[1903,1796],[1902,1650],[1898,1648],[1899,1632],[1905,1602],[1896,1554],[1894,1433],[1901,1320],[1895,1257],[1892,864],[1897,653],[1893,512],[1900,449],[1891,355],[1890,268],[1887,193],[1886,193],[1885,189],[1881,172],[1888,170],[1884,167],[1889,154],[1883,146],[1882,132],[1879,80],[1880,77],[1856,65],[1858,54],[1853,54],[1847,54],[1823,54],[1860,53],[1859,53],[1850,53],[1878,52],[1852,52],[1857,51],[1851,51],[1877,50],[1862,50],[1827,49],[1855,48],[1876,47],[1873,47],[1864,47],[1871,46],[1869,45],[1867,45],[1874,44],[1861,44],[1865,43],[1816,43],[1863,42],[1875,41],[1866,41],[1848,41],[1868,40],[1854,39],[1821,39],[1872,38],[1870,33],[1818,33],[1811,33],[1844,32],[1819,31],[1815,29],[1814,29],[1817,28],[1813,28],[1843,27],[1838,26],[1840,25],[1839,25],[1849,24],[1845,24],[1812,24],[1831,23],[1842,22],[1835,22],[1809,22],[1846,21],[1837,20],[1841,19],[1832,18],[1829,17],[1828,17],[1833,14],[2024,8],[2103,2]]},"prefixes":["10.1528","10.1606","10.12679","10.3821","10.4137","10.1345","10.2511","10.1106","10.1622","10.1369","10.4219","10.14240","10.4135","10.5126","10.5367","10.5301","10.1243","10.7182","10.2190","10.47515","10.3818","10.2968","10.47594","10.1630","10.1354","10.1258","10.15256","10.3317","10.31124","10.5034","10.2182","10.17322","10.5153","10.1177","10.2189","10.1191","10.5193"],"coverage":{"affiliations-current":0.8446796972626317,"similarity-checking-current":0.9263103293801429,"descriptions-current":0.002791596916039893,"ror-ids-current":0.0,"funders-backfile":0.02452567873185347,"licenses-backfile":0.8441020461889269,"funders-current":0.2638672105250749,"affiliations-backfile":0.6015457125135624,"resource-links-backfile":0.8432594787934119,"orcids-backfile":0.04384295491905283,"update-policies-current":0.914752552283498,"ror-ids-backfile":0.0,"orcids-current":0.716247376983472,"similarity-checking-backfile":0.8617988346998418,"references-backfile":0.4934201807461498,"descriptions-backfile":0.002570441112404452,"award-numbers-backfile":0.01977698900316663,"update-policies-backfile":0.2589666446028458,"licenses-current":0.924914530922123,"award-numbers-current":0.2116945276212482,"abstracts-backfile":0.420136570621406,"resource-links-current":0.9181335911159314,"abstracts-current":0.7917808219178082,"references-current":0.8106854030603824},"prefix":[{"name":"Sage
+        Publications- Academy of Traumatology","value":"10.1528"},{"name":"Alliance
+        for Children and Families","value":"10.1606"},{"name":"Alliance for Children
+        and Families","value":"10.12679"},{"name":"Canadian Pharmacists Journal","value":"10.3821"},{"name":"Libertas
+        Academica, Ltd.","value":"10.4137"},{"name":"Harvey Whitney Books Co.","value":"10.1345"},{"name":"TASH","value":"10.2511"},{"name":"Sage
+        Publications - Technomic Publishing Company","value":"10.1106"},{"name":"SagePublications
+        - National Association of School Nurses","value":"10.1622"},{"name":"Journal
+        of Histochemistry & Cytochemistry","value":"10.1369"},{"name":"Sage Publications
+        (Prufrock Press, Inc.)","value":"10.4219"},{"name":"SAGE","value":"10.14240"},{"name":"Sage
+        Publications - Reference E-Books","value":"10.4135"},{"name":"Excellus Health
+        Plan, Inc.","value":"10.5126"},{"name":"IP Publishing","value":"10.5367"},{"name":"Wichtig
+        Publishing, SRL","value":"10.5301"},{"name":"Research Publishing Services
+        - Professional Engineering Publishing","value":"10.1243"},{"name":"North American
+        Transplant Coordinators Organization","value":"10.7182"},{"name":"Baywood
+        Publishing","value":"10.2190"},{"name":"SAGE Publications","value":"10.47515"},{"name":"Justice
+        Research & Statistics Association","value":"10.3818"},{"name":"Sage Publications
+        - Bulletin of the Atomic Scientists","value":"10.2968"},{"name":"Adam Matthew
+        Digital","value":"10.47594"},{"name":"Sage Publications-International Institute
+        for Environment and Development","value":"10.1630"},{"name":"American College
+        of Veterinary Pathologists","value":"10.1354"},{"name":"The Royal Society
+        of Medicine","value":"10.1258"},{"name":"Swiss Medical Press, GmbH","value":"10.15256"},{"name":"Sage
+        Publications (JRAAS Limited)","value":"10.3317"},{"name":"SAGE Publications","value":"10.31124"},{"name":"Excellus
+        Health Plan, Inc.","value":"10.5034"},{"name":"Canadian Association of Occupational
+        Therapists","value":"10.2182"},{"name":"Sage - Corwin","value":"10.17322"},{"name":"Sociological
+        Research Online","value":"10.5153"},{"name":"SAGE Publications","value":"10.1177"},{"name":"Johnson
+        Graduate School of Management, Cornell University","value":"10.2189"},{"name":"Arnold
+        Publishers","value":"10.1191"},{"name":"Association for Experimental Education","value":"10.5193"}],"id":179,"tokens":["sage","publications"],"counts-type":{"all":{"book-section":618,"monograph":4954,"report":109,"peer-review":3263,"journal-article":2730067,"other":2412,"book":4438,"reference-entry":138463,"journal":153,"component":250,"book-chapter":98893,"database":524,"reference-book":8645,"posted-content":3226,"journal-issue":3015,"edited-book":29},"backfile":{"monograph":4812,"report":98,"journal-article":2534652,"other":99,"book":3065,"reference-entry":131213,"component":24,"book-chapter":91329,"database":325,"reference-book":7126,"posted-content":1788,"journal-issue":2992,"edited-book":13},"current":{"monograph":142,"report":11,"peer-review":3263,"journal-article":195415,"other":1957,"book":1373,"reference-entry":2415,"book-chapter":3901,"database":199,"reference-book":1519,"posted-content":1438,"journal-issue":23,"edited-book":16}},"coverage-type":{"all":{"book-section":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1731391585760518,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"monograph":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":6.055712555510698E-4,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1626968106580541,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.009174311926605505,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"peer-review":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687303488709,"affiliations":0.6791097068313708,"abstracts":0.4888063186727652,"orcids":0.0999975458477759,"licenses":0.9311731177293451,"references":0.5662025877020601,"funders":0.04550987210203999,"similarity-checking":0.9372458624641813,"award-numbers":0.03661411972673198,"ror-ids":0.0,"update-policies":0.3351712613646478,"resource-links":0.9309687271411288,"descriptions":0.0},"other":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.01990049751243781,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.002478593961243804,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1266336187471834,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-entry":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1040855679856713,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.07189542483660132,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1687303488709,"affiliations":0.096,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.26,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.2},"book-chapter":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1480691252161427,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"database":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.9980916030534351},"reference-book":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.2202429149797571,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":1.0,"orcids":0.2991320520768754,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.9820210787352759,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.3396351575456053,"references":0.0,"funders":0.0,"similarity-checking":0.2530679933665008,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.3396351575456053,"descriptions":0.0},"edited-book":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.03448275862068966,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"monograph":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1674979218620116,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.01020408163265306,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687303488709,"affiliations":0.6607960382727096,"abstracts":0.4608198679739862,"orcids":0.04795253944131186,"licenses":0.9261472580851337,"references":0.5420282547663348,"funders":0.02694176557570822,"similarity-checking":0.9325556328837253,"award-numbers":0.02172527037242193,"ror-ids":0.0,"update-policies":0.284478105870155,"resource-links":0.9259271095203602,"descriptions":0.0},"other":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0303030303030303,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1833605220228385,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-entry":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1071235319671069,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1687303488709,"affiliations":1.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.9583333333333333,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":1.0},"book-chapter":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1518575698847026,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"database":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.9969230769230769},"reference-book":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.2671905697445972,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":1.0,"orcids":0.2969798657718121,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.9899328859060403,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.3422459893048128,"references":0.0,"funders":0.0,"similarity-checking":0.2550133689839572,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.3422459893048128,"descriptions":0.0},"edited-book":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"monograph":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.02112676056338028,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"peer-review":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687303488709,"affiliations":0.9166491825090193,"abstracts":0.8518076913235934,"orcids":0.7750530921372464,"licenses":0.996361589437863,"references":0.8797584627587443,"funders":0.2863495637489446,"similarity-checking":0.9980810070874805,"award-numbers":0.2297315968579689,"ror-ids":0.0,"update-policies":0.9926924749891257,"resource-links":0.996361589437863,"descriptions":0.0},"other":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.008011653313911142,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-entry":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"database":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":1.0},"reference-book":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":1.0,"orcids":0.301808066759388,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.972183588317107,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1687303488709,"affiliations":0.0,"abstracts":0.0625,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":true,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":true,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"Thousand
+        Oaks, CA, United States","names":["SAGE Publications","Sage Publications-
+        Academy of Traumatology","Alliance for Children and Families","Canadian Pharmacists
+        Journal","Libertas Academica, Ltd.","Harvey Whitney Books Co.","TASH","Sage
+        Publications - Technomic Publishing Company","SagePublications - National
+        Association of School Nurses","Journal of Histochemistry & Cytochemistry","Sage
+        Publications (Prufrock Press, Inc.)","SAGE","Sage Publications - Reference
+        E-Books","Excellus Health Plan, Inc.","IP Publishing","Wichtig Publishing,
+        SRL","Research Publishing Services - Professional Engineering Publishing","North
+        American Transplant Coordinators Organization","Baywood Publishing","Justice
+        Research & Statistics Association","Sage Publications - Bulletin of the Atomic
+        Scientists","Adam Matthew Digital","Sage Publications-International Institute
+        for Environment and Development","American College of Veterinary Pathologists","The
+        Royal Society of Medicine","Swiss Medical Press, GmbH","Sage Publications
+        (JRAAS Limited)","Canadian Association of Occupational Therapists","Sage -
+        Corwin","Sociological Research Online","Johnson Graduate School of Management,
+        Cornell University","Arnold Publishers","Association for Experimental Education"]}}'
+  recorded_at: Wed, 21 Jun 2023 06:59:58 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1177
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 21 Jun 2023 06:59:59 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bNbXRHfVukPPYrYk5wu4g0iPpSEzVd6QktB0GY1pi0vzya1wxGq3qXom7Z08n4sqBwgUc2hkYILxL1FOyAVDgh%2FSPJrsDIeyK0hzTPlV1%2FZEB23Lu4sZm3RpnGSyLNQ7vbSuY6U%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7daa5f363859b76c-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.1177",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Wed, 21 Jun 2023 06:59:59 GMT
+recorded_with: VCR 6.1.0
