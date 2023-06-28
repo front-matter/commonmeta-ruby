@@ -174,6 +174,54 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.references.length).to eq(3)
       expect(subject.references.first).to eq("key" => "ref1", "url" => "https://sauroposeidon.files.wordpress.com/2010/04/foster-and-wedel-2014-haplocanthosaurus-from-snowmass-colorado.pdf")
     end
+    
+    it "wordpress post with tracking code on url" do
+      input = "https://rogue-scholar.org/api/posts/5d95d90d-ff59-4c8b-b7f8-44e6b45fd593"
+      subject = described_class.new(input: input)
+      puts subject.errors
+      # expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://doi.org/10.59350/tpa8t-j6292")
+      expect(subject.url).to eq("https://www.samuelmoore.org/2023/04/20/how-to-cultivate-good-closures-scaling-small-and-the-limits-of-openness")
+      expect(subject.type).to eq("Article")
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("familyName"=>"Moore", "givenName"=>"Samuel", "id"=>"https://orcid.org/0000-0002-0504-2897", "type"=>"Person")
+      expect(subject.titles).to eq([{ "title" => "How to cultivate good closures: ‘scaling small’ and the limits of openness" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published"=>"2023-04-20", "updated"=>"2023-06-19")
+      expect(subject.descriptions.first["description"]).to start_with("Text of a talk given to the COPIM end-of-project conference")
+      expect(subject.publisher).to eq("name" => "Samuel Moore")
+      expect(subject.subjects).to eq([{ "subject" => "Social sciences" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Social sciences",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.container).to eq("identifier" => "https://www.samuelmoore.org/", "identifierType" => "URL", "title" => "Samuel Moore", "type" => "Periodical")
+      expect(subject.references).to be_nil
+    end
+
+    it "ghost post with institutional author" do
+      input = "https://rogue-scholar.org/api/posts/2b3cdd27-5123-4167-9482-3c074392e2d2"
+      subject = described_class.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://blog.oa.works/nature-features-oa-reports-work-putting-oa-policy-into-practice")
+      expect(subject.url).to eq("https://blog.oa.works/nature-features-oa-reports-work-putting-oa-policy-into-practice")
+      expect(subject.type).to eq("Article")
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("name"=>"OA.Works", "type"=>"Organization")
+      expect(subject.titles).to eq([{ "title" => "Nature features OA.Report's work putting OA policy into practice!" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published" => "2023-01-24")
+      expect(subject.descriptions.first["description"]).to start_with("After a couple of years of working to support institutions implementing their OA policies")
+      expect(subject.publisher).to eq("name" => "OA.Works Blog")
+      expect(subject.subjects).to eq([{ "subject" => "Engineering and technology" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Engineering and technology",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.container).to eq("identifier" => "https://blog.oa.works/", "identifierType" => "URL", "title" => "OA.Works Blog", "type" => "Periodical")
+    end
 
     it "upstream post with references" do
       input = "https://rogue-scholar.org/api/posts/954f8138-0ecd-4090-87c5-cef1297f1470"

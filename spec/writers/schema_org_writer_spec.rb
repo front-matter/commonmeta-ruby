@@ -177,7 +177,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(json['@id']).to eq('https://doi.org/10.23725/8na3-9s47')
       expect(json['@type']).to eq('Dataset')
       expect(json['name']).to eq('NWD165827.recab.cram')
-      expect(json['author']).to eq('name' => 'TOPMed')
+      expect(json['author']).to eq("@type"=>"Organization", "name"=>"TOPMed")
       expect(json['includedInDataCatalog']).to be_empty
       expect(json['identifier']).to eq(
         [{ '@type' => 'PropertyValue',

@@ -153,9 +153,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ 'title' => 'Summary data ankylosing spondylitis GWAS' }])
       expect(subject.container).to eq('identifier' => 'https://dataverse.harvard.edu',
                                       'identifierType' => 'URL', 'title' => 'Harvard Dataverse', 'type' => 'DataRepository')
-      expect(subject.creators).to eq([{
-                                       'name' => 'International Genetics of Ankylosing Spondylitis Consortium (IGAS)'
-                                     }])
+      expect(subject.creators).to eq([{"name"=>"International Genetics of Ankylosing Spondylitis Consortium (IGAS)", "type"=>"Organization"}])
       expect(subject.subjects).to eq([{ 'subject' => 'Medicine, health and life sciences' },
                                       { 'subject' => 'genome-wide association studies' },
                                       { 'subject' => 'Ankylosing spondylitis' }])

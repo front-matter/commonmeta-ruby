@@ -63,6 +63,8 @@ module Commonmeta
         type = 'Person'
       elsif type.blank? && is_personal_name?(name: name) && name.to_s.exclude?(';')
         type = 'Person'
+      elsif type.blank? && name.present? && !is_personal_name?(name: name)
+        type = 'Organization'
       end
 
       # parse author contributor role
@@ -127,8 +129,8 @@ module Commonmeta
     def is_personal_name?(name: nil)
       return true if name_exists?(name.to_s.split.first) || name_exists?(name.to_s.split(', ').last)
 
-      # check if a name has only one word, e.g. "FamousOrganization"
-      return false if name.to_s.split(' ').size == 1
+      # check if a name has only one word, e.g. "FamousOrganization", not including commas
+      return false if name.to_s.split(' ').size == 1 && name.to_s.exclude?(',')
 
       # check for suffixes, e.g. "John Smith, MD"
       return true if %w[MD PhD].include? name.split(', ').last

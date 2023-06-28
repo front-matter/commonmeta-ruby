@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/posts/5d95d90d-ff59-4c8b-b7f8-44e6b45fd593
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '1844'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 28 Jun 2023 07:39:01 GMT
+      Etag:
+      - '"6emrve7vie1ew"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/posts/[slug]"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::q9g2k-1687937937528-5f071f224fc7
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":"https://doi.org/10.59350/tpa8t-j6292","uuid":"5d95d90d-ff59-4c8b-b7f8-44e6b45fd593","url":"https://www.samuelmoore.org/2023/04/20/how-to-cultivate-good-closures-scaling-small-and-the-limits-of-openness","title":"How
+        to cultivate good closures: ‘scaling small’ and the limits of openness","summary":"Text
+        of a talk given to the COPIM end-of-project conference: “Scaling Small: Community-Owned
+        Futures for Open Access Books”, April 20th 2023 Open access publishing has
+        always had a difficult relationship with smoothness and scale. Openness implies
+        seamlessness, limitlessness or structureless-ness – or the idea that the removal
+        of price and permission barriers is what’s needed to allow research to reach
+        its full potential. The drive for seamlessness is on display in much of the
+        push for...","date_published":"2023-04-20T15:37:20Z","date_modified":"2023-06-19T11:01:51Z","date_indexed":"2023-06-20T06:34:19+00:00","authors":[{"url":"https://orcid.org/0000-0002-0504-2897","name":"Samuel
+        Moore"}],"image":null,"tags":["Open access"],"language":"en","references":null,"blog_id":"gr1by89","blog":{"id":"gr1by89","title":"Samuel
+        Moore","description":"publishing, technology, commons","language":"en","favicon":"https://www.samuelmoore.org/wp-content/uploads/2019/02/cropped-cropped-cropped-roAorange-icon-2-32x32.png","feed_url":"https://www.samuelmoore.org/feed/atom/","home_page_url":"https://www.samuelmoore.org/","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T14:25:06+00:00","indexed_at":"2023-01-05","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"WordPress
+        6.2.2","category":"Social Sciences","prefix":null,"modified_at":"2023-04-20T15:37:20+00:00","version":"https://jsonfeed.org/version/1.1","backlog":true,"authors":null}}'
+  recorded_at: Wed, 28 Jun 2023 07:39:01 GMT
+recorded_with: VCR 6.1.0

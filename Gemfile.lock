@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    commonmeta-ruby (3.3.8)
+    commonmeta-ruby (3.3.9)
       activesupport (>= 4.2.5, < 8.0)
       addressable (~> 2.8.1, < 2.8.2)
       base32-url (>= 0.7.0, < 1)
@@ -27,7 +27,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.5)
+    activesupport (7.0.5.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -113,6 +113,7 @@ GEM
       oj (~> 3)
       optimist (~> 3)
     jwt (2.7.1)
+    language_server-protocol (3.17.0.3)
     latex-decode (0.4.0)
     link_header (0.0.8)
     llhttp-ffi (0.4.0)
@@ -186,12 +187,13 @@ GEM
     rspec-mocks (3.12.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-support (3.12.0)
+    rspec-support (3.12.1)
     rspec-xsd (0.1.0)
       nokogiri (~> 1.6)
       rspec (~> 3)
-    rubocop (1.52.1)
+    rubocop (1.53.1)
       json (~> 2.3)
+      language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
       parser (>= 3.2.2.3)
       rainbow (>= 2.2.2, < 4.0)
@@ -245,7 +247,7 @@ GEM
     unicode-display_width (2.4.2)
     unicode-types (1.8.0)
     uuidtools (2.2.0)
-    vcr (6.1.0)
+    vcr (6.2.0)
     webmock (3.18.1)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)

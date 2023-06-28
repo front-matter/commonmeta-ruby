@@ -50,7 +50,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.state).to eq('not_found')
       expect(subject.id).to eq('https://doi.org/10.7554/elife.01567')
       expect(subject.type).to eq('Dissertation')
-      expect(subject.creators).to eq([{ 'name' => 'Toparlar,Y.' }])
+      expect(subject.creators).to eq([{"familyName"=>"Toparlar", "givenName"=>"Y.", "type"=>"Person"}])
       expect(subject.titles).to eq([{ 'title' => 'A multiscale analysis of the urban heat island effect' }])
       expect(subject.descriptions.first['description']).to start_with('Designing the climates of cities')
       expect(subject.date).to eq('created' => '2018-04-25', 'published' => '2018-04-25')
