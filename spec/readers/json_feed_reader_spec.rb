@@ -382,8 +382,8 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it "not indexed posts" do
-      response = subject.get_json_feed_not_indexed("2023-01-01")
-      expect(response).to eq("ca2a7df4-f3b9-487c-82e9-27f54de75ea8")
+      response = subject.get_json_feed_not_indexed
+      expect(response).to eq("b1038a3f-c5aa-4a68-97cb-5c68b27942f7")
     end
 
     it "by blog_id" do

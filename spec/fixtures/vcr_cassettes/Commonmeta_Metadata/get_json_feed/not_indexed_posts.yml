@@ -1420,4 +1420,74 @@ http_interactions:
         highlights interesting science stories from around the web.\",\"language\":\"en\",\"favicon\":\"https://syldavia-gazette.org/favicon.png\",\"feed_url\":\"https://syldavia-gazette.org/atom/\",\"home_page_url\":\"https://syldavia-gazette.org\",\"user_id\":\"8498eaf6-8c58-4b58-bc15-27eda292b1aa\",\"created_at\":\"2023-05-31T16:54:04+00:00\",\"indexed_at\":\"2023-02-01\",\"feed_format\":\"application/atom+xml\",\"license\":\"https://creativecommons.org/licenses/by/4.0/legalcode\",\"generator\":\"Ghost
         5.40\",\"category\":\"Humanities\",\"prefix\":\"10.53731\",\"modified_at\":\"2023-03-15T20:37:00+00:00\",\"version\":\"https://jsonfeed.org/version/1.1\",\"backlog\":false,\"authors\":null}}]"
   recorded_at: Sun, 18 Jun 2023 15:23:51 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/posts/not_indexed
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '4252'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sat, 01 Jul 2023 18:57:39 GMT
+      Etag:
+      - '"ll4w4ic9co3a0"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/posts/[[...params]]"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::jjzwd-1688237856423-827b9226d892
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '[{"id":"https://doi.org/10.53731/r294649-6f79289-8cw1w","uuid":"b1038a3f-c5aa-4a68-97cb-5c68b27942f7","url":"https://blog.front-matter.io/posts/re3data-org-registry-of-research-data-repositories-launched","title":"re3data.org:
+        registry of research data repositories launched","summary":"Earlier this week
+        re3data.org – the Registry of Research Data Repositories – officially launched.
+        The registry is nicely described in a preprint also published this week.re3data.org
+        offers researchers, funding organizations, libraries and publishers and overview
+        of the heterogeneous research data repository landscape. Information icons
+        help researchers to identify an adequate repository for the storage and reuse
+        of their data.I really like re3data.org, and that is not because I personally
+        know...","date_published":"2013-06-01T00:00:00+00:00","date_modified":"2023-06-29T18:04:53+00:00","date_indexed":"2023-06-28T18:13:09+00:00","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://blog.front-matter.io/content/images/2022/08/figure2.png","tags":["News"],"language":"en","references":[{"doi":"https://doi.org/10.7287/peerj.preprints.21v1","key":"ref1"},{"doi":"https://doi.org/10.2312/re3.002","key":"ref2"}],"blog_id":"f0m0e38","blog":{"id":"f0m0e38","title":"Front
+        Matter","description":"The Front Matter Blog covers the intersection of science
+        and technology since 2007.","language":"en","favicon":"https://blog.front-matter.io/favicon.png","feed_url":"https://blog.front-matter.io/atom-complete/","home_page_url":"https://blog.front-matter.io","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T07:20:33+00:00","indexed_at":"2023-01-02","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
+        5.52","category":"Engineering and Technology","prefix":"10.53731","modified_at":"2023-06-29T18:04:53+00:00","version":"https://jsonfeed.org/version/1.1","backlog":false,"authors":null,"current_feed_url":"https://blog.front-matter.io/atom/","expired":null}},{"id":"https://doi.org/10.53731/r294649-6f79289-8cw3h","uuid":"e4e13c41-5991-41b6-811b-6271510c1b0e","url":"https://blog.front-matter.io/posts/increased-cancer-risk-following-computed-tomography-scans","title":"Increased
+        cancer risk following computed tomography scans","summary":"Two papers (this
+        and this) and an editorial in the latest issue of Archives of Internal Medicine
+        examine the cancer risks associated with the use of computed tomography (CT)
+        examinations.1Ionizing radiation increases the risk for developing cancer.
+        There is direct evidence from atomic bomb survivors in Japan in 1945 and from
+        nuclear accidents such as the one in Chernobyl in 1986. There are no studies
+        directly demonstrating an increased cancer risk from the diagnostic use of
+        X-rays (either...","date_published":"2009-12-20T00:00:00+00:00","date_modified":"2023-06-29T17:49:57+00:00","date_indexed":"2023-06-28T18:13:09+00:00","authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://blog.front-matter.io/content/images/2022/08/ioi90119f2.jpg","tags":["Feature"],"language":"en","references":[{"doi":"https://doi.org/10.1001/archinternmed.2009.427","key":"ref1"},{"doi":"https://doi.org/10.1001/archinternmed.2009.440","key":"ref2"},{"doi":"https://doi.org/10.1001/archinternmed.2009.453","key":"ref3"}],"blog_id":"f0m0e38","blog":{"id":"f0m0e38","title":"Front
+        Matter","description":"The Front Matter Blog covers the intersection of science
+        and technology since 2007.","language":"en","favicon":"https://blog.front-matter.io/favicon.png","feed_url":"https://blog.front-matter.io/atom-complete/","home_page_url":"https://blog.front-matter.io","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T07:20:33+00:00","indexed_at":"2023-01-02","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
+        5.52","category":"Engineering and Technology","prefix":"10.53731","modified_at":"2023-06-29T18:04:53+00:00","version":"https://jsonfeed.org/version/1.1","backlog":false,"authors":null,"current_feed_url":"https://blog.front-matter.io/atom/","expired":null}}]'
+  recorded_at: Sat, 01 Jul 2023 18:57:39 GMT
+recorded_with: VCR 6.2.0

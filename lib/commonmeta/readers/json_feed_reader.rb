@@ -105,10 +105,10 @@ module Commonmeta
         posts.map { |post| post["uuid"] }.first
       end
 
-      def get_json_feed_not_indexed(date_indexed)
-        # get JSON Feed items not indexed in Crossref since a particular date
+      def get_json_feed_not_indexed
+        # get JSON Feed items not indexed in Crossref since they have been last updated
 
-        url = json_feed_not_indexed_url(date_indexed)
+        url = json_feed_not_indexed_url
         response = HTTP.get(url)
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 

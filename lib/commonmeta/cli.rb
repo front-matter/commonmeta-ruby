@@ -105,8 +105,8 @@ module Commonmeta
 
     desc "", "json_feed_not_indexed"
 
-    def json_feed_not_indexed(date_indexed)
-      puts get_json_feed_not_indexed(date_indexed)
+    def json_feed_not_indexed
+      puts get_json_feed_not_indexed
     end
 
     desc "", "json_feed_by_blog"

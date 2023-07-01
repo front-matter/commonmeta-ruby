@@ -1437,8 +1437,8 @@ module Commonmeta
       Base32::URL.decode(id)
     end
 
-    def json_feed_not_indexed_url(date_indexed)
-      "https://rogue-scholar.org/api/posts/not_indexed/#{date_indexed}"
+    def json_feed_not_indexed_url
+      "https://rogue-scholar.org/api/posts/not_indexed"
     end
 
     def json_feed_unregistered_url
