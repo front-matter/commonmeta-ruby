@@ -1,0 +1,2993 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/posts/f3dc29da-0481-4f3b-8110-4c07260fca67
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '6493'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 04 Jul 2023 20:33:09 GMT
+      Etag:
+      - '"xhyqdztkms4zv"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/posts/[[...params]]"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::x9cxv-1688502788686-0b1ffa96daf5
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":"273fcd5f-95b3-4436-9998-acdacdb1323b","uuid":"f3dc29da-0481-4f3b-8110-4c07260fca67","url":"https://flavoursofopen.science/grundlagen-fur-die-entwicklung-einer-open-scholarship-strategie","title":"Grundlagen
+        für die Entwicklung einer Open Scholarship-Strategie","summary":"Versionshistorie
+        Version 1.0 — 16. Oktober 2017 – Erste Version des Dokuments. Version 1.1
+        — 06. Juni 2018 – Website erstellt. Version 1.2 — Vervollständigter erster
+        Entwurf (30. Juli 2018) Version 2.1 — Vollständig überarbeitete zweite Version
+        (31. Januar, 2019), in englischer Sprache veröffentlicht unter DOI 10.31222/osf.io/b4v8p,
+        auf deutsch veröffentlicht unter DOI 10.31235/osf.io/hu9sj Beachte, dass Versionen
+        dieses Dokuments auch in...","date_published":"2019-01-31T00:01:19+00:00","date_modified":"2023-06-19T20:37:51+00:00","date_indexed":"2023-07-02T19:16:56+00:00","authors":[{"url":"https://orcid.org/0000-0002-3158-3136","name":"Tobias
+        Steiner"}],"image":null,"tags":["Open Scholarship"],"language":"de","references":[{"key":"ref1","url":"http://oerstrategy.org/home/read-the-doc"},{"doi":"https://doi.org/10.1101/110825","key":"ref2"},{"doi":"https://doi.org/10.1371/journal.pmed.1002276","key":"ref3"},{"key":"ref4","url":"https://cyber.harvard.edu/hoap/Good_practices_for_university_open-access_policies"},{"key":"ref5","url":"https://cyber.harvard.edu/hoap/How_to_make_your_own_work_open_access"},{"key":"ref6","url":"https://dx.doi.org/10.3389/fnhum.2013.00291"},{"key":"ref7","url":"https://theguardian.com/science/2017/jun/27/profitable-business-scientific-publishing-bad-for-science"},{"key":"ref8","url":"https://capetowndeclaration.org/sign-the-declaration"},{"doi":"https://doi.org/10.3233/isu-170839","key":"ref9"},{"key":"ref10","url":"https://go-fair.org/fair-principles"},{"doi":"https://doi.org/10.1126/scitranslmed.aai9055","key":"ref11"},{"key":"ref12","url":"https://openpharma.blog/2017/08/14/when-will-preprints-take-off-in-medicine"},{"doi":"https://doi.org/10.1017/cbo9781316161012","key":"ref13"},{"doi":"https://doi.org/10.16995/olh.46","key":"ref14"},{"doi":"https://doi.org/10.1007/978-3-319-00026-8_2","key":"ref15"},{"doi":"https://doi.org/10.1007/s10961-014-9375-6","key":"ref16"},{"key":"ref17","url":"http://jonathanfurner.info/docs/furnerInPress-a.pdf"},{"doi":"https://doi.org/10.1136/bmjopen-2017-015997","key":"ref18"},{"doi":"https://doi.org/10.1002/leap.1228","key":"ref19"},{"key":"ref20","url":"https://web.archive.org/web/20220808134259/https://www.semantic-web-journal.net/content/reasonable-semantic-web"},{"key":"ref21","url":"https://web.archive.org/web/20190727193223/https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en"},{"doi":"https://doi.org/10.2760/283135","key":"ref22"},{"key":"ref23","url":"https://danielskatzblog.wordpress.com/2016/10/25/clash-of-cultures-why-all-science-isnt-open-science"},{"doi":"https://doi.org/10.12688/f1000research.17425.1","key":"ref24"},{"doi":"https://doi.org/10.5281/zenodo.1147025","key":"ref25"},{"key":"ref26","url":"https://arxiv.org/abs/1801.08992"},{"doi":"https://doi.org/10.1073/pnas.1421412111","key":"ref27"},{"doi":"https://doi.org/10.7287/peerj.preprints.2689v1","key":"ref28"},{"doi":"https://doi.org/10.1371/journal.pbio.1002614","key":"ref29"},{"doi":"https://doi.org/10.7554/elife.16800","key":"ref30"},{"key":"ref31","url":"https://web.archive.org/web/20200715115043/https://libereurope.eu/wp-content/uploads/2018/07/SO_A4_2018_05-EN_print.pdf"},{"doi":"https://doi.org/10.1007/s11192-015-1765-5","key":"ref32"},{"key":"ref33","url":"https://techdirt.com/articles/20170804/05454537924/elsevier-continues-to-build-monopoly-solution-all-aspects-scholarly-communication.shtml"},{"doi":"https://doi.org/10.4000/rfsic.3220","key":"ref34"},{"key":"ref35","url":"https://sustainingknowledgecommons.org/2018/02/06/doaj-apc-information-as-of-jan-31-2018"},{"key":"ref36","url":"https://nature.com/articles/s41562-016-0021"},{"doi":"https://doi.org/10.1002/asi.23741","key":"ref37"},{"key":"ref38","url":"https://etag.ee/wp-content/uploads/2017/03/Open-Science-in-Estonia-Principles-and-Recommendations-final.pdf"},{"doi":"https://doi.org/10.1101/066803","key":"ref39"},{"key":"ref40","url":"https://routledge.com/Virtues-of-Openness-Education-Science-and-Scholarship-in-the-Digital/Peters-Roberts/p/book/9781594516863"},{"key":"ref41","url":"https://mitpress.mit.edu/books/metadata"},{"key":"ref42","url":"http://knowledgegap.org/index.php/sub-projects/rent-seeking-and-financialization-of-the-academic-publishing-industry/preliminary-findings"},{"key":"ref43","url":"https://poynder.blogspot.com/2017/02/copyright-immoveable-barrier-that-open.html"},{"key":"ref44","url":"https://sr.ithaka.org/blog/the-center-for-open-science-alternative-to-elsevier-announces-new-preprint-services-today"},{"key":"ref45","url":"https://intheopen.net/2017/09/join-the-movement-the-2-5-commitment"},{"key":"ref46","url":"http://lchc.ucsd.edu/MCA/Mail/xmcamail.2012_08.dir/pdfMrgHgzULhA.pdf"},{"doi":"https://doi.org/10.5281/zenodo.1183805","key":"ref47"},{"doi":"https://doi.org/10.12688/f1000research.8460.3","key":"ref48"},{"doi":"https://doi.org/10.6084/m9.figshare.c.3943972.v7","key":"ref49"},{"doi":"https://doi.org/10.31222/osf.io/796tu","key":"ref50"},{"doi":"https://doi.org/10.5281/zenodo.1472044","key":"ref51"},{"doi":"https://doi.org/10.19173/irrodl.v13i4.1313","key":"ref52"},{"doi":"https://doi.org/10.1186/s13059-015-0669-2","key":"ref53"},{"doi":"https://doi.org/10.5334/bam","key":"ref54"},{"doi":"https://doi.org/10.1038/sdata.2016.18","key":"ref55"},{"doi":"https://doi.org/10.2777/337729","key":"ref56"},{"doi":"https://doi.org/10.1038/nchem.1149","key":"ref57"}],"blog_id":"hjkgw43","blog":{"id":"hjkgw43","title":"Flavours
+        of Open","description":null,"language":"en","favicon":"https://flavoursofopen.science/wp-content/uploads/2022/05/cropped-open-padlock-32x32.png","feed_url":"https://flavoursofopen.science/feed/atom/","home_page_url":"https://flavoursofopen.science","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T13:37:56+00:00","indexed_at":"2023-01-02","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"WordPress
+        6.2.2","category":"Humanities","prefix":"10.59350","modified_at":"2023-06-19T20:41:37+00:00","version":"https://jsonfeed.org/version/1.1","backlog":false,"current_feed_url":null,"expired":null}}'
+  recorded_at: Tue, 04 Jul 2023 20:33:09 GMT
+- request:
+    method: head
+    uri: http://oerstrategy.org/home/read-the-doc
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - oerstrategy.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 04 Jul 2023 20:33:09 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '138'
+      Connection:
+      - close
+      Location:
+      - http://www.oerstrategy.org/home/read-the-doc
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:09 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1101/110825
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:09 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '173'
+      Connection:
+      - close
+      Location:
+      - http://biorxiv.org/lookup/doi/10.1101/110825
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=f3olYt%2FrYC7%2F322vBx5yKTgMeqU0KcaZgY2MhXIqaNLeHYks%2BxI9OMg0zdsLmApwXuDgWQWDGv6FgBvRFyhmmMeuT9m0BNFcE9AUOSPRsSic7UwdPabqxSA%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a2443ae2806d4-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:09 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1371/journal.pmed.1002276
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:10 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '181'
+      Connection:
+      - close
+      Location:
+      - https://dx.plos.org/10.1371/journal.pmed.1002276
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Ga43U86uTuROQbM3TIctYRNMUnOW389iTC673A8%2FYXF%2Fk55ublkflPRu6ip%2Fb3eQBt4e0W78q0xEmdu%2BBmGU0wHRPQDiZzhe2QrQcMYOIRQ%2FW8f8arlJNUs%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24450965b92a-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:09 GMT
+- request:
+    method: head
+    uri: https://cyber.harvard.edu/hoap/Good_practices_for_university_open-access_policies
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - cyber.harvard.edu
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:10 GMT
+      Server:
+      - Apache
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Content-Language:
+      - en
+      Vary:
+      - Accept-Encoding,Cookie
+      Expires:
+      - Tue, 04 Jul 2023 20:33:10 GMT
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Last-Modified:
+      - Tue, 11 Apr 2023 20:22:48 GMT
+      X-Request-Id:
+      - 87caa7f042f4a64ad2d23a79
+      Content-Type:
+      - text/html; charset=UTF-8
+      Via:
+      - 1.1 cyber.harvard.edu
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Powered-By:
+      - Mythical Beasts
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:10 GMT
+- request:
+    method: head
+    uri: https://cyber.harvard.edu/hoap/How_to_make_your_own_work_open_access
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - cyber.harvard.edu
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:10 GMT
+      Server:
+      - Apache
+      X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      Content-Language:
+      - en
+      Vary:
+      - Accept-Encoding,Cookie
+      Expires:
+      - Tue, 04 Jul 2023 20:33:10 GMT
+      Cache-Control:
+      - private, must-revalidate, max-age=0
+      Last-Modified:
+      - Mon, 15 May 2023 16:54:06 GMT
+      X-Request-Id:
+      - b96e17b701ebb42cd9f96acf
+      Content-Type:
+      - text/html; charset=UTF-8
+      Via:
+      - 1.1 cyber.harvard.edu
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Powered-By:
+      - Mythical Beasts
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:10 GMT
+- request:
+    method: head
+    uri: https://theguardian.com/science/2017/jun/27/profitable-business-scientific-publishing-bad-for-science
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - theguardian.com
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Server:
+      - Varnish
+      Retry-After:
+      - '0'
+      Location:
+      - https://www.theguardian.com/science/2017/jun/27/profitable-business-scientific-publishing-bad-for-science
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 04 Jul 2023 20:33:11 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-ams21045-AMS
+      X-Cache:
+      - HIT
+      X-Cache-Hits:
+      - '0'
+      X-Timer:
+      - S1688502791.050992,VS0,VE0
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:11 GMT
+- request:
+    method: head
+    uri: https://capetowndeclaration.org/sign-the-declaration
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - capetowndeclaration.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:11 GMT
+      Connection:
+      - close
+      Cache-Control:
+      - max-age=3600
+      Expires:
+      - Tue, 04 Jul 2023 21:33:11 GMT
+      Location:
+      - https://www.capetowndeclaration.org/sign-the-declaration
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bMJ8zxTQyLnB4SFCVQkOT0m%2Ba6BOCytikeatBns2MGsHlGnJ2Q76QVyH5y1%2FoozeKaZKVk6jmOyrlqxvSBBQ14%2FE6WypeJBeZFMH9rF3cNi34c56LM59%2FEt6l7C0L5tAboQuPHeJoYUcHQ%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=15552000; preload
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a244cbbc57163-DUS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:11 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.3233/isu-170839
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:11 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '255'
+      Connection:
+      - close
+      Location:
+      - https://www.medra.org/servlet/aliasResolver?alias=iospress&doi=10.3233/ISU-170839
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:16:59 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=W%2FPlaotC5yV9t8XAnBiB70KaB0FJ%2By6W8t8MbOElJhwySzZwAvN8TVMTynjuU93tDGzUjOKh7GGjPWJcdusJqbgVuYsJBB53ZB8sAtfBHdU6FRFLgp0QvjM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a244d58670b48-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:11 GMT
+- request:
+    method: head
+    uri: https://go-fair.org/fair-principles
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - go-fair.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 04 Jul 2023 20:33:11 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Connection:
+      - close
+      X-Powered-By:
+      - Pronamic | pronamic.eu | info@pronamic.eu
+      X-Cache-Enabled:
+      - 'True'
+      Expires:
+      - Tue, 04 Jul 2023 21:33:11 GMT
+      Cache-Control:
+      - max-age=3600
+      X-Redirect-By:
+      - WordPress
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+      Location:
+      - https://www.go-fair.org/fair-principles/
+      X-Httpd:
+      - '1'
+      Host-Header:
+      - 8441280b0c35cbc1147f8ba998a563a7
+      X-Proxy-Cache-Info:
+      - DT:1
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:11 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1126/scitranslmed.aai9055
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:12 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '197'
+      Connection:
+      - close
+      Location:
+      - https://www.science.org/doi/10.1126/scitranslmed.aai9055
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:13:36 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=aqckqnNKFXFF6i%2FzfhQORShXJCm66h5oTL3VsxNOAkhi1DnpaECGAmRARDy4KfpRnVO5V12wzIHW8gjm4UQA5Yrv7JQi57btCrtSsjwxKiJPFjMnYQ0b2iU%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24518dc50ae0-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:12 GMT
+- request:
+    method: head
+    uri: https://openpharma.blog/2017/08/14/when-will-preprints-take-off-in-medicine
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - openpharma.blog
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 04 Jul 2023 20:33:04 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Connection:
+      - close
+      X-Powered-By:
+      - PHP/8.2.7
+      - PleskLin
+      X-Pingback:
+      - https://www.openpharma.blog/xmlrpc.php
+      X-Redirect-By:
+      - WordPress
+      Location:
+      - https://www.openpharma.blog/blog/news/when-will-preprints-take-off-in-medicine/
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:12 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1017/cbo9781316161012
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:13 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '231'
+      Connection:
+      - close
+      Location:
+      - https://www.cambridge.org/core/product/identifier/9781316161012/type/book
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rvty9%2BBNtCPRdj73kjYUyUk8C%2F1kyH6iAR9Y6sPaCUwpZ8HKhxZbDi0aHCuFy4E7aiLd5kxI%2FdTtnDTy0G%2Bho8W2JH7Dh%2F2rQwkJPDKe3ZCXiLif2UCsnQ4%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a2457fdabb972-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:13 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.16995/olh.46
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:13 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '173'
+      Connection:
+      - close
+      Location:
+      - https://olh.openlibhums.org/article/id/4400/
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:13:36 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TBoReCfctlSnaEaIx8TMuCXmpL6H3kf3ksLdwnu7nrWNE0ZBn7z3abvjS3o5wGw3D7DhWMkpnsCATs7Cgv8CpGZ8U7mNSb8Kq1Md0IwnVqmUtU4oJokVdxc%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a245968710b70-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:13 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1007/978-3-319-00026-8_2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:13 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '189'
+      Connection:
+      - close
+      Location:
+      - http://link.springer.com/10.1007/978-3-319-00026-8_2
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cjrI3Gq2uYV3AqES%2ByPHStGcS8fsC3ZSE05DhqtcmVFmDX3Qu7029%2FuUS8mj6pUoFv7fLcj9Hucf2fB94S4sx3Oh72ee27%2FGz5SPsVQKKD6AN%2FUSLGsOVLA%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a245b2e7d1ca2-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:13 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1007/s10961-014-9375-6
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:13 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '185'
+      Connection:
+      - close
+      Location:
+      - http://link.springer.com/10.1007/s10961-014-9375-6
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:13:36 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=noJMM%2BV4bzTadzOn%2BfwB2yOJEBfq9Gq%2FjwC1OuFcwVIjAoFLZ%2F5SZx5UfW6yJQP9V0EcUSF1rM%2B1on9IxHLnUdAAMF1R0dt6sa5XYplKWg5OiGsggKn93zQ%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a245c1802b908-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:13 GMT
+- request:
+    method: head
+    uri: http://jonathanfurner.info/docs/furnerInPress-a.pdf
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - jonathanfurner.info
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache/2.4
+      Content-Type:
+      - application/pdf
+      Date:
+      - Tue, 04 Jul 2023 20:33:13 GMT
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - close
+      Set-Cookie:
+      - X-Mapping-pjomflmm=0D8D3B83FF049C9A07362C0D4F79B064; path=/
+      Last-Modified:
+      - Thu, 18 Dec 2014 21:57:42 GMT
+      Content-Length:
+      - '242506'
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:13 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1136/bmjopen-2017-015997
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:14 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '209'
+      Connection:
+      - close
+      Location:
+      - https://bmjopen.bmj.com/lookup/doi/10.1136/bmjopen-2017-015997
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:16:59 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=17CNmuRi0GdftGzqBg6%2BfPlzibJLOK%2Bdky3Qpvvd4lqVmT0SQbgZbKPSMCEipTyz180w455PIf2hTNNwcwq8DiNVjz3QvzyIJfHUoN7OykNQLudI9B89PTM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a245f492b1cce-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:14 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1002/leap.1228
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:14 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '191'
+      Connection:
+      - close
+      Location:
+      - https://onlinelibrary.wiley.com/doi/10.1002/leap.1228
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Gn8axOb7b8N0M9SW0eTP6VL%2F%2FXFWnVEvDHp3%2BORPrjFVVPI0p5ehoWVmksA4%2F4dmAaLjCspMfGiwHE%2FHubgiVSCOEL1NGC9pJVezmnFEVvqKEUTiHtHGjCw%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24602ec0b76d-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:14 GMT
+- request:
+    method: head
+    uri: https://web.archive.org/web/20220808134259/https://www.semantic-web-journal.net/content/reasonable-semantic-web
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - web.archive.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.19.5
+      Date:
+      - Tue, 04 Jul 2023 20:33:16 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '66508'
+      Connection:
+      - close
+      X-Archive-Orig-Date:
+      - Mon, 08 Aug 2022 13:42:59 GMT
+      X-Archive-Orig-X-Crawler-Transfer-Encoding:
+      - chunked
+      X-Archive-Orig-Connection:
+      - keep-alive
+      X-Archive-Orig-Server:
+      - Apache
+      X-Archive-Orig-X-Content-Type-Options:
+      - nosniff
+      - nosniff
+      X-Archive-Orig-X-Drupal-Cache:
+      - MISS
+      X-Archive-Orig-Expires:
+      - Sun, 19 Nov 1978 05:00:00 GMT
+      X-Archive-Orig-Cache-Control:
+      - public, max-age=0
+      X-Archive-Orig-Content-Language:
+      - en
+      X-Archive-Orig-X-Frame-Options:
+      - SAMEORIGIN
+      X-Archive-Orig-Permissions-Policy:
+      - interest-cohort=()
+      X-Archive-Orig-X-Generator:
+      - Drupal 7 (http://drupal.org)
+      X-Archive-Orig-Link:
+      - </content/reasonable-semantic-web>; rel="canonical",</node/31>; rel="shortlink"
+      X-Archive-Orig-Etag:
+      - '"1659966179-1"'
+      X-Archive-Orig-Last-Modified:
+      - Mon, 08 Aug 2022 13:42:59 GMT
+      X-Archive-Orig-Vary:
+      - Cookie,Accept-Encoding
+      X-Archive-Orig-X-Crawler-Content-Encoding:
+      - gzip
+      X-Archive-Orig-Content-Length:
+      - '49743'
+      X-Archive-Guessed-Content-Type:
+      - text/html
+      X-Archive-Guessed-Charset:
+      - utf-8
+      Memento-Datetime:
+      - Mon, 08 Aug 2022 13:42:59 GMT
+      Link:
+      - <https://www.semantic-web-journal.net/content/reasonable-semantic-web>; rel="original",
+        <https://web.archive.org/web/timemap/link/https://www.semantic-web-journal.net/content/reasonable-semantic-web>;
+        rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://www.semantic-web-journal.net/content/reasonable-semantic-web>;
+        rel="timegate", <https://web.archive.org/web/20110504161516/http://www.semantic-web-journal.net:80/content/reasonable-semantic-web>;
+        rel="first memento"; datetime="Wed, 04 May 2011 16:15:16 GMT", <https://web.archive.org/web/20220716002041/http://www.semantic-web-journal.net/content/reasonable-semantic-web>;
+        rel="prev memento"; datetime="Sat, 16 Jul 2022 00:20:41 GMT", <https://web.archive.org/web/20220808134259/https://www.semantic-web-journal.net/content/reasonable-semantic-web>;
+        rel="memento"; datetime="Mon, 08 Aug 2022 13:42:59 GMT", <https://web.archive.org/web/20220813204532/https://www.semantic-web-journal.net/content/reasonable-semantic-web>;
+        rel="next memento"; datetime="Sat, 13 Aug 2022 20:45:32 GMT", <https://web.archive.org/web/20230401011015/https://www.semantic-web-journal.net/content/reasonable-semantic-web>;
+        rel="last memento"; datetime="Sat, 01 Apr 2023 01:10:15 GMT"
+      Content-Security-Policy:
+      - 'default-src ''self'' ''unsafe-eval'' ''unsafe-inline'' data: blob: archive.org
+        web.archive.org wayback-api.archive.org analytics.archive.org pragma.archivelab.org'
+      X-Archive-Src:
+      - CC-MAIN-2022-33-1659882570827.41-0006/CC-MAIN-20220808122331-20220808152331-00132.warc.gz
+      Server-Timing:
+      - captures_list;dur=270.069130, exclusion.robots;dur=0.184560, exclusion.robots.policy;dur=0.173260,
+        cdx.remote;dur=0.069492, esindex;dur=0.009365, LoadShardBlock;dur=228.562288,
+        PetaboxLoader3.datanode;dur=163.209997, load_resource;dur=737.121282, PetaboxLoader3.resolve;dur=220.810857
+      X-App-Server:
+      - wwwb-app213
+      X-Ts:
+      - '200'
+      X-Tr:
+      - '1594'
+      X-Location:
+      - All
+      X-Rl:
+      - '0'
+      X-Na:
+      - '0'
+      X-Page-Cache:
+      - MISS
+      X-Nid:
+      - "-"
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      Permissions-Policy:
+      - interest-cohort=()
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:16 GMT
+- request:
+    method: head
+    uri: https://web.archive.org/web/20190727193223/https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - web.archive.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.19.5
+      Date:
+      - Tue, 04 Jul 2023 20:33:18 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Content-Length:
+      - '77401'
+      Connection:
+      - close
+      X-Archive-Orig-X-Content-Type-Options:
+      - nosniff
+      X-Archive-Orig-Etag:
+      - '"1564255391-1"'
+      X-Archive-Orig-Content-Language:
+      - en
+      X-Archive-Orig-X-Frame-Options:
+      - SAMEORIGIN
+      X-Archive-Orig-Content-Security-Policy:
+      - child-src 'self' *.youtube.com *.vimeo.com *.dailymotion.com *.europa.eu europa.eu
+        youtube.com *.dailymotion.com *.vimeo.com *.amazonaws.com *.arcgis.com *.arte.tv
+        *.babahh.com *.bbc.co.uk *.blitzvideoserver.de *.bpb.de *.brightcove.com *.btv.bg
+        *.cc.cec *.cimo.fi *.cjelozivotno-ucenje.hr *.cnbc.com *.coe.int *.communi-k.eu
+        *.compareyourcountry.org *.crp.education *.cy2012.eu *.dacast.com *.dcdn.lt
+        debategraph.org digital-agenda-data.eu *.disaster-resilience.com *.docdroid.net
+        *.d-portal.org *.easme-web.eu *.edcc.eu *.euneighbours.eu *.euronews.com *.europeandataportal.eu
+        *.facebook.com https://familymeal.eu *.flickr.com *.franceculture.fr *.franceinter.fr
+        *.freecaster.com *.freezbee.tv *.genial.ly *.giphy.com *.github.io *.google.be
+        *.google.co.uk *.google.com *.google.fr *.grnet.gr *.index.hu *.instantflipbook.com
+        *.issuu.com *.jrc.nl *.jwplatform.com *.learningandwork.org.uk *.libsyn.com
+        *.live.com livestream.com *.mentimeter.com *.metoo.sk *.mostra.eu *.neteyes.hu
+        *.oecd.org *.openstreetmap.fr *.openstreetmap.org *.ourworldindata.org *.polarhd.com
+        *.public-i.tv *.qbrick.com *.rackcdn.com *.rambla.be *.roguemotion.graphics
+        *.sharepoint.com *.sketchfab.com *.slideshare.net *.solidtango.com *.soonfeed.com
+        *.soundcloud.com *.streamamg.com *.streamcode.net *.streamdis.eu streamer.bg
+        *.streaming.at *.streaming.sk *.streamovations.be *.sway.com *.tagesschau.de
+        *.telemak.tv *.testa.eu *.thinglink.com *.tiesraides.lv *.top-ix.org *.tsnmalta.org
+        *.tv1.eu *.tv-on-web.de *.twinix.eu *.typeform.com *.uc3m.es *.uplynk.com
+        *.ustream.tv *.uu.se *.videliostreaming.com *.videolevels.com *.walls.io *.weforum.org
+        *.westream.com *.wyng.com *.youongroup.com *.youtu.be *.youtube-nocookie.com
+        *.zdf.de *.michael-lurquin.com; frame-src 'self' *.youtube.com *.vimeo.com
+        *.dailymotion.com *.europa.eu europa.eu youtube.com *.dailymotion.com *.vimeo.com
+        *.amazonaws.com *.arcgis.com *.arte.tv *.babahh.com *.bbc.co.uk *.blitzvideoserver.de
+        *.bpb.de *.brightcove.com *.btv.bg *.cc.cec *.cimo.fi *.cjelozivotno-ucenje.hr
+        *.cnbc.com *.coe.int *.communi-k.eu *.compareyourcountry.org *.crp.education
+        *.cy2012.eu *.dacast.com *.dcdn.lt debategraph.org digital-agenda-data.eu
+        *.disaster-resilience.com *.docdroid.net *.d-portal.org *.easme-web.eu *.edcc.eu
+        *.euneighbours.eu *.euronews.com *.europeandataportal.eu *.facebook.com https://familymeal.eu
+        *.flickr.com *.franceculture.fr *.franceinter.fr *.freecaster.com *.freezbee.tv
+        *.genial.ly *.giphy.com *.github.io *.google.be *.google.co.uk *.google.com
+        *.google.fr *.grnet.gr *.index.hu *.instantflipbook.com *.issuu.com *.jrc.nl
+        *.jwplatform.com *.learningandwork.org.uk *.libsyn.com *.live.com livestream.com
+        *.mentimeter.com *.metoo.sk *.mostra.eu *.neteyes.hu *.oecd.org *.openstreetmap.fr
+        *.openstreetmap.org *.ourworldindata.org *.polarhd.com *.public-i.tv *.qbrick.com
+        *.rackcdn.com *.rambla.be *.roguemotion.graphics *.sharepoint.com *.sketchfab.com
+        *.slideshare.net *.solidtango.com *.soonfeed.com *.soundcloud.com *.streamamg.com
+        *.streamcode.net *.streamdis.eu streamer.bg *.streaming.at *.streaming.sk
+        *.streamovations.be *.sway.com *.tagesschau.de *.telemak.tv *.testa.eu *.thinglink.com
+        *.tiesraides.lv *.top-ix.org *.tsnmalta.org *.tv1.eu *.tv-on-web.de *.twinix.eu
+        *.typeform.com *.uc3m.es *.uplynk.com *.ustream.tv *.uu.se *.videliostreaming.com
+        *.videolevels.com *.walls.io *.weforum.org *.westream.com *.wyng.com *.youongroup.com
+        *.youtu.be *.youtube-nocookie.com *.zdf.de *.michael-lurquin.com;
+      X-Archive-Orig-X-Content-Security-Policy:
+      - child-src 'self' *.youtube.com *.vimeo.com *.dailymotion.com *.europa.eu europa.eu
+        youtube.com *.dailymotion.com *.vimeo.com *.amazonaws.com *.arcgis.com *.arte.tv
+        *.babahh.com *.bbc.co.uk *.blitzvideoserver.de *.bpb.de *.brightcove.com *.btv.bg
+        *.cc.cec *.cimo.fi *.cjelozivotno-ucenje.hr *.cnbc.com *.coe.int *.communi-k.eu
+        *.compareyourcountry.org *.crp.education *.cy2012.eu *.dacast.com *.dcdn.lt
+        debategraph.org digital-agenda-data.eu *.disaster-resilience.com *.docdroid.net
+        *.d-portal.org *.easme-web.eu *.edcc.eu *.euneighbours.eu *.euronews.com *.europeandataportal.eu
+        *.facebook.com https://familymeal.eu *.flickr.com *.franceculture.fr *.franceinter.fr
+        *.freecaster.com *.freezbee.tv *.genial.ly *.giphy.com *.github.io *.google.be
+        *.google.co.uk *.google.com *.google.fr *.grnet.gr *.index.hu *.instantflipbook.com
+        *.issuu.com *.jrc.nl *.jwplatform.com *.learningandwork.org.uk *.libsyn.com
+        *.live.com livestream.com *.mentimeter.com *.metoo.sk *.mostra.eu *.neteyes.hu
+        *.oecd.org *.openstreetmap.fr *.openstreetmap.org *.ourworldindata.org *.polarhd.com
+        *.public-i.tv *.qbrick.com *.rackcdn.com *.rambla.be *.roguemotion.graphics
+        *.sharepoint.com *.sketchfab.com *.slideshare.net *.solidtango.com *.soonfeed.com
+        *.soundcloud.com *.streamamg.com *.streamcode.net *.streamdis.eu streamer.bg
+        *.streaming.at *.streaming.sk *.streamovations.be *.sway.com *.tagesschau.de
+        *.telemak.tv *.testa.eu *.thinglink.com *.tiesraides.lv *.top-ix.org *.tsnmalta.org
+        *.tv1.eu *.tv-on-web.de *.twinix.eu *.typeform.com *.uc3m.es *.uplynk.com
+        *.ustream.tv *.uu.se *.videliostreaming.com *.videolevels.com *.walls.io *.weforum.org
+        *.westream.com *.wyng.com *.youongroup.com *.youtu.be *.youtube-nocookie.com
+        *.zdf.de *.michael-lurquin.com; frame-src 'self' *.youtube.com *.vimeo.com
+        *.dailymotion.com *.europa.eu europa.eu youtube.com *.dailymotion.com *.vimeo.com
+        *.amazonaws.com *.arcgis.com *.arte.tv *.babahh.com *.bbc.co.uk *.blitzvideoserver.de
+        *.bpb.de *.brightcove.com *.btv.bg *.cc.cec *.cimo.fi *.cjelozivotno-ucenje.hr
+        *.cnbc.com *.coe.int *.communi-k.eu *.compareyourcountry.org *.crp.education
+        *.cy2012.eu *.dacast.com *.dcdn.lt debategraph.org digital-agenda-data.eu
+        *.disaster-resilience.com *.docdroid.net *.d-portal.org *.easme-web.eu *.edcc.eu
+        *.euneighbours.eu *.euronews.com *.europeandataportal.eu *.facebook.com https://familymeal.eu
+        *.flickr.com *.franceculture.fr *.franceinter.fr *.freecaster.com *.freezbee.tv
+        *.genial.ly *.giphy.com *.github.io *.google.be *.google.co.uk *.google.com
+        *.google.fr *.grnet.gr *.index.hu *.instantflipbook.com *.issuu.com *.jrc.nl
+        *.jwplatform.com *.learningandwork.org.uk *.libsyn.com *.live.com livestream.com
+        *.mentimeter.com *.metoo.sk *.mostra.eu *.neteyes.hu *.oecd.org *.openstreetmap.fr
+        *.openstreetmap.org *.ourworldindata.org *.polarhd.com *.public-i.tv *.qbrick.com
+        *.rackcdn.com *.rambla.be *.roguemotion.graphics *.sharepoint.com *.sketchfab.com
+        *.slideshare.net *.solidtango.com *.soonfeed.com *.soundcloud.com *.streamamg.com
+        *.streamcode.net *.streamdis.eu streamer.bg *.streaming.at *.streaming.sk
+        *.streamovations.be *.sway.com *.tagesschau.de *.telemak.tv *.testa.eu *.thinglink.com
+        *.tiesraides.lv *.top-ix.org *.tsnmalta.org *.tv1.eu *.tv-on-web.de *.twinix.eu
+        *.typeform.com *.uc3m.es *.uplynk.com *.ustream.tv *.uu.se *.videliostreaming.com
+        *.videolevels.com *.walls.io *.weforum.org *.westream.com *.wyng.com *.youongroup.com
+        *.youtu.be *.youtube-nocookie.com *.zdf.de *.michael-lurquin.com;
+      X-Archive-Orig-X-Generator:
+      - Drupal 7 (http://drupal.org)
+      X-Archive-Orig-Link:
+      - <https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en>;
+        rel="canonical",<https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en>;
+        rel="shortlink"
+      X-Archive-Orig-Last-Modified:
+      - Sat, 27 Jul 2019 19:23:11 GMT
+      X-Archive-Orig-Expires:
+      - Sun, 19 Nov 1978 05:00:00 GMT
+      X-Archive-Orig-Vary:
+      - Cookie,Accept-Encoding
+      X-Archive-Orig-Transfer-Encoding:
+      - chunked
+      X-Archive-Orig-Date:
+      - Sat, 27 Jul 2019 19:32:23 GMT
+      X-Archive-Orig-Age:
+      - '541'
+      X-Archive-Orig-X-Fpfis:
+      - 3647868725 3647730664
+      X-Archive-Orig-Cache-Control:
+      - public, max-age=0, s-maxage=0
+      X-Archive-Orig-Access-Control-Allow-Origin:
+      - https://myintracomm.ec.europa.eu
+      X-Archive-Orig-Server:
+      - Europa
+      X-Archive-Orig-Proxy-Connection:
+      - Keep-Alive
+      X-Archive-Orig-Connection:
+      - Keep-Alive
+      X-Archive-Guessed-Content-Type:
+      - text/html
+      X-Archive-Guessed-Charset:
+      - utf-8
+      Memento-Datetime:
+      - Sat, 27 Jul 2019 19:32:23 GMT
+      Link:
+      - <https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en>;
+        rel="original", <https://web.archive.org/web/timemap/link/https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en>;
+        rel="timemap"; type="application/link-format", <https://web.archive.org/web/https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en>;
+        rel="timegate", <https://web.archive.org/web/20180511221457/https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en>;
+        rel="first memento"; datetime="Fri, 11 May 2018 22:14:57 GMT", <https://web.archive.org/web/20190629033949/https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en>;
+        rel="prev memento"; datetime="Sat, 29 Jun 2019 03:39:49 GMT", <https://web.archive.org/web/20190727193223/https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en>;
+        rel="memento"; datetime="Sat, 27 Jul 2019 19:32:23 GMT", <https://web.archive.org/web/20190810174850/https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en>;
+        rel="next memento"; datetime="Sat, 10 Aug 2019 17:48:50 GMT", <https://web.archive.org/web/20230312175420/https://ec.europa.eu/info/designing-next-research-and-innovation-framework-programme/what-shapes-next-framework-programme_en>;
+        rel="last memento"; datetime="Sun, 12 Mar 2023 17:54:20 GMT"
+      Content-Security-Policy:
+      - 'default-src ''self'' ''unsafe-eval'' ''unsafe-inline'' data: blob: archive.org
+        web.archive.org wayback-api.archive.org analytics.archive.org pragma.archivelab.org'
+      X-Archive-Src:
+      - archiveteam_archivebot_go_20190728010001/www.gov.uk-inf-20190723-191432-6uvv0-00067.warc.gz
+      Server-Timing:
+      - captures_list;dur=495.647453, exclusion.robots;dur=0.281800, exclusion.robots.policy;dur=0.265498,
+        cdx.remote;dur=0.089472, esindex;dur=0.015670, LoadShardBlock;dur=433.585299,
+        PetaboxLoader3.datanode;dur=62.788598, load_resource;dur=73.605066, PetaboxLoader3.resolve;dur=68.292797
+      X-App-Server:
+      - wwwb-app212
+      X-Ts:
+      - '200'
+      X-Tr:
+      - '992'
+      X-Location:
+      - All
+      X-Rl:
+      - '0'
+      X-Na:
+      - '0'
+      X-Page-Cache:
+      - MISS
+      X-Nid:
+      - "-"
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      Permissions-Policy:
+      - interest-cohort=()
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:18 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.2760/283135
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:18 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '233'
+      Connection:
+      - close
+      Location:
+      - https://op.europa.eu/publication/manifestation_identifier/PUB_KJNA28776ENN
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 20:38:47 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=eljhE%2FCupFFU4ROIncf6CEegBni9fysxC3Z89HuKz8v1n01wBSzvhIShhD0Co5%2FyMFzMpCyt6BMcKpOXNEQtyIIhQxpSh8oZ%2Fa%2Bw%2FnUtoXrrPqfl%2FQaKwnU%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a247bae9ab72b-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:18 GMT
+- request:
+    method: head
+    uri: https://danielskatzblog.wordpress.com/2016/10/25/clash-of-cultures-why-all-science-isnt-open-science
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - danielskatzblog.wordpress.com
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 04 Jul 2023 20:33:19 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Connection:
+      - close
+      X-Hacker:
+      - If you're reading this, you should visit automattic.com/jobs and apply to
+        join the fun, mention this header.
+      Host-Header:
+      - WordPress.com
+      Vary:
+      - accept, content-type, cookie
+      X-Pingback:
+      - https://danielskatzblog.wordpress.com/xmlrpc.php
+      X-Redirect-By:
+      - WordPress
+      Location:
+      - https://danielskatzblog.wordpress.com/2016/10/25/clash-of-cultures-why-all-science-isnt-open-science/
+      X-Ac:
+      - 5.ams _dfw MISS
+      Strict-Transport-Security:
+      - max-age=31536000
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:19 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.12688/f1000research.17425.1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:19 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '173'
+      Connection:
+      - close
+      Location:
+      - https://f1000research.com/articles/7-1926/v1
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9vcvcvcR4fQBQNVADuZL%2BmRokaiHbluBk1JZOdIkUWTnPuOUzWmxs2aBvFz0kNsrdKiQdCKkRHGoRx%2BC26R3CXVh%2BicnkwDQu%2FtjqhK%2F0S7VkGMGUligRUw%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a247eefa11c8a-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:19 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.5281/zenodo.1147025
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:19 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '151'
+      Connection:
+      - close
+      Location:
+      - https://zenodo.org/record/1147025
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:14:25 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=K%2BYUnBb%2FE95UdZM2PfQAYvoEmS%2FM4JBtpfrPK0v4l%2BhJgmAEg6Aw2ChNBlwCxsASPP7l%2Bi5i7c6VlJyzK8qC%2Bh2x61LDNYTVaa1EIt9fX9L1X%2Fu6QD3n02Y%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a248058e9b713-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:19 GMT
+- request:
+    method: head
+    uri: https://arxiv.org/abs/1801.08992
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - arxiv.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:20 GMT
+      Server:
+      - Apache
+      Strict-Transport-Security:
+      - max-age=31536000
+      Last-Modified:
+      - Tue, 06 Mar 2018 01:19:46 GMT
+      Content-Length:
+      - '46581'
+      Etag:
+      - '"Tue, 06 Mar 2018 01:19:46 GMT"'
+      Expires:
+      - Wed, 05 Jul 2023 00:00:00 GMT
+      Content-Security-Policy:
+      - frame-ancestors 'none'
+      X-Frame-Options:
+      - SAMEORIGIN
+      Set-Cookie:
+      - browser=104.151.83.147.1688502800182358; path=/; max-age=946080000; domain=.arxiv.org
+      Vary:
+      - Accept-Encoding,User-Agent
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:20 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1073/pnas.1421412111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:20 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '183'
+      Connection:
+      - close
+      Location:
+      - https://pnas.org/doi/full/10.1073/pnas.1421412111
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=z8liXCUv4iC4kW1juZMsyzcPyOaHpeYfQoSJVJuluNEBjo%2F6l6TeEl1Z6gibmJV8%2F5WiLM%2BUaGW4krc8vazijcKitm8CLhKSmORB9QpOIlGvJjC3x2XsQUY%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24864ad00115-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:20 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.7287/peerj.preprints.2689v1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:20 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '153'
+      Connection:
+      - close
+      Location:
+      - https://peerj.com/preprints/2689v1
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=miwXU4fl65FS1ypCG%2F3Qa58Gj2i6XUEbU6s6yu3E%2B7dBs2VjH80KculkD75YvHajfutBR%2BAMWp8%2FxpIy%2FP06lFjeX9Oyc%2FAwvQ4s1pMEpkuJangc%2B4uu%2F7g%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a2487cb2b0e14-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:20 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1371/journal.pbio.1002614
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:20 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '181'
+      Connection:
+      - close
+      Location:
+      - https://dx.plos.org/10.1371/journal.pbio.1002614
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:13:36 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=46kFgAHT4mUP2HVfRMvz%2B0OHWmmm1meOUwkGAqgCbb274nv9GTh9jkv9GepYdWaBZsWhcB0UEU4vqqqILhgG2pWZtzQh0gCPBr0ePrs0gdzvD%2FVWpPMMSKg%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24893ff80e88-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:20 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.7554/elife.16800
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:21 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '165'
+      Connection:
+      - close
+      Location:
+      - https://elifesciences.org/articles/16800
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:16:59 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=71HulfJXN%2BMFSbgJUzM3Hf8Mp%2Br9CWMWEWEDNZTTuLfFAsTJNsAHt1DzA88YxBcEJP4Dz4gT%2B%2BWNrP4GQ6Okv5aFiXve8%2Fh93qIfq%2FQmvyegoqkRCYuaZGM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a248a18fbb740-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:21 GMT
+- request:
+    method: head
+    uri: https://web.archive.org/web/20200715115043/https://libereurope.eu/wp-content/uploads/2018/07/SO_A4_2018_05-EN_print.pdf
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - web.archive.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.19.5
+      Date:
+      - Tue, 04 Jul 2023 20:33:21 GMT
+      Content-Type:
+      - text/html; charset=utf-8
+      Connection:
+      - close
+      Server-Timing:
+      - captures_list;dur=78.980019, exclusion.robots;dur=0.463262, exclusion.robots.policy;dur=0.439929,
+        RedisCDXSource;dur=0.842707, esindex;dur=0.009876, LoadShardBlock;dur=57.909569,
+        PetaboxLoader3.datanode;dur=57.057478, load_resource;dur=70.374487, PetaboxLoader3.resolve;dur=37.876099
+      X-App-Server:
+      - wwwb-app222
+      X-Ts:
+      - '200'
+      X-Tr:
+      - '160'
+      X-Rl:
+      - '0'
+      X-Na:
+      - '0'
+      X-Page-Cache:
+      - BYPASS
+      X-Nid:
+      - "-"
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      Permissions-Policy:
+      - interest-cohort=()
+      X-Location:
+      - _pdf
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:21 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1007/s11192-015-1765-5
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:22 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '185'
+      Connection:
+      - close
+      Location:
+      - http://link.springer.com/10.1007/s11192-015-1765-5
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:13:36 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=12%2FEY6ci0iBuD6boJ0M6TCuzPvLx2uFwHbqFkBF8u4EfPdPR8i%2BQhac0loVJwqRVnhidnaEulNqFDwb8vmZiIIBFOO2a5HLgA%2FKeM%2BeIBbBp9OGTjhcPhZY%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24909b110a55-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:22 GMT
+- request:
+    method: head
+    uri: https://techdirt.com/articles/20170804/05454537924/elsevier-continues-to-build-monopoly-solution-all-aspects-scholarly-communication.shtml
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - techdirt.com
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:22 GMT
+      Content-Type:
+      - text/html
+      Connection:
+      - close
+      Location:
+      - https://www.techdirt.com/articles/20170804/05454537924/elsevier-continues-to-build-monopoly-solution-all-aspects-scholarly-communication.shtml
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains; preload
+      X-Ac:
+      - 1.ams _atomic_ams BYPASS
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=iKGvyrClwOORqqzuWqMMRceWT2ZPYILl6JpEE2xUsK%2FG1lfIQo6pZQvz6wQ5dGM6AOhCJhq5SqMyeXr6bRC16zyrD6qXIcYnpWU2YfWuy%2Fzgcmi4R4CsFUuxzP6RDw%3D%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      X-Content-Type-Options:
+      - nosniff
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a2491ebff0be0-AMS
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:22 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.4000/rfsic.3220
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:22 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '169'
+      Connection:
+      - close
+      Location:
+      - http://journals.openedition.org/rfsic/3220
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=90l%2Bmu4KFiw%2BktSZAvh%2FMLbj1m7d%2BJGuS9%2BT0v9s%2FDFn7xrabjoAdPgxf8KBNkW5tmsTeR1InKJ06SX9VKPqzfOFrkUGTviiv%2FRNWgskH4hIZXo4kCACENg%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a2492bc941ed2-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:22 GMT
+- request:
+    method: head
+    uri: https://sustainingknowledgecommons.org/2018/02/06/doaj-apc-information-as-of-jan-31-2018
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - sustainingknowledgecommons.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 04 Jul 2023 20:33:23 GMT
+      Content-Type:
+      - text/html; charset=UTF-8
+      Connection:
+      - close
+      Strict-Transport-Security:
+      - max-age=31536000
+      X-Hacker:
+      - If you're reading this, you should visit automattic.com/jobs and apply to
+        join the fun, mention this header.
+      Host-Header:
+      - WordPress.com
+      Vary:
+      - accept, content-type, cookie
+      X-Redirect-By:
+      - WordPress
+      Location:
+      - https://sustainingknowledgecommons.org/2018/02/06/doaj-apc-information-as-of-jan-31-2018/
+      X-Ac:
+      - 3.ams _dfw EXPIRED
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:23 GMT
+- request:
+    method: head
+    uri: https://nature.com/articles/s41562-016-0021
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - nature.com
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:23 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '178'
+      Connection:
+      - close
+      Location:
+      - https://www.nature.com/articles/s41562-016-0021
+      Server:
+      - ee-www-redirect
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:23 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1002/asi.23741
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:23 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '191'
+      Connection:
+      - close
+      Location:
+      - https://onlinelibrary.wiley.com/doi/10.1002/asi.23741
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:16:59 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=a89%2FzbpypRDo6XUdtG6av4wYGHBrsDBACGZzOp%2FgVYs73ETguGOSiA%2BHu8ryPZd7oavI9iSykycj5ryOmTYKJNT2B1TBtfHu9hQ4Eu41509MnH%2B%2FMiEPgu4%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a2498dcbfb890-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:23 GMT
+- request:
+    method: head
+    uri: https://etag.ee/wp-content/uploads/2017/03/Open-Science-in-Estonia-Principles-and-Recommendations-final.pdf
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - etag.ee
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:23 GMT
+      Server:
+      - Apache / ZoneOS
+      Connection:
+      - Upgrade, close
+      Last-Modified:
+      - Mon, 17 Apr 2017 07:21:36 GMT
+      Etag:
+      - '"a4a17-54d57a4354000"'
+      Accept-Ranges:
+      - bytes
+      Content-Length:
+      - '674327'
+      Content-Type:
+      - application/pdf
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:23 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1101/066803
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:23 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '173'
+      Connection:
+      - close
+      Location:
+      - http://biorxiv.org/lookup/doi/10.1101/066803
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:13:36 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=olidq5%2BUHr0DvwovtDs2I8y91AJoRtVBPAfqizEZWb%2FCDtIq%2FH%2BUMATv7Yib%2BL5OOVP%2F1Iq82fBn2qgd7l%2FMFpgdF%2F8MwsU4DE6hu9pUQLVa8meqX%2FYeIGc%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a249b9fbb0a75-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:23 GMT
+- request:
+    method: head
+    uri: https://routledge.com/Virtues-of-Openness-Education-Science-and-Scholarship-in-the-Digital/Peters-Roberts/p/book/9781594516863
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - routledge.com
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:24 GMT
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Connection:
+      - close
+      X-Xss-Protection:
+      - 1;  mode=block
+      Location:
+      - https://www.routledge.com/Virtues-of-Openness-Education-Science-and-Scholarship-in-the-Digital/Peters-Roberts/p/book/9781594516863
+      Cf-Cache-Status:
+      - DYNAMIC
+      Set-Cookie:
+      - __cf_bm=H02W3e0IfKuWfuubGQuDiUk54DgAvVtY2f9Qlnfcy.w-1688502804-0-AYSDVdUi7vitc7LY2lRJjhHDCUfoYg1/W85Cy5vrVpDIikFgHqF4r6/B230Ves1q2A7LKCTrcTTrMvOuaplwdTU=;
+        path=/; expires=Tue, 04-Jul-23 21:03:24 GMT; domain=.routledge.com; HttpOnly;
+        Secure; SameSite=None
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a249c7f141632-DUS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ISO-8859-1
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:24 GMT
+- request:
+    method: head
+    uri: https://mitpress.mit.edu/books/metadata
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - mitpress.mit.edu
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:24 GMT
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '162'
+      Connection:
+      - close
+      Location:
+      - https://mitpress.mit.edu/9780262528511
+      Cf-Ray:
+      - 7e1a24a02c8e0ea9-AMS
+      Cf-Cache-Status:
+      - DYNAMIC
+      Ki-Cache-Type:
+      - None
+      Ki-Cf-Cache-Status:
+      - BYPASS
+      Ki-Edge:
+      - v=20.0.0;mv=2.0.3
+      X-Content-Type-Options:
+      - nosniff
+      X-Edge-Location-Klb:
+      - '1'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LGpLZPLhmVKIn3s5PJlrQpr50QRvSFceLu9arUfMaQ6NJ9dbFQ9XJtTd2VyLlKX5z7L4NTdL6xcAz5ObRIXR2XBF8MgLZTmqG1Dg%2F%2FEWVDpZ3H8XxagE6xrts1NEj1s%2BPjc%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:24 GMT
+- request:
+    method: head
+    uri: http://knowledgegap.org/index.php/sub-projects/rent-seeking-and-financialization-of-the-academic-publishing-industry/preliminary-findings
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - knowledgegap.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:25 GMT
+      Server:
+      - Apache
+      X-Redirect-By:
+      - WordPress
+      Upgrade:
+      - h2,h2c
+      Connection:
+      - Upgrade, close
+      Location:
+      - http://knowledgegap.org/index.php/sub-projects/rent-seeking-and-financialization-of-the-academic-publishing-industry/preliminary-findings/
+      Content-Type:
+      - text/html; charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:27 GMT
+- request:
+    method: head
+    uri: https://poynder.blogspot.com/2017/02/copyright-immoveable-barrier-that-open.html
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - poynder.blogspot.com
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/html; charset=UTF-8
+      Expires:
+      - Tue, 04 Jul 2023 20:33:27 GMT
+      Date:
+      - Tue, 04 Jul 2023 20:33:27 GMT
+      Cache-Control:
+      - private, max-age=0
+      Last-Modified:
+      - Mon, 03 Jul 2023 07:33:43 GMT
+      Etag:
+      - '"3c81bca3-ab03-4206-9345-1a064f7dde72"'
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block
+      Content-Length:
+      - '0'
+      Server:
+      - GSE
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:27 GMT
+- request:
+    method: head
+    uri: https://sr.ithaka.org/blog/the-center-for-open-science-alternative-to-elsevier-announces-new-preprint-services-today
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - sr.ithaka.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Connection:
+      - close
+      Content-Length:
+      - '0'
+      Content-Type:
+      - text/html; charset=UTF-8
+      Location:
+      - https://sr.ithaka.org/blog/the-center-for-open-science-alternative-to-elsevier-announces-new-preprint-services-today/
+      Permissions-Policy:
+      - geolocation=(self "https://example.com") microphone=() camera=()
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      Server:
+      - nginx
+      Strict-Transport-Security:
+      - max-age=31622400
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Pantheon-Styx-Hostname:
+      - styx-fe3-b-565b75cfd6-frchr
+      X-Pingback:
+      - https://sr.ithaka.org/xmlrpc.php
+      X-Redirect-By:
+      - WordPress
+      X-Styx-Req-Id:
+      - 2db628e9-1aa6-11ee-b00c-c6e014766515
+      X-Xss-Protection:
+      - 1; mode=block
+      Via:
+      - 1.1 varnish, 1.1 varnish, 1.1 varnish
+      Cache-Control:
+      - max-age=900
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 04 Jul 2023 20:33:27 GMT
+      Age:
+      - '0'
+      X-Served-By:
+      - cache-chi-kigq8000027-CHI, cache-ams21081-AMS, cache-ams21033-AMS
+      X-Cache:
+      - HIT, HIT, MISS
+      X-Cache-Hits:
+      - 2, 1, 0
+      X-Timer:
+      - S1688502808.734360,VS0,VE7
+      Vary:
+      - Cookie, Cookie
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:27 GMT
+- request:
+    method: head
+    uri: http://lchc.ucsd.edu/MCA/Mail/xmcamail.2012_08.dir/pdfMrgHgzULhA.pdf
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - lchc.ucsd.edu
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:28 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Location:
+      - https://lchc.ucsd.edu/MCA/Mail/xmcamail.2012_08.dir/pdfMrgHgzULhA.pdf
+      Connection:
+      - close
+      Content-Type:
+      - text/html; charset=iso-8859-1
+    body:
+      encoding: ISO-8859-1
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:28 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.5281/zenodo.1183805
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:28 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '151'
+      Connection:
+      - close
+      Location:
+      - https://zenodo.org/record/1183805
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:17:44 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=GRfB9pslfdKOiSHVtFw0H7HmJaxYxnTbxvRGx7CFwr7z5B%2Furw5DdQMlGpkWxOSmC%2FUiWoWiiVW82FocdtMiOlhhgbBx4CUiZeB0GZCTRYMOWmN6Uycqb9Q%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24ba6d820b4e-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:28 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.12688/f1000research.8460.3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:29 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '171'
+      Connection:
+      - close
+      Location:
+      - https://f1000research.com/articles/5-632/v3
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ECBbpIgxpCXE1Cn7wl7pqFGV%2F5RwPdml51KgK9mUeHRfnpBGFMngHmadAb9W3d29yO4jMB1rb5ZFPJ4WXYbGSpaSy7sHFRPCnGGbPjE51Q6b31V5fb5cuQw%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24bc4e901c82-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:28 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.6084/m9.figshare.c.3943972.v7
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:29 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '317'
+      Connection:
+      - close
+      Location:
+      - https://figshare.com/collections/How_to_make_your_work_100_Open_Access_for_free_and_legally_multi-lingual_/3943972/7
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:17:44 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xZkIe0b5Oq2Nx%2B7GFFm94GcJ8XH3nJks1i0j4lycsKxHfpS%2BiAtZC4wc0gge18%2FiDAmZnLuYN6m8UjnXAi7GQkwv%2FZ6PSjMWnYIBIH30w9M%2FezOacpvz2l4%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24bd286a1c9e-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:29 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.31222/osf.io/796tu
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:29 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '125'
+      Connection:
+      - close
+      Location:
+      - https://osf.io/796tu
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:13:36 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BnGfxI%2FE3mg67UMF%2FxxYekZACvwcQHpR03ba7mgZeppu6idpTFZ6945%2FCfoPibmV87BOIsL171t3tmvtEVzp4vgV6JtYmIiX1rszxPXyXrf6MAjP0%2BOHuD8%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24be39551b08-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:29 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.5281/zenodo.1472044
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:29 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '151'
+      Connection:
+      - close
+      Location:
+      - https://zenodo.org/record/1472044
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:14:25 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dnWPor9f7o2A9Ul3LZ%2FqnHYe6aZNeA8BHkies%2BCIb1Wcd6MfxNP7G%2B3dOuCTHT5Wj%2FQrlafocfi1YSsbhDC68KA3f6QxtoePzxn0E2KdnKQqPkdrDnZCt88%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24bfbd460bd7-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:29 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.19173/irrodl.v13i4.1313
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:29 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '197'
+      Connection:
+      - close
+      Location:
+      - http://www.irrodl.org/index.php/irrodl/article/view/1313
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:30:33 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=pv8JA8OgeI7jUaA2PWZwEwnE1tByzoAdzdyA1cMkpdApV6B%2FT087D%2BHhgF06%2FQJ59EmDcFg6mx7mUJhwIdapbz7e%2BC8gNUbz23KEeHbsC17JcxXQjN7Y6V0%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24c12c2c0132-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:29 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1186/s13059-015-0669-2
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:30 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '233'
+      Connection:
+      - close
+      Location:
+      - https://genomebiology.biomedcentral.com/articles/10.1186/s13059-015-0669-2
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:13:36 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=R9NGo0xUOUtQDKpsLfwM6Fh7mvd01ZOi8vUuig%2BVLkhUesTGAtOMrTZkc%2B%2FUQaKb5i8M0epmaf6UVOgKA81kF0FbeiXksEn8fjhMESkvr0%2BZAfBO5DHvZTE%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24c299d51b0b-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:30 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.5334/bam
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:30 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '189'
+      Connection:
+      - close
+      Location:
+      - http://www.ubiquitypress.com/site/books/10.5334/bam/
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:13:36 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=I0tIf2PMFqvH3Y7m2rr2cms9CkrS2CCHUR8g13LXexL2RTZRyBuGzDJRwpzqg99TCnDeh7j%2FCX4CSKQRreCE8YRu%2FOjTXKM1JiEofHb1v%2Bj5GuDDQQcHF6M%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24c3ce530c85-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:30 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1038/sdata.2016.18
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:30 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '171'
+      Connection:
+      - close
+      Location:
+      - https://www.nature.com/articles/sdata201618
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:16:59 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YECfl%2BhCLlU9JFMgRX%2Bkz4x4HXgcN%2BABG2ePaSl%2BWKyG3cEuNVTyMUtj1V1Kr9YjfHc1ZmtzFXsSJ4trhFLdGhdV%2BtydDQI2sb6nB%2Fj0Lm04HQIqKC0hH8I%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24c54d9bd0b9-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:30 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.2777/337729
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:30 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '187'
+      Connection:
+      - close
+      Location:
+      - https://op.europa.eu/publication/doi/10.2777/337729
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 20:38:47 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=It7VWznzIJ6SMq84%2BCe9ho8HGSCEHqvk%2Fw2%2FWc7taud3xTPLoiJFCHpG36cvy8uFyulksM8U6Ux3%2F7hmRKfMv1WN0y%2FdwIFYJwhgLV7gltd6DsmkDYm54kU%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24c68bd0b75a-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:30 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.1038/nchem.1149
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Tue, 04 Jul 2023 20:33:30 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '169'
+      Connection:
+      - close
+      Location:
+      - https://www.nature.com/articles/nchem.1149
+      Vary:
+      - Accept
+      Expires:
+      - Tue, 04 Jul 2023 21:16:59 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2BwKX8hYOJrlnKdOec9h5fg892%2FoWutpjOsqTPAa%2FsRB9EHH%2B62j%2B7sPApjpA9vXfXvxI0ivuaqe%2BuomLVfVOl6AZtNQryVvL4Yk%2FZop%2FecDU%2FdcwiuZa%2BSM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1a24c818890df6-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Tue, 04 Jul 2023 20:33:30 GMT
+recorded_with: VCR 6.2.0

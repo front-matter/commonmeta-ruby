@@ -84,10 +84,15 @@ module Commonmeta
       def get_references(meta)
         # check that references resolve
         Array.wrap(meta["references"]).reduce([]) do |sum, reference|
-          if reference["doi"] && validate_doi(reference["doi"])
-            sum << reference if [200, 301, 302].include? HTTP.head(reference["doi"]).status
-          elsif reference["url"] && validate_url(reference["url"]) == "URL"
-            sum << reference if [200, 301, 302].include? HTTP.head(reference["url"]).status
+          begin
+            if reference["doi"] && validate_doi(reference["doi"])
+              sum << reference if [200, 301, 302].include? HTTP.head(reference["doi"]).status
+            elsif reference["url"] && validate_url(reference["url"]) == "URL"
+              sum << reference if [200, 301, 302].include? HTTP.head(reference["url"]).status
+            end
+          rescue => error
+            # puts "Error: #{error.message}"
+            # puts "Error: #{reference}"
           end
 
           sum
@@ -135,7 +140,7 @@ module Commonmeta
         return nil unless response.status.success?
 
         post = JSON.parse(response.body.to_s)
-        post.to_h.dig('prefix')
+        post.to_h.dig("prefix")
       end
 
       def get_doi_prefix_by_json_feed_item_uuid(uuid)
@@ -146,7 +151,7 @@ module Commonmeta
         return nil unless response.status.success?
 
         post = JSON.parse(response.body.to_s)
-        post.to_h.dig('blog', 'prefix')
+        post.to_h.dig("blog", "prefix")
       end
     end
   end

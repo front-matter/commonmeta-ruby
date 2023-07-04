@@ -348,6 +348,32 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.references).to be_nil
     end
 
+    it "wordpress post with many references" do
+      input = "https://rogue-scholar.org/api/posts/f3dc29da-0481-4f3b-8110-4c07260fca67"
+      subject = described_class.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://flavoursofopen.science/grundlagen-fur-die-entwicklung-einer-open-scholarship-strategie")
+      expect(subject.url).to eq("https://flavoursofopen.science/grundlagen-fur-die-entwicklung-einer-open-scholarship-strategie")
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "f3dc29da-0481-4f3b-8110-4c07260fca67", "alternateIdentifierType" => "UUID" }])
+      expect(subject.type).to eq("Article")
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("familyName"=>"Steiner", "givenName"=>"Tobias", "id"=>"https://orcid.org/0000-0002-3158-3136", "type"=>"Person")
+      expect(subject.titles).to eq([{ "title" => "Grundlagen für die Entwicklung einer Open Scholarship-Strategie" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published"=>"2019-01-31", "updated"=>"2023-06-19")
+      expect(subject.descriptions.first["description"]).to start_with("Versionshistorie Version 1.0 — 16. Oktober 2017 – Erste Version des Dokuments")
+      expect(subject.publisher).to eq("name" => "Flavours of Open")
+      expect(subject.subjects).to eq([{ "subject" => "Humanities" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Humanities",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("de")
+      expect(subject.container).to eq("identifier" => "https://flavoursofopen.science", "identifierType" => "URL", "title" => "Flavours of Open", "type" => "Periodical")
+      expect(subject.references.length).to eq(55)
+      expect(subject.references.first).to eq("key" => "ref1", "url" => "http://oerstrategy.org/home/read-the-doc")
+    end
+
     it "substack post with broken reference" do
       input = "https://rogue-scholar.org/api/posts/2b105b29-acbc-4eae-9ff1-368803f36a4d"
       subject = described_class.new(input: input)
