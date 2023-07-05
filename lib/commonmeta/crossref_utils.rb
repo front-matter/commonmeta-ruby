@@ -161,8 +161,8 @@ module Commonmeta
             xml.author(ref["author"]) if ref["author"].present?
             xml.volume(ref["volume"]) if ref["volume"].present?
             xml.first_page(ref["first_page"]) if ref["first_page"].present?
-            xml.cYear(ref["cYear"]) if ref["cYear"].present?
-            xml.article_title(ref["article_title"]) if ref["article_title"].present?
+            xml.cYear(ref["publicationYear"]) if ref["publicationYear"].present?
+            xml.article_title(ref["title"]) if ref["title"].present?
             xml.doi(doi_from_url(ref["doi"])) if ref["doi"].present?
             xml.unstructured_citation(ref["url"]) if ref["url"].present?
           end

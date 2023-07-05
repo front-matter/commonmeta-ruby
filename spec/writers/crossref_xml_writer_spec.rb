@@ -225,7 +225,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(crossref_xml.dig("titles",
                               "title")).to eq("The Research Software Alliance (ReSA)")
       expect(crossref_xml.dig("citation_list", "citation").length).to eq(11)
-      expect(crossref_xml.dig("citation_list", "citation").last).to eq("doi"=>"10.5281/zenodo.3699950", "key"=>"ref11")
+      expect(crossref_xml.dig("citation_list", "citation").last).to eq("article_title"=>"The Research Software Alliance (ReSA) and the community landscape", "cYear"=>"2020", "doi"=>"10.5281/zenodo.3699950", "key"=>"ref11")
       expect(crossref_xml.dig('item_number')).to eq("__content__"=>"954f81380ecd409087c5cef1297f1470", "item_number_type"=>"uuid")
       expect(crossref_xml.dig('group_title')).to eq('Humanities')
     end
