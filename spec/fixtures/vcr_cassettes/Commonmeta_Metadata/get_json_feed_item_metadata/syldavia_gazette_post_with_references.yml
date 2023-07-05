@@ -325,4 +325,326 @@ http_interactions:
       encoding: UTF-8
       string: ''
   recorded_at: Sun, 18 Jun 2023 15:24:13 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: get
+    uri: https://doi.org/10.1126/science.adg7879
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 05:25:54 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '223'
+      Connection:
+      - close
+      Location:
+      - https://api.crossref.org/v1/works/10.1126%2Fscience.adg7879/transform
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 05:30:31 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=uEPoeagGPbc1Hl0sfCmWWa%2FVgzb66muHrBa6Fu%2BvWUrCmx%2FGAbr66%2F1FLUFMQxftFDrpwIlAxHxNZLQkX4LWROwr08OphrXnvzRY%2FiV6SsCyxhNyiIQ1c40%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1d30a87c32b962-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://api.crossref.org/v1/works/10.1126%2Fscience.adg7879/transform">https://api.crossref.org/v1/works/10.1126%2Fscience.adg7879/transform</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 05:25:54 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.21105/joss.01686
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 05:25:55 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '215'
+      Connection:
+      - close
+      Location:
+      - https://api.crossref.org/v1/works/10.21105%2Fjoss.01686/transform
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 05:30:31 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ZX3p9vBatgo8hrbdXa%2B3taDDKPWW%2FbHBhbEkVeylft%2FsCaoZIwZThoDVIcHlxSwRnbjUSBPs959GQoLE5JnwzG%2BP76hFeCJPRJxISxfWyc%2BiUFpnWuYNOPI%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1d30aa5e6d0e9c-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://api.crossref.org/v1/works/10.21105%2Fjoss.01686/transform">https://api.crossref.org/v1/works/10.21105%2Fjoss.01686/transform</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 05:25:55 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/v1/works/10.1126%2Fscience.adg7879/transform
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - api.crossref.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 05:31:43 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept
+      Link:
+      - <http://dx.doi.org/10.1126/science.adg7879>; rel="canonical"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"indexed":{"date-parts":[[2023,7,4]],"date-time":"2023-07-04T12:29:58Z","timestamp":1688473798442},"reference-count":0,"publisher":"American
+        Association for the Advancement of Science (AAAS)","issue":"6630","content-domain":{"domain":["www.science.org"],"crossmark-restriction":true},"published-print":{"date-parts":[[2023,1,27]]},"abstract":"<jats:p>\n            In
+        less than 2 months, the artificial intelligence (AI) program ChatGPT has become
+        a cultural sensation. It is freely accessible through a web portal created
+        by the tool\u2019s developer, OpenAI. The program\u2014which automatically
+        creates text based on written prompts\u2014is so popular that it\u2019s likely
+        to be \u201cat capacity right now\u201d if you attempt to use it. When you
+        do get through, ChatGPT provides endless entertainment. I asked it to rewrite
+        the first scene of the classic American play\n            <jats:italic>Death
+        of a Salesman<\/jats:italic>\n            , but to feature Princess Elsa from
+        the animated movie\n            <jats:italic>Frozen<\/jats:italic>\n            as
+        the main character instead of Willy Loman. The output was an amusing conversation
+        in which Elsa\u2014who has come home from a tough day of selling\u2014is told
+        by her son Happy, \u201cCome on, Mom. You\u2019re Elsa from\n            <jats:italic>Frozen<\/jats:italic>\n            .
+        You have ice powers and you\u2019re a queen. You\u2019re unstoppable.\u201d
+        Mash-ups like this are certainly fun, but there are serious implications for
+        generative AI programs like ChatGPT in science and academia.\n          <\/jats:p>","DOI":"10.1126\/science.adg7879","type":"journal-article","created":{"date-parts":[[2023,1,26]],"date-time":"2023-01-26T18:58:32Z","timestamp":1674759512000},"page":"313-313","update-policy":"http:\/\/dx.doi.org\/10.34133\/aaas_crossmark","source":"Crossref","is-referenced-by-count":177,"title":"ChatGPT
+        is fun, but not an author","prefix":"10.1126","volume":"379","author":[{"given":"H.
+        Holden","family":"Thorp","sequence":"first","affiliation":[{"name":"H. Holden
+        Thorp Editor-in-Chief, Science journals."}]}],"member":"221","container-title":"Science","original-title":[],"language":"en","deposited":{"date-parts":[[2023,2,28]],"date-time":"2023-02-28T18:45:47Z","timestamp":1677609947000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.science.org\/doi\/10.1126\/science.adg7879"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2023,1,27]]},"references-count":0,"journal-issue":{"issue":"6630","published-print":{"date-parts":[[2023,1,27]]}},"alternative-id":["10.1126\/science.adg7879"],"URL":"http:\/\/dx.doi.org\/10.1126\/science.adg7879","relation":{},"ISSN":["0036-8075","1095-9203"],"subject":["Multidisciplinary"],"container-title-short":"Science","published":{"date-parts":[[2023,1,27]]},"assertion":[{"value":"2023-01-26","order":2,"name":"published","label":"Published","group":{"name":"publication_history","label":"Publication
+        History"}}]}'
+  recorded_at: Wed, 05 Jul 2023 05:31:43 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/v1/works/10.21105%2Fjoss.01686/transform
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - api.crossref.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 05:31:44 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept
+      Link:
+      - !binary |-
+        PGh0dHA6Ly9keC5kb2kub3JnLzEwLjIxMTA1L2pvc3MuMDE2ODY+OyByZWw9ImNhbm9uaWNhbCIsIDxodHRwOi8vd3d3LnRoZW9qLm9yZy9qb3NzLXBhcGVycy9qb3NzLjAxNjg2LzEwLjIxMTA1Lmpvc3MuMDE2ODYucGRmPjsgdmVyc2lvbj0idm9yIjsgdHlwZT0iYXBwbGljYXRpb24vcGRmIjsgcmVsPSJpdGVtIiwgPGh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzQuMC8+OyB2ZXJzaW9uPSJ2b3IiOyByZWw9ImxpY2Vuc2UiLCA8aHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnkvNC4wLz47IHZlcnNpb249ImFtIjsgcmVsPSJsaWNlbnNlIiwgPGh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LzQuMC8+OyB2ZXJzaW9uPSJ0ZG0iOyByZWw9ImxpY2Vuc2UiLCA8aHR0cDovL29yY2lkLm9yZy8wMDAwLTAwMDMtNDc1Ny0xMTdYPjsgdGl0bGU9IkhhZGxleSBXaWNraGFtIjsgcmVsPSJhdXRob3IiLCA8aHR0cDovL29yY2lkLm9yZy8wMDAwLTAwMDEtOTY1OS02MTkyPjsgdGl0bGU9Ik1hcmEgQXZlcmljayI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTY5ODMtMjc1OT47IHRpdGxlPSJKZW5uaWZlciBCcnlhbiI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTE1NzYtMjEyNj47IHRpdGxlPSJXaW5zdG9uIENoYW5nIjsgcmVsPSJhdXRob3IiLCA8aHR0cDovL29yY2lkLm9yZy8wMDAwLTAwMDEtNzI5Ny05MzU5PjsgdGl0bGU9Ikx1Y3kgTWNHb3dhbiI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTI0NDQtNDIyNj47IHRpdGxlPSJSb21haW4gRnJhbudvaXMiOyByZWw9ImF1dGhvciIsIDxodHRwOi8vb3JjaWQub3JnLzAwMDAtMDAwMi03NzY1LTYwMTE+OyB0aXRsZT0iR2FycmV0dCBHcm9sZW11bmQiOyByZWw9ImF1dGhvciIsIDxodHRwOi8vb3JjaWQub3JnLzAwMDAtMDAwMi00OTg1LTUxNjA+OyB0aXRsZT0iQWxleCBIYXllcyI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTgxNDMtNTkwOD47IHRpdGxlPSJMaW9uZWwgSGVucnkiOyByZWw9ImF1dGhvciIsIDxodHRwOi8vb3JjaWQub3JnLzAwMDAtMDAwMi0yNzM5LTcwODI+OyB0aXRsZT0iSmltIEhlc3RlciI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAzLTI0MDItMTM2WD47IHRpdGxlPSJNYXggS3VobiI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTUxNDctNDcxMT47IHRpdGxlPSJUaG9tYXMgUGVkZXJzZW4iOyByZWw9ImF1dGhvciIsIDxodHRwOi8vb3JjaWQub3JnLzAwMDAtMDAwMi0xNDE2LTM0MTI+OyB0aXRsZT0iS2lyaWxsIE38bGxlciI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTkwODgtNTc2Nz47IHRpdGxlPSJEYW5hIFNlaWRlbCI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTIxMzgtMzQxMz47IHRpdGxlPSJWaXRhbGllIFNwaW51IjsgcmVsPSJhdXRob3IiLCA8aHR0cDovL29yY2lkLm9yZy8wMDAwLTAwMDEtNjA3Ni00ODI4PjsgdGl0bGU9IktvaHNrZSBUYWthaGFzaGkiOyByZWw9ImF1dGhvciIsIDxodHRwOi8vb3JjaWQub3JnLzAwMDAtMDAwMy00Nzc3LTAzOFg+OyB0aXRsZT0iRGF2aXMgVmF1Z2hhbiI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTc0NzAtOTI2MT47IHRpdGxlPSJDbGF1cyBXaWxrZSI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTUxMjUtNDE4OD47IHRpdGxlPSJLYXJhIFdvbyI7IHJlbD0iYXV0aG9yIiwgPGh0dHA6Ly9vcmNpZC5vcmcvMDAwMC0wMDAyLTMzODUtNzIzMz47IHRpdGxlPSJIaXJvYWtpIFl1dGFuaSI7IHJlbD0iYXV0aG9yIg==
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"indexed":{"date-parts":[[2023,7,5]],"date-time":"2023-07-05T05:01:05Z","timestamp":1688533265921},"reference-count":33,"publisher":"The
+        Open Journal","issue":"43","license":[{"start":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T00:00:00Z","timestamp":1574294400000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"},{"start":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T00:00:00Z","timestamp":1574294400000},"content-version":"am","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"},{"start":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T00:00:00Z","timestamp":1574294400000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2019,11,21]]},"DOI":"10.21105\/joss.01686","type":"journal-article","created":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T21:05:35Z","timestamp":1574370335000},"page":"1686","source":"Crossref","is-referenced-by-count":6564,"title":"Welcome
+        to the Tidyverse","prefix":"10.21105","volume":"4","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-4757-117X","authenticated-orcid":false,"given":"Hadley","family":"Wickham","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-9659-6192","authenticated-orcid":false,"given":"Mara","family":"Averick","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-6983-2759","authenticated-orcid":false,"given":"Jennifer","family":"Bryan","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-1576-2126","authenticated-orcid":false,"given":"Winston","family":"Chang","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-7297-9359","authenticated-orcid":false,"given":"Lucy","family":"McGowan","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-2444-4226","authenticated-orcid":false,"given":"Romain","family":"Fran\u00e7ois","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-7765-6011","authenticated-orcid":false,"given":"Garrett","family":"Grolemund","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-4985-5160","authenticated-orcid":false,"given":"Alex","family":"Hayes","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-8143-5908","authenticated-orcid":false,"given":"Lionel","family":"Henry","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-2739-7082","authenticated-orcid":false,"given":"Jim","family":"Hester","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-2402-136X","authenticated-orcid":false,"given":"Max","family":"Kuhn","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-5147-4711","authenticated-orcid":false,"given":"Thomas","family":"Pedersen","sequence":"additional","affiliation":[]},{"given":"Evan","family":"Miller","sequence":"additional","affiliation":[]},{"given":"Stephan","family":"Bache","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-1416-3412","authenticated-orcid":false,"given":"Kirill","family":"M\u00fcller","sequence":"additional","affiliation":[]},{"given":"Jeroen","family":"Ooms","sequence":"additional","affiliation":[]},{"given":"David","family":"Robinson","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-9088-5767","authenticated-orcid":false,"given":"Dana","family":"Seidel","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-2138-3413","authenticated-orcid":false,"given":"Vitalie","family":"Spinu","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-6076-4828","authenticated-orcid":false,"given":"Kohske","family":"Takahashi","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-4777-038X","authenticated-orcid":false,"given":"Davis","family":"Vaughan","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-7470-9261","authenticated-orcid":false,"given":"Claus","family":"Wilke","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-5125-4188","authenticated-orcid":false,"given":"Kara","family":"Woo","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-3385-7233","authenticated-orcid":false,"given":"Hiroaki","family":"Yutani","sequence":"additional","affiliation":[]}],"member":"8722","reference":[{"key":"ref1","unstructured":"R
+        for Data Science: Import, Tidy, Transform, Visualize, and Model Data, Wickham,
+        Hadley and Grolemund, Garrett, 2017, O\u2019Reilly Media, Inc."},{"key":"ref2","unstructured":"ggplot2:
+        Elegant graphics for data analysis, Wickham, Hadley, Springer, useR, 2016"},{"key":"ref3","unstructured":"Programming
+        with data: A guide to the S language, Chambers, John M, 1998, Springer"},{"key":"ref4","doi-asserted-by":"crossref","unstructured":"Wickham,
+        Hadley, The Journal of Statistical Software, Tidy data, 59, 2014","DOI":"10.18637\/jss.v059.i10"},{"key":"ref5","doi-asserted-by":"publisher","DOI":"10.1007\/0-387-28695-0"},{"key":"ref6","unstructured":"blob:
+        A Simple S3 Class for Representing Vectors of Binary Data (\u2019BLOBS\u2019),
+        Wickham, Hadley, 2018, R package version 1.1.1, https:\/\/CRAN.R-project.org\/package=blob"},{"key":"ref7","unstructured":"dplyr:
+        A Grammar of Data Manipulation, Wickham, Hadley and Fran\u00e7ois, Romain
+        and Henry, Lionel and M\u00fcller, Kirill, 2019, R package version 0.8.3,
+        https:\/\/CRAN.R-project.org\/package=dplyr"},{"key":"ref8","unstructured":"feather:
+        R Bindings to the Feather API, Wickham, Hadley, 2019, R package version 0.3.3,
+        https:\/\/CRAN.R-project.org\/package=feather"},{"key":"ref9","unstructured":"forcats:
+        Tools for Working with Categorical Variables (Factors), Wickham, Hadley, 2019,
+        R package version 0.4.0, https:\/\/CRAN.R-project.org\/package=forcats"},{"key":"ref10","unstructured":"The
+        jsonlite Package: A Practical and Consistent Mapping Between JSON Data and
+        R Objects, Ooms, Jeroen, arXiv:1403.2805 [stat.CO], 2014, https:\/\/arxiv.org\/abs\/1403.2805"},{"key":"ref11","unstructured":"glue:
+        Interpreted String Literals, Hester, Jim, 2018, R package version 1.3.0, https:\/\/CRAN.R-project.org\/package=glue"},{"key":"ref12","unstructured":"haven:
+        Import and Export SPSS, Stata, and SAS Files, Wickham, Hadley and Miller,
+        Evan, 2018, R package version 2.0.0, https:\/\/CRAN.R-project.org\/package=haven"},{"key":"ref13","unstructured":"hms:
+        Pretty Time of Day, M\u00fcller, Kirill, 2018, R package version 0.4.2, https:\/\/CRAN.R-project.org\/package=hms"},{"key":"ref14","unstructured":"lubridate:
+        Make Dealing with Dates a Little Easier, Spinu, Vitalie and Grolemund, Garrett
+        and Wickham, Hadley, 2018, R package version 1.7.4, https:\/\/CRAN.R-project.org\/package=lubridate"},{"key":"ref15","unstructured":"magrittr:
+        A Forward-Pipe Operator for R, Bache, Stefan Milton and Wickham, Hadley, 2014,
+        R package version 1.5, https:\/\/CRAN.R-project.org\/package=magrittr"},{"key":"ref16","unstructured":"modelr:
+        Modelling Functions that Work with the Pipe, Wickham, Hadley, 2018, R package
+        version 0.1.2, https:\/\/CRAN.R-project.org\/package=modelr"},{"key":"ref17","unstructured":"purrr:
+        Functional Programming Tools, Henry, Lionel and Wickham, Hadley, 2019, R package
+        version 0.3.3, https:\/\/CRAN.R-project.org\/package=purrr"},{"key":"ref18","unstructured":"readr:
+        Read Rectangular Text Data, Wickham, Hadley and Hester, Jim, 2018, R package
+        version 1.3.1, https:\/\/CRAN.R-project.org\/package=readr"},{"key":"ref19","unstructured":"readxl:
+        Read Excel Files, Wickham, Hadley and Bryan, Jennifer, 2019, R package version
+        1.3.1, https:\/\/CRAN.R-project.org\/package=readxl"},{"key":"ref20","unstructured":"reprex:
+        Prepare Reproducible Example Code via the Clipboard, Bryan, Jennifer and Hester,
+        Jim and Robinson, David and Wickham, Hadley, 2019, R package version 0.3.0,
+        https:\/\/CRAN.R-project.org\/package=reprex"},{"key":"ref21","unstructured":"rvest:
+        Easily Harvest (Scrape) Web Pages, Wickham, Hadley, 2019, R package version
+        0.3.4, https:\/\/CRAN.R-project.org\/package=rvest"},{"key":"ref22","unstructured":"stringr:
+        Simple, Consistent Wrappers for Common String Operations, Wickham, Hadley,
+        2019, R package version 1.4.0, https:\/\/CRAN.R-project.org\/package=stringr"},{"key":"ref23","unstructured":"tibble:
+        Simple Data Frames, M\u00fcller, Kirill and Wickham, Hadley, 2018, R package
+        version 2.1.3, https:\/\/CRAN.R-project.org\/package=tibble"},{"key":"ref24","unstructured":"tidyr:
+        Tidy Messy Data, Wickham, Hadley and Henry, Lionel, 2019, R package version
+        1.0.0, https:\/\/CRAN.R-project.org\/package=tidyr"},{"key":"ref25","unstructured":"googledrive:
+        An Interface to Google Drive, D\u2019Agostino McGowan, Lucy and Bryan, Jennifer,
+        2019, R package version 0.1.3, https:\/\/CRAN.R-project.org\/package=googledrive"},{"key":"ref26","unstructured":"tidymodels:
+        Easily Install and Load the \u2019Tidymodels\u2019 Packages, Kuhn, Max and
+        Wickham, Hadley, 2018, R package version 0.0.2, https:\/\/CRAN.R-project.org\/package=tidymodels"},{"key":"ref27","unstructured":"shiny:
+        Web Application Framework for R, Chang, Winston and Cheng, Joe and Allaire,
+        JJ and Xie, Yihui and McPherson, Jonathan, 2019, R package version 1.3.2,
+        https:\/\/CRAN.R-project.org\/package=shiny"},{"key":"ref28","unstructured":"rmarkdown:
+        Dynamic Documents for R, Allaire, JJ and Xie, Yihui and McPherson, Jonathan
+        and Luraschi, Javier and Ushey, Kevin and Atkins, Aron and Wickham, Hadley
+        and Cheng, Joe and Chang, Winston and Iannone, Richard, 2018, R package version
+        1.12, https:\/\/rmarkdown.rstudio.com"},{"key":"ref29","unstructured":"R:
+        A Language and Environment for Statistical Computing, R Core Team, R Foundation
+        for Statistical Computing, Vienna, Austria, 2019, https:\/\/www.R-project.org\/"},{"key":"ref30","doi-asserted-by":"crossref","unstructured":"Gentleman,
+        Robert C and Carey, Vincent J and Bates, Douglas M and Bolstad, Ben and Dettling,
+        Marcel and Dudoit, Sandrine and Ellis, Byron and Gautier, Laurent and Ge,
+        Yongchao and Gentry, Jeff and others, 2004, Bioconductor: open software development
+        for computational biology and bioinformatics, Genome Biology, 5, 10, R80","DOI":"10.1186\/gb-2004-5-10-r80"},{"key":"ref31","doi-asserted-by":"crossref","unstructured":"Huber,
+        W. and Carey, V. J. and Gentleman, R. and Anders, S. and Carlson, M. and Carvalho,
+        B. S. and Bravo, H. C. and Davis, S. and Gatto, L. and Girke, T. and Gottardo,
+        R. and Hahne, F. and Hansen, K. D. and Irizarry, R. A. and Lawrence, M. and
+        Love, M. I. and MacDonald, J. and Obenchain, V. and Ole\u2019s, A. K. and
+        Pag\u2018es, H. and Reyes, A. and Shannon, P. and Smyth, G. K. and Tenenbaum,
+        D. and Waldron, L. and Morgan, M., Orchestrating high-throughput genomic analysis
+        with Bioconductor, Nature Methods, 2015, 12, 2, 115\u2013121, http:\/\/www.nature.com\/nmeth\/journal\/v12\/n2\/full\/nmeth.3252.html","DOI":"10.1038\/nmeth.3252"},{"key":"ref32","unstructured":"data.table:
+        Extension of \u2018data.frame\u2018, Dowle, Matt and Srinivasan, Arun, 2019,
+        R package version 1.12.6, https:\/\/CRAN.R-project.org\/package=data.table"},{"key":"ref33","unstructured":"xml2:
+        Parse XML, Wickham, Hadley and Hester, Jim and Ooms, Jeroen, 2019, R package
+        version 1.2.2, https:\/\/CRAN.R-project.org\/package=xml2"}],"container-title":"Journal
+        of Open Source Software","original-title":[],"link":[{"URL":"http:\/\/www.theoj.org\/joss-papers\/joss.01686\/10.21105.joss.01686.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2022,10,6]],"date-time":"2022-10-06T17:14:20Z","timestamp":1665076460000},"score":1,"resource":{"primary":{"URL":"https:\/\/joss.theoj.org\/papers\/10.21105\/joss.01686"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2019,11,21]]},"references-count":33,"journal-issue":{"issue":"43","published-online":{"date-parts":[[2019,11]]}},"alternative-id":["10.21105\/joss.01686"],"URL":"http:\/\/dx.doi.org\/10.21105\/joss.01686","relation":{"references":[{"id-type":"doi","id":"\u201chttps:\/\/doi.org\/10.5281\/zenodo.3547813\u201d","asserted-by":"subject"}],"has-review":[{"id-type":"uri","id":"https:\/\/github.com\/openjournals\/joss-reviews\/issues\/1686","asserted-by":"subject"}]},"ISSN":["2475-9066"],"subject":["General
+        Earth and Planetary Sciences","General Environmental Science"],"container-title-short":"JOSS","published":{"date-parts":[[2019,11,21]]}}'
+  recorded_at: Wed, 05 Jul 2023 05:31:44 GMT
+recorded_with: VCR 6.2.0

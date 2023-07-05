@@ -821,4 +821,1780 @@ http_interactions:
       encoding: UTF-8
       string: ''
   recorded_at: Sun, 18 Jun 2023 15:22:21 GMT
-recorded_with: VCR 6.1.0
+- request:
+    method: get
+    uri: https://doi.org/10.6084/m9.figshare.5328442.v3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:52:58 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '203'
+      Connection:
+      - close
+      Location:
+      - https://data.crosscite.org/10.6084%2Fm9.figshare.5328442.v3
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 08:06:26 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2F6pySQP2W%2FOglonTv%2BmESOaf7g7uC892fOc0I0dsZntNSdLGDWdHZKP5CWVJYkpCac%2BYxfcp1IpeibHI7SLy%2F%2F9cF2MbJurYFWSqnKFBppY%2BYq9C3pRZug%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1e0815fae2915f-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://data.crosscite.org/10.6084%2Fm9.figshare.5328442.v3">https://data.crosscite.org/10.6084%2Fm9.figshare.5328442.v3</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 07:52:58 GMT
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.6084%2Fm9.figshare.5328442.v3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - data.crosscite.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:52:58 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"a7071f51b1eb40a8f30e8b154cbb14d8"
+      X-Runtime:
+      - '0.014619'
+      X-Request-Id:
+      - 1163a7c6-7869-4574-892a-3a7842d36ee9
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.13
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.13
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "type": "article-journal",
+          "id": "https://doi.org/10.6084/m9.figshare.5328442.v3",
+          "categories": [
+            "80699 Information Systems not elsewhere classified",
+            "FOS: Computer and information sciences",
+            "FOS: Computer and information sciences",
+            "160511 Research, Science and Technology Policy",
+            "FOS: Political science",
+            "FOS: Political science"
+          ],
+          "author": [
+            {
+              "literal": "Udit Nangia"
+            },
+            {
+              "family": "Katz",
+              "given": "Daniel S."
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2017
+              ]
+            ]
+          },
+          "abstract": "This paper reports on the results of a 2017 survey conducted by email and web of members of the U.S. National Postdoctoral Association regarding their use of software in research and their training regarding software development. The responses show that that 95% of respondents use research software. Of all the respondents, 63% state they could not do their research without research software, 31% could do it but with more effort, and 6% would not find a significant difference in their research without research software. In addition, 54% of respondents have not received any training in software development, though all respondents who develop software for researchers have received either self-taught or formal software development training.",
+          "container-title": "figshare",
+          "DOI": "10.6084/M9.FIGSHARE.5328442.V3",
+          "publisher": "figshare",
+          "title": "Track 1 Paper: Surveying the U.S. National Postdoctoral Association Regarding Software Use and Training in Research",
+          "URL": "https://figshare.com/articles/journal_contribution/Track_1_Paper_Surveying_the_U_S_National_Postdoctoral_Association_Regarding_Software_Use_and_Training_in_Research/5328442/3",
+          "copyright": "Creative Commons Attribution 4.0 International"
+        }
+  recorded_at: Wed, 05 Jul 2023 07:52:58 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.54900/9akm9y5-5ject5y
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:52:59 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '225'
+      Connection:
+      - close
+      Location:
+      - https://api.crossref.org/v1/works/10.54900%2F9akm9y5-5ject5y/transform
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 08:30:32 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ARvLsCq7cNZ2kIVcDjvjsiLDL7doYCbD58JPMamB7q3C0OwpO4PhxMQi4RAWonwYaxIcmfpdywH4AfEfu9elM0TI2BkdVlztQhLqFriZMpzScyi9I5uzs%2Bs%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1e0817fd519274-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://api.crossref.org/v1/works/10.54900%2F9akm9y5-5ject5y/transform">https://api.crossref.org/v1/works/10.54900%2F9akm9y5-5ject5y/transform</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 07:52:59 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/v1/works/10.54900%2F9akm9y5-5ject5y/transform
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - api.crossref.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:52:59 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept
+      Link:
+      - <http://dx.doi.org/10.54900/9akm9y5-5ject5y>; rel="canonical", <https://upstream.force11.org/defining-the-roles-of-research-software>;
+        version="vor"; type="text/html"; rel="item", <https://creativecommons.org/licenses/by/4.0/legalcode>;
+        version="vor"; rel="license", <https://creativecommons.org/licenses/by/4.0/legalcode>;
+        version="tdm"; rel="license", <http://orcid.org/0000-0001-5934-7525>; title="Daniel
+        S. Katz"; rel="author"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"institution":[{"name":"Upstream"}],"indexed":{"date-parts":[[2023,6,18]],"date-time":"2023-06-18T16:26:24Z","timestamp":1687105584776},"posted":{"date-parts":[[2023,3,14]]},"group-title":"Humanities","reference-count":0,"publisher":"Front
+        Matter","license":[{"start":{"date-parts":[[2023,3,14]],"date-time":"2023-03-14T00:00:00Z","timestamp":1678752000000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/legalcode"},{"start":{"date-parts":[[2023,3,14]],"date-time":"2023-03-14T00:00:00Z","timestamp":1678752000000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/legalcode"}],"content-domain":{"domain":[],"crossmark-restriction":false},"abstract":"<p>In
+        November of 2022, the Research Software Alliance (ReSA) and the Netherlands
+        eScience Center organized a two-day international workshop titled \u201cThe
+        Future of Research Software.\u201d In the workshop, funding organizations
+        joined forces to explore how they could effectively contribute to making research
+        software sustainable. The workshop had many participants from all continents
+        and was a huge success. A tangible outcome was a draft of the \"Amsterdam
+        Declaration on Funding Research Software...<\/p>","DOI":"10.54900\/9akm9y5-5ject5y","type":"posted-content","created":{"date-parts":[[2023,3,14]],"date-time":"2023-03-14T10:39:07Z","timestamp":1678790347000},"source":"Crossref","is-referenced-by-count":2,"title":"Defining
+        the roles of research software","prefix":"10.54900","author":[{"given":"Rob","family":"van
+        Nieuwpoort","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-5934-7525","authenticated-orcid":false,"given":"Daniel
+        S.","family":"Katz","sequence":"additional","affiliation":[]}],"member":"31795","container-title":[],"original-title":[],"link":[{"URL":"https:\/\/upstream.force11.org\/defining-the-roles-of-research-software","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2023,6,17]],"date-time":"2023-06-17T23:14:22Z","timestamp":1687043662000},"score":1,"resource":{"primary":{"URL":"https:\/\/upstream.force11.org\/defining-the-roles-of-research-software"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2023,3,14]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.54900\/9akm9y5-5ject5y","relation":{},"published":{"date-parts":[[2023,3,14]]},"subtype":"other"}'
+  recorded_at: Wed, 05 Jul 2023 07:52:59 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.5281/zenodo.7740084
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:52:59 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '187'
+      Connection:
+      - close
+      Location:
+      - https://data.crosscite.org/10.5281%2Fzenodo.7740084
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 08:31:28 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=l7xG1Ihm1uCv5k2i3RwRZ%2Fkz%2BmNViwnBo7VQcYGaoahvO7G09YuOgP%2BKY9%2FW32LJsOHi%2B4Vgk6tt6bff8DeGr2V7DIkENW2AcHbfXfsjpCVRCEAk9TVBzHI%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1e081cb8615c50-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.7740084">https://data.crosscite.org/10.5281%2Fzenodo.7740084</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 07:52:59 GMT
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.5281%2Fzenodo.7740084
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - data.crosscite.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:52:59 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"a6451de9eb23725373223d1fdf4bc634"
+      X-Runtime:
+      - '0.017500'
+      X-Request-Id:
+      - ffea8b4e-6719-472c-8d4b-8756b528d63c
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.13
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.13
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "type": "article",
+          "id": "https://doi.org/10.5281/zenodo.7740084",
+          "categories": [
+            "research software",
+            "open science",
+            "funding",
+            "declaration",
+            "software sustainability"
+          ],
+          "language": "en",
+          "author": [
+            {
+              "family": "Barker",
+              "given": "Michelle"
+            },
+            {
+              "family": "Hong",
+              "given": "Neil P. Chue"
+            },
+            {
+              "family": "Van Eijnatten",
+              "given": "Joris"
+            },
+            {
+              "family": "Katz",
+              "given": "Daniel S."
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2023,
+                3,
+                16
+              ]
+            ]
+          },
+          "abstract": "This Declaration on Funding Research Software Sustainability builds on actions undertaken by the Research Software Alliance (ReSA), research funding organisations, and the community surrounding it to develop awareness about the role funders can play in sustaining software in the longer term. It was initiated during an international workshop attended by representatives of funding organisations in Amsterdam on 8-9 November 2022, organised by ReSA and the Netherlands eScience Center. The Declaration is a first step towards formalising, on a global level, the basic principles and recommendations related to funding the sustainability of research software, including the people needed to achieve this goal. The aim of this Declaration is to raise awareness of the role of funding practice in the sustainability of research software, and to improve that practice. The Declaration includes a limited number of recommendations and an accompanying ADORE.software Toolkit. For the purposes of this declaration, research software is defined as “all forms of software that were created during the research process or for a research purpose”. A fuller description is included in the accompanying ADORE.software Toolkit",
+          "DOI": "10.5281/ZENODO.7740084",
+          "publisher": "Zenodo",
+          "title": "Amsterdam Declaration on Funding Research Software Sustainability",
+          "URL": "https://zenodo.org/record/7740084",
+          "copyright": "Creative Commons Attribution 4.0 International",
+          "version": "0.3"
+        }
+  recorded_at: Wed, 05 Jul 2023 07:52:59 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.5281/zenodo.6859709
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:00 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '187'
+      Connection:
+      - close
+      Location:
+      - https://data.crosscite.org/10.5281%2Fzenodo.6859709
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 08:06:26 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=X0C2w94%2FngveUEHZveiNdydslaV6GJ%2FL1onCOPyMuhknupsQciIQBxgyrLLmLS8pKxULWnqPqG697E1cBybfXtlJOEs6Oaa6z%2FqhrQdQODfxCyUMJet0DQA%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1e081f4ff60858-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.6859709">https://data.crosscite.org/10.5281%2Fzenodo.6859709</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 07:53:00 GMT
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.5281%2Fzenodo.6859709
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - data.crosscite.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:00 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"1ef634b21545647b47d59f6b4ca912b9"
+      X-Runtime:
+      - '0.021049'
+      X-Request-Id:
+      - 60fe9f95-ce93-45eb-a51b-f1979bb2a6a2
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.13
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.13
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "type": "report",
+          "id": "https://doi.org/10.5281/zenodo.6859709",
+          "categories": [
+            "diversity",
+            "equity",
+            "inclusion",
+            "research software engineering",
+            "research software"
+          ],
+          "language": "en",
+          "author": [
+            {
+              "family": "Barker",
+              "given": "Michelle"
+            },
+            {
+              "family": "Leung",
+              "given": "Mary Ann"
+            },
+            {
+              "family": "Martinez",
+              "given": "Paula Andrea"
+            },
+            {
+              "family": "Gesing",
+              "given": "Sandra"
+            },
+            {
+              "family": "Hartley",
+              "given": "Kim"
+            },
+            {
+              "family": "Banerji",
+              "given": "Anita"
+            },
+            {
+              "family": "Cohen",
+              "given": "Jeremy"
+            },
+            {
+              "family": "Goggins",
+              "given": "Sean"
+            },
+            {
+              "family": "Jay",
+              "given": "Caroline"
+            },
+            {
+              "family": "Jimenz Gacha",
+              "given": "Stephannie"
+            },
+            {
+              "family": "Katz",
+              "given": "Daniel S."
+            },
+            {
+              "family": "Kibet",
+              "given": "Caleb K."
+            },
+            {
+              "family": "Lamprecht",
+              "given": "Anna-Lena"
+            },
+            {
+              "family": "Mosbergen",
+              "given": "Rowland"
+            },
+            {
+              "family": "Weinzierl",
+              "given": "Marion"
+            },
+            {
+              "family": "Wilson",
+              "given": "Rebecca"
+            },
+            {
+              "family": "Yehudi",
+              "given": "Yo"
+            },
+            {
+              "family": "Zhang",
+              "given": "Qian"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2022,
+                7,
+                10
+              ]
+            ]
+          },
+          "abstract": "This report summarises the 2022 <em>Vive la différence - research software engineer</em>s workshop, including its discussions and suggestions. The purpose of the workshop was to consider how research software engineering (RSE) could be reframed to place diversity, equity, and inclusion (DEI) as a central organising principle.",
+          "DOI": "10.5281/ZENODO.6859709",
+          "publisher": "Zenodo",
+          "title": "Report on Vive la différence - research software engineers",
+          "URL": "https://zenodo.org/record/6859709",
+          "copyright": "Creative Commons Attribution 4.0 International"
+        }
+  recorded_at: Wed, 05 Jul 2023 07:53:00 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.5281/zenodo.7179892
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:00 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '187'
+      Connection:
+      - close
+      Location:
+      - https://data.crosscite.org/10.5281%2Fzenodo.7179892
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 08:30:38 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mAXRZ799QcIjKcgLwNrcMFiwYfcTUpVzxTdszcbRDxxBq3X7Uoom6sXWgDrN8gmggN5yIbFW9NfDfWGy1hpZHhvoZYhnDVK%2BKvQvDkOMpO3dD6AQlrjJCoU%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1e082189831e3e-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.7179892">https://data.crosscite.org/10.5281%2Fzenodo.7179892</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 07:53:00 GMT
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.5281%2Fzenodo.7179892
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - data.crosscite.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:00 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"f5b7902dce814b3d03598f37990ce8f0"
+      X-Runtime:
+      - '0.022463'
+      X-Request-Id:
+      - 99e292b1-3b88-4188-be5c-a5533c8eb567
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.13
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.13
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "type": "article",
+          "id": "https://doi.org/10.5281/zenodo.7179892",
+          "categories": [
+            "research software",
+            "landscape",
+            "ReSA",
+            "report"
+          ],
+          "language": "en",
+          "author": [
+            {
+              "family": "Martinez",
+              "given": "Paula Andrea"
+            }
+          ],
+          "contributor": [
+            {
+              "family": "Barker",
+              "given": "Michelle"
+            },
+            {
+              "family": "Kibet",
+              "given": "Caleb"
+            },
+            {
+              "family": "Upani",
+              "given": "Jessica"
+            },
+            {
+              "family": "Mbunzama",
+              "given": "Narcisse"
+            },
+            {
+              "family": "Oko-Isu",
+              "given": "Anthony"
+            },
+            {
+              "family": "Jimenez Gacha",
+              "given": "Stephannie"
+            },
+            {
+              "family": "Corrêa dos Santos",
+              "given": "Renato Augusto"
+            },
+            {
+              "family": "Wolovick",
+              "given": "Nicolás"
+            },
+            {
+              "family": "Kaur",
+              "given": "Saranjeet"
+            },
+            {
+              "family": "Bhogal",
+              "given": "Jyoti"
+            },
+            {
+              "family": "Almarzouq",
+              "given": "Batool"
+            },
+            {
+              "family": "Tariq",
+              "given": "Abdullah Shams Bin"
+            },
+            {
+              "family": "Sheikh",
+              "given": "Arslan"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2022,
+                10,
+                10
+              ]
+            ]
+          },
+          "abstract": "The Research Software Alliance's (ReSA) mission is to bring research software communities together to collaborate on the advancement of research software. Given the ReSA mission, it is important to understand the landscape of communities involved with research software. In 2020, ReSA completed an initial exercise to scope the international research software community landscape. This work was reported by ReSA's Software Landscape Analysis task force via a blog post. The majority of the communities in the previous analysis represented the global north. To improve the extent of this landscape analysis, ReSA announced a paid opportunity for short-term contractors located in the global south to collect data on communities and funders in their region in early 2022. This document describes how the work was undertaken, a summary of findings, the gaps and opportunities perceived by the data collectors and some highlights. This work identified 126 organisations and communities and 62 funder bodies that support research software in the global south. Their main activities are connecting people, training, and networking, and support through research grants. To add to the funders list please fill in the following form: https://forms.gle/CJWo24MUCjhWKh9U8 To add to the communities list please fill in the following form https://forms.gle/KJE9vkBnM6vhh7cEA Please cite this work as: Martinez, Paula Andrea. (2022, October 10). The Research Software Community Landscape in the Global South. Zenodo. https://doi.org/10.5281/zenodo.7179892 Martinez, Paula Andrea. (2022). Research Software Communities Global South [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7179807 Martinez, Paula Andrea. (2022). Research Software Funders Global South [Data set]. Zenodo. https://doi.org/10.5281/zenodo.7179867",
+          "DOI": "10.5281/ZENODO.7179892",
+          "publisher": "Zenodo",
+          "title": "The Research Software Community Landscape in the Global South",
+          "URL": "https://zenodo.org/record/7179892",
+          "copyright": "Creative Commons Attribution 4.0 International"
+        }
+  recorded_at: Wed, 05 Jul 2023 07:53:00 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.5281/zenodo.3884311
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:00 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '187'
+      Connection:
+      - close
+      Location:
+      - https://data.crosscite.org/10.5281%2Fzenodo.3884311
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 08:06:26 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8J5atnaXv20R1VIkDSNb7qRMTHDEleQ2i8zwZkPIKJ2RUaMCnCjNv%2BeetXSV34fH2OfpaKPU3nQH%2BtjnI63aOkhG055A6QBdOBX0c9az3MiZGd8SgS0WNhM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1e08244c449070-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.3884311">https://data.crosscite.org/10.5281%2Fzenodo.3884311</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 07:53:00 GMT
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.5281%2Fzenodo.3884311
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - data.crosscite.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:01 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"51567bedd6280478432dd51a48ce7632"
+      X-Runtime:
+      - '0.015762'
+      X-Request-Id:
+      - b37f8698-84a2-49c1-b2e6-6fcb81a98107
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.13
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.13
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "type": "report",
+          "id": "https://doi.org/10.5281/zenodo.3884311",
+          "categories": [
+            "Software",
+            "Research",
+            "Education and training",
+            "Policy",
+            "Community"
+          ],
+          "author": [
+            {
+              "family": "Barker",
+              "given": "Michelle"
+            },
+            {
+              "family": "Katz",
+              "given": "Daniel S."
+            },
+            {
+              "family": "Gonzalez-Beltran",
+              "given": "Alejandra"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2020,
+                6,
+                8
+              ]
+            ]
+          },
+          "abstract": "This blog analyses work evidencing the importance of research software to research outcomes, to enable the research software community to find useful evidence to share with key influencers. This analysis considers papers relating to meta-research, policy, community, education and training, research breakthroughs and specific software. <br> The Research Software Alliance (ReSA) Taskforce for the importance of research software was formed initially to bring together existing evidence showing the importance of research software in the research process. This kind of information is critical to achieving ReSA’s vision to have research software recognised and valued as a fundamental and vital component of research worldwide.",
+          "DOI": "10.5281/ZENODO.3884311",
+          "publisher": "Zenodo",
+          "title": "Evidence for the importance of research software",
+          "URL": "https://zenodo.org/record/3884311",
+          "copyright": "Creative Commons Attribution 4.0 International"
+        }
+  recorded_at: Wed, 05 Jul 2023 07:53:01 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.15497/rda00052
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:01 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '177'
+      Connection:
+      - close
+      Location:
+      - https://data.crosscite.org/10.15497%2Frda00052
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 08:31:28 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TOtR4o9wH81mi7DbEYqPJ6Yd%2BOROUFyGnOsPRoUG32IqEqLiBQ28E2QgGzFFC89%2FFjFNXVrcOmcrtlEctsqsTXGdCvprO%2BEs9vPlP6O3iwSisAQWX10f%2BH4%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1e08266d61047e-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://data.crosscite.org/10.15497%2Frda00052">https://data.crosscite.org/10.15497%2Frda00052</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 07:53:01 GMT
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.15497%2Frda00052
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - data.crosscite.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:01 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"5605bebd477a12dddcf0628cd41fb513"
+      X-Runtime:
+      - '0.013891'
+      X-Request-Id:
+      - daa17909-719a-4c06-ab65-740c7ffa23e4
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.13
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.13
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "type": "article-journal",
+          "id": "https://doi.org/10.15497/rda00052",
+          "author": [
+            {
+              "literal": "Research Data Alliance"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2020
+              ]
+            ]
+          },
+          "container-title": "RDA",
+          "DOI": "10.15497/RDA00052",
+          "publisher": "RDA",
+          "title": "Final release: COVID-19 guidelines",
+          "URL": "https://zenodo.org/record/3932953#.Xx_f7Z4za70"
+        }
+  recorded_at: Wed, 05 Jul 2023 07:53:01 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.15497/rda00068
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:01 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '177'
+      Connection:
+      - close
+      Location:
+      - https://data.crosscite.org/10.15497%2Frda00068
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 08:06:26 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ecwAQ1YMQNhVEiV5sPogPV30nTm9bwhK7cSWuVUcEEiNgDHfoG7mZTnS39VPBTr2dIg0QnDQ%2BGxdct0Woow8OG4eRB3PsCPzW5ITS8LUzYk%2B8p0dlJ2zcFg%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1e0829ab802c4d-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://data.crosscite.org/10.15497%2Frda00068">https://data.crosscite.org/10.15497%2Frda00068</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 07:53:01 GMT
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.15497%2Frda00068
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - data.crosscite.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:01 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"7e2ad4283560ec29b408517db66a2cc7"
+      X-Runtime:
+      - '0.042119'
+      X-Request-Id:
+      - 3a302c6e-72a6-4c53-b591-74607a1ba6e3
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.13
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.13
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "type": "article-journal",
+          "id": "https://doi.org/10.15497/rda00068",
+          "language": "en",
+          "author": [
+            {
+              "family": "Chue Hong",
+              "given": "Neil P."
+            },
+            {
+              "family": "Katz",
+              "given": "Daniel S."
+            },
+            {
+              "family": "Barker",
+              "given": "Michelle"
+            },
+            {
+              "family": "Lamprecht",
+              "given": "Anna-Lena"
+            },
+            {
+              "family": "Martinez",
+              "given": "Carlos"
+            },
+            {
+              "family": "Psomopoulos",
+              "given": "Fotis E."
+            },
+            {
+              "family": "Harrow",
+              "given": "Jen"
+            },
+            {
+              "family": "Castro",
+              "given": "Leyla Jael"
+            },
+            {
+              "family": "Gruenpeter",
+              "given": "Morane"
+            },
+            {
+              "family": "Martinez",
+              "given": "Paula Andrea"
+            },
+            {
+              "family": "Honeyman",
+              "given": "Tom"
+            }
+          ],
+          "contributor": [
+            {
+              "family": "Struck",
+              "given": "Alexander"
+            },
+            {
+              "family": "Lee",
+              "given": "Allen"
+            },
+            {
+              "family": "Loewe",
+              "given": "Axel"
+            },
+            {
+              "family": "Van Werkhoven",
+              "given": "Ben"
+            },
+            {
+              "family": "Jones",
+              "given": "Catherine"
+            },
+            {
+              "family": "Garijo",
+              "given": "Daniel"
+            },
+            {
+              "family": "Plomp",
+              "given": "Esther"
+            },
+            {
+              "family": "Genova",
+              "given": "Francoise"
+            },
+            {
+              "family": "Shanahan",
+              "given": "Hugh"
+            },
+            {
+              "family": "Leng",
+              "given": "Joanna"
+            },
+            {
+              "family": "Hellstrm",
+              "given": "Maggie"
+            },
+            {
+              "family": "Sandström",
+              "given": "Malin"
+            },
+            {
+              "family": "Sinha",
+              "given": "Manodeep"
+            },
+            {
+              "family": "Kuzak",
+              "given": "Mateusz"
+            },
+            {
+              "family": "Herterich",
+              "given": "Patricia"
+            },
+            {
+              "family": "Zhang",
+              "given": "Qian"
+            },
+            {
+              "family": "Islam",
+              "given": "Sharif"
+            },
+            {
+              "family": "Sansone",
+              "given": "Susanna-Assunta"
+            },
+            {
+              "family": "Pollard",
+              "given": "Tom"
+            },
+            {
+              "family": "Atmojo",
+              "given": "Udayanto Dwi"
+            },
+            {
+              "family": "Williams",
+              "given": "Alan"
+            },
+            {
+              "family": "Czerniak",
+              "given": "Andreas"
+            },
+            {
+              "family": "Nihues",
+              "given": "Anna"
+            },
+            {
+              "family": "Fouilloux",
+              "given": "Anne Claire"
+            },
+            {
+              "family": "Desinghu",
+              "given": "Bala"
+            },
+            {
+              "family": "Goble",
+              "given": "Carole"
+            },
+            {
+              "family": "Richard",
+              "given": "Céline"
+            },
+            {
+              "family": "Gray",
+              "given": "Charles"
+            },
+            {
+              "family": "Erdmann",
+              "given": "Chris"
+            },
+            {
+              "family": "Nüst",
+              "given": "Daniel"
+            },
+            {
+              "family": "Tartarini",
+              "given": "Daniele"
+            },
+            {
+              "family": "Ranguelova",
+              "given": "Elena"
+            },
+            {
+              "family": "Anzt",
+              "given": "Hartwig"
+            },
+            {
+              "family": "Todorov",
+              "given": "Ilian"
+            },
+            {
+              "family": "McNally",
+              "given": "James"
+            },
+            {
+              "family": "Moldon",
+              "given": "Javier"
+            },
+            {
+              "family": "Burnett",
+              "given": "Jessica"
+            },
+            {
+              "family": "Garrido-Sánchez",
+              "given": "Julián"
+            },
+            {
+              "family": "Belhajjame",
+              "given": "Khalid"
+            },
+            {
+              "family": "Sesink",
+              "given": "Laurents"
+            },
+            {
+              "family": "Hwang",
+              "given": "Lorraine"
+            },
+            {
+              "family": "Tovani-Palone",
+              "given": "Marcos Roberto"
+            },
+            {
+              "family": "Wilkinson",
+              "given": "Mark D."
+            },
+            {
+              "family": "Servillat",
+              "given": "Mathieu"
+            },
+            {
+              "family": "Liffers",
+              "given": "Matthias"
+            },
+            {
+              "family": "Fox",
+              "given": "Merc"
+            },
+            {
+              "family": "Miljković",
+              "given": "Nadica"
+            },
+            {
+              "family": "Lynch",
+              "given": "Nick"
+            },
+            {
+              "family": "Lavanchy",
+              "given": "Paula Martinez"
+            },
+            {
+              "family": "Gesing",
+              "given": "Sandra"
+            },
+            {
+              "family": "Stevens",
+              "given": "Sarah"
+            },
+            {
+              "family": "Cuesta",
+              "given": "Sergio Martinez"
+            },
+            {
+              "family": "Peroni",
+              "given": "Silvio"
+            },
+            {
+              "family": "Soiland-Reyes",
+              "given": "Stian"
+            },
+            {
+              "family": "Bakker",
+              "given": "Tom"
+            },
+            {
+              "family": "Rabemanantsoa",
+              "given": "Tovo"
+            },
+            {
+              "family": "Sochat",
+              "given": "Vanessa"
+            },
+            {
+              "family": "Yehudi",
+              "given": "Yo"
+            },
+            {
+              "literal": "Research Data Alliance FAIR For Research Software (FAIR4RS) WG"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2021
+              ]
+            ]
+          },
+          "abstract": "Research software is a fundamental and vital part of research worldwide, yet there remain significant challenges to software productivity, quality, reproducibility, and sustainability. Improving the practice of scholarship is a common goal of the open science, open source software and FAIR (Findable, Accessible, Interoperable and Reusable) communities, but improving the sharing of research software has not yet been a strong focus of the latter. To improve the FAIRness of research software, the FAIR for Research Software (FAIR4RS) Working Group has sought to understand how to apply the FAIR Guiding Principles for scientific data management and stewardship to research software, bringing together existing and new community efforts. Many of the FAIR Guiding Principles can be directly applied to research software by treating software and data as similar digital research objects. However, specific characteristics of software — such as its executability, composite nature, and continuous evolution and versioning — make it necessary to revise and extend the principles. This document presents the first version of the FAIR Principles for Research Software (FAIR4RS Principles). It is an outcome of the FAIR for Research Software Working Group (FAIR4RS WG). The FAIR for Research Software Working Group is jointly convened as an RDA Working Group, FORCE11 Working Group, and Research Software Alliance (ReSA) Task Force.",
+          "container-title": "Research Data Alliance",
+          "DOI": "10.15497/RDA00068",
+          "publisher": "Research Data Alliance",
+          "title": "FAIR Principles for Research Software (FAIR4RS Principles)",
+          "URL": "https://zenodo.org/record/6623556#.YqCJTJNBwlw",
+          "copyright": "Creative Commons Attribution 4.0 International"
+        }
+  recorded_at: Wed, 05 Jul 2023 07:53:01 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.5281/zenodo.6239373
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:02 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '187'
+      Connection:
+      - close
+      Location:
+      - https://data.crosscite.org/10.5281%2Fzenodo.6239373
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 08:30:38 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KdCiiMjhcqt23%2FaYhw5BR5Z9NELFdfiuZ0EhYBkbPMz8Juii6C7LbTma4tOR%2FQZEQTDYfNdz56if02pZMSFqPoDElnAoTgBGMtxyytm06zS5Z9NXQ1eCQcI%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1e082bba851d88-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.6239373">https://data.crosscite.org/10.5281%2Fzenodo.6239373</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 07:53:02 GMT
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.5281%2Fzenodo.6239373
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - data.crosscite.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:02 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"4b0f91a049d2529e7d7d8fc42c7e3310"
+      X-Runtime:
+      - '0.017510'
+      X-Request-Id:
+      - da5acd55-7e4c-4910-aac4-648c09721495
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.13
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.13
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "type": "article",
+          "id": "https://doi.org/10.5281/zenodo.6239373",
+          "categories": [
+            "research software",
+            "Research Software Alliance",
+            "FAIR4RS",
+            "Skills"
+          ],
+          "author": [
+            {
+              "family": "Barker",
+              "given": "Michelle"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2022,
+                2,
+                20
+              ]
+            ]
+          },
+          "abstract": "This report provides a summary of progress on the Research Software Alliance (ReSA) project to map existing FAIR (Findable, Accessible, Interoperable Reusable) for research software (FAIR4RS) projects into a longer-term framework to improve strategic alignment and potential collaborators/leads for parts of the FAIR4RS Roadmap. The FAIR4RS Roadmap aims to make implementation of the FAIR4RS Principles a reality. Progress in this area will fast-track the adoption of the FAIR4RS Principles to support the significant cultural change needed across the research community to gain the benefits of recognition of a wider range of research outputs. December 2021",
+          "DOI": "10.5281/ZENODO.6239373",
+          "publisher": "Zenodo",
+          "title": "FAIR4RS Roadmap Report",
+          "URL": "https://zenodo.org/record/6239373",
+          "copyright": "Creative Commons Attribution 4.0 International"
+        }
+  recorded_at: Wed, 05 Jul 2023 07:53:02 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.5281/zenodo.3699950
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:02 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '187'
+      Connection:
+      - close
+      Location:
+      - https://data.crosscite.org/10.5281%2Fzenodo.3699950
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 05 Jul 2023 08:30:38 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1JM1gMYL4cF1xMN3Kehc6vND9BLSvAZ2FPfT0rTxy6hHovMz%2BIZlmvsIYyLFm4gKplsGEqa1%2BzuZzvCXRBEFpq2RmJfSWsnur%2FQGYRT6RnEotX%2F6qLRIgFo%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7e1e082e5aac2bb5-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.3699950">https://data.crosscite.org/10.5281%2Fzenodo.3699950</a></body></html>
+  recorded_at: Wed, 05 Jul 2023 07:53:02 GMT
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.5281%2Fzenodo.3699950
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - data.crosscite.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 05 Jul 2023 07:53:02 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"ff2b9c499754dee86387b4534c530c50"
+      X-Runtime:
+      - '0.018789'
+      X-Request-Id:
+      - 1a5c0d9d-4520-4a2a-925d-87e38f59a102
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.13
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.13
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "type": "dataset",
+          "id": "https://doi.org/10.5281/zenodo.3699950",
+          "categories": [
+            "Research Software, Communities, Landscape"
+          ],
+          "language": "en",
+          "author": [
+            {
+              "family": "Katz",
+              "given": "Daniel S"
+            },
+            {
+              "family": "Barker",
+              "given": "Michelle"
+            },
+            {
+              "family": "Martinez",
+              "given": "Paula Andrea"
+            },
+            {
+              "family": "Anzt",
+              "given": "Hartwig"
+            },
+            {
+              "family": "Gonzalez-Beltran",
+              "given": "Alejandra"
+            },
+            {
+              "family": "Bakker",
+              "given": "Tom"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2020,
+                3,
+                11
+              ]
+            ]
+          },
+          "abstract": "The Research Software Alliance (ReSA)’s mission is to bring research software communities together to collaborate on the advancement of research software. ReSA has formed taskforces and one of them revolves around a <strong>software landscape analysis</strong> aiming to answer the question \"How can we identify the different communities and topics of interest for the research software community (e.g., preservation, RSEs, citation, productivity, sustainability)?\" Here we include text describing the work of the taskforce to date (see 2020-03-11-ReSA-landscape.md), as well as plans for the future, and an invitation to readers to contribute to the ReSA list of research software communities. We are a;sp including the current version of the list in a CSV file (see 2020-03-11-ReSA-landscape.csv ), and we welcome contributions on the live spreadsheet that can be found via this link.",
+          "DOI": "10.5281/ZENODO.3699950",
+          "publisher": "Zenodo",
+          "title": "The Research Software Alliance (ReSA) and the community landscape",
+          "URL": "https://zenodo.org/record/3699950",
+          "copyright": "Creative Commons Attribution 4.0 International",
+          "version": "1.0"
+        }
+  recorded_at: Wed, 05 Jul 2023 07:53:02 GMT
+recorded_with: VCR 6.2.0

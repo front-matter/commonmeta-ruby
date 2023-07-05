@@ -86,7 +86,11 @@ module Commonmeta
         Array.wrap(meta["references"]).reduce([]) do |sum, reference|
           begin
             if reference["doi"] && validate_doi(reference["doi"])
-              sum << reference if [200, 301, 302].include? HTTP.head(reference["doi"]).status
+              response = HTTP.follow
+                        .headers(:accept => "application/vnd.citationstyles.csl+json")
+                        .get(reference["doi"])
+              csl = JSON.parse(response.body.to_s)
+              sum << reference.merge("title" => csl['title'], "publicationYear" => csl.dig("issued", "date-parts", 0, 0).to_s) if [200, 301, 302].include? response.status
             elsif reference["url"] && validate_url(reference["url"]) == "URL"
               sum << reference if [200, 301, 302].include? HTTP.head(reference["url"]).status
             end
