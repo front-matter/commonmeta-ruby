@@ -1400,10 +1400,10 @@ module Commonmeta
       "https://doi.org/#{prefix}/#{str}"
     end
 
-    def encode_doi_for_uuid(uuid, options = {})
-      # look up prefix for rogue scholar blog associated with uuid
-      # returns nil if unknown uuid or doi registration is not enabled for blog
-      json_feed_by_uuid(uuid)
+    def encode_doi_for_id(id, options = {})
+      # look up prefix for rogue scholar blog associated with id
+      # returns nil if unknown id or doi registration is not enabled for blog
+      json_feed_by_id(id)
       # DOI suffix is a generated from a random number, encoded in base32
       # suffix has 8 digits plus two checksum digits. With base32 there are
       # 32 possible digits, so 8 digits gives 32^8 possible combinations
@@ -1449,8 +1449,8 @@ module Commonmeta
       "https://rogue-scholar.org/api/blogs/#{blog_id}"
     end
 
-    def json_feed_item_by_uuid_url(uuid)
-      "https://rogue-scholar.org/api/posts/#{uuid}"
+    def json_feed_item_by_id_url(id)
+      "https://rogue-scholar.org/api/posts/#{id}"
     end
 
     def generate_ghost_token(admin_api_key)
@@ -1473,43 +1473,43 @@ module Commonmeta
       JWT.encode payload, [secret].pack("H*"), "HS256", header
     end
 
-    def update_ghost_post_via_api(uuid)
+    def update_ghost_post_via_api(id)
       api_key = ENV["API_KEY"]
       api_url = ENV["API_URL"]
 
-      return nil unless uuid.present? && api_key.present? && api_url.present?
+      return nil unless id.present? && api_key.present? && api_url.present?
 
       # generate short lived jwt for ghost admin api
       ghost_jwt = generate_ghost_token(api_key)
 
       # get post url and doi from Rogue Scholar API
-      url = json_feed_item_by_uuid_url(uuid)
+      url = json_feed_item_by_id_url(id)
       response = HTTP.get(url)
       return nil unless response.status.success?
 
       post = JSON.parse(response.body.to_s)
       url = post.to_h.dig("url")
-      doi = validate_doi(post.to_h.dig("id"))
+      doi = validate_doi(post.to_h.dig("doi"))
       doi = doi_as_url(doi)
 
       return nil unless url.present? && doi.present?
 
-      # get id and updated_at from ghost api
+      # get post_id and updated_at from ghost api
       slug = url.chomp("/").split("/").last
       ghost_url = "#{api_url}/ghost/api/admin/posts/slug/#{slug}/"
       response = HTTP.auth("Ghost #{ghost_jwt}").get(ghost_url)
       return nil unless response.status.success?
 
       ghost_post = JSON.parse(response.body.to_s).dig("posts").first
-      id = ghost_post.dig("id")
+      ghost_id = ghost_post.dig("id")
       updated_at = ghost_post.dig("updated_at")
 
-      return nil unless id.present? && updated_at.present?
+      return nil unless ghost_id.present? && updated_at.present?
 
       # update post canonical_url with new doi
-      ghost_url = "#{api_url}/ghost/api/admin/posts/#{id}/"
+      ghost_url = "#{api_url}/ghost/api/admin/posts/#{ghost_id}/"
       response = HTTP.auth("Ghost #{ghost_jwt}").headers('Content-Type' => "application/json", 'Accept-Version' => 'v5').put(ghost_url, :json => { 'posts' => [{ 'canonical_url' => doi, 'updated_at' => updated_at }] })
-      "#{response.status} DOI #{doi} added to post #{uuid}"
+      "#{response.status} DOI #{doi} added to post #{ghost_id}"
     end
   end
 end

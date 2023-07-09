@@ -425,13 +425,13 @@ describe Commonmeta::Metadata, vcr: true do
       expect(response).to eq("10.59350")
     end
 
-    it "by blog post uuid" do
-      response = subject.get_doi_prefix_by_json_feed_item_uuid("1898d2d7-4d87-4487-96c4-3073cf99e9a5")
+    it "by blog post id" do
+      response = subject.get_doi_prefix_by_json_feed_item_id("1898d2d7-4d87-4487-96c4-3073cf99e9a5")
       expect(response).to eq("10.59350")
     end
 
-    it "by blog post uuid specific prefix" do
-      response = subject.get_doi_prefix_by_json_feed_item_uuid("2b22bbba-bcba-4072-94cc-3f88442fff88")
+    it "by blog post id specific prefix" do
+      response = subject.get_doi_prefix_by_json_feed_item_id("2b22bbba-bcba-4072-94cc-3f88442fff88")
       expect(response).to eq("10.54900")
     end
   end

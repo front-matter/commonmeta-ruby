@@ -147,10 +147,10 @@ module Commonmeta
         post.to_h.dig("prefix")
       end
 
-      def get_doi_prefix_by_json_feed_item_uuid(uuid)
+      def get_doi_prefix_by_json_feed_item_id(id)
         # for generating a random DOI. Prefix is based on the blog id.
 
-        url = json_feed_item_by_uuid_url(uuid)
+        url = json_feed_item_by_id_url(id)
         response = HTTP.get(url)
         return nil unless response.status.success?
 

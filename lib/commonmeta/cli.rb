@@ -77,10 +77,10 @@ module Commonmeta
       puts encode_doi(prefix)
     end
 
-    desc "", "encode_by_uuid"
+    desc "", "encode_by_id"
 
-    def encode_by_uuid(uuid)
-      prefix = get_doi_prefix_by_json_feed_item_uuid(uuid)
+    def encode_by_id(id)
+      prefix = get_doi_prefix_by_json_feed_item_id(id)
       return nil unless prefix.present?
       puts encode_doi(prefix)
     end
@@ -117,8 +117,8 @@ module Commonmeta
 
     desc "", "update_ghost_post"
 
-    def update_ghost_post(uuid)
-      puts update_ghost_post_via_api(uuid)
+    def update_ghost_post(id)
+      puts update_ghost_post_via_api(id)
     end
 
     default_task :convert
