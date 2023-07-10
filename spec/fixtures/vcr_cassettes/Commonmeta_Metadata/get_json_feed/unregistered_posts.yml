@@ -23,27 +23,73 @@ http_interactions:
       Cache-Control:
       - public, max-age=0, must-revalidate
       Content-Length:
-      - '2'
+      - '7384'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 18 Jun 2023 15:23:49 GMT
+      - Mon, 10 Jul 2023 20:41:56 GMT
       Etag:
-      - '"38jmpejbxv2"'
+      - '"das7e3njkl5os"'
       Server:
       - Vercel
       Strict-Transport-Security:
       - max-age=63072000
       X-Matched-Path:
-      - "/api/posts/unregistered"
+      - "/api/posts/[[...params]]"
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::9bfqh-1687101829074-e49fc84f386d
+      - fra1::iad1::dglhh-1689021716211-c61392582849
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: "[]"
-  recorded_at: Sun, 18 Jun 2023 15:23:49 GMT
-recorded_with: VCR 6.1.0
+      string: "[{\"id\":\"3023e24a-817d-452e-bb6e-ddadecce94c6\",\"doi\":null,\"url\":\"https://blog.front-matter.io/posts/rogue-scholar-full-text-search-improvements\",\"title\":\"Rogue
+        Scholar full-text search improvements\",\"summary\":\"Two weeks ago I added
+        a first version of full-text search to the Rogue Scholar blog archive. This
+        was a good start, as blogs typically only have the timeline, tags, and metadata
+        like titles and authors to help readers find relevant content. Today I launched
+        an improved version of full-text search with these improvements: Sorting of
+        search results by relevanceSupport for fuzzy search or approximate string
+        matchingAdded the backend for an updated search interface supporting faceted
+        search and/or...\",\"published_at\":1688994653,\"updated_at\":1689001959,\"indexed_at\":1689007007,\"authors\":[{\"url\":\"https://orcid.org/0000-0003-1419-2405\",\"name\":\"Martin
+        Fenner\"}],\"image\":\"https://images.unsplash.com/photo-1472512946974-cc09a294e210?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI3fHxzZWFyY2h8ZW58MHx8fHwxNjg4OTkyNDk1fDA&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\",\"tags\":[\"News\"],\"language\":\"en\",\"reference\":[{\"doi\":\"https://doi.org/10.53731/80awr-zcc48\",\"key\":\"ref1\"},{\"doi\":\"https://doi.org/10.1136/bmj.c181\",\"key\":\"ref2\"}],\"blog_id\":\"f0m0e38\",\"blog_name\":\"Front
+        Matter\",\"blog\":{\"id\":\"f0m0e38\",\"title\":\"Front Matter\",\"description\":\"The
+        Front Matter Blog covers the intersection of science and technology since
+        2007.\",\"language\":\"en\",\"favicon\":\"https://blog.front-matter.io/favicon.png\",\"feed_url\":\"https://blog.front-matter.io/atom-complete/\",\"home_page_url\":\"https://blog.front-matter.io\",\"user_id\":\"8498eaf6-8c58-4b58-bc15-27eda292b1aa\",\"created_at\":\"2023-05-31T07:20:33+00:00\",\"indexed_at\":\"2023-01-02\",\"feed_format\":\"application/atom+xml\",\"license\":\"https://creativecommons.org/licenses/by/4.0/legalcode\",\"generator\":\"Ghost
+        5.52\",\"category\":\"Engineering and Technology\",\"prefix\":\"10.53731\",\"modified_at\":\"2023-07-05T19:22:17+00:00\",\"version\":\"https://jsonfeed.org/version/1.1\",\"backlog\":false,\"current_feed_url\":\"https://blog.front-matter.io/atom/\",\"expired\":null}},{\"id\":\"a90b23ea-fda1-4c07-b034-9d16961c2046\",\"doi\":null,\"url\":\"https://blog.oa.works/join-the-oa-report-for-libraries-pilot-to-simplify-compliance-checking-for-your-institutional-funders-oa-policies\",\"title\":\"Join
+        the OA.Report for libraries pilot to simplify compliance checking for your
+        institutional & funder’s OA policies.\",\"summary\":\"Today, we’re happy to
+        announce that you can join the OA.Report for libraries pilot! If you’re interested
+        in joining: read on and get in touch!Get in touch\U0001F4A1About OA.ReportOA.Report
+        is an open-source tool that identifies research outputs organizations have
+        supported, analyzes their openness (including OA policy compliance), and then
+        streamlines taking action to make results more open.Getting an OA.Report takes
+        just seconds!OA.Report has been in use at major foundations for...\",\"published_at\":1688994400,\"updated_at\":1688994400,\"indexed_at\":0,\"authors\":[{\"url\":null,\"name\":\"OA.Works\"}],\"image\":\"https://blog.oa.works/content/images/2023/07/OA.Report-for-libraries-pilot.png\",\"tags\":[\"OA.Report\"],\"language\":\"en\",\"reference\":[],\"blog_id\":\"h7bpg11\",\"blog_name\":\"OA.Works
+        Blog\",\"blog\":{\"id\":\"h7bpg11\",\"title\":\"OA.Works Blog\",\"description\":\"OA.Works
+        Blog\",\"language\":\"en\",\"favicon\":\"https://blog.oa.works/favicon.png\",\"feed_url\":\"https://blog.oa.works/rss/\",\"home_page_url\":\"https://blog.oa.works/\",\"user_id\":\"8498eaf6-8c58-4b58-bc15-27eda292b1aa\",\"created_at\":\"2023-05-31T14:11:14+00:00\",\"indexed_at\":\"2023-01-04\",\"feed_format\":\"application/rss+xml\",\"license\":\"https://creativecommons.org/licenses/by/4.0/legalcode\",\"generator\":\"Ghost
+        5.53\",\"category\":\"Engineering and Technology\",\"prefix\":\"10.59350\",\"modified_at\":\"2023-07-03T15:34:01+00:00\",\"version\":\"https://jsonfeed.org/version/1.1\",\"backlog\":true,\"current_feed_url\":null,\"expired\":null}},{\"id\":\"d49b2093-2d78-46a1-909a-a29cfdf91df9\",\"doi\":null,\"url\":\"https://libscie.org/minutes-assembly-11\",\"title\":\"Minutes
+        Assembly #11\",\"summary\":\"On June 28th, we assembled our supporting community
+        to decide next steps, together (see our original agenda). In this post, we
+        report some key points for those who were unable to attend.Business developmentThe
+        business is progressing steadily, but our revenue is not growing fast enough
+        to cover costs as they are. We had a great quarter, where we covered around
+        44% of our expenses with our own income. This continues the upward trend as
+        you can see specified in the slides below.Slides capturing...\",\"published_at\":1688986812,\"updated_at\":1688986812,\"indexed_at\":0,\"authors\":[{\"url\":null,\"name\":\"Chris
+        Hartgerink\"}],\"image\":\"https://images.unsplash.com/photo-1688841903329-62edd2ea6cb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8YWxsfDN8fHx8fHwyfHwxNjg4OTcwNzk5fA&ixlib=rb-4.0.3&q=80&w=2000\",\"tags\":[],\"language\":\"en\",\"reference\":[],\"blog_id\":\"h49ct36\",\"blog_name\":\"Liberate
+        Science\",\"blog\":{\"id\":\"h49ct36\",\"title\":\"Liberate Science\",\"description\":\"Research
+        as a commons\",\"language\":\"en\",\"favicon\":\"https://libscie.org/favicon.png\",\"feed_url\":\"https://libscie.org/rss/\",\"home_page_url\":\"https://libscie.org/\",\"user_id\":\"8498eaf6-8c58-4b58-bc15-27eda292b1aa\",\"created_at\":\"2023-05-31T14:08:03+00:00\",\"indexed_at\":\"2023-01-04\",\"feed_format\":\"application/rss+xml\",\"license\":\"https://creativecommons.org/licenses/by/4.0/legalcode\",\"generator\":\"Ghost
+        5.49\",\"category\":\"Social Sciences\",\"prefix\":\"10.59350\",\"modified_at\":\"2023-07-04T06:30:20+00:00\",\"version\":\"https://jsonfeed.org/version/1.1\",\"backlog\":true,\"current_feed_url\":null,\"expired\":null}},{\"id\":\"e58803df-87a2-4e85-95de-c2b4a35d6c9a\",\"doi\":null,\"url\":\"https://blog.oa.works/oa-report-now-freely-available-for-hundreds-of-research-funders-to-analyze-and-increase-their-openness\",\"title\":\"OA.Report
+        now free for thousands of funders to analyze and increase their impact using
+        open research\",\"summary\":\"Today, we’re releasing free public OA.Reports
+        for thousands of major research funders to help discover publications they’ve
+        funded, understand how open their research is, and increase the impact of
+        their investments. This release is an important milestone for OA.Report, which
+        was developed in partnership with the Gates Foundation and is currently in
+        use at the Robert Wood Johnson Foundation, Wellcome, the Michael J. Fox Foundation,
+        and other major foundations.Find your...\",\"published_at\":1688994571,\"updated_at\":1688994571,\"indexed_at\":0,\"authors\":[{\"url\":null,\"name\":\"OA.Works\"}],\"image\":\"https://blog.oa.works/content/images/2023/07/oareport-short-optim-looping.gif\",\"tags\":[\"OA.Report\"],\"language\":\"en\",\"reference\":[],\"blog_id\":\"h7bpg11\",\"blog_name\":\"OA.Works
+        Blog\",\"blog\":{\"id\":\"h7bpg11\",\"title\":\"OA.Works Blog\",\"description\":\"OA.Works
+        Blog\",\"language\":\"en\",\"favicon\":\"https://blog.oa.works/favicon.png\",\"feed_url\":\"https://blog.oa.works/rss/\",\"home_page_url\":\"https://blog.oa.works/\",\"user_id\":\"8498eaf6-8c58-4b58-bc15-27eda292b1aa\",\"created_at\":\"2023-05-31T14:11:14+00:00\",\"indexed_at\":\"2023-01-04\",\"feed_format\":\"application/rss+xml\",\"license\":\"https://creativecommons.org/licenses/by/4.0/legalcode\",\"generator\":\"Ghost
+        5.53\",\"category\":\"Engineering and Technology\",\"prefix\":\"10.59350\",\"modified_at\":\"2023-07-03T15:34:01+00:00\",\"version\":\"https://jsonfeed.org/version/1.1\",\"backlog\":true,\"current_feed_url\":null,\"expired\":null}}]"
+  recorded_at: Mon, 10 Jul 2023 20:41:56 GMT
+recorded_with: VCR 6.2.0

@@ -367,7 +367,7 @@ describe Commonmeta::CLI do
 
   describe "json_feed", vcr: true do
     it "json_feed_unregistered" do
-      expect { subject.json_feed_unregistered }.to output(/031faba3-3a6e-49d1-a540-26523be2fd09/).to_stdout
+      expect { subject.json_feed_unregistered }.to output(/3023e24a-817d-452e-bb6e-ddadecce94c6/).to_stdout
     end
     
     it "json_feed_not_indexed" do
@@ -376,7 +376,7 @@ describe Commonmeta::CLI do
 
     it "json_feed_by_blog" do
       input = "tyfqw20"
-      expect { subject.json_feed_by_blog input }.to output(/3e1278f6-e7c0-43e1-bb54-6829e1344c0d/).to_stdout
+      expect { subject.json_feed_by_blog input }.to output(/37538c38-66e6-4ac4-ab5c-679684622ade/).to_stdout
     end
   end
 end

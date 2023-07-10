@@ -405,17 +405,17 @@ describe Commonmeta::Metadata, vcr: true do
   context "get json_feed", vcr: true do
     it "unregistered posts" do
       response = subject.get_json_feed_unregistered
-      expect(response).to be_nil
+      expect(response).to eq("3023e24a-817d-452e-bb6e-ddadecce94c6")
     end
 
     it "not indexed posts" do
       response = subject.get_json_feed_not_indexed
-      expect(response).to eq("b1038a3f-c5aa-4a68-97cb-5c68b27942f7")
+      expect(response).to be_nil
     end
 
     it "by blog_id" do
       response = subject.get_json_feed_by_blog("tyfqw20")
-      expect(response).to eq("0807f515-f31d-4e2c-9e6f-78c3a9668b9d")
+      expect(response).to eq("37538c38-66e6-4ac4-ab5c-679684622ade")
     end
   end
 

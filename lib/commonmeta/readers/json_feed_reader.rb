@@ -111,7 +111,7 @@ module Commonmeta
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
         posts = JSON.parse(response.body.to_s)
-        posts.map { |post| post["uuid"] }.first
+        posts.map { |post| post["id"] }.first
       end
 
       def get_json_feed_not_indexed
@@ -122,7 +122,8 @@ module Commonmeta
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
         posts = JSON.parse(response.body.to_s)
-        posts.map { |post| post["uuid"] }.first
+        puts posts.inspect
+        posts.map { |post| post["id"] }.first
       end
 
       def get_json_feed_by_blog(blog_id)
@@ -133,7 +134,7 @@ module Commonmeta
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
         blog = JSON.parse(response.body.to_s)
-        blog["items"].map { |item| item["uuid"] }.first
+        blog["items"].map { |item| item["id"] }.first
       end
 
       def get_doi_prefix_by_blog_id(blog_id)
