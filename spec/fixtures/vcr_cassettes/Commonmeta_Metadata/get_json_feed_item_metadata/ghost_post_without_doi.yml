@@ -23,175 +23,37 @@ http_interactions:
       Cache-Control:
       - public, max-age=0, must-revalidate
       Content-Length:
-      - '13934'
+      - '1654'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Sun, 18 Jun 2023 15:24:06 GMT
+      - Mon, 10 Jul 2023 21:04:52 GMT
       Etag:
-      - '"9risj3d4afar2"'
+      - '"pkkw16ms8919y"'
       Server:
       - Vercel
       Strict-Transport-Security:
       - max-age=63072000
       X-Matched-Path:
-      - "/api/posts/[slug]"
+      - "/api/posts/[[...params]]"
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::wcwng-1687101846518-75eaf7d22fbf
+      - fra1::iad1::q9hc8-1689023092238-8f72026f2bf3
       Connection:
       - close
     body:
       encoding: UTF-8
-      string: '{"id":"https://doi.org/10.59350/kj95y-gp867","uuid":"c3095752-2af0-40a4-a229-3ceb7424bce2","url":"https://www.ideasurg.pub/residency-visual-abstract/","title":"The
-        Residency Visual Abstract","summary":"A graphical, user-friendly tool for
-        programs to highlight important data to prospective applicants","date_published":"2023-04-08T19:32:34Z","date_modified":null,"date_indexed":"2023-06-16T13:31:59.053488+00:00","authors":[{"url":null,"name":"Tejas
-        S. Sathe, MD"}],"image":null,"content_html":"<figure class=\"kg-card kg-image-card
-        kg-width-wide kg-card-hascaption\"><img src=\"https://www.ideasurg.pub/content/images/2023/04/Residency-Scorecard-Light-Mode--7-.png\"
-        class=\"kg-image\" alt loading=\"lazy\" width=\"2000\" height=\"1127\" srcset=\"https://www.ideasurg.pub/content/images/size/w600/2023/04/Residency-Scorecard-Light-Mode--7-.png
-        600w, https://www.ideasurg.pub/content/images/size/w1000/2023/04/Residency-Scorecard-Light-Mode--7-.png
-        1000w, https://www.ideasurg.pub/content/images/size/w1600/2023/04/Residency-Scorecard-Light-Mode--7-.png
-        1600w, https://www.ideasurg.pub/content/images/size/w2400/2023/04/Residency-Scorecard-Light-Mode--7-.png
-        2400w\" sizes=\"(min-width: 1200px) 1200px\"><figcaption>My prototype for
-        a Residency Visual Abstract</figcaption></figure><div class=\"kg-card kg-callout-card
-        kg-callout-card-grey\"><div class=\"kg-callout-text\">This tool represents
-        my own ideas and is not currently in use or endorsed by any institution.</div></div><p>Medical
-        students applying to residency often have to grapple with an incredible amount
-        of information when evaluating prospective training programs. The increased
-        number of applications and interviews inherent to the Zoom era further exacerbates
-        this issue. At the same time, programs need to find ways to communicate a
-        great deal of information to applicants. Due to the proliferation of social
-        media, this communication is both more extensive and more longitudinal than
-        a one hour presentation on interview day.</p><p>The traditional interview
-        day presentation is a slide presentation that provides several factual details
-        about a program. While each program is slightly different, most of these presentations
-        cover common ground - including where residents rotate, what services they
-        do, where alumni match into fellowship, examination pass rates, and information
-        on professional development and research activities. These presentations can
-        often be long (I once helped edit a slide deck that had 60 slides in it!)
-        and difficult to recall. Furthermore, updating these slides from year to year
-        is a time consuming challenge. Finally, most of these presentations are done
-        in a traditional bullet point format with few slides reserved for photos.
-        Few are designed in a way that optimizes user experience.</p><p>In my opinion,
-        the most important quality of the program is how well a prospective applicant
-        fits in with the resident culture. Though it is impossible to put into numbers,
-        it has an outsized impact on a resident''s experience and wellness. Furthermore,
-        it is even harder to intuit in the absence of an in-person interview experience.
-        Nevertheless, there are important quantitative metrics that applicants consider
-        and programs want to showcase. However, there is not yet a standardized, accessible,
-        and visually appealing format to do so. Given the challenges in communicating
-        these details as well as the growing power of social media , I wanted to design
-        a new way that programs can effectively and efficiently display and disseminate
-        this information so that applicants can be more informed and programs can
-        better utilize their interview days to convey the critical intangibles.</p><p>In
-        the distinct but not quite distant field of surgical research, the visual
-        abstract has already proven to be an excellent means of distilling a research
-        study filled with details into an easy-to-digest and visually pleasing format.
-        Developed by Dr. Andrew Ibrahim and colleagues, the visual abstract has already
-        been adopted by 50 journals, and a study by the creators <a href=\"https://journals.lww.com/annalsofsurgery/Citation/2017/12000/Visual_Abstracts_to_Disseminate_Research_on_Social.36.aspx?ref=ideasurg.pub\">demonstrated</a>
-        that the presence of a visual abstract can more than double article visits
-        and increase impressions more than seven-fold. An excellent primer discussing
-        how to develop a visual abstract and highlighting its use in academic journals
-        is available <a href=\"https://static1.squarespace.com/static/5854aaa044024321a353bb0d/t/5a527aa89140b76bbfb2028a/1515354827682/VisualAbstract_Primer_v4_1.pdf?ref=ideasurg.pub\">here</a>.
-        </p><p>A variant of the visual abstract has also been used by residency programs
-        on social media in the past. An example from the Duke Surgery Residency program
-        is shown here:</p><figure class=\"kg-card kg-embed-card\"><blockquote class=\"twitter-tweet\"><p
-        lang=\"en\" dir=\"ltr\">We&#x2019;re so excited to meet <a href=\"https://twitter.com/hashtag/GenSurgMatch2023?src=hash&ref_src=twsrc%5Etfw&ref=ideasurg.pub\">#GenSurgMatch2023</a>
-        applicants over the next few months! Check out our latest <a href=\"https://twitter.com/DukeSurgRes?ref_src=twsrc%5Etfw&ref=ideasurg.pub\">@DukeSurgRes</a>
-        <a href=\"https://twitter.com/hashtag/VisualAbstract?src=hash&ref_src=twsrc%5Etfw&ref=ideasurg.pub\">#VisualAbstract</a>
-        <a href=\"https://twitter.com/hashtag/ByTheNumbers?src=hash&ref_src=twsrc%5Etfw&ref=ideasurg.pub\">#ByTheNumbers</a>.
-        We hope you can visualize your <a href=\"https://twitter.com/hashtag/SutureFuture?src=hash&ref_src=twsrc%5Etfw&ref=ideasurg.pub\">#SutureFuture</a>
-        at <a href=\"https://twitter.com/DukeSurgery?ref_src=twsrc%5Etfw&ref=ideasurg.pub\">@DukeSurgery</a>.
-        <a href=\"https://twitter.com/hashtag/SabistonSquad?src=hash&ref_src=twsrc%5Etfw&ref=ideasurg.pub\">#SabistonSquad</a>
-        <a href=\"https://twitter.com/hashtag/SurgTwitter?src=hash&ref_src=twsrc%5Etfw&ref=ideasurg.pub\">#SurgTwitter</a>
-        <a href=\"https://twitter.com/hashtag/MedTwitter?src=hash&ref_src=twsrc%5Etfw&ref=ideasurg.pub\">#MedTwitter</a>
-        <a href=\"https://twitter.com/hashtag/SurgEd?src=hash&ref_src=twsrc%5Etfw&ref=ideasurg.pub\">#SurgEd</a>
-        <a href=\"https://twitter.com/hashtag/ILookLikeASurgeon?src=hash&ref_src=twsrc%5Etfw&ref=ideasurg.pub\">#ILookLikeASurgeon</a>
-        <a href=\"https://t.co/6ZqnfFrWE5?ref=ideasurg.pub\">pic.twitter.com/6ZqnfFrWE5</a></p>&#x2014;
-        Duke General Surgery Residency (@DukeSurgRes) <a href=\"https://twitter.com/DukeSurgRes/status/1587460003941810179?ref_src=twsrc%5Etfw&ref=ideasurg.pub\">November
-        1, 2022</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\"
-        charset=\"utf-8\"></script>\n</figure><p>Inspired by this format, I tried
-        to design a version tailored towards prospective surgery trainees. I wanted
-        to see if I could boil down the complexity of a program into the fewest pieces
-        of data possible and present them in a user-friendly interface. </p><h3 id=\"the-visual-abstract\">The
-        Visual Abstract</h3><p>The abstract contains six different categories: demographics,
-        operative volume, education, research, fellowships, and other. The goal is
-        to capture relevant information regarding the tripartite mission of academic
-        surgery as well as understand a program''s strengths in diversity and inclusion
-        and career preparation. For each category, discrete data points were chosen
-        which can easily allow applicants to contextualize a program''s strengths
-        and weaknesses. The other category contains a checklist of features that applicants
-        seem to care about (based on observations and conversations though certainly
-        not proven scientifically). Finally, there is a space for QR codes to link
-        to the program website as well as a copy of the contract that matched applicants
-        will need to sign (as <a href=\"https://www.nrmp.org/wp-content/uploads/2022/09/2023-MPA-Main-Match-Program-FINAL-3.pdf?ref=ideasurg.pub\">required</a>
-        by the National Resident Matching Program).</p><p>Of course, the tool comes
-        with a dark mode!</p><figure class=\"kg-card kg-image-card kg-width-wide\"><img
-        src=\"https://www.ideasurg.pub/content/images/2023/04/Thumbnail--2-.png\"
-        class=\"kg-image\" alt loading=\"lazy\" width=\"1924\" height=\"1084\" srcset=\"https://www.ideasurg.pub/content/images/size/w600/2023/04/Thumbnail--2-.png
-        600w, https://www.ideasurg.pub/content/images/size/w1000/2023/04/Thumbnail--2-.png
-        1000w, https://www.ideasurg.pub/content/images/size/w1600/2023/04/Thumbnail--2-.png
-        1600w, https://www.ideasurg.pub/content/images/2023/04/Thumbnail--2-.png 1924w\"
-        sizes=\"(min-width: 1200px) 1200px\"></figure><h3 id=\"what-this-is\">What
-        this is</h3><p>This visual abstract can provide a semi-standardized format
-        for programs to share important information with applicants allowing them
-        to compare important metrics in a comprehensive, &#x201C;easy&#x201D; way.
-        It is important to note that each of these data points is meant to be an objective
-        measure without any comment on its intrinsic value. For example, one program
-        may have a significantly higher case volume than peer institutions but less
-        protected education time. Another may have a robotic curriculum but not have
-        any recent chiefs who matched into Pediatric Surgery. None of these are independently
-        good or bad, but applicants should have an easy way to understand the factors
-        so that they can make the most informed decision. If a significant number
-        of programs adopt the visual abstract, it will naturally create incentives
-        for programs to share and improve on these metrics with transparency. In this
-        manner, healthy competition can actually generate an incentive to improve
-        program offerings for current residents as well (though this can have unintended
-        consequences&#x2026;see limitations).</p><p>Some may question the wisdom of
-        putting these numbers out in the open - especially if they are not where a
-        program wants them to be. However, some of the information is publicly <a
-        href=\"https://www.absurgery.org/xfer/3yr_summary.pdf?ref=ideasurg.pub\">available</a>.
-        Many of these data points are already reported on during the interview process.
-        Moreover, most applicants want to know this information and value transparency.
-        Ultimately, no program is perfect, and how a program chooses to address perceived
-        strengths and weaknesses reflects its core values.</p><h3 id=\"what-this-is-not-and-other-limitations\">What
-        this is not and other limitations</h3><p>No visual abstract, slide deck, or
-        document will be able to capture the full picture of a residency program -
-        which at its core is a collection of human beings. It is worth repeating that
-        the most important consideration students should make when choosing a program
-        is missing from this work. Furthermore, the exact data points used may not
-        be correct. At one point, I considered putting a box for ABSITE pass rate,
-        however I thought this was antithetical to the ABSITE''s stated aim of being
-        a <a href=\"https://www.absurgery.org/default.jsp?certabsite=&ref=ideasurg.pub\">formative</a>,
-        not a summative, assessment. Furthermore, there is no box specifying the number
-        of LGBTQ residents in a program. While this is an essential component of diversity,
-        equity, and inclusion, it was omitted due to the fact that some of these residents
-        may not be publicly out and this would lead to an inaccurate representation.
-        Another missing box is the number of residents with children, given that family
-        support is an increasingly recognized feature that students are looking for
-        in training programs.</p><p>I would like for this to be even less cluttered
-        - and user feedback can drive further reduction of content such that the distilled
-        final version is even more elegant. Currently, the vision for this project
-        is that of a grassroots project, where individual programs can choose to use,
-        improve, and modify this template to broadcast important information to applicants.
-        However, I am wary of the general principle that once quantitative metrics
-        are used by a central authority to rank, there is a natural tendency to gamify
-        those metrics whether or not the underlying feature they seek to estimate
-        is actually affected.</p><h3 id=\"what-to-do-with-this-template\">What to
-        do with this template</h3><p>In short, whatever you would like. The template
-        was built in Figma, which has become the industry-standard in visual design.
-        It is free to make a basic Figma account, and the full suite of features is
-        also available for free with proof of affiliation with a university. Figma
-        offers the ability to comment on a template as well as duplicate or \"remix\"
-        the template for personal use. I would appreciate your feedback on how to
-        make this template better. Moreover, I encourage you to take it, modify it,
-        improve it, and share your changes publicly. Together, we can continue to
-        iteratively design this initial prototype and develop a robust, user-friendly
-        tool that provides values to students, residents, and programs alike.</p><h3
-        id=\"comment-remix-make-it-your-own\">Comment, remix, make it your own!</h3><p><a
-        href=\"https://www.figma.com/community/file/1226056013352001653?ref=ideasurg.pub\">https://www.figma.com/community/file/1226056013352001653</a></p>","tags":[],"language":"en","references":[],"blog_id":"3cxcm20","blog":{"id":"3cxcm20","title":"I.D.E.A.S.","description":"Innovation
+      string: '{"id":"c3095752-2af0-40a4-a229-3ceb7424bce2","doi":"https://doi.org/10.59350/kj95y-gp867","url":"https://www.ideasurg.pub/residency-visual-abstract","title":"The
+        Residency Visual Abstract","summary":"My prototype for a Residency Visual
+        AbstractThis tool represents my own ideas and is not currently in use or endorsed
+        by any institution.Medical students applying to residency often have to grapple
+        with an incredible amount of information when evaluating prospective training
+        programs. The increased number of applications and interviews inherent to
+        the Zoom era further exacerbates this issue. At the same time, programs need
+        to find ways to communicate a great deal of information to applicants....","published_at":1680982354,"updated_at":1680982354,"indexed_at":1688982864,"authors":[{"url":null,"name":"Tejas
+        S. Sathe, MD"}],"image":null,"tags":[],"language":"en","reference":[],"blog_id":"3cxcm20","blog_name":"I.D.E.A.S.","blog":{"id":"3cxcm20","title":"I.D.E.A.S.","description":"Innovation
         and Design Experiments in Academic Surgery (I.D.E.A.S.)","language":"en","favicon":"https://www.ideasurg.pub/favicon.png","feed_url":"https://www.ideasurg.pub/rss/","home_page_url":"https://www.ideasurg.pub/","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T13:44:29+00:00","indexed_at":"2023-01-04","feed_format":"application/rss+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
-        5.51","category":"Medical and Health Sciences","prefix":"10.59350","modified_at":"2023-06-03T04:54:30+00:00","version":"https://jsonfeed.org/version/1.1","backlog":false,"authors":null}}'
-  recorded_at: Sun, 18 Jun 2023 15:24:06 GMT
-recorded_with: VCR 6.1.0
+        5.53","category":"Medical and Health Sciences","prefix":"10.59350","modified_at":"2023-06-03T04:54:30+00:00","version":"https://jsonfeed.org/version/1.1","backlog":false,"current_feed_url":null,"expired":null}}'
+  recorded_at: Mon, 10 Jul 2023 21:04:52 GMT
+recorded_with: VCR 6.2.0

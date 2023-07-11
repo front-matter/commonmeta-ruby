@@ -1094,6 +1094,20 @@ module Commonmeta
       nil
     end
 
+    # parsing of unix timestamps such as 1427846400
+    def get_datetime_from_unix_timestamp(unix_timestamp)
+      strip_milliseconds(DateTime.strptime(unix_timestamp.to_s, '%s').iso8601)
+    rescue StandardError
+      nil
+    end
+
+    # parsing of unix timestamps such as 1427846400
+    def get_date_from_unix_timestamp(unix_timestamp)
+      DateTime.strptime(unix_timestamp.to_s, '%s').strftime('%Y-%m-%d')
+    rescue StandardError
+      nil
+    end
+
     # strip milliseconds if there is a time, as it interferes with edtc parsing
     # keep dates unchanged
     def strip_milliseconds(iso8601_time)

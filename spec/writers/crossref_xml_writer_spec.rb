@@ -175,7 +175,7 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input)
 
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://doi.org/10.54900/g0qks-tcz98")
+      expect(subject.id).to eq("https://doi.org/10.54900/n6dnt-xpq48")
       expect(subject.url).to eq("https://upstream.force11.org/attempts-at-automating-journal-subject-classification")
       expect(subject.type).to eq("Article")
       expect(subject.titles).to eq([{ "title" => "Attempts at automating journal subject classification" }])
@@ -295,7 +295,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "a163e340-5b3c-4736-9ab0-8c54fdff6a3c", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
       expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("affiliation"=>[{"id"=>"https://ror.org/05745n787"}], "type"=>"Person")
+      expect(subject.creators.first).to eq("familyName"=>"Göbel", "givenName"=>"Mathias", "type"=>"Person")
       expect(subject.titles).to eq([{ "title" => "Welcome to the Lab" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -310,9 +310,9 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.container).to eq("identifier" => "https://lab.sub.uni-goettingen.de/", "identifierType" => "URL", "title" => "lab.sub - Articles", "type" => "Periodical")
       expect(subject.references).to be_nil
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
-      expect(Array.wrap(crossref_xml.dig("contributors", "anonymous")).length).to eq(1)
+      expect(Array.wrap(crossref_xml.dig("contributors", "person_name")).length).to eq(1)
       expect(Array.wrap(crossref_xml.dig("contributors",
-                                         "anonymous")).first).to eq("affiliations"=>{"institution"=>{"institution_id"=>{"__content__"=>"https://ror.org/05745n787", "type"=>"ror"}}}, "contributor_role"=>"author", "sequence"=>"first")
+                                         "person_name")).first).to eq("contributor_role"=>"author", "given_name"=>"Mathias", "sequence"=>"first", "surname"=>"Göbel")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("Welcome to the Lab")
       expect(crossref_xml.dig('item_number')).to eq("__content__"=>"a163e3405b3c47369ab08c54fdff6a3c", "item_number_type"=>"uuid")

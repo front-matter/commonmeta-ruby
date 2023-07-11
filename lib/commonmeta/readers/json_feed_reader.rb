@@ -21,7 +21,7 @@ module Commonmeta
         meta = string.present? ? JSON.parse(string) : {}
 
         url = normalize_url(meta.fetch("url", nil))
-        id = options[:doi] ? normalize_doi(options[:doi]) : normalize_id(meta.fetch("id", nil))
+        id = options[:doi] ? normalize_doi(options[:doi]) : normalize_id(meta.fetch("doi", nil))
         id = url if id.blank? && url.present?
 
         type = "Article"
@@ -34,8 +34,8 @@ module Commonmeta
         publisher = { "name" => meta.dig("blog", "title") }
 
         date = {}
-        date["published"] = get_iso8601_date(meta.dig("date_published")) if meta.dig("date_published").present?
-        date["updated"] = get_iso8601_date(meta.dig("date_modified")) if meta.dig("date_modified").present?
+        date["published"] = get_date_from_unix_timestamp(meta.dig("published_at")) if meta.dig("published_at").present?
+        date["updated"] = get_date_from_unix_timestamp(meta.dig("updated_at")) if meta.dig("updated_at").present?
 
         license = if meta.dig("blog", "license").present?
             hsh_to_spdx("rightsURI" => meta.dig("blog", "license"))
@@ -62,7 +62,7 @@ module Commonmeta
           sum
         end
         references = get_references(meta)
-        alternate_identifiers = [{ "alternateIdentifier" => meta["uuid"], "alternateIdentifierType" => "UUID" }]
+        alternate_identifiers = [{ "alternateIdentifier" => meta["id"], "alternateIdentifierType" => "UUID" }]
 
         { "id" => id,
           "type" => type,
@@ -83,7 +83,7 @@ module Commonmeta
 
       def get_references(meta)
         # check that references resolve
-        Array.wrap(meta["references"]).reduce([]) do |sum, reference|
+        Array.wrap(meta["reference"]).reduce([]) do |sum, reference|
           begin
             if reference["doi"] && validate_doi(reference["doi"])
               response = HTTP.follow
@@ -122,7 +122,6 @@ module Commonmeta
         return { "string" => nil, "state" => "not_found" } unless response.status.success?
 
         posts = JSON.parse(response.body.to_s)
-        puts posts.inspect
         posts.map { |post| post["id"] }.first
       end
 

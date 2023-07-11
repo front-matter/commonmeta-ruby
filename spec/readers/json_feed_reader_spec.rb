@@ -15,7 +15,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "f3629c86-06e0-42c0-844a-266b03a91ef1", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
       expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Page", "givenName" => "Roderic", "type" => "Person")
+      expect(subject.creators.first).to eq("id" => "https://orcid.org/0000-0002-7101-9767", "familyName" => "Page", "givenName" => "Roderic", "type" => "Person")
       expect(subject.titles).to eq([{ "title" => "Ten years and a million links" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -43,7 +43,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Does it compose?" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2023-05-16", "updated" => "2023-05-16")
+      expect(subject.date).to eq("published"=>"2023-05-16", "updated"=>"2023-06-18")
       expect(subject.descriptions.first["description"]).to start_with("One question I have increasingly asked myself in the past few years. Meaning Can I run this open source software using Docker containers and a Docker Compose file?")
       expect(subject.publisher).to eq("name" => "Front Matter")
       expect(subject.subjects).to eq([{ "subject" => "Engineering and technology" },
@@ -67,8 +67,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "The Residency Visual Abstract" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2023-04-08")
-      expect(subject.descriptions.first["description"]).to start_with("A graphical, user-friendly tool for programs to highlight important data to prospective applicants")
+      expect(subject.date).to eq("published"=>"2023-04-08", "updated"=>"2023-04-08")
+      expect(subject.descriptions.first["description"]).to start_with("My prototype for a Residency Visual Abstract")
       expect(subject.publisher).to eq("name" => "I.D.E.A.S.")
       expect(subject.subjects).to eq([{ "subject" => "Medical and health sciences" },
                                       { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
@@ -79,20 +79,20 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it "ghost post with author name suffix" do
-      input = "https://rogue-scholar.org/api/posts/6179ad80-cc7f-4904-9260-0ecb3c3a90ba"
+      input = "https://rogue-scholar.org/api/posts/153d65e1-f0e4-49a6-a969-33d2129800ba"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/ytvy2-59450")
       expect(subject.url).to eq("https://www.ideasurg.pub/academic-powerhouse")
-      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "6179ad80-cc7f-4904-9260-0ecb3c3a90ba", "alternateIdentifierType" => "UUID" }])
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "153d65e1-f0e4-49a6-a969-33d2129800ba", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
       expect(subject.creators.length).to eq(1)
       expect(subject.creators.first).to eq("familyName" => "Sathe", "givenName" => "Tejas S.", "type" => "Person")
       expect(subject.titles).to eq([{ "title" => "How to Build an Academic Powerhouse: Let's Study Who's Doing it" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2023-06-03")
-      expect(subject.descriptions.first["description"]).to start_with("A Data Exploration with Public Data from the Academic Surgical Congress")
+      expect(subject.date).to eq("published"=>"2023-06-03", "updated"=>"2023-06-03")
+      expect(subject.descriptions.first["description"]).to start_with("Students and residents aspiring for a career in academic surgery")
       expect(subject.publisher).to eq("name" => "I.D.E.A.S.")
       expect(subject.subjects).to eq([{ "subject" => "Medical and health sciences" },
                                       { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
@@ -106,8 +106,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "syldavia gazette post with references" do
       input = "https://rogue-scholar.org/api/posts/0022b9ef-525a-4a79-81ad-13411697f58a"
       subject = described_class.new(input: input)
-      puts subject.errors
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.53731/ffbx660-083tnag")
       expect(subject.url).to eq("https://syldavia-gazette.org/guinea-worms-chatgpt-neanderthals")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "0022b9ef-525a-4a79-81ad-13411697f58a", "alternateIdentifierType" => "UUID" }])
@@ -179,8 +178,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "wordpress post with tracking code on url" do
       input = "https://rogue-scholar.org/api/posts/5d95d90d-ff59-4c8b-b7f8-44e6b45fd593"
       subject = described_class.new(input: input)
-      puts subject.errors
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/tpa8t-j6292")
       expect(subject.url).to eq("https://www.samuelmoore.org/2023/04/20/how-to-cultivate-good-closures-scaling-small-and-the-limits-of-openness")
       expect(subject.type).to eq("Article")
@@ -205,7 +203,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/2b3cdd27-5123-4167-9482-3c074392e2d2"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://blog.oa.works/nature-features-oa-reports-work-putting-oa-policy-into-practice")
+      expect(subject.id).to eq("https://doi.org/10.59350/tfahc-rp566")
       expect(subject.url).to eq("https://blog.oa.works/nature-features-oa-reports-work-putting-oa-policy-into-practice")
       expect(subject.type).to eq("Article")
       expect(subject.creators.length).to eq(1)
@@ -213,7 +211,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Nature features OA.Report's work putting OA policy into practice!" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2023-01-24")
+      expect(subject.date).to eq("published"=>"2023-01-24", "updated"=>"2023-01-24")
       expect(subject.descriptions.first["description"]).to start_with("After a couple of years of working to support institutions implementing their OA policies")
       expect(subject.publisher).to eq("name" => "OA.Works Blog")
       expect(subject.subjects).to eq([{ "subject" => "Engineering and technology" },
@@ -278,7 +276,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/5561f8e4-2ff1-4186-a8d5-8dacb3afe414"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://libscie.org/ku-leuven-supports-researchequals")
+      expect(subject.id).to eq("https://doi.org/10.59350/2shz7-ehx26")
       expect(subject.url).to eq("https://libscie.org/ku-leuven-supports-researchequals")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "5561f8e4-2ff1-4186-a8d5-8dacb3afe414", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -287,7 +285,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "KU Leuven supports ResearchEquals" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2023-05-09")
+      expect(subject.date).to eq("published"=>"2023-05-09", "updated"=>"2023-05-09")
       expect(subject.descriptions.first["description"]).to start_with("KU Leuven is now an inaugural supporting member of ResearchEquals")
       expect(subject.publisher).to eq("name" => "Liberate Science")
       expect(subject.subjects).to eq([{ "subject" => "Social sciences" },
@@ -303,12 +301,12 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/a163e340-5b3c-4736-9ab0-8c54fdff6a3c"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://doi.org/10.59350/g6bth-b6f85")
+      expect(subject.id).to eq("https://doi.org/10.59350/33es7-fqz31")
       expect(subject.url).to eq("https://lab.sub.uni-goettingen.de/welcome.html")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "a163e340-5b3c-4736-9ab0-8c54fdff6a3c", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
       expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("affiliation"=>[{"id"=>"https://ror.org/05745n787"}], "type"=>"Person")
+      expect(subject.creators.first).to eq("familyName"=>"Göbel", "givenName"=>"Mathias", "type"=>"Person")
       expect(subject.titles).to eq([{ "title" => "Welcome to the Lab" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -353,7 +351,7 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://rogue-scholar.org/api/posts/f3dc29da-0481-4f3b-8110-4c07260fca67"
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
-      expect(subject.id).to eq("https://flavoursofopen.science/grundlagen-fur-die-entwicklung-einer-open-scholarship-strategie")
+      expect(subject.id).to eq("https://doi.org/10.59350/9gfjs-pey70")
       expect(subject.url).to eq("https://flavoursofopen.science/grundlagen-fur-die-entwicklung-einer-open-scholarship-strategie")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "f3dc29da-0481-4f3b-8110-4c07260fca67", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -388,8 +386,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "The Preregistration Prescriptiveness Trade-Off and Unknown Unknowns in Science" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2023-06-06")
-      expect(subject.descriptions.first["description"]).to start_with("Comments on Van Drimmelen (2023)")
+      expect(subject.date).to eq("published"=>"2023-06-06", "updated"=>"2023-06-06")
+      expect(subject.descriptions.first["description"]).to start_with("AbstractI discuss Van Drimmelen’s (2023) Metascience2023 presentation")
       expect(subject.publisher).to eq("name" => "Critical Metascience")
       expect(subject.subjects).to eq([{ "subject" => "Social sciences" },
                                       { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",

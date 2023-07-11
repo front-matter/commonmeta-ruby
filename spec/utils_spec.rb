@@ -393,6 +393,46 @@ describe Commonmeta::Metadata do
     end
   end
 
+  context "get_datetime_from_unix_timestamp" do
+    it "present" do
+      timestamp = 1582703829
+      response = subject.get_datetime_from_unix_timestamp(timestamp)
+      expect(response).to eq("2020-02-26T07:57:09Z")
+    end
+
+    it "past" do
+      timestamp = 844144
+      response = subject.get_datetime_from_unix_timestamp(timestamp)
+      expect(response).to eq("1970-01-10T18:29:04Z")
+    end
+
+    it "future" do
+      timestamp = 2410244144
+      response = subject.get_datetime_from_unix_timestamp(timestamp)
+      expect(response).to eq("2046-05-18T08:15:44Z")
+    end
+  end
+
+  context "get_date_from_unix_timestamp" do
+    it "present" do
+      timestamp = 1582703829
+      response = subject.get_date_from_unix_timestamp(timestamp)
+      expect(response).to eq("2020-02-26")
+    end
+
+    it "past" do
+      timestamp = 844144
+      response = subject.get_date_from_unix_timestamp(timestamp)
+      expect(response).to eq("1970-01-10")
+    end
+
+    it "future" do
+      timestamp = 2410244144
+      response = subject.get_date_from_unix_timestamp(timestamp)
+      expect(response).to eq("2046-05-18")
+    end
+  end
+
   context "get_date_parts" do
     it "date" do
       date = "2016-12-20"
