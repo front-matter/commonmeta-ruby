@@ -371,7 +371,7 @@ describe Commonmeta::CLI do
     end
     
     it "json_feed_not_indexed" do
-      expect { subject.json_feed_not_indexed }.to output(/b1038a3f-c5aa-4a68-97cb-5c68b27942f7/).to_stdout
+      expect { subject.json_feed_not_indexed }.to output(/r294649-6f79289-8cw1w/).to_stdout
     end
 
     it "json_feed_by_blog" do

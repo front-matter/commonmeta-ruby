@@ -121,6 +121,13 @@ module Commonmeta
       puts update_ghost_post_via_api(id)
     end
 
+    desc "", "generate_ghost_api_token"
+
+    def generate_ghost_api_token
+      # generate short lived jwt for ghost admin api
+      puts generate_ghost_token
+    end
+
     default_task :convert
   end
 end

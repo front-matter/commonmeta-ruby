@@ -1096,14 +1096,14 @@ module Commonmeta
 
     # parsing of unix timestamps such as 1427846400
     def get_datetime_from_unix_timestamp(unix_timestamp)
-      strip_milliseconds(DateTime.strptime(unix_timestamp.to_s, '%s').iso8601)
+      strip_milliseconds(DateTime.strptime(unix_timestamp.to_s, "%s").iso8601)
     rescue StandardError
       nil
     end
 
     # parsing of unix timestamps such as 1427846400
     def get_date_from_unix_timestamp(unix_timestamp)
-      DateTime.strptime(unix_timestamp.to_s, '%s').strftime('%Y-%m-%d')
+      DateTime.strptime(unix_timestamp.to_s, "%s").strftime("%Y-%m-%d")
     rescue StandardError
       nil
     end
@@ -1467,8 +1467,10 @@ module Commonmeta
       "https://rogue-scholar.org/api/posts/#{id}"
     end
 
-    def generate_ghost_token(admin_api_key)
+    def generate_ghost_token(admin_api_key = ENV["API_KEY"])
       # from https://ghost.org/docs/admin-api/
+
+      return nil unless admin_api_key.present?
 
       # Split the key into ID and SECRET
       id, secret = admin_api_key.split(":")
@@ -1522,7 +1524,7 @@ module Commonmeta
 
       # update post canonical_url with new doi
       ghost_url = "#{api_url}/ghost/api/admin/posts/#{ghost_id}/"
-      response = HTTP.auth("Ghost #{ghost_jwt}").headers('Content-Type' => "application/json", 'Accept-Version' => 'v5').put(ghost_url, :json => { 'posts' => [{ 'canonical_url' => doi, 'updated_at' => updated_at }] })
+      response = HTTP.auth("Ghost #{ghost_jwt}").headers("Content-Type" => "application/json", "Accept-Version" => "v5").put(ghost_url, :json => { "posts" => [{ "canonical_url" => doi, "updated_at" => updated_at }] })
       "#{response.status} DOI #{doi} added to post #{ghost_id}"
     end
   end
