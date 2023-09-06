@@ -205,14 +205,16 @@ module Commonmeta
       xml.program("xmlns" => "http://www.crossref.org/relations.xsd",
                   "name" => "relations") do
         related_identifiers.each do |related_identifier|
-          identifier_type = validate_doi(related_identifier["id"]) ? "doi" : "url"
-          id = identifier_type == "doi" ? doi_from_url(related_identifier["id"]) : related_identifier["id"]
-          attributes = {
-            "relation_type" => related_identifier["type"].camelize(:lower),
-            "identifier_type" => identifier_type,
-          }.compact
+          xml.related_item do
+            identifier_type = validate_doi(related_identifier["id"]) ? "doi" : "uri"
+            id = identifier_type == "doi" ? doi_from_url(related_identifier["id"]) : related_identifier["id"]
+            attributes = {
+              "relation_type" => related_identifier["type"].camelize(:lower),
+              "identifier_type" => identifier_type,
+            }.compact
 
-          xml.intra_work_relation(id, attributes)
+            xml.intra_work_relation(id, attributes)
+          end
         end
       end
     end
