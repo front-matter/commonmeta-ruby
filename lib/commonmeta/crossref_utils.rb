@@ -209,8 +209,8 @@ module Commonmeta
             identifier_type = validate_doi(related_identifier["id"]) ? "doi" : "uri"
             id = identifier_type == "doi" ? doi_from_url(related_identifier["id"]) : related_identifier["id"]
             attributes = {
-              "relation_type" => related_identifier["type"].camelize(:lower),
-              "identifier_type" => identifier_type,
+              "relation-type" => related_identifier["type"].camelize(:lower),
+              "identifier-type" => identifier_type,
             }.compact
 
             xml.intra_work_relation(id, attributes)

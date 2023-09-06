@@ -312,6 +312,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.container).to eq("identifier" => "https://blog.front-matter.io", "identifierType" => "URL", "title" => "Front Matter", "type" => "Periodical")
       expect(subject.references).to eq([{"doi"=>"https://doi.org/10.5281/ZENODO.30799", "key"=>"ref1", "publicationYear"=>"2015", "title"=>"D2.1: Artefact, Contributor, And Organisation Relationship Data Schema"}])
       expect(subject.related_identifiers).to eq([{"id"=>"https://doi.org/10.5438/bc11-cqw1", "type"=>"IsIdenticalTo"}])
+      # puts subject.crossref_xml
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
       expect(Array.wrap(crossref_xml.dig("contributors", "person_name")).length).to eq(1)
       expect(Array.wrap(crossref_xml.dig("contributors",
