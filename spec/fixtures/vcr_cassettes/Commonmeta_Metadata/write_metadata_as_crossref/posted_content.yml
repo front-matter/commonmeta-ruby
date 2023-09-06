@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:22:23 GMT
+      - Wed, 06 Sep 2023 14:50:14 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2AH88LxIxifkhXa4oNhRbf4sL%2FIfgQA%2F0naNsvbM4cq1oZkCBwla8Zq0%2F2gYnB6JU9JQEegZ2BLaGBS8xUG5YpkMKruPlAYxCosLgpL63biEbJtMH26NZFPkmoU45IkC4FeRwIk%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FW95abAVPOL7DVOsHLzOzT0MDaiff2nGgEnyn7ZyJDIpbAvEpw1OEQeMmmUnArbGoVz%2BHkE3vKziky84lClx2PwyVUxOz8eTgBD39LITrtZAxFbsxdYoaAw%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d94870a2c630bd5-AMS
+      - 802785f22f86361d-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,7 +51,7 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:22:23 GMT
+  recorded_at: Wed, 06 Sep 2023 14:50:14 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1101/2020.12.01.406702
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:22:24 GMT
+      - Wed, 06 Sep 2023 14:50:15 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -170,7 +170,7 @@ http_interactions:
         announcements"},{"key":"2022011102351436000_2020.12.01.406702v5.54","doi-asserted-by":"crossref","first-page":"183","DOI":"10.1128\/jcm.6.2.183-184.1977","article-title":"Nontypable
         Group B Streptococci isolated from human sources","volume":"6","year":"1977","journal-title":"Journal
         of clinical microbiology"},{"key":"2022011102351436000_2020.12.01.406702v5.55","doi-asserted-by":"publisher","DOI":"10.1099\/00207713-39-4-471"},{"key":"2022011102351436000_2020.12.01.406702v5.56","doi-asserted-by":"publisher","DOI":"10.1093\/nar\/21.7.1677"},{"key":"2022011102351436000_2020.12.01.406702v5.57","doi-asserted-by":"publisher","DOI":"10.1016\/0022-2836(80)90283-1"},{"key":"2022011102351436000_2020.12.01.406702v5.58","doi-asserted-by":"publisher","DOI":"10.1128\/JB.00153-10"},{"key":"2022011102351436000_2020.12.01.406702v5.59","doi-asserted-by":"publisher","DOI":"10.1128\/JB.182.6.1529-1540.2000"},{"key":"2022011102351436000_2020.12.01.406702v5.60","doi-asserted-by":"publisher","DOI":"10.1128\/AEM.01882-18"},{"key":"2022011102351436000_2020.12.01.406702v5.61","doi-asserted-by":"publisher","DOI":"10.1128\/JB.185.4.1208-1217.2003"}],"container-title":[],"original-title":[],"link":[{"URL":"https:\/\/syndication.highwire.org\/content\/doi\/10.1101\/2020.12.01.406702","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2022,5,25]],"date-time":"2022-05-25T19:51:18Z","timestamp":1653508278000},"score":1,"resource":{"primary":{"URL":"http:\/\/biorxiv.org\/lookup\/doi\/10.1101\/2020.12.01.406702"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2020,12,1]]},"references-count":61,"URL":"http:\/\/dx.doi.org\/10.1101\/2020.12.01.406702","relation":{"is-preprint-of":[{"id-type":"doi","id":"10.1371\/journal.pbio.3001555","asserted-by":"subject"}]},"published":{"date-parts":[[2020,12,1]]},"subtype":"preprint"}}'
-  recorded_at: Sun, 18 Jun 2023 15:22:24 GMT
+  recorded_at: Wed, 06 Sep 2023 14:50:16 GMT
 - request:
     method: get
     uri: https://api.crossref.org/members/246
@@ -190,7 +190,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:22:24 GMT
+      - Wed, 06 Sep 2023 14:50:18 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -220,14 +220,14 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687044184171,"primary-name":"Cold
-        Spring Harbor Laboratory","counts":{"current-dois":119823,"backfile-dois":160223,"total-dois":280046},"breakdowns":{"dois-by-issued-year":[[2020,53638],[2021,50444],[2022,46947],[2019,31261],[2023,22432],[2018,22041],[2017,12746],[2016,6114],[2006,3590],[2015,3299],[2014,2295],[2009,1926],[2007,1796],[2010,1753],[2008,1646],[2013,1450],[2011,1418],[2012,1356],[2004,949],[2003,872],[2005,861],[2001,801],[2002,781],[2000,774],[1999,714],[1998,707],[1997,515],[1996,504],[1995,448],[1994,441],[1993,389],[1992,364],[1991,336],[1990,304],[1989,304],[1988,283],[1974,235],[1983,228],[1987,227],[1979,154],[1980,143],[1986,129],[1978,122],[1981,117],[1985,107],[1970,101],[1977,98],[1968,97],[1984,95],[1982,95],[1969,94],[1966,94],[1973,84],[1963,79],[1972,74],[1967,72],[1950,63],[1976,62],[1965,60],[1960,53],[1964,50],[1962,49],[1961,48],[1937,43],[1953,42],[1957,39],[1958,38],[1951,37],[1938,37],[1935,37],[1936,36],[1955,34],[1941,34],[1939,34],[1934,32],[1956,31],[1954,29],[1946,29],[1933,29],[1959,28],[1952,28],[1940,28],[1948,27],[1947,27],[1942,18]]},"prefixes":["10.1261","10.1110","10.1101","10.14224"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.02186327805620916,"licenses-backfile":6.86543130511849E-5,"funders-current":0.007711374277058662,"affiliations-backfile":6.241301186471356E-6,"resource-links-backfile":6.241301186471356E-6,"orcids-backfile":0.5046840965404468,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.7932867646445173,"similarity-checking-backfile":0.9900451246075782,"references-backfile":0.8710921652946206,"descriptions-backfile":0.0,"award-numbers-backfile":0.02004081810975952,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.007135524899226359,"abstracts-backfile":0.8900157904920017,"resource-links-current":0.0,"abstracts-current":0.9955267352678534,"references-current":0.9823823472955943},"prefix":[{"name":"Cold
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1693956409433,"primary-name":"Cold
+        Spring Harbor Laboratory","counts":{"current-dois":130721,"backfile-dois":160223,"total-dois":290944},"breakdowns":{"dois-by-issued-year":[[2020,53638],[2021,50444],[2022,46948],[2023,33329],[2019,31261],[2018,22041],[2017,12746],[2016,6114],[2006,3590],[2015,3299],[2014,2295],[2009,1926],[2007,1796],[2010,1753],[2008,1646],[2013,1450],[2011,1418],[2012,1356],[2004,949],[2003,872],[2005,861],[2001,801],[2002,781],[2000,774],[1999,714],[1998,707],[1997,515],[1996,504],[1995,448],[1994,441],[1993,389],[1992,364],[1991,336],[1990,304],[1989,304],[1988,283],[1974,235],[1983,228],[1987,227],[1979,154],[1980,143],[1986,129],[1978,122],[1981,117],[1985,107],[1970,101],[1977,98],[1968,97],[1984,95],[1982,95],[1969,94],[1966,94],[1973,84],[1963,79],[1972,74],[1967,72],[1950,63],[1976,62],[1965,60],[1960,53],[1964,50],[1962,49],[1961,48],[1937,43],[1953,42],[1957,39],[1958,38],[1951,37],[1938,37],[1935,37],[1936,36],[1955,34],[1941,34],[1939,34],[1934,32],[1956,31],[1954,29],[1946,29],[1933,29],[1959,28],[1952,28],[1940,28],[1948,27],[1947,27],[1942,18]]},"prefixes":["10.1261","10.1110","10.1101","10.14224"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.02186327805620916,"licenses-backfile":6.86543130511849E-5,"funders-current":0.00769577956104987,"affiliations-backfile":6.241301186471356E-6,"resource-links-backfile":6.241301186471356E-6,"orcids-backfile":0.504740268251125,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.7951744555197711,"similarity-checking-backfile":0.9900451246075782,"references-backfile":0.8710921652946206,"descriptions-backfile":0.0,"award-numbers-backfile":0.02004081810975952,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.007122038540096847,"abstracts-backfile":0.8900157904920017,"resource-links-current":0.0,"abstracts-current":0.9954942205154489,"references-current":0.9832161626670542},"prefix":[{"name":"Cold
         Spring Harbor Laboratory","value":"10.1261"},{"name":"","value":"10.1110"},{"name":"Cold
         Spring Harbor Laboratory","value":"10.1101"},{"name":"Cold Spring Harbor Laboratory
-        - CSHL Library & Archives","value":"10.14224"}],"id":246,"tokens":["cold","spring","harbor","laboratory"],"counts-type":{"all":{"report":20,"journal-article":39637,"journal":8,"posted-content":240387,"journal-issue":2},"backfile":{"report":20,"journal-article":37729,"posted-content":122472,"journal-issue":2},"current":{"journal-article":1908,"posted-content":117915}},"coverage-type":{"all":{"report":{"last-status-check-time":1687044184171,"affiliations":0.0,"abstracts":0.0,"orcids":0.35,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687044184171,"affiliations":2.522895274617151E-5,"abstracts":0.5474935035446679,"orcids":0.06140727098418145,"licenses":2.775184802078866E-4,"references":0.613416757070414,"funders":0.1116885738073013,"similarity-checking":0.9602643994247799,"award-numbers":0.1025809218659333,"ror-ids":0.0,"update-policies":0.0,"resource-links":2.522895274617151E-5,"descriptions":0.0},"journal":{"last-status-check-time":1687044184171,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1687044184171,"affiliations":0.0,"abstracts":0.999168008253358,"orcids":0.7216488412434949,"licenses":0.0,"references":0.9691331061995865,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687044184171,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"report":{"last-status-check-time":1687044184171,"affiliations":0.0,"abstracts":0.0,"orcids":0.35,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687044184171,"affiliations":2.65048106231281E-5,"abstracts":0.5385512470513398,"orcids":0.03750430703172626,"licenses":2.915529168544091E-4,"references":0.6052373505791301,"funders":0.09284635161281773,"similarity-checking":0.9582549232685732,"award-numbers":0.08510694691086432,"ror-ids":0.0,"update-policies":0.0,"resource-links":2.65048106231281E-5,"descriptions":0.0},"posted-content":{"last-status-check-time":1687044184171,"affiliations":0.0,"abstracts":0.998448624991835,"orcids":0.6486380560454635,"licenses":0.0,"references":0.953148474753413,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687044184171,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1687044184171,"affiliations":0.0,"abstracts":0.7243186582809223,"orcids":0.5340670859538784,"licenses":0.0,"references":0.7751572327044025,"funders":0.4842767295597484,"similarity-checking":1.0,"award-numbers":0.4481132075471698,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1687044184171,"affiliations":0.0,"abstracts":0.9999151931476064,"orcids":0.7974812364839079,"licenses":0.0,"references":0.9857354874273841,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":false,"deposits-similarity-checking-current":true,"deposits-licenses-current":false},"location":"Woodbury,
+        - CSHL Library & Archives","value":"10.14224"}],"id":246,"tokens":["cold","spring","harbor","laboratory"],"counts-type":{"all":{"report":20,"journal-article":39821,"journal":8,"posted-content":251101,"journal-issue":2},"backfile":{"report":20,"journal-article":37729,"posted-content":122472,"journal-issue":2},"current":{"journal-article":2092,"posted-content":128629}},"coverage-type":{"all":{"report":{"last-status-check-time":1693956409433,"affiliations":0.0,"abstracts":0.0,"orcids":0.35,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1693956409433,"affiliations":2.51123778910625E-5,"abstracts":0.5482032093618945,"orcids":0.06393611411064513,"licenses":2.762361568016876E-4,"references":0.6137967404133498,"funders":0.1132317119108008,"similarity-checking":0.9604480048215766,"award-numbers":0.1040154692247809,"ror-ids":0.0,"update-policies":0.0,"resource-links":2.51123778910625E-5,"descriptions":0.0},"journal":{"last-status-check-time":1693956409433,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1693956409433,"affiliations":0.0,"abstracts":0.9992114726743422,"orcids":0.7258593155742112,"licenses":0.0,"references":0.9703426111405371,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1693956409433,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"report":{"last-status-check-time":1693956409433,"affiliations":0.0,"abstracts":0.0,"orcids":0.35,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.1,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1693956409433,"affiliations":2.65048106231281E-5,"abstracts":0.5385512470513398,"orcids":0.03750430703172626,"licenses":2.915529168544091E-4,"references":0.6052373505791301,"funders":0.09284635161281773,"similarity-checking":0.9582549232685732,"award-numbers":0.08510694691086432,"ror-ids":0.0,"update-policies":0.0,"resource-links":2.65048106231281E-5,"descriptions":0.0},"posted-content":{"last-status-check-time":1693956409433,"affiliations":0.0,"abstracts":0.998448624991835,"orcids":0.6487115422300607,"licenses":0.0,"references":0.953148474753413,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1693956409433,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1693956409433,"affiliations":0.0,"abstracts":0.7222753346080306,"orcids":0.5406309751434034,"licenses":0.0,"references":0.7681644359464627,"funders":0.4808795411089866,"similarity-checking":1.0,"award-numbers":0.4450286806883365,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1693956409433,"affiliations":0.0,"abstracts":0.9999378056270359,"orcids":0.7993143070380707,"licenses":0.0,"references":0.9867137270755428,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":false,"deposits-similarity-checking-current":true,"deposits-licenses-current":false},"location":"Woodbury,
         NY, United States","names":["Cold Spring Harbor Laboratory","","Cold Spring
         Harbor Laboratory - CSHL Library & Archives"]}}'
-  recorded_at: Sun, 18 Jun 2023 15:22:24 GMT
+  recorded_at: Wed, 06 Sep 2023 14:50:18 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1101
@@ -247,7 +247,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:22:25 GMT
+      - Wed, 06 Sep 2023 14:50:19 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -259,7 +259,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3hCS0yzUytFXM3KXDr%2F20Hk1PybFydD7r6cHejiFlSRskjvDiPgsgs4jdW711ZLbt%2Bq67E1B7VH0r33%2FHWL3uY9cwIEOQTdJZ%2BdUNA%2BhSO72%2FDd05gTrzrJoQHpdS4I1K%2F3m32c%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=b%2BQ3XG1Cn5MOxlpgNvRKjU7D9qCrPKeoSDeRTbGRdZV1G%2BfyqcSI7dephE0KtWSmK38AhVnSg2sPvOmUKQpy6sTL%2Fj26ydQiC4sU6c7y%2FpIrVN%2FreIZxyV0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -267,7 +267,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d94871379cab89d-AMS
+      - 8027860f4891928f-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -279,5 +279,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:22:25 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Wed, 06 Sep 2023 14:50:19 GMT
+recorded_with: VCR 6.2.0

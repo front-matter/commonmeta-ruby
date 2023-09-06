@@ -23,13 +23,13 @@ http_interactions:
       Cache-Control:
       - public, max-age=0, must-revalidate
       Content-Length:
-      - '1988'
+      - '7617'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 10 Jul 2023 21:04:49 GMT
+      - Wed, 06 Sep 2023 14:27:14 GMT
       Etag:
-      - '"de3a467vbp1j8"'
+      - '"e4xv56uae15vj"'
       Server:
       - Vercel
       Strict-Transport-Security:
@@ -39,22 +39,83 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::g8hwc-1689023089548-ad26f56478e1
+      - fra1::iad1::rkc42-1694010433881-0eb2a903600a
       Connection:
       - close
     body:
       encoding: UTF-8
       string: '{"id":"5bb66e92-5cb9-4659-8aca-20e486b695c9","doi":"https://doi.org/10.53731/4nwxn-frt36","url":"https://blog.front-matter.io/posts/does-it-compose","title":"Does
         it compose?","summary":"One question I have increasingly asked myself in the
-        past few years. Meaning Can I run this open source software using Docker containers
-        and a Docker Compose file?As the Docker project turned ten this spring, it
-        has become standard practice to distribute open source software via Docker
-        images and to provide a Docker Compose file to run the software together with
-        other dependencies. The Awesome Compose project has collected many examples,
-        and all you need is a docker-compose.ymlfile and a...","published_at":1684237016,"updated_at":1687084066,"indexed_at":1689007007,"authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
-        Fenner"}],"image":"https://images.unsplash.com/photo-1523351964962-1ee5847816c3?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDUzfHxjb250YWluZXJ8ZW58MHx8fHwxNjg0MjMyMTQ0fDA&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","tags":["News"],"language":"en","reference":[],"blog_id":"f0m0e38","blog_name":"Front
-        Matter","blog":{"id":"f0m0e38","title":"Front Matter","description":"The Front
-        Matter Blog covers the intersection of science and technology since 2007.","language":"en","favicon":"https://blog.front-matter.io/favicon.png","feed_url":"https://blog.front-matter.io/atom-complete/","home_page_url":"https://blog.front-matter.io","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T07:20:33+00:00","indexed_at":"2023-01-02","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
-        5.52","category":"Engineering and Technology","prefix":"10.53731","modified_at":"2023-07-05T19:22:17+00:00","version":"https://jsonfeed.org/version/1.1","backlog":false,"current_feed_url":"https://blog.front-matter.io/atom/","expired":null}}'
-  recorded_at: Mon, 10 Jul 2023 21:04:49 GMT
+        past few years. Meaning Can I run this open source software  using Docker
+        containers and a Docker Compose file? As the Docker project turned ten this
+        spring, it has become standard practice to distribute open source software
+        via Docker images and to provide a Docker Compose file to run the software
+        together with other dependencies.","content_html":" <p><img src=\"https://images.unsplash.com/photo-1523351964962-1ee5847816c3?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3wxMTc3M3wwfDF8c2VhcmNofDUzfHxjb250YWluZXJ8ZW58MHx8fHwxNjg0MjMyMTQ0fDA&amp;ixlib=rb-4.0.3&amp;q=80&amp;w=2000\"
+        /></p><p>One question I have increasingly asked myself in the past few years.
+        Meaning </p><blockquote>Can I run this open source software  using Docker
+        containers and a Docker Compose file?</blockquote><p>As the Docker project
+        <a href=\"https://snyk.io/blog/the-docker-project-turns-10/\">turned ten this
+        spring</a>, it has become standard practice to distribute open source software
+        via Docker images and to provide a <a href=\"https://docs.docker.com/compose/\">Docker
+        Compose</a> file to run the software together with other dependencies. The
+        <a href=\"https://github.com/docker/awesome-compose\">Awesome Compose</a>
+        project has collected many examples, and all you need is a <code>docker-compose.yml</code>file
+        and a recent installation of Docker, e.g. <a href=\"https://www.docker.com/products/docker-desktop/\">Docker
+        Desktop</a>. Be aware that Docker Compose has evolved over the years. It started
+        out as a dedicated Python application but was later integrated into the Docker
+        application (written in Go) as Compose V2.</p><p>Docker and Docker Compose
+        allow you to run pretty complex applications without first addressing a long
+        list of requirements (which might conflict with other software you have installed),
+        or needing a long and complex build step where many things can go wrong. For
+        example a self-hosted instance of Supabase (a hosted Postgres database with
+        additional features) that I installed last week following <a href=\"https://supabase.com/docs/guides/self-hosting/docker\">these
+        instructions</a>.</p><p>An important open source project that I am involved
+        in is <a href=\"https://inveniordm.docs.cern.ch/\">InvenioRDM</a>, the turn-key
+        research data management repository. InvenioRDM started in 2019, with a first
+        production-suitable version in August 2021, and the <a href=\"https://inveniosoftware.org/products/rdm/#status\">next
+        major goal </a>is to have the large and popular <a href=\"https://zenodo.org/\">Zenodo</a>
+        repository running on top of InvenioRDM. Zenodo <a href=\"https://blog.zenodo.org/2023/05/08/2023-05-08-10years/\">turned
+        ten last week</a>, a few weeks after Docker. Interestingly, my personal tenth
+        anniversary was last year in May as I became a full-time software developer
+        and left academic medicine as a medical doctor treating cancer patients in
+        <a href=\"https://doi.org/10.53731/r294649-6f79289-8cw2j\">May 2012</a>.</p><p>Unfortunately,
+        InvenioRDM \"doesn''t compose\" yet. It is very close, but there are no ready-made
+        Docker images to download, and the <a href=\"https://inveniordm.docs.cern.ch/install/\">installation
+        instructions</a> start with installing a Python command-line tool (invenio-cli).
+        So if you have 1-2 hours to play with InvenioRDM and get a first impression,
+        there is no official solution from the InvenioRDM project yet. For this reason,
+        I started the <a href=\"https://github.com/front-matter/docker-invenio-rdm\">docker-invenio-rdm</a>
+        repository on Github. It contains a Docker Compose file that uses pre-built
+        Docker images, and using that file with a <code>docker compose up</code>command
+        on your local computer should give you a running InvenioRDM within 15 minutes:</p><figure><img
+        src=\"https://blog.front-matter.io/content/images/2023/05/Bildschirmfoto-2023-05-11-um-10.37.55.png\"
+        loading=\"lazy\" width=\"2000\" height=\"1210\" srcset=\"https://blog.front-matter.io/content/images/size/w600/2023/05/Bildschirmfoto-2023-05-11-um-10.37.55.png
+        600w, https://blog.front-matter.io/content/images/size/w1000/2023/05/Bildschirmfoto-2023-05-11-um-10.37.55.png
+        1000w, https://blog.front-matter.io/content/images/size/w1600/2023/05/Bildschirmfoto-2023-05-11-um-10.37.55.png
+        1600w, https://blog.front-matter.io/content/images/2023/05/Bildschirmfoto-2023-05-11-um-10.37.55.png
+        2193w\" /></figure><p>I started this recently and obviously want to move forward
+        in two directions:</p><ul><li>fine-tune the initial configuration to provide
+        a great initial experience with InvenioRDM, e.g. making it easy to <a href=\"https://inveniordm.docs.cern.ch/develop/topics/theming/\">theme</a>
+        the InvenioRDM instance</li><li>make this an official part of the InvenioRDM
+        project, extending the <a href=\"https://github.com/inveniosoftware/docker-invenio\">docker-invenio</a>
+        GitHub repository that provides Docker base images for InvenioRDM and other
+        projects using the Invenio software.</li></ul><p>But of course, Docker Compose
+        is not the answer to all questions regarding running Docker-based infrastructure.
+        For production environments, most people shy away from using Docker Compose.
+        The reasons for that and the alternatives will be the topic of a future blog
+        post (spoiler: there is exciting news).</p><p>Docker Compose also needs more
+        work to be set up correctly for development environments. It is a common practice
+        and a workflow I used while working at DataCite (where we launched Docker-based
+        infrastructure in 2016), but for now, the easiest way to set up InvenioRDM
+        development environments is using the <a href=\"https://inveniordm.docs.cern.ch/install/\">invenio-cli
+        tool with a local development environment</a>.</p><p>Please reach out to me
+        with feedback on running Docker Compose for InvenioRDM (use the <a href=\"https://github.com/front-matter/docker-invenio-rdm/discussions\">discussions</a>
+        feature in the GitHub repo), or if you have questions about running InvenioRDM
+        in production.</p> ","published_at":1684237016,"updated_at":1687084066,"indexed_at":1689007007,"authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://images.unsplash.com/photo-1523351964962-1ee5847816c3?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDUzfHxjb250YWluZXJ8ZW58MHx8fHwxNjg0MjMyMTQ0fDA&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000","tags":["News"],"language":"en","reference":[],"relationships":[],"blog_id":"f0m0e38","blog_name":"Front
+        Matter","blog_slug":"front_matter","blog":{"id":"f0m0e38","title":"Front Matter","description":"The
+        Front Matter Blog covers the intersection of science and technology since
+        2007.","language":"en","favicon":"https://blog.front-matter.io/favicon.png","feed_url":"https://blog.front-matter.io/atom-complete/","home_page_url":"https://blog.front-matter.io","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-01-02","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
+        5.52","category":"computerAndInformationSciences","prefix":"10.53731","modified_at":"2023-09-05T21:35:21+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":"https://blog.front-matter.io/atom/","status":"active","issn":"2749-9952","backlog":0,"authors":null,"plan":"Team","slug":"front_matter","use_mastodon":true}}'
+  recorded_at: Wed, 06 Sep 2023 14:27:14 GMT
 recorded_with: VCR 6.2.0

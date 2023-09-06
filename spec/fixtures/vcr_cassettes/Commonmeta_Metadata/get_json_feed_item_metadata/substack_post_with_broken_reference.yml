@@ -23,13 +23,13 @@ http_interactions:
       Cache-Control:
       - public, max-age=0, must-revalidate
       Content-Length:
-      - '3364'
+      - '35305'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 10 Jul 2023 21:04:53 GMT
+      - Wed, 06 Sep 2023 14:23:45 GMT
       Etag:
-      - '"164tifznke42la"'
+      - '"svtg25afwjr4d"'
       Server:
       - Vercel
       Strict-Transport-Security:
@@ -39,142 +39,324 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::vzgjn-1689023093452-d81d6a1d53a7
+      - fra1::iad1::8hlcv-1694010225430-cdaa4f1dcf1d
       Connection:
       - close
     body:
       encoding: UTF-8
       string: '{"id":"2b105b29-acbc-4eae-9ff1-368803f36a4d","doi":"https://doi.org/10.59350/bbcsr-r4b59","url":"https://markrubin.substack.com/p/the-preregistration-prescriptiveness","title":"The
-        Preregistration Prescriptiveness Trade-Off and Unknown Unknowns in Science","summary":"AbstractI
+        Preregistration Prescriptiveness Trade-Off and Unknown Unknowns in Science","summary":"<strong>Abstract</strong>
+        I discuss Van Drimmelen’s (2023) Metascience2023 presentation on researchers’
+        decision making during the research process.","content_html":"<h4>Abstract</h4><p>I
         discuss Van Drimmelen’s (2023) Metascience2023 presentation on researchers’
         decision making during the research process. In particular, I consider his
         evidence that researchers’ discretion over research decisions is unavoidable
         when they follow research plans that are either overdetermined (i.e., too
         prescriptive) or underdetermined (i.e., too vague). I argue that this evidence
-        points to a prescriptiveness trade-off when writing preregistered plans: All
-        other things...","published_at":1686086520,"updated_at":1686086520,"indexed_at":1688982864,"authors":[{"url":null,"name":"Mark
-        Rubin"}],"image":"https://substack-post-media.s3.amazonaws.com/public/images/195477de-91ce-4a76-bae8-b6334fb5bcc7_500x379.jpeg","tags":[],"language":"en","reference":[{"doi":"https://doi.org/10.3386/w27250","key":"ref1"},{"doi":"https://doi.org/10.1371/journal.pbio.3000937","key":"ref2"},{"doi":"https://doi.org/10.1098/rsos.211037","key":"ref3"},{"doi":"https://doi.org/10.7554/elife.67995","key":"ref4"},{"doi":"https://doi.org/10.31234/osf.io/5vfq6","key":"ref5"},{"key":"ref6","url":"https://latimes.com/opinion/op-ed/la-oe-0214-firestein-science-replication-failure-20160214-story.html"},{"key":"ref7","url":"https://psyarxiv.com/nj4es"},{"doi":"https://doi.org/10.1038/s41562-021-01203-8","key":"ref8"},{"doi":"https://doi.org/10.1177/0956797611430953","key":"ref9"},{"doi":"https://doi.org/10.1207/s15327965pli0102_1","key":"ref10"},{"doi":"https://doi.org/10.31234/osf.io/wxn58","key":"ref11"},{"doi":"https://doi.org/10.1016/j.tics.2019.07.009","key":"ref12"},{"doi":"https://doi.org/10.1525/collabra.24091","key":"ref13"},{"doi":"https://doi.org/10.1177%20/0956797611417632","key":"ref14"},{"doi":"https://doi.org/10.1177","key":"ref15"},{"doi":"https://doi.org/10.31222/osf.io/h8xjw","key":"ref16"},{"key":"ref17","url":"https://metascience.info/events/researchers-decision-making-navigating-ambiguity-in-research-practice"},{"key":"ref18","url":"https://osf.io/tqwgp"},{"key":"ref19","url":"https://en.wikipedia.org/wiki/There_are_unknown_unknowns"}],"blog_id":"ak4s224","blog_name":"Critical
-        Metascience","blog":{"id":"ak4s224","title":"Critical Metascience","description":"Critical
-        perspectives in metascience and the philosophy of science relating to open
-        science, science reform, and the replication crisis.","language":"en","favicon":"https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F00187507-ddc5-4baa-9dae-79f9487d8bce_325x325.png","feed_url":"https://markrubin.substack.com/feed","home_page_url":"https://markrubin.substack.com","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T13:17:43+00:00","indexed_at":"2023-04-20","feed_format":"application/rss+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Substack","category":"Social
-        Sciences","prefix":"10.59350","modified_at":"2023-06-13T00:05:19+00:00","version":"https://jsonfeed.org/version/1.1","backlog":false,"current_feed_url":null,"expired":null}}'
-  recorded_at: Mon, 10 Jul 2023 21:04:53 GMT
-- request:
-    method: get
-    uri: https://doi.org/10.3386/w27250
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Accept:
-      - application/vnd.citationstyles.csl+json
-      Connection:
-      - close
-      Host:
-      - doi.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 302
-      message: Found
-    headers:
-      Date:
-      - Tue, 11 Jul 2023 05:53:06 GMT
-      Content-Type:
-      - text/html;charset=utf-8
-      Content-Length:
-      - '205'
-      Connection:
-      - close
-      Location:
-      - https://api.crossref.org/v1/works/10.3386%2Fw27250/transform
-      Vary:
-      - Accept
-      Expires:
-      - Tue, 11 Jul 2023 06:04:41 GMT
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FnjmRk%2Fb1ZXYTJ6HNMGAkAGaYq%2FCmfsJhspVzxpAYqQUCrwsjqUbp3VE%2FYn53PXauGUS2DRVdY1uWj2YXrNaqwQ%2BxfRwAtQwS%2F5p2es8E5N2GBFgSWNLGjtVVjCVG%2F8mnvAu1%2BE%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7e4ec8befd010e74-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: |-
-        <html><head><title>Handle Redirect</title></head>
-        <body><a href="https://api.crossref.org/v1/works/10.3386%2Fw27250/transform">https://api.crossref.org/v1/works/10.3386%2Fw27250/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:06 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/v1/works/10.3386%2Fw27250/transform
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Accept:
-      - application/vnd.citationstyles.csl+json
-      Connection:
-      - close
-      User-Agent:
-      - http.rb/5.1.1
-      Host:
-      - api.crossref.org
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Tue, 11 Jul 2023 05:53:06 GMT
-      Content-Type:
-      - application/vnd.citationstyles.csl+json
-      Transfer-Encoding:
-      - chunked
-      Vary:
-      - Accept
-      Link:
-      - <http://dx.doi.org/10.3386/w27250>; rel="canonical"
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - public
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: '{"institution":[{"name":"National Bureau of Economic Research","acronym":["NBER"],"place":["Cambridge,
-        MA"]}],"indexed":{"date-parts":[[2023,7,5]],"date-time":"2023-07-05T20:28:37Z","timestamp":1688588917274},"publisher-location":"Cambridge,
-        MA","reference-count":0,"publisher":"National Bureau of Economic Research","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3386\/w27250","type":"report","created":{"date-parts":[[2020,6,2]],"date-time":"2020-06-02T01:54:11Z","timestamp":1591062851000},"source":"Crossref","is-referenced-by-count":6,"title":"Research
-        Registries: Facts, Myths, and Possible Improvements","prefix":"10.3386","author":[{"given":"Eliot","family":"Abrams","sequence":"first","affiliation":[]},{"given":"Jonathan","family":"Libgober","sequence":"additional","affiliation":[]},{"given":"John","family":"List","sequence":"additional","affiliation":[]}],"member":"1960","published-online":{"date-parts":[[2020,5]]},"container-title":[],"original-title":[],"deposited":{"date-parts":[[2021,4,16]],"date-time":"2021-04-16T15:57:54Z","timestamp":1618588674000},"score":1,"resource":{"primary":{"URL":"http:\/\/www.nber.org\/papers\/w27250.pdf"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2020,5]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3386\/w27250","relation":{},"published":{"date-parts":[[2020,5]]}}'
-  recorded_at: Tue, 11 Jul 2023 05:53:06 GMT
+        points to a <em>prescriptiveness trade-off</em> when writing preregistered
+        plans: All other things being equal, plans that are more prescriptive are
+        more likely to result in deviations that turn their confirmatory tests into
+        exploratory tests, and plans that are less prescriptive are more likely to
+        result in confirmatory tests that are susceptible to questionable research
+        practices. I also consider Van Drimmelen’s idea that researchers may make
+        unconscious, implicit decisions during the research process. I relate these
+        implicit decisions to Rumsfeld’s (2002) concept of <em>unknown unknowns</em>:
+        “the things we don’t know we don’t know”! I argue that scientists can report
+        their <em>known knowns</em> (what they know they did and found), and they
+        can be transparent and speculative about their <em>known unknowns</em> (what
+        they know they didn’t do and may find), but that they can’t say much about
+        their <em>unknown unknowns </em>(including their unconscious, implicit decisions)
+        because, by definition, they don’t know what they are! Nonetheless, I think
+        that it’s important to acknowledge unknown unknowns in science because doing
+        so helps to contextualise research efforts as being highly tentative and fallible.</p><h4>Introduction</h4><p>The
+        videos of the presentations at the Metascience2023 conference were recently
+        made available <a href=\"https://www.youtube.com/playlist?list=PLChfyH8TVDGlPTcKrVboBaf6QAGSJt1hQ\">here</a>.
+        One that caught my eye is by Tom van Drimmelen, titled “Researchers’ decision
+        making: Navigating ambiguity in research practice”: </p><div id=\"youtube2-5omWDTPcsNo\"
+        class=\"youtube-wrap\" data-attrs=\"{&quot;videoId&quot;:&quot;5omWDTPcsNo&quot;,&quot;startTime&quot;:null,&quot;endTime&quot;:null}\"
+        data-component-name=\"Youtube2ToDOM\"><div class=\"youtube-inner\"><iframe
+        src=\"https://www.youtube-nocookie.com/embed/5omWDTPcsNo?rel=0&amp;autoplay=0&amp;showinfo=0&amp;enablejsapi=0\"
+        frameborder=\"0\" loading=\"lazy\" gesture=\"media\" allow=\"autoplay; fullscreen\"
+        allowautoplay=\"true\" allowfullscreen=\"true\" width=\"728\" height=\"409\"></iframe></div></div><p>Here,
+        I summarise Van Drimmelen’s excellent work and share my thoughts on his ideas.</p><h4>What
+        is Researcher Discretion?</h4><p>Van Drimmelen (2023) explained that, during
+        the research process, researchers have discretion over numerous decisions
+        that they make about their methodology and analyses. During the data analysis
+        stage, this <em>researcher discretion</em> may be perceived negatively as
+        <em>researcher degrees of freedom</em> that is susceptible to <em>researcher
+        bias</em> and <em>questionable research practices</em> (John et al., 2012;
+        Simmons et al., 2011).</p><div class=\"captioned-image-container\"><figure><a
+        class=\"image-link is-viewable-img image2\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png\"
+        data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source
+        type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png
+        424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png
+        848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png
+        1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png
+        1456w\" sizes=\"100vw\"><img src=\"https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png\"
+        width=\"1430\" height=\"759\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/d6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:759,&quot;width&quot;:1430,&quot;resizeWidth&quot;:null,&quot;bytes&quot;:511459,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/png&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:false,&quot;topImage&quot;:true,&quot;internalRedirect&quot;:null}\"
+        class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png
+        424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png
+        848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png
+        1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd6f03976-0133-406f-8572-cdbcbbdc3aef_1430x759.png
+        1456w\" sizes=\"100vw\" fetchpriority=\"high\"></picture><div class=\"image-link-expand\"><svg
+        xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0
+        0 24 24\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2\" stroke-linecap=\"round\"
+        stroke-linejoin=\"round\" class=\"lucide lucide-maximize2\"><polyline points=\"15
+        3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line
+        x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\"
+        y2=\"14\"></line></svg></div></div></a><figcaption class=\"image-caption\"><em>Figure
+        1. </em>Tom van Drimmelen illustrates the numerous decisions that researchers
+        make during the research process.</figcaption></figure></div><h4>Researcher
+        Discretion Emerges in Both Over- and Under-Determined Research Plans</h4><p>In
+        theory, it is possible to reduce and/or reveal researcher discretion during
+        data analyses by preregistering one or more methodological and analytical
+        research paths. However, Van Drimmelen (2023) and colleagues were interested
+        in how researcher discretion operates <em>in practice</em>. To investigate,
+        they conducted an ethnographic study in which they observed researcher discretion
+        in two different research groups. They found that researcher discretion emerged
+        when researchers used two categories of research plan.</p><p>1.&nbsp;&nbsp;&nbsp;&nbsp;
+        <em>Underdetermined plans</em>: Researcher discretion emerged when research
+        plans were not precise enough to determine specific actions for the researchers.
+        In this case, researchers needed to use their own discretion to fill in the
+        gaps of the research plan and figure out how to proceed. Researchers often
+        find themselves in this situation because preregistered research plans are
+        often vague (e.g., Bakker et al., 2020; Heirene et al., 2021; Van den Akker
+        et al., 2023).</p><p>2.&nbsp;&nbsp;&nbsp;&nbsp; <em>Overdetermined plans</em>:
+        Researcher discretion also emerged when there were unforeseen changes in the
+        research situation that made the original research plan undesirable or impossible,
+        necessitating an alternative research approach. Again, this situation is common,
+        because most researchers do not possess “godlike planning abilities” (Navarro,
+        2020). To attempt to address this issue, researchers can preregister “if…then”
+        contingencies (i.e., decision trees) that accommodate <em>anticipated</em>
+        changes in the research situation (Nosek et al., 2018, p. 2602). In addition,
+        it may be possible to update a preregistered analysis plan prior to the data
+        analysis in order to take account of <em>unanticipated</em> events (Nosek
+        et al., 2019, p. 817). However, it is often the case that <em>unanticipated</em>
+        events arise <em>during data analyses</em>. As Reinhart (2015, p. 95) explained
+        (paraphrasing Helmuth von Moltke), “no analysis plan survives contact with
+        the data.” In these cases, researchers either need to stick to an inadequate
+        preregistered analysis plan or deviate and adapt their approach to address
+        the current situation. The evidence shows that researchers often deviate from
+        their preregistered plans (e.g., Abrams et al., 2020; Claesen et al., 2021;
+        Heirene et al., 2021).</p><h4>A Prescriptiveness Trade-Off in Preregistered
+        Plans</h4><p>Van Drimmelen’s (2023) work shows us that researchers are forced
+        to either deviate from overdetermined plans to overcome unforeseen events
+        or fill in the gaps of vague, underdetermined plans. Hence, researcher discretion
+        emerges in the case of both over- and under-determined plans. As Van Drimmelen
+        (2023) put it, “researcher discretion is an integral and unavoidable part
+        of the research practice.”</p><p>I think Van Drimmelen’s (2023) evidence also
+        points to a trade-off between the prescriptiveness of preregistered research
+        plans and the feasibility of their implementation in an unpredictable world.
+        As preregistered plans become more precise and prescriptive, there is a greater
+        chance that researchers will need to deviate from them in order to accommodate
+        unforeseen and/or uncontrolled events that occur during the implementation
+        of the plan. For example, researchers are more likely to deviate from a plan
+        to test “300 participants” than they are to deviate from a less prescriptive
+        plan to test “<em>around</em> 300 participants,” because uncontrolled events
+        (e.g., the number of participant exclusions during data analysis) may result
+        in a final sample size that is only close to 300 participants and not exactly
+        300 participants (e.g., Claesen et al., 2021, pp. 6-7). Consequently, as preregistered
+        plans become more prescriptive, they are more likely to result in deviations
+        that turn their planned confirmatory tests into unplanned exploratory tests.<sup>1</sup>
+        Of course, preregistration continues to distinguish between confirmatory and
+        exploratory tests in this situation, and it prevents exploratory tests from
+        being falsely portrayed as confirmatory tests. Nonetheless, it remains the
+        case that, as plans for confirmatory tests become more prescriptive, the actual
+        implementation of these confirmatory tests in the real world becomes less
+        likely.</p><p>On the other hand, as preregistered plans become vaguer and
+        less prescriptive, confirmatory hypothesis tests will become not only more
+        feasible to achieve without deviation, but also more susceptible to researcher
+        degrees of freedom and questionable research practices. For example, it is
+        more feasible to test “<em>around</em> 300 participants” than to test exactly
+        “300 participants.” However, the first sampling plan does not prevent the
+        questionable research practice of optional stopping (John et al., 2021; Simmons
+        et al., 2011), whereas the second, more prescriptive plan does.</p><p>In summary,
+        researchers need to consider a <em>prescriptiveness trade-off </em>when writing
+        their preregistered plans: All other things being equal, plans that are more
+        prescriptive are more likely to result in deviations that turn their confirmatory
+        tests into exploratory tests, and plans that are less prescriptive are more
+        likely to result in confirmatory tests that are susceptible to questionable
+        research practices. Hence, researchers face a difficult choice between prescriptive
+        confirmatory tests that they are less likely to carry out in practice and
+        vague confirmatory tests that are more prone to questionable research practices.</p><div
+        class=\"captioned-image-container\"><figure><a class=\"image-link is-viewable-img
+        image2\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg\"
+        data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source
+        type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg
+        424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg
+        848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg
+        1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg
+        1456w\" sizes=\"100vw\"><img src=\"https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg\"
+        width=\"284\" height=\"429.408\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:756,&quot;width&quot;:500,&quot;resizeWidth&quot;:284,&quot;bytes&quot;:93786,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:null}\"
+        class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg
+        424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg
+        848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg
+        1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F26ad757c-146e-4d8f-88a5-f34cf5c71c58_500x756.jpeg
+        1456w\" sizes=\"100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><svg
+        xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0
+        0 24 24\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2\" stroke-linecap=\"round\"
+        stroke-linejoin=\"round\" class=\"lucide lucide-maximize2\"><polyline points=\"15
+        3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line
+        x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\"
+        y2=\"14\"></line></svg></div></div></a></figure></div><h4>Researchers Sometimes
+        Make Implicit Decisions</h4><p>Van Drimmelen and colleagues (2023) also identified
+        another interesting issue in their work. At times, they found it difficult
+        to identify researcher discretion because there were multiple potential methodological
+        or analytical approaches available that researchers did not consider. In other
+        words, sometimes <em>researchers</em> <em>were not aware that they were making
+        decisions</em>!</p><p>This idea of unconscious and implicit research decisions
+        reminds me of something that Donald Rumsfeld, the United States Secretary
+        of Defence, said at a press briefing in 2002:</p><blockquote><p>There are
+        known knowns; there are things we know we know. We also know there are known
+        unknowns; that is to say we know there are some things we do not know. But
+        there are also unknown unknowns—the ones we don’t know we don’t know. (Wikipedia,
+        2023)</p></blockquote><p>In the context of Figure 1, our <em>known knowns</em>
+        are the path or paths that we reported following in our research (e.g., the
+        green paths). In these cases, we know what we did, and we know what we found
+        as a result. In contrast, our <em>known unknowns</em> are the paths that we
+        actively decided not to follow (e.g., all the other paths in Figure 1). We
+        know these paths exist, but we don’t yet know what results lie at the end
+        of them.</p><p>But what about our <em>unknown unknowns</em>? These paths don’t
+        appear in Figure 1! They relate to decisions that we didn’t even consider,
+        at least not at a conscious level. For example, we may not have considered
+        the time of day of testing, the ambient temperature, or a host of other unspecified
+        variables that may be influential on our results. Instead, we unconsciously
+        relegated these unknown unknowns to a <em>ceteris paribus</em> clause (i.e.,
+        “all other things being equal”), which assumes that no other influential factors
+        are at play (Meehl, 1990). The problem is that our unconscious and implicit
+        decision to assume the irrelevance of these factors may be wrong! Indeed,
+        the history of science is full of cases in which factors that were not initially
+        considered to be important subsequently turned out to be crucial moderators
+        or boundary conditions of effects (for some examples, see Firestein, 2016).</p><div
+        class=\"captioned-image-container\"><figure><a class=\"image-link is-viewable-img
+        image2\" target=\"_blank\" href=\"https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg\"
+        data-component-name=\"Image2ToDOM\"><div class=\"image2-inset\"><picture><source
+        type=\"image/webp\" srcset=\"https://substackcdn.com/image/fetch/w_424,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg
+        424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg
+        848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg
+        1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg
+        1456w\" sizes=\"100vw\"><img src=\"https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg\"
+        width=\"296\" height=\"444\" data-attrs=\"{&quot;src&quot;:&quot;https://substack-post-media.s3.amazonaws.com/public/images/96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg&quot;,&quot;srcNoWatermark&quot;:null,&quot;fullscreen&quot;:null,&quot;imageSize&quot;:null,&quot;height&quot;:750,&quot;width&quot;:500,&quot;resizeWidth&quot;:296,&quot;bytes&quot;:89822,&quot;alt&quot;:null,&quot;title&quot;:null,&quot;type&quot;:&quot;image/jpeg&quot;,&quot;href&quot;:null,&quot;belowTheFold&quot;:true,&quot;topImage&quot;:false,&quot;internalRedirect&quot;:null}\"
+        class=\"sizing-normal\" alt=\"\" srcset=\"https://substackcdn.com/image/fetch/w_424,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg
+        424w, https://substackcdn.com/image/fetch/w_848,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg
+        848w, https://substackcdn.com/image/fetch/w_1272,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg
+        1272w, https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F96e8d69a-f2c1-4c22-b375-8c5c4fd72689_500x750.jpeg
+        1456w\" sizes=\"100vw\" loading=\"lazy\"></picture><div class=\"image-link-expand\"><svg
+        xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0
+        0 24 24\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2\" stroke-linecap=\"round\"
+        stroke-linejoin=\"round\" class=\"lucide lucide-maximize2\"><polyline points=\"15
+        3 21 3 21 9\"></polyline><polyline points=\"9 21 3 21 3 15\"></polyline><line
+        x1=\"21\" x2=\"14\" y1=\"3\" y2=\"10\"></line><line x1=\"3\" x2=\"10\" y1=\"21\"
+        y2=\"14\"></line></svg></div></div></a></figure></div><h4>We Can’t Be Transparent
+        About Unknown Unknowns, But We Should Acknowledge They Exist!</h4><p>Van Drimmelen
+        (2023) concluded that “we might not be able to be effectively transparent
+        because <em>we don’t know which decisions we’ve actually made</em>” (my emphasis).
+        In other words, our lack of awareness about our potentially important implicit
+        decisions means that we can’t be transparent about them: We can report our
+        known knowns, and we can be transparent and speculative about our known unknowns,
+        but we can’t say much about our unknown unknowns because we don’t know what
+        they are! By definition, as soon as we start to speculate on a potentially
+        influential factor in our research, it becomes a <em>known</em> unknown about
+        which we need to make conscious decisions!</p><p>Despite our inability to
+        specify our unknown unknowns, Van Drimmelen’s (2023) work reminds us that
+        it’s important to acknowledge this type of ignorance in science because it
+        helps to contextualise our research efforts as being highly tentative and
+        fallible steps in a collective process of discovery and theory development.
+        Acknowledging our unknown unknowns also helps to address recent calls for
+        greater intellectual humility and modesty in science (Hoekstra &amp; Vazire,
+        2021; Ramsey, 2021).</p><p>I’ll end with a nice example of scientists acknowledging
+        unknown unknowns. Here’s Errington et al. (2021, p. 12) discussing the challenges
+        of assessing replicability in preclinical cancer biology:</p><blockquote><p>It
+        might also be that, in some cases, a failure to replicate was caused by the
+        replication team deviating from the protocol in some way that was not recognized,
+        or that a key part of the procedure was left out of the protocol inadvertently.
+        It is also possible that the effect reported in the original paper depended
+        on methodological factors that were not identified by original authors, the
+        replication team, or any other experts involved in the peer review of the
+        original paper or the Registered Report.</p></blockquote><h4>References</h4><p>Abrams,
+        E., Libgober, J., &amp; List, J. A. (2020). Research registries: Facts, myths,
+        and possible improvements (No. w27250). <em>National Bureau of Economic Research.
+        </em><a href=\"https://doi.org/10.3386/w27250\">https://doi.org/10.3386/w27250</a></p><p>Bakker,
+        M., Veldkamp, C. L., van Assen, M. A., Crompvoets, E. A., Ong, H. H., Nosek,
+        B. A.,…&amp; Wicherts, J. M. (2020). Ensuring the quality and specificity
+        of preregistrations. <em>PLoS Biology, 18</em>(12), e3000937. <a href=\"https://doi.org/10.1371/journal.pbio.3000937\">https://doi.org/10.1371/journal.pbio.3000937</a></p><p>Claesen,
+        A., Gomes, S., Tuerlinckx, F., Vanpaemel, W., &amp; Leuven, K. U. (2021).
+        Comparing dream to reality: An assessment of adherence of the first generation
+        of preregistered studies. <em>Royal Society Open Science, 8</em>(10), 1–11.
+        <a href=\"https://doi.org/10.1098/rsos.211037\">https://doi.org/10.1098/rsos.211037</a></p><p>Errington,
+        T. M., Denis, A., Perfito, N., Iorns, E., &amp; Nosek, B. A. (2021). Reproducibility
+        in cancer biology: Challenges for assessing replicability in preclinical cancer
+        biology. <em>Elife, 10,</em> Article e67995. <a href=\"https://doi.org/10.7554/eLife.67995\">https://doi.org/10.7554/eLife.67995</a></p><p>Fife,
+        D., &amp; Rodgers, J. L. (2019). Moving beyond the \"replication crisis\":
+        Understanding the exploratory/confirmatory data analysis continuum. <em>PsyArXiv</em>.
+        <a href=\"https://doi.org/10.31234/osf.io/5vfq6\">https://doi.org/10.31234/osf.io/5vfq6</a></p><p>Firestein,
+        S. (2016, February 14). Why failure to replicate findings can actually be
+        good for science. <em>LA Times.</em> <a href=\"https://www.latimes.com/opinion/op-ed/la-oe-0214-firestein-science-replication-failure-20160214-story.html\">https://www.latimes.com/opinion/op-ed/la-oe-0214-firestein-science-replication-failure-20160214-story.html</a></p><p>Heirene,
+        R., LaPlante, D., Louderback, E. R., Keen, B., Bakker, M., Serafimovska, A.,
+        &amp; Gainsbury, S. M. (2021). Preregistration specificity &amp; adherence:
+        A review of preregistered gambling studies &amp; cross-disciplinary comparison.
+        <em>PsyArXiv</em>. <a href=\"https://psyarxiv.com/nj4es/\">https://psyarxiv.com/nj4es/</a></p><p>Hoekstra,
+        R., &amp; Vazire, S. (2021). Aspiring to greater intellectual humility in
+        science. <em>Nature Human Behaviour, 5</em>(12), 1602-1607. <a href=\"https://doi.org/10.1038/s41562-021-01203-8\">https://doi.org/10.1038/s41562-021-01203-8</a></p><p>John,
+        L. K., Loewenstein, G., &amp; Prelec, D. (2012). Measuring the prevalence
+        of questionable research practices with incentives for truth telling. <em>Psychological
+        Science, 23</em>(5), 524–532. <a href=\"https://doi.org/10.1177/0956797611430953\">https://doi.org/10.1177/0956797611430953</a></p><p>Meehl,
+        P. E. (1990). Appraising and amending theories: The strategy of Lakatosian
+        defense and two principles that warrant it. <em>Psychological Inquiry, 1</em>(2),
+        108-141. <a href=\"https://doi.org/10.1207/s15327965pli0102_1\">https://doi.org/10.1207/s15327965pli0102_1</a></p><p>Navarro,
+        D. (2020, September 23). Paths in strange spaces: A comment on preregistration.<em>
+        PsycArXiv. </em><a href=\"https://doi.org/10.31234/osf.io/wxn58\">https://doi.org/10.31234/osf.io/wxn58</a></p><p>Nosek,
+        B. A., Beck, E. D., Campbell, L., Flake, J. K., Hardwicke, T. E., Mellor,
+        D. T., van ‘t Veer, A. E., &amp; Vazire, S. (2019). Preregistration is hard,
+        and worthwhile. <em>Trends in Cognitive Sciences, 23,</em> 815–818. <a href=\"https://doi.org/10.1016/j.tics.2019.07.009\">https://doi.org/10.1016/j.tics.2019.07.009</a></p><p>Ramsey,
+        R. (2021). A call for greater modesty in psychology and cognitive neuroscience.
+        <em>Collabra: Psychology, 7</em>(1), 24091. <a href=\"https://doi.org/10.1525/collabra.24091\">https://doi.org/10.1525/collabra.24091</a></p><p>Reinhart,
+        A. (2015). <em>Statistics done wrong: The woefully complete guide.</em> No
+        Starch Press.</p><p>Simmons, J. P., Nelson, L. D., &amp; Simonsohn, U. (2011).
+        False-positive psychology: Undisclosed flexibility in data collection and
+        analysis allows presenting anything as significant. <em>Psychological Science,
+        22(</em>11), 1359–1366. <a href=\"https://doi.org/10.1177%20/0956797611417632\">https://doi.org/10.1177
+        /0956797611417632</a></p><p>Van den Akker, O., Bakker, M., van Assen, M. A.
+        L. M., Pennington, C. R., Verweij, L., Elsherif, M. M.,…Wicherts, J. M. (2023,
+        May 10). The effectiveness of preregistration in psychology: Assessing preregistration
+        strictness and preregistration-study consistency. <em>PsyArXiv</em>. <a href=\"https://doi.org/10.31222/osf.io/h8xjw\">https://doi.org/10.31222/osf.io/h8xjw</a></p><p>Van
+        Drimmelen, T., Slagboom, N., Reis, R., Bouter, L., Van der Steen, J. (2023,
+        May 9). <em>Researchers’ decision making: Navigating ambiguity in research
+        practice.</em> Metascience2023, Washington, DC. Abstract: <a href=\"https://metascience.info/events/researchers-decision-making-navigating-ambiguity-in-research-practice/\">https://metascience.info/events/researchers-decision-making-navigating-ambiguity-in-research-practice/</a>
+        Preregistration: <a href=\"https://osf.io/tqwgp/\">https://osf.io/tqwgp/</a></p><p>Wikipedia.
+        (2023, March 16). There are unknown unknowns. <em>Wikipedia</em>. https://en.wikipedia.org/wiki/There_are_unknown_unknowns</p><h4>Endnotes</h4><p>1.&nbsp;Here,
+        I define confirmatory tests as planned tests, and exploratory tests as unplanned
+        tests. This conceptualization is consistent with the frequentist rationale
+        for preregistration, according to which unplanned tests undermine assumptions
+        regarding Type I error rates (Nosek et al., 2019, p. 816). I acknowledge that
+        there are other definitions for “confirmatory” and “exploratory”, including
+        definitions that view them as existing at opposite ends of a continuum rather
+        than as discrete categories (e.g., Fife &amp; Rodgers, 2019). According to
+        this continuum perspective, larger deviations from preregistered plans result
+        in “more exploratory” tests than smaller deviations. I don’t subscribe to
+        this continuum perspective, because it is unclear how to formally assess some
+        deviations as being “larger” or “smaller” than others. I agree that research
+        studies can be described as being more confirmatory or exploratory, because
+        they can contain a greater proportion of planned or unplanned tests. However,
+        in my view, the tests themselves can only be either confirmatory or exploratory,
+        because they can only be either planned or unplanned.</p><h4>Acknowledgements</h4><p>I’m
+        grateful to Tom van Drimmelen for his comments on an earlier version of this
+        article.</p><h4>PDF Download</h4><p>You can download a PDF version of this
+        article <a href=\"https://doi.org/10.31222/osf.io/3t7pc\">here</a>.</p><h4>Reference</h4><p>The
+        reference for this article is:</p><p>Rubin, M. (2023, June 7). The preregistration
+        prescriptiveness trade-off and unknown unknowns in science: Comments on Van
+        Drimmelen (2023). <em>Critical Metascience: MetaArXiv</em>. <a href=\"https://doi.org/10.31222/osf.io/3t7pc\">https://doi.org/10.31222/osf.io/3t7pc</a></p><h4>Please
+        Subscribe and/or Share!</h4><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://markrubin.substack.com/subscribe?&quot;,&quot;text&quot;:&quot;Subscribe
+        now&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\" data-component-name=\"ButtonCreateButton\"><a
+        class=\"button primary\" href=\"https://markrubin.substack.com/subscribe?\"><span>Subscribe
+        now</span></a></p><p class=\"button-wrapper\" data-attrs=\"{&quot;url&quot;:&quot;https://markrubin.substack.com/p/the-preregistration-prescriptiveness?utm_source=substack&utm_medium=email&utm_content=share&action=share&quot;,&quot;text&quot;:&quot;Share&quot;,&quot;action&quot;:null,&quot;class&quot;:null}\"
+        data-component-name=\"ButtonCreateButton\"><a class=\"button primary\" href=\"https://markrubin.substack.com/p/the-preregistration-prescriptiveness?utm_source=substack&utm_medium=email&utm_content=share&action=share\"><span>Share</span></a></p>","published_at":1686086520,"updated_at":1686086520,"indexed_at":1688982864,"authors":[{"url":null,"name":"Mark
+        Rubin"}],"image":"https://substack-post-media.s3.amazonaws.com/public/images/195477de-91ce-4a76-bae8-b6334fb5bcc7_500x379.jpeg","tags":["Metascience","Researcher
+        Degrees Of Freedom","Open Science","Preregistration","Researcher Discretion"],"language":"en","reference":[{"doi":"https://doi.org/10.3386/w27250","key":"ref1"},{"doi":"https://doi.org/10.1371/journal.pbio.3000937","key":"ref2"},{"doi":"https://doi.org/10.1098/rsos.211037","key":"ref3"},{"doi":"https://doi.org/10.7554/eLife.67995","key":"ref4"},{"doi":"https://doi.org/10.31234/osf.io/5vfq6","key":"ref5"},{"key":"ref6","url":"https://latimes.com/opinion/op-ed/la-oe-0214-firestein-science-replication-failure-20160214-story.html"},{"key":"ref7","url":"https://psyarxiv.com/nj4es"},{"doi":"https://doi.org/10.1038/s41562-021-01203-8","key":"ref8"},{"doi":"https://doi.org/10.1177/0956797611430953","key":"ref9"},{"doi":"https://doi.org/10.1207/s15327965pli0102_1","key":"ref10"},{"doi":"https://doi.org/10.31234/osf.io/wxn58","key":"ref11"},{"doi":"https://doi.org/10.1016/j.tics.2019.07.009","key":"ref12"},{"doi":"https://doi.org/10.1525/collabra.24091","key":"ref13"},{"doi":"https://doi.org/10.1177%20/0956797611417632","key":"ref14"},{"doi":"https://doi.org/10.1177","key":"ref15"},{"doi":"https://doi.org/10.31222/osf.io/h8xjw","key":"ref16"},{"key":"ref17","url":"https://metascience.info/events/researchers-decision-making-navigating-ambiguity-in-research-practice"},{"key":"ref18","url":"https://osf.io/tqwgp"},{"key":"ref19","url":"https://en.wikipedia.org/wiki/there_are_unknown_unknowns"}],"relationships":[],"blog_id":"ak4s224","blog_name":"Critical
+        Metascience","blog_slug":"markrubin","blog":{"id":"ak4s224","title":"Critical
+        Metascience","description":"Critical perspectives in metascience and the philosophy
+        of science relating to open science, science reform, and the replication crisis.","language":"en","favicon":"https://substackcdn.com/image/fetch/w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F00187507-ddc5-4baa-9dae-79f9487d8bce_325x325.png","feed_url":"https://markrubin.substack.com/feed","home_page_url":"https://markrubin.substack.com","user_id":"04a73ca4-9e60-4000-a0a0-087a13275eba","created_at":"2023-04-20","feed_format":"application/rss+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Substack","category":"socialSciences","prefix":"10.59350","modified_at":"2023-09-04T23:50:00+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":null,"status":"active","issn":null,"backlog":0,"authors":null,"plan":"Starter","slug":"markrubin","use_mastodon":false}}'
+  recorded_at: Wed, 06 Sep 2023 14:23:48 GMT
 - request:
     method: get
     uri: https://doi.org/10.1371/journal.pbio.3000937
@@ -196,7 +378,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:07 GMT
+      - Wed, 06 Sep 2023 14:24:04 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -208,13 +390,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:04:41 GMT
+      - Wed, 06 Sep 2023 14:34:06 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Cbv2TYpzXu%2FSf%2BbEGcpiDZEUtW5lvAxm4JzImnMKWiSddZsqUs2f2eKlMxAH6xGdn5xRy2RhB%2F%2FBUcawAF%2FncasnPo4BVJufaQia0YZ2dmvrGgJxCiIEMfn%2BnVjPpfNpuy7FJ08%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=h8RC%2FXW6BhA%2BMqI1uFr36TPKLXeIkpD8epjWgC6sREp9qL%2BFNpM1L91X%2F%2FuhIax9nh5DJ6EzwPs%2FQx3xkqmRYj3Ji7nDiU6FsKvdMopKZz9x6CB5dIld2hQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -222,7 +404,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec8c3fcd2b8c4-AMS
+      - 80275f9a981e371c-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -230,7 +412,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.1371%2Fjournal.pbio.3000937/transform">https://api.crossref.org/v1/works/10.1371%2Fjournal.pbio.3000937/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:07 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:04 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.1371%2Fjournal.pbio.3000937/transform
@@ -252,7 +434,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:07 GMT
+      - Wed, 06 Sep 2023 14:24:05 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -292,7 +474,7 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"indexed":{"date-parts":[[2023,7,8]],"date-time":"2023-07-08T10:51:20Z","timestamp":1688813480053},"reference-count":67,"publisher":"Public
+      string: '{"indexed":{"date-parts":[[2023,9,2]],"date-time":"2023-09-02T08:11:53Z","timestamp":1693642313760},"reference-count":67,"publisher":"Public
         Library of Science (PLoS)","issue":"12","license":[{"start":{"date-parts":[[2020,12,9]],"date-time":"2020-12-09T00:00:00Z","timestamp":1607472000000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"funder":[{"DOI":"10.13039\/501100000781","name":"European
         Research Council","doi-asserted-by":"publisher","award":["726361"]},{"DOI":"10.13039\/100009827","name":"Laura
         and John Arnold Foundation","doi-asserted-by":"publisher"},{"DOI":"10.13039\/501100011730","name":"Templeton
@@ -323,7 +505,7 @@ http_interactions:
         low concordance among coders about the number of hypotheses (14%), indicating
         that they are often not clearly stated. We conclude that effective preregistration
         is challenging, and registration formats that provide effective guidance may
-        improve the quality of research.<\/jats:p>","DOI":"10.1371\/journal.pbio.3000937","type":"journal-article","created":{"date-parts":[[2020,12,9]],"date-time":"2020-12-09T22:49:35Z","timestamp":1607554175000},"page":"e3000937","update-policy":"http:\/\/dx.doi.org\/10.1371\/journal.pbio.corrections_policy","source":"Crossref","is-referenced-by-count":30,"title":"Ensuring
+        improve the quality of research.<\/jats:p>","DOI":"10.1371\/journal.pbio.3000937","type":"journal-article","created":{"date-parts":[[2020,12,9]],"date-time":"2020-12-09T22:49:35Z","timestamp":1607554175000},"page":"e3000937","update-policy":"http:\/\/dx.doi.org\/10.1371\/journal.pbio.corrections_policy","source":"Crossref","is-referenced-by-count":32,"title":"Ensuring
         the quality and specificity of preregistrations","prefix":"10.1371","volume":"18","author":[{"ORCID":"http:\/\/orcid.org\/0000-0001-9024-337X","authenticated-orcid":true,"given":"Marjan","family":"Bakker","sequence":"first","affiliation":[]},{"given":"Coosje
         L. S.","family":"Veldkamp","sequence":"additional","affiliation":[]},{"given":"Marcel
         A. L. M.","family":"van Assen","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-4471-6396","authenticated-orcid":true,"given":"Elise
@@ -483,7 +665,7 @@ http_interactions:
         Agricultural and Biological Sciences","General Immunology and Microbiology","General
         Biochemistry, Genetics and Molecular Biology","General Neuroscience"],"container-title-short":"PLoS
         Biol","published":{"date-parts":[[2020,12,9]]}}'
-  recorded_at: Tue, 11 Jul 2023 05:53:07 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:05 GMT
 - request:
     method: get
     uri: https://doi.org/10.1098/rsos.211037
@@ -505,7 +687,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:08 GMT
+      - Wed, 06 Sep 2023 14:24:05 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -517,13 +699,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:04:41 GMT
+      - Wed, 06 Sep 2023 15:22:11 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2ew3e0YuIIHL5oQCBCRWiVGNX1yylqns6kLptbzDP2iIRoybzFznIiWlUQTXtziuNviN20L9mljIW0%2BSIcd1G8pWDU6Radl6%2Bf6NCUYm3FCqYlqsSts3adddEid6zw4GmHA4oPA%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=D2VpZnUgw%2FarejBBm28JDkn34KjXdic3jIOOaistO8%2F6qXSmPJa1S2Vs8X24vSkkEZbb9XCU5oZxjX7YSWIw0LjAzt2SH6pBX7cvOL8ZFNmW5kmizupG2W4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -531,7 +713,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec8ca6a59b944-AMS
+      - 80275fa45ad5994b-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -539,7 +721,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.1098%2Frsos.211037/transform">https://api.crossref.org/v1/works/10.1098%2Frsos.211037/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:08 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:05 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.1098%2Frsos.211037/transform
@@ -561,7 +743,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:08 GMT
+      - Wed, 06 Sep 2023 14:24:11 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -603,7 +785,7 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"indexed":{"date-parts":[[2023,7,5]],"date-time":"2023-07-05T20:31:32Z","timestamp":1688589092103},"reference-count":30,"publisher":"The
+      string: '{"indexed":{"date-parts":[[2023,9,5]],"date-time":"2023-09-05T11:09:11Z","timestamp":1693912151329},"reference-count":30,"publisher":"The
         Royal Society","issue":"10","license":[{"start":{"date-parts":[[2021,10,1]],"date-time":"2021-10-01T00:00:00Z","timestamp":1633046400000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/royalsociety.org\/journals\/ethics-policies\/data-sharing-mining\/"}],"funder":[{"DOI":"10.13039\/501100004040","name":"KU
         Leuven","doi-asserted-by":"crossref","award":["C14\/19\/054"]}],"content-domain":{"domain":["royalsocietypublishing.org"],"crossmark-restriction":true},"published-print":{"date-parts":[[2021,10]]},"abstract":"<jats:p>\n            Preregistration
         is a method to increase research transparency by documenting research decisions
@@ -623,7 +805,7 @@ http_interactions:
         and statistical analysis. This closer look at preregistrations of the first
         generation reveals possible hurdles for reporting preregistered studies and
         provides input for future reporting guidelines. We discuss the results and
-        possible explanations, and provide recommendations for preregistered research.\n          <\/jats:p>","DOI":"10.1098\/rsos.211037","type":"journal-article","created":{"date-parts":[[2021,10,27]],"date-time":"2021-10-27T07:05:32Z","timestamp":1635318332000},"update-policy":"http:\/\/dx.doi.org\/10.1098\/crossmark-policy","source":"Crossref","is-referenced-by-count":18,"title":"Comparing
+        possible explanations, and provide recommendations for preregistered research.\n          <\/jats:p>","DOI":"10.1098\/rsos.211037","type":"journal-article","created":{"date-parts":[[2021,10,27]],"date-time":"2021-10-27T07:05:32Z","timestamp":1635318332000},"update-policy":"http:\/\/dx.doi.org\/10.1098\/crossmark-policy","source":"Crossref","is-referenced-by-count":22,"title":"Comparing
         dream to reality: an assessment of adherence of the first generation of preregistered
         studies","prefix":"10.1098","volume":"8","author":[{"ORCID":"http:\/\/orcid.org\/0000-0002-0303-2441","authenticated-orcid":true,"given":"Aline","family":"Claesen","sequence":"first","affiliation":[{"name":"Faculty
         of Psychology and Educational Sciences, KU Leuven, Tiensestraat 102, Leuven
@@ -658,10 +840,10 @@ http_interactions:
         History"}},{"value":"2021-09-29","order":1,"name":"accepted","label":"Accepted","group":{"name":"publication_history","label":"Publication
         History"}},{"value":"2021-10-27","order":2,"name":"published","label":"Published","group":{"name":"publication_history","label":"Publication
         History"}}]}'
-  recorded_at: Tue, 11 Jul 2023 05:53:08 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:11 GMT
 - request:
     method: get
-    uri: https://doi.org/10.7554/elife.67995
+    uri: https://doi.org/10.7554/eLife.67995
     body:
       encoding: UTF-8
       string: ''
@@ -680,7 +862,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:09 GMT
+      - Wed, 06 Sep 2023 14:24:12 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -688,17 +870,17 @@ http_interactions:
       Connection:
       - close
       Location:
-      - https://api.crossref.org/v1/works/10.7554%2Felife.67995/transform
+      - https://api.crossref.org/v1/works/10.7554%2FeLife.67995/transform
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:04:41 GMT
+      - Wed, 06 Sep 2023 14:37:15 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8ssq7T6IJrocRlNaV3yGftGSvtUPUMiLvQZnqbHukU%2FhID0Pw1etBxWWQjkQbKl5IO9n4h%2F8%2BP5faEi4m9naaYIZ0T6srF3viAfBKL868kd0qDGSksBeao%2B4reYxV5pGB9gpCJ0%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dik2STgwMqcA%2Bo%2FLMFcI6LcmNUp6Bwd7XZWtkfVpzQWWeqGmEGinnyLibJg7JODbumJxsL%2B8Tn5VRJuduqzS8bAoPgPdKe50kyZWpKK0QsVVptXctZyOldk%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -706,18 +888,18 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec8cf4c0f0b3e-AMS
+      - 80275fcbcbba993f-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: |-
         <html><head><title>Handle Redirect</title></head>
-        <body><a href="https://api.crossref.org/v1/works/10.7554%2Felife.67995/transform">https://api.crossref.org/v1/works/10.7554%2Felife.67995/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:09 GMT
+        <body><a href="https://api.crossref.org/v1/works/10.7554%2FeLife.67995/transform">https://api.crossref.org/v1/works/10.7554%2FeLife.67995/transform</a></body></html>
+  recorded_at: Wed, 06 Sep 2023 14:24:12 GMT
 - request:
     method: get
-    uri: https://api.crossref.org/v1/works/10.7554%2Felife.67995/transform
+    uri: https://api.crossref.org/v1/works/10.7554%2FeLife.67995/transform
     body:
       encoding: UTF-8
       string: ''
@@ -736,7 +918,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:09 GMT
+      - Wed, 06 Sep 2023 14:24:13 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -779,7 +961,7 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"indexed":{"date-parts":[[2023,7,7]],"date-time":"2023-07-07T01:52:06Z","timestamp":1688694726288},"reference-count":196,"publisher":"eLife
+      string: '{"indexed":{"date-parts":[[2023,9,5]],"date-time":"2023-09-05T16:36:21Z","timestamp":1693931781633},"reference-count":196,"publisher":"eLife
         Sciences Publications, Ltd","license":[{"start":{"date-parts":[[2021,12,7]],"date-time":"2021-12-07T00:00:00Z","timestamp":1638835200000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"},{"start":{"date-parts":[[2021,12,7]],"date-time":"2021-12-07T00:00:00Z","timestamp":1638835200000},"content-version":"am","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"},{"start":{"date-parts":[[2021,12,7]],"date-time":"2021-12-07T00:00:00Z","timestamp":1638835200000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"funder":[{"DOI":"10.13039\/100014848","name":"Arnold
         Ventures","doi-asserted-by":"crossref"}],"content-domain":{"domain":["elifesciences.org"],"crossmark-restriction":false},"accepted":{"date-parts":[[2021,7,20]]},"abstract":"<jats:p>We
         conducted the <jats:ext-link ext-link-type=\"uri\" xlink:href=\"https:\/\/elifesciences.org\/collections\/9b1e83d1\/reproducibility-project-cancer-biology\">Reproducibility
@@ -807,7 +989,7 @@ http_interactions:
         could be implemented. Cumulatively, these three factors limited the number
         of experiments that could be repeated. This experience draws attention to
         a basic and fundamental concern about replication \u2013 it is hard to assess
-        whether reported findings are credible.<\/jats:p>","DOI":"10.7554\/elife.67995","type":"journal-article","created":{"date-parts":[[2021,12,7]],"date-time":"2021-12-07T00:00:20Z","timestamp":1638835220000},"update-policy":"http:\/\/dx.doi.org\/10.7554\/elife.67995","source":"Crossref","is-referenced-by-count":76,"title":"Challenges
+        whether reported findings are credible.<\/jats:p>","DOI":"10.7554\/elife.67995","type":"journal-article","created":{"date-parts":[[2021,12,7]],"date-time":"2021-12-07T00:00:20Z","timestamp":1638835220000},"update-policy":"http:\/\/dx.doi.org\/10.7554\/elife.67995","source":"Crossref","is-referenced-by-count":83,"title":"Challenges
         for assessing replicability in preclinical cancer biology","prefix":"10.7554","volume":"10","author":[{"ORCID":"http:\/\/orcid.org\/0000-0002-4959-5143","authenticated-orcid":true,"given":"Timothy
         M","family":"Errington","sequence":"first","affiliation":[{"name":"Center
         for Open Science","place":["Charlottesville, United States"]}]},{"given":"Alexandria","family":"Denis","sequence":"additional","affiliation":[{"name":"Center
@@ -1187,10 +1369,10 @@ http_interactions:
         Study: The microRNA miR-34a inhibits prostate cancer stem cells and metastasis
         by directly repressing CD44","volume":"8","author":"Yan","year":"2019","journal-title":"eLife"},{"key":"bib195","doi-asserted-by":"publisher","first-page":"179","DOI":"10.1038\/nature10371","article-title":"BRCA1
         tumour suppression occurs via heterochromatin-mediated silencing","volume":"477","author":"Zhu","year":"2011","journal-title":"Nature"},{"key":"bib196","doi-asserted-by":"publisher","first-page":"524","DOI":"10.1038\/nature10334","article-title":"RNAi
-        screen identifies Brd4 as a therapeutic target in acute myeloid leukaemia","volume":"478","author":"Zuber","year":"2011","journal-title":"Nature"}],"container-title":"eLife","original-title":[],"language":"en","link":[{"URL":"https:\/\/cdn.elifesciences.org\/articles\/67995\/elife-67995-v2.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/cdn.elifesciences.org\/articles\/67995\/elife-67995-v2.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2023,6,14]],"date-time":"2023-06-14T14:55:21Z","timestamp":1686754521000},"score":1,"resource":{"primary":{"URL":"https:\/\/elifesciences.org\/articles\/67995"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2021,12,7]]},"references-count":196,"alternative-id":["10.7554\/eLife.67995"],"URL":"http:\/\/dx.doi.org\/10.7554\/elife.67995","relation":{"references":[{"id-type":"doi","id":"10.31219\/osf.io\/5y8w7","asserted-by":"subject"}],"is-supplemented-by":[{"id-type":"accession","id":"e5nvr","asserted-by":"subject"}]},"ISSN":["2050-084X"],"subject":["General
+        screen identifies Brd4 as a therapeutic target in acute myeloid leukaemia","volume":"478","author":"Zuber","year":"2011","journal-title":"Nature"}],"container-title":"eLife","original-title":[],"language":"en","link":[{"URL":"https:\/\/cdn.elifesciences.org\/articles\/67995\/elife-67995-v2.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/cdn.elifesciences.org\/articles\/67995\/elife-67995-v2.xml","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2023,6,14]],"date-time":"2023-06-14T14:55:21Z","timestamp":1686754521000},"score":1,"resource":{"primary":{"URL":"https:\/\/elifesciences.org\/articles\/67995"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2021,12,7]]},"references-count":196,"alternative-id":["10.7554\/eLife.67995"],"URL":"http:\/\/dx.doi.org\/10.7554\/eLife.67995","relation":{"references":[{"id-type":"doi","id":"10.31219\/osf.io\/5y8w7","asserted-by":"subject"}],"is-supplemented-by":[{"id-type":"accession","id":"e5nvr","asserted-by":"subject"}]},"ISSN":["2050-084X"],"subject":["General
         Immunology and Microbiology","General Biochemistry, Genetics and Molecular
         Biology","General Medicine","General Neuroscience"],"published":{"date-parts":[[2021,12,7]]}}'
-  recorded_at: Tue, 11 Jul 2023 05:53:09 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:13 GMT
 - request:
     method: get
     uri: https://doi.org/10.31234/osf.io/5vfq6
@@ -1212,7 +1394,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:10 GMT
+      - Wed, 06 Sep 2023 14:24:14 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1224,13 +1406,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:04:41 GMT
+      - Wed, 06 Sep 2023 14:37:15 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MGseLZ1cSIejxMhjzSDG13CgCokg3yald5jOYHcW3utash678VG87J3ybR8qJv8NUhRrkp5JHFDRHTIQaHYD8mbtg1dnsApChdok9s0dkAjGEDMOnc8JN7hYfo3f%2BovgIO3NoiY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cjA0Qh0jvsvbOlP2nThCSXtGxRwlGzE7WXQAEEzsPEyZnfeo4ZFKqAbU%2FTtShmlxe3jRnGzIC9ZMd2PQfZXay8FbmgA4kWMc%2F7y%2FpBlWy%2FL7KW2j6DFI8rw%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1238,7 +1420,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec8d69ffa0a5b-AMS
+      - 80275fd88e2b929f-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1246,7 +1428,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.31234%2Fosf.io%2F5vfq6/transform">https://api.crossref.org/v1/works/10.31234%2Fosf.io%2F5vfq6/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:10 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:14 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.31234%2Fosf.io%2F5vfq6/transform
@@ -1268,7 +1450,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:10 GMT
+      - Wed, 06 Sep 2023 14:24:15 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -1329,7 +1511,7 @@ http_interactions:
         Beyond the \"Replication Crisis\": Understanding the Exploratory\/Confirmatory
         Data Analysis Continuum","prefix":"10.31234","author":[{"given":"Dustin","family":"Fife","sequence":"first","affiliation":[]},{"given":"Joseph
         Lee","family":"Rodgers","sequence":"additional","affiliation":[]}],"member":"15934","container-title":[],"original-title":[],"deposited":{"date-parts":[[2021,3,8]],"date-time":"2021-03-08T17:11:24Z","timestamp":1615223484000},"score":1,"resource":{"primary":{"URL":"https:\/\/osf.io\/5vfq6"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2019,12,18]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.31234\/osf.io\/5vfq6","relation":{},"published":{"date-parts":[[2019,12,18]]},"subtype":"preprint"}'
-  recorded_at: Tue, 11 Jul 2023 05:53:10 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:15 GMT
 - request:
     method: head
     uri: https://latimes.com/opinion/op-ed/la-oe-0214-firestein-science-replication-failure-20160214-story.html
@@ -1351,7 +1533,7 @@ http_interactions:
       Server:
       - awselb/2.0
       Date:
-      - Tue, 11 Jul 2023 05:53:11 GMT
+      - Wed, 06 Sep 2023 14:24:17 GMT
       Content-Type:
       - text/html
       Content-Length:
@@ -1363,7 +1545,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: ''
-  recorded_at: Tue, 11 Jul 2023 05:53:11 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:17 GMT
 - request:
     method: head
     uri: https://psyarxiv.com/nj4es
@@ -1383,7 +1565,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:11 GMT
+      - Wed, 06 Sep 2023 14:24:18 GMT
       Content-Type:
       - text/html
       Content-Length:
@@ -1394,9 +1576,9 @@ http_interactions:
       - Accept-Encoding
       - Accept-Encoding
       Last-Modified:
-      - Tue, 31 Jan 2023 02:21:53 GMT
+      - Tue, 31 Jan 2023 02:22:41 GMT
       Etag:
-      - '"63d87b41-1b9f"'
+      - '"63d87b71-1b9f"'
       Cache-Control:
       - no-cache, no-store, max-age=0, must-revalidate
       Expires:
@@ -1410,7 +1592,7 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: ''
-  recorded_at: Tue, 11 Jul 2023 05:53:11 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:18 GMT
 - request:
     method: get
     uri: https://doi.org/10.1038/s41562-021-01203-8
@@ -1432,7 +1614,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:12 GMT
+      - Wed, 06 Sep 2023 14:24:18 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1444,13 +1626,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:48:42 GMT
+      - Wed, 06 Sep 2023 14:30:09 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=U4Aen37Ha6DacGRLFUAq7ANUOafHTILfjeSqo7yzC86gGU7U6U0f9PxTznR8VAMaxIXXFBQ6talGtXtyApID13Fj8CEDJz%2F4VmbLNiCANp60usRrEflild7%2BNbYGRPeQjW716Tg%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yUjmuEdfpxyC4Gi3a4iPu2rOgDqnBV3FXvlWNvEVH6gnJarNu6GZpdKg9%2Fftg%2B%2FcNyazUA9%2F49qtykgU2CpxcRp5nEjJzhsvi4zmIfiXoEMjxYN5TAlOy%2BI%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1458,7 +1640,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec8e2bdf8b8bb-AMS
+      - 80275ff51b893674-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1466,7 +1648,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.1038%2Fs41562-021-01203-8/transform">https://api.crossref.org/v1/works/10.1038%2Fs41562-021-01203-8/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:12 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:18 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.1038%2Fs41562-021-01203-8/transform
@@ -1488,7 +1670,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:12 GMT
+      - Wed, 06 Sep 2023 14:24:19 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -1529,9 +1711,9 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"indexed":{"date-parts":[[2023,7,5]],"date-time":"2023-07-05T20:29:22Z","timestamp":1688588962237},"reference-count":39,"publisher":"Springer
+      string: '{"indexed":{"date-parts":[[2023,8,2]],"date-time":"2023-08-02T08:28:12Z","timestamp":1690964892451},"reference-count":39,"publisher":"Springer
         Science and Business Media LLC","issue":"12","license":[{"start":{"date-parts":[[2021,10,28]],"date-time":"2021-10-28T00:00:00Z","timestamp":1635379200000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.springernature.com\/gp\/researchers\/text-and-data-mining"},{"start":{"date-parts":[[2021,10,28]],"date-time":"2021-10-28T00:00:00Z","timestamp":1635379200000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/www.springernature.com\/gp\/researchers\/text-and-data-mining"}],"funder":[{"DOI":"10.13039\/100000925","name":"John
-        Templeton Foundation","doi-asserted-by":"publisher","award":["60937"]}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"DOI":"10.1038\/s41562-021-01203-8","type":"journal-article","created":{"date-parts":[[2021,10,28]],"date-time":"2021-10-28T16:02:41Z","timestamp":1635436961000},"page":"1602-1607","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":20,"title":"Aspiring
+        Templeton Foundation","doi-asserted-by":"publisher","award":["60937"]}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"DOI":"10.1038\/s41562-021-01203-8","type":"journal-article","created":{"date-parts":[[2021,10,28]],"date-time":"2021-10-28T16:02:41Z","timestamp":1635436961000},"page":"1602-1607","update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":22,"title":"Aspiring
         to greater intellectual humility in science","prefix":"10.1038","volume":"5","author":[{"ORCID":"http:\/\/orcid.org\/0000-0002-1588-7527","authenticated-orcid":false,"given":"Rink","family":"Hoekstra","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-3933-9752","authenticated-orcid":false,"given":"Simine","family":"Vazire","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2021,10,28]]},"reference":[{"key":"1203_CR1","doi-asserted-by":"publisher","unstructured":"[Editorial].
         Tell it like it is. Nat. Hum. Behav. https:\/\/doi.org\/10.1038\/s41562-020-0818-9
         (2020).","DOI":"10.1038\/s41562-020-0818-9"},{"key":"1203_CR2","unstructured":"Pashler,
@@ -1659,7 +1841,7 @@ http_interactions:
         Online","group":{"name":"ArticleHistory","label":"Article History"}},{"value":"The
         authors declare no competing interests.","order":1,"name":"Ethics","group":{"name":"EthicsHeading","label":"Competing
         interests"}}]}'
-  recorded_at: Tue, 11 Jul 2023 05:53:12 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:19 GMT
 - request:
     method: get
     uri: https://doi.org/10.1177/0956797611430953
@@ -1681,7 +1863,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:13 GMT
+      - Wed, 06 Sep 2023 14:24:21 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1693,13 +1875,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:48:42 GMT
+      - Wed, 06 Sep 2023 14:30:09 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bB%2B9bg0yDHwnwPr93uUK685CT%2B3iar%2BTEnRMC%2FC0okqLAhNP03Y%2FSAat9zCJ5ctSIXg3MnHq6IhdJmAx%2FptpyuVgk8TdiEa6P1ZXTeF1%2BjsiWvWYEyNe%2FL271kCtU8co77y%2Fk6Q%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=wkXt3DPm4DaUyJrPwD4fcPfiZRlzqvqETil2ECh0qNGQkbZ7dSEKheV1XiqU6%2B61xoEhnOSnd2SvUK03m19s4wGxbKKEeZaM5r9cEBDabvw2sTjLkXezM54%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1707,7 +1889,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec8e8ebf3b8b4-AMS
+      - 80276006eb349238-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1715,7 +1897,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.1177%2F0956797611430953/transform">https://api.crossref.org/v1/works/10.1177%2F0956797611430953/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:13 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:21 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.1177%2F0956797611430953/transform
@@ -1737,7 +1919,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:13 GMT
+      - Wed, 06 Sep 2023 14:24:22 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -1775,7 +1957,7 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"indexed":{"date-parts":[[2023,7,10]],"date-time":"2023-07-10T20:52:51Z","timestamp":1689022371000},"reference-count":31,"publisher":"SAGE
+      string: '{"indexed":{"date-parts":[[2023,9,6]],"date-time":"2023-09-06T11:06:52Z","timestamp":1693998412490},"reference-count":31,"publisher":"SAGE
         Publications","issue":"5","license":[{"start":{"date-parts":[[2012,4,16]],"date-time":"2012-04-16T00:00:00Z","timestamp":1334534400000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/journals.sagepub.com\/page\/policies\/text-and-data-mining-license"}],"content-domain":{"domain":["journals.sagepub.com"],"crossmark-restriction":true},"published-print":{"date-parts":[[2012,5]]},"abstract":"<jats:p>
         Cases of clear scientific misconduct have received significant media attention
         recently, but less flagrantly questionable research practices may be more
@@ -1788,7 +1970,7 @@ http_interactions:
         different estimation methods, we found that the percentage of respondents
         who have engaged in questionable practices was surprisingly high. This finding
         suggests that some questionable practices may constitute the prevailing research
-        norm. <\/jats:p>","DOI":"10.1177\/0956797611430953","type":"journal-article","created":{"date-parts":[[2012,4,17]],"date-time":"2012-04-17T05:55:06Z","timestamp":1334642106000},"page":"524-532","update-policy":"http:\/\/dx.doi.org\/10.1177\/sage-journals-update-policy","source":"Crossref","is-referenced-by-count":1193,"title":"Measuring
+        norm. <\/jats:p>","DOI":"10.1177\/0956797611430953","type":"journal-article","created":{"date-parts":[[2012,4,17]],"date-time":"2012-04-17T05:55:06Z","timestamp":1334642106000},"page":"524-532","update-policy":"http:\/\/dx.doi.org\/10.1177\/sage-journals-update-policy","source":"Crossref","is-referenced-by-count":1215,"title":"Measuring
         the Prevalence of Questionable Research Practices With Incentives for Truth
         Telling","prefix":"10.1177","volume":"23","author":[{"given":"Leslie K.","family":"John","sequence":"first","affiliation":[{"name":"Marketing
         Unit, Harvard Business School"}]},{"given":"George","family":"Loewenstein","sequence":"additional","affiliation":[{"name":"Department
@@ -1803,7 +1985,7 @@ http_interactions:
         J. P.","year":"1993","journal-title":"American Scientist"},{"key":"bibr35-0956797611430953","doi-asserted-by":"publisher","DOI":"10.1037\/0033-2909.133.5.859"},{"key":"bibr36-0956797611430953","doi-asserted-by":"publisher","DOI":"10.1126\/science.280.5365.867"},{"key":"bibr37-0956797611430953","doi-asserted-by":"publisher","DOI":"10.1080\/01621459.1965.10480775"},{"key":"bibr38-0956797611430953","doi-asserted-by":"publisher","DOI":"10.1038\/480007a"}],"container-title":"Psychological
         Science","original-title":[],"language":"en","link":[{"URL":"http:\/\/journals.sagepub.com\/doi\/pdf\/10.1177\/0956797611430953","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/journals.sagepub.com\/doi\/full-xml\/10.1177\/0956797611430953","content-type":"application\/xml","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/journals.sagepub.com\/doi\/pdf\/10.1177\/0956797611430953","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,11,5]],"date-time":"2020-11-05T21:17:52Z","timestamp":1604611072000},"score":1,"resource":{"primary":{"URL":"http:\/\/journals.sagepub.com\/doi\/10.1177\/0956797611430953"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2012,4,16]]},"references-count":31,"journal-issue":{"issue":"5","published-print":{"date-parts":[[2012,5]]}},"alternative-id":["10.1177\/0956797611430953"],"URL":"http:\/\/dx.doi.org\/10.1177\/0956797611430953","relation":{},"ISSN":["0956-7976","1467-9280"],"subject":["General
         Psychology"],"container-title-short":"Psychol Sci","published":{"date-parts":[[2012,4,16]]}}'
-  recorded_at: Tue, 11 Jul 2023 05:53:13 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:22 GMT
 - request:
     method: get
     uri: https://doi.org/10.1207/s15327965pli0102_1
@@ -1825,7 +2007,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:14 GMT
+      - Wed, 06 Sep 2023 14:24:23 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1837,13 +2019,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:14:16 GMT
+      - Wed, 06 Sep 2023 15:22:11 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ZtPIlmHv3P5ipC90GGNiV%2BAmBkgk56Pk5XZnL%2FAv0brxB2ufeD6eWajvh%2FBAorLZWTFqOFPR%2Bo6FkIaTioPxObCovZEH3W9zGl26%2BvKbMZUU5xkCIe9diQ7tic0COT9BiIxNvGw%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ar5rZMPCVZVPT96oovcX%2BCtWSo7F1k%2BxkA9C9N24NIL87WiUkFV9dmNU1F%2BeYKDtQW0a6hnggjo59mBYJZMf73c24%2BX2OkLxAEzZ4x3sWz%2FeEVMKqM1qMvw%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1851,7 +2033,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec8ee2e610b7b-AMS
+      - 8027600f1f165c1a-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1859,7 +2041,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.1207%2Fs15327965pli0102_1/transform">https://api.crossref.org/v1/works/10.1207%2Fs15327965pli0102_1/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:13 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:22 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.1207%2Fs15327965pli0102_1/transform
@@ -1881,7 +2063,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:14 GMT
+      - Wed, 06 Sep 2023 14:24:24 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -1916,8 +2098,8 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"indexed":{"date-parts":[[2023,7,6]],"date-time":"2023-07-06T11:51:40Z","timestamp":1688644300893},"reference-count":114,"publisher":"Informa
-        UK Limited","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1990,4]]},"DOI":"10.1207\/s15327965pli0102_1","type":"journal-article","created":{"date-parts":[[2006,3,17]],"date-time":"2006-03-17T08:48:55Z","timestamp":1142585335000},"page":"108-141","source":"Crossref","is-referenced-by-count":331,"title":"Appraising
+      string: '{"indexed":{"date-parts":[[2023,9,5]],"date-time":"2023-09-05T21:45:13Z","timestamp":1693950313590},"reference-count":114,"publisher":"Informa
+        UK Limited","issue":"2","content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[1990,4]]},"DOI":"10.1207\/s15327965pli0102_1","type":"journal-article","created":{"date-parts":[[2006,3,17]],"date-time":"2006-03-17T08:48:55Z","timestamp":1142585335000},"page":"108-141","source":"Crossref","is-referenced-by-count":333,"title":"Appraising
         and Amending Theories: The Strategy of Lakatosian Defense and Two Principles
         that Warrant It","prefix":"10.1080","volume":"1","author":[{"given":"Paul
         E.","family":"Meehl","sequence":"first","affiliation":[]}],"member":"301","reference":[{"key":"p_1_1","doi-asserted-by":"crossref","first-page":"1","DOI":"10.1037\/h0093360","volume":"47","author":"Allport
@@ -2104,7 +2286,7 @@ http_interactions:
         J. (1978). Reliable knowledge. New York: Cambridge University Press."}],"container-title":"Psychological
         Inquiry","original-title":[],"language":"en","link":[{"URL":"http:\/\/www.tandfonline.com\/doi\/pdf\/10.1207\/s15327965pli0102_1","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2019,4,17]],"date-time":"2019-04-17T07:35:32Z","timestamp":1555486532000},"score":1,"resource":{"primary":{"URL":"http:\/\/www.tandfonline.com\/doi\/abs\/10.1207\/s15327965pli0102_1"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[1990,4]]},"references-count":114,"journal-issue":{"issue":"2","published-print":{"date-parts":[[1990,4]]}},"alternative-id":["10.1207\/s15327965pli0102_1"],"URL":"http:\/\/dx.doi.org\/10.1207\/s15327965pli0102_1","relation":{},"ISSN":["1047-840X","1532-7965"],"subject":["General
         Psychology"],"container-title-short":"Psychological Inquiry","published":{"date-parts":[[1990,4]]}}'
-  recorded_at: Tue, 11 Jul 2023 05:53:14 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:24 GMT
 - request:
     method: get
     uri: https://doi.org/10.31234/osf.io/wxn58
@@ -2126,7 +2308,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:14 GMT
+      - Wed, 06 Sep 2023 14:24:25 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -2138,13 +2320,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:04:41 GMT
+      - Wed, 06 Sep 2023 14:34:06 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nyAlwuqhMTNLpCNI5HI3TLma7jFgRPGzs2kRkY%2Ff5OxHWapkSmw63%2FJKqmFb22j117th0b2%2FIaDEeYOXPwiiIqdsbT1wkj5My33w1%2BM3PP9sv0TSZZCNNafkn4WJMz0CKJtojU8%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gbFwCdqFXl1K0rnZ6r0OcdWOyxGGfXW7Vqpszzvbz8ciqIVW1YDZkiDYsjHx%2FPT9uRjOfQOtsgLWakWOIl5NUEyJtwyBGzhgPOBV4NgB%2B1FxBqtTkszD7PA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -2152,7 +2334,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec8f3ca92b79a-AMS
+      - 8027601b7a1a9162-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -2160,7 +2342,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.31234%2Fosf.io%2Fwxn58/transform">https://api.crossref.org/v1/works/10.31234%2Fosf.io%2Fwxn58/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:14 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:24 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.31234%2Fosf.io%2Fwxn58/transform
@@ -2182,7 +2364,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:15 GMT
+      - Wed, 06 Sep 2023 14:24:26 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -2218,7 +2400,7 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"indexed":{"date-parts":[[2023,7,5]],"date-time":"2023-07-05T20:26:52Z","timestamp":1688588812190},"posted":{"date-parts":[[2020,9,23]]},"group-title":"PsyArXiv","reference-count":0,"publisher":"Center
+      string: '{"indexed":{"date-parts":[[2023,7,26]],"date-time":"2023-07-26T12:14:43Z","timestamp":1690373683508},"posted":{"date-parts":[[2020,9,23]]},"group-title":"PsyArXiv","reference-count":0,"publisher":"Center
         for Open Science","license":[{"start":{"date-parts":[[2020,9,23]],"date-time":"2020-09-23T00:00:00Z","timestamp":1600819200000},"content-version":"unspecified","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/legalcode"}],"content-domain":{"domain":[],"crossmark-restriction":false},"abstract":"<p>This
         is an archived version of a blog post on preregistration. The first half of
         the post argues that there is not a strong justification for preregistration
@@ -2229,7 +2411,7 @@ http_interactions:
         and as the original has been cited multiple times there is value in ensuring
         that some version of the blog post remains accessible.]<\/p>","DOI":"10.31234\/osf.io\/wxn58","type":"posted-content","created":{"date-parts":[[2020,9,23]],"date-time":"2020-09-23T06:34:16Z","timestamp":1600842856000},"source":"Crossref","is-referenced-by-count":7,"title":"Paths
         in strange spaces: A comment on preregistration","prefix":"10.31234","author":[{"ORCID":"http:\/\/orcid.org\/0000-0001-7648-6578","authenticated-orcid":true,"given":"Danielle","family":"Navarro","sequence":"first","affiliation":[]}],"member":"15934","container-title":[],"original-title":[],"deposited":{"date-parts":[[2020,9,23]],"date-time":"2020-09-23T14:32:57Z","timestamp":1600871577000},"score":1,"resource":{"primary":{"URL":"https:\/\/osf.io\/wxn58"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2020,9,23]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.31234\/osf.io\/wxn58","relation":{},"published":{"date-parts":[[2020,9,23]]},"subtype":"preprint"}'
-  recorded_at: Tue, 11 Jul 2023 05:53:15 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:26 GMT
 - request:
     method: get
     uri: https://doi.org/10.1016/j.tics.2019.07.009
@@ -2251,7 +2433,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:15 GMT
+      - Wed, 06 Sep 2023 14:24:27 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -2263,7 +2445,7 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:14:16 GMT
+      - Wed, 06 Sep 2023 15:22:11 GMT
       Link:
       - "<https://dul.usage.elsevier.com/doi/>; rel=dul"
       - "<https://dul.usage.elsevier.com/doi/>; rel=dul"
@@ -2272,7 +2454,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9II7bMSj9n8j90iHczqBA3pXvyM4t1VS8xsLgKI%2FXitDiCjrEjJnA%2Fjbvl1OAwax6%2BLWxwDbeXVKpxS5DgdYPfz3lBZW4bZhvo7COZS9aCPNOStliXdXFF92P2iCn1n%2FNEKcryc%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=7gPzZpMHZ5EPmu%2FS3gKjm2A0%2BbUElkYSoh0%2FglBYB7t5JshvyQjcqwKfcr6e50p5EGQbi5SNNr%2Bo%2Bp9TqTNPlPBVD3ZozdBPi1xy7Oxk1GsUxBmnDPSm4h0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -2280,7 +2462,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec8f8abe1b89a-AMS
+      - 80276028fa412c46-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -2288,7 +2470,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.1016%2Fj.tics.2019.07.009/transform">https://api.crossref.org/v1/works/10.1016%2Fj.tics.2019.07.009/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:15 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:27 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.1016%2Fj.tics.2019.07.009/transform
@@ -2310,7 +2492,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:16 GMT
+      - Wed, 06 Sep 2023 14:24:28 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -2347,13 +2529,13 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"indexed":{"date-parts":[[2023,7,5]],"date-time":"2023-07-05T20:30:37Z","timestamp":1688589037426},"reference-count":14,"publisher":"Elsevier
+      string: '{"indexed":{"date-parts":[[2023,9,3]],"date-time":"2023-09-03T14:49:33Z","timestamp":1693752573917},"reference-count":14,"publisher":"Elsevier
         BV","issue":"10","license":[{"start":{"date-parts":[[2019,10,1]],"date-time":"2019-10-01T00:00:00Z","timestamp":1569888000000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/www.elsevier.com\/tdm\/userlicense\/1.0\/"}],"funder":[{"DOI":"10.13039\/501100011730","name":"Templeton
         World Charity Foundation","doi-asserted-by":"publisher"},{"DOI":"10.13039\/501100006188","name":"Einstein
         Stiftung Berlin","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100000002","name":"National
         Institutes of Health","doi-asserted-by":"publisher"},{"DOI":"10.13039\/100000925","name":"John
         Templeton Foundation","doi-asserted-by":"publisher"},{"DOI":"10.13039\/501100013437","name":"Templeton
-        Religion Trust","doi-asserted-by":"publisher"}],"content-domain":{"domain":["clinicalkey.jp","clinicalkey.com","cell.com","clinicalkey.es","clinicalkey.fr","clinicalkey.com.au","bmn.com","elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"published-print":{"date-parts":[[2019,10]]},"DOI":"10.1016\/j.tics.2019.07.009","type":"journal-article","created":{"date-parts":[[2019,8,14]],"date-time":"2019-08-14T11:45:19Z","timestamp":1565783119000},"page":"815-818","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":123,"title":"Preregistration
+        Religion Trust","doi-asserted-by":"publisher"}],"content-domain":{"domain":["clinicalkey.jp","clinicalkey.com","cell.com","clinicalkey.es","clinicalkey.fr","clinicalkey.com.au","bmn.com","elsevier.com","sciencedirect.com"],"crossmark-restriction":true},"published-print":{"date-parts":[[2019,10]]},"DOI":"10.1016\/j.tics.2019.07.009","type":"journal-article","created":{"date-parts":[[2019,8,14]],"date-time":"2019-08-14T11:45:19Z","timestamp":1565783119000},"page":"815-818","update-policy":"http:\/\/dx.doi.org\/10.1016\/elsevier_cm_policy","source":"Crossref","is-referenced-by-count":133,"title":"Preregistration
         Is Hard, And Worthwhile","prefix":"10.1016","volume":"23","author":[{"given":"Brian
         A.","family":"Nosek","sequence":"first","affiliation":[]},{"given":"Emorie
         D.","family":"Beck","sequence":"additional","affiliation":[]},{"given":"Lorne","family":"Campbell","sequence":"additional","affiliation":[]},{"given":"Jessica
@@ -2399,7 +2581,7 @@ http_interactions:
         Title"},{"value":"https:\/\/doi.org\/10.1016\/j.tics.2019.07.009","name":"articlelink","label":"CrossRef
         DOI link to publisher maintained version"},{"value":"simple-article","name":"content_type","label":"Content
         Type"},{"value":"\u00a9 2019 Elsevier Ltd. All rights reserved.","name":"copyright","label":"Copyright"}]}'
-  recorded_at: Tue, 11 Jul 2023 05:53:16 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:28 GMT
 - request:
     method: get
     uri: https://doi.org/10.1525/collabra.24091
@@ -2421,7 +2603,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:16 GMT
+      - Wed, 06 Sep 2023 14:24:28 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -2433,13 +2615,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:48:42 GMT
+      - Wed, 06 Sep 2023 15:22:11 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sR4TDZxXUl%2FHiOOV45xHR2qdSf7M8Gez9%2Bn3greoGzASJa2uQJXFwV5istjWsGS6%2FEgj4MmkMz0jUOcl0CiadvTQ3Vmbf%2F%2BqW1FO976QnsifXbusVmaM9N65IhMFsegnpBAx3dY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xcpHWJv7kgXoDzYTSpk7Wy%2Bl1yrMbTzqJpK99Gw8acnfUzWAoY0a8Zt652aBWpnDRkA2Cyeo%2BeXfQobwQVvOyQ6ThgG5mr36dzvPg3blOiFKlTV5FLm1vWc%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -2447,7 +2629,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec8fddc091c92-AMS
+      - 80276032adc82bb5-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -2455,7 +2637,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.1525%2Fcollabra.24091/transform">https://api.crossref.org/v1/works/10.1525%2Fcollabra.24091/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:16 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:28 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.1525%2Fcollabra.24091/transform
@@ -2477,7 +2659,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:17 GMT
+      - Wed, 06 Sep 2023 14:24:29 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -2539,7 +2721,7 @@ http_interactions:
         of Psychology, Macquarie University, Sydney, Australia"}]}],"member":"408","published-online":{"date-parts":[[2021,5,25]]},"reference":[{"key":"2021052516311117000_ref-59381"},{"key":"2021052516311117000_ref-59348"},{"key":"2021052516311117000_ref-59303"},{"key":"2021052516311117000_ref-59370"},{"key":"2021052516311117000_ref-59343"},{"key":"2021052516311117000_ref-59374"},{"key":"2021052516311117000_ref-59322"},{"key":"2021052516311117000_ref-59349"},{"key":"2021052516311117000_ref-59379"},{"key":"2021052516311117000_ref-59410"},{"key":"2021052516311117000_ref-59329"},{"key":"2021052516311117000_ref-59373"},{"key":"2021052516311117000_ref-59411"},{"key":"2021052516311117000_ref-59350"},{"key":"2021052516311117000_ref-59293"},{"key":"2021052516311117000_ref-59359"},{"key":"2021052516311117000_ref-59347"},{"key":"2021052516311117000_ref-59371"},{"key":"2021052516311117000_ref-59383"},{"key":"2021052516311117000_ref-59287"},{"key":"2021052516311117000_ref-59363"},{"key":"2021052516311117000_ref-59369"},{"key":"2021052516311117000_ref-59352"},{"key":"2021052516311117000_ref-59309"},{"key":"2021052516311117000_ref-59331"},{"key":"2021052516311117000_ref-59360"},{"key":"2021052516311117000_ref-59325"},{"key":"2021052516311117000_ref-59376"},{"key":"2021052516311117000_ref-59342"},{"key":"2021052516311117000_ref-59338"},{"key":"2021052516311117000_ref-59354"},{"key":"2021052516311117000_ref-59300"},{"key":"2021052516311117000_ref-59299"},{"key":"2021052516311117000_ref-59340"},{"key":"2021052516311117000_ref-59330"},{"key":"2021052516311117000_ref-59321"},{"key":"2021052516311117000_ref-59324"},{"key":"2021052516311117000_ref-59288"},{"key":"2021052516311117000_ref-59305"},{"key":"2021052516311117000_ref-59304"},{"key":"2021052516311117000_ref-59292"},{"key":"2021052516311117000_ref-59361"},{"key":"2021052516311117000_ref-59368"},{"key":"2021052516311117000_ref-59306"},{"key":"2021052516311117000_ref-59366"},{"key":"2021052516311117000_ref-59377"},{"key":"2021052516311117000_ref-59375"},{"key":"2021052516311117000_ref-59372"},{"key":"2021052516311117000_ref-59314"},{"key":"2021052516311117000_ref-59323"},{"key":"2021052516311117000_ref-59327"},{"key":"2021052516311117000_ref-59310"},{"key":"2021052516311117000_ref-59311"},{"key":"2021052516311117000_ref-59302"},{"key":"2021052516311117000_ref-59344"},{"key":"2021052516311117000_ref-59382"},{"key":"2021052516311117000_ref-59364"},{"key":"2021052516311117000_ref-59320"},{"key":"2021052516311117000_ref-59367"},{"key":"2021052516311117000_ref-59294"},{"key":"2021052516311117000_ref-59335"},{"key":"2021052516311117000_ref-59332"},{"key":"2021052516311117000_ref-59333"},{"key":"2021052516311117000_ref-59387"},{"key":"2021052516311117000_ref-59297"},{"key":"2021052516311117000_ref-59353"},{"key":"2021052516311117000_ref-59318"},{"key":"2021052516311117000_ref-59357"},{"key":"2021052516311117000_ref-59351"},{"key":"2021052516311117000_ref-59291"},{"key":"2021052516311117000_ref-59334"},{"key":"2021052516311117000_ref-59295"},{"key":"2021052516311117000_ref-59345"},{"key":"2021052516311117000_ref-59326"},{"key":"2021052516311117000_ref-59380"},{"key":"2021052516311117000_ref-59315"},{"key":"2021052516311117000_ref-59346"},{"key":"2021052516311117000_ref-59328"},{"key":"2021052516311117000_ref-59341"},{"key":"2021052516311117000_ref-59384"},{"key":"2021052516311117000_ref-59307"},{"key":"2021052516311117000_ref-59336"},{"key":"2021052516311117000_ref-59386"},{"key":"2021052516311117000_ref-59317"},{"key":"2021052516311117000_ref-59316"},{"key":"2021052516311117000_ref-59362"},{"key":"2021052516311117000_ref-59356"},{"key":"2021052516311117000_ref-59298"},{"key":"2021052516311117000_ref-59296"},{"key":"2021052516311117000_ref-59365"},{"key":"2021052516311117000_ref-59301"},{"key":"2021052516311117000_ref-59339"},{"key":"2021052516311117000_ref-59804"},{"key":"2021052516311117000_ref-59290"},{"key":"2021052516311117000_ref-59289"},{"key":"2021052516311117000_ref-59378"},{"key":"2021052516311117000_ref-59319"},{"key":"2021052516311117000_ref-59355"},{"key":"2021052516311117000_ref-59337"},{"key":"2021052516311117000_ref-59312"},{"key":"2021052516311117000_ref-59358"},{"key":"2021052516311117000_ref-59308"},{"key":"2021052516311117000_ref-59385"},{"key":"2021052516311117000_ref-59313"}],"container-title":"Collabra:
         Psychology","original-title":[],"language":"en","link":[{"URL":"http:\/\/online.ucpress.edu\/collabra\/article-pdf\/doi\/10.1525\/collabra.24091\/464786\/collabra_2021_7_1_24091.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"syndication"},{"URL":"http:\/\/online.ucpress.edu\/collabra\/article-pdf\/doi\/10.1525\/collabra.24091\/464786\/collabra_2021_7_1_24091.pdf","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,5,25]],"date-time":"2021-05-25T16:31:32Z","timestamp":1621960292000},"score":1,"resource":{"primary":{"URL":"https:\/\/online.ucpress.edu\/collabra\/article\/7\/1\/24091\/117222\/A-Call-for-Greater-Modesty-in-Psychology-and"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2021]]},"references-count":104,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2021,5,25]]}},"URL":"http:\/\/dx.doi.org\/10.1525\/collabra.24091","relation":{},"ISSN":["2474-7394"],"subject":["General
         Psychology"],"published-other":{"date-parts":[[2021]]},"published":{"date-parts":[[2021]]}}'
-  recorded_at: Tue, 11 Jul 2023 05:53:16 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:30 GMT
 - request:
     method: get
     uri: https://doi.org/10.31222/osf.io/h8xjw
@@ -2561,7 +2743,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:17 GMT
+      - Wed, 06 Sep 2023 14:24:31 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -2573,13 +2755,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Tue, 11 Jul 2023 06:48:42 GMT
+      - Wed, 06 Sep 2023 14:30:09 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3ek7di0zfdhC6WIoDRwhO8m1Cp1xGs1D%2FcbLBJBz%2B0i1uHFU1Y%2BXQuHa1tDCwR2if9GFh%2FraUfuHgLkSywTQCYjJhAwrWxQ9Ny%2FPTYg8MvNNdv6SH23UFekwLf2lWKW4buIrAjY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=QiKeECVJddBqsLM1Nln3fLZFBElS2JDOpzT2KiAz6tflUuFVi1gmLocJPfn2mgDiaTUl5j%2FPEPmyGKpjtMUeQIC1i1Mz5vmEK0SSKDynnJ%2FFeOcO17ihxsQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -2587,7 +2769,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7e4ec902bf2db8eb-AMS
+      - 80276043e99c9a2d-FRA
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -2595,7 +2777,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.31222%2Fosf.io%2Fh8xjw/transform">https://api.crossref.org/v1/works/10.31222%2Fosf.io%2Fh8xjw/transform</a></body></html>
-  recorded_at: Tue, 11 Jul 2023 05:53:17 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:31 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.31222%2Fosf.io%2Fh8xjw/transform
@@ -2617,7 +2799,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:17 GMT
+      - Wed, 06 Sep 2023 14:24:32 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -2704,7 +2886,7 @@ http_interactions:
         Margarida","family":"Oliveira","sequence":"additional","affiliation":[]},{"given":"Sarah","family":"Ashcroft-Jones","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-1697-4198","authenticated-orcid":true,"given":"Bradley
         James","family":"Baker","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-2415-2933","authenticated-orcid":true,"given":"Jelte
         M.","family":"Wicherts","sequence":"additional","affiliation":[]}],"member":"15934","container-title":[],"original-title":[],"deposited":{"date-parts":[[2023,5,11]],"date-time":"2023-05-11T05:02:40Z","timestamp":1683781360000},"score":1,"resource":{"primary":{"URL":"https:\/\/osf.io\/h8xjw"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2023,5,10]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.31222\/osf.io\/h8xjw","relation":{},"published":{"date-parts":[[2023,5,10]]},"subtype":"preprint"}'
-  recorded_at: Tue, 11 Jul 2023 05:53:17 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:32 GMT
 - request:
     method: head
     uri: https://metascience.info/events/researchers-decision-making-navigating-ambiguity-in-research-practice
@@ -2724,7 +2906,7 @@ http_interactions:
       message: Moved Permanently
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:19 GMT
+      - Wed, 06 Sep 2023 14:24:33 GMT
       Server:
       - Apache
       Wpo-Cache-Status:
@@ -2742,7 +2924,7 @@ http_interactions:
       Cache-Control:
       - max-age=7200
       Expires:
-      - Tue, 11 Jul 2023 07:53:19 GMT
+      - Wed, 06 Sep 2023 16:24:33 GMT
       Host-Header:
       - c2hhcmVkLmJsdWVob3N0LmNvbQ==
       Content-Type:
@@ -2750,7 +2932,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 11 Jul 2023 05:53:19 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:36 GMT
 - request:
     method: head
     uri: https://osf.io/tqwgp
@@ -2770,7 +2952,7 @@ http_interactions:
       message: Permanent Redirect
     headers:
       Date:
-      - Tue, 11 Jul 2023 05:53:20 GMT
+      - Wed, 06 Sep 2023 14:24:37 GMT
       Content-Type:
       - text/html; charset=utf-8
       Content-Length:
@@ -2794,10 +2976,10 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 11 Jul 2023 05:53:20 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:37 GMT
 - request:
     method: head
-    uri: https://en.wikipedia.org/wiki/There_are_unknown_unknowns
+    uri: https://en.wikipedia.org/wiki/there_are_unknown_unknowns
     body:
       encoding: UTF-8
       string: ''
@@ -2810,31 +2992,33 @@ http_interactions:
       - http.rb/5.1.1
   response:
     status:
-      code: 200
-      message: OK
+      code: 301
+      message: Moved Permanently
     headers:
       Date:
-      - Mon, 10 Jul 2023 21:45:10 GMT
-      Vary:
-      - Accept-Encoding,Cookie,Authorization
+      - Wed, 06 Sep 2023 14:24:38 GMT
       Server:
-      - ATS/9.1.4
+      - mw1371.eqiad.wmnet
       X-Content-Type-Options:
       - nosniff
-      Content-Language:
-      - en
+      Vary:
+      - Accept-Encoding,X-Forwarded-Proto,Cookie
       Last-Modified:
-      - Sun, 09 Jul 2023 21:35:55 GMT
+      - Wed, 06 Sep 2023 14:24:38 GMT
+      Location:
+      - https://en.wikipedia.org/wiki/There_are_unknown_unknowns
+      Content-Length:
+      - '0'
       Content-Type:
       - text/html; charset=UTF-8
       Age:
-      - '29289'
+      - '0'
       X-Cache:
-      - cp3056 miss, cp3058 hit/4
+      - cp3067 miss, cp3067 miss
       X-Cache-Status:
-      - hit-front
+      - miss
       Server-Timing:
-      - cache;desc="hit-front", host;desc="cp3058"
+      - cache;desc="miss", host;desc="cp3067"
       Strict-Transport-Security:
       - max-age=106384710; includeSubDomains; preload
       Report-To:
@@ -2844,25 +3028,136 @@ http_interactions:
       - '{ "report_to": "wm_nel", "max_age": 604800, "failure_fraction": 0.05, "success_fraction":
         0.0}'
       Set-Cookie:
-      - GeoIP=DE:NW:Gelsenkirchen:51.52:7.13:v4; Path=/; secure; Domain=.wikipedia.org
+      - GeoIP=DE:::51.30:9.49:v4; Path=/; secure; Domain=.wikipedia.org
       - NetworkProbeLimit=0.001;Path=/;Secure;Max-Age=3600
-      - WMF-DP=0c8;Path=/;HttpOnly;secure;Expires=Tue, 11 Jul 2023 00:00:00 GMT
-      - WMF-Last-Access-Global=11-Jul-2023;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Sat,
-        12 Aug 2023 00:00:00 GMT
-      - WMF-Last-Access=11-Jul-2023;Path=/;HttpOnly;secure;Expires=Sat, 12 Aug 2023
-        00:00:00 GMT
+      - WMF-Last-Access-Global=06-Sep-2023;Path=/;Domain=.wikipedia.org;HttpOnly;secure;Expires=Sun,
+        08 Oct 2023 12:00:00 GMT
+      - WMF-Last-Access=06-Sep-2023;Path=/;HttpOnly;secure;Expires=Sun, 08 Oct 2023
+        12:00:00 GMT
       X-Client-Ip:
-      - 2001:16b8:1031:2700:9ca8:dc54:1f31:51f0
+      - 185.104.138.31
       Cache-Control:
       - private, s-maxage=0, max-age=0, must-revalidate
-      Accept-Ranges:
-      - bytes
-      Content-Length:
-      - '192127'
       Connection:
       - close
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Tue, 11 Jul 2023 05:53:20 GMT
+  recorded_at: Wed, 06 Sep 2023 14:24:38 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.3386/w27250
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 06 Sep 2023 14:30:56 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '205'
+      Connection:
+      - close
+      Location:
+      - https://api.crossref.org/v1/works/10.3386%2Fw27250/transform
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 06 Sep 2023 15:22:11 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=L8xr4YRwAIX6n7ih9JpMPjENWE75VXzaAWUKeksM%2FEccS6ALy9Mtzaj1PIba4G5U82mZa8d4L6n9W6XADiwaJofyvtNBp5E3ilir7cFPvgEMi%2F6slvBUNKo%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 802769aa6a5e9bc8-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://api.crossref.org/v1/works/10.3386%2Fw27250/transform">https://api.crossref.org/v1/works/10.3386%2Fw27250/transform</a></body></html>
+  recorded_at: Wed, 06 Sep 2023 14:30:56 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/v1/works/10.3386%2Fw27250/transform
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - api.crossref.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Sep 2023 14:31:00 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept
+      Link:
+      - <http://dx.doi.org/10.3386/w27250>; rel="canonical"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: '{"institution":[{"name":"National Bureau of Economic Research","acronym":["NBER"],"place":["Cambridge,
+        MA"]}],"indexed":{"date-parts":[[2023,7,19]],"date-time":"2023-07-19T19:51:15Z","timestamp":1689796275853},"publisher-location":"Cambridge,
+        MA","reference-count":0,"publisher":"National Bureau of Economic Research","content-domain":{"domain":[],"crossmark-restriction":false},"DOI":"10.3386\/w27250","type":"report","created":{"date-parts":[[2020,6,2]],"date-time":"2020-06-02T01:54:11Z","timestamp":1591062851000},"source":"Crossref","is-referenced-by-count":6,"title":"Research
+        Registries: Facts, Myths, and Possible Improvements","prefix":"10.3386","author":[{"given":"Eliot","family":"Abrams","sequence":"first","affiliation":[]},{"given":"Jonathan","family":"Libgober","sequence":"additional","affiliation":[]},{"given":"John","family":"List","sequence":"additional","affiliation":[]}],"member":"1960","published-online":{"date-parts":[[2020,5]]},"container-title":[],"original-title":[],"deposited":{"date-parts":[[2021,4,16]],"date-time":"2021-04-16T15:57:54Z","timestamp":1618588674000},"score":1,"resource":{"primary":{"URL":"http:\/\/www.nber.org\/papers\/w27250.pdf"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2020,5]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.3386\/w27250","relation":{},"published":{"date-parts":[[2020,5]]}}'
+  recorded_at: Wed, 06 Sep 2023 14:31:00 GMT
 recorded_with: VCR 6.2.0

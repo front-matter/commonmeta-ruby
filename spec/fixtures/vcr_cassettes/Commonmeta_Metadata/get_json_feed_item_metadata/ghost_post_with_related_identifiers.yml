@@ -1,0 +1,366 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/posts/8a4de443-3347-4b82-b57d-e3c82b6485fc
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '9265'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 06 Sep 2023 14:27:19 GMT
+      Etag:
+      - '"1380dhtw0b375b"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/posts/[[...params]]"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::kdp9q-1694010438861-7c30b2b1e8ec
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":"8a4de443-3347-4b82-b57d-e3c82b6485fc","doi":"https://doi.org/10.53731/r79v4e1-97aq74v-ag578","url":"https://blog.front-matter.io/posts/differences-between-orcid-and-datacite-metadata","title":"Differences
+        between ORCID and DataCite Metadata","summary":"One of the first tasks for
+        DataCite in the European Commission-funded THOR project, which started in
+        June, was to contribute to a comparison of the ORCID and DataCite metadata
+        standards.","content_html":" <p><img src=\"https://blog.front-matter.io/content/images/2023/09/cat_and_dog-1.png\"
+        /></p><p>One of the first tasks for DataCite in the European Commission-funded
+        <a href=\"http://project-thor.eu/\">THOR project</a>, which started in June,
+        was to contribute to a comparison of the ORCID and DataCite metadata standards.
+        Together with ORCID, CERN, the British Library and Dryad we looked at how
+        contributors, organizations and artefacts - and the relations between them
+        - are described in the respective metadata schemata, and how they are implemented
+        in two example data repositories, <a href=\"http://archaeologydataservice.ac.uk/\">Archaeology
+        Data Service</a> and <a href=\"https://www.datadryad.org/\">Dryad Digital
+        Repository</a>.</p>\n<p>The focus of our work was on identifying major gaps.
+        Our report was finished and made publicly available last week (Fenner et al.,
+        <a href=\"https://blog.datacite.org/differences-between-orcid-and-datacite-metadata/#ref-https://doi.org/10.5281/ZENODO.30799\">2015</a>).
+        The key findings are summarized below:</p>\n<ul><li>Common Approach to Personal
+        Names</li><li>Standardized Contributor Roles</li><li>Standardized Relation
+        Types</li><li>Metadata for Organisations</li><li>Persistent Identifiers for
+        Projects</li><li>Harmonization of ORCID and DataCite Metadata</li></ul>\n<h3>Common
+        Approach to Personal Names</h3>\n<p>While a single input field for contributor
+        names is common, separate fields for given and family names are required for
+        <a href=\"http://docs.citationstyles.org/en/stable/specification.html#names\">proper
+        formatting of citations</a>. As long as citations to scholarly content rely
+        on properly formatted text rather than persistent identifiers, services holding
+        bibliographic information have to support these separate fields. Further work
+        is needed to help with the transition to separate input fields for given and
+        famliy names, and to handle contributors that are organizations or groups
+        of people.</p>\n<h3>Standardized Contributor Roles</h3>\n<p>The currently
+        existing vocabularies for <strong>contributor type</strong> (DataCite) and
+        <strong>contributor role</strong> (ORCID) provide a high-level description,
+        but fall short when trying to describe the author/creator contribution in
+        more detail. <a href=\"http://docs.casrai.org/CRediT\">Project CRediT</a>
+        is a multi-stakeholder initiative that has developed a common vocabulary with
+        14 different contributor roles, and this vocabulary can be used to provide
+        this detail, e.g. who provided resources such as reagents or samples, who
+        did the statistical analysis, or who contributed to the methodology of a study.</p>\n<p>CRediT
+        is complementary to existing contributor role vocabularies such as those by
+        ORCID and DataCite. For contributor roles it is particularly important that
+        the same vocabulary is used across stakeholders, so that the roles described
+        in the data center can be forwarded first to DataCite, then to ORCID, and
+        then also to other places such as institutional repositories.</p>\n<h3>Standardized
+        Relation Types</h3>\n<p>Capturing relations between scholarly works such as
+        datasets in a standardized way is important, as these relations are used for
+        citations and thus the basis for many indicators of scholarly impact. Currently
+        used vocabularies for relation types between scholarly works, e.g. by CrossRef
+        and DataCite, only partly overlap. In addition we see differences in community
+        practices, e.g. some scholars but not others reserve the term citation for
+        links between two scholarly articles. The term data citation is sometimes
+        used for all links from scholarly works to datasets, but other times reserved
+        for formal citations appearing in reference lists.</p>\n<h3>Metadata for Organisations</h3>\n<p>Both
+        ORCID and DataCite not only provide persistent identifiers for people and
+        data, but they also collect metadata around these persistent identifiers,
+        in particular links to other identifiers. The use of persistent identifiers
+        for organizations lags behind the use of persistent identifiers for research
+        outputs and people, and more work is needed.</p>\n<h3>Persistent Identifiers
+        for Projects</h3>\n<p>Research projects are collaborative activities among
+        contributors that may change over time. Projects have a start and end date
+        and are often funded by a grant. The existing persistent identifier (PID)
+        infrastructure does support artefacts, contributors and organisations, but
+        there is no first-class PID support for projects. This creates a major gap
+        that becomes obvious when we try to describe the relationships between funders,
+        contributors and research outputs.</p>\n<p>Both the ORCID and DataCite metadata
+        support funding information, but only as direct links to contributors or research
+        outputs, respectively. This not only makes it difficult to exchange funding
+        information between DataCite and ORCID, but also fails to adequately model
+        the sometimes complex relationships, e.g. when multiple funders and grants
+        were involved in supporting a research output. We therefore not only need
+        persistent identifiers for projects, but also infrastructure for collecting
+        and aggregating links to contributors and artefacts.</p>\n<h3>Harmonization
+        of ORCID and DataCite Metadata</h3>\n<p>We identified significant differences
+        between the ORCID and DataCite metadata schema, and these differences hinder
+        the flow of information between the two services. Several different approaches
+        to overcome these differences are conceivable:</p>\n<ol><li>only use a common
+        subset, relying on linked persistent identifiers to get the full metadata</li><li>harmonize
+        the ORCID and DataCite metadata schemata</li><li>common API exchange formats
+        for metadata</li></ol>\n<p>The first approach is the linked open data approach,
+        and was designed specifically for scenarios like this. One limitation is that
+        it requires persistent identifiers for all relevant attributes (e.g. for every
+        creator/contributor in the DataCite metadata). One major objective for THOR
+        is therefore to increase the use of persistent identifiers, both by THOR partners,
+        and by the community at large.</p>\n<p>A common metadata schema between ORCID
+        and DataCite is neither feasible nor necessarily needed. In addition, we have
+        to also consider interoperability with other metadata standards (e.g. CASRAI,
+        OpenAIRE, COAR), and with other artifacts, such as those having CrossRef DOIs.
+        What is more realistic is harmonization across a limited set essential metadata.</p>\n<p>The
+        third approach to improve interoperability uses a common API format that includes
+        all the metadata that need to be exchanged, but doesn’t require the metadata
+        schema itself to change. This approach was <a href=\"https://www.crossref.org/blog/crossref-and-datacite-unify-support-for-http-content-negotiation/\">taken
+        by DataCite and CrossRef a few years ago</a> to provide metadata for DOIs
+        in a consistent way despite significant differences in the CrossRef and DataCite
+        metadata schema. Using HTTP content negotiation, metadata are provided in
+        a variety of formats.</p>\n<h2>References</h2>\n<p>Fenner M, Demeranville
+        T, Kotarski R, et al. <em>D2.1: Artefact, Contributor, And Organisation Relationship
+        Data Schema</em>. Zenodo; 2015. doi:<a href=\"https://doi.org/10.5281/ZENODO.30799\">10.5281/ZENODO.30799</a></p>\n<h2>Notes</h2>\n<p>This
+        blog post was <a href=\"https://doi.org/10.5438/bc11-cqw1\">originally published</a>
+        on the DataCite Blog.</p> ","published_at":1442534400,"updated_at":1693949721,"indexed_at":1693950834,"authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        Fenner"}],"image":"https://blog.front-matter.io/content/images/2023/09/cat_and_dog-1.png","tags":["Feature"],"language":"en","reference":[{"doi":"https://doi.org/10.5281/ZENODO.30799","key":"ref1"}],"relationships":[{"url":"https://doi.org/10.5438/bc11-cqw1","type":"IsIdenticalTo"}],"blog_id":"f0m0e38","blog_name":"Front
+        Matter","blog_slug":"front_matter","blog":{"id":"f0m0e38","title":"Front Matter","description":"The
+        Front Matter Blog covers the intersection of science and technology since
+        2007.","language":"en","favicon":"https://blog.front-matter.io/favicon.png","feed_url":"https://blog.front-matter.io/atom-complete/","home_page_url":"https://blog.front-matter.io","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-01-02","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
+        5.52","category":"computerAndInformationSciences","prefix":"10.53731","modified_at":"2023-09-05T21:35:21+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":"https://blog.front-matter.io/atom/","status":"active","issn":"2749-9952","backlog":0,"authors":null,"plan":"Team","slug":"front_matter","use_mastodon":true}}'
+  recorded_at: Wed, 06 Sep 2023 14:27:19 GMT
+- request:
+    method: get
+    uri: https://doi.org/10.5281/ZENODO.30799
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 06 Sep 2023 14:27:19 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '183'
+      Connection:
+      - close
+      Location:
+      - https://data.crosscite.org/10.5281%2FZENODO.30799
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 06 Sep 2023 15:22:17 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=HfJ%2FINqIlNf1clkRNyNk1w4kyj2tWeLv%2Fk%2Bq1TPJfiWesgUC5k0QZJKvdec6chW%2BuxaeEQ8k1ha4KbZHFSOoWJ5MaWcPBNTbY0P3dcIeKDW6Jngg%2Bmm2V%2Bs%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 80276460fd026907-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        <html><head><title>Handle Redirect</title></head>
+        <body><a href="https://data.crosscite.org/10.5281%2FZENODO.30799">https://data.crosscite.org/10.5281%2FZENODO.30799</a></body></html>
+  recorded_at: Wed, 06 Sep 2023 14:27:19 GMT
+- request:
+    method: get
+    uri: https://data.crosscite.org/10.5281%2FZENODO.30799
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.citationstyles.csl+json
+      Connection:
+      - close
+      User-Agent:
+      - http.rb/5.1.1
+      Host:
+      - data.crosscite.org
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 06 Sep 2023 14:27:21 GMT
+      Content-Type:
+      - application/vnd.citationstyles.csl+json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding, Origin
+      Etag:
+      - W/"808492baef8e3e4af0fa6812bc25a08c"
+      X-Runtime:
+      - '0.018245'
+      X-Request-Id:
+      - d5ae8229-4153-405b-9f97-9473171213d7
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.13
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.13
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "type": "report",
+          "id": "https://doi.org/10.5281/zenodo.30799",
+          "categories": [
+            "persistent identifier",
+            "pid",
+            "orcid",
+            "doi",
+            "datacite"
+          ],
+          "author": [
+            {
+              "family": "Fenner",
+              "given": "Martin"
+            },
+            {
+              "family": "Demeranville",
+              "given": "Tom"
+            },
+            {
+              "family": "Kotarski",
+              "given": "Rachael"
+            },
+            {
+              "family": "Vision",
+              "given": "Todd"
+            },
+            {
+              "family": "Rueda",
+              "given": "Laura"
+            },
+            {
+              "family": "Dasler",
+              "given": "Robin"
+            },
+            {
+              "family": "Haak",
+              "given": "Laure"
+            },
+            {
+              "family": "Cruse",
+              "given": "Patricia"
+            }
+          ],
+          "issued": {
+            "date-parts": [
+              [
+                2015,
+                9,
+                11
+              ]
+            ]
+          },
+          "abstract": "This document identifies gaps in existing PID infrastructures, with a focus on ORCID and DataCite Metadata and links between contributors, organizations and artefacts. What prevents us from establishing interoperability and overcoming barriers between PID platforms for contributors, artefacts and organisations, and research solutions for federated attribution, claiming, publishing and direct data access? It goes on to propose strategies to overcome these gaps.",
+          "DOI": "10.5281/ZENODO.30799",
+          "publisher": "Zenodo",
+          "title": "D2.1: Artefact, Contributor, And Organisation Relationship Data Schema",
+          "URL": "https://zenodo.org/record/30799",
+          "copyright": "Creative Commons Attribution 4.0"
+        }
+  recorded_at: Wed, 06 Sep 2023 14:27:21 GMT
+- request:
+    method: head
+    uri: https://doi.org/10.5438/bc11-cqw1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Date:
+      - Wed, 06 Sep 2023 14:27:21 GMT
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Length:
+      - '233'
+      Connection:
+      - close
+      Location:
+      - https://datacite.org/blog/differences-between-orcid-and-datacite-metadata/
+      Vary:
+      - Accept
+      Expires:
+      - Wed, 06 Sep 2023 14:34:12 GMT
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WlCur2YM%2BnSuhBmd%2BuAH%2BXnUzDOrP1HOBpYF%2F62pmS9GkIuLLkbrvgyL98NNnuKEjcjkjgP9qrwQCNM0x6%2FgmMkSI4uUT3fScDcp0lyCAJiy89on5cvGk3U%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8027646d0cba9176-FRA
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: ''
+  recorded_at: Wed, 06 Sep 2023 14:27:21 GMT
+recorded_with: VCR 6.2.0

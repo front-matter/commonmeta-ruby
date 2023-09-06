@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module Commonmeta
-  VERSION = '3.3.18'
+  VERSION = '3.4.0'
 end

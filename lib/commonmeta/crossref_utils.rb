@@ -63,6 +63,7 @@ module Commonmeta
           insert_crossref_issn(xml)
           insert_item_number(xml)
           insert_crossref_access_indicators(xml)
+          insert_crossref_relations(xml)
           insert_doi_data(xml)
           insert_citation_list(xml)
         end
@@ -81,6 +82,7 @@ module Commonmeta
         insert_item_number(xml)
         insert_crossref_abstract(xml)
         insert_crossref_access_indicators(xml)
+        insert_crossref_relations(xml)
         insert_doi_data(xml)
         insert_citation_list(xml)
       end
@@ -197,6 +199,24 @@ module Commonmeta
       end
     end
 
+    def insert_crossref_relations(xml)
+      return xml if related_identifiers.blank?
+
+      xml.program("xmlns" => "http://www.crossref.org/relations.xsd",
+                  "name" => "relations") do
+        related_identifiers.each do |related_identifier|
+          identifier_type = validate_doi(related_identifier["id"]) ? "doi" : "url"
+          id = identifier_type == "doi" ? doi_from_url(related_identifier["id"]) : related_identifier["id"]
+          attributes = {
+            "relation_type" => related_identifier["type"].camelize(:lower),
+            "identifier_type" => identifier_type,
+          }.compact
+
+          xml.intra_work_relation(id, attributes)
+        end
+      end
+    end
+  
     # def insert_dates(xml)
     #   return xml unless Array.wrap(dates).present?
 

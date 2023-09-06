@@ -181,10 +181,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Attempts at automating journal subject classification" }])
       expect(subject.creators.length).to eq(1)
       expect(subject.creators.first).to eq("familyName" => "Datta", "givenName" => "Esha", "id" => "https://orcid.org/0000-0001-9165-2757", "type" => "Person")
-      expect(subject.subjects).to eq([{"subject"=>"Humanities"},
-        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
-         "subject"=>"FOS: Humanities",
-         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
+      expect(subject.subjects).to eq([{ "subject" => "Humanities" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Humanities",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
       expect(subject.language).to eq("en")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -194,8 +194,8 @@ describe Commonmeta::Metadata, vcr: true do
                                          "person_name")).first).to eq("ORCID" => "https://orcid.org/0000-0001-9165-2757", "contributor_role" => "author", "given_name" => "Esha", "sequence" => "first", "surname" => "Datta")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("Attempts at automating journal subject classification")
-      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"5d14ffacb9ac4e20bdc0d9248df4e80d", "item_number_type"=>"uuid")
-      expect(crossref_xml.dig('group_title')).to eq('Humanities')
+      expect(crossref_xml.dig("item_number")).to eq("__content__" => "5d14ffacb9ac4e20bdc0d9248df4e80d", "item_number_type" => "uuid")
+      expect(crossref_xml.dig("group_title")).to eq("Humanities")
     end
 
     it "json_feed_item with references" do
@@ -205,15 +205,15 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.54900/zwm7q-vet94")
       expect(subject.url).to eq("https://upstream.force11.org/the-research-software-alliance-resa")
-      expect(subject.alternate_identifiers).to eq([{"alternateIdentifier"=>"954f8138-0ecd-4090-87c5-cef1297f1470", "alternateIdentifierType"=>"UUID"}])
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "954f8138-0ecd-4090-87c5-cef1297f1470", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
       expect(subject.titles).to eq([{ "title" => "The Research Software Alliance (ReSA)" }])
       expect(subject.creators.length).to eq(2)
-      expect(subject.creators.first).to eq("familyName"=>"Katz", "givenName"=>"Daniel S.", "id"=>"https://orcid.org/0000-0001-5934-7525", "type"=>"Person")
-      expect(subject.subjects).to eq([{"subject"=>"Humanities"},
-        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
-         "subject"=>"FOS: Humanities",
-         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
+      expect(subject.creators.first).to eq("familyName" => "Katz", "givenName" => "Daniel S.", "id" => "https://orcid.org/0000-0001-5934-7525", "type" => "Person")
+      expect(subject.subjects).to eq([{ "subject" => "Humanities" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Humanities",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
       expect(subject.language).to eq("en")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -224,10 +224,10 @@ describe Commonmeta::Metadata, vcr: true do
                                          "person_name")).first).to eq("ORCID" => "https://orcid.org/0000-0001-5934-7525", "contributor_role" => "author", "given_name" => "Daniel S.", "sequence" => "first", "surname" => "Katz")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("The Research Software Alliance (ReSA)")
-      expect(crossref_xml.dig("citation_list", "citation").length).to eq(11)
-      expect(crossref_xml.dig("citation_list", "citation").last).to eq("article_title"=>"The Research Software Alliance (ReSA) and the community landscape", "cYear"=>"2020", "doi"=>"10.5281/zenodo.3699950", "key"=>"ref11")
-      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"954f81380ecd409087c5cef1297f1470", "item_number_type"=>"uuid")
-      expect(crossref_xml.dig('group_title')).to eq('Humanities')
+      expect(crossref_xml.dig("citation_list", "citation").last).to eq("article_title" => "The Research Software Alliance (ReSA) and the community landscape", "cYear" => "2020", "doi" => "10.5281/zenodo.3699950", "key" => "ref11")
+      expect(crossref_xml.dig("citation_list", "citation").last).to eq("article_title" => "The Research Software Alliance (ReSA) and the community landscape", "cYear" => "2020", "doi" => "10.5281/zenodo.3699950", "key" => "ref11")
+      expect(crossref_xml.dig("item_number")).to eq("__content__" => "954f81380ecd409087c5cef1297f1470", "item_number_type" => "uuid")
+      expect(crossref_xml.dig("group_title")).to eq("Humanities")
     end
 
     it "json_feed_item from rogue scholar with doi" do
@@ -240,22 +240,22 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.type).to eq("Article")
       expect(subject.titles).to eq([{ "title" => "EU-Mitgliedstaaten betonen die Rolle von wissenschaftsgeleiteten Open-Access-Modellen jenseits von APCs" }])
       expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName"=>"Pampel", "givenName"=>"Heinz", "id"=>"https://orcid.org/0000-0003-3334-2771", "type"=>"Person")
-      expect(subject.subjects).to eq([{"subject"=>"Engineering and technology"},
-        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
-         "subject"=>"FOS: Engineering and technology",
-         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
+      expect(subject.creators.first).to eq("familyName" => "Pampel", "givenName" => "Heinz", "id" => "https://orcid.org/0000-0003-3334-2771", "type" => "Person")
+      expect(subject.subjects).to eq([{ "subject" => "Social sciences" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Social sciences",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
       expect(subject.language).to eq("de")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
       expect(Array.wrap(crossref_xml.dig("contributors", "person_name")).length).to eq(1)
       expect(Array.wrap(crossref_xml.dig("contributors",
-                                         "person_name")).first).to eq("ORCID"=>"https://orcid.org/0000-0003-3334-2771", "contributor_role"=>"author", "given_name"=>"Heinz", "sequence"=>"first", "surname"=>"Pampel")
+                                         "person_name")).first).to eq("ORCID" => "https://orcid.org/0000-0003-3334-2771", "contributor_role" => "author", "given_name" => "Heinz", "sequence" => "first", "surname" => "Pampel")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("EU-Mitgliedstaaten betonen die Rolle von wissenschaftsgeleiteten Open-Access-Modellen jenseits von APCs")
-      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"1c57855813244493b8af84c49eabc52f", "item_number_type"=>"uuid")
-      expect(crossref_xml.dig('group_title')).to eq('Engineering and technology')
+      expect(crossref_xml.dig("item_number")).to eq("__content__" => "1c57855813244493b8af84c49eabc52f", "item_number_type" => "uuid")
+      expect(crossref_xml.dig("group_title")).to eq("Social sciences")
     end
 
     it "json_feed_item from rogue scholar with organizational author" do
@@ -268,22 +268,58 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.type).to eq("Article")
       expect(subject.titles).to eq([{ "title" => "KU Leuven supports ResearchEquals" }])
       expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("id"=>"https://ror.org/0342dzm54", "name"=>"Liberate Science", "type"=>"Organization")
-      expect(subject.subjects).to eq([{"subject"=>"Social sciences"},
-        {"schemeUri"=>"http://www.oecd.org/science/inno/38235147.pdf",
-         "subject"=>"FOS: Social sciences",
-         "subjectScheme"=>"Fields of Science and Technology (FOS)"}])
+      expect(subject.creators.first).to eq("id" => "https://ror.org/0342dzm54", "name" => "Liberate Science", "type" => "Organization")
+      expect(subject.subjects).to eq([{ "subject" => "Social sciences" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Social sciences",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
       expect(subject.language).to eq("en")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
       expect(Array.wrap(crossref_xml.dig("contributors", "organization")).length).to eq(1)
       expect(Array.wrap(crossref_xml.dig("contributors",
-                                         "organization")).first).to eq("__content__"=>"Liberate Science", "contributor_role"=>"author", "sequence"=>"first")
+                                         "organization")).first).to eq("__content__" => "Liberate Science", "contributor_role" => "author", "sequence" => "first")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("KU Leuven supports ResearchEquals")
-      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"5561f8e42ff14186a8d58dacb3afe414", "item_number_type"=>"uuid")
-      expect(crossref_xml.dig('group_title')).to eq('Social sciences')
+      expect(crossref_xml.dig("item_number")).to eq("__content__" => "5561f8e42ff14186a8d58dacb3afe414", "item_number_type" => "uuid")
+      expect(crossref_xml.dig("group_title")).to eq("Social sciences")
+    end
+
+    it "json_feed_item from rogue scholar with relations" do
+      input = "https://rogue-scholar.org/api/posts/8a4de443-3347-4b82-b57d-e3c82b6485fc"
+      subject = described_class.new(input: input, doi: "10.53731/r79v4e1-97aq74v-ag578")
+
+      expect(subject.id).to eq("https://doi.org/10.53731/r79v4e1-97aq74v-ag578")
+      expect(subject.url).to eq("https://blog.front-matter.io/posts/differences-between-orcid-and-datacite-metadata")
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "8a4de443-3347-4b82-b57d-e3c82b6485fc", "alternateIdentifierType" => "UUID" }])
+      expect(subject.type).to eq("Article")
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("familyName" => "Fenner",
+           "givenName" => "Martin",
+           "id" => "https://orcid.org/0000-0003-1419-2405", "type" => "Person")
+      expect(subject.titles).to eq([{ "title" => "Differences between ORCID and DataCite Metadata" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published" => "2015-09-18", "updated" => "2023-09-05")
+      expect(subject.descriptions.first["description"]).to start_with("One of the first tasks for DataCite in the European Commission-funded THOR project")
+      expect(subject.publisher).to eq("name" => "Front Matter")
+      expect(subject.subjects).to eq([{ "subject" => "Computer and information sciences" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Computer and information sciences",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.container).to eq("identifier" => "https://blog.front-matter.io", "identifierType" => "URL", "title" => "Front Matter", "type" => "Periodical")
+      expect(subject.references).to eq([{"doi"=>"https://doi.org/10.5281/ZENODO.30799", "key"=>"ref1", "publicationYear"=>"2015", "title"=>"D2.1: Artefact, Contributor, And Organisation Relationship Data Schema"}])
+      expect(subject.related_identifiers).to eq([{"id"=>"https://doi.org/10.5438/bc11-cqw1", "type"=>"IsIdenticalTo"}])
+      crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
+      expect(Array.wrap(crossref_xml.dig("contributors", "person_name")).length).to eq(1)
+      expect(Array.wrap(crossref_xml.dig("contributors",
+                                         "person_name")).first).to eq({"ORCID"=>"https://orcid.org/0000-0003-1419-2405", "contributor_role"=>"author", "given_name"=>"Martin", "sequence"=>"first", "surname"=>"Fenner"})
+      expect(crossref_xml.dig("titles",
+                              "title")).to eq("Differences between ORCID and DataCite Metadata")
+      expect(crossref_xml.dig("item_number")).to eq("__content__" => "8a4de44333474b82b57de3c82b6485fc", "item_number_type" => "uuid")
+      expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
     end
 
     it "json_feed_item from rogue scholar with anonymous author" do
@@ -295,28 +331,28 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "a163e340-5b3c-4736-9ab0-8c54fdff6a3c", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
       expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName"=>"Göbel", "givenName"=>"Mathias", "type"=>"Person")
+      expect(subject.creators.first).to eq("familyName" => "Göbel", "givenName" => "Mathias", "type" => "Person")
       expect(subject.titles).to eq([{ "title" => "Welcome to the Lab" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published"=>"2017-01-01", "updated"=>"2017-01-01")
+      expect(subject.date).to eq("published" => "2017-01-01", "updated" => "2017-01-01")
       expect(subject.descriptions.first["description"]).to start_with("Welcome everyone!")
       expect(subject.publisher).to eq("name" => "lab.sub - Articles")
-      expect(subject.subjects).to eq([{ "subject" => "Engineering and technology" },
+      expect(subject.subjects).to eq([{ "subject" => "Computer and information sciences" },
                                       { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
-                                        "subject" => "FOS: Engineering and technology",
+                                        "subject" => "FOS: Computer and information sciences",
                                         "subjectScheme" => "Fields of Science and Technology (FOS)" }])
       expect(subject.language).to eq("en")
-      expect(subject.container).to eq("identifier" => "https://lab.sub.uni-goettingen.de/", "identifierType" => "URL", "title" => "lab.sub - Articles", "type" => "Periodical")
+      expect(subject.container).to eq("identifier" => "https://lab.sub.uni-goettingen.de", "identifierType" => "URL", "title" => "lab.sub - Articles", "type" => "Periodical")
       expect(subject.references).to be_nil
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
       expect(Array.wrap(crossref_xml.dig("contributors", "person_name")).length).to eq(1)
       expect(Array.wrap(crossref_xml.dig("contributors",
-                                         "person_name")).first).to eq("contributor_role"=>"author", "given_name"=>"Mathias", "sequence"=>"first", "surname"=>"Göbel")
+                                         "person_name")).first).to eq("contributor_role" => "author", "given_name" => "Mathias", "sequence" => "first", "surname" => "Göbel")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("Welcome to the Lab")
-      expect(crossref_xml.dig('item_number')).to eq("__content__"=>"a163e3405b3c47369ab08c54fdff6a3c", "item_number_type"=>"uuid")
-      expect(crossref_xml.dig('group_title')).to eq('Engineering and technology')
+      expect(crossref_xml.dig("item_number")).to eq("__content__" => "a163e3405b3c47369ab08c54fdff6a3c", "item_number_type" => "uuid")
+      expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
     end
   end
 end

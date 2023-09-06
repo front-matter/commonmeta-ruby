@@ -23,13 +23,13 @@ http_interactions:
       Cache-Control:
       - public, max-age=0, must-revalidate
       Content-Length:
-      - '2018'
+      - '6140'
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Mon, 10 Jul 2023 21:04:51 GMT
+      - Wed, 06 Sep 2023 14:27:22 GMT
       Etag:
-      - '"rlf5k9cygn1ju"'
+      - '"jbappwm5z94q8"'
       Server:
       - Vercel
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::9gxbv-1689023091514-026dffac583b
+      - fra1::iad1::6rbj8-1694010442492-b47595ed1d2f
       Connection:
       - close
     body:
@@ -47,18 +47,46 @@ http_interactions:
       string: '{"id":"f3629c86-06e0-42c0-844a-266b03a91ef1","doi":"https://doi.org/10.59350/37y2z-gre70","url":"https://iphylo.blogspot.com/2023/05/ten-years-and-million-links.html","title":"Ten
         years and a million links","summary":"As trailed on a Twitter thread last
         week I’ve been working on a manuscript describing the efforts to map taxonomic
-        names to their original descriptions in the taxonomic literature. Putting
-        together a manuscript on linking taxonomic names to the primary literature,
-        basically “um, what, exactly, have you been doing all these years?”. TL;DR
-        Across fungi, plants, and animals approx 1.3 million names have been linked
-        to a persistent identifier for a publication.— Roderic Page (@rdmpage) May
-        25,...","published_at":1685553960,"updated_at":1685554180,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":[],"language":"en","reference":[],"blog_id":"tyfqw20","blog_name":"iPhylo","blog":{"id":"tyfqw20","title":"iPhylo","description":"Rants,
+        names to their original descriptions in the taxonomic literature.","content_html":"<p>As
+        trailed on a Twitter thread last week I’ve been working on a manuscript describing
+        the efforts to map taxonomic names to their original descriptions in the taxonomic
+        literature.</p>\n<blockquote><p>Putting together a manuscript on linking taxonomic
+        names to the primary literature, basically “um, what, exactly, have you been
+        doing all these years?”. TL;DR Across fungi, plants, and animals approx 1.3
+        million names have been linked to a persistent identifier for a publication.</p>—
+        Roderic Page (@rdmpage) <a href=\"https://twitter.com/rdmpage/status/1661714128413573120?ref_src=twsrc%5Etfw\">May
+        25, 2023</a></blockquote> \n<p>The preprint is on bioRxiv <a href=\"https://doi.org/10.1101/2023.05.29.542697\">doi:10.1101/2023.05.29.542697</a></p>\n<blockquote>\n<p>A
+        major gap in the biodiversity knowledge graph is a connection between taxonomic
+        names and the taxonomic literature. While both names and publications often
+        have persistent identifiers (PIDs), such as Life Science Identifiers (LSIDs)
+        or Digital Object Identifiers (DOIs), LSIDs for names are rarely linked to
+        DOIs for publications. This article describes efforts to make those connections
+        across three large taxonomic databases: Index Fungorum, International Plant
+        Names Index (IPNI), and the Index of Organism Names (ION). Over a million
+        names have been matched to DOIs or other persistent identifiers for taxonomic
+        publications. This represents approximately 36% of names for which publication
+        data is available. The mappings between LSIDs and publication PIDs are made
+        available through ChecklistBank. Applications of this mapping are discussed,
+        including a web app to locate the citation of a taxonomic name, and a knowledge
+        graph that uses data on researcher’s ORCID ids to connect taxonomic names
+        and publications to authors of those names.</p>\n</blockquote>\n<p>Much of
+        the work has been linking taxa to names, which still has huge gaps. There
+        are also interesting differences in coverage between plants, animals, and
+        fungi (see preprint for details).</p>\n\n<div><a href=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdWsSQhqi1DErXMIHm28g37-fiALNIsI5eQZmvoX_Fe03ZSwtKHbYt-LCsCCAUop0AGcwy_w7NpIjylVH1hNrM9oW-6j9e6tHASha49TTqFvDg2_tEx3r74RRFsjUo4M_Qat8NmKaZSChOt2hI3LsMjTVLrEVirEckU-9Ei7ug-7OHQlR4LA/s2276/animals-coverage.png\"><img
+        width=\"320\" src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdWsSQhqi1DErXMIHm28g37-fiALNIsI5eQZmvoX_Fe03ZSwtKHbYt-LCsCCAUop0AGcwy_w7NpIjylVH1hNrM9oW-6j9e6tHASha49TTqFvDg2_tEx3r74RRFsjUo4M_Qat8NmKaZSChOt2hI3LsMjTVLrEVirEckU-9Ei7ug-7OHQlR4LA/s320/animals-coverage.png\"
+        /></a></div><div><a href=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdyxlVJ-oyMCNPmHtHWjSxdxMSJvgzdWRGRF6Ad4dk7ab7gGDpuKdKmS9XhROkopw361ylfsTd1ZkwkF6BN0JlWNnVLCKY1AfryCfWKHkgPQM7u-0SELW9j8RlQIflb6ibaV64gwW7oJrEvOGECvR51F8EW8cRg-1usW-GBM5ymObj7zlObQ/s2276/fungi-coverage.png\"><img
+        width=\"320\" src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjdyxlVJ-oyMCNPmHtHWjSxdxMSJvgzdWRGRF6Ad4dk7ab7gGDpuKdKmS9XhROkopw361ylfsTd1ZkwkF6BN0JlWNnVLCKY1AfryCfWKHkgPQM7u-0SELW9j8RlQIflb6ibaV64gwW7oJrEvOGECvR51F8EW8cRg-1usW-GBM5ymObj7zlObQ/s320/fungi-coverage.png\"
+        /></a></div><div><a href=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf0YBuvNSXWAJTfQ1jk4XSocMzCYHP7t6IPUqhjQ3mftgM_850igWaD2copgNH6Xk6T62xBU641wvwOvXgCCDY3m2xC_gaILXO9RGx8H3Gpy5OOncsLb9smpT2LIgtYOExVBVdDRWqA0AZ8-mQjWL7dL5TiG7MqVu8spT8ACoGOPR_T36hRA/s2276/plants-coverage.png\"><img
+        width=\"320\" src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgf0YBuvNSXWAJTfQ1jk4XSocMzCYHP7t6IPUqhjQ3mftgM_850igWaD2copgNH6Xk6T62xBU641wvwOvXgCCDY3m2xC_gaILXO9RGx8H3Gpy5OOncsLb9smpT2LIgtYOExVBVdDRWqA0AZ8-mQjWL7dL5TiG7MqVu8spT8ACoGOPR_T36hRA/s320/plants-coverage.png\"
+        /></a></div>\n\n\nThere is also a simple app to demonstrate these links, see
+        <a href=\"https://species-cite.herokuapp.com\">https://species-cite.herokuapp.com</a>.\n\n\n\n<blockquote>\n<p>Written
+        with <a href=\"https://stackedit.io/\">StackEdit</a>.</p>\n</blockquote>","published_at":1685553960,"updated_at":1685554180,"indexed_at":1689933917,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
+        Page"}],"image":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhdWsSQhqi1DErXMIHm28g37-fiALNIsI5eQZmvoX_Fe03ZSwtKHbYt-LCsCCAUop0AGcwy_w7NpIjylVH1hNrM9oW-6j9e6tHASha49TTqFvDg2_tEx3r74RRFsjUo4M_Qat8NmKaZSChOt2hI3LsMjTVLrEVirEckU-9Ei7ug-7OHQlR4LA/s320/animals-coverage.png","tags":[],"language":"en","reference":[],"relationships":[],"blog_id":"tyfqw20","blog_name":"iPhylo","blog_slug":"iphylo","blog":{"id":"tyfqw20","title":"iPhylo","description":"Rants,
         raves (and occasionally considered opinions) on phyloinformatics, taxonomy,
         and biodiversity informatics.  For more ranty and less considered opinions,
         see my <a href=\"https://twitter.com/rdmpage\">Twitter feed</a>.<br>ISSN 2051-8188.
         Written content on this site is licensed under a <a href=\"https://creativecommons.org/licenses/by/4.0/\">Creative
-        Commons Attribution 4.0 International license</a>.","language":"en","favicon":null,"feed_url":"https://iphylo.blogspot.com/feeds/posts/default","home_page_url":"https://iphylo.blogspot.com/","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T08:03:14+00:00","indexed_at":"2023-02-06","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Blogger
-        7.00","category":"Natural Sciences","prefix":"10.59350","modified_at":"2023-06-17T15:38:20+00:00","version":"https://jsonfeed.org/version/1.1","backlog":true,"current_feed_url":null,"expired":null}}'
-  recorded_at: Mon, 10 Jul 2023 21:04:52 GMT
+        Commons Attribution 4.0 International license</a>.","language":"en","favicon":null,"feed_url":"https://iphylo.blogspot.com/feeds/posts/default","home_page_url":"https://iphylo.blogspot.com","user_id":"b98bb1b6-b96b-4e8a-94d3-4285ea715f5b","created_at":"2023-02-06","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Blogger
+        7.00","category":"computerAndInformationSciences","prefix":"10.59350","modified_at":"2023-08-31T12:36:33+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":null,"status":"active","issn":"2051-8188","backlog":0,"authors":null,"plan":"Team","slug":"iphylo","use_mastodon":true}}'
+  recorded_at: Wed, 06 Sep 2023 14:27:23 GMT
 recorded_with: VCR 6.2.0

@@ -57,11 +57,12 @@ module Commonmeta
         language = meta.fetch("language", nil) || meta.dig("blog", "language")
         state = id.present? || read_options.present? ? "findable" : "not_found"
         subjects = Array.wrap(meta.dig("blog", "category")).reduce([]) do |sum, subject|
-          sum += name_to_fos(subject)
+          sum += name_to_fos(subject.underscore.humanize)
 
           sum
         end
         references = get_references(meta)
+        related_identifiers = get_related_identifiers(meta)
         alternate_identifiers = [{ "alternateIdentifier" => meta["id"], "alternateIdentifierType" => "UUID" }]
 
         { "id" => id,
@@ -77,6 +78,7 @@ module Commonmeta
           "license" => license,
           "subjects" => subjects.presence,
           "references" => references.presence,
+          "related_identifiers" => related_identifiers.presence,
           "alternate_identifiers" => alternate_identifiers,
           "state" => state }.compact.merge(read_options)
       end
@@ -93,6 +95,22 @@ module Commonmeta
               sum << reference.merge("title" => csl['title'], "publicationYear" => csl.dig("issued", "date-parts", 0, 0).to_s) if [200, 301, 302].include? response.status
             elsif reference["url"] && validate_url(reference["url"]) == "URL"
               sum << reference if [200, 301, 302].include? HTTP.head(reference["url"]).status
+            end
+          rescue => error
+            # puts "Error: #{error.message}"
+            # puts "Error: #{reference}"
+          end
+
+          sum
+        end
+      end
+
+      def get_related_identifiers(meta)
+        # check that relationships resolve
+        Array.wrap(meta["relationships"]).reduce([]) do |sum, relationship|
+          begin
+            if [200, 301, 302].include? HTTP.head(relationship["url"]).status
+              sum << { "id" => relationship["url"], "type" => relationship["type"] }
             end
           rescue => error
             # puts "Error: #{error.message}"
