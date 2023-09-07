@@ -79,6 +79,31 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.container).to eq("identifier" => "https://blog.front-matter.io", "identifierType" => "URL", "title" => "Front Matter", "type" => "Periodical")
     end
 
+    it "ghost post with related_identifiers and link to peer-reviewed article" do
+      input = "https://rogue-scholar.org/api/posts/2bdebfc5-e02e-42c2-90c5-e873e2d0435d"
+      subject = described_class.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://doi.org/10.53731/r294649-6f79289-8cw18")
+      expect(subject.url).to eq("https://blog.front-matter.io/posts/nine-simple-ways-to-make-it-easier-to-re-use-your-data")
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "2bdebfc5-e02e-42c2-90c5-e873e2d0435d", "alternateIdentifierType" => "UUID" }])
+      expect(subject.type).to eq("Article")
+      expect(subject.creators.length).to eq(1)
+      expect(subject.creators.first).to eq("id" => "https://orcid.org/0000-0003-1419-2405", "familyName" => "Fenner", "givenName" => "Martin", "type" => "Person")
+      expect(subject.titles).to eq([{ "title" => "Nine simple ways to make it easier to (re)use your data" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published" => "2013-06-25", "updated" => "2023-09-07")
+      expect(subject.descriptions.first["description"]).to start_with("This paper in markdown format was written by Ethan White et al.")
+      expect(subject.publisher).to eq("name" => "Front Matter")
+      expect(subject.related_identifiers).to eq([{"id"=>"https://doi.org/10.4033/iee.2013.6b.6.f", "type"=>"IsPreprintOf"}])
+      expect(subject.subjects).to eq([{ "subject" => "Computer and information sciences" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Computer and information sciences",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.container).to eq("identifier" => "https://blog.front-matter.io", "identifierType" => "URL", "title" => "Front Matter", "type" => "Periodical")
+    end
+
     it "ghost post with related_identifiers and funding" do
       input = "https://rogue-scholar.org/api/posts/e58dc9c8-b870-4db2-8896-238b3246c551"
       subject = described_class.new(input: input)
@@ -104,6 +129,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.language).to eq("en")
       expect(subject.container).to eq("identifier" => "https://blog.front-matter.io", "identifierType" => "URL", "title" => "Front Matter", "type" => "Periodical")
     end
+
     it "ghost post without doi" do
       input = "https://rogue-scholar.org/api/posts/c3095752-2af0-40a4-a229-3ceb7424bce2"
       subject = described_class.new(input: input)

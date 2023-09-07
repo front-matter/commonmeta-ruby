@@ -109,7 +109,7 @@ module Commonmeta
 
       def get_related_identifiers(meta)
         # check that relationships resolve and has a supported type
-        supported_types = %w[IsIdenticalTo isPreprintOf isTranslationOf]
+        supported_types = %w[IsIdenticalTo IsPreprintOf IsTranslationOf]
         Array.wrap(meta["relationships"]).reduce([]) do |sum, relationship|
           begin
             if supported_types.include?(relationship["type"]) && [200, 301, 302].include?(HTTP.head(relationship["url"]).status)

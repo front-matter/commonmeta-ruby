@@ -27,9 +27,9 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 07 Sep 2023 17:29:05 GMT
+      - Thu, 07 Sep 2023 22:02:05 GMT
       Etag:
-      - '"181gxnqe7gh6g9"'
+      - '"1fh93kri2p6g9"'
       Server:
       - Vercel
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       X-Vercel-Cache:
       - MISS
       X-Vercel-Id:
-      - fra1::iad1::fwcdr-1694107744771-778bdd74522a
+      - fra1::iad1::7sqgk-1694124124467-4d32847e7c1d
       Connection:
       - close
     body:
@@ -117,13 +117,13 @@ http_interactions:
         M. The DataCite GraphQL API is now open for (pre-release) business. Published
         online May 15, 2019. doi:<a href=\"https://doi.org/10.53731/r79sa71-97aq74v-ag4vc\">10.53731/r79sa71-97aq74v-ag4vc</a></p>\n<p>Fenner
         M, Aryani A. Introducing the PID Graph. Published online 2019. doi:<a href=\"https://doi.org/10.5438/JWVF-8A66\">10.5438/JWVF-8A66</a></p>
-        ","published_at":1561939200,"updated_at":1694087432,"indexed_at":1694097846,"authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
+        ","published_at":1561939200,"updated_at":1694087432,"indexed_at":1694117129,"authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
         Fenner"}],"image":"https://blog.front-matter.io/content/images/2022/08/download-19-.jpeg","tags":["Feature"],"language":"en","reference":[{"doi":"https://doi.org/10.14454/3BPW-W381","key":"ref1"},{"doi":"https://doi.org/10.53731/r79sa71-97aq74v-ag4vc","key":"ref2"},{"doi":"https://doi.org/10.5438/JWVF-8A66","key":"ref3"}],"relationships":[{"url":"https://doi.org/10.5438/bv9z-dc66","type":"IsIdenticalTo"},{"url":"https://doi.org/10.3030/777523","type":"HasAward"}],"blog_id":"f0m0e38","blog_name":"Front
         Matter","blog_slug":"front_matter","blog":{"id":"f0m0e38","title":"Front Matter","description":"The
         Front Matter Blog covers the intersection of science and technology since
         2007.","language":"en","favicon":"https://blog.front-matter.io/favicon.png","feed_url":"https://blog.front-matter.io/atom-complete/","home_page_url":"https://blog.front-matter.io","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-01-02","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
         5.52","category":"computerAndInformationSciences","prefix":"10.53731","modified_at":"2023-09-05T21:35:21+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":"https://blog.front-matter.io/atom/","status":"active","issn":"2749-9952","backlog":0,"authors":null,"plan":"Team","slug":"front_matter","use_mastodon":true}}'
-  recorded_at: Thu, 07 Sep 2023 17:29:05 GMT
+  recorded_at: Thu, 07 Sep 2023 22:02:05 GMT
 - request:
     method: get
     uri: https://doi.org/10.14454/3BPW-W381
@@ -145,7 +145,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 07 Sep 2023 17:29:06 GMT
+      - Thu, 07 Sep 2023 22:02:05 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -157,13 +157,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 07 Sep 2023 18:20:43 GMT
+      - Thu, 07 Sep 2023 22:44:39 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tlEmGA8pS5uS7Ta4wJ6kUTtSEjE6wUulrbb%2Bo8yGLjUAQD%2BwqrNEv5uwob8yP4VxVfZFW4ymZDm%2Bh7w2IOIpyXrDdOrp3HCG%2BV5Vnz7ZMKfmATTmaEVnkpog70FwYnpUV6Jo4K0%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2F%2F8FT%2BDoQV1sQUHrms7gHbpamUGVC44gRmVvt2nULFxauHfQEuKGYGQxdCgzIyvRpvMI2WRuOOgfHkWUeeSSPwtoInAuW1W498U2f2saRGNUqedoiepFllFrosfvqwMMOKq2Fe0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -171,7 +171,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8030ac055d48b8d2-AMS
+      - 80323be758bfb8d9-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -179,7 +179,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.14454%2F3BPW-W381">https://data.crosscite.org/10.14454%2F3BPW-W381</a></body></html>
-  recorded_at: Thu, 07 Sep 2023 17:29:06 GMT
+  recorded_at: Thu, 07 Sep 2023 22:02:05 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.14454%2F3BPW-W381
@@ -201,7 +201,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Sep 2023 17:29:06 GMT
+      - Thu, 07 Sep 2023 22:02:05 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -217,9 +217,9 @@ http_interactions:
       Etag:
       - W/"e5a505a4330ff4865cb47565f20f9119"
       X-Runtime:
-      - '0.014412'
+      - '0.015307'
       X-Request-Id:
-      - 2af1ef12-3008-4556-8996-dabfd7658284
+      - be17b7bb-1acb-4d3d-aacb-90972fbd5ec6
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -260,7 +260,7 @@ http_interactions:
           "copyright": "MIT License",
           "version": "1.1.0"
         }
-  recorded_at: Thu, 07 Sep 2023 17:29:06 GMT
+  recorded_at: Thu, 07 Sep 2023 22:02:05 GMT
 - request:
     method: get
     uri: https://doi.org/10.53731/r79sa71-97aq74v-ag4vc
@@ -282,7 +282,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 07 Sep 2023 17:29:07 GMT
+      - Thu, 07 Sep 2023 22:02:06 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -294,13 +294,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 07 Sep 2023 18:28:54 GMT
+      - Thu, 07 Sep 2023 22:44:21 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sOIzmNDO0DjgrDZvFn8nWkymZk%2FHqRrz6W%2FRXfEkE5jeGkGR4uafkovrdmVhpcy4DPDdkE7%2Bu0nZ2hrHSmYIm7m3%2F1N4jsnao%2FmxusoC6t1VJX7MIHimX2WfwzyO6vHYcv6Nq8g%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XXfHpUe5wfWE8tEJBpI%2FcaW5vYoYSa1Y2PslBF0NTu9HId2j2zCr238oQU2BN8OxhOWjKeL%2FzFJWGJL%2FZvEuFOuXMsm%2F6tPagfWigWpTOWosCWJiA6nSz%2Fdmo3gTmGdnJdjJTw4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -308,7 +308,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8030ac096b280a5c-AMS
+      - 80323bec2d0a1c8d-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -316,7 +316,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.53731%2Fr79sa71-97aq74v-ag4vc/transform">https://api.crossref.org/v1/works/10.53731%2Fr79sa71-97aq74v-ag4vc/transform</a></body></html>
-  recorded_at: Thu, 07 Sep 2023 17:29:06 GMT
+  recorded_at: Thu, 07 Sep 2023 22:02:06 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.53731%2Fr79sa71-97aq74v-ag4vc/transform
@@ -338,7 +338,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Sep 2023 17:29:07 GMT
+      - Thu, 07 Sep 2023 22:02:06 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -376,7 +376,7 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"institution":[{"name":"Front Matter"}],"indexed":{"date-parts":[[2023,8,4]],"date-time":"2023-08-04T11:10:44Z","timestamp":1691147444368},"posted":{"date-parts":[[2019,5,15]]},"group-title":"Engineeringandtechnology","reference-count":1,"publisher":"Front
+      string: '{"institution":[{"name":"Front Matter"}],"indexed":{"date-parts":[[2023,9,7]],"date-time":"2023-09-07T21:20:54Z","timestamp":1694121654343},"posted":{"date-parts":[[2019,5,15]]},"group-title":"Engineeringandtechnology","reference-count":1,"publisher":"Front
         Matter","license":[{"start":{"date-parts":[[2019,5,15]],"date-time":"2019-05-15T00:00:00Z","timestamp":1557878400000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/legalcode"},{"start":{"date-parts":[[2019,5,15]],"date-time":"2019-05-15T00:00:00Z","timestamp":1557878400000},"content-version":"tdm","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/licenses\/by\/4.0\/legalcode"}],"content-domain":{"domain":[],"crossmark-restriction":false},"abstract":"<p>DataCite
         DOIs describe resources such as datasets, samples, software and publications
         with rich metadata. An important part of this metadata is the description
@@ -387,7 +387,7 @@ http_interactions:
         while preserving the rich connections...<\/p>","DOI":"10.53731\/r79sa71-97aq74v-ag4vc","type":"posted-content","created":{"date-parts":[[2021,10,17]],"date-time":"2021-10-17T19:03:27Z","timestamp":1634497407000},"source":"Crossref","is-referenced-by-count":2,"title":"The
         DataCite GraphQL API is now open for (pre-release) business","prefix":"10.53731","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-1419-2405","authenticated-orcid":false,"given":"Martin","family":"Fenner","sequence":"first","affiliation":[]}],"member":"31795","reference":[{"key":"ref1","doi-asserted-by":"publisher","article-title":"Introducing
         the PID Graph","year":"2019","DOI":"10.5438\/jwvf-8a66"}],"container-title":[],"original-title":[],"link":[{"URL":"https:\/\/blog.front-matter.io\/posts\/the-datacite-graphql-api-is-now-open-for-pre-release-business","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2023,8,4]],"date-time":"2023-08-04T10:35:54Z","timestamp":1691145354000},"score":1,"resource":{"primary":{"URL":"https:\/\/blog.front-matter.io\/posts\/the-datacite-graphql-api-is-now-open-for-pre-release-business"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2019,5,15]]},"references-count":1,"URL":"http:\/\/dx.doi.org\/10.53731\/r79sa71-97aq74v-ag4vc","relation":{},"published":{"date-parts":[[2019,5,15]]},"subtype":"other"}'
-  recorded_at: Thu, 07 Sep 2023 17:29:07 GMT
+  recorded_at: Thu, 07 Sep 2023 22:02:06 GMT
 - request:
     method: get
     uri: https://doi.org/10.5438/JWVF-8A66
@@ -409,7 +409,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 07 Sep 2023 17:29:07 GMT
+      - Thu, 07 Sep 2023 22:02:07 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -421,13 +421,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 07 Sep 2023 18:19:32 GMT
+      - Thu, 07 Sep 2023 22:20:54 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8Jfl3pVT1CJugRCaNeRlRx3Gw%2FlNy5juHcL835evg58ulAQKTs80YFtuYqhn7RT2FuUnIVbjHJWeWjgJlTVqbKYqhpz5SxEs3lOgdgQPetgipAJsUZhpyDk48XbJt38BCXVkwWU%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zYtySclKqvMmkqQTPk8gUdhxoBRNW8p6Aqr%2FalHY06KEQh5Nmp2vqYdrr5sxCvkrwkdYZUsk2t%2FGNywyiyIGLNUG30A1k7kZamdo%2BGjWP52w%2FufyGukfkP5NNn26V%2BOC7f%2BHvng%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -435,7 +435,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8030ac0f5d90b785-AMS
+      - 80323bf1ae600a61-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -443,7 +443,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5438%2FJWVF-8A66">https://data.crosscite.org/10.5438%2FJWVF-8A66</a></body></html>
-  recorded_at: Thu, 07 Sep 2023 17:29:07 GMT
+  recorded_at: Thu, 07 Sep 2023 22:02:06 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5438%2FJWVF-8A66
@@ -465,7 +465,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 07 Sep 2023 17:29:08 GMT
+      - Thu, 07 Sep 2023 22:02:07 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -481,9 +481,9 @@ http_interactions:
       Etag:
       - W/"9f25c07c85d932482bc11873f11231a1"
       X-Runtime:
-      - '0.020832'
+      - '0.021068'
       X-Request-Id:
-      - ce06fee8-445b-416d-bb13-968747e3e117
+      - c6c4f712-35ce-438f-be62-d0817d82ff0b
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -524,7 +524,7 @@ http_interactions:
           "copyright": "Creative Commons Attribution 4.0 International",
           "version": "1.0"
         }
-  recorded_at: Thu, 07 Sep 2023 17:29:08 GMT
+  recorded_at: Thu, 07 Sep 2023 22:02:07 GMT
 - request:
     method: head
     uri: https://doi.org/10.5438/bv9z-dc66
@@ -544,7 +544,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 07 Sep 2023 17:29:08 GMT
+      - Thu, 07 Sep 2023 22:02:07 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -556,13 +556,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 07 Sep 2023 18:20:43 GMT
+      - Thu, 07 Sep 2023 22:29:03 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ZFT9yNZky15cPRLK0%2BwEBGFEDrkgQx13gnoDls3JP7vnpAGUd8yiLtn%2BeIQlh3ojkJdxlvj%2BbX7TZJryD9R3VUL3yZFsRgkIhPZzfTcLIlnXSoRADkvIM9Qyv3U07TafKjFUjzE%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4jfeHwzqrBRjhdPkYmq94Q%2F0w0QuldhZ3TqyBL%2F6lfg5olHNW%2B4O%2BuNux0rg8QoV4zRoO6sdzVPhl5WqVvN%2F8mNMvahdqaeqAjZFcfKv9ubFPRQw%2FOuN59azBNCLvQNQ%2FKYSsug%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -570,11 +570,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8030ac12cd7cb963-AMS
+      - 80323bf4bf94b73a-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 07 Sep 2023 17:29:08 GMT
+  recorded_at: Thu, 07 Sep 2023 22:02:07 GMT
 recorded_with: VCR 6.2.0
