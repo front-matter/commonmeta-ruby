@@ -62,6 +62,7 @@ module Commonmeta
           insert_crossref_abstract(xml)
           insert_crossref_issn(xml)
           insert_item_number(xml)
+          insert_funding_references(xml)
           insert_crossref_access_indicators(xml)
           insert_crossref_relations(xml)
           insert_doi_data(xml)
@@ -81,6 +82,7 @@ module Commonmeta
         insert_institution(xml)
         insert_item_number(xml)
         insert_crossref_abstract(xml)
+        insert_funding_references(xml)
         insert_crossref_access_indicators(xml)
         insert_crossref_relations(xml)
         insert_doi_data(xml)
@@ -99,7 +101,7 @@ module Commonmeta
         Array.wrap(creators).each_with_index do |creator, index|
           if creator["type"] == "Organization" && creator["name"].present?
             xml.organization(creator["name"], "contributor_role" => "author",
-                             "sequence" => index.zero? ? "first" : "additional")
+                                              "sequence" => index.zero? ? "first" : "additional")
           elsif creator["givenName"].present? || creator["familyName"].present?
             xml.person_name("contributor_role" => "author",
                             "sequence" => index.zero? ? "first" : "additional") do
@@ -128,7 +130,7 @@ module Commonmeta
         xml.affiliations do
           xml.institution do
             xml.institution_name(creator.dig("affiliation", 0, "name")) if creator.dig("affiliation", 0, "name").present?
-            xml.institution_id(creator.dig("affiliation", 0, "id"), 'type' => "ror") if creator.dig("affiliation", 0, "id").present?
+            xml.institution_id(creator.dig("affiliation", 0, "id"), "type" => "ror") if creator.dig("affiliation", 0, "id").present?
           end
         end
       end
@@ -138,7 +140,7 @@ module Commonmeta
       xml.affiliations do
         xml.institution do
           xml.institution_name(creator.dig("affiliation", 0, "name")) if creator.dig("affiliation", 0, "name").present?
-          xml.institution_id(creator.dig("affiliation", 0, "id"), 'type' => "ror") if creator.dig("affiliation", 0, "id").present?
+          xml.institution_id(creator.dig("affiliation", 0, "id"), "type" => "ror") if creator.dig("affiliation", 0, "id").present?
         end
       end
     end
@@ -209,7 +211,7 @@ module Commonmeta
             identifier_type = validate_doi(related_identifier["id"]) ? "doi" : "uri"
             id = identifier_type == "doi" ? doi_from_url(related_identifier["id"]) : related_identifier["id"]
             attributes = {
-              "relation-type" => related_identifier["type"].camelize(:lower),
+              "relationship-type" => related_identifier["type"].camelize(:lower),
               "identifier-type" => identifier_type,
             }.compact
 
@@ -218,7 +220,7 @@ module Commonmeta
         end
       end
     end
-  
+
     # def insert_dates(xml)
     #   return xml unless Array.wrap(dates).present?
 
@@ -230,20 +232,21 @@ module Commonmeta
     #   end
     # end
 
-    # def insert_funding_references(xml)
-    #   return xml unless Array.wrap(funding_references).present?
+    def insert_funding_references(xml)
+      return xml if funding_references.blank?
 
-    #   xml.fundingReferences do
-    #     Array.wrap(funding_references).each do |funding_reference|
-    #       xml.fundingReference do
-    #         xml.funderName(funding_reference["funderName"])
-    #         xml.funderIdentifier(funding_reference["funderIdentifier"], { "funderIdentifierType" => funding_reference["funderIdentifierType"] }.compact) if funding_reference["funderIdentifier"].present?
-    #         xml.awardNumber(funding_reference["awardNumber"], { "awardURI" => funding_reference["awardUri"] }.compact) if funding_reference["awardNumber"].present? || funding_reference["awardUri"].present?
-    #         xml.awardTitle(funding_reference["awardTitle"]) if funding_reference["awardTitle"].present?
-    #       end
-    #     end
-    #   end
-    # end
+      xml.program("xmlns" => "http://www.crossref.org/fundref.xsd",
+                  "name" => "fundref") do
+        funding_references.each do |funding_reference|
+          xml.assertion("name" => "fundgroup") do
+            xml.assertion(funding_reference["funderName"], "name" => "funder_name") do
+              xml.assertion(funding_reference["funderIdentifier"], "name" => "funder_identifier")
+            end
+            xml.assertion(funding_reference["awardNumber"], "name" => "award_number")
+          end
+        end
+      end
+    end
 
     def insert_crossref_subjects(xml)
       return xml unless subjects.present?

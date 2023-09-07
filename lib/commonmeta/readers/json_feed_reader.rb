@@ -62,6 +62,7 @@ module Commonmeta
           sum
         end
         references = get_references(meta)
+        funding_references = get_funding_references(meta)
         related_identifiers = get_related_identifiers(meta)
         alternate_identifiers = [{ "alternateIdentifier" => meta["id"], "alternateIdentifierType" => "UUID" }]
 
@@ -78,6 +79,7 @@ module Commonmeta
           "license" => license,
           "subjects" => subjects.presence,
           "references" => references.presence,
+          "funding_references" => funding_references.presence,
           "related_identifiers" => related_identifiers.presence,
           "alternate_identifiers" => alternate_identifiers,
           "state" => state }.compact.merge(read_options)
@@ -89,10 +91,10 @@ module Commonmeta
           begin
             if reference["doi"] && validate_doi(reference["doi"])
               response = HTTP.follow
-                        .headers(:accept => "application/vnd.citationstyles.csl+json")
-                        .get(reference["doi"])
+                .headers(:accept => "application/vnd.citationstyles.csl+json")
+                .get(reference["doi"])
               csl = JSON.parse(response.body.to_s)
-              sum << reference.merge("title" => csl['title'], "publicationYear" => csl.dig("issued", "date-parts", 0, 0).to_s) if [200, 301, 302].include? response.status
+              sum << reference.merge("title" => csl["title"], "publicationYear" => csl.dig("issued", "date-parts", 0, 0).to_s) if [200, 301, 302].include? response.status
             elsif reference["url"] && validate_url(reference["url"]) == "URL"
               sum << reference if [200, 301, 302].include? HTTP.head(reference["url"]).status
             end
@@ -106,11 +108,38 @@ module Commonmeta
       end
 
       def get_related_identifiers(meta)
-        # check that relationships resolve
+        # check that relationships resolve and has a supported type
+        supported_types = %w[IsIdenticalTo isPreprintOf isTranslationOf]
         Array.wrap(meta["relationships"]).reduce([]) do |sum, relationship|
           begin
-            if [200, 301, 302].include? HTTP.head(relationship["url"]).status
+            if supported_types.include?(relationship["type"]) && [200, 301, 302].include?(HTTP.head(relationship["url"]).status)
               sum << { "id" => relationship["url"], "type" => relationship["type"] }
+            end
+          rescue => error
+            # puts "Error: #{error.message}"
+            # puts "Error: #{reference}"
+          end
+
+          sum
+        end
+      end
+
+      def get_funding_references(meta)
+        # check that relationships resolve and have type "HasAward"
+        Array.wrap(meta["relationships"]).reduce([]) do |sum, relationship|
+          begin
+            # funder is European Commission
+            if validate_prefix(relationship["url"]) == "10.3030" || URI.parse(relationship["url"]).host == "cordis.europa.eu"
+              relationship["funderIdentifier"] = "http://doi.org/10.13039/501100000780"
+              relationship["funderName"] = "European Commission"
+              relationship["awardNumber"] = relationship["url"].split("/").last
+            end
+            if relationship["type"] == "HasAward" && relationship["funderName"]
+              sum << {
+                "funderIdentifier" => relationship["funderIdentifier"],
+                "funderName" => relationship["funderName"],
+                "awardNumber" => relationship["awardNumber"],
+              }
             end
           rescue => error
             # puts "Error: #{error.message}"
