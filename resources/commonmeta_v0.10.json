@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://commonmeta.org/commonmeta_v0.9.3.json",
-  "title": "Commonmeta v0.9.3",
+  "$id": "https://commonmeta.org/commonmeta_v0.10.json",
+  "title": "Commonmeta v0.10",
   "description": "JSON representation of the Commonmeta schema.",
   "additionalProperties": false,
   "definitions": {
@@ -23,6 +23,37 @@
         ]
       },
       "uniqueItems": true
+    },
+    "contributorRole": {
+      "description": "The type of contribution made by a contributor",
+      "enum": [
+        "Author",
+        "Editor",
+        "Chair",
+        "Reviewer",
+        "ReviewAssistant",
+        "StatsReviewer",
+        "ReviewerExternal",
+        "Reader",
+        "Translator",
+        "ContactPerson",
+        "Other",
+        "Conceptualization",
+        "DataCuration",
+        "FormalAnalysis",
+        "FundingAcquisition",
+        "Investigation",
+        "Methodology",
+        "ProjectAdministration",
+        "Resources",
+        "Software",
+        "Supervision",
+        "Validation",
+        "Visualization",
+        "WritingOriginalDraft",
+        "WritingReviewEditing"
+      ],
+      "type": "string"
     },
     "latitude": {
       "type": "number",
@@ -91,36 +122,52 @@
       "type": "string",
       "format": "uri"
     },
-    "creators": {
-      "description": "The creators of the resource.",
+    "contributors": {
+      "description": "The contributors to the resource.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "id": {
-            "description": "The unique identifier for the creator.",
-            "type": "string",
-            "format": "uri"
+            "description": "The unique identifier for the contributor.",
+            "type": "string"
           },
           "type": {
-            "description": "The type of the creator.",
+            "description": "The type of the contributor.",
             "type": "string",
             "enum": ["Organization", "Person"]
           },
+          "contributorRoles": {
+            "description": "List of roles assumed by the contributor when working on the resource.",
+            "items": {
+              "$ref": "#/definitions/contributorRole"
+            },
+            "type": "array",
+            "uniqueItems": true
+          },
           "name": {
-            "description": "The name of the creator.",
+            "description": "The name of the contributor.",
             "type": "string"
           },
           "givenName": {
-            "description": "The given name of the creator.",
+            "description": "The given name of the contributor.",
             "type": "string"
           },
           "familyName": {
-            "description": "The family name of the creator.",
+            "description": "The family name of the contributor.",
             "type": "string"
           },
           "affiliation": { "$ref": "#/definitions/affiliations" }
-        }
+        },
+        "anyOf": [
+          {
+            "required": ["familyName"]
+          },
+          {
+            "required": ["name"]
+          }
+        ],
+        "required": ["type", "contributorRoles"]
       },
       "minItems": 1,
       "uniqueItems": true
@@ -190,37 +237,6 @@
         }
       }
     },
-    "contributors": {
-      "description": "The contributors to the resource.",
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "description": "The unique identifier for the contributor.",
-            "type": "string"
-          },
-          "type": {
-            "description": "The type of the contributor.",
-            "type": "string",
-            "enum": ["Organization", "Person"]
-          },
-          "name": {
-            "description": "The name of the contributor.",
-            "type": "string"
-          },
-          "givenName": {
-            "description": "The given name of the contributor.",
-            "type": "string"
-          },
-          "familyName": {
-            "description": "The family name of the contributor.",
-            "type": "string"
-          },
-          "affiliation": { "$ref": "#/definitions/affiliations" }
-        }
-      }
-    },
     "subjects": {
       "type": "array",
       "items": {
@@ -271,7 +287,7 @@
         "properties": {
           "key": { "type": "string" },
           "doi": { "type": "string" },
-          "creator": { "type": "string" },
+          "contributor": { "type": "string" },
           "title": { "type": "string" },
           "publisher": { "type": "string" },
           "publicationYear": { "type": "string" },
@@ -281,7 +297,6 @@
           "lastPage": { "type": "string" },
           "containerTitle": { "type": "string" },
           "edition": { "type": "string" },
-          "contributor": { "type": "string" },
           "unstructured": { "type": "string" }
         },
         "required": ["key"]
@@ -443,5 +458,5 @@
       "enum": ["findable", "not_found"]
     }
   },
-  "required": ["id", "type", "url", "creators", "titles", "publisher", "date"]
+  "required": ["id", "type", "url", "contributors", "titles", "publisher", "date"]
 }

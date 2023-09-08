@@ -87,7 +87,7 @@ describe Commonmeta::Metadata, vcr: true do
       author = { "email" => "info@ucop.edu", "name" => "University of California, Santa Barbara",
                  "role" => { "namespace" => "http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_RoleCode", "roleCode" => "copyrightHolder" }, "type" => "Organization" }
       response = subject.get_one_author(author)
-      expect(response).to eq("name" => "University of California, Santa Barbara", "type" => "Organization")
+      expect(response).to eq("name" => "University of California, Santa Barbara", "type" => "Organization", "contributorRoles" => ["Author"])
     end
 
     it "has familyName" do
@@ -97,14 +97,14 @@ describe Commonmeta::Metadata, vcr: true do
       response = subject.get_one_author(meta.dig("creators").first)
       expect(response).to eq(
         "id" => "https://orcid.org/0000-0003-1419-2405",
-        "givenName" => "Martin", "familyName" => "Fenner", "type" => "Person",
+        "givenName" => "Martin", "familyName" => "Fenner", "type" => "Person", "contributorRoles" => ["Author"],
       )
     end
 
     it "has name with title" do
       author = { "name" => "Tejas S. Sathe, MD" }
       response = subject.get_one_author(author)
-      expect(response).to eq("givenName" => "Tejas S.", "familyName" => "Sathe", "type" => "Person")
+      expect(response).to eq("givenName" => "Tejas S.", "familyName" => "Sathe", "type" => "Person", "contributorRoles" => ["Author"])
     end
 
     it "has name in display-order with ORCID" do
@@ -112,7 +112,7 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input)
       meta = JSON.parse(subject.raw).dig("data", "attributes")
       response = subject.get_one_author(meta.dig("creators").first)
-      expect(response).to eq("type" => "Person",
+      expect(response).to eq("type" => "Person", "contributorRoles" => ["Author"],
                              "id" => "https://orcid.org/0000-0003-4881-1606",
                              "givenName" => "Andrea", "familyName" => "Bedini")
     end
@@ -123,43 +123,43 @@ describe Commonmeta::Metadata, vcr: true do
                  "type" => "Organization", "role" => { "namespace" => "http://www.ngdc.noaa.gov/metadata/published/xsd/schema/resources/Codelist/gmxCodelists.xml#CI_RoleCode", "roleCode" => "copyrightHolder" } }
       response = subject.get_one_author(author)
       expect(response).to eq("name" => "University of California, Santa Barbara",
-                             "type" => "Organization")
+                             "type" => "Organization", "contributorRoles" => ["Author"])
     end
 
     it "is another organization" do
       author = { "name" => "University of California, Santa Barbara",
                  "id" => "https://ror.org/02t274463" }
       response = subject.get_one_author(author)
-      expect(response).to eq("id" => "https://ror.org/02t274463", "name" => "University of California, Santa Barbara", "type" => "Organization")
+      expect(response).to eq("id" => "https://ror.org/02t274463", "name" => "University of California, Santa Barbara", "type" => "Organization", "contributorRoles" => ["Author"])
     end
 
     it "is anonymous" do
       author = { "id" => "https://ror.org/05745n787" }
       response = subject.get_one_author(author)
-      expect(response).to eq("type" => "Person", "affiliation" => [{"id"=>"https://ror.org/05745n787"}])
+      expect(response).to eq("type" => "Person", "contributorRoles" => ["Author"], "affiliation" => [{ "id" => "https://ror.org/05745n787" }])
     end
 
     it "name with affiliation crossref" do
       input = "10.7554/elife.01567"
       subject = described_class.new(input: input, from: "crossref")
-      response = subject.get_one_author(subject.creators.first)
+      response = subject.get_one_author(subject.contributors.first)
       expect(response).to eq("affiliation" => [{ "name" => "Department of Plant Molecular Biology, University of Lausanne, Lausanne, Switzerland" }], "familyName" => "Sankar",
                              "givenName" => "Martial",
-                             "type" => "Person")
+                             "type" => "Person", "contributorRoles" => ["Author"])
     end
 
     it "only familyName and givenName" do
       input = "https://doi.pangaea.de/10.1594/PANGAEA.836178"
       subject = described_class.new(input: input, from: "schema_org")
-      response = subject.get_one_author(subject.creators.first)
-      expect(response).to eq("type" => "Person", "givenName" => "Emma", "familyName" => "Johansson")
+      response = subject.get_one_author(subject.contributors.first)
+      expect(response).to eq("type" => "Person", "contributorRoles" => ["Author"], "givenName" => "Emma", "familyName" => "Johansson")
     end
 
     it "affiliation is space" do
       input = "10.1177/0042098011428175"
       subject = described_class.new(input: input)
-      response = subject.get_one_author(subject.creators.first)
-      expect(response).to eq("familyName"=>"Petrovici", "givenName"=>"Norbert", "type"=>"Person")
+      response = subject.get_one_author(subject.contributors.first)
+      expect(response).to eq("familyName" => "Petrovici", "givenName" => "Norbert", "type" => "Person", "contributorRoles" => ["Author"])
     end
   end
 
@@ -201,9 +201,9 @@ describe Commonmeta::Metadata, vcr: true do
 
   context "get_affiliations" do
     it "name" do
-      affiliation = [{ 'name' => 'University of Zurich, Zurich, Switzerland' }]
+      affiliation = [{ "name" => "University of Zurich, Zurich, Switzerland" }]
       response = subject.get_affiliations(affiliation)
-      expect(response).to eq([{ 'name' => 'University of Zurich, Zurich, Switzerland' }])
+      expect(response).to eq([{ "name" => "University of Zurich, Zurich, Switzerland" }])
     end
 
     it "name and ROR ID" do
@@ -216,7 +216,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "only ROR ID" do
       affiliation = { "affiliationIdentifier" => "https://ror.org/02t274463" }
       response = subject.get_affiliations(affiliation)
-      expect(response).to eq([{"id"=>"https://ror.org/02t274463"}])
+      expect(response).to eq([{ "id" => "https://ror.org/02t274463" }])
     end
   end
 end
