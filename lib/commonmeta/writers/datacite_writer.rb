@@ -22,7 +22,7 @@ module Commonmeta
           'doi' => doi_from_url(id),
           'url' => url,
           'types' => types,
-          'creators' => Array.wrap(creators).map { |c| datacite_contributor(c) },
+          'creators' => Array.wrap(contributors).map { |c| datacite_contributor(c) },
           'titles' => titles,
           'publisher' => publisher.to_h['name'],
           'container' => container,

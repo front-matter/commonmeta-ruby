@@ -39,10 +39,12 @@ module Commonmeta
       end
 
       def insert_authors(xml)
-        return unless creators.present?
-
+        authors = contributors.select { |c| c['contributorRoles'] == ['Author'] }
+ 
+        return unless authors.present?
+        
         xml.send(:'person-group', 'person-group-type' => 'author') do
-          Array.wrap(creators).each do |au|
+          Array.wrap(authors).each do |au|
             xml.name do
               insert_contributor(xml, au)
             end
@@ -51,10 +53,12 @@ module Commonmeta
       end
 
       def insert_editors(xml)
-        return unless contributors.present?
+        editors = contributors.select { |c| c['contributorRoles'] == ['Editor'] }
+ 
+        return unless editors.present?
 
         xml.send(:'person-group', 'person-group-type' => 'editor') do
-          Array.wrap(contributors).each do |con|
+          Array.wrap(editors).each do |con|
             xml.name do
               insert_contributor(xml, con)
             end

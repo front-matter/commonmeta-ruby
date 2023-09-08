@@ -9,8 +9,8 @@ module Commonmeta
     attr_accessor :string, :from, :sandbox, :meta, :regenerate, :issue, :show_errors, :depositor,
                   :email, :registrant
     attr_reader :doc, :page_start, :page_end
-    attr_writer :id, :provider_id, :client_id, :doi, :alternate_identifiers, :creators, :contributors,
-                :titles, :publisher, :license, :date, :volume, :url, :version, :subjects, :contributor, :descriptions, :language, :sizes, :formats, :schema_version, :meta, :container, :provider, :format, :funding_references, :state, :geo_locations, :type, :additional_type, :content_url, :references, :related_identifiers, :related_items, :style, :locale
+    attr_writer :id, :provider_id, :client_id, :doi, :alternate_identifiers, :contributors,
+                :titles, :publisher, :license, :date, :volume, :url, :version, :subjects, :descriptions, :language, :sizes, :formats, :schema_version, :meta, :container, :provider, :format, :funding_references, :state, :geo_locations, :type, :additional_type, :content_url, :references, :related_identifiers, :related_items, :style, :locale
 
     def initialize(options = {})
       options.symbolize_keys!
@@ -60,7 +60,6 @@ module Commonmeta
           'provider_id' => options[:provider_id],
           'client_id' => options[:client_id],
           'content_url' => options[:content_url],
-          'creators' => options[:creators],
           'contributors' => options[:contributors],
           'titles' => options[:titles],
           'publisher' => options[:publisher]
@@ -96,7 +95,6 @@ module Commonmeta
 
       # set attributes directly
       read_options = options.slice(
-        :creators,
         :contributors,
         :titles,
         :type,
@@ -250,10 +248,6 @@ module Commonmeta
 
     def titles
       @titles ||= meta.fetch('titles', nil)
-    end
-
-    def creators
-      @creators ||= meta.fetch('creators', nil)
     end
 
     def contributors

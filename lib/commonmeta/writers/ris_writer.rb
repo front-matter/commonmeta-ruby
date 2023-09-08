@@ -4,13 +4,14 @@ module Commonmeta
   module Writers
     module RisWriter
       def ris
+        authors = contributors.select { |c| c['contributorRoles'] == ['Author'] }
         sn = container.to_h['identifier']
         sn = sn.downcase if sn.present? && container.to_h['identifierType'] == 'DOI'
         {
           'TY' => Commonmeta::Utils::CM_TO_RIS_TRANSLATIONS.fetch(type, 'GEN'),
           'T1' => parse_attributes(titles, content: 'title', first: true),
           'T2' => container.to_h['title'],
-          'AU' => to_ris(creators),
+          'AU' => to_ris(authors),
           'DO' => doi_from_url(id),
           'UR' => url,
           'AB' => parse_attributes(descriptions, content: 'description', first: true),

@@ -269,7 +269,7 @@ describe Commonmeta::CLI do
       it 'to datacite invalid' do
         file = fixture_path + "datacite_missing_creator.xml"
         subject.options = { to: "datacite", show_errors: "true" }
-        expect { subject.convert file }.to output(/root is missing required keys: id, type, url, creators, titles, publisher, date/).to_stderr
+        expect { subject.convert file }.to output(/root is missing required keys: id, type, url, contributors, titles, publisher, date/).to_stderr
       end
 
       it 'to datacite invalid ignore errors' do

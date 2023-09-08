@@ -156,6 +156,9 @@ module Commonmeta
     # check if given name is in the database of known given names:
     # https://github.com/bmuller/gender_detector
     def is_personal_name?(name: nil)
+      # personal names are not allowed to contain semicolons
+      return false if name.to_s.include?(";")
+
       return true if name_exists?(name.to_s.split.first) || name_exists?(name.to_s.split(", ").last)
 
       # check if a name has only one word, e.g. "FamousOrganization", not including commas

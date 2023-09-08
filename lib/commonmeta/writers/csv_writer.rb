@@ -7,7 +7,9 @@ module Commonmeta
 
       def csv
         return nil unless valid?
-
+        
+        authors = contributors.select { |c| c['contributorRoles'] == ['Author'] }
+ 
         bib = {
           doi: doi_from_url(id),
           url: url,
@@ -15,7 +17,7 @@ module Commonmeta
           state: state,
           type: Commonmeta::Utils::CM_TO_BIB_TRANSLATIONS.fetch(type, 'misc'),
           title: parse_attributes(titles, content: 'title', first: true),
-          author: authors_as_string(creators),
+          author: authors_as_string(authors),
           publisher: publisher['name']
         }.values
 

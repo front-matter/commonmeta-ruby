@@ -10,14 +10,15 @@ module Commonmeta
         return nil unless %w[Software Collection].include?(type)
 
         title = parse_attributes(titles, content: 'title', first: true)
-
+        authors = Array.wrap(contributors).select { |c| c['contributorRoles'] == ['Author'] }
+      
         hsh = {
           'cff-version' => '1.2.0',
           'message' => "If you use #{title} in your research, please cite it using the following metadata",
           'doi' => normalize_doi(id),
           'repository-code' => url,
           'title' => title,
-          'authors' => write_cff_creators(creators),
+          'authors' => write_cff_contributors(authors),
           'abstract' => parse_attributes(descriptions, content: 'description', first: true),
           'version' => version,
           'keywords' => if subjects.present?
@@ -34,8 +35,8 @@ module Commonmeta
         hsh.to_yaml
       end
 
-      def write_cff_creators(creators)
-        Array.wrap(creators).map do |a|
+      def write_cff_contributors(contributors)
+        Array.wrap(contributors).map do |a|
           if a['givenName'].present? || a['id'].present?
             { 'given-names' => a['givenName'],
               'family-names' => a['familyName'],

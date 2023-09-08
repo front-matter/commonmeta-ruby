@@ -869,7 +869,7 @@ module Commonmeta
     end
 
     def map_hash_keys(element: nil, mapping: nil)
-      Array.wrap(element).map do |a|
+      a = Array.wrap(element).map do |a|
         a.map { |k, v| [mapping.fetch(k, k), v] }.reduce({}) do |hsh, (k, v)|
           if k == "affiliation" && v.is_a?(Array)
             hsh[k] = v.map do |affiliation|
@@ -882,6 +882,8 @@ module Commonmeta
             hsh
           elsif k == "type" && v.is_a?(String)
             hsh[k] = v.capitalize
+            hsh
+          elsif k == "contributorRoles"
             hsh
           elsif v.is_a?(Hash)
             hsh[k] = to_schema_org(v)
@@ -930,7 +932,7 @@ module Commonmeta
         a["given"] = a["givenName"]
         a["literal"] = a["name"] unless a["familyName"].present?
         a.except("nameType", "type", "@type", "id", "@id", "name", "familyName", "givenName",
-                 "affiliation", "contributorType").compact
+                 "affiliation", "contributorRoles").compact
       end.presence
     end
 

@@ -5,7 +5,9 @@ module Commonmeta
     module CodemetaWriter
       def codemeta
         return nil unless valid? || show_errors
-
+        
+        authors = Array.wrap(contributors).select { |c| c['contributorRoles'] == ['Author'] }
+        
         hsh = {
           '@context' => id.present? ? 'https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld' : nil,
           '@type' => Commonmeta::Utils::CM_TO_SO_TRANSLATIONS.fetch(type, 'SoftwareSourceCode'),
@@ -13,7 +15,7 @@ module Commonmeta
           'identifier' => to_schema_org_identifiers(alternate_identifiers),
           'codeRepository' => url,
           'name' => parse_attributes(titles, content: 'title', first: true),
-          'authors' => creators,
+          'authors' => to_schema_org(authors),
           'description' => parse_attributes(descriptions, content: 'description', first: true),
           'version' => version,
           'tags' => if subjects.present?

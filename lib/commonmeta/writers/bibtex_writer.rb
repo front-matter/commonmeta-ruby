@@ -13,7 +13,7 @@ module Commonmeta
           bibtex_key: normalize_id(id),
           doi: doi_from_url(id),
           url: url,
-          author: authors_as_string(creators),
+          author: authors_as_string(contributors),
           keywords: if subjects.present?
                       Array.wrap(subjects).map do |k|
                         parse_attributes(k, content: 'subject', first: true)

@@ -2,8 +2,11 @@
 
 module Commonmeta
   module Writers
-    module SchemaOrgWriter
+    module SchemaOrgWriter 
       def schema_hsh
+        authors = contributors.select { |c| c['contributorRoles'] == ['Author'] }
+        editors = contributors.select { |c| c['contributorRoles'] == ['Editor'] }
+
         { '@context' => 'http://schema.org',
           '@type' => Commonmeta::Utils::CM_TO_SO_TRANSLATIONS.fetch(type, 'CreativeWork'),
           '@id' => id,
@@ -11,8 +14,8 @@ module Commonmeta
           'url' => url,
           'additionalType' => additional_type,
           'name' => parse_attributes(titles, content: 'title', first: true),
-          'author' => to_schema_org(creators),
-          'editor' => to_schema_org(contributors),
+          'author' => to_schema_org(authors),
+          'editor' => to_schema_org(editors),
           'description' => parse_attributes(descriptions, content: 'description', first: true),
           'license' => license.to_h['url'],
           'version' => version,

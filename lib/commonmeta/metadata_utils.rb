@@ -132,14 +132,16 @@ module Commonmeta
     end
 
     def csl_hsh
+      authors = Array.wrap(contributors).select { |c| c['contributorRoles'] == ['Author'] }
+  
       page = if container.to_h['firstPage'].present?
                [container['firstPage'], container['lastPage']].compact.join('-')
              end
-      author = if Array.wrap(creators).size == 1 && Array.wrap(creators).first.fetch('name',
+      author = if Array.wrap(authors).size == 1 && Array.wrap(authors).first.fetch('name',
                                                                                      nil) == ':(unav)'
                  nil
                else
-                 to_csl(creators)
+                 to_csl(authors)
                end
 
       type_ = if type == 'Software' && version.present?
@@ -158,7 +160,6 @@ module Commonmeta
         'categories' => categories,
         'language' => language,
         'author' => author,
-        'contributor' => to_csl(contributors),
         'issued' => get_date_parts(date['published']),
         'submitted' => date['submitted'] ? get_date_parts(date['submitted']) : nil,
         'abstract' => parse_attributes(descriptions, content: 'description', first: true),

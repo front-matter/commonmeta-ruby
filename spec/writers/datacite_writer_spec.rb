@@ -116,7 +116,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.valid?).to be true
       datacite = JSON.parse(subject.datacite)
       expect(datacite.fetch('titles')).to eq([{ 'title' => 'Triose Phosphate Isomerase Deficiency Is Caused by Altered Dimerization–Not Catalytic Inactivity–of the Mutant Enzymes' }])
-      expect(datacite.fetch('creators').length).to eq(5)
+      expect(datacite.fetch('creators').length).to eq(6)
       expect(datacite.fetch('creators').first).to eq('familyName' => 'Ralser',
                                                      'givenName' => 'Markus',
                                                      'name' => 'Ralser, Markus',

@@ -30,18 +30,21 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.provider).to eq("DataCite")
     end
 
-    # it "SoftwareSourceCode" do
-    #   input = fixture_path + "datacite_software.json"
-    #   subject = Commonmeta::Metadata.new(input: input, from: "datacite")
-    #   # # expect(subject.valid?).to be true
-    #   expect(subject.identifier).to eq("https://doi.org/10.5063/f1m61h5x")
-    #   expect(subject.type).to eq("bibtex"=>"misc", "citeproc"=>"article", "resource_type"=>"Software", "resource_type_general"=>"Software", "ris"=>"COMP", "type"=>"SoftwareSourceCode")
-    #   expect(subject.contributors).to eq([{"familyName"=>"Jones", "givenName"=>"Matthew B.", "name"=>"Matthew B. Jones", "type"=>"Person"}])
-    #   expect(subject.titles).to eq([{"title"=>"dataone: R interface to the DataONE network of data repositories"}])
-    #   expect(subject.date).to eq([{"date"=>"2016", "date_type"=>"Issued"}])
-    #   expect(subject.publisher).to eq("KNB Data Repository")
-    #   expect(subject.provider).to eq("DataCite")
-    # end
+    it "SoftwareSourceCode" do
+      input = "10.5063/f1m61h5x"
+      subject = Commonmeta::Metadata.new(input: input, from: "datacite")
+      # expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://doi.org/10.5063/f1m61h5x")
+      expect(subject.type).to eq("Software")
+      expect(subject.contributors).to eq([{"contributorRoles"=>["Author"],
+        "name"=>
+        "Jones, Matthew B.; Slaughter, Peter; Nahf, Rob; Boettiger, Carl ; Jones, Chris; Read, Jordan; Walker, Lauren; Hart, Edmund; Chamberlain, Scott",
+        "type"=>"Organization"}])
+      expect(subject.titles).to eq([{"title"=>"dataone: R interface to the DataONE network of data repositories"}])
+      expect(subject.date).to eq("created"=>"2016-03-12", "published"=>"2016", "registered"=>"2016-03-12", "updated"=>"2020-09-18")
+      expect(subject.publisher).to eq("name"=>"KNB Data Repository")
+      expect(subject.provider).to eq("DataCite")
+    end
 
     it "SoftwareSourceCode missing_comma" do
       input = "#{fixture_path}datacite_software_missing_comma.json"
