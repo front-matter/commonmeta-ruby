@@ -38,13 +38,13 @@ module Commonmeta
                       meta.fetch('publisher', nil)
                     end
 
-        creators = if meta.fetch('author', nil).present?
+        contributors = if meta.fetch('author', nil).present?
                      get_authors(from_csl(Array.wrap(meta.fetch('author', nil))))
                    else
                      []
                    end
         editors = Array.wrap(meta.fetch('editor', nil)).each { |e| e['contributorType'] = 'Editor' }
-        contributors = get_authors(from_csl(editors))
+        contributors += get_authors(from_csl(editors))
 
         date = {}
         date['submitted'] = nil
@@ -138,7 +138,6 @@ module Commonmeta
           'type' => type,
           'url' => normalize_id(meta.dig('resource', 'primary', 'URL')),
           'titles' => [{ 'title' => title }],
-          'creators' => creators,
           'contributors' => contributors,
           'container' => container,
           'publisher' => publisher,
@@ -167,7 +166,7 @@ module Commonmeta
         {
           'key' => reference.dig('key'),
           'doi' => doi ? normalize_doi(doi) : nil,
-          'creator' => reference.dig('author'),
+          'contributor' => reference.dig('author'),
           'title' => reference.dig('article-title'),
           'publisher' => reference.dig('publisher'),
           'publicationYear' => reference.dig('year'),
@@ -177,7 +176,6 @@ module Commonmeta
           'lastPage' => reference.dig('last-page'),
           'containerTitle' => reference.dig('journal-title'),
           'edition' => nil,
-          'contributor' => nil,
           'unstructured' => doi.nil? ? reference.dig('unstructured') : nil
         }.compact
       end

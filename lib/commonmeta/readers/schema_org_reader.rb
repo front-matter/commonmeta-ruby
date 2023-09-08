@@ -106,8 +106,9 @@ module Commonmeta
         additional_type = meta.fetch('additionalType', nil)
         authors = meta.fetch('author', nil) || meta.fetch('creator', nil)
         # Authors should be an object, if it's just a plain string don't try and parse it.
-        creators = get_authors(from_schema_org(Array.wrap(authors))) unless authors.is_a?(String)
-        contributors = get_authors(from_schema_org(Array.wrap(meta.fetch('editor', nil))))
+        contributors = get_authors(from_schema_org(Array.wrap(authors))) unless authors.is_a?(String)
+        contributors = [] if contributors.nil?
+        contributors += get_authors(from_schema_org(Array.wrap(meta.fetch('editor', nil))))
         publisher = parse_attributes(meta.fetch('publisher', nil), content: 'name', first: true)
 
         ct = schema_org == 'Dataset' ? 'includedInDataCatalog' : 'Periodical'
@@ -230,7 +231,6 @@ module Commonmeta
                       else
                         [{ 'title' => meta.fetch('headline', nil) }]
                       end,
-          'creators' => creators,
           'contributors' => contributors,
           'publisher' => { 'name' => publisher },
           'provider' => parse_attributes(meta.fetch('provider', nil), content: 'name', first: true),

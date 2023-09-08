@@ -17,12 +17,12 @@ module Commonmeta
         citeproc_type = meta.fetch('type', nil)
         type = Commonmeta::Utils::CSL_TO_CM_TRANSLATIONS.fetch(citeproc_type, 'Other')
 
-        creators = if meta.fetch('author', nil).present?
+        contributors = if meta.fetch('author', nil).present?
                      get_authors(from_csl(Array.wrap(meta.fetch('author', nil))))
                    else
-                     [{ 'type' => 'Organization', 'name' => ':(unav)' }]
+                     [{ 'type' => 'Organization', 'name' => ':(unav)', 'contributorRoles' => ['Author'] }]
                    end
-        contributors = get_authors(from_csl(Array.wrap(meta.fetch('editor', nil))))
+        contributors += get_authors(from_csl(Array.wrap(meta.fetch('editor', nil))))
 
         date = {}
         d = get_date_from_date_parts(meta.fetch('issued', nil))
@@ -62,7 +62,6 @@ module Commonmeta
           'type' => type,
           'url' => normalize_id(meta.fetch('URL', nil)),
           'titles' => [{ 'title' => meta.fetch('title', nil) }],
-          'creators' => creators,
           'contributors' => contributors,
           'container' => container,
           'publisher' => if meta.fetch('publisher', nil)

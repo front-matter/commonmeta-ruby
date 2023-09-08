@@ -26,7 +26,7 @@ module Commonmeta
 
         type = 'Software'
 
-        creators = get_authors(Array.wrap(meta.fetch('author', nil)))
+        contributors = get_authors(Array.wrap(meta.fetch('author', nil)))
         license = hsh_to_spdx('rightsIdentifier' => meta.fetch('license', nil))
 
         # container = if meta.fetch("container-title", nil).present?
@@ -71,7 +71,7 @@ module Commonmeta
           # "doi" => doi_from_url(doi),
           # "url" => normalize_id(meta.fetch("URL", nil)),
           'titles' => [{ 'title' => meta.fetch('name', nil) }],
-          'creators' => creators,
+          'contributors' => contributors,
           # "contributors" => contributors,
           # "container" => container,
           # "publisher" => meta.fetch("publisher", nil),

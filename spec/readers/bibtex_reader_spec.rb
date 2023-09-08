@@ -31,9 +31,9 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.id).to eq('https://doi.org/10.7554/elife.01567')
       expect(subject.type).to eq('JournalArticle')
       expect(subject.url).to eq('http://elifesciences.org/lookup/doi/10.7554/eLife.01567')
-      expect(subject.creators.length).to eq(5)
-      expect(subject.creators.first).to eq('familyName' => 'Sankar', 'givenName' => 'Martial',
-                                           'type' => 'Person')
+      expect(subject.contributors.length).to eq(5)
+      expect(subject.contributors.first).to eq('familyName' => 'Sankar', 'givenName' => 'Martial',
+                                           'type' => 'Person', 'contributorRoles' => ['Author'])
       expect(subject.titles).to eq([{ 'title' => 'Automated quantitative histology reveals vascular morphodynamics during Arabidopsis hypocotyl secondary growth' }])
       expect(subject.descriptions.first['description']).to start_with('Among various advantages, their small size makes model organisms preferred subjects of investigation.')
       expect(subject.license).to eq('id' => 'CC-BY-3.0', 'url' => 'https://creativecommons.org/licenses/by/3.0/legalcode')
@@ -48,8 +48,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.state).to eq('not_found')
       expect(subject.id).to eq('https://doi.org/10.7554/elife.01567')
       expect(subject.type).to eq('Dissertation')
-      expect(subject.creators).to eq([{ 'familyName' => 'Toparlar', 'givenName' => 'Y.',
-                                        'type' => 'Person' }])
+      expect(subject.contributors).to eq([{ 'familyName' => 'Toparlar', 'givenName' => 'Y.',
+                                        'type' => 'Person', 'contributorRoles' => ['Author'] }])
       expect(subject.titles).to eq([{ 'title' => 'A multiscale analysis of the urban heat island effect: from city averaged temperatures to the energy demand of individual buildings' }])
       expect(subject.descriptions.first['description']).to start_with('Designing the climates of cities')
       expect(subject.date).to eq('published' => '2018')

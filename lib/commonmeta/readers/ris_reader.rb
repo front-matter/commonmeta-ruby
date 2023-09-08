@@ -41,7 +41,7 @@ module Commonmeta
           'type' => type,
           'url' => meta.fetch('UR', nil),
           'titles' => meta.fetch('T1', nil).present? ? [{ 'title' => meta.fetch('T1', nil) }] : nil,
-          'creators' => get_authors(author),
+          'contributors' => get_authors(author),
           'publisher' => { 'name' => meta.fetch('PB', '(:unav)') },
           'container' => container,
           'date' => date,

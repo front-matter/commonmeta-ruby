@@ -14,8 +14,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://iphylo.blogspot.com/2023/05/ten-years-and-million-links.html")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "f3629c86-06e0-42c0-844a-266b03a91ef1", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("id" => "https://orcid.org/0000-0002-7101-9767", "familyName" => "Page", "givenName" => "Roderic", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("id" => "https://orcid.org/0000-0002-7101-9767", "familyName" => "Page", "givenName" => "Roderic", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Ten years and a million links" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -38,8 +38,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://blog.front-matter.io/posts/does-it-compose")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "5bb66e92-5cb9-4659-8aca-20e486b695c9", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("id" => "https://orcid.org/0000-0003-1419-2405", "familyName" => "Fenner", "givenName" => "Martin", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("id" => "https://orcid.org/0000-0003-1419-2405", "familyName" => "Fenner", "givenName" => "Martin", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Does it compose?" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -62,8 +62,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://blog.front-matter.io/posts/differences-between-orcid-and-datacite-metadata")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "8a4de443-3347-4b82-b57d-e3c82b6485fc", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("id" => "https://orcid.org/0000-0003-1419-2405", "familyName" => "Fenner", "givenName" => "Martin", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("id" => "https://orcid.org/0000-0003-1419-2405", "familyName" => "Fenner", "givenName" => "Martin", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Differences between ORCID and DataCite Metadata" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -87,8 +87,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://blog.front-matter.io/posts/nine-simple-ways-to-make-it-easier-to-re-use-your-data")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "2bdebfc5-e02e-42c2-90c5-e873e2d0435d", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("id" => "https://orcid.org/0000-0003-1419-2405", "familyName" => "Fenner", "givenName" => "Martin", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("id" => "https://orcid.org/0000-0003-1419-2405", "familyName" => "Fenner", "givenName" => "Martin", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Nine simple ways to make it easier to (re)use your data" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -112,8 +112,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://blog.front-matter.io/posts/tracking-the-growth-of-the-pid-graph")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "e58dc9c8-b870-4db2-8896-238b3246c551", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("id" => "https://orcid.org/0000-0003-1419-2405", "familyName" => "Fenner", "givenName" => "Martin", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("id" => "https://orcid.org/0000-0003-1419-2405", "familyName" => "Fenner", "givenName" => "Martin", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Tracking the Growth of the PID Graph" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -138,9 +138,9 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://www.ideasurg.pub/residency-visual-abstract")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "c3095752-2af0-40a4-a229-3ceb7424bce2", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Sathe", "givenName" => "Tejas S.",
-                                           "id" => "https://orcid.org/0000-0003-0449-4469", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Sathe", "givenName" => "Tejas S.",
+                                           "id" => "https://orcid.org/0000-0003-0449-4469", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "The Residency Visual Abstract" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -163,8 +163,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://www.ideasurg.pub/academic-powerhouse")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "153d65e1-f0e4-49a6-a969-33d2129800ba", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Sathe", "givenName" => "Tejas S.", "type" => "Person",
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Sathe", "givenName" => "Tejas S.", "type" => "Person", "contributorRoles" => ["Author"],
                                            "id" => "https://orcid.org/0000-0003-0449-4469")
       expect(subject.titles).to eq([{ "title" => "How to Build an Academic Powerhouse: Let's Study Who's Doing it" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
@@ -189,8 +189,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://syldavia-gazette.org/guinea-worms-chatgpt-neanderthals")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "0022b9ef-525a-4a79-81ad-13411697f58a", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Fenner", "givenName" => "Martin", "id" => "https://orcid.org/0000-0003-1419-2405", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Fenner", "givenName" => "Martin", "id" => "https://orcid.org/0000-0003-1419-2405", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Guinea Worms, ChatGPT, Neanderthals, Plagiarism, Tidyverse" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -212,8 +212,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://wisspub.net/2023/05/23/eu-mitgliedstaaten-betonen-die-rolle-von-wissenschaftsgeleiteten-open-access-modellen-jenseits-von-apcs")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "1c578558-1324-4493-b8af-84c49eabc52f", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Pampel", "givenName" => "Heinz", "id" => "https://orcid.org/0000-0003-3334-2771", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Pampel", "givenName" => "Heinz", "id" => "https://orcid.org/0000-0003-3334-2771", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "EU-Mitgliedstaaten betonen die Rolle von wissenschaftsgeleiteten Open-Access-Modellen jenseits von APCs" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -235,8 +235,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.id).to eq("https://doi.org/10.59350/hke8v-d1e66")
       expect(subject.url).to eq("https://svpow.com/2023/06/09/new-paper-curtice-et-al-2023-on-the-first-haplocanthosaurus-from-dry-mesa")
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Wedel", "givenName" => "Matt", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Wedel", "givenName" => "Matt", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "New paper: Curtice et al. (2023) on the first Haplocanthosaurus from Dry Mesa" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -260,8 +260,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.id).to eq("https://doi.org/10.59350/tpa8t-j6292")
       expect(subject.url).to eq("https://www.samuelmoore.org/2023/04/20/how-to-cultivate-good-closures-scaling-small-and-the-limits-of-openness")
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Moore", "givenName" => "Samuel", "id" => "https://orcid.org/0000-0002-0504-2897", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Moore", "givenName" => "Samuel", "id" => "https://orcid.org/0000-0002-0504-2897", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "How to cultivate good closures: ‘scaling small’ and the limits of openness" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -284,8 +284,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.id).to eq("https://doi.org/10.59350/tfahc-rp566")
       expect(subject.url).to eq("https://blog.oa.works/nature-features-oa-reports-work-putting-oa-policy-into-practice")
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("name" => "OA.Works", "type" => "Organization")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("name" => "OA.Works", "type" => "Organization", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Nature features OA.Report's work putting OA policy into practice!" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -308,8 +308,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://upstream.force11.org/the-research-software-alliance-resa")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "954f8138-0ecd-4090-87c5-cef1297f1470", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(2)
-      expect(subject.creators.first).to eq("familyName" => "Katz", "givenName" => "Daniel S.", "id" => "https://orcid.org/0000-0001-5934-7525", "type" => "Person")
+      expect(subject.contributors.length).to eq(2)
+      expect(subject.contributors.first).to eq("familyName" => "Katz", "givenName" => "Daniel S.", "id" => "https://orcid.org/0000-0001-5934-7525", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "The Research Software Alliance (ReSA)" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -334,9 +334,9 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "efdacb04-bcec-49d7-b689-ab3eab0634bf", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Karcher", "givenName" => "Sebastian",
-                                           "id" => "https://orcid.org/0000-0001-8249-7388", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Karcher", "givenName" => "Sebastian",
+                                           "id" => "https://orcid.org/0000-0001-8249-7388", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Seeking Public Comment on CSL 1.0.2 Release" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -359,8 +359,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://libscie.org/ku-leuven-supports-researchequals")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "5561f8e4-2ff1-4186-a8d5-8dacb3afe414", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("id" => "https://ror.org/0342dzm54", "name" => "Liberate Science", "type" => "Organization")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("id" => "https://ror.org/0342dzm54", "name" => "Liberate Science", "type" => "Organization", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "KU Leuven supports ResearchEquals" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -384,8 +384,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://lab.sub.uni-goettingen.de/welcome.html")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "a163e340-5b3c-4736-9ab0-8c54fdff6a3c", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Göbel", "givenName" => "Mathias", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Göbel", "givenName" => "Mathias", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Welcome to the Lab" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -409,8 +409,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("http://sfmatheson.blogspot.com/2023/01/quintessence-of-dust-2023-restart-why.html")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "1898d2d7-4d87-4487-96c4-3073cf99e9a5", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Matheson", "givenName" => "Stephen", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Matheson", "givenName" => "Stephen", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Quintessence of Dust 2023 restart: the why" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -434,8 +434,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://flavoursofopen.science/grundlagen-fur-die-entwicklung-einer-open-scholarship-strategie")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "f3dc29da-0481-4f3b-8110-4c07260fca67", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Steiner", "givenName" => "Tobias", "id" => "https://orcid.org/0000-0002-3158-3136", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Steiner", "givenName" => "Tobias", "id" => "https://orcid.org/0000-0002-3158-3136", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Grundlagen für die Entwicklung einer Open Scholarship-Strategie" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -460,8 +460,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://markrubin.substack.com/p/the-preregistration-prescriptiveness")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "2b105b29-acbc-4eae-9ff1-368803f36a4d", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.creators.length).to eq(1)
-      expect(subject.creators.first).to eq("familyName" => "Rubin", "givenName" => "Mark", "type" => "Person")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("familyName" => "Rubin", "givenName" => "Mark", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "The Preregistration Prescriptiveness Trade-Off and Unknown Unknowns in Science" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")

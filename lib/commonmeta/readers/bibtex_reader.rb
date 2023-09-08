@@ -14,8 +14,8 @@ module Commonmeta
 
         doi = meta.try(:doi).to_s.presence || options[:doi]
 
-        creators = Array(meta.try(:author)).map do |a|
-          { 'type' => 'Person', 'givenName' => a.first, 'familyName' => a.last }.compact
+        contributors = Array(meta.try(:author)).map do |a|
+          { 'type' => 'Person', 'contributorRoles' => ['Author'], 'givenName' => a.first, 'familyName' => a.last }.compact
         end
 
         container = if meta.try(:journal).present?
@@ -43,7 +43,7 @@ module Commonmeta
           'type' => type,
           'url' => meta.try(:url).to_s.presence,
           'titles' => meta.try(:title).present? ? [{ 'title' => meta.try(:title).to_s }] : [],
-          'creators' => creators,
+          'contributors' => contributors,
           'container' => container,
           'publisher' => meta.try(:publisher).to_s ? { 'name' => meta.publisher.to_s } : nil,
           'date' => date,

@@ -21,11 +21,11 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.id).to eq('https://doi.org/10.5438/qeg0-3gm3')
       expect(subject.url).to eq('https://github.com/datacite/maremma')
       expect(subject.type).to eq('Software')
-      expect(subject.creators).to eq([{ 'affiliation' => [{ 'name' => 'DataCite' }],
+      expect(subject.contributors).to eq([{ 'affiliation' => [{ 'name' => 'DataCite' }],
                                         'familyName' => 'Fenner',
                                         'givenName' => 'Martin',
                                         'id' => 'https://orcid.org/0000-0003-0077-4738',
-                                        'type' => 'Person' }])
+                                        'type' => 'Person', 'contributorRoles' => ['Author'] }])
       expect(subject.titles).to eq([{ 'title' => 'Maremma: a Ruby library for simplified network calls' }])
       expect(subject.descriptions.first['description']).to start_with('Ruby utility library for network requests')
       expect(subject.subjects).to eq([{ 'subject' => 'Faraday' }, { 'subject' => 'Excon' },
@@ -43,18 +43,18 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.id).to eq('https://doi.org/10.5063/f1m61h5x')
       expect(subject.url).to eq('https://github.com/DataONEorg/rdataone')
       expect(subject.type).to eq('Software')
-      expect(subject.creators).to eq([{ 'affiliation' => [{ 'name' => 'NCEAS' }],
+      expect(subject.contributors).to eq([{ 'affiliation' => [{ 'name' => 'NCEAS' }],
                                         'familyName' => 'Jones',
                                         'givenName' => 'Matt',
                                         'id' => 'https://orcid.org/0000-0003-0077-4738',
-                                        'type' => 'Person' },
+                                        'type' => 'Person', 'contributorRoles' => ['Author'] },
                                       { 'affiliation' => [{ 'name' => 'NCEAS' }],
                                         'familyName' => 'Slaughter',
                                         'givenName' => 'Peter',
                                         'id' => 'https://orcid.org/0000-0002-2192-403X',
-                                        'type' => 'Person' },
+                                        'type' => 'Person', 'contributorRoles' => ['Author'] },
                                       { 'name' => 'University of California, Santa Barbara',
-                                        'type' => 'Organization' }])
+                                        'type' => 'Organization', 'contributorRoles' => ['Author'] }])
       expect(subject.titles).to eq([{ 'title' => 'R Interface to the DataONE REST API' }])
       expect(subject.descriptions.first['description']).to start_with('Provides read and write access to data and metadata')
       expect(subject.subjects).to eq([{ 'subject' => 'Data sharing' }, { 'subject' => 'Data repository' },
@@ -75,11 +75,11 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.id).to eq('https://doi.org/10.5438/qeg0-3gm3')
       expect(subject.url).to eq('https://github.com/datacite/maremma')
       expect(subject.type).to eq('Software')
-      expect(subject.creators).to eq([{ 'affiliation' => [{ 'name' => 'DataCite' }],
+      expect(subject.contributors).to eq([{ 'affiliation' => [{ 'name' => 'DataCite' }],
                                         'familyName' => 'Fenner',
                                         'givenName' => 'Martin',
                                         'id' => 'https://orcid.org/0000-0003-0077-4738',
-                                        'type' => 'Person' }])
+                                        'type' => 'Person', 'contributorRoles' => ['Author'] }])
       expect(subject.titles).to eq([{ 'title' => 'Maremma: a Ruby library for simplified network calls' }])
       expect(subject.descriptions.first['description']).to start_with('Simplifies network calls')
       expect(subject.subjects).to eq([{ 'subject' => 'Faraday' }, { 'subject' => 'Excon' },
@@ -98,10 +98,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.id).to eq('https://doi.org/10.5438/wr0x-e194')
       expect(subject.url).to eq('https://github.com/datacite/metadata-reports')
       expect(subject.type).to eq('Software')
-      expect(subject.creators.size).to eq(4)
-      expect(subject.creators.last).to eq('familyName' => 'Nielsen', 'givenName' => 'Lars Holm',
+      expect(subject.contributors.size).to eq(4)
+      expect(subject.contributors.last).to eq('familyName' => 'Nielsen', 'givenName' => 'Lars Holm',
                                           'id' => 'https://orcid.org/0000-0001-8135-3489',
-                                          'type' => 'Person')
+                                          'type' => 'Person', 'contributorRoles' => ['Author'])
       expect(subject.titles).to eq([{ 'title' => 'DOI Registrations for Software' }])
       expect(subject.descriptions.first['description']).to start_with('Analysis of DataCite DOIs registered for software')
       expect(subject.subjects).to eq([{ 'subject' => 'Doi' }, { 'subject' => 'Software' },

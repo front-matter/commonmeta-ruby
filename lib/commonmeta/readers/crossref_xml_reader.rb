@@ -101,6 +101,9 @@ module Commonmeta
         resource_type = resource_type.present? ? resource_type.underscore.camelcase : nil
         type = Commonmeta::Utils::CR_TO_CM_TRANSLATIONS.fetch(resource_type, 'Other')
 
+        contributors = crossref_people(bibmeta, 'author')
+        contributors += crossref_people(bibmeta, 'editor')
+
         titles = if bibmeta['titles'].present?
                    Array.wrap(bibmeta['titles']).map do |r|
                      if r.blank? || (r['title'].blank? && r['original_language_title'].blank?)
@@ -192,8 +195,7 @@ module Commonmeta
           'url' => url,
           'titles' => titles,
           'alternate_identifiers' => alternate_identifiers,
-          'creators' => crossref_people(bibmeta, 'author'),
-          'contributors' => crossref_people(bibmeta, 'editor'),
+          'contributors' =>  contributors,
           'funding_references' => crossref_funding_reference(program_metadata),
           'publisher' => { 'name' => publisher },
           'container' => container,
@@ -296,11 +298,11 @@ module Commonmeta
               'givenName' => given_name,
               'familyName' => family_name,
               'affiliation' => affiliation.presence,
-              'contributorType' => contributor_role == 'editor' ? 'Editor' : nil }.compact
+              'contributorRoles' => contributor_role == 'editor' ? ['Editor'] : ['Author'] }.compact
           else
             { 'type' => 'Organization',
               'name' => a['name'] || a['__content__'],
-              'contributorType' => contributor_role == 'editor' ? 'Editor' : nil }.compact
+              'contributorRoles' => contributor_role == 'editor' ? ['Editor'] : ['Author'] }.compact
           end
         end
       end
@@ -359,7 +361,7 @@ module Commonmeta
           {
             'key' => reference.dig('key'),
             'doi' => doi ? normalize_doi(doi) : nil,
-            'creator' => reference.dig('author'),
+            'contributor' => reference.dig('author'),
             'title' => reference.dig('article_title'),
             'publisher' => reference.dig('publisher'),
             'publicationYear' => reference.dig('cYear'),
@@ -369,7 +371,6 @@ module Commonmeta
             'lastPage' => reference.dig('last_page'),
             'containerTitle' => reference.dig('journal_title'),
             'edition' => nil,
-            'contributor' => nil,
             'unstructured' => doi.nil? ? reference.dig('unstructured') : nil
           }.compact
         end.unwrap

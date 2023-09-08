@@ -34,8 +34,9 @@ module Commonmeta
 
         has_agents = meta.fetch('agents', nil)
         authors = has_agents.nil? ? meta.fetch('authors', nil) : has_agents
-        creators = get_authors(from_schema_org(Array.wrap(authors)))
-        contributors = get_authors(from_schema_org(Array.wrap(meta.fetch('editor', nil))))
+        contributors = get_authors(from_schema_org(Array.wrap(authors)))
+        contributors += get_authors(from_schema_org(Array.wrap(meta.fetch('editor', nil))))
+        
         # strip milliseconds from iso8601, as edtf library doesn't handle them
         date = {}
         if Date.edtf(strip_milliseconds(meta.fetch('datePublished', nil))).present?
@@ -71,7 +72,6 @@ module Commonmeta
           'type' => type,
           'url' => normalize_id(meta.fetch('codeRepository', nil)),
           'titles' => titles,
-          'creators' => creators,
           'contributors' => contributors,
           'publisher' => publisher,
           'date' => date,

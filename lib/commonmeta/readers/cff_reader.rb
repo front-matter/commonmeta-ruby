@@ -34,7 +34,7 @@ module Commonmeta
                                                                 i['type'] == 'doi'
                                                               end.to_h.fetch('value', nil))
         url = normalize_id(meta.fetch('repository-code', nil))
-        creators = cff_creators(Array.wrap(meta.fetch('authors', nil)))
+        contributors = cff_contributors(Array.wrap(meta.fetch('authors', nil)))
 
         date = {}
         if meta.fetch('date-released', nil).present?
@@ -66,7 +66,7 @@ module Commonmeta
           'identifiers' => identifiers,
           'url' => url,
           'titles' => titles,
-          'creators' => creators,
+          'contributors' => contributors,
           'publisher' => publisher,
           'references' => references,
           'date' => date,
@@ -80,8 +80,8 @@ module Commonmeta
           'state' => state }.compact.merge(read_options)
       end
 
-      def cff_creators(creators)
-        Array.wrap(creators).map do |a|
+      def cff_contributors(contributors)
+        Array.wrap(contributors).map do |a|
           id = normalize_orcid(parse_attributes(a['orcid']))
           if a['given-names'].present? || a['family-names'].present? || id.present?
             given_name = parse_attributes(a['given-names'])
@@ -101,12 +101,14 @@ module Commonmeta
             end.compact
 
             { 'type' => 'Person',
+              'contributorRoles' => ['Author'],
               'id' => id,
               'givenName' => given_name,
               'familyName' => family_name,
               'affiliation' => affiliation.presence }.compact
           else
             { 'type' => 'Organization',
+              'contributorRoles' => ['Author'],
               'name' => a['name'] || a['__content__'] }
           end
         end
@@ -127,7 +129,7 @@ module Commonmeta
           'key' => doi || url,
           'doi' => doi,
           'url' => url,
-          'creator' => reference.dig('author'),
+          'contributor' => reference.dig('author'),
           'title' => reference.dig('article-title'),
           'publisher' => reference.dig('publisher'),
           'publicationYear' => date['published'] ? date['published'][0..3] : nil,
@@ -137,7 +139,6 @@ module Commonmeta
           'lastPage' => reference.dig('last-page'),
           'containerTitle' => reference.dig('journal-title'),
           'edition' => nil,
-          'contributor' => nil,
           'unstructured' => doi.nil? ? reference.dig('unstructured') : nil
         }.compact
       end

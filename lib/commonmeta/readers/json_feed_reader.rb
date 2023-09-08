@@ -25,7 +25,7 @@ module Commonmeta
         id = url if id.blank? && url.present?
 
         type = "Article"
-        creators = if meta.fetch("authors", nil).present?
+        contributors = if meta.fetch("authors", nil).present?
             get_authors(from_json_feed(Array.wrap(meta.fetch("authors"))))
           else
             [{ "type" => "Organization", "name" => ":(unav)" }]
@@ -70,7 +70,7 @@ module Commonmeta
           "type" => type,
           "url" => url,
           "titles" => titles,
-          "creators" => creators,
+          "contributors" => contributors,
           "publisher" => publisher,
           "container" => container,
           "date" => date,

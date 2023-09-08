@@ -53,10 +53,10 @@ module Commonmeta
         titles = Array.wrap(meta.fetch('titles', nil)).map do |title|
           title.compact
         end
-        creators = get_authors(from_datacite(meta.fetch('creators', nil)))
+        contributors = get_authors(from_datacite(meta.fetch('creators', nil)))
+        contributors += get_authors(from_datacite(meta.fetch('contributors', nil)))
         publisher = { 'name' => meta.fetch('publisher', nil) }
 
-        contributors = get_authors(from_datacite(meta.fetch('contributors', nil)))
         container = meta.fetch('container', nil)
         funding_references = meta.fetch('funding_references', nil)
 
@@ -98,7 +98,6 @@ module Commonmeta
           'additional_type' => resource_type == type ? nil : resource_type,
           'url' => url,
           'titles' => titles,
-          'creators' => creators,
           'contributors' => contributors,
           'container' => container,
           'publisher' => publisher,
@@ -150,7 +149,7 @@ module Commonmeta
           'key' => key,
           'doi' => doi,
           'url' => url,
-          'creator' => reference.dig('author'),
+          'contributor' => reference.dig('author'),
           'title' => reference.dig('article-title'),
           'publisher' => reference.dig('publisher'),
           'publicationYear' => reference.dig('year'),
@@ -160,7 +159,6 @@ module Commonmeta
           'lastPage' => reference.dig('last-page'),
           'containerTitle' => reference.dig('journal-title'),
           'edition' => nil,
-          'contributor' => nil,
           'unstructured' => doi.nil? ? reference.dig('unstructured') : nil
         }.compact
       end
