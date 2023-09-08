@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    commonmeta-ruby (3.4.5)
+    commonmeta-ruby (3.5)
       activesupport (>= 4.2.5, < 8.0)
       addressable (~> 2.8.1, < 2.8.2)
       base32-url (>= 0.7.0, < 1)
@@ -202,7 +202,7 @@ GEM
       rubocop-ast (>= 0.4.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (2.23.2)
+    rubocop-rspec (2.24.0)
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
