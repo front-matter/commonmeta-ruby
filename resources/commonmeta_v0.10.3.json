@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://commonmeta.org/commonmeta_v0.10.json",
-  "title": "Commonmeta v0.10",
+  "$id": "https://commonmeta.org/commonmeta_v0.10.3.json",
+  "title": "Commonmeta v0.10.3",
   "description": "JSON representation of the Commonmeta schema.",
   "additionalProperties": false,
   "definitions": {
@@ -37,7 +37,21 @@
         "Reader",
         "Translator",
         "ContactPerson",
-        "Maintainer",
+        "DataManager",
+        "Distributor",
+        "HostingInstitution",
+        "Producer",
+        "ProjectLeader",
+        "ProjectManager",
+        "ProjectMember",
+        "RegistrationAgency",
+        "RegistrationAuthority",
+        "RelatedPerson",
+        "ResearchGroup",
+        "RightsHolder",
+        "Researcher",
+        "Sponsor",
+        "WorkPackageLeader",
         "Conceptualization",
         "DataCuration",
         "FormalAnalysis",
@@ -52,6 +66,7 @@
         "Visualization",
         "WritingOriginalDraft",
         "WritingReviewEditing",
+        "Maintainer",
         "Other"
       ],
       "type": "string"
@@ -190,8 +205,38 @@
     },
     "date": {
       "description": "The dates for the resource.",
+      "$comment": "The date fields are not required. Dates should be formatted as ISO 8601 dates.",
       "type": "object",
-      "format": "date"
+      "properties": {
+        "created": {
+          "description": "The date the resource was created.",
+          "type": "string"
+        },
+        "submitted": {
+          "description": "The date the resource was submitted.",
+          "type": "string"
+        },
+        "accepted": {
+          "description": "The date the resource was accepted.",
+          "type": "string"
+        },
+        "published": {
+          "description": "The date the resource was published.",
+          "type": "string"
+        },
+        "updated": {
+          "description": "The date the resource was updated.",
+          "type": "string"
+        },
+        "available": {
+          "description": "The date the resource was made available.",
+          "type": "string"
+        },
+        "withdrawn": {
+          "description": "The date the resource was withdrawn.",
+          "type": "string"
+        }
+      }
     },
     "titles": {
       "description": "The titles of the resource.",
@@ -226,9 +271,11 @@
           "enum": [
             "Book",
             "BookSeries",
+            "DataCatalog",
             "Journal",
             "Periodical",
             "ProceedingsSeries",
+            "Repository",
             "Series"
           ]
         },
@@ -316,17 +363,21 @@
           "type": {
             "type": "string",
             "enum": [
-              "IsIdenticalTo",
               "IsNewVersionOf",
               "IsPreviousVersionOf",
+              "IsVersionOf",
+              "HasVersion",
               "IsPartOf",
               "HasPart",
               "IsVariantFormOf",
+              "IsOriginalFormOf",
+              "IsIdenticalTo",
               "IsTranslationOf",
-              "IsVersionOf",
-              "IsReviewOf",
+              "IsReviewedBy",
+              "Reviews",
               "IsPreprintOf",
-              "HasPreprint"
+              "HasPreprint",
+              "isSupplementTo"
             ]
           }
         },
@@ -437,12 +488,20 @@
         "required": ["alternateIdentifier", "alternateIdentifierType"]
       }
     },
-    "content_url": {
-      "description": "The URL of the content of the resource.",
+    "files": {
+      "description": "The downloadable files for the resource.",
       "type": "array",
       "items": {
-        "type": "string",
-        "format": "uri"
+        "type": "object",
+        "properties": {
+          "bucket": { "type": "string" },
+          "key": { "type": "string" },
+          "checksum": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "size": { "type": "integer" },
+          "mimeType": { "type": "string" }
+        },
+        "required": ["url"]
       }
     },
     "schema_version": {
@@ -459,5 +518,13 @@
       "enum": ["findable", "not_found"]
     }
   },
-  "required": ["id", "type", "url", "contributors", "titles", "publisher", "date"]
+  "required": [
+    "id",
+    "type",
+    "url",
+    "contributors",
+    "titles",
+    "publisher",
+    "date"
+  ]
 }

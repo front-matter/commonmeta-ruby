@@ -207,6 +207,8 @@ module Commonmeta
           }.compact
         end
 
+        files = Array.wrap(meta.fetch("contentUrl", nil)).map { |file| { "url" => file } }    
+        
         # handle keywords as array and as comma-separated string
         subjects = meta.fetch('keywords', nil)
         subjects = subjects.to_s.split(', ') if subjects.is_a?(String)
@@ -222,7 +224,7 @@ module Commonmeta
           'additional_type' => additional_type,
           'alternate_identifiers' => alternate_identifiers.presence,
           'url' => normalize_id(meta.fetch('url', nil)),
-          'content_url' => Array.wrap(meta.fetch('contentUrl', nil)),
+          'files' => files.presence,
           'sizes' => Array.wrap(meta.fetch('contenSize', nil)),
           'formats' => Array.wrap(meta.fetch('encodingFormat',
                                              nil) || meta.fetch('fileFormat', nil)),

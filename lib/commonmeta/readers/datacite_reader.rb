@@ -88,6 +88,7 @@ module Commonmeta
                      end.map do |reference|
           get_datacite_reference(reference)
         end
+        files = Array.wrap(meta.fetch("content_url", nil)).map { |file| { "url" => file } }    
         formats = meta.fetch('formats', nil)
         sizes = meta.fetch('sizes', nil)
         schema_version = meta.fetch('schema_version', nil) || 'http://datacite.org/schema/kernel-4'
@@ -105,6 +106,7 @@ module Commonmeta
           'alternate_identifiers' => alternate_identifiers.presence,
           'references' => references,
           'funding_references' => funding_references,
+          'files' => files.presence,
           'date' => date.compact,
           'descriptions' => descriptions,
           'license' => license,

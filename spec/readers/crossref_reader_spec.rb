@@ -302,6 +302,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.references.length).to eq(27)
       expect(subject.references.last).to eq("doi" => "https://doi.org/10.1378/chest.12-0045",
                                             "key" => "30")
+      expect(subject.files).to eq([{ "mimeType" => "application/pdf",
+                                     "url" => "http://downloads.hindawi.com/journals/pm/2012/291294.pdf" },
+                                   { "mimeType" => "application/xml",
+                                     "url" => "http://downloads.hindawi.com/journals/pm/2012/291294.xml" }])
       expect(subject.container).to eq("firstPage" => "1", "identifier" => "2090-1844",
                                       "identifierType" => "ISSN", "lastPage" => "7", "title" => "Pulmonary Medicine", "type" => "Journal", "volume" => "2012")
       expect(subject.provider).to eq("Crossref")
@@ -329,6 +333,10 @@ describe Commonmeta::Metadata, vcr: true do
                                              "publicationYear" => "1998",
                                              "title" => "Characterization of the peptide binding motif of a rhesus MHC class I molecule (Mamu-A*01) that binds an immunodominant CTL epitope from simianimmunodeficiency virus.",
                                              "volume" => "160")
+      expect(subject.files).to eq([{ "mimeType" => "text/xml",
+                                     "url" => "https://api.elsevier.com/content/article/PII:S0014299915002332?httpAccept=text/xml" },
+                                   { "mimeType" => "text/plain",
+                                     "url" => "https://api.elsevier.com/content/article/PII:S0014299915002332?httpAccept=text/plain" }])
       expect(subject.container).to eq("firstPage" => "303", "identifier" => "0014-2999",
                                       "identifierType" => "ISSN", "lastPage" => "312", "title" => "European Journal of Pharmacology", "type" => "Journal", "volume" => "759")
       expect(subject.provider).to eq("Crossref")
@@ -356,6 +364,11 @@ describe Commonmeta::Metadata, vcr: true do
                                              "publicationYear" => "1946",
                                              "unstructured" => "Alvarez J . (1946). Revisión del género Anoptichthys con descipción de una especie nueva (Pisces, Characidae). An Esc Nac Cien Biol México 4: 263–282.",
                                              "volume" => "4")
+      expect(subject.files).to eq([{ "mimeType" => "application/pdf",
+                                     "url" => "http://www.nature.com/articles/hdy201326.pdf" },
+                                   { "mimeType" => "text/html", "url" => "http://www.nature.com/articles/hdy201326" },
+                                   { "mimeType" => "application/pdf",
+                                     "url" => "http://www.nature.com/articles/hdy201326.pdf" }])
       expect(subject.container).to eq("firstPage" => "122", "identifier" => "1365-2540",
                                       "identifierType" => "ISSN", "issue" => "2", "lastPage" => "130", "title" => "Heredity", "type" => "Journal", "volume" => "111")
       expect(subject.provider).to eq("Crossref")
@@ -754,7 +767,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://www.nature.com/articles/ng.3834")
       expect(subject.type).to eq("JournalArticle")
       expect(subject.contributors.length).to eq(14)
-      expect(subject.contributors[1]).to eq("contributorRoles"=>["Author"], "name"=>"GTEx Consortium", "type"=>"Organization")
+      expect(subject.contributors[1]).to eq("contributorRoles" => ["Author"], "name" => "GTEx Consortium", "type" => "Organization")
       expect(subject.titles).to eq([{ "title" => "The impact of structural variation on human gene expression" }])
       expect(subject.date).to include("published" => "2017-04-03")
       expect(subject.publisher).to eq("id" => "https://api.crossref.org/members/297",
@@ -846,7 +859,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.contributors.count).to eq(3)
       expect(subject.contributors.first).to eq("type" => "Person", "contributorRoles" => ["Author"], "familyName" => "Clayton",
                                                "givenName" => "Barbra R.")
-      expect(subject.contributors.last).to eq("contributorRoles"=>["Editor"], "familyName"=>"Shields", "givenName"=>"James Mark", "type"=>"Person")
+      expect(subject.contributors.last).to eq("contributorRoles" => ["Editor"], "familyName" => "Shields", "givenName" => "James Mark", "type" => "Person")
       expect(subject.titles).to eq([{ "title" => "The Changing Way of the Bodhisattva" }])
       expect(subject.id).to eq("https://doi.org/10.1093/oxfordhb/9780198746140.013.5")
       expect(subject.alternate_identifiers.empty?).to be(true)

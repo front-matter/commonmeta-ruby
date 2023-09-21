@@ -226,7 +226,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "687610993",
                                                      "alternateIdentifierType" => "md5" }])
       expect(subject.url).to eq("https://ors.datacite.org/doi:/10.25491/d50j-3083")
-      expect(subject.content_url).to eq(["https://storage.googleapis.com/gtex_analysis_v7/single_tissue_eqtl_data/GTEx_Analysis_v7_eQTL_expression_matrices.tar.gz"])
+      expect(subject.files).to eq([{ "url" => "https://storage.googleapis.com/gtex_analysis_v7/single_tissue_eqtl_data/GTEx_Analysis_v7_eQTL_expression_matrices.tar.gz" }])
       expect(subject.type).to eq("Dataset")
       expect(subject.contributors).to eq([{ "name" => "The GTEx Consortium",
                                             "type" => "Organization", "contributorRoles" => ["Author"] }])
@@ -254,9 +254,8 @@ describe Commonmeta::Metadata, vcr: true do
                                                    { "alternateIdentifier" => "dg.4503/c3d66dc9-58da-411c-83c4-dd656aa3c4b7",
                                                      "alternateIdentifierType" => "dataguid" }])
       expect(subject.url).to eq("https://ors.datacite.org/doi:/10.23725/8na3-9s47")
-      expect(subject.content_url).to eq([
-                                          "s3://cgp-commons-public/topmed_open_access/197bc047-e917-55ed-852d-d563cdbc50e4/NWD165827.recab.cram", "gs://topmed-irc-share/public/NWD165827.recab.cram",
-                                        ])
+      expect(subject.files).to eq([{ "url" => "s3://cgp-commons-public/topmed_open_access/197bc047-e917-55ed-852d-d563cdbc50e4/NWD165827.recab.cram" },
+                                   { "url" => "gs://topmed-irc-share/public/NWD165827.recab.cram" }])
       expect(subject.type).to eq("Dataset")
       expect(subject.contributors).to eq([{ "name" => "TOPMed IRC", "type" => "Organization", "contributorRoles" => ["Author"] }])
       expect(subject.titles).to eq([{ "title" => "NWD165827.recab.cram" }])
@@ -338,9 +337,11 @@ describe Commonmeta::Metadata, vcr: true do
                                                    { "alternateIdentifier" => "f9e72bdf25bf4b4f0e581d9218fec2eb",
                                                      "alternateIdentifierType" => "md5" }])
       expect(subject.url).to eq("https://ors.datacite.org/doi:/10.23725/7jg3-v803")
-      expect(subject.content_url).to eq([
-                                          "s3://cgp-commons-public/topmed_open_access/44a8837b-4456-5709-b56b-54e23000f13a/NWD100953.recab.cram", "gs://topmed-irc-share/public/NWD100953.recab.cram", "dos://dos.commons.ucsc-cgp.org/01b048d0-e128-4cb0-94e9-b2d2cab7563d?version=2018-05-26T133719.491772Z",
-                                        ])
+      expect(subject.files).to eq([
+                                 { "url" => "s3://cgp-commons-public/topmed_open_access/44a8837b-4456-5709-b56b-54e23000f13a/NWD100953.recab.cram" },
+                                 { "url" => "gs://topmed-irc-share/public/NWD100953.recab.cram" },
+                                 { "url" => "dos://dos.commons.ucsc-cgp.org/01b048d0-e128-4cb0-94e9-b2d2cab7563d?version=2018-05-26T133719.491772Z" },
+                               ])
       expect(subject.type).to eq("Dataset")
       expect(subject.contributors).to eq([{ "name" => "TOPMed", "type" => "Organization", "contributorRoles" => ["Author"] }])
       expect(subject.titles).to eq([{ "title" => "NWD100953.recab.cram" }])

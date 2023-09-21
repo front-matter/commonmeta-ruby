@@ -228,6 +228,34 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.container).to eq("identifier" => "https://wisspub.net", "identifierType" => "URL", "title" => "wisspub.net", "type" => "Periodical")
     end
 
+    it "archived wordpress post" do
+      input = "https://rogue-scholar.org/api/posts/570c8129-e867-49e6-8517-bd783627e76e"
+      subject = described_class.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://project-thor.eu/2016/08/10/orcid-integration-in-pangaea")
+      expect(subject.url).to eq("https://web.archive.org/web/20190709153404/https://project-thor.eu/2016/08/10/orcid-integration-in-pangaea")
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "570c8129-e867-49e6-8517-bd783627e76e", "alternateIdentifierType" => "UUID" }])
+      expect(subject.type).to eq("Article")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("contributorRoles" => ["Author"],
+        "type" => "Person",
+        "familyName" => "Stocker",
+        "givenName" => "Markus",
+        "id" => "https://orcid.org/0000-0001-5492-3212")
+      expect(subject.titles).to eq([{ "title" => "ORCID Integration Series: PANGAEA" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published" => "2016-08-10", "updated" => "2016-08-10")
+      expect(subject.descriptions.first["description"]).to start_with("This is the first in a series of posts describing how THOR partners")
+      expect(subject.publisher).to eq("name" => "Project THOR")
+      expect(subject.subjects).to eq([{ "subject" => "Computer and information sciences" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Computer and information sciences",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.container).to eq("identifier" => "https://project-thor.eu", "identifierType" => "URL", "title" => "Project THOR", "type" => "Periodical")
+    end
+
     it "wordpress post with references" do
       input = "https://rogue-scholar.org/api/posts/4e4bf150-751f-4245-b4ca-fe69e3c3bb24"
       subject = described_class.new(input: input)

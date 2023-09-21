@@ -20,9 +20,13 @@ module Commonmeta
 
         meta = string.present? ? JSON.parse(string) : {}
 
-        url = normalize_url(meta.fetch("url", nil))
+        if (meta.dig("blog", "status") == "archived")
+          url = normalize_url(meta.fetch("archive_url", nil))
+        else
+          url = normalize_url(meta.fetch("url", nil))
+        end
         id = options[:doi] ? normalize_doi(options[:doi]) : normalize_id(meta.fetch("doi", nil))
-        id = url if id.blank? && url.present?
+        id = normalize_url(meta.fetch("url", nil)) if id.blank?
 
         type = "Article"
         contributors = if meta.fetch("authors", nil).present?

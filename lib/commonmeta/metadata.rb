@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# frozen_string_literal: truefiles
 
 require_relative 'metadata_utils'
 
@@ -10,7 +10,7 @@ module Commonmeta
                   :email, :registrant
     attr_reader :doc, :page_start, :page_end
     attr_writer :id, :provider_id, :client_id, :doi, :alternate_identifiers, :contributors,
-                :titles, :publisher, :license, :date, :volume, :url, :version, :subjects, :descriptions, :language, :sizes, :formats, :schema_version, :meta, :container, :provider, :format, :funding_references, :state, :geo_locations, :type, :additional_type, :content_url, :references, :related_identifiers, :related_items, :style, :locale
+                :titles, :publisher, :license, :date, :volume, :url, :version, :subjects, :descriptions, :language, :sizes, :formats, :schema_version, :meta, :container, :provider, :format, :funding_references, :state, :geo_locations, :type, :additional_type, :files, :references, :related_identifiers, :related_items, :style, :locale
 
     def initialize(options = {})
       options.symbolize_keys!
@@ -45,7 +45,7 @@ module Commonmeta
             'state' => options[:state],
             'provider_id' => options[:provider_id],
             'client_id' => options[:client_id],
-            'content_url' => options[:content_url]
+            'files' => options[:files]
           }
           string = File.read(options[:input])
           @from = options[:from] || find_from_format(string: string, ext: ext)
@@ -59,7 +59,7 @@ module Commonmeta
           'state' => options[:state],
           'provider_id' => options[:provider_id],
           'client_id' => options[:client_id],
-          'content_url' => options[:content_url],
+          'files' => options[:files],
           'contributors' => options[:contributors],
           'titles' => options[:titles],
           'publisher' => options[:publisher]
@@ -85,7 +85,7 @@ module Commonmeta
       @state = hsh.to_h['state'].presence
       @provider_id = hsh.to_h['provider_id'].presence
       @client_id = hsh.to_h['client_id'].presence
-      @content_url = hsh.to_h['content_url'].presence
+      @files = hsh.to_h['files'].presence
 
       # options that come from the cli, needed
       # for crossref doi registration
@@ -226,8 +226,8 @@ module Commonmeta
       @alternate_identifiers ||= meta.fetch('alternate_identifiers', nil)
     end
 
-    def content_url
-      @content_url ||= meta.fetch('content_url', nil)
+    def files
+      @files ||= meta.fetch('files', nil)
     end
 
     def provider

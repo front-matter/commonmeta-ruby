@@ -1,0 +1,119 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/posts/570c8129-e867-49e6-8517-bd783627e76e
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '6830'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 21 Sep 2023 20:19:59 GMT
+      Etag:
+      - '"uocsviufsi599"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/posts/[[...params]]"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::vxt89-1695327599116-42087c13d5ed
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"id":"570c8129-e867-49e6-8517-bd783627e76e","doi":null,"url":"https://project-thor.eu/2016/08/10/orcid-integration-in-pangaea","archive_url":"https://web.archive.org/web/20190709153404/https://project-thor.eu/2016/08/10/orcid-integration-in-pangaea","title":"ORCID
+        Integration Series: PANGAEA","summary":"This is the first in a series of posts describing
+        how THOR partners have recently integrated ORCID in their disciplinary data
+        repositories. This post describes ORCID integration in PANGAEA, the Data Publisher
+        for Earth &amp; Environmental Science.  PANGAEA is rolling out a new version
+        of its website. Developers and designers are currently ironing out a few remaining
+        open issues. The release is expected for autumn 2016.","content_html":"<p><span>This
+        is the first in a <a href=\"http://wp.me/p5O69U-aF\">series of posts</a></span><span> describing
+        how THOR partners have recently integrated <a href=\"http://orcid.org/\">ORCID</a>
+        in their disciplinary data repositories. This post describes ORCID integration
+        in <a href=\"https://www.pangaea.de/\">PANGAEA</a>, the Data Publisher for
+        Earth &amp; Environmental Science.</span></p>\n<p><span>PANGAEA is rolling
+        out a new version of its website. Developers and designers are currently ironing
+        out a few remaining open issues. The release is expected for autumn 2016.
+        Among major improvements in search, design, and usability, a key new feature
+        is the integration of ORCID.</span></p>\n<p><span>The new feature enables
+        existing PANGAEA users to connect their PANGAEA profile with their ORCID iD,
+        as demonstrated in the video below. </span></p>\n<p></p><div></div><p></p>\n<p><span>With
+        this connection, PANGAEA obtains the </span><i><span>validated</span></i><span>
+        ORCID iD of its users from ORCID. By connecting their ORCID iD, users can
+        also choose to sign in to PANGAEA using ORCID, as an alternative to signing
+        in using PANGAEA user credentials. This can be handy when a user is already
+        signed in to ORCID, or it is quicker to recall ORCID credentials.</span></p>\n<p><span>Obtaining
+        the validated ORCID iDs of its users is significant for PANGAEA as, contrary
+        to a researcher’s name, the iD is unambiguous: two researchers with the same
+        name can be distinguished by their respective iDs. The iD is also persistent
+        through possible changes in a person’s name: the same researcher may change
+        marital status, or their name may appear in different permutations, at times
+        appear with full name, initials for first name, and with or without middle
+        name (initial). Furthermore, the iD is actionable and can be used to discover
+        information about the researcher.</span></p>\n<p><span>For researchers, the
+        greatest advantage of connecting their ORCID iD to their PANGAEA profile is
+        that PANGAEA can then record the relationships between dataset publication
+        DOIs and contributor ORCID iDs. This information is then shared with the global
+        network of PID infrastructures, and researchers benefit from automated updates
+        to their ORCID Record for data published at PANGAEA, gaining unambiguous attribution
+        for published datasets and benefiting from greater credit for sharing data
+        early.</span></p>\n<p><span>Let’s take a look at how the ORCID integration
+        in PANGAEA is making a difference to <a href=\"https://www.marum.de/en/Alice_Lefebvre.html\">Dr
+        Alice Lefebvre</a>, <a href=\"https://www.marum.de/en/GLOMAR.html\">GLOMAR</a>
+        Associate Scientist at the <a href=\"https://www.marum.de/en/index.html\">MARUM</a>
+        Center for Marine Environmental Sciences of the <a href=\"http://www.uni-bremen.de/en.html\">University
+        of Bremen</a>. </span></p>\n<p><span>Alice has recently joined ORCID and decided
+        to claim the 14 data publications deposited at PANGAEA that she has authored.
+        As a consequence, Alice gains a more complete <a href=\"http://orcid.org/0000-0002-9234-8279\">ORCID
+        Record</a>, one that does not just include her journal article publications
+        but also her authorship in data publications </span><span>−</span><span> a
+        record that better reflects her true contribution to the scientific record.
+        Alice was also surprised to learn about <a href=\"http://datacite.org\">DataCite</a>
+        and the <a href=\"http://search.datacite.org/contributors/0000-0002-9234-8279\">overview</a>
+        DataCite provides about her contributions. </span></p>\n<p><span>The upcoming
+        release of the PANGAEA website automates the sharing of information with the
+        global network of PID infrastructures. Authors of datasets published at PANGAEA
+        who have connected their ORCID iD, like Alice, will benefit from a workflow
+        that ensures information appears automatically and accurately on their ORCID
+        Record.</span></p>\n<p><span>This shows how far the integration between disciplinary
+        repositories and the global network of PID infrastructures has come over the
+        past years, and how the persistent identification of contributors and research
+        artefacts together with infrastructures that aggregate, process, and share
+        information about persistently identified resources are driving and shaping
+        21st-century attribution, credit, communication, and measurement of scholarly
+        activity.</span></p>\n<p><b>Want to Know More?<br />\n</b><span>Readers interested
+        in performing an ORCID integration in their own disciplinary repository can
+        find more information in our recent report, ‘<a href=\"http://doi.org/10.5281/zenodo.58971\">Demonstration
+        of Services to Integrate ORCIDs into Data Records and Database Systems</a>‘</span><span>.
+        </span></p>\n","published_at":1470819639,"updated_at":1470819639,"indexed_at":0,"authors":[{"url":"https://orcid.org/0000-0001-5492-3212","name":"Markus
+        Stocker"}],"image":null,"tags":["Uncategorized","ORCID","Persistent Identifier"],"language":"en","reference":[],"relationships":[],"blog_id":"cg9zq26","blog_name":"Project
+        THOR","blog_slug":"thor","blog":{"id":"cg9zq26","title":"Project THOR","description":"Technical
+        and Human infrastructure for Open Research.","language":"en","favicon":null,"feed_url":"https://project-thor.eu/feed/atom/","home_page_url":"https://project-thor.eu","user_id":"dead81b3-8a8b-45c9-85fe-f01bb3948c77","created_at":"2023-09-21","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"WordPress
+        (.com)","category":"computerAndInformationSciences","prefix":"10.59350","modified_at":"1970-01-01T00:00:00+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":null,"status":"archived","issn":null,"backlog":0,"authors":null,"plan":"Team","slug":"thor","use_mastodon":false,"api":false,"funding":{"award_uri":"https://doi.org/10.3030/654039","funder_id":"https://doi.org/10.13039/501100007601","funder_name":"European
+        Union’s Horizon 2020 research and innovation programme","award_number":"654039"},"archive_prefix":"https://web.archive.org/web/20190709153404/"}}'
+  recorded_at: Thu, 21 Sep 2023 20:19:59 GMT
+recorded_with: VCR 6.2.0

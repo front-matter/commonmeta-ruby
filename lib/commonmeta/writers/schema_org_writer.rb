@@ -35,7 +35,7 @@ module Commonmeta
           'spatialCoverage' => to_schema_org_spatial_coverage(geo_locations),
           'citation' => Array.wrap(references).map { |r| to_schema_org_citation(r) },
           '@reverse' => reverse.presence,
-          'contentUrl' => Array.wrap(content_url).unwrap,
+          'contentUrl' => Array.wrap(files).map { |f| f["url"] }.unwrap,
           'schemaVersion' => schema_version,
           'periodical' => if type == 'Dataset'
                             nil
