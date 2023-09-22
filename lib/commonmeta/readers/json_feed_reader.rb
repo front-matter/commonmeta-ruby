@@ -129,8 +129,19 @@ module Commonmeta
       end
 
       def get_funding_references(meta)
-        # check that relationships resolve and have type "HasAward"
-        Array.wrap(meta["relationships"]).reduce([]) do |sum, relationship|
+        # check that relationships resolve and have type "HasAward" or funding is provided by blog metadata
+        if funding = meta.dig("blog", "funding")
+          fundref = { 
+            "funderIdentifier" => funding["funder_id"],
+            "funderIdentifierType" => "Crossref Funder ID",
+            "funderName" => funding["funder_name"], 
+            "awardNumber" => funding["award_number"]
+          }
+
+        else
+          fundref = nil
+        end
+        Array.wrap(fundref) + Array.wrap(meta["relationships"]).reduce([]) do |sum, relationship|
           begin
             # funder is European Commission
             if validate_prefix(relationship["url"]) == "10.3030" || URI.parse(relationship["url"]).host == "cordis.europa.eu"
