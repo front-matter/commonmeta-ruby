@@ -22,6 +22,7 @@ require_relative 'writers/bibtex_writer'
 require_relative 'writers/citation_writer'
 require_relative 'writers/cff_writer'
 require_relative 'writers/codemeta_writer'
+require_relative 'writers/commonmeta_writer'
 require_relative 'writers/crossref_xml_writer'
 require_relative 'writers/csl_writer'
 require_relative 'writers/csv_writer'
@@ -56,6 +57,7 @@ module Commonmeta
     include Commonmeta::Writers::CitationWriter
     include Commonmeta::Writers::CffWriter
     include Commonmeta::Writers::CodemetaWriter
+    include Commonmeta::Writers::CommonmetaWriter
     include Commonmeta::Writers::CrossrefXmlWriter
     include Commonmeta::Writers::CslWriter
     include Commonmeta::Writers::CsvWriter
