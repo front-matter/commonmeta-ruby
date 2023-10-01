@@ -378,5 +378,10 @@ describe Commonmeta::CLI do
       input = "tyfqw20"
       expect { subject.json_feed_by_blog input }.to output(/37538c38-66e6-4ac4-ab5c-679684622ade/).to_stdout
     end
+
+    it "json_feed_blog_id" do
+      input = "01a92f9a-f8e0-442b-86e2-11530d9d5635"
+      expect { subject.json_feed_blog_id input }.to output(/eve/).to_stdout
+    end
   end
 end
