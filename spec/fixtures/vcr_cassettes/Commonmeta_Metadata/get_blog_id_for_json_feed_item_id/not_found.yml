@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://rogue-scholar.org/api/posts/2b22bbba-bcba-4072-94cc-3f88442fff55
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Age:
+      - '0'
+      Cache-Control:
+      - public, max-age=0, must-revalidate
+      Content-Length:
+      - '28'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 01 Oct 2023 12:54:48 GMT
+      Etag:
+      - '"jtxxi9yf69s"'
+      Server:
+      - Vercel
+      Strict-Transport-Security:
+      - max-age=63072000
+      X-Matched-Path:
+      - "/api/posts/[[...params]]"
+      X-Vercel-Cache:
+      - MISS
+      X-Vercel-Id:
+      - fra1::iad1::6plz2-1696164888551-86b03621bd39
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"message":"Post not found"}'
+  recorded_at: Sun, 01 Oct 2023 12:54:48 GMT
+recorded_with: VCR 6.2.0

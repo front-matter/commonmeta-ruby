@@ -26,7 +26,7 @@ module Commonmeta
 
     desc "", "convert metadata"
     method_option :from, aliases: "-f"
-    method_option :to, aliases: "-t", default: "schema_org"
+    method_option :to, aliases: "-t", default: "commonmeta"
     method_option :regenerate, type: :boolean, force: false
     method_option :style, aliases: "-s", default: "apa"
     method_option :locale, aliases: "-l", default: "en-US"
@@ -113,6 +113,12 @@ module Commonmeta
 
     def json_feed_by_blog(id)
       puts get_json_feed_by_blog(id)
+    end
+
+    desc "", "json_feed_blog_id"
+
+    def json_feed_blog_id(id)
+      puts get_json_feed_blog_id(id)
     end
 
     desc "", "update_ghost_post"

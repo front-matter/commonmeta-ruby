@@ -541,4 +541,16 @@ describe Commonmeta::Metadata, vcr: true do
       expect(response).to eq("10.54900")
     end
   end
+
+  context "get blog_id for json_feed item id", vcr: true do
+    it "by blog post id" do
+      response = subject.get_json_feed_blog_id("1898d2d7-4d87-4487-96c4-3073cf99e9a5")
+      expect(response).to eq("sfmatheson")
+    end
+
+    it "not found" do
+      response = subject.get_doi_prefix_by_json_feed_item_id("2b22bbba-bcba-4072-94cc-3f88442fff55")
+      expect(response).to eq(nil)
+    end
+  end
 end
