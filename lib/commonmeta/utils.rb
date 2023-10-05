@@ -468,7 +468,7 @@ module Commonmeta
         "cff"
       elsif %r{\A(http|https):/(/)?github\.com/(.+)\z}.match?(id)
         "cff"
-      elsif %r{\A(http|https):/(/)?rogue-scholar\.org/api/posts/(.+)\z}.match?(id)
+      elsif %r{\A(http|https):/(/)?api\.rogue-scholar\.org/posts/(.+)\z}.match?(id)
         "json_feed_item"
       else
         "schema_org"
@@ -1141,7 +1141,7 @@ module Commonmeta
     end
 
     def rogue_scholar_api_url(id, _options = {})
-      "https://rogue-scholar.org/api/posts/#{id}"
+      "https://api.rogue-scholar.org/posts/#{id}"
     end
 
     # convert commonmeta dates to DataCite format
@@ -1454,19 +1454,19 @@ module Commonmeta
     end
 
     def json_feed_not_indexed_url
-      "https://rogue-scholar.org/api/posts/not_indexed"
+      "https://api.rogue-scholar.org/posts/not_indexed"
     end
 
     def json_feed_unregistered_url
-      "https://rogue-scholar.org/api/posts/unregistered"
+      "https://api.rogue-scholar.org/posts/unregistered"
     end
 
     def json_feed_by_blog_url(blog_id)
-      "https://rogue-scholar.org/api/blogs/#{blog_id}"
+      "https://api.rogue-scholar.org/blogs/#{blog_id}"
     end
 
     def json_feed_item_by_id_url(id)
-      "https://rogue-scholar.org/api/posts/#{id}"
+      "https://api.rogue-scholar.org/posts/#{id}"
     end
 
     def generate_ghost_token(admin_api_key = ENV["API_KEY"])

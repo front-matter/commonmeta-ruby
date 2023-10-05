@@ -748,7 +748,7 @@ describe Commonmeta::Metadata do
   context 'json_feed_unregistered_url' do
     it 'all posts' do
       response = subject.json_feed_unregistered_url
-      expect(response).to eq("https://rogue-scholar.org/api/posts/unregistered")
+      expect(response).to eq("https://api.rogue-scholar.org/posts/unregistered")
     end
   end
 end
