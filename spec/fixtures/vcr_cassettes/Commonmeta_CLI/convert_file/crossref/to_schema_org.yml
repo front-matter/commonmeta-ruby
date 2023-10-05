@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://api.crossref.org/members/4374
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 19 Mar 2023 17:35:59 GMT
+      - Thu, 05 Oct 2023 19:48:03 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -49,17 +49,17 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1679189264013,"primary-name":"eLife
-        Sciences Publications, Ltd","counts":{"current-dois":14448,"backfile-dois":28272,"total-dois":42720},"breakdowns":{"dois-by-issued-year":[[2021,7221],[2022,6527],[2020,6182],[2019,4846],[2017,4117],[2018,4053],[2016,3510],[2015,2808],[2014,1786],[2013,811],[2023,700],[2012,159]]},"prefixes":["10.7554"],"coverage":{"affiliations-current":0.9873338870431894,"similarity-checking-current":0.0,"descriptions-current":0.0,"ror-ids-current":0.5564091915836102,"funders-backfile":0.3053551216751556,"licenses-backfile":0.9999646293152235,"funders-current":0.2924280177187154,"affiliations-backfile":0.9898132427843803,"resource-links-backfile":0.3482951329937748,"orcids-backfile":0.8474108658743633,"update-policies-current":0.3181755260243632,"ror-ids-backfile":0.002192982456140351,"orcids-current":0.946843853820598,"similarity-checking-backfile":0.0,"references-backfile":0.3393817204301075,"descriptions-backfile":0.0,"award-numbers-backfile":0.2867501414827391,"update-policies-backfile":0.070776740237691,"licenses-current":1.0,"award-numbers-current":0.2825996677740864,"abstracts-backfile":0.34065506508206,"resource-links-current":0.3181755260243632,"abstracts-current":0.3169988925802879,"references-current":0.3066168327796235},"prefix":[{"name":"eLife
-        Sciences Publications, Ltd.","value":"10.7554"}],"id":4374,"tokens":["elife","sciences","publications","ltd"],"counts-type":{"all":{"peer-review":28227,"journal-article":14446,"journal":1,"component":143802,"posted-content":47},"backfile":{"peer-review":18423,"journal-article":9849},"current":{"peer-review":9804,"journal-article":4597,"posted-content":47}},"coverage-type":{"all":{"peer-review":{"last-status-check-time":1679189264013,"affiliations":0.9939419704538208,"abstracts":0.0,"orcids":0.8838700534948808,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.2097282743472562,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679189264013,"affiliations":0.9792330056763118,"abstracts":0.9804790253357331,"orcids":0.8751211408002215,"licenses":0.9999307766855877,"references":0.9708569846324242,"funders":0.890073376713277,"similarity-checking":0.0,"award-numbers":0.8438322026858646,"ror-ids":0.1509760487332133,"update-policies":0.4567354284923162,"resource-links":0.9998615533711754,"descriptions":0.0},"journal":{"last-status-check-time":1679189264013,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1679189264013,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":4.867804342081473E-4,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1679189264013,"affiliations":1.0,"abstracts":1.0,"orcids":1.0,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"peer-review":{"last-status-check-time":1679189264013,"affiliations":0.997123161265809,"abstracts":0.0,"orcids":0.8637029799706888,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.003365358519242252,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679189264013,"affiliations":0.9761397096151894,"abstracts":0.9778657731749416,"orcids":0.8169357295156869,"licenses":0.9998984668494263,"references":0.9742105797542898,"funders":0.8765356889024266,"similarity-checking":0.0,"award-numbers":0.8231292517006803,"ror-ids":0.0,"update-policies":0.2031678342978983,"resource-links":0.9997969336988527,"descriptions":0.0}},"current":{"peer-review":{"last-status-check-time":1679189264013,"affiliations":0.9879640962872297,"abstracts":0.0,"orcids":0.9217666258669931,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.5975112199102407,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1679189264013,"affiliations":0.9858603437024146,"abstracts":0.9860778768762236,"orcids":0.999782466826191,"licenses":1.0,"references":0.963671959973896,"funders":0.9190776593430497,"similarity-checking":0.0,"award-numbers":0.888187948662171,"ror-ids":0.4744398520774418,"update-policies":1.0,"resource-links":1.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1679189264013,"affiliations":1.0,"abstracts":1.0,"orcids":1.0,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":true,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":true,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":false,"deposits-licenses-current":true},"location":"Cambridge,
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1696466957315,"primary-name":"eLife
+        Sciences Publications, Ltd","counts":{"current-dois":22741,"backfile-dois":28286,"total-dois":51027},"breakdowns":{"dois-by-issued-year":[[2023,8158],[2022,7328],[2021,7255],[2020,6186],[2019,4848],[2017,4118],[2018,4058],[2016,3512],[2015,2808],[2014,1786],[2013,811],[2012,159]]},"prefixes":["10.7554"],"coverage":{"affiliations-current":0.8376940328041863,"similarity-checking-current":0.0,"descriptions-current":0.0,"ror-ids-current":0.4925465019128446,"funders-backfile":0.3052039878385067,"licenses-backfile":0.9999646468217493,"funders-current":0.2229013675739853,"affiliations-backfile":0.9898182846637913,"resource-links-backfile":0.3481227462348865,"orcids-backfile":0.8474863890263735,"update-policies-current":0.2433050437535728,"ror-ids-backfile":0.002333309764547833,"orcids-current":0.7908623191592278,"similarity-checking-backfile":0.0,"references-backfile":0.3392137453157039,"descriptions-backfile":0.0,"award-numbers-backfile":0.2866082160786255,"update-policies-backfile":0.0714487732447147,"licenses-current":1.0,"award-numbers-current":0.2156457499670199,"abstracts-backfile":0.34048645973273,"resource-links-current":0.2433050437535728,"abstracts-current":0.3094850710171057,"references-current":0.2367969746273251},"prefix":[{"name":"eLife
+        Sciences Publications, Ltd.","value":"10.7554"}],"id":4374,"tokens":["elife","sciences","publications","ltd"],"counts-type":{"all":{"peer-review":34061,"journal-article":15382,"journal":1,"component":143802,"posted-content":1584},"backfile":{"peer-review":18437,"journal-article":9849},"current":{"peer-review":15624,"journal-article":5533,"posted-content":1584}},"coverage-type":{"all":{"peer-review":{"last-status-check-time":1696466957315,"affiliations":0.8925750858753413,"abstracts":0.0,"orcids":0.7939285399724025,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.2386306919937759,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1696466957315,"affiliations":0.9795215186581719,"abstracts":0.9806917175919906,"orcids":0.882655051358731,"licenses":0.9999349889481212,"references":0.9738655571447146,"funders":0.8907814328435834,"similarity-checking":0.0,"award-numbers":0.8458587959953192,"ror-ids":0.2040696918476141,"update-policies":0.4910934858926017,"resource-links":0.9998699778962424,"descriptions":0.0},"journal":{"last-status-check-time":1696466957315,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1696466957315,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":4.867804342081473E-4,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1696466957315,"affiliations":0.9968434343434343,"abstracts":1.0,"orcids":0.8446969696969697,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"peer-review":{"last-status-check-time":1696466957315,"affiliations":0.9971253457720887,"abstracts":0.0,"orcids":0.8638064761078267,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.003579758095134783,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1696466957315,"affiliations":0.9761397096151894,"abstracts":0.9778657731749416,"orcids":0.8169357295156869,"licenses":0.9998984668494263,"references":0.9742105797542898,"funders":0.8765356889024266,"similarity-checking":0.0,"award-numbers":0.8231292517006803,"ror-ids":0.0,"update-policies":0.2051984973093715,"resource-links":0.9997969336988527,"descriptions":0.0}},"current":{"peer-review":{"last-status-check-time":1696466957315,"affiliations":0.7692012288786482,"abstracts":0.0,"orcids":0.7114695340501792,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.5160010240655402,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1696466957315,"affiliations":0.9855412976685342,"abstracts":0.9857220314476776,"orcids":0.9996385324417134,"licenses":1.0,"references":0.9732514006867884,"funders":0.9161395264774986,"similarity-checking":0.0,"award-numbers":0.8863184529188505,"ror-ids":0.5673233327308874,"update-policies":1.0,"resource-links":1.0,"descriptions":0.0},"posted-content":{"last-status-check-time":1696466957315,"affiliations":0.9968434343434343,"abstracts":1.0,"orcids":0.8446969696969697,"licenses":1.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":true,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":true,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":false,"deposits-licenses-current":true},"location":"Cambridge,
         United Kingdom","names":["eLife Sciences Publications, Ltd","eLife Sciences
         Publications, Ltd."]}}'
-  recorded_at: Sun, 19 Mar 2023 17:35:59 GMT
+  recorded_at: Thu, 05 Oct 2023 19:48:03 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.7554
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -74,7 +74,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 19 Mar 2023 17:35:59 GMT
+      - Thu, 05 Oct 2023 19:48:03 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -86,7 +86,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TGFtI88titQXhLERrZkoZfxPCdHwOUmGpAjgZuDKV202jTyPGLnwkil7lUSI3I338dn8MocoZCxfu3x%2Bqr8g1qmwLZ7e7ASKIfd0u4W%2Bu4lYXJr%2FtK8A6E7li91bDEASssKbp3g%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Q0ohVAmgw0Jqlj16dyigHGZkmXzf04C7anc4w1t2BtrqTnZfDSxAthO6l1Tc%2BkJ3fkecubIpDMN5B0mu8c5KYoMg2zsuIUooXkcI610wJvxdv%2BfPwWK1xQTLLgRMMx74%2B%2Bbr0wE%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -94,9 +94,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7aa7799f4b650a6f-AMS
+      - 81182e124c08b909-AMS
       Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: |-
@@ -106,5 +106,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 19 Mar 2023 17:35:59 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:48:03 GMT
+recorded_with: VCR 6.2.0

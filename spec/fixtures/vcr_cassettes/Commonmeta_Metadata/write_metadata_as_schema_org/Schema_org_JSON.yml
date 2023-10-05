@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://api.datacite.org/dois/10.5281/zenodo.48440?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:58 GMT
+      - Thu, 05 Oct 2023 19:47:24 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -41,7 +41,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - ca25fec1-524b-4953-935f-4ca24474c69c
+      - 5df97c84-c06d-44b1-a035-f0ac3b436dea
       X-Download-Options:
       - noopen
       Etag:
@@ -49,13 +49,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.040847'
+      - '0.050651'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -94,5 +94,5 @@ http_interactions:
         results and get credited by making the research results citable and integrate
         them into existing reporting lines to funding agencies like the European Commission.\r\neasily
         access and reuse shared research results.","language":["en"],"clientType":"repository","domains":"openaire.cern.ch,zenodo.org","re3data":"https://doi.org/10.17616/R3QP53","opendoar":null,"issn":{},"url":"https://zenodo.org/","created":"2013-01-28T12:07:48.000Z","updated":"2020-06-26T12:22:29.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"cern","type":"providers"}},"prefixes":{"data":[{"id":"10.5281","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:24:58 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:47:24 GMT
+recorded_with: VCR 6.2.0

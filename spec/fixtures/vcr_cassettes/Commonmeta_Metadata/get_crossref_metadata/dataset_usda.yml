@@ -2,231 +2,9 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doi.org/ra/10.2737
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - doi.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:20:55 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=oLDtUyou1TjT84sWRFVnAisCtJnSYJ9J6D4gvkFzuIyBczvkARFgXU2FNowCu2pnruuK6%2F3qCkkC0P91Ry%2BXvMS%2FIJpMgyE83sjk0GxYxuZhXIhizJYH3BIVwju9FT6G4KjPqy4%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7d9484e3c92bb8d0-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: |-
-        [
-          {
-            "DOI": "10.2737",
-            "RA": "Crossref"
-          }
-        ]
-  recorded_at: Sun, 18 Jun 2023 15:20:55 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.2737/rds-2018-0001
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - api.crossref.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:20:56 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - public
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,3,29]],"date-time":"2022-03-29T17:05:18Z","timestamp":1648573518641},"publisher-location":"Fort
-        Collins, CO","reference-count":6,"publisher":"Forest Service Research Data
-        Archive","funder":[{"DOI":"10.13039\/100006959","name":"U.S. Forest Service","doi-asserted-by":"publisher"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.2737\/rds-2018-0001","type":"dataset","created":{"date-parts":[[2017,8,9]],"date-time":"2017-08-09T19:44:20Z","timestamp":1502307860000},"source":"Crossref","is-referenced-by-count":1,"title":["Fledging
-        times of grassland birds"],"prefix":"10.2737","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-2583-1778","authenticated-orcid":true,"given":"Christine
-        A.","family":"Ribic","sequence":"first","affiliation":[{"name":"U.S. Geological
-        Survey"}]},{"ORCID":"http:\/\/orcid.org\/0000-0003-4606-044X","authenticated-orcid":true,"given":"Pamela
-        J.","family":"Pietz","sequence":"additional","affiliation":[{"name":"U.S.
-        Geological Survey"}]},{"given":"Nicola","family":"Koper","sequence":"additional","affiliation":[{"name":"University
-        of Manitoba"}]},{"given":"Christoph S.","family":"Ng","sequence":"additional","affiliation":[{"name":"University
-        of Manitoba"}]}],"member":"1450","reference":[{"key":"ref1","doi-asserted-by":"publisher","DOI":"10.5066\/F7V98780"},{"key":"ref2","doi-asserted-by":"publisher","DOI":"10.1016\/j.biocon.2016.11.002"},{"key":"ref3","doi-asserted-by":"publisher","DOI":"10.1642\/0004-8038(2005)122[0618:EABNGB]2.0.CO;2"},{"key":"ref4","series-title":"Studies
-        in Avian Biology","first-page":"119","volume-title":"Bird productivity and
-        nest predation in agricultural grasslands","volume":"43","author":"Ribic","year":"2012"},{"key":"ref5","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pone.0059151"},{"key":"ref6","doi-asserted-by":"publisher","DOI":"10.1674\/0003-0031-178.1.47"}],"container-title":["Forest
-        Service Research Data Archive"],"original-title":[],"deposited":{"date-parts":[[2021,7,1]],"date-time":"2021-07-01T22:10:21Z","timestamp":1625177421000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.fs.usda.gov\/rds\/archive\/Catalog\/RDS-2018-0001"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":6,"URL":"http:\/\/dx.doi.org\/10.2737\/rds-2018-0001","relation":{}}}'
-  recorded_at: Sun, 18 Jun 2023 15:20:56 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/members/1450
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - api.crossref.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:20:57 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - public
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687044418572,"primary-name":"USDA
-        Forest Service","counts":{"current-dois":490,"backfile-dois":7280,"total-dois":7770},"breakdowns":{"dois-by-issued-year":[[1980,225],[1986,223],[1982,218],[1985,217],[1981,211],[1984,210],[1983,204],[2005,203],[2016,201],[1987,192],[2011,190],[2007,190],[2019,189],[2021,188],[2004,188],[2012,187],[1989,185],[1990,183],[1993,180],[2023,179],[1988,179],[2013,177],[2010,175],[1991,175],[2008,172],[1992,170],[2009,169],[1999,168],[1996,168],[2020,166],[2002,166],[2003,165],[2006,163],[1994,163],[1997,159],[1995,158],[2018,150],[2014,150],[2000,149],[1998,145],[2017,139],[2001,129],[2015,126],[2022,123],[1973,2],[1976,1]]},"prefixes":["10.2737"],"coverage":{"affiliations-current":0.3653061224489796,"similarity-checking-current":0.0,"descriptions-current":0.0,"ror-ids-current":0.06530612244897958,"funders-backfile":1.373626373626374E-4,"licenses-backfile":0.0,"funders-current":0.0,"affiliations-backfile":0.02417582417582418,"resource-links-backfile":0.0,"orcids-backfile":0.01414835164835165,"update-policies-current":0.0,"ror-ids-backfile":4.120879120879121E-4,"orcids-current":0.126530612244898,"similarity-checking-backfile":0.0,"references-backfile":0.01785714285714286,"descriptions-backfile":0.0,"award-numbers-backfile":0.0,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.0,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"references-current":0.4040816326530612},"prefix":[{"name":"USDA
-        Forest Service, Research & Development","value":"10.2737"}],"id":1450,"tokens":["usda","forest","service"],"counts-type":{"all":{"report-component":181,"report":7540,"book-part":60,"component":230,"database":8,"dataset":798},"backfile":{"report-component":80,"report":7199,"book-part":1},"current":{"report-component":101,"report":341,"book-part":48}},"coverage-type":{"all":{"report-component":{"last-status-check-time":1687044418572,"affiliations":0.3093922651933702,"abstracts":0.0,"orcids":0.06629834254143646,"licenses":0.0,"references":0.1878453038674033,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.005524861878453039,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1687044418572,"affiliations":0.03872679045092838,"abstracts":0.0,"orcids":0.02015915119363395,"licenses":0.0,"references":0.03580901856763926,"funders":1.326259946949602E-4,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.004509283819628647,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-part":{"last-status-check-time":1687044418572,"affiliations":0.1166666666666667,"abstracts":0.0,"orcids":0.01666666666666667,"licenses":0.0,"references":0.4,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1687044418572,"affiliations":0.1434782608695652,"abstracts":0.0,"orcids":0.1478260869565217,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.8478260869565217},"database":{"last-status-check-time":1687044418572,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dataset":{"last-status-check-time":1687044418572,"affiliations":0.575187969924812,"abstracts":0.0,"orcids":0.462406015037594,"licenses":0.0,"references":0.6917293233082707,"funders":0.7506265664160401,"similarity-checking":0.0,"award-numbers":0.07393483709273183,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"report-component":{"last-status-check-time":1687044418572,"affiliations":0.675,"abstracts":0.0,"orcids":0.1375,"licenses":0.0,"references":0.3125,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1687044418572,"affiliations":0.016946798166412,"abstracts":0.0,"orcids":0.01277955271565495,"licenses":0.0,"references":0.01444645089595777,"funders":1.389081816919017E-4,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":4.16724545075705E-4,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-part":{"last-status-check-time":1687044418572,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":1.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"report-component":{"last-status-check-time":1687044418572,"affiliations":0.0198019801980198,"abstracts":0.0,"orcids":0.009900990099009901,"licenses":0.0,"references":0.0891089108910891,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.009900990099009901,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1687044418572,"affiliations":0.498533724340176,"abstracts":0.0,"orcids":0.1759530791788856,"licenses":0.0,"references":0.4868035190615836,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.09090909090909091,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-part":{"last-status-check-time":1687044418572,"affiliations":0.1458333333333333,"abstracts":0.0,"orcids":0.02083333333333333,"licenses":0.0,"references":0.4791666666666667,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-ror-ids-current":true,"deposits-articles":false,"deposits-affiliations-current":true,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-ror-ids-backfile":true,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":false,"deposits-similarity-checking-current":false,"deposits-licenses-current":false},"location":"Madison,
-        WI, United States","names":["USDA Forest Service","USDA Forest Service, Research
-        & Development"]}}'
-  recorded_at: Sun, 18 Jun 2023 15:20:57 GMT
-- request:
-    method: get
-    uri: https://doi.org/ra/10.2737
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - doi.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:20:57 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Xrxw7sLPfUSTXymLjZIYDtRza24BQxdaSWBmPLi1E8XsSGGsO3NanCOzG0PzY3fIqdzVbNW8bmenOO9qCR7Awg9NKkRKijmKVjs%2BVHFqq25ZJNALZHyTH6k5pwZcyXyUoh2qouk%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7d9484eebc7c0e08-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: |-
-        [
-          {
-            "DOI": "10.2737",
-            "RA": "Crossref"
-          }
-        ]
-  recorded_at: Sun, 18 Jun 2023 15:20:57 GMT
-- request:
-    method: get
     uri: https://api.crossref.org/works/10.2737/rds-2018-0001/transform/application/vnd.crossref.unixsd+xml
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -241,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:25:34 GMT
+      - Thu, 05 Oct 2023 19:46:30 GMT
       Transfer-Encoding:
       - chunked
       Link:
@@ -337,5 +115,227 @@ http_interactions:
         \               </citation_list>\r\n              </dataset>\r\n            </database>\r\n
         \         </crossref>\r\n        </doi_record>\r\n      </query>\r\n    </body>\r\n
         \ </query_result>\r\n</crossref_result>"
-  recorded_at: Sun, 18 Jun 2023 15:25:34 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:46:30 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.2737
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:46:30 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6DELtVsoa1z8HIxD46Iu8jA7ZcFkqWTlTKYqn1Rru7OYIBIY3ISP0W1C57wQ1FsKrKFP6vCOJA8IwADfY3C60wPLsryZRVl47ytpZVFzz7pYN%2FqslUiKp0SauuWfznjkt67dneE%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 81182bcea8571ca7-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.2737",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Thu, 05 Oct 2023 19:46:30 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.2737/rds-2018-0001
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:48:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2022,3,29]],"date-time":"2022-03-29T17:05:18Z","timestamp":1648573518641},"publisher-location":"Fort
+        Collins, CO","reference-count":6,"publisher":"Forest Service Research Data
+        Archive","funder":[{"DOI":"10.13039\/100006959","name":"U.S. Forest Service","doi-asserted-by":"publisher"}],"content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.2737\/rds-2018-0001","type":"dataset","created":{"date-parts":[[2017,8,9]],"date-time":"2017-08-09T19:44:20Z","timestamp":1502307860000},"source":"Crossref","is-referenced-by-count":1,"title":["Fledging
+        times of grassland birds"],"prefix":"10.2737","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-2583-1778","authenticated-orcid":true,"given":"Christine
+        A.","family":"Ribic","sequence":"first","affiliation":[{"name":"U.S. Geological
+        Survey"}]},{"ORCID":"http:\/\/orcid.org\/0000-0003-4606-044X","authenticated-orcid":true,"given":"Pamela
+        J.","family":"Pietz","sequence":"additional","affiliation":[{"name":"U.S.
+        Geological Survey"}]},{"given":"Nicola","family":"Koper","sequence":"additional","affiliation":[{"name":"University
+        of Manitoba"}]},{"given":"Christoph S.","family":"Ng","sequence":"additional","affiliation":[{"name":"University
+        of Manitoba"}]}],"member":"1450","reference":[{"key":"ref1","doi-asserted-by":"publisher","DOI":"10.5066\/F7V98780"},{"key":"ref2","doi-asserted-by":"publisher","DOI":"10.1016\/j.biocon.2016.11.002"},{"key":"ref3","doi-asserted-by":"publisher","DOI":"10.1642\/0004-8038(2005)122[0618:EABNGB]2.0.CO;2"},{"key":"ref4","series-title":"Studies
+        in Avian Biology","first-page":"119","volume-title":"Bird productivity and
+        nest predation in agricultural grasslands","volume":"43","author":"Ribic","year":"2012"},{"key":"ref5","doi-asserted-by":"publisher","DOI":"10.1371\/journal.pone.0059151"},{"key":"ref6","doi-asserted-by":"publisher","DOI":"10.1674\/0003-0031-178.1.47"}],"container-title":["Forest
+        Service Research Data Archive"],"original-title":[],"deposited":{"date-parts":[[2021,7,1]],"date-time":"2021-07-01T22:10:21Z","timestamp":1625177421000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.fs.usda.gov\/rds\/archive\/Catalog\/RDS-2018-0001"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":6,"URL":"http:\/\/dx.doi.org\/10.2737\/rds-2018-0001","relation":{}}}'
+  recorded_at: Thu, 05 Oct 2023 19:48:49 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/1450
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:48:50 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1696462950837,"primary-name":"USDA
+        Forest Service","counts":{"current-dois":531,"backfile-dois":7274,"total-dois":7805},"breakdowns":{"dois-by-issued-year":[[1980,225],[1986,223],[1982,218],[1985,217],[1981,211],[1984,210],[2023,207],[1983,204],[2005,203],[2016,202],[2021,192],[1987,191],[2011,190],[2019,189],[2004,189],[2007,188],[2012,187],[1989,185],[1990,183],[1993,180],[1988,179],[2013,176],[2010,175],[1991,175],[1992,170],[2008,169],[2009,168],[1999,168],[1996,168],[2020,166],[2002,166],[2003,165],[2006,163],[1994,163],[1997,159],[1995,158],[2018,150],[2014,150],[2000,149],[1998,145],[2017,139],[2022,132],[2001,129],[2015,126],[1973,2],[1976,1]]},"prefixes":["10.2737"],"coverage":{"affiliations-current":0.4500941619585687,"similarity-checking-current":0.0,"descriptions-current":0.0,"ror-ids-current":0.1902071563088512,"funders-backfile":1.374759417102007E-4,"licenses-backfile":0.0,"funders-current":0.0,"affiliations-backfile":0.02419576574099533,"resource-links-backfile":0.0,"orcids-backfile":0.01416002199615067,"update-policies-current":0.0,"ror-ids-backfile":5.499037668408029E-4,"orcids-current":0.1657250470809793,"similarity-checking-backfile":0.0,"references-backfile":0.01787187242232609,"descriptions-backfile":0.0,"award-numbers-backfile":0.0,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.0,"abstracts-backfile":1.374759417102007E-4,"resource-links-current":0.0,"abstracts-current":0.0,"references-current":0.3804143126177024},"prefix":[{"name":"USDA
+        Forest Service, Research & Development","value":"10.2737"}],"id":1450,"tokens":["usda","forest","service"],"counts-type":{"all":{"report-component":181,"report":7575,"book-part":60,"component":231,"database":9,"dataset":826},"backfile":{"report-component":80,"report":7193,"book-part":1},"current":{"report-component":101,"report":382,"book-part":48}},"coverage-type":{"all":{"report-component":{"last-status-check-time":1696462950837,"affiliations":0.4088397790055249,"abstracts":0.0,"orcids":0.1160220994475138,"licenses":0.0,"references":0.1878453038674033,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.1049723756906077,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1696462950837,"affiliations":0.04409240924092409,"abstracts":1.32013201320132E-4,"orcids":0.02231023102310231,"licenses":0.0,"references":0.03617161716171617,"funders":1.32013201320132E-4,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.01135313531353135,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-part":{"last-status-check-time":1696462950837,"affiliations":0.1166666666666667,"abstracts":0.0,"orcids":0.01666666666666667,"licenses":0.0,"references":0.4,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1696462950837,"affiliations":0.1428571428571429,"abstracts":0.0,"orcids":0.1471861471861472,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.8484848484848485},"database":{"last-status-check-time":1696462950837,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.1111111111111111},"dataset":{"last-status-check-time":1696462950837,"affiliations":0.585956416464891,"abstracts":0.0,"orcids":0.4769975786924939,"licenses":0.0,"references":0.6997578692493946,"funders":0.7566585956416465,"similarity-checking":0.0,"award-numbers":0.0811138014527845,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"report-component":{"last-status-check-time":1696462950837,"affiliations":0.675,"abstracts":0.0,"orcids":0.1375,"licenses":0.0,"references":0.3125,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1696462950837,"affiliations":0.0169609342416238,"abstracts":1.390240511608508E-4,"orcids":0.01279021270679828,"licenses":0.0,"references":0.01445850132072849,"funders":1.390240511608508E-4,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":5.560962046434033E-4,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-part":{"last-status-check-time":1696462950837,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":1.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"report-component":{"last-status-check-time":1696462950837,"affiliations":0.198019801980198,"abstracts":0.0,"orcids":0.09900990099009901,"licenses":0.0,"references":0.0891089108910891,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.1881188118811881,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1696462950837,"affiliations":0.5549738219895288,"abstracts":0.0,"orcids":0.2015706806282723,"licenses":0.0,"references":0.4450261780104712,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.2146596858638743,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-part":{"last-status-check-time":1696462950837,"affiliations":0.1458333333333333,"abstracts":0.0,"orcids":0.02083333333333333,"licenses":0.0,"references":0.4791666666666667,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-ror-ids-current":true,"deposits-articles":false,"deposits-affiliations-current":true,"deposits-funders-current":false,"deposits-references-backfile":true,"deposits-ror-ids-backfile":true,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":false,"deposits-similarity-checking-current":false,"deposits-licenses-current":false},"location":"Madison,
+        WI, United States","names":["USDA Forest Service","USDA Forest Service, Research
+        & Development"]}}'
+  recorded_at: Thu, 05 Oct 2023 19:48:50 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.2737
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:48:51 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mST5BDVIm1I%2FYh7%2FjqgZ%2FcJgOEJLKEA2%2FBmpi5bykf8iLvskxb5RRH%2B9gldESeZrjFQ8NCf3Dv%2Fi31yxoMZouAcY50kYF%2FimBj0nY0jgJmrW05cJlm%2Ftq9dYSdqnf%2FLOSDzzgCw%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 81182f3aee3db736-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.2737",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Thu, 05 Oct 2023 19:48:51 GMT
+recorded_with: VCR 6.2.0

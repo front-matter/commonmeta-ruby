@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/954f8138-0ecd-4090-87c5-cef1297f1470
+    uri: https://api.rogue-scholar.org/posts/954f8138-0ecd-4090-87c5-cef1297f1470
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,230 +18,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '19481'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '1487'
       Date:
-      - Wed, 06 Sep 2023 14:49:53 GMT
-      Etag:
-      - '"efxesc43gof0t"'
+      - Thu, 05 Oct 2023 19:47:45 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::gp4j4-1694011789322-f07c4b17e1de
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0P3FMATV6NJ0VH3GF64RME-fra
     body:
       encoding: UTF-8
-      string: '{"id":"954f8138-0ecd-4090-87c5-cef1297f1470","doi":"https://doi.org/10.54900/zwm7q-vet94","url":"https://upstream.force11.org/the-research-software-alliance-resa","title":"The
-        Research Software Alliance (ReSA)","summary":"Research software is a key part
-        of most research today.","content_html":" <p><img src=\"https://upstream.force11.org/content/images/2023/04/resa-logo-7.png\"
-        /></p><p>Research software is a key part of most research today. As University
-        of Manchester Professor Carole Goble has said, \"software is the ubiquitous
-        instrument of science.\" Creating and maintaining research software is a human
-        effort, and as Yanina Bellina, rOpenSci Community Manager, has said, \"the
-        work of the people who develop and maintain research software is often hidden
-        and needs to be recognized.\"</p><p>Studies of researchers at leading UK universities
-        [<a href=\"https://www.software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers?bw\">1</a>] and
-        of postdoctoral researchers in the US [<a href=\"https://doi.org/10.6084/m9.figshare.5328442\">2</a>]
-        have found that over 90% use research software, over 65% see research software
-        as fundamental to their research, and 25-55% develop software as part of the
-        research.</p><p>Research software, being ubiquitous, is difficult to concisely
-        define. One recent attempt [<a href=\"https://doi.org/10.54900/9akm9y5-5ject5y\">3</a>]
-        says that research software:</p><figure><img src=\"https://upstream.force11.org/content/images/2023/04/rob-v2-table-6.jpg\"
-        loading=\"lazy\" width=\"1080\" height=\"608\" srcset=\"https://upstream.force11.org/content/images/size/w600/2023/04/rob-v2-table-6.jpg
-        600w, https://upstream.force11.org/content/images/size/w1000/2023/04/rob-v2-table-6.jpg
-        1000w, https://upstream.force11.org/content/images/2023/04/rob-v2-table-6.jpg
-        1080w\" /><figcaption>Figure from <a href=\"https://doi.org/10.54900/9akm9y5-5ject5y\">https://doi.org/10.54900/9akm9y5-5ject5y</a></figcaption></figure><p>Once
-        research software is developed, however, users can find bugs, users can want
-        new features, and the underlying hardware and software on which the software
-        is built (e.g., libraries, OS) can change. The research software needs to
-        be manually maintained in response to these issues. In other words, research
-        software is not a one-time investment, but requires ongoing maintenance.</p><p>Research
-        software sustainability can be defined as occurring when the resources (people,
-        funding, etc.) to enable maintenance are gathered and applied. </p><p>This
-        is different from challenges for publications and datasets because while research
-        software can similarly be a research result and research product, it has properties
-        that differ from papers and datasets, and needs different policies and funding
-        models.</p><h2>Research Software Alliance (ReSA)</h2><p>In response to these
-        facts, the <a href=\"http://www.researchsoft.org/\">Research Software Alliance
-        (ReSA)</a> was founded in 2019 by the <a href=\"https://ardc.edu.au/\">Australia
-        Research Data Commons (ARDC)</a>, the <a href=\"https://alliancecan.ca/en\">Digital
-        Research Alliance of Canada</a>, the <a href=\"https://www.ncsa.illinois.edu/\">National
-        Center for Supercomputing Applications (NCSA)</a>, the <a href=\"https://www.esciencecenter.nl/\">Netherlands
-        eScience Center</a>, and the <a href=\"https://www.software.ac.uk/\">Software
-        Sustainability Institute (SSI)</a> to help these organisations and other stakeholders
-        collaborate on the advancement of the research software ecosystem. </p><p>ReSA''s
-        vision is that research software and those who develop and maintain it are
-        recognised and valued as fundamental and vital to research worldwide, while
-        its mission is to advance the research software ecosystem by collaborating
-        with key influencers and decision makers.</p><p>ReSA is a fiscally-sponsored
-        project of <a href=\"https://www.codeforsociety.org/\">Code for Science &amp;
-        Society</a>, has part time <a href=\"https://www.researchsoft.org/people/\">staff
-        members </a>who include a Director, Dr Michelle Barker, and Community Managers
-        located in Africa, Asia, Australia and Canada, and is led by a <a href=\"https://www.researchsoft.org/people/\">steering
-        committee</a> chaired by Daniel S. Katz, Chief Scientist at NCSA at the University
-        of Illinois Urbana Champaign. ReSA has received support totalling USD$663,500
-        in cash, and USD$344,000 (details are <a href=\"https://www.researchsoft.org/about-resa/\">publicly
-        available</a>) as in-kind contributions from its <a href=\"https://www.researchsoft.org/about-resa/\">sponsors</a>,
-        <a href=\"https://www.researchsoft.org/about-resa/\">Founding Members</a>,
-        and <a href=\"https://www.researchsoft.org/membership/\">Organisational Members</a>.</p><h2>Activities</h2><p>ReSA
-        accomplishes work primarily through forums and task forces. </p><h3><a href=\"https://www.researchsoft.org/funders-forum/\">Funders
-        Forum</a></h3><p>The ReSA Funders Forum, a collaboration of 30+ research software
-        funding organisations, started in 2022. The organisations represented are
-        currently about 2/3 government, 1/4 philanthropic, and 1/12 industry. Geographically,
-        41% are in Europe, 34% in North America, 17% in Australasia, and 4% each in
-        African and South America.</p><p>The Funders Forum provides a formal mechanism
-        for funders to share funding practices, address research software community
-        challenges, facilitate networks and collaboration, and consider how to achieve
-        long-term sustainability for research software. It meets monthly, with each
-        meeting repeating twice in a day to allow those in different time zones to
-        participate each time, and shifting in time from month to month to allow different
-        sets of participants to form each time. Each meeting includes short presentations
-        from funders on their new activities, and a discussion topic that is either
-        led by ReSA or by a funder, such as on diversity, equity, and inclusion in
-        research software, open source program offices, collaboration mechanisms,
-        and landscape analysis. The Funder Forums also has working groups in which
-        more focused activities can occur, such as planning for a multi-organisational
-        funding call and defining policies around FAIR for research software.</p><p>Discussions
-        in the ReSA steering committee and the funders forum led ReSA and the Netherlands
-        eScience Center to co-convene the “<a href=\"https://future-of-research-software.org/\">International
-        Funders Workshop: The Future of Research Software</a>” in Amsterdam in November
-        2022, with representation from 45 funding organisations (those who provide
-        monetary and/or in-kind support to research software and/or the people who
-        develop and maintain it). </p><figure><img src=\"https://upstream.force11.org/content/images/2023/04/52502576946_04a37f7888_k.jpg\"
-        loading=\"lazy\" width=\"2000\" height=\"1334\" srcset=\"https://upstream.force11.org/content/images/size/w600/2023/04/52502576946_04a37f7888_k.jpg
-        600w, https://upstream.force11.org/content/images/size/w1000/2023/04/52502576946_04a37f7888_k.jpg
-        1000w, https://upstream.force11.org/content/images/size/w1600/2023/04/52502576946_04a37f7888_k.jpg
-        1600w, https://upstream.force11.org/content/images/2023/04/52502576946_04a37f7888_k.jpg
-        2048w\" /><figcaption><a href=\"https://www.flickr.com/photos/esciencecenter/52502576946/in/album-72177720303712317/&amp;sa=D&amp;source=docs&amp;ust=1681327121704634&amp;usg=AOvVaw0eLOLV0UmKvACkvx-vuQCj\">Photo
-        via Flickr</a>. Credit: <a href=\"https://https://anneliesverhelst.com/&amp;sa=D&amp;source=docs&amp;ust=1681327121686238&amp;usg=AOvVaw29udzgf41EP21WHifLfeUF\">Annelies
-        Verhelst</a>.</figcaption></figure><p>In this workshop, attendees discussed
-        a draft of the Amsterdam Declaration on Funding Research Software Sustainability
-        [<a href=\"https://doi.org/10.5281/zenodo.7330541\">4</a>], which continues
-        to be <a href=\"https://adore.software/\">open for consultation</a>. </p><figure><img
-        src=\"https://upstream.force11.org/content/images/2023/04/52502848059_61f6ab1780_k.jpg\"
-        loading=\"lazy\" width=\"2000\" height=\"1331\" srcset=\"https://upstream.force11.org/content/images/size/w600/2023/04/52502848059_61f6ab1780_k.jpg
-        600w, https://upstream.force11.org/content/images/size/w1000/2023/04/52502848059_61f6ab1780_k.jpg
-        1000w, https://upstream.force11.org/content/images/size/w1600/2023/04/52502848059_61f6ab1780_k.jpg
-        1600w, https://upstream.force11.org/content/images/2023/04/52502848059_61f6ab1780_k.jpg
-        2048w\" /><figcaption><a href=\"https://www.flickr.com/photos/esciencecenter/52502848059/in/album-72177720303712317/\">Photo
-        via Flickr</a>. Credit: <a href=\"https://anneliesverhelst.com/&amp;sa=D&amp;source=docs&amp;ust=1681327121686238&amp;usg=AOvVaw29udzgf41EP21WHifLfeUF\">Annelies
-        Verhelst</a>.</figcaption></figure><h3><a href=\"https://www.researchsoft.org/events/2022-06/\">Community
-        Forum</a></h3><p>ReSA hosts an occasional online community forum for the global
-        research software community, as an opportunity for participants to meet and
-        share information. Each call features a short talk and follow-up discussion,
-        with the aim of facilitating community consideration about what’s needed next
-        to address particular issues. The Community Forum is open to everyone. Meetings
-        occur at alternating times to maximise attendance by participants in different
-        time zones. Meeting topics have included:</p><ul><li>Outcomes of Vive la différence
-        - research software engineers [<a href=\"https://doi.org/10.5281/zenodo.6859709\">5</a>],
-        a workshop that considered how to reframe research software engineering to
-        place diversity, equity and inclusion as a central organising principle</li><li>The
-        Research Software Roadmap</li><li>Aligning publisher policies for sharing
-        code</li><li>The Research Software Community in the Global South [<a href=\"https://doi.org/10.5281/zenodo.7179892\">6</a>]</li><li><a
-        href=\"https://future-of-research-software.org/\">The International Funders
-        Workshop</a></li></ul><h3><a href=\"https://www.researchsoft.org/taskforces/\">Task
-        Forces</a></h3><ul><li>Evidence for the importance of research software (completed,
-        2020): identified and analysed resources [<a href=\"https://doi.org/10.5281/zenodo.3884311\">7</a>]
-        that demonstrate the importance of research software to research outcomes,
-        to provide information for sharing with key influencers.</li><li>Software
-        sections of RDA COVID-19 Guidelines and Recommendations for policy makers,
-        funders and the research community (completed, 2020) [<a href=\"https://doi.org/10.15497/RDA00052\">8</a>]:
-        helping COVID-19 stakeholders follow best practices to maximise the efficiency
-        of their work, and to act as a blueprint for future emergencies.</li><li>FAIR
-        for research software (completed, 2022): Jointly with FORCE11 and RDA, developed
-        the FAIR for research software (FAIR4RS) principles [<a href=\"https://doi.org/10.15497/RDA00068\">9</a>]</li><li>FAIR
-        4 Research Software Roadmap (completed, 2022) [<a href=\"https://doi.org/10.5281/zenodo.6239373\">10</a>]:
-        Identified key stakeholders in areas arising from the application of the FAIR
-        principles to research software, to guide strategic planning and investment.
-        Consultation with key stakeholders enabled mapping of existing projects that
-        apply some of the elements of the FAIR principles to research software into
-        a longer-term framework to improve strategic alignment and potential collaborators/leads
-        for parts of the Roadmap.</li><li>Software landscape analysis (completed,
-        2022): Mapping the international research software community landscape</li><li>Initial
-        mapping (2020) [<a href=\"https://doi.org/10.5281/zenodo.3699950\">11</a>]</li><li>Expanded
-        mapping of the Global South (2022) [<a href=\"https://doi.org/10.5281/zenodo.7179892\">6</a>]</li><li>Code
-        availability (active): Jointly with FORCE11, working towards greater alignment
-        on policy and other related actions for code (the code associated with the
-        findings of an article) being made available alongside (or prior to) the publication
-        of the article.</li><li><a href=\"https://www.researchsoft.org/funding-opportunities/\">Database
-        of research funding software opportunities</a> (active): maintaining, adding
-        to, and analysing the database to better understand opportunities and their
-        characteristics.</li><li>Research institution policies to support research
-        software (starting): is building a <a href=\"https://docs.google.com/spreadsheets/d/1YgXG1eSrby8e5wzqYOiOZW6KmJtR-wdBTrjr1_aMtF4/edit#gid=0\">collection
-        of institutional policies</a> that support research software and the people
-        who develop and maintain it, and work to better share them with interested
-        stakeholders.</li></ul><p>In addition, ReSA participates in ad hoc activities
-        that support its mission, such as sharing diversity, equity, and inclusion
-        best practices at the 2022 Vive la difference - research software engineers
-        hybrid workshop [<a href=\"https://doi.org/10.5281/zenodo.6859709\">5</a>].</p><figure><img
-        src=\"https://upstream.force11.org/content/images/2023/04/s22004-lcp-vive-la-difference-04---623c6b3946587.png\"
-        loading=\"lazy\" width=\"2000\" height=\"2828\" srcset=\"https://upstream.force11.org/content/images/size/w600/2023/04/s22004-lcp-vive-la-difference-04---623c6b3946587.png
-        600w, https://upstream.force11.org/content/images/size/w1000/2023/04/s22004-lcp-vive-la-difference-04---623c6b3946587.png
-        1000w, https://upstream.force11.org/content/images/size/w1600/2023/04/s22004-lcp-vive-la-difference-04---623c6b3946587.png
-        1600w, https://upstream.force11.org/content/images/2023/04/s22004-lcp-vive-la-difference-04---623c6b3946587.png
-        2381w\" /></figure><h2>Participate</h2><p>ReSA provides freely available <a
-        href=\"https://www.researchsoft.org/resa-resources/\">resources</a> that anyone
-        can use to raise awareness of the importance of research software and a <a
-        href=\"https://www.researchsoft.org/funding-opportunities/\">database</a>
-        or research software funding opportunities. </p><p>Anyone  can sign up to
-        receive updates on ReSA through its regular <a href=\"https://www.researchsoft.org/news/\">newsletter</a>,
-        provide information on <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdeZrx0kXAhD4XfpDrQ8Dmg4qJTRZWboMd-zvgjjtgBs1I68g/viewform\">new
-        funding calls</a> to our <a href=\"https://www.researchsoft.org/funding-opportunities/\">database</a>,
-        join <a href=\"https://www.researchsoft.org/taskforces/\">task forces</a>
-        focused on specific activities, and join the ReSA <a href=\"http://researchsoft.slack.com\">Slack</a>
-        to share what is happening in their community.</p><p>Anyone who represents
-        a funding organisation and wants to interact with other funders, can join
-        the (free) <a href=\"https://www.researchsoft.org/funders-forum/\">Research
-        Software Funders Forum</a>.</p><p>Finally, ReSA is always looking for organisations
-        who want to become recognised as <a href=\"https://www.researchsoft.org/membership/\">organisational
-        members</a> in order to financially support its work.</p><h2>References</h2><ol><li>It’s
-        impossible to conduct research without software, say 7 out of 10 UK researchers.
-        Accessed April 13, 2023. <a href=\"https://www.software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers\">https://www.software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers</a></li><li>Nangia
-        U, Katz DS. Track 1 Paper: Surveying the U.S. National Postdoctoral Association
-        Regarding Software Use and Training in Research. Published online August 30,
-        2017. doi:<a href=\"https://doi.org/10.6084/m9.figshare.5328442.v3\">10.6084/m9.figshare.5328442.v3</a></li><li>Nieuwpoort
-        R van, Katz DS. Defining the roles of research software. <em>Upstream</em>.
-        Published online March 14, 2023. doi:<a href=\"https://doi.org/10.54900/9akm9y5-5ject5y\">10.54900/9akm9y5-5ject5y</a></li><li>Barker
-        M, Hong NPC, Eijnatten J van, Katz DS. Amsterdam Declaration on Funding Research
-        Software Sustainability. Published online March 16, 2023. doi:<a href=\"https://doi.org/10.5281/zenodo.7740084\">10.5281/zenodo.7740084</a></li><li>Barker
-        M, Leung MA, Martinez PA, et al. <em>Report on Vive La Différence - Research
-        Software Engineers</em>. Zenodo; 2022. doi:<a href=\"https://doi.org/10.5281/zenodo.6859709\">10.5281/zenodo.6859709</a></li><li>Martinez
-        PA. The Research Software Community Landscape in the Global South. Published
-        online October 10, 2022. doi:<a href=\"https://doi.org/10.5281/zenodo.7179892\">10.5281/zenodo.7179892</a></li><li>Barker
-        M, Katz DS, Gonzalez-Beltran A. <em>Evidence for the Importance of Research
-        Software</em>. Zenodo; 2020. doi:<a href=\"https://doi.org/10.5281/zenodo.3884311\">10.5281/zenodo.3884311</a></li><li>Research
-        Data Alliance. Final release: COVID-19 guidelines. Published online 2020.
-        doi:<a href=\"https://doi.org/10.15497/RDA00052\">10.15497/RDA00052</a></li><li>Chue
-        Hong NP, Katz DS, Barker M, et al. FAIR Principles for Research Software (FAIR4RS
-        Principles). Published online 2021. doi:<a href=\"https://doi.org/10.15497/RDA00068\">10.15497/RDA00068</a></li><li>Barker,
-        Michelle. FAIR4RS Roadmap Report. Published online February 20, 2022. doi:<a
-        href=\"https://doi.org/10.5281/ZENODO.6239373\">10.5281/ZENODO.6239373</a></li><li>Katz
-        DS, Barker M, Martinez PA, Anzt H, Gonzalez-Beltran A, Bakker T. The Research
-        Software Alliance (ReSA) and the community landscape. Published online March
-        11, 2020. doi:<a href=\"https://doi.org/10.5281/ZENODO.3699950\">10.5281/ZENODO.3699950</a><br
-        /></li></ol> ","published_at":1681814212,"updated_at":1681814212,"indexed_at":1688982864,"authors":[{"url":"https://orcid.org/0000-0001-5934-7525","name":"Daniel
-        S. Katz"},{"url":null,"name":"Michelle Barker"}],"image":"https://upstream.force11.org/content/images/2023/04/resa-logo-7.png","tags":["News"],"language":"en","reference":[{"key":"ref1","url":"https://software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers"},{"doi":"https://doi.org/10.6084/m9.figshare.5328442.v3","key":"ref2"},{"doi":"https://doi.org/10.54900/9akm9y5-5ject5y","key":"ref3"},{"doi":"https://doi.org/10.5281/zenodo.7740084","key":"ref4"},{"doi":"https://doi.org/10.5281/zenodo.6859709","key":"ref5"},{"doi":"https://doi.org/10.5281/zenodo.7179892","key":"ref6"},{"doi":"https://doi.org/10.5281/zenodo.3884311","key":"ref7"},{"doi":"https://doi.org/10.15497/RDA00052","key":"ref8"},{"doi":"https://doi.org/10.15497/RDA00068","key":"ref9"},{"doi":"https://doi.org/10.5281/ZENODO.6239373","key":"ref10"},{"doi":"https://doi.org/10.5281/ZENODO.3699950","key":"ref11"}],"relationships":[],"blog_id":"pm0p222","blog_name":"Upstream","blog_slug":"upstream","blog":{"id":"pm0p222","title":"Upstream","description":"The
-        community blog for all things Open Research.","language":"en","favicon":"https://upstream.force11.org/favicon.png","feed_url":"https://upstream.force11.org/atom-complete/","home_page_url":"https://upstream.force11.org","user_id":"08014cf6-3335-4588-96f4-c77ac1e535b2","created_at":"2023-01-13","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
-        5.25","category":"humanities","prefix":"10.54900","modified_at":"2023-08-04T09:26:42+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":"https://upstream.force11.org/atom/","status":"active","issn":null,"backlog":0,"authors":null,"plan":"Team","slug":"upstream","use_mastodon":false}}'
-  recorded_at: Wed, 06 Sep 2023 14:49:53 GMT
+      string: '{"archive_url":null,"authors":[{"name":"Daniel S. Katz","url":"https://orcid.org/0000-0001-5934-7525"},{"name":"Michelle
+        Barker","url":"https://www.linkedin.com/in/michelledbarker/"}],"blog_name":"Upstream","blog_slug":"upstream","doi":"https://doi.org/10.54900/zwm7q-vet94","id":"954f8138-0ecd-4090-87c5-cef1297f1470","image":"https://upstream.force11.org/content/images/2023/04/resa-logo-7.png","indexed_at":1688982864,"language":"en","published_at":1681814212,"reference":[{"key":"ref1","url":"https://software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers"},{"doi":"https://doi.org/10.6084/m9.figshare.5328442.v3","key":"ref2"},{"doi":"https://doi.org/10.54900/9akm9y5-5ject5y","key":"ref3"},{"doi":"https://doi.org/10.5281/zenodo.7740084","key":"ref4"},{"doi":"https://doi.org/10.5281/zenodo.6859709","key":"ref5"},{"doi":"https://doi.org/10.5281/zenodo.7179892","key":"ref6"},{"doi":"https://doi.org/10.5281/zenodo.3884311","key":"ref7"},{"doi":"https://doi.org/10.15497/RDA00052","key":"ref8"},{"doi":"https://doi.org/10.15497/RDA00068","key":"ref9"},{"doi":"https://doi.org/10.5281/ZENODO.6239373","key":"ref10"},{"doi":"https://doi.org/10.5281/ZENODO.3699950","key":"ref11"}],"relationships":[],"summary":"Research
+        software is a key part of most research today.","tags":["News"],"title":"The
+        Research Software Alliance (ReSA)","updated_at":1681814212,"url":"https://upstream.force11.org/the-research-software-alliance-resa"}
+
+        '
+  recorded_at: Thu, 05 Oct 2023 19:47:44 GMT
 - request:
     method: head
     uri: https://software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -256,7 +58,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:49:54 GMT
+      - Thu, 05 Oct 2023 20:02:19 GMT
       Server:
       - Apache
       X-Content-Type-Options:
@@ -275,9 +77,9 @@ http_interactions:
       Expires:
       - Sun, 19 Nov 1978 05:00:00 GMT
       Last-Modified:
-      - Wed, 06 Sep 2023 14:26:30 GMT
+      - Thu, 05 Oct 2023 05:41:10 GMT
       Etag:
-      - '"1694010390"'
+      - '"1696484470"'
       Vary:
       - Cookie,Accept-Encoding
       X-Generator:
@@ -291,12 +93,12 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Wed, 06 Sep 2023 14:49:54 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:19 GMT
 - request:
     method: get
     uri: https://doi.org/10.6084/m9.figshare.5328442.v3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -313,7 +115,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:49:55 GMT
+      - Thu, 05 Oct 2023 20:02:20 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -325,13 +127,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 15:34:13 GMT
+      - Thu, 05 Oct 2023 20:36:15 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6Z5%2BTaszyODb2EJliT%2B8RskB9R9QFVIjyL3yVK1Xg2GlwjKV6ba3GtUM7O1MgV4Ya%2FXatxyVFd5UHlF%2F9RPqe2xdDQnrUuAfrq3zXRCSVu30D%2Bayfl0p6fY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=an8k5zyZguLdOy5UljHmlKDavQs93S33Wsz7ictqgHZCM2xmrLecBP6Ru2G1XSkoqkL9eMyQqLpj8KHh%2Bn9xvZ5EH47mx2QQg%2BKmBYwRCwvq4naNuzI3ia0KjG3Ns9kRso0tUiI%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -339,7 +141,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 802785780edc4db6-FRA
+      - 811842fb4a3db8c7-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -347,12 +149,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.6084%2Fm9.figshare.5328442.v3">https://data.crosscite.org/10.6084%2Fm9.figshare.5328442.v3</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:49:55 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:20 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.6084%2Fm9.figshare.5328442.v3
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -369,7 +171,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:49:55 GMT
+      - Thu, 05 Oct 2023 20:02:20 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -385,9 +187,9 @@ http_interactions:
       Etag:
       - W/"a7071f51b1eb40a8f30e8b154cbb14d8"
       X-Runtime:
-      - '0.017239'
+      - '0.017934'
       X-Request-Id:
-      - 5ca8d5d8-06bf-4a46-8db4-0036683391d6
+      - 92ff6bbe-2c76-42b4-9c30-f6440e08ed6e
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -430,12 +232,12 @@ http_interactions:
           "URL": "https://figshare.com/articles/journal_contribution/Track_1_Paper_Surveying_the_U_S_National_Postdoctoral_Association_Regarding_Software_Use_and_Training_in_Research/5328442/3",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Wed, 06 Sep 2023 14:49:55 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:20 GMT
 - request:
     method: get
     uri: https://doi.org/10.54900/9akm9y5-5ject5y
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -452,7 +254,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:49:56 GMT
+      - Thu, 05 Oct 2023 20:02:20 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -464,13 +266,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 15:34:06 GMT
+      - Thu, 05 Oct 2023 20:54:23 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2Bw74kxns2QZAtbGFKsyNrQeZq9d4LDOWOV67EdKqrSm6f9WzJAtc9Z%2BPL0cCKqK1X9KPjHKkf%2FTDTUaTYS6TmjBO2vvK6JmtXmlhbqOt6LvhaLWnUDtnTE%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=J%2FfduRY%2BwV4sQ2uBS5XnOscal350rXn0HYCZC6t%2BPX0SPe526Arzwas09SSF%2B5lkhjhJy7VQNE2k9g4xb1w3523CtqmOsi5OSDSzcoybymX21Kl1qV8BlLqZu1MM2zGdoaR0flY%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -478,7 +280,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8027857ee8f82bd3-FRA
+      - 811842fed974b7b5-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -486,12 +288,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.54900%2F9akm9y5-5ject5y/transform">https://api.crossref.org/v1/works/10.54900%2F9akm9y5-5ject5y/transform</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:49:56 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:20 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.54900%2F9akm9y5-5ject5y/transform
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -508,7 +310,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:49:57 GMT
+      - Thu, 05 Oct 2023 20:02:21 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -558,12 +360,12 @@ http_interactions:
         the roles of research software","prefix":"10.54900","author":[{"given":"Rob","family":"van
         Nieuwpoort","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-5934-7525","authenticated-orcid":false,"given":"Daniel
         S.","family":"Katz","sequence":"additional","affiliation":[]}],"member":"31795","container-title":[],"original-title":[],"link":[{"URL":"https:\/\/upstream.force11.org\/defining-the-roles-of-research-software","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2023,6,17]],"date-time":"2023-06-17T23:14:22Z","timestamp":1687043662000},"score":1,"resource":{"primary":{"URL":"https:\/\/upstream.force11.org\/defining-the-roles-of-research-software"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2023,3,14]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.54900\/9akm9y5-5ject5y","relation":{},"published":{"date-parts":[[2023,3,14]]},"subtype":"other"}'
-  recorded_at: Wed, 06 Sep 2023 14:49:57 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:21 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/zenodo.7740084
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -580,7 +382,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:49:57 GMT
+      - Thu, 05 Oct 2023 20:02:21 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -592,13 +394,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 15:34:59 GMT
+      - Thu, 05 Oct 2023 20:54:35 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cHJQ2ie79iQlE9KvmbsQOb2MKTbM2c%2F7yN9JMj%2FZzOWx31e2b2JVtiDb84e0aichj%2FopZl27vsD0TYEtrJQhuFz%2FHE1vccWi0f8mmcIQcabJmP8UpZHN%2FYg%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zAvSW2RxLuxPEzvelHd6dttsrQ4F9HnU1bLRhAqVg0xW5Aql1SMZHzAIdfMOlbL7lG%2Bm3Fbq%2FLlp9Tp%2FZlCdW2ayvvl1fSeGVic9Fn9Zya%2FIDo%2FUtQ84323O%2BRqHWjTSL8nDyl4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -606,7 +408,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 802785884b1537e4-FRA
+      - 81184304abeeb734-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -614,12 +416,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.7740084">https://data.crosscite.org/10.5281%2Fzenodo.7740084</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:49:57 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:21 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2Fzenodo.7740084
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -636,7 +438,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:49:58 GMT
+      - Thu, 05 Oct 2023 20:02:21 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -652,9 +454,9 @@ http_interactions:
       Etag:
       - W/"a6451de9eb23725373223d1fdf4bc634"
       X-Runtime:
-      - '0.020123'
+      - '0.023183'
       X-Request-Id:
-      - 786f0f9e-b56d-4545-948f-e8b522cfd6dc
+      - d3ab26a4-6546-4042-b7c7-3aefeebaa27b
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -708,12 +510,12 @@ http_interactions:
           "copyright": "Creative Commons Attribution 4.0 International",
           "version": "0.3"
         }
-  recorded_at: Wed, 06 Sep 2023 14:49:58 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:21 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/zenodo.6859709
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -730,7 +532,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:49:59 GMT
+      - Thu, 05 Oct 2023 20:02:22 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -742,13 +544,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 15:30:19 GMT
+      - Thu, 05 Oct 2023 20:36:15 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=300dLDgaqIT5VPYnzQix8jEWk3iepecCWyiX4dDHgG%2BbStFBrVHnPSf8ExotiZvLdh%2Fkk5JvFpHFmRKVc4GKmlHtrWRM1ANzldfWGAL20vtG2sa%2FpN3qQMM%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=716KT4eQSb%2BGpmJKeSEvpNq2Wzrsq0C6NRch0OleNDVAlBzm6uFKGpvc5hr9%2F%2B%2FDST5H8tl2pWWr1r7saLCtFBS3p3IR45cpqFbJjvh0KLHQDpx%2Fkg%2FWYu23baOdF0IvW2HJkO8%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -756,7 +558,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8027858fae093838-FRA
+      - 81184307cfff0ea0-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -764,12 +566,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.6859709">https://data.crosscite.org/10.5281%2Fzenodo.6859709</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:49:59 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:22 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2Fzenodo.6859709
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -786,7 +588,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:49:59 GMT
+      - Thu, 05 Oct 2023 20:02:22 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -802,9 +604,9 @@ http_interactions:
       Etag:
       - W/"1ef634b21545647b47d59f6b4ca912b9"
       X-Runtime:
-      - '0.018150'
+      - '0.022380'
       X-Request-Id:
-      - d62279a5-50df-4b0c-9230-ffb62b5fd506
+      - 3cb24276-96cb-4ebd-bced-48f5e025d687
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -913,12 +715,12 @@ http_interactions:
           "URL": "https://zenodo.org/record/6859709",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Wed, 06 Sep 2023 14:49:59 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:22 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/zenodo.7179892
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -935,7 +737,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:00 GMT
+      - Thu, 05 Oct 2023 20:02:22 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -947,13 +749,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 15:22:17 GMT
+      - Thu, 05 Oct 2023 20:10:16 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0rRuVfFUmlQbbcCZwi3Jzl0xIMK%2FPGmkqr%2BHJdqWAYufvRE4w3EHfawRCumhZIPi5OHIiXltuHXKuVPugnQvUedeM2%2BkIuzBmGfYEVG2xfHbct6UhrDb238%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=H9F%2FX9GPdn%2BG2JFhapRXy05zwDTmNimJ7ZULvlbbBjmX%2FgG6Q213hTgLLEvGdb%2BRIxg6lR%2B1veMIHgUU9%2F2i1niEPTPDxc7CcjuQXnTEnJEx6lmx75xjhiSTDlFtJnkVKXHH5ds%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -961,7 +763,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 80278596dbc12bf3-FRA
+      - 8118430adcd30bc2-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -969,12 +771,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.7179892">https://data.crosscite.org/10.5281%2Fzenodo.7179892</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:50:00 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:22 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2Fzenodo.7179892
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -991,7 +793,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:00 GMT
+      - Thu, 05 Oct 2023 20:02:22 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -1007,9 +809,9 @@ http_interactions:
       Etag:
       - W/"f5b7902dce814b3d03598f37990ce8f0"
       X-Runtime:
-      - '0.021650'
+      - '0.022214'
       X-Request-Id:
-      - 161100e4-e7a6-441b-b06e-14ce566f9d8f
+      - 4dccf481-453c-4833-ae34-fb59a18a4c4f
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -1103,12 +905,12 @@ http_interactions:
           "URL": "https://zenodo.org/record/7179892",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Wed, 06 Sep 2023 14:50:00 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:22 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/zenodo.3884311
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -1125,7 +927,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:01 GMT
+      - Thu, 05 Oct 2023 20:02:22 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1137,13 +939,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 15:34:59 GMT
+      - Thu, 05 Oct 2023 20:10:16 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=sPqWSehtNPWD2ulYAd3O3mZBPcsoAm9vrmOfWyCBSVje68aqoJ39QbzQ2RZyLfk2EhT5Jb9WkS5VVpcCi98ZtU5Gqed860znZbmkETXpJpFsC0vZLuaThsk%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WK0WEEDk3WuyiqzoZr5vh0Z4LdBTMPBEJ2vRyt5UYh5z26%2BkghO5T7m6yqopzi4Kn1wbkO3OVOA2rn%2F72OYuzVuqtpny0arIZn3vS2BureU4AB0IcYgaUBywukQFRTBW74bUi0Y%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1151,7 +953,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8027859d49dc363b-FRA
+      - 8118430d8fa30e80-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1159,12 +961,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.3884311">https://data.crosscite.org/10.5281%2Fzenodo.3884311</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:50:01 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:22 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2Fzenodo.3884311
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -1181,7 +983,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:01 GMT
+      - Thu, 05 Oct 2023 20:02:23 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -1197,9 +999,9 @@ http_interactions:
       Etag:
       - W/"51567bedd6280478432dd51a48ce7632"
       X-Runtime:
-      - '0.018075'
+      - '0.019800'
       X-Request-Id:
-      - a3c6da0c-3e0b-449a-a95a-156be5bc8db3
+      - fe0599ac-ccbf-4992-a1f5-071b0a05de55
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -1247,12 +1049,12 @@ http_interactions:
           "URL": "https://zenodo.org/record/3884311",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Wed, 06 Sep 2023 14:50:01 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:23 GMT
 - request:
     method: get
     uri: https://doi.org/10.15497/RDA00052
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -1269,7 +1071,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:02 GMT
+      - Thu, 05 Oct 2023 20:02:23 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1281,13 +1083,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 15:22:17 GMT
+      - Thu, 05 Oct 2023 20:54:35 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kK6GrMsjtTQd8sNbCWupffIDkCN5JZzNDUDXTwPOyyfs6HdhvLm%2Fevs82UfZehane7y5840fypa2XysIddhhWZBcsR8%2Bp6PkYEI5o7Gt6ehUBOkXGg2EKLo%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9wfXv2OgrYMV1ao6L%2BpKepfa0cTxcE6eoBk36bwEj9Dbqald59m8xe%2FG6e1D8IXOQtwqUxATeyZ5uPDXFrmUlcdi%2BvOLx1sRFR4neab4xOETswmZdiP38pMtAtoEQMI7qqXO%2BKE%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1295,7 +1097,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 802785a3a9eb3648-FRA
+      - 811843104e1f0a74-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1303,12 +1105,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.15497%2FRDA00052">https://data.crosscite.org/10.15497%2FRDA00052</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:50:02 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:23 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.15497%2FRDA00052
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -1325,7 +1127,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:02 GMT
+      - Thu, 05 Oct 2023 20:02:23 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -1341,9 +1143,9 @@ http_interactions:
       Etag:
       - W/"5605bebd477a12dddcf0628cd41fb513"
       X-Runtime:
-      - '0.017327'
+      - '0.014341'
       X-Request-Id:
-      - 150d2a18-3fca-45b3-a4e5-65ca372ee28a
+      - 8e1516d6-b7f1-4c85-bd61-71dcb2a2210e
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -1372,12 +1174,12 @@ http_interactions:
           "title": "Final release: COVID-19 guidelines",
           "URL": "https://zenodo.org/record/3932953#.Xx_f7Z4za70"
         }
-  recorded_at: Wed, 06 Sep 2023 14:50:02 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:23 GMT
 - request:
     method: get
     uri: https://doi.org/10.15497/RDA00068
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -1394,7 +1196,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:03 GMT
+      - Thu, 05 Oct 2023 20:02:24 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1406,13 +1208,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 15:22:17 GMT
+      - Thu, 05 Oct 2023 20:36:15 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yd%2B2TvDoeOaw76MiUGxlRvcx278lbA0pnqz54cvKoyMqHzHd8Qv0tBmrKkywoGSlQ%2BBh4HOYVAQjdL5nMyRS4fOAGbTWpQ8USxDtGUrLgM4vk5g0Kye9pBM%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=n%2F0iLr3MvmE3iDhZv6jTOlsnRVveqE%2FKE0x8u5Dp2WaMZyYM9pfLuBPNeIjgrphfUIN9h2vHxly1yg4gdXbOV2Np3BzzogfFZGXPS1Ox7fp5S96QtAZeKzW3qRakqWZAFuqDeS8%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1420,7 +1222,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 802785a9d85603f8-FRA
+      - 811843135d390a60-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1428,12 +1230,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.15497%2FRDA00068">https://data.crosscite.org/10.15497%2FRDA00068</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:50:03 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:23 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.15497%2FRDA00068
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -1450,7 +1252,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:03 GMT
+      - Thu, 05 Oct 2023 20:02:24 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -1466,9 +1268,9 @@ http_interactions:
       Etag:
       - W/"7e2ad4283560ec29b408517db66a2cc7"
       X-Runtime:
-      - '0.029403'
+      - '0.026259'
       X-Request-Id:
-      - 1af75588-853a-4c7b-bfd9-c933d1b8dc60
+      - 75d54023-d6f3-4dc8-878c-3bc0c553ec56
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -1778,12 +1580,12 @@ http_interactions:
           "URL": "https://zenodo.org/record/6623556#.YqCJTJNBwlw",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Wed, 06 Sep 2023 14:50:03 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:24 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/ZENODO.6239373
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -1800,7 +1602,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:04 GMT
+      - Thu, 05 Oct 2023 20:02:24 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1812,13 +1614,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 15:34:59 GMT
+      - Thu, 05 Oct 2023 20:36:15 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jJS4aF18ga6L2NJO3m1INXvQJgYCkzKYn9%2FpBGABwic1Wo1TkLPzFosMyLUQJfmlVs5a1X5A8foQJpwNkavpz4ysk1nJM56iMenzIyWxApYGrhOGjFbDtlc%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=c%2FQalVMc6ZUR8j58qucg6ow95EzrS01UX4EZnj2QVp0BRwmmrwI160tASiD%2BwnGTNnMxqyrwReTTrbFRVl4CWEHPYzLPtxGHxsgYIAMWWtcjLOs61JGdKRJb5TG0Z8zdVZHIPIg%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1826,7 +1628,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 802785b03fa6920b-FRA
+      - 811843169c671c94-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1834,12 +1636,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2FZENODO.6239373">https://data.crosscite.org/10.5281%2FZENODO.6239373</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:50:04 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:24 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2FZENODO.6239373
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -1856,7 +1658,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:04 GMT
+      - Thu, 05 Oct 2023 20:02:24 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -1872,9 +1674,9 @@ http_interactions:
       Etag:
       - W/"4b0f91a049d2529e7d7d8fc42c7e3310"
       X-Runtime:
-      - '0.051023'
+      - '0.020673'
       X-Request-Id:
-      - 8224629d-dda3-49da-bdeb-b46bcf39148a
+      - 112ed12d-3aa0-4e62-bc2f-6cde7aa2c281
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -1913,12 +1715,12 @@ http_interactions:
           "URL": "https://zenodo.org/record/6239373",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Wed, 06 Sep 2023 14:50:04 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:24 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/ZENODO.3699950
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -1935,7 +1737,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:05 GMT
+      - Thu, 05 Oct 2023 20:02:24 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1947,13 +1749,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 15:34:59 GMT
+      - Thu, 05 Oct 2023 20:36:15 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=FJP%2FO16Vg7lwQvZYRsjRZcF%2Brs7BsmhN7%2FagPNHQgxbf25ZFhSvpvfeR9P4YQOSpXbhagscLRDJWGB13bctOTEk028GrMYenpLA7IX7raONigSQ%2FLnz5M%2FY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Cneyf1Hz4gdk%2FI6XLvuTElNN1VbkDUviIiZEs2zBYaoznwEPdMIxoY3GVMUf%2FMStEWRVgHba9Nl7MTCzWq6fNze%2FsIT%2Bh60scUZhDPQYVxiaTez0HC8yuUmD3Fwp7A1eWVyLUIU%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1961,7 +1763,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 802785b66ce31970-FRA
+      - 811843195e4fb932-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1969,12 +1771,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2FZENODO.3699950">https://data.crosscite.org/10.5281%2FZENODO.3699950</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:50:05 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:24 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2FZENODO.3699950
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -1991,7 +1793,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:50:05 GMT
+      - Thu, 05 Oct 2023 20:02:25 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -2007,9 +1809,9 @@ http_interactions:
       Etag:
       - W/"ff2b9c499754dee86387b4534c530c50"
       X-Runtime:
-      - '0.019949'
+      - '0.028161'
       X-Request-Id:
-      - f04755e5-3d1e-4d27-aa3e-894d8daf5acc
+      - 6d38e1df-56e4-4b4b-b1cd-3e3623620c7a
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -2067,5 +1869,5 @@ http_interactions:
           "copyright": "Creative Commons Attribution 4.0 International",
           "version": "1.0"
         }
-  recorded_at: Wed, 06 Sep 2023 14:50:05 GMT
+  recorded_at: Thu, 05 Oct 2023 20:02:25 GMT
 recorded_with: VCR 6.2.0

@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.2791
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:23:32 GMT
+      - Thu, 05 Oct 2023 19:47:04 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4XHkYIjUD7kCXVBOBuDVVpq6sSN3dhuXp8Wu3BHVDdBGRvpn6285nQuemZg6hhoMmMn7d7AQFHCaxcCeStnY0%2BOB8gJ391vfYdfFp%2BJXuZW1Bead4q9acZGCQLdTxGcYiBoseto%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=xlzx2RPne2ZwTUgo4A0BM0oUzt2379S2mLQPnNYQAh2jbehkdlBvzfyl50qyHDkrQMrR%2B4VvDSjzoq2xDJoWMsTqiZjUDb3%2BDOw30aveGYiEKef59uweaAZhOO8aRkMcvV0Feoc%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d9488b9cbe4d0d9-AMS
+      - 81182c9eafab655c-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,5 +51,5 @@ http_interactions:
             "RA": "OP"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:23:32 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:47:04 GMT
+recorded_with: VCR 6.2.0

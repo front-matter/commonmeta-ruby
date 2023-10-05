@@ -2,48 +2,41 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/blogs/tyfqw
+    uri: https://api.rogue-scholar.org/blogs/tyfqw
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
     status:
-      code: 200
-      message: OK
+      code: 500
+      message: Internal Server Error
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '4'
       Content-Type:
-      - application/json; charset=utf-8
+      - text/html; charset=utf-8
+      Content-Length:
+      - '265'
       Date:
-      - Sun, 18 Jun 2023 07:50:43 GMT
-      Etag:
-      - '"wm6yxsynvh4"'
+      - Thu, 05 Oct 2023 19:48:27 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/blogs/[slug]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::98kz8-1687074643292-5d2c6967ccd1
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0P4S75112MN8KXY1QTDS2Z-fra
     body:
       encoding: UTF-8
-      string: 'null'
-  recorded_at: Sun, 18 Jun 2023 07:50:44 GMT
-recorded_with: VCR 6.1.0
+      string: |
+        <!doctype html>
+        <html lang=en>
+        <title>500 Internal Server Error</title>
+        <h1>Internal Server Error</h1>
+        <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+  recorded_at: Thu, 05 Oct 2023 19:48:27 GMT
+recorded_with: VCR 6.2.0

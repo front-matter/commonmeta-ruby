@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://raw.githubusercontent.com/datacite/metadata-reports/master/software/codemeta.json
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -39,21 +39,21 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Github-Request-Id:
-      - FF54:CD41:7F3F41:853F92:648F2182
+      - 6330:8272:F664ED:FF9E74:651F0BC0
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 18 Jun 2023 15:23:46 GMT
+      - Thu, 05 Oct 2023 19:49:36 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-ams21043-AMS
+      - cache-ams21079-AMS
       X-Cache:
-      - MISS
+      - HIT
       X-Cache-Hits:
-      - '0'
+      - '1'
       X-Timer:
-      - S1687101826.006050,VS0,VE284
+      - S1696535376.004001,VS0,VE197
       Vary:
       - Authorization,Accept-Encoding,Origin
       Access-Control-Allow-Origin:
@@ -61,9 +61,9 @@ http_interactions:
       Cross-Origin-Resource-Policy:
       - cross-origin
       X-Fastly-Request-Id:
-      - 3ee6402fa510c2124978b86b96582b0551082c66
+      - f4c7e322764405089f19db523e4d0a56d9ae13e0
       Expires:
-      - Sun, 18 Jun 2023 15:28:46 GMT
+      - Thu, 05 Oct 2023 19:54:36 GMT
       Source-Age:
       - '0'
     body:
@@ -91,5 +91,5 @@ http_interactions:
         [\n\t\t\"doi\",\n\t\t\"software\",\n\t\t\"codemeta\"\n\t],\n\t\"title\": \"DOI
         Registrations for Software\",\n\t\"programmingLanguage\": {\n\t\t\"name\":
         \"R\",\n\t\t\"URL\": \"https://www.r-project.org/\"\n\t}\n}\n"
-  recorded_at: Sun, 18 Jun 2023 15:23:46 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:49:36 GMT
+recorded_with: VCR 6.2.0

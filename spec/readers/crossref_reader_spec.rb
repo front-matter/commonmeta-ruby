@@ -328,6 +328,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.references.length).to eq(98)
       expect(subject.references.first).to eq("containerTitle" => "J. Immunol",
                                              "contributor" => "Allen",
+                                             "doi" => "https://doi.org/10.4049/jimmunol.160.12.6062",
                                              "firstPage" => "6062",
                                              "key" => "10.1016/j.ejphar.2015.03.018_bib1",
                                              "publicationYear" => "1998",
@@ -522,7 +523,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.contributors).to eq([{ "type" => "Person", "contributorRoles" => ["Author"], "familyName" => "Leung",
                                             "givenName" => "Vincent S." }])
       expect(subject.titles).to eq([{ "title" => "The Politics of the Past in Early China" }])
-      expect(subject.date).to eq("published" => "2019-07-01", "updated" => "2022-09-22")
+      expect(subject.date).to eq("published" => "2019-07-01", "updated" => "2023-09-17")
       expect(subject.publisher).to eq("id" => "https://api.crossref.org/members/56",
                                       "name" => "Cambridge University Press (CUP)")
       expect(subject.provider).to eq("Crossref")
@@ -732,10 +733,10 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input)
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1111/nph.14619")
-      expect(subject.url).to eq("https://onlinelibrary.wiley.com/doi/10.1111/nph.14619")
+      expect(subject.url).to eq("https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.14619")
       expect(subject.type).to eq("JournalArticle")
       expect(subject.contributors.length).to eq(3)
-      expect(subject.contributors.first).to eq("affiliation" => [{ "name" => "Independent Junior Research Group on Protein Recognition and Degradation; Leibniz Institute of Plant Biochemistry (IPB); Weinberg 3 Halle (Saale) D-06120 Germany" }, { "name" => "ScienceCampus Halle - Plant-based Bioeconomy; Betty-Heimann-Strasse 3 Halle (Saale) D-06120 Germany" }],
+      expect(subject.contributors.first).to eq("affiliation" => [{ "name" => "Independent Junior Research Group on Protein Recognition and Degradation Leibniz Institute of Plant Biochemistry (IPB) Weinberg 3 Halle (Saale) D-06120 Germany" }, { "name" => "ScienceCampus Halle - Plant-based Bioeconomy; Betty-Heimann-Strasse 3 Halle (Saale) D-06120 Germany" }],
                                                "familyName" => "Dissmeyer",
                                                "givenName" => "Nico",
                                                "id" => "https://orcid.org/0000-0002-4156-3761",

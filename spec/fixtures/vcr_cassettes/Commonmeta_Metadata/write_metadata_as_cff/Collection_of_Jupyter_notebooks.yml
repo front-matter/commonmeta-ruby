@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.14454
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:23:30 GMT
+      - Thu, 05 Oct 2023 19:46:52 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OudxQmYp%2BBs6torio21tTq98Pl%2BuuK%2FbCHABkGZMlk6QijBusT6hrqQ0HuLx7BomY1pZvE9it%2B4XFByQ6k7NMybZooq3vbgLOv%2BtR99UB5zOq1JX3s5k3axk6WI7FyXjJRstM1c%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XL5Au0RGe8zI1S%2Ffmz8xAC7UOK0HBwheDkSQPYBSVlyEMHqCAJ7e%2BhtzvsWlgWjfkIX1YyG6TBllc6eUtbPD1dWCw1M3Oi5SHAhWS3WlZZ67FT6vzqq2Ip868poTrOr2ZzgM6IU%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d9488adca9ab7a3-AMS
+      - 81182c579cc7655e-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,12 +51,12 @@ http_interactions:
             "RA": "DataCite"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:23:30 GMT
+  recorded_at: Thu, 05 Oct 2023 19:46:52 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.14454/fqq6-w751?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:23:31 GMT
+      - Thu, 05 Oct 2023 19:46:53 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -93,7 +93,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - a0c4bfbd-9014-462c-a724-5290b69d10a2
+      - 3db8ecd5-eb24-4998-88a0-750534a786ae
       X-Download-Options:
       - noopen
       Etag:
@@ -101,13 +101,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.036530'
+      - '0.049378'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -139,5 +139,5 @@ http_interactions:
         Open Identifiers for Discovery, Access and Use of Research Resources","funderName":"European
         Commission","awardNumber":"777523","funderIdentifier":"https://doi.org/10.13039/501100000780","funderIdentifierType":"Crossref
         Funder ID"}],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00L21ldGFkYXRhLnhzZCI+CiAgPGlkZW50aWZpZXIgaWRlbnRpZmllclR5cGU9IkRPSSI+MTAuMTQ0NTQvRlFRNi1XNzUxPC9pZGVudGlmaWVyPgogIDxjcmVhdG9ycz4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5QZXRyeXN6YWssIFJvYmVydDwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+Um9iZXJ0PC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPlBldHJ5c3phazwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSJodHRwczovL29yY2lkLm9yZyI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTYzMzMtMjE4MjwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+RmVubmVyLCBNYXJ0aW48L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPk1hcnRpbjwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5GZW5uZXI8L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cHM6Ly9vcmNpZC5vcmciPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMy0xNDE5LTI0MDU8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDR3eG5zajgxIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPkRhdGFDaXRlPC9hZmZpbGlhdGlvbj4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5MYW1iZXJ0LCBTaW1vbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+U2ltb248L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+TGFtYmVydDwvZmFtaWx5TmFtZT4KICAgICAgPG5hbWVJZGVudGlmaWVyIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJPUkNJRCIgc2NoZW1lVVJJPSJodHRwczovL29yY2lkLm9yZyI+aHR0cHM6Ly9vcmNpZC5vcmcvMDAwMC0wMDAxLTk1NzAtODEyMTwvbmFtZUlkZW50aWZpZXI+CiAgICAgIDxhZmZpbGlhdGlvbiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wNTdnMjB6NjEiIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIiBzY2hlbWVVUkk9Imh0dHBzOi8vcm9yLm9yZyI+U2NpZW5jZSBhbmQgVGVjaG5vbG9neSBGYWNpbGl0aWVzIENvdW5jaWw8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkxsaW5hcmVzLCBNYW51ZWwgQmVybmFsPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5NYW51ZWwgQmVybmFsPC9naXZlbk5hbWU+CiAgICAgIDxmYW1pbHlOYW1lPkxsaW5hcmVzPC9mYW1pbHlOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgbmFtZUlkZW50aWZpZXJTY2hlbWU9Ik9SQ0lEIiBzY2hlbWVVUkk9Imh0dHBzOi8vb3JjaWQub3JnIj5odHRwczovL29yY2lkLm9yZy8wMDAwLTAwMDItNzM2OC0xODBYPC9uYW1lSWRlbnRpZmllcj4KICAgICAgPGFmZmlsaWF0aW9uIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzAyY2F0c3M1MiIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnIj5FdXJvcGVhbiBCaW9pbmZvcm1hdGljcyBJbnN0aXR1dGU8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPk1hZGRlbiwgRnJhbmNlczwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+RnJhbmNlczwvZ2l2ZW5OYW1lPgogICAgICA8ZmFtaWx5TmFtZT5NYWRkZW48L2ZhbWlseU5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciBuYW1lSWRlbnRpZmllclNjaGVtZT0iT1JDSUQiIHNjaGVtZVVSST0iaHR0cHM6Ly9vcmNpZC5vcmciPmh0dHBzOi8vb3JjaWQub3JnLzAwMDAtMDAwMi01NDMyLTYxMTY8L25hbWVJZGVudGlmaWVyPgogICAgICA8YWZmaWxpYXRpb24gYWZmaWxpYXRpb25JZGVudGlmaWVyPSJodHRwczovL3Jvci5vcmcvMDVkaGU4YjcxIiBhZmZpbGlhdGlvbklkZW50aWZpZXJTY2hlbWU9IlJPUiIgc2NoZW1lVVJJPSJodHRwczovL3Jvci5vcmciPkJyaXRpc2ggTGlicmFyeTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPkZSRVlBIFBJRCBHcmFwaCBKdXB5dGVyIE5vdGVib29rczwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5EYXRhQ2l0ZTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAyMDwvcHVibGljYXRpb25ZZWFyPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iQ29sbGVjdGlvbiI+Q29sbGVjdGlvbjwvcmVzb3VyY2VUeXBlPgogIDxzdWJqZWN0cz4KICAgIDxzdWJqZWN0PnBpZCBncmFwaDwvc3ViamVjdD4KICAgIDxzdWJqZWN0PnBpZDwvc3ViamVjdD4KICAgIDxzdWJqZWN0PmdyYXBocWw8L3N1YmplY3Q+CiAgICA8c3ViamVjdD5mcmV5YTwvc3ViamVjdD4KICAgIDxzdWJqZWN0Pmp1cHl0ZXI8L3N1YmplY3Q+CiAgICA8c3ViamVjdCBzdWJqZWN0U2NoZW1lPSJGaWVsZHMgb2YgU2NpZW5jZSBhbmQgVGVjaG5vbG9neSAoRk9TKSIgc2NoZW1lVVJJPSJodHRwOi8vd3d3Lm9lY2Qub3JnL3NjaWVuY2UvaW5ubyIgdmFsdWVVUkk9Imh0dHA6Ly93d3cub2VjZC5vcmcvc2NpZW5jZS9pbm5vLzM4MjM1MTQ3LnBkZiI+Rk9TOiBDb21wdXRlciBhbmQgaW5mb3JtYXRpb24gc2NpZW5jZXM8L3N1YmplY3Q+CiAgPC9zdWJqZWN0cz4KICA8ZGF0ZXM+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iSXNzdWVkIj4yMDIwLTA1LTA4PC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IkNyZWF0ZWQiPjIwMjAtMDUtMDg8L2RhdGU+CiAgICA8ZGF0ZSBkYXRlVHlwZT0iVXBkYXRlZCI+MjAyMC0wNi0xMDwvZGF0ZT4KICA8L2RhdGVzPgogIDxsYW5ndWFnZT5lbjwvbGFuZ3VhZ2U+CiAgPHNpemVzLz4KICA8Zm9ybWF0cy8+CiAgPHZlcnNpb24+MS4xLjE8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cDovL3NwZHgub3JnL2xpY2Vuc2VzL01JVC5qc29uIj5NSVQgTGljZW5zZTwvcmlnaHRzPgogIDwvcmlnaHRzTGlzdD4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPkp1cHl0ZXIgbm90ZWJvb2tzIHRoYXQgdXNlIEdyYXBoUUwgdG8gaW1wbGVtZW50IEVDLWZ1bmRlZCBGUkVZQSBQcm9qZWN0IFBJRCBHcmFwaCB1c2VyIHN0b3JpZXMuPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KICA8ZnVuZGluZ1JlZmVyZW5jZXM+CiAgICA8ZnVuZGluZ1JlZmVyZW5jZT4KICAgICAgPGZ1bmRlck5hbWU+RXVyb3BlYW4gQ29tbWlzc2lvbjwvZnVuZGVyTmFtZT4KICAgICAgPGZ1bmRlcklkZW50aWZpZXIgZnVuZGVySWRlbnRpZmllclR5cGU9IkNyb3NzcmVmIEZ1bmRlciBJRCI+aHR0cHM6Ly9kb2kub3JnLzEwLjEzMDM5LzUwMTEwMDAwMDc4MDwvZnVuZGVySWRlbnRpZmllcj4KICAgICAgPGF3YXJkTnVtYmVyIGF3YXJkVVJJPSJpbmZvOmV1LXJlcG8vZ3JhbnRBZ3JlZW1lbnQvRUMvSDIwMjAvNzc3NTIzLyI+Nzc3NTIzPC9hd2FyZE51bWJlcj4KICAgICAgPGF3YXJkVGl0bGU+Q29ubmVjdGVkIE9wZW4gSWRlbnRpZmllcnMgZm9yIERpc2NvdmVyeSwgQWNjZXNzIGFuZCBVc2Ugb2YgUmVzZWFyY2ggUmVzb3VyY2VzPC9hd2FyZFRpdGxlPgogICAgPC9mdW5kaW5nUmVmZXJlbmNlPgogIDwvZnVuZGluZ1JlZmVyZW5jZXM+CjwvcmVzb3VyY2U+","url":"https://github.com/datacite/pidgraph-notebooks-python","contentUrl":null,"metadataVersion":2,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"fabricaForm","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":6,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2020-06-25T04:40:12.000Z","registered":"2020-06-25T04:40:12.000Z","published":"2020","updated":"2020-06-25T04:43:21.000Z"},"relationships":{"client":{"data":{"id":"datacite.datacite","type":"clients"}},"provider":{"data":{"id":"datacite","type":"providers"}},"media":{"data":{"id":"10.14454/fqq6-w751","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[{"id":"10.14454/y785-xs19","type":"dois"},{"id":"10.14454/62t3-0822","type":"dois"},{"id":"10.14454/27b7-9g84","type":"dois"},{"id":"10.14454/jkar-xj80","type":"dois"},{"id":"10.14454/qaym-kt26","type":"dois"},{"id":"10.14454/r0ed-fh20","type":"dois"}]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"datacite.datacite","type":"clients","attributes":{"name":"DataCite","symbol":"DATACITE.DATACITE","year":2011,"alternateName":null,"description":null,"language":[],"clientType":"repository","domains":"*","re3data":null,"opendoar":null,"issn":{},"url":null,"created":"2011-12-07T13:43:39.000Z","updated":"2021-07-08T10:02:17.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"datacite","type":"providers"}},"prefixes":{"data":[{"id":"10.14454","type":"prefixes"},{"id":"10.25492","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:23:31 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:46:53 GMT
+recorded_with: VCR 6.2.0

@@ -2,9 +2,9 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doi.org/ra/10.4232
+    uri: https://doi.org/ra/10.6084
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:25:02 GMT
+      - Thu, 05 Oct 2023 19:49:34 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AGLWbf3Kv4YH4g6DPk%2BtfACNFCO6AaQmp3WehVq741IbzSG0EsHEBZAPTC1hZp1Kr0h2jXD3cMF4gGL8lZsag4VBMxGfAkgRBL%2FOSHypbEiLmCBm%2Bw1MsZ2bDVPOj89PuQjdvnI%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TyX884jJXlBSSx%2FLPpbw%2BMrhMnjsRkq0KGInWR224aEGvmNDgkgyQKDAoQrw48Pzd3vQJ8C2DoMPj90n2I7kWXOSoYmSoOmgbkq1a2i8fHjOMFnZV8gHCo7gLRd1RHRts49huQ4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d948ae86d5b0b75-AMS
+      - 811830485c760e32-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -47,16 +47,16 @@ http_interactions:
       string: |-
         [
           {
-            "DOI": "10.4232",
+            "DOI": "10.6084",
             "RA": "DataCite"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:25:02 GMT
+  recorded_at: Thu, 05 Oct 2023 19:49:34 GMT
 - request:
     method: get
-    uri: https://api.datacite.org/dois/10.4232/1.2745?include=media,client
+    uri: https://api.datacite.org/dois/10.6084/m9.figshare.3475223.v1?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:25:02 GMT
+      - Thu, 05 Oct 2023 19:49:34 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -93,21 +93,150 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - edf0974b-e3bc-43ae-aeec-590bea6fea22
+      - 90aa4e37-bde8-4d83-bd1b-b0034b6b7b3e
       X-Download-Options:
       - noopen
       Etag:
-      - W/"76b9b34d67f4501258f5240f221a003d"
+      - W/"ab60c35dcb18eb6490b3effbc2cda931"
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.030116'
+      - '0.036993'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
+      Access-Control-Expose-Headers:
+      - Authorization
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"10.6084/m9.figshare.3475223.v1","type":"dois","attributes":{"doi":"10.6084/m9.figshare.3475223.v1","prefix":"10.6084","suffix":"m9.figshare.3475223.v1","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Franklund,
+        Clifton","nameType":"Personal","givenName":"Clifton","familyName":"Franklund","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"cc-by"}],"publisher":"figshare","container":{},"publicationYear":2016,"subjects":[{"subject":"Uncategorized"}],"contributors":[],"dates":[{"date":"2016-07-08","dateType":"Created"},{"date":"2016-07-08","dateType":"Updated"},{"date":"2016","dateType":"Issued"}],"language":null,"types":{"ris":"FIGURE","bibtex":"misc","citeproc":"graphic","schemaOrg":"ImageObject","resourceType":"Figure","resourceTypeGeneral":"Image"},"relatedIdentifiers":[{"relationType":"IsIdenticalTo","relatedIdentifier":"10.6084/m9.figshare.3475223","relatedIdentifierType":"DOI"}],"relatedItems":[],"sizes":["6316
+        Bytes"],"formats":[],"version":null,"rightsList":[{"rights":"Creative Commons
+        Attribution 4.0 International","rightsUri":"https://creativecommons.org/licenses/by/4.0/legalcode","schemeUri":"https://spdx.org/licenses/","rightsIdentifier":"cc-by-4.0","rightsIdentifierScheme":"SPDX"}],"descriptions":[{"description":"The
+        cc-by icon","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC42MDg0L005LkZJR1NIQVJFLjM0NzUyMjMuVjE8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5DbGlmdG9uIEZyYW5rbHVuZDwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPmNjLWJ5PC90aXRsZT4KICA8L3RpdGxlcz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPlRoZSBjYy1ieSBpY29uPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD5VbmNhdGVnb3JpemVkPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPHB1Ymxpc2hlcj5maWdzaGFyZTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAxNjwvcHVibGljYXRpb25ZZWFyPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJDcmVhdGVkIj4yMDE2LTA3LTA4PC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlVwZGF0ZWQiPjIwMTYtMDctMDg8L2RhdGU+CiAgPC9kYXRlcz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkltYWdlIj5GaWd1cmU8L3Jlc291cmNlVHlwZT4KICA8c2l6ZXM+CiAgICA8c2l6ZT42MzE2IEJ5dGVzPC9zaXplPgogIDwvc2l6ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc0lkZW50aWNhbFRvIj4xMC42MDg0L205LmZpZ3NoYXJlLjM0NzUyMjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAvIj5DQyBCWSA0LjA8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CjwvcmVzb3VyY2U+","url":"https://figshare.com/articles/figure/cc-by/3475223/1","contentUrl":null,"metadataVersion":1,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2016-07-08T19:09:34.000Z","registered":"2016-07-08T19:09:35.000Z","published":"2016","updated":"2020-09-04T06:33:32.000Z"},"relationships":{"client":{"data":{"id":"figshare.ars","type":"clients"}},"provider":{"data":{"id":"otjm","type":"providers"}},"media":{"data":{"id":"10.6084/m9.figshare.3475223.v1","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"figshare.ars","type":"clients","attributes":{"name":"figshare
+        Academic Research System","symbol":"FIGSHARE.ARS","year":2016,"alternateName":null,"description":"figshare
+        allows researchers to publish all of their research outputs in an easily citable,
+        sharable and discoverable manner. All file formats can be published, including
+        videos and datasets. Optional peer review process. figshare uses creative
+        commons licensing.","language":[],"clientType":"repository","domains":"figshare.com,*.figshare.com,geolsoc.figshare.com,rs.figshare.com,tandf.figshare.com,springernature.figshare.com,books.openmonographs.org,tome.figshare.com","re3data":"https://doi.org/10.17616/R3PK5R","opendoar":null,"issn":{},"url":"http://figshare.com/","created":"2016-10-12T13:42:35.000Z","updated":"2021-12-15T13:46:22.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"otjm","type":"providers"}},"consortium":{"data":{"id":"fsco","type":"providers"}},"prefixes":{"data":[{"id":"10.6084","type":"prefixes"}]}}}]}'
+  recorded_at: Thu, 05 Oct 2023 19:49:34 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.4232
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:49:35 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ilSrpLrJAfzNKtuJdl6HS2P%2FV0jz9u%2BXrgtV%2BC1%2FbJ9J7fH9JYaEUDKpWCWG%2BIXHG86IXndko1YN028884SU%2FQ9WCzpNGQmqANkkJ%2BVczeMiXwEQZvwco8dh5KP42BgADQ8I938%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 8118304f1e17b986-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.4232",
+            "RA": "DataCite"
+          }
+        ]
+  recorded_at: Thu, 05 Oct 2023 19:49:35 GMT
+- request:
+    method: get
+    uri: https://api.datacite.org/dois/10.4232/1.2745?include=media,client
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.datacite.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:49:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Status:
+      - 200 OK
+      X-Anonymous-Consumer:
+      - 'true'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Vary:
+      - Accept-Encoding
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - 2a314fca-694a-430f-8b0b-13d288eed984
+      X-Download-Options:
+      - noopen
+      Etag:
+      - W/"eb7a6b444cb1d57982e10dc608f09802"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Runtime:
+      - '0.065269'
+      X-Content-Type-Options:
+      - nosniff
+      X-Powered-By:
+      - Phusion Passenger(R) 6.0.18
+      Server:
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -194,135 +323,6 @@ http_interactions:
         data to make it available to the scientific research community. All data are
         preserved for the long-term and documented to international standards. Data
         is free to archive, and free to access.\r\nWhen you transfer data and documents
-        to GESIS, you enter into a contractual relationship: https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/contract","language":[],"clientType":"repository","domains":"*","re3data":"https://doi.org/10.17616/R3BB70","opendoar":null,"issn":{},"url":"https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/long-term-digital-preservation-ltda","created":"2011-07-21T13:08:41.000Z","updated":"2023-06-16T18:54:16.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"vzek","type":"providers"}},"consortium":{"data":{"id":"DARACO","type":"providers"}},"prefixes":{"data":[{"id":"10.4232","type":"prefixes"},{"id":"10.6102","type":"prefixes"},{"id":"10.7802","type":"prefixes"},{"id":"10.7804","type":"prefixes"},{"id":"10.12758","type":"prefixes"},{"id":"10.13150","type":"prefixes"},{"id":"10.15465","type":"prefixes"},{"id":"10.17173","type":"prefixes"},{"id":"10.17622","type":"prefixes"},{"id":"10.17889","type":"prefixes"},{"id":"10.18448","type":"prefixes"},{"id":"10.23663","type":"prefixes"},{"id":"10.25524","type":"prefixes"},{"id":"10.34879","type":"prefixes"},{"id":"10.34877","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:25:02 GMT
-- request:
-    method: get
-    uri: https://doi.org/ra/10.6084
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - doi.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:25:02 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=UhoN3IhvHu4hHgcq20%2BMbfYTXULcubO%2Bwy8AcF7EtC2HEmcyt4KwsgCcns8sTohSgUoci8F0qUJFi9CttnW0VsTNptc8cZ3oRmjqSrXPucv89XbqTzq9doLQGArKLsVjUt%2BFyKM%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7d948aecbc19b7c1-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: |-
-        [
-          {
-            "DOI": "10.6084",
-            "RA": "DataCite"
-          }
-        ]
-  recorded_at: Sun, 18 Jun 2023 15:25:02 GMT
-- request:
-    method: get
-    uri: https://api.datacite.org/dois/10.6084/m9.figshare.3475223.v1?include=media,client
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - api.datacite.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:25:03 GMT
-      Content-Type:
-      - application/json; charset=utf-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Status:
-      - 200 OK
-      X-Anonymous-Consumer:
-      - 'true'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      Vary:
-      - Accept-Encoding
-      Referrer-Policy:
-      - strict-origin-when-cross-origin
-      X-Permitted-Cross-Domain-Policies:
-      - none
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Request-Id:
-      - 963ff7cd-ecf1-4104-9e5c-916aee9441e0
-      X-Download-Options:
-      - noopen
-      Etag:
-      - W/"ab60c35dcb18eb6490b3effbc2cda931"
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Runtime:
-      - '0.061615'
-      X-Content-Type-Options:
-      - nosniff
-      X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
-      Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
-      Access-Control-Allow-Credentials:
-      - 'true'
-      Access-Control-Allow-Methods:
-      - GET, POST, PUT, PATCH, DELETE, OPTIONS
-      Access-Control-Allow-Headers:
-      - Accept,Access-Control-Allow-Origin,Access-Control-Expose-Headers,Access-Control-Allow-Methods,Access-Control-Allow-Headers,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With
-      Access-Control-Expose-Headers:
-      - Authorization
-    body:
-      encoding: UTF-8
-      string: '{"data":{"id":"10.6084/m9.figshare.3475223.v1","type":"dois","attributes":{"doi":"10.6084/m9.figshare.3475223.v1","prefix":"10.6084","suffix":"m9.figshare.3475223.v1","identifiers":[],"alternateIdentifiers":[],"creators":[{"name":"Franklund,
-        Clifton","nameType":"Personal","givenName":"Clifton","familyName":"Franklund","affiliation":[],"nameIdentifiers":[]}],"titles":[{"title":"cc-by"}],"publisher":"figshare","container":{},"publicationYear":2016,"subjects":[{"subject":"Uncategorized"}],"contributors":[],"dates":[{"date":"2016-07-08","dateType":"Created"},{"date":"2016-07-08","dateType":"Updated"},{"date":"2016","dateType":"Issued"}],"language":null,"types":{"ris":"FIGURE","bibtex":"misc","citeproc":"graphic","schemaOrg":"ImageObject","resourceType":"Figure","resourceTypeGeneral":"Image"},"relatedIdentifiers":[{"relationType":"IsIdenticalTo","relatedIdentifier":"10.6084/m9.figshare.3475223","relatedIdentifierType":"DOI"}],"relatedItems":[],"sizes":["6316
-        Bytes"],"formats":[],"version":null,"rightsList":[{"rights":"Creative Commons
-        Attribution 4.0 International","rightsUri":"https://creativecommons.org/licenses/by/4.0/legalcode","schemeUri":"https://spdx.org/licenses/","rightsIdentifier":"cc-by-4.0","rightsIdentifierScheme":"SPDX"}],"descriptions":[{"description":"The
-        cc-by icon","descriptionType":"Abstract"}],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC42MDg0L005LkZJR1NIQVJFLjM0NzUyMjMuVjE8L2lkZW50aWZpZXI+CiAgPGNyZWF0b3JzPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZT5DbGlmdG9uIEZyYW5rbHVuZDwvY3JlYXRvck5hbWU+CiAgICA8L2NyZWF0b3I+CiAgPC9jcmVhdG9ycz4KICA8dGl0bGVzPgogICAgPHRpdGxlPmNjLWJ5PC90aXRsZT4KICA8L3RpdGxlcz4KICA8ZGVzY3JpcHRpb25zPgogICAgPGRlc2NyaXB0aW9uIGRlc2NyaXB0aW9uVHlwZT0iQWJzdHJhY3QiPlRoZSBjYy1ieSBpY29uPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD5VbmNhdGVnb3JpemVkPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPHB1Ymxpc2hlcj5maWdzaGFyZTwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAxNjwvcHVibGljYXRpb25ZZWFyPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJDcmVhdGVkIj4yMDE2LTA3LTA4PC9kYXRlPgogICAgPGRhdGUgZGF0ZVR5cGU9IlVwZGF0ZWQiPjIwMTYtMDctMDg8L2RhdGU+CiAgPC9kYXRlcz4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkltYWdlIj5GaWd1cmU8L3Jlc291cmNlVHlwZT4KICA8c2l6ZXM+CiAgICA8c2l6ZT42MzE2IEJ5dGVzPC9zaXplPgogIDwvc2l6ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc0lkZW50aWNhbFRvIj4xMC42MDg0L205LmZpZ3NoYXJlLjM0NzUyMjM8L3JlbGF0ZWRJZGVudGlmaWVyPgogIDwvcmVsYXRlZElkZW50aWZpZXJzPgogIDxyaWdodHNMaXN0PgogICAgPHJpZ2h0cyByaWdodHNVUkk9Imh0dHBzOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS80LjAvIj5DQyBCWSA0LjA8L3JpZ2h0cz4KICA8L3JpZ2h0c0xpc3Q+CjwvcmVzb3VyY2U+","url":"https://figshare.com/articles/figure/cc-by/3475223/1","contentUrl":null,"metadataVersion":1,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":0,"versionCount":0,"versionOfCount":0,"created":"2016-07-08T19:09:34.000Z","registered":"2016-07-08T19:09:35.000Z","published":"2016","updated":"2020-09-04T06:33:32.000Z"},"relationships":{"client":{"data":{"id":"figshare.ars","type":"clients"}},"provider":{"data":{"id":"otjm","type":"providers"}},"media":{"data":{"id":"10.6084/m9.figshare.3475223.v1","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"figshare.ars","type":"clients","attributes":{"name":"figshare
-        Academic Research System","symbol":"FIGSHARE.ARS","year":2016,"alternateName":null,"description":"figshare
-        allows researchers to publish all of their research outputs in an easily citable,
-        sharable and discoverable manner. All file formats can be published, including
-        videos and datasets. Optional peer review process. figshare uses creative
-        commons licensing.","language":[],"clientType":"repository","domains":"figshare.com,*.figshare.com,geolsoc.figshare.com,rs.figshare.com,tandf.figshare.com,springernature.figshare.com,books.openmonographs.org,tome.figshare.com","re3data":"https://doi.org/10.17616/R3PK5R","opendoar":null,"issn":{},"url":"http://figshare.com/","created":"2016-10-12T13:42:35.000Z","updated":"2021-12-15T13:46:22.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"otjm","type":"providers"}},"consortium":{"data":{"id":"fsco","type":"providers"}},"prefixes":{"data":[{"id":"10.6084","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:25:03 GMT
-recorded_with: VCR 6.1.0
+        to GESIS, you enter into a contractual relationship: https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/contract","language":[],"clientType":"repository","domains":"*","re3data":"https://doi.org/10.17616/R3BB70","opendoar":null,"issn":{},"url":"https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/long-term-digital-preservation-ltda","created":"2011-07-21T13:08:41.000Z","updated":"2023-08-18T14:33:18.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"vzek","type":"providers"}},"consortium":{"data":{"id":"DARACO","type":"providers"}},"prefixes":{"data":[{"id":"10.4232","type":"prefixes"},{"id":"10.7802","type":"prefixes"},{"id":"10.7804","type":"prefixes"},{"id":"10.12758","type":"prefixes"},{"id":"10.13150","type":"prefixes"},{"id":"10.15465","type":"prefixes"},{"id":"10.17889","type":"prefixes"},{"id":"10.18448","type":"prefixes"},{"id":"10.23663","type":"prefixes"},{"id":"10.25524","type":"prefixes"},{"id":"10.34877","type":"prefixes"}]}}}]}'
+  recorded_at: Thu, 05 Oct 2023 19:49:35 GMT
+recorded_with: VCR 6.2.0

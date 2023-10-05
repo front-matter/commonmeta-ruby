@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/4e4bf150-751f-4245-b4ca-fe69e3c3bb24
+    uri: https://api.rogue-scholar.org/posts/4e4bf150-751f-4245-b4ca-fe69e3c3bb24
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,199 +18,38 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '16384'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '2390'
       Date:
-      - Wed, 06 Sep 2023 14:27:16 GMT
-      Etag:
-      - '"l4l17zxt1eckc"'
+      - Thu, 05 Oct 2023 20:37:42 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::58jl5-1694010436581-0c62532a3639
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0RYYJ1BHDECEE5AF3CR7XZ-fra
     body:
       encoding: UTF-8
-      string: '{"id":"4e4bf150-751f-4245-b4ca-fe69e3c3bb24","doi":"https://doi.org/10.59350/hke8v-d1e66","url":"https://svpow.com/2023/06/09/new-paper-curtice-et-al-2023-on-the-first-haplocanthosaurus-from-dry-mesa","title":"New
-        paper: Curtice et al. (2023) on the first Haplocanthosaurus from Dry Mesa","summary":"<em>Haplocanthosaurus</em>
-        tibiae and dorsal vertebrae. Curtice et al. (2023: fig. 1).  Brian Curtice
-        and Colin Boisvert are presenting our talk on this project at 2:00 pm MDT
-        this afternoon, at the 14th Symposium on Mesozoic Terrestrial Ecosystems and
-        Biota (MTE14) in Salt Lake City, and the related paper is in the MTE14 volume
-        in The Anatomical Record.","content_html":"\n<div><a href=\"https://svpow.files.wordpress.com/2023/06/haplocanthosaurus-from-across-the-morrison-curtice-et-al-2023-fig-1.jpg\"><img
-        src=\"https://svpow.files.wordpress.com/2023/06/haplocanthosaurus-from-across-the-morrison-curtice-et-al-2023-fig-1.jpg?w=480\"
-        width=\"480\" height=\"199\" srcset=\"https://svpow.files.wordpress.com/2023/06/haplocanthosaurus-from-across-the-morrison-curtice-et-al-2023-fig-1.jpg?w=480
-        480w, https://svpow.files.wordpress.com/2023/06/haplocanthosaurus-from-across-the-morrison-curtice-et-al-2023-fig-1.jpg?w=958
-        958w, https://svpow.files.wordpress.com/2023/06/haplocanthosaurus-from-across-the-morrison-curtice-et-al-2023-fig-1.jpg?w=150
-        150w, https://svpow.files.wordpress.com/2023/06/haplocanthosaurus-from-across-the-morrison-curtice-et-al-2023-fig-1.jpg?w=300
-        300w, https://svpow.files.wordpress.com/2023/06/haplocanthosaurus-from-across-the-morrison-curtice-et-al-2023-fig-1.jpg?w=768
-        768w\" /></a><p><em>Haplocanthosaurus</em> tibiae and dorsal vertebrae. Curtice
-        et al. (2023: fig. 1).</p></div>\n<p>Brian Curtice and Colin Boisvert are
-        presenting our talk on this project at 2:00 pm MDT this afternoon, at the
-        14th Symposium on Mesozoic Terrestrial Ecosystems and Biota (MTE14) in Salt
-        Lake City, and the related paper is in the MTE14 volume in The Anatomical
-        Record. Here’s the citation and a direct link to the paper:</p>\n<p><a href=\"https://sauroposeidon.files.wordpress.com/2010/04/curtice-et-al-2023-haplocanthosaurus-from-dry-mesa.pdf\">Curtice,
-        B., Wedel, M.J., Wilhite, D.R., and Boisvert, C. 2023. New material of <em>Haplocanthosaurus</em>
-        (Hatcher 1903) from the Dry Mesa Dinosaur Quarry and a comment on sauropod
-        diversity. In Hunt-Foster, R.K., Kirkland, J.I., and Loewen, M.A. (eds), 14th
-        Symposium on Mesozoic Terrestrial Ecosystems and Biota. The Anatomical Record
-        306(S1):79-81.</a></p>\n<p>This one is exciting to me for several reasons,
-        both personal and scientific. I’ve been friends with Brian Curtice and Ray
-        Wilhite since the late 90s, but I’ve never published with them before now.
-        It’s nice to have Colin Boisvert on board as well — he’s working on his Master’s
-        at BYU, just like Brian and Ray did back when, and he’s a keen observer of
-        the sauropod scene.</p>\n<p>Turning to the science, the number of known <em>Haplo</em>
-        individuals in the entire Morrison is small, probably fewer than a dozen,
-        so any new <em>Haplo</em> material is nice to get. Also, Dry Mesa is a big,
-        famous, productive, diverse quarry, and having <em>Haplo</em> in that quarry
-        is interesting and important. </p>\n<p>But to me the most exciting thing about
-        this is that Dry Mesa now has the highest diversity of sauropod genera of
-        any locality in the world. At least six valid, impossible-to-confuse sauropod
-        genera are known from Dry Mesa (listed alphabetically here; we provide specimen
-        numbers of diagnostic elements for each genus in the paper):</p>\n<ol>\n<li><em>Apatosaurus</em></li>\n<li><em>Brachiosaurus</em></li>\n<li><em>Camarasaurus</em></li>\n<li><em>Diplodocus</em></li>\n<li><em>Haplocanthosaurus</em></li>\n<li><em>Supersaurus</em></li>\n</ol>\n<div><a
-        href=\"https://svpow.files.wordpress.com/2013/03/wedel-and-taylor-2013-bifurcation-figure-7-small-diplodocus-cervical1.jpg\"><img
-        src=\"https://svpow.files.wordpress.com/2013/03/wedel-and-taylor-2013-bifurcation-figure-7-small-diplodocus-cervical1.jpg?w=480\"
-        width=\"480\" height=\"452\" srcset=\"https://svpow.files.wordpress.com/2013/03/wedel-and-taylor-2013-bifurcation-figure-7-small-diplodocus-cervical1.jpg?w=480
-        480w, https://svpow.files.wordpress.com/2013/03/wedel-and-taylor-2013-bifurcation-figure-7-small-diplodocus-cervical1.jpg?w=960
-        960w, https://svpow.files.wordpress.com/2013/03/wedel-and-taylor-2013-bifurcation-figure-7-small-diplodocus-cervical1.jpg?w=150
-        150w, https://svpow.files.wordpress.com/2013/03/wedel-and-taylor-2013-bifurcation-figure-7-small-diplodocus-cervical1.jpg?w=300
-        300w, https://svpow.files.wordpress.com/2013/03/wedel-and-taylor-2013-bifurcation-figure-7-small-diplodocus-cervical1.jpg?w=768
-        768w\" /></a><p>BYU 12613, a posterior cervical of a diplodocid, in dorsal
-        (top), left lateral (left), and posterior (right) views. The centrum length
-        is 270 mm, compared to 642 mm for C14 of <em>D. carnegii</em>. Wedel and Taylor
-        (2013), Figure 7.</p></div>\n<p>Alert readers may also recall BYU 12613, a
-        posterior cervical that Mike and I called <em>Diplodocus</em> in our 2013
-        neural spine bifurcation paper, but which may actually pertain to <em>Kaatedocus</em>.
-        All the <em>Diplodocus</em> material from Dry Mesa is small, and I’m not at
-        all confident that I could tell small <em>Diplodocus</em> vertebrae from <em>Kaatedocus</em>,
-        so out of an abundance of caution we’re calling it all <em>Diplodocus</em>
-        for the purposes of counting genera.</p>\n<div><a href=\"https://svpow.files.wordpress.com/2016/05/2005-07-29-byu-11617-barosaurus-right-lateral.jpg\"><img
-        src=\"https://svpow.files.wordpress.com/2016/05/2005-07-29-byu-11617-barosaurus-right-lateral.jpg?w=480\"
-        width=\"480\" height=\"360\" srcset=\"https://svpow.files.wordpress.com/2016/05/2005-07-29-byu-11617-barosaurus-right-lateral.jpg?w=480
-        480w, https://svpow.files.wordpress.com/2016/05/2005-07-29-byu-11617-barosaurus-right-lateral.jpg?w=960
-        960w, https://svpow.files.wordpress.com/2016/05/2005-07-29-byu-11617-barosaurus-right-lateral.jpg?w=150
-        150w, https://svpow.files.wordpress.com/2016/05/2005-07-29-byu-11617-barosaurus-right-lateral.jpg?w=300
-        300w, https://svpow.files.wordpress.com/2016/05/2005-07-29-byu-11617-barosaurus-right-lateral.jpg?w=768
-        768w\" /></a><p>BYU 11617, which sure as heck looks like <em>Barosaurus</em>
-        to me, with a loooong swoopy centrum, big posterolateral flanges, and prezygs
-        that overhang the condyle.</p></div>\n<p>There are also vertebrae in the quarry
-        that I’ve always considered to belong to <em>Barosaurus</em>, like BYU 11617
-        from <a href=\"https://svpow.com/2016/05/17/whats-up-with-your-irregular-ventral-ridges-diplodocines/\">this
-        post</a>. If Brian Curtice is right about BYU 9024 (<a href=\"https://svpow.com/2016/09/16/how-horrifying-was-the-neck-of-barosaurus/\">this
-        monster</a>) belonging to <em>Supersaurus</em> rather than <em>Barosaurus</em>,
-        then I’m no longer certain that we can distinguish <em>Supes</em> and <em>Baro</em>
-        based on cervical vertebrae. So maybe those <em>Baro</em> verts actually belong
-        to <em>Supersaurus</em>. But if they don’t — or if BYU 9024 itself belong
-        to <em>Barosaurus</em>, as Mike and I have argued (in <a href=\"http://www.miketaylor.org.uk/dino/pubs/svpca2016/TaylorWedel2016-how-big-did-barosaurus-get.pdf\">our
-        2016 SVPCA talk</a>, and <a href=\"https://svpow.com/2019/06/15/supersaurus-ultrasaurus-and-dystylosaurus-in-2019-part-2-what-we-found-in-utah/\">this
-        post</a> and <a href=\"https://svpow.com/2019/06/16/supersaurus-ultrasaurus-and-dystylosaurus-in-2019-part-2b-the-size-of-the-byu-9024-animal/\">this
-        post</a>) — then <em>Barosaurus</em> is a seventh sauropod genus from Dry
-        Mesa.</p>\n<p>The high sauropod diversity at Dry Mesa is exciting for a couple
-        of reasons. One, it emphasizes the ridiculous productivity of the Morrison
-        paleoenvironment. Yes, there were droughts and fires and landslides and whatnot
-        — at least periodically, even at Dry Mesa (Richmond and Morris 1998). But
-        there was also an environment — or rather, a series of environments — fecund
-        enough to support many coexisting genera of whale-sized herbivores. That’s
-        part of the Morrison story, too.</p>\n<p>And two, this is relevant to the
-        “problem” of Morrison sauropod diversity — the idea that there are just too
-        darned many sauropods in the Morrison, no environment could have supported
-        so many, and therefore Morrison sauropod taxonomy has to be messed up, buncha
-        dumb paleontologists oversplitting genera and species because they don’t know
-        any better. (For more on this idea, see Darren’s brilliant series of posts
-        at Tetrapod Zoology; the concluding post, with links to all the rest, is <a
-        href=\"https://tetzoo.com/blog/2020/5/20/stop-saying-that-there-are-too-many-sauropod-dinosaurs-part-8-the-last-part\">here</a>.)</p>\n<p>I
-        put “problem” in scare quotes because I think it’s illusory. In addition to
-        Dry Mesa with its six or seven sauropod genera, there are a handful of Morrison
-        localities with five sauropod genera, more with four, and gobs with three.
-        Not surprisingly, the diverse localities tend to be the big ones, which at
-        least hints that more quarries would have more sauropods if they were bigger
-        — maybe only the biggest quarries did a decent job of capturing the diversity
-        of sauropods on the landscape.</p>\n<div><a href=\"https://svpow.files.wordpress.com/2023/06/engh-brushy-basin-dinos.jpg\"><img
-        src=\"https://svpow.files.wordpress.com/2023/06/engh-brushy-basin-dinos.jpg?w=480\"
-        width=\"480\" height=\"141\" srcset=\"https://svpow.files.wordpress.com/2023/06/engh-brushy-basin-dinos.jpg?w=480
-        480w, https://svpow.files.wordpress.com/2023/06/engh-brushy-basin-dinos.jpg?w=960
-        960w, https://svpow.files.wordpress.com/2023/06/engh-brushy-basin-dinos.jpg?w=150
-        150w, https://svpow.files.wordpress.com/2023/06/engh-brushy-basin-dinos.jpg?w=300
-        300w, https://svpow.files.wordpress.com/2023/06/engh-brushy-basin-dinos.jpg?w=768
-        768w\" /></a><p><a href=\"https://dontmesswithdinosaurs.com/?p=2397\">Brian
-        Engh’s</a> assemblage of large-bodied Brushy Basin dinos for <a href=\"https://www.youtube.com/watch?v=JC3aCs5f4-I\">Jurassic
-        Reimagined Part 1</a>. Coincidentally, though, if you swap in <em>Supersaurus</em>
-        for <em>Barosaurus</em> — or maybe just add <em>Supersaurus</em> alongside
-        <em>Barosaurus</em> — you’ll have the known sauropod diversity of the Dry
-        Mesa Dinosaur Quarry.</p></div>\n<p>One you have five or six sauropod genera
-        coexisting closely enough to get buried in the same hole, I think the “problem”
-        of Morrison sauropod diversity goes away. The Morrison Formation outcrops
-        from New Mexico to Canada, from the Oklahoma panhandle and the Black Hills
-        of South Dakota to central Utah, and spans probably 7 or 8 million years.
-        Even four or five distinct habitats or communities across all that space and
-        time (which might be unrealistically conservative — it could easily be several
-        communities at a time, turning over every 2 or 3 million years*), each with
-        four to six sauropod species, gets the species count waaay up there.</p>\n<p>*But
-        wait — doesn’t our figure up top show that <em>Haplocanthosaurus</em> persisted
-        from the lower part of the <a href=\"https://svpow.com/2020/01/29/a-haplocanthosaurus-in-the-salt-wash/\">Salt
-        Wash</a> to the upper part of the Brushy Basin? Sure, but not as the same
-        species right the way through. There were probably something like half a dozen
-        species of haplocanthosaurs in the Morrison — <em>H. priscus</em>, <em>H.
-        delfsi</em>, the as-yet-unnamed-but-definitely-distinct Bilbey <em>Haplo </em>(Bilbey
-        et al. 2000), the as-yet-unnamed-but-definitely-distinct Snowmass <em>Haplo</em>
-        (Foster and Wedel 2014, Wedel et al. 2021), plus I assume a couple more when
-        and if we get better material of the more fragmentary specimens. That would
-        be consistent with the multiple known species of <em>Apatosaurus</em>, <em>Brontosaurus</em>,
-        <em>Camarasaurus</em>, <em>Diplodocus</em>, etc. So sequential communities
-        of Morrison sauropods probably had a lot of the same genera — there’s nearly
-        always a <em>Cam</em> of some kind, some apatosaurine lurking around, etc.
-        — but with different species across time, space, and paleoenvironmental conditions.</p>\n<p>I
-        think a big part of the problem is that it’s (maybe too) easy to think of
-        the Morrison Formation as a single thing — like most formations — and to think
-        that we can hold all of it in our heads at once. But the Morrison is a monster,
-        more comparable to a group than to other formations, and not really comparable
-        to any other dinosaur-bearing formation in terms of extent, productivity,
-        and likely diversity of environments and habitats. (For an overview of Morrison
-        environments through time, see <a href=\"https://www.youtube.com/watch?v=JC3aCs5f4-I\">Jurassic
-        Reimagined Part 1</a>.)</p>\n<p>So, yeah. Morrison sauropod diversity was
-        high, and we just have to deal with that. Plus, hey, now we have more <em>Haplo</em>
-        to play with. Happy days all around!</p>\n<h2>References</h2>\n<ul>\n<li>Bilbey,
-        S.A., Hall, J.E., and Hall, D.A. 2000. Preliminary results on a new haplocanthosaurid
-        sauropod dinosaur from the lower Morrison Formation of northeastern Utah.
-        Journal of Vertebrate Paleontology 20(supp. to no. 3): 30A.</li>\n<li><a href=\"https://sauroposeidon.files.wordpress.com/2010/04/foster-and-wedel-2014-haplocanthosaurus-from-snowmass-colorado.pdf\">Foster,
-        J.R., and Wedel, M.J. 2014. <i>Haplocanthosaurus </i>(Saurischia: Sauropoda)
-        from the lower Morrison Formation (Upper Jurassic) near Snowmass, Colorado. Volumina
-        Jurassica 12(2): 197–210. DOI: 10.5604/17313708 .1130144</a></li>\n<li>Richmond,
-        D.R., and Morris, T.H. 1998. Stratigraphy and cataclysmic deposition of the
-        Dry Mesa Dinosaur Quarry, Mesa County, Colorado. Modern Geology 22:121-143.</li>\n<li><a
-        href=\"https://sauroposeidon.files.wordpress.com/2010/04/wedel-taylor-2013-neural-spine-bifurcation-in-sauropods.pdf\">Wedel,
-        Mathew J., and Michael P. Taylor. 2013. Neural spine bifurcation in sauropod
-        dinosaurs of the Morrison Formation: ontogenetic and phylogenetic implications. <em>Palarch’s
-        Journal of Vertebrate Palaeontology</em> <strong>10(1)</strong>:1-34. ISSN
-        1567-2158.</a></li>\n<li><a href=\"https://svpow.files.wordpress.com/2022/03/wedel-et-al-2021-expanded-neural-canals-in-caudal-vertebrae-of-haplocanthosaurus.pdf\">Wedel,
-        Mathew; Atterholt, Jessie; Dooley, Jr., Alton C.; Farooq, Saad; Macalino,
-        Jeff; Nalley, Thierra K.; Wisser, Gary; and Yasmer, John. 2021. Expanded neural
-        canals in the caudal vertebrae of a specimen of <em>Haplocanthosaurus</em>.
-        Academia Letters, Article 911, 10pp. DOI: 10.20935/AL911</a></li>\n</ul>\n","published_at":1686340463,"updated_at":1686340463,"indexed_at":1688982864,"authors":[{"url":null,"name":"Matt
-        Wedel"}],"image":"https://svpow.files.wordpress.com/2023/06/haplocanthosaurus-from-across-the-morrison-curtice-et-al-2023-fig-1.jpg?w=480","tags":["MTE14","Barosaurus","Cervical","Conferences","Diplodocids"],"language":"en","reference":[{"key":"ref1","url":"https://sauroposeidon.files.wordpress.com/2010/04/foster-and-wedel-2014-haplocanthosaurus-from-snowmass-colorado.pdf"},{"key":"ref2","url":"https://sauroposeidon.files.wordpress.com/2010/04/wedel-taylor-2013-neural-spine-bifurcation-in-sauropods.pdf"},{"key":"ref3","url":"https://svpow.files.wordpress.com/2022/03/wedel-et-al-2021-expanded-neural-canals-in-caudal-vertebrae-of-haplocanthosaurus.pdf"}],"relationships":[],"blog_id":"dkvra02","blog_name":"Sauropod
-        Vertebra Picture of the Week","blog_slug":"svpow","blog":{"id":"dkvra02","title":"Sauropod
-        Vertebra Picture of the Week","description":"SV-POW!  ...  All sauropod vertebrae,
-        except when we''re talking about Open Access","language":"en","favicon":null,"feed_url":"https://svpow.com/feed/atom/","home_page_url":"https://svpow.com","user_id":"04d03585-c8bb-40f2-9619-5076a5e0aed2","created_at":"2023-02-01","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"WordPress
-        (.com)","category":"earthAndRelatedEnvironmentalSciences","prefix":"10.59350","modified_at":"2023-09-01T09:19:08+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":null,"status":"active","issn":null,"backlog":1550,"authors":null,"plan":"Team","slug":"svpow","use_mastodon":false}}'
-  recorded_at: Wed, 06 Sep 2023 14:27:17 GMT
+      string: '{"archive_url":null,"authors":[{"name":"Matt Wedel","url":"http://10minuteastronomy.wordpress.com/"}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":1550,"canonical_url":null,"category":"earthAndRelatedEnvironmentalSciences","created_at":"2023-02-01","current_feed_url":null,"description":"SV-POW!  ...  All
+        sauropod vertebrae, except when we''re talking about Open Access","favicon":null,"feed_format":"application/atom+xml","feed_url":"https://svpow.com/feed/atom/","filter":null,"funding":null,"generator":"WordPress.com","home_page_url":"https://svpow.com","id":"dkvra02","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-22T14:44:45+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"svpow","status":"active","title":"Sauropod
+        Vertebra Picture of the Week","use_api":true,"use_mastodon":false,"user_id":"04d03585-c8bb-40f2-9619-5076a5e0aed2","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Sauropod
+        Vertebra Picture of the Week","blog_slug":"svpow","doi":"https://doi.org/10.59350/hke8v-d1e66","id":"4e4bf150-751f-4245-b4ca-fe69e3c3bb24","image":"https://svpow.files.wordpress.com/2023/06/haplocanthosaurus-from-across-the-morrison-curtice-et-al-2023-fig-1.jpg?w=480","indexed_at":1688982864,"language":"en","published_at":1686340463,"reference":[{"key":"ref1","url":"https://sauroposeidon.files.wordpress.com/2010/04/foster-and-wedel-2014-haplocanthosaurus-from-snowmass-colorado.pdf"},{"key":"ref2","url":"https://sauroposeidon.files.wordpress.com/2010/04/wedel-taylor-2013-neural-spine-bifurcation-in-sauropods.pdf"},{"key":"ref3","url":"https://svpow.files.wordpress.com/2022/03/wedel-et-al-2021-expanded-neural-canals-in-caudal-vertebrae-of-haplocanthosaurus.pdf"}],"relationships":[],"summary":"Brian
+        Curtice and Colin Boisvert are presenting our talk on this project at 2:00
+        pm MDT this afternoon, at the 14th Symposium on Mesozoic Terrestrial Ecosystems
+        and Biota (MTE14) in Salt Lake City, and the related paper is in the MTE14
+        volume in The Anatomical Record.","tags":["MTE14","Barosaurus","Cervical","Conferences","Diplodocids"],"title":"New
+        paper: Curtice et al. (2023) on the first <i>Haplocanthosaurus</i> from Dry
+        Mesa","updated_at":1686340463,"url":"https://svpow.com/2023/06/09/new-paper-curtice-et-al-2023-on-the-first-haplocanthosaurus-from-dry-mesa"}
+
+        '
+  recorded_at: Thu, 05 Oct 2023 20:37:42 GMT
 - request:
     method: head
     uri: https://sauroposeidon.files.wordpress.com/2010/04/foster-and-wedel-2014-haplocanthosaurus-from-snowmass-colorado.pdf
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -227,7 +66,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 06 Sep 2023 14:27:17 GMT
+      - Thu, 05 Oct 2023 20:37:42 GMT
       Content-Type:
       - application/pdf
       Content-Length:
@@ -237,24 +76,24 @@ http_interactions:
       Last-Modified:
       - Mon, 16 Mar 2015 08:57:22 GMT
       Expires:
-      - Sat, 07 Oct 2023 17:12:32 GMT
+      - Wed, 01 Nov 2023 18:45:14 GMT
       X-Orig-Src:
       - 01_mogdir
-      Accept-Ranges:
-      - bytes
       X-Nc:
-      - MISS hhn 26 np
+      - MISS ams 27 np
       X-Content-Type-Options:
       - nosniff
+      Accept-Ranges:
+      - bytes
     body:
       encoding: ASCII-8BIT
       string: ''
-  recorded_at: Wed, 06 Sep 2023 14:27:17 GMT
+  recorded_at: Thu, 05 Oct 2023 20:37:42 GMT
 - request:
     method: head
     uri: https://sauroposeidon.files.wordpress.com/2010/04/wedel-taylor-2013-neural-spine-bifurcation-in-sauropods.pdf
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -271,7 +110,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 06 Sep 2023 14:27:17 GMT
+      - Thu, 05 Oct 2023 20:37:42 GMT
       Content-Type:
       - application/pdf
       Content-Length:
@@ -281,24 +120,24 @@ http_interactions:
       Last-Modified:
       - Mon, 16 Sep 2013 07:34:33 GMT
       Expires:
-      - Sun, 15 Oct 2023 15:36:12 GMT
+      - Sun, 12 Nov 2023 10:03:20 GMT
       X-Orig-Src:
       - 01_mogdir
-      Accept-Ranges:
-      - bytes
       X-Nc:
-      - MISS hhn 26 np
+      - MISS ams 27 np
       X-Content-Type-Options:
       - nosniff
+      Accept-Ranges:
+      - bytes
     body:
       encoding: ASCII-8BIT
       string: ''
-  recorded_at: Wed, 06 Sep 2023 14:27:17 GMT
+  recorded_at: Thu, 05 Oct 2023 20:37:42 GMT
 - request:
     method: head
     uri: https://svpow.files.wordpress.com/2022/03/wedel-et-al-2021-expanded-neural-canals-in-caudal-vertebrae-of-haplocanthosaurus.pdf
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -315,7 +154,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Wed, 06 Sep 2023 14:27:18 GMT
+      - Thu, 05 Oct 2023 20:37:42 GMT
       Content-Type:
       - application/pdf
       Content-Length:
@@ -325,11 +164,11 @@ http_interactions:
       Last-Modified:
       - Tue, 29 Mar 2022 07:37:54 GMT
       Expires:
-      - Mon, 02 Oct 2023 12:56:30 GMT
+      - Tue, 31 Oct 2023 00:44:23 GMT
       X-Orig-Src:
       - 01_mogdir
       X-Nc:
-      - MISS hhn 16 np
+      - MISS ams 16 np
       X-Content-Type-Options:
       - nosniff
       Accept-Ranges:
@@ -337,5 +176,5 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: ''
-  recorded_at: Wed, 06 Sep 2023 14:27:18 GMT
+  recorded_at: Thu, 05 Oct 2023 20:37:42 GMT
 recorded_with: VCR 6.2.0

@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://api.datacite.org/dois/10.26301/qdpd-2250?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:21 GMT
+      - Thu, 05 Oct 2023 19:45:50 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -41,7 +41,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - b7391fad-afd6-491e-b431-ce2974329dd0
+      - d5e56d0c-0b78-4190-a03f-2de5cd880859
       X-Download-Options:
       - noopen
       Etag:
@@ -49,13 +49,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.037246'
+      - '0.043787'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -106,5 +106,5 @@ http_interactions:
         the OHA will work to provide democratized access to primary heritage 3D data
         submitted from donors and organizations, and will help to facilitate an operation
         platform, archive, and organization of resources into the future","language":["en"],"clientType":"repository","domains":"*","re3data":null,"opendoar":null,"issn":{},"url":"https://openheritage3d.org/","created":"2019-03-26T16:21:19.000Z","updated":"2023-04-13T18:13:04.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"cyark","type":"providers"}},"prefixes":{"data":[{"id":"10.26301","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:24:20 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:45:50 GMT
+recorded_with: VCR 6.2.0

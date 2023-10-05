@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.6084
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:20:27 GMT
+      - Thu, 05 Oct 2023 19:47:15 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9Mh1JTK%2FtshyTKuH6TTce6wVfi20wwGzyDMxp87vBBWZZeCAnFuCWyLyU%2BsKvtA8vO3KsJOgGEeWbr6niTpSi4l5WUOigbxYPscPeUd5EG3DDVIuq6Z22%2FnbCnbkhxgTLe7qI18%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AsflI5Pwgxomdwr7wGb1W7hXiGHYehS9%2BWzFdz38Vr9R3E6m5ehEHuQp1Pxa5LYEBWdHbITK82TkeaFipqcUr3ys%2FUhXVtVRL46AZSRke83gXfQ1L8i8meDorSVXCeSOwF7Yz8g%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d9484360a150c33-AMS
+      - 81182ce77b5bb7c7-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,12 +51,12 @@ http_interactions:
             "RA": "DataCite"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:20:27 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:15 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.6084/m9.figshare.4700788?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:20:28 GMT
+      - Thu, 05 Oct 2023 19:47:16 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -93,7 +93,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 15befbef-6630-46ff-a1a0-7c6a40335223
+      - 7307c559-603f-4e2a-9564-fea95a7abf05
       X-Download-Options:
       - noopen
       Etag:
@@ -101,13 +101,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.031131'
+      - '0.042748'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -149,5 +149,5 @@ http_interactions:
         sharable and discoverable manner. All file formats can be published, including
         videos and datasets. Optional peer review process. figshare uses creative
         commons licensing.","language":[],"clientType":"repository","domains":"figshare.com,*.figshare.com,geolsoc.figshare.com,rs.figshare.com,tandf.figshare.com,springernature.figshare.com,books.openmonographs.org,tome.figshare.com","re3data":"https://doi.org/10.17616/R3PK5R","opendoar":null,"issn":{},"url":"http://figshare.com/","created":"2016-10-12T13:42:35.000Z","updated":"2021-12-15T13:46:22.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"otjm","type":"providers"}},"consortium":{"data":{"id":"fsco","type":"providers"}},"prefixes":{"data":[{"id":"10.6084","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:20:28 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:47:16 GMT
+recorded_with: VCR 6.2.0

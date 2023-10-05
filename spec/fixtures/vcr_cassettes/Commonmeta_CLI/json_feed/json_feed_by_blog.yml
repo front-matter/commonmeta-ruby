@@ -2,275 +2,41 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/blogs/tyfqw20
+    uri: https://api.rogue-scholar.org/blogs/tyfqw20
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
     status:
-      code: 200
-      message: OK
+      code: 500
+      message: Internal Server Error
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '26135'
       Content-Type:
-      - application/json; charset=utf-8
+      - text/html; charset=utf-8
+      Content-Length:
+      - '265'
       Date:
-      - Mon, 10 Jul 2023 20:37:16 GMT
-      Etag:
-      - '"a986ggx9d0k3r"'
+      - Thu, 05 Oct 2023 19:48:26 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/blogs/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::b9rbm-1689021435986-bb09a174a89c
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0P4R114SBBWGR99BNQX5YQ-fra
     body:
       encoding: UTF-8
-      string: '{"id":"tyfqw20","title":"iPhylo","description":"Rants, raves (and occasionally
-        considered opinions) on phyloinformatics, taxonomy, and biodiversity informatics.  For
-        more ranty and less considered opinions, see my <a href=\"https://twitter.com/rdmpage\">Twitter
-        feed</a>.<br>ISSN 2051-8188. Written content on this site is licensed under
-        a <a href=\"https://creativecommons.org/licenses/by/4.0/\">Creative Commons
-        Attribution 4.0 International license</a>.","language":"en","favicon":null,"feed_url":"https://iphylo.blogspot.com/feeds/posts/default","current_feed_url":null,"feed_format":"application/atom+xml","home_page_url":"https://iphylo.blogspot.com/","indexed_at":"2023-02-06","modified_at":"2023-06-17T15:38:20+00:00","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Blogger
-        7.00","category":"Natural Sciences","backlog":true,"prefix":"10.59350","expired":null,"items":[{"id":"37538c38-66e6-4ac4-ab5c-679684622ade","doi":"https://doi.org/10.59350/2b1j9-qmw12","url":"https://iphylo.blogspot.com/2022/05/round-trip-from-identifiers-to.html","title":"Round
-        trip from identifiers to citations and back again","summary":"Note to self
-        (basically rewriting last year''s Finding citations of specimens). Bibliographic
-        data supports going from identifier to citation string and back again, so
-        we can do a \"round trip.\" 1. Given a DOI we can get structured data with
-        a simple HTTP fetch, then use a tool such as citation.js to convert that data
-        into a human-readable string in a variety of formats. Identifier ⟶ Structured
-        data ⟶ Human readable string 10.7717/peerj-cs.214 HTTP with...","published_at":1653669240,"updated_at":1653669259,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["citation","GBIF","material examined","specimen
-        codes"],"language":"en","reference":[]},{"id":"545c177f-cea5-4b79-b554-3ccae9c789d7","doi":"https://doi.org/10.59350/d3dc0-7an69","url":"https://iphylo.blogspot.com/2021/10/reflections-on-macroscope-tool-for-21st.html","title":"Reflections
-        on \"The Macroscope\" - a tool for the 21st Century?","summary":"This is a
-        guest post by Tony Rees. It would be difficult to encounter a scientist, or
-        anyone interested in science, who is not familiar with the microscope, a tool
-        for making objects visible that are otherwise too small to be properly seen
-        by the unaided eye, or to reveal otherwise invisible fine detail in larger
-        objects. A select few with a particular interest in microscopy may also have
-        encountered the Wild-Leica \"Macroscope\", a specialised type of benchtop
-        microscope optimised for...","published_at":1633610280,"updated_at":1633688782,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["guest post","macroscope"],"language":"en","reference":[]},{"id":"f3629c86-06e0-42c0-844a-266b03a91ef1","doi":"https://doi.org/10.59350/37y2z-gre70","url":"https://iphylo.blogspot.com/2023/05/ten-years-and-million-links.html","title":"Ten
-        years and a million links","summary":"As trailed on a Twitter thread last
-        week I’ve been working on a manuscript describing the efforts to map taxonomic
-        names to their original descriptions in the taxonomic literature. Putting
-        together a manuscript on linking taxonomic names to the primary literature,
-        basically “um, what, exactly, have you been doing all these years?”. TL;DR
-        Across fungi, plants, and animals approx 1.3 million names have been linked
-        to a persistent identifier for a publication.— Roderic Page (@rdmpage) May
-        25,...","published_at":1685553960,"updated_at":1685554180,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":[],"language":"en","reference":[]},{"id":"6bed78ec-0029-4096-b1c3-48a55a9fdb3b","doi":"https://doi.org/10.59350/ws094-1w310","url":"https://iphylo.blogspot.com/2023/04/chatgpt-of-course.html","title":"ChatGPT,
-        of course","summary":"I haven’t blogged for a while, work and other reasons
-        have meant I’ve not had much time to think, and mostly I blog to help me think.
-        ChatGPT is obviously a big thing at the moment, and once we get past the moral
-        panic (“students can pass exams using AI!”) there are a lot of interesting
-        possibilities to explore. Inspired by essays such as How Q&A systems based
-        on large language models (eg GPT4) will change things if they become the dominant
-        search paradigm — 9 implications for libraries...","published_at":1680526320,"updated_at":1680526621,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":[],"language":"en","reference":[]},{"id":"7d814863-43b5-4faf-a475-da8de5efd3ef","doi":"https://doi.org/10.59350/m7gb7-d7c49","url":"https://iphylo.blogspot.com/2022/02/duplicate-dois-again.html","title":"Duplicate
-        DOIs (again)","summary":"This blog post provides some background to a recent
-        tweet where I expressed my frustration about the duplication of DOIs for the
-        same article. I''m going to document the details here. The DOI that alerted
-        me to this problem is https://doi.org/10.2307/2436688 which is for the article
-        Snyder, W. C., & Hansen, H. N. (1940). THE SPECIES CONCEPT IN FUSARIUM. American
-        Journal of Botany, 27(2), 64–67. This article is hosted by JSTOR at https://www.jstor.org/stable/2436688
-        which displays the DOI...","published_at":1644332760,"updated_at":1644332778,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["CrossRef","DOI","duplicates"],"language":"en","reference":[]},{"id":"23fa1dd8-5c6b-4aa9-9cad-c6f6b14ae9e0","doi":"https://doi.org/10.59350/jzvs4-r9559","url":"https://iphylo.blogspot.com/2021/08/json-ld-in-wild-examples-of-how.html","title":"JSON-LD
-        in the wild: examples of how structured data is represented on the web","summary":"I''ve
-        created a GitHub repository so that I can keep track of the examples of JSON-LD
-        that I''ve seen being actively used, for example embedded in web sites, or
-        accessed using an API. The repository is https://github.com/rdmpage/wild-json-ld.
-        The list is by no means exhaustive, I hope to add more examples as I come
-        across them. One reason for doing this is to learn what others are doing.
-        For example, after looking at SciGraph''s JSON-LD I now see how an ordered
-        list can be modelled in RDF in...","published_at":1630070400,"updated_at":1630070987,"indexed_at":1688982503,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["JSON-LD","RDF"],"language":"en","reference":[]},{"id":"5891c709-d139-440f-bacb-06244424587a","doi":"https://doi.org/10.59350/pmhat-5ky65","url":"https://iphylo.blogspot.com/2021/10/problems-with-plazi-parsing-how.html","title":"Problems
-        with Plazi parsing: how reliable are automated methods for extracting specimens
-        from the literature?","summary":"The Plazi project has become one of the major
-        contributors to GBIF with some 36,000 datasets yielding some 500,000 occurrences
-        (see Plazi''s GBIF page for details). These occurrences are extracted from
-        taxonomic publication using automated methods. New data is published almost
-        daily (see latest treatments). The map below shows the geographic distribution
-        of material citations provided to GBIF by Plazi, which gives you a sense of
-        the size of the dataset. By any metric Plazi represents a...","published_at":1635160200,"updated_at":1635437298,"indexed_at":1688982503,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["data quality","parsing","Plazi","specimen","text
-        mining"],"language":"en","reference":[]},{"id":"3cb94422-5506-4e24-a41c-a250bb521ee0","doi":"https://doi.org/10.59350/c79vq-7rr11","url":"https://iphylo.blogspot.com/2021/12/graphql-for-wikidata-wikicite.html","title":"GraphQL
-        for WikiData (WikiCite)","summary":"I''ve released a very crude GraphQL endpoint
-        for WikiData. More precisely, the endpoint is for a subset of the entities
-        that are of interest to WikiCite, such as scholarly articles, people, and
-        journals. There is a crude demo at https://wikicite-graphql.herokuapp.com.
-        The endpoint itself is at https://wikicite-graphql.herokuapp.com/gql.php.
-        There are various ways to interact with the endpoint, personally I like the
-        Altair GraphQL Client by Samuel Imolorhe. As I''ve mentioned earlier it''s
-        taken...","published_at":1640006160,"updated_at":1640006405,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["GraphQL","SPARQL","WikiCite","Wikidata"],"language":"en","reference":[]},{"id":"62e7b438-67a3-44ac-a66d-3f5c278c949e","doi":"https://doi.org/10.59350/3s376-6bm21","url":"https://iphylo.blogspot.com/2022/02/deduplicating-bibliographic-data.html","title":"Deduplicating
-        bibliographic data","summary":"There are several instances where I have a
-        collection of references that I want to deduplicate and merge. For example,
-        in Zootaxa has no impact factor I describe a dataset of the literature cited
-        by articles in the journal Zootaxa. This data is available on Figshare (https://doi.org/10.6084/m9.figshare.c.5054372.v4),
-        as is the equivalent dataset for Phytotaxa (https://doi.org/10.6084/m9.figshare.c.5525901.v1).
-        Given that the same articles may be cited many times, these datasets have
-        lots of...","published_at":1643900940,"updated_at":1643901089,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["data cleaning","deduplication","Phytotaxa","Wikispecies","Zootaxa"],"language":"en","reference":[]},{"id":"d33d4f49-b281-4997-9eb9-dbad1e52d9bd","doi":"https://doi.org/10.59350/92rdb-5fe58","url":"https://iphylo.blogspot.com/2022/09/local-global-identifiers-for.html","title":"Local
-        global identifiers for decentralised wikis","summary":"I''ve been thinking
-        a bit about how one could use a Markdown wiki-like tool such as Obsidian to
-        work with taxonomic data (see earlier posts Obsidian, markdown, and taxonomic
-        trees and Personal knowledge graphs: Obsidian, Roam, Wikidata, and Xanadu).
-        One \"gotcha\" would be how to name pages. If we treat the database as entirely
-        local, then the page names don''t matter, but what if we envisage sharing
-        the database, or merging it with others (for example, if we divided a taxon
-        up into chunks, and...","published_at":1662653340,"updated_at":1662657862,"indexed_at":1688982864,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["citekey","identfiiers","markdown","obsidian","Roger
-        Hyam"],"language":"en","reference":[]},{"id":"6a4d5c44-f4a9-4d40-a32c-a4d5e512c55a","doi":"https://doi.org/10.59350/rfxj3-x6739","url":"https://iphylo.blogspot.com/2022/05/thoughts-on-treebase-dying.html","title":"Thoughts
-        on TreeBASE dying(?)","summary":"@rvosa is Naturalis no longer hosting Treebase?
-        https://t.co/MBRgcxaBmR— Hilmar Lapp (@hlapp) May 10, 2022 So it looks like
-        TreeBASE is in trouble, it''s legacy Java code a victim of security issues.
-        Perhaps this is a chance to rethink TreeBASE, assuming that a repository of
-        published phylogenies is still considered a worthwhile thing to have (and
-        I think that question is open). Here''s what I think could be done. The data
-        (individual studies with trees and data) are packaged into...","published_at":1652287980,"updated_at":1652350205,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["phylogeny","TreeBASE"],"language":"en","reference":[]},{"id":"3e1278f6-e7c0-43e1-bb54-6829e1344c0d","doi":"https://doi.org/10.59350/btdk4-42879","url":"https://iphylo.blogspot.com/2022/09/the-ideal-taxonomic-journal.html","title":"The
-        ideal taxonomic journal","summary":"This is just some random notes on an “ideal”
-        taxonomic journal, inspired in part by some recent discussions on “turbo-taxonomy”
-        (e.g., https://doi.org/10.3897/zookeys.1087.76720 and https://doi.org/10.1186/1742-9994-10-15),
-        and also examples such as the Australian Journal of Taxonomy https://doi.org/10.54102/ajt.qxi3r
-        which seems well-intentioned but limited. XML One approach is to have highly
-        structured text that embeds detailed markup, and ideally a tool that generates
-        markup in XML. This is...","published_at":1664460000,"updated_at":1664460001,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":[],"language":"en","reference":[]},{"id":"a93134aa-8b33-4dc7-8cd4-76cdf64732f4","doi":"https://doi.org/10.59350/cbzgz-p8428","url":"https://iphylo.blogspot.com/2023/04/library-interfaces-knowledge-graphs-and.html","title":"Library
-        interfaces, knowledge graphs, and Miller columns","summary":"Some quick notes
-        on interface ideas for digital libraries and/or knowledge graphs. Recently
-        there’s been something of an explosion in bibliographic tools to explore the
-        literature. Examples include: Elicit which uses AI to search for and summarise
-        papers _scite which uses AI to do sentiment analysis on citations (does paper
-        A cite paper B favourably or not?) ResearchRabbit which uses lists, networks,
-        and timelines to discover related research Scispace which navigates connections
-        between...","published_at":1682427660,"updated_at":1682607068,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["cards","flow","Knowledge Graph","Miller column","RabbitResearch"],"language":"en","reference":[]},{"id":"dc829ab3-f0f1-40a4-b16d-a36dc0e34166","doi":"https://doi.org/10.59350/463yw-pbj26","url":"https://iphylo.blogspot.com/2022/12/david-remsen.html","title":"David
-        Remsen","summary":"I heard yesterday from Martin Kalfatovic (BHL) that David
-        Remsen has died. Very sad news. It''s starting to feel like iPhylo might end
-        up being a list of obituaries of people working on biodiversity informatics
-        (e.g., Scott Federhen). I spent several happy visits at MBL at Woods Hole
-        talking to Dave at the height of the uBio project, which really kickstarted
-        large scale indexing of taxonomic names, and the use of taxonomic name finding
-        tools to index the literature. His work on uBio with David...","published_at":1671213240,"updated_at":1671264743,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["David Remsen","obituary","uBio"],"language":"en","reference":[]},{"id":"30c78d9d-2e50-49db-9f4f-b3baa060387b","doi":"https://doi.org/10.59350/zc4qc-77616","url":"https://iphylo.blogspot.com/2022/09/does-anyone-cite-taxonomic-treatments.html","title":"Does
-        anyone cite taxonomic treatments?","summary":"Taxonomic treatments have come
-        up in various discussions I''m involved in, and I''m curious as to whether
-        they are actually being used, in particular, whether they are actually being
-        cited. Consider the following quote: The taxa are described in taxonomic treatments,
-        well defined sections of scientific publications (Catapano 2019). They include
-        a nomenclatural section and one or more sections including descriptions, material
-        citations referring to studied specimens, or notes ecology and...","published_at":1662050940,"updated_at":1662050991,"indexed_at":1688982503,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":[],"language":"en","reference":[]},{"id":"c6b101f4-bfbc-4d01-921d-805c43c85757","doi":"https://doi.org/10.59350/j77nc-e8x98","url":"https://iphylo.blogspot.com/2022/08/linking-taxonomic-names-to-literature.html","title":"Linking
-        taxonomic names to the literature","summary":"Just some thoughts as I work
-        through some datasets linking taxonomic names to the literature. In the diagram
-        above I''ve tried to capture the different situatios I encounter. Much of
-        the work I''ve done on this has focussed on case 1 in the diagram: I want
-        to link a taxonomic name to an identifier for the work in which that name
-        was published. In practise this means linking names to DOIs. This has the
-        advantage of linking to a citable indentifier, raising questions such as whether
-        citations...","published_at":1661188740,"updated_at":1661188748,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":[],"language":"en","reference":[]},{"id":"e8e95aaf-bacb-4b5a-bf91-54e903526ab2","doi":"https://doi.org/10.59350/ndtkv-6ve80","url":"https://iphylo.blogspot.com/2021/11/revisiting-rss-to-monitor-latests.html","title":"Revisiting
-        RSS to monitor the latest taxonomic research","summary":"Over a decade ago
-        RSS (RDF Site Summary or Really Simple Syndication) was attracting a lot of
-        interest as a way to integrate data across various websites. Many science
-        publishers would provide a list of their latest articles in XML in one of
-        three flavours of RSS (RDF, RSS, Atom). This led to tools such as uBioRSS
-        [1] and my own e-Biosphere Challenge: visualising biodiversity digitisation
-        in real time. It was a time of enthusiasm for aggregating lots of data, such
-        as the ill-fated PLoS...","published_at":1637700780,"updated_at":1637701172,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["geocoding","NoCode","RSS"],"language":"en","reference":[{"doi":"https://doi.org/10.1093/bioinformatics/btm109","key":"ref1"},{"doi":"https://doi.org/10.1371/journal.pone.0019491","key":"ref2"},{"key":"ref3","url":"http://arxiv.org/abs/1711.00046"}]},{"id":"20b9d31e-513f-496b-b399-4215306e1588","doi":"https://doi.org/10.59350/en7e9-5s882","url":"https://iphylo.blogspot.com/2022/04/obsidian-markdown-and-taxonomic-trees.html","title":"Obsidian,
-        markdown, and taxonomic trees","summary":"Returning to the subject of personal
-        knowledge graphs Kyle Scheer has an interesting repository of Markdown files
-        that describe academic disciplines at https://github.com/kyletscheer/academic-disciplines
-        (see his blog post for more background). If you add these files to Obsidian
-        you get a nice visualisation of a taxonomy of academic disciplines. The applications
-        of this to biological taxonomy seem obvious, especially as a tool like Obsidian
-        enables all sorts of interesting links to be added...","published_at":1649365620,"updated_at":1649366134,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["markdown","obsidian"],"language":"en","reference":[]},{"id":"d811172e-7798-403c-a83d-3d5317a9657e","doi":"https://doi.org/10.59350/w18j9-v7j10","url":"https://iphylo.blogspot.com/2022/08/papers-citing-data-that-cite-papers.html","title":"Papers
-        citing data that cite papers: CrossRef, DataCite, and the Catalogue of Life","summary":"Quick
-        notes to self following on from a conversation about linking taxonomic names
-        to the literature. Is there a way to turn those links into countable citations
-        (even if just one per database) for Google Scholar?— Wayne Maddison (@WayneMaddison)
-        August 3, 2022 There are different sorts of citation:  Paper cites another
-        paper  Paper cites a dataset  Dataset cites a paper Citation type (1) is largely
-        a solved problem (although there are issues of the ownership and use of this...","published_at":1659526380,"updated_at":1659526393,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["Catalogue of Life","citation","CrossRef","DataCite","DOI"],"language":"en","reference":[]},{"id":"a41163e0-9c9a-41e0-a141-f772663f2f32","doi":"https://doi.org/10.59350/gf1dw-n1v47","url":"https://iphylo.blogspot.com/2023/03/dugald-stuart-page-1936-2022.html","title":"Dugald
-        Stuart Page 1936-2022","summary":"My dad died last weekend. Below is a notice
-        in today''s New Zealand Herald. I''m in New Zealand for his funeral. Don''t
-        really have the words for this right now.","published_at":1678762800,"updated_at":1679469956,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":[],"language":"en","reference":[]},{"id":"8bc3fea6-cb86-4344-8dad-f312fbf58041","doi":"https://doi.org/10.59350/t6fb9-4fn44","url":"https://iphylo.blogspot.com/2021/12/the-business-of-extracting-knowledge.html","title":"The
-        Business of Extracting Knowledge from Academic Publications","summary":"Markus
-        Strasser (@mkstra write a fascinating article entitled \"The Business of Extracting
-        Knowledge from Academic Publications\". I spent months working on domain-specific
-        search engines and knowledge discovery apps for biomedicine and eventually
-        figured that synthesizing \"insights\" or building knowledge graphs by machine-reading
-        the academic literature (papers) is *barely useful* :https://t.co/eciOg30Odc—
-        Markus Strasser (@mkstra) December 7, 2021 His TL;DR: TL;DR: I...","published_at":1639180860,"updated_at":1639180881,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["ai","business model","text mining"],"language":"en","reference":[]},{"id":"96fa91d5-459c-482f-aa38-dda6e0a30e20","doi":"https://doi.org/10.59350/7esgr-61v1","url":"https://iphylo.blogspot.com/2022/01/large-graph-viewer-experiments.html","title":"Large
-        graph viewer experiments","summary":"I keep returning to the problem of viewing
-        large graphs and trees, which means my hard drive has accumulated lots of
-        failed prototypes. Inspired by some recent discussions on comparing taxonomic
-        classifications I decided to package one of these (wildly incomplete) prototypes
-        up so that I can document the idea and put the code somewhere safe. Very cool,
-        thanks for sharing this-- the tree diff is similar to what J Rees has been
-        cooking up lately with his ''cl diff'' tool. I''ll tag...","published_at":1641122700,"updated_at":1641122959,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["Google Maps","graph","Mammal Species of the
-        World","mammals","taxonomy"],"language":"en","reference":[]},{"id":"ab5a6e04-d55e-4901-8269-9eea65ce7178","doi":"https://doi.org/10.59350/enxas-arj18","url":"https://iphylo.blogspot.com/2022/08/can-we-use-citation-graph-to-measure.html","title":"Can
-        we use the citation graph to measure the quality of a taxonomic database?","summary":"More
-        arm-waving notes on taxonomic databases. I''ve started to add data to ChecklistBank
-        and this has got me thinking about the issue of data quality. When you add
-        data to ChecklistBank you are asked to give a measure of confidence based
-        on the Catalogue of Life Checklist Confidence system of one - five stars:
-        ★ - ★★★★★. I''m scepetical about the notion of confidence or \"trust\" when
-        it is reduced to a star system (see also Can you trust EOL?). I could literally
-        pick any number of stars, there''s...","published_at":1661351580,"updated_at":1661351908,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":["Bibliography of Life","citation","synonymy","taxonomic
-        databases"],"language":"en","reference":[]},{"id":"0807f515-f31d-4e2c-9e6f-78c3a9668b9d","doi":"https://doi.org/10.59350/ymc6x-rx659","url":"https://iphylo.blogspot.com/2022/09/dna-barcoding-as-intergenerational.html","title":"DNA
-        barcoding as intergenerational transfer of taxonomic knowledge","summary":"I
-        tweeted about this but want to bookmark it for later as well. The paper “A
-        molecular-based identification resource for the arthropods of Finland” doi:10.1111/1755-0998.13510
-        contains the following: …the annotated barcode records assembled by FinBOL
-        participants represent a tremendous intergenerational transfer of taxonomic
-        knowledge … the time contributed by current taxonomists in identifying and
-        contributing voucher specimens represents a great gift to future generations
-        who will benefit...","published_at":1663150320,"updated_at":1664459850,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":[],"language":"en","reference":[]},{"id":"8aea47e4-f227-45f4-b37b-0454a8a7a3ff","doi":"https://doi.org/10.59350/m48f7-c2128","url":"https://iphylo.blogspot.com/2023/04/chatgpt-semantic-search-and-knowledge.html","title":"ChatGPT,
-        semantic search, and knowledge graphs","summary":"One thing about ChatGPT
-        is it has opened my eyes to some concepts I was dimly aware of but am only
-        now beginning to fully appreciate. ChatGPT enables you ask it questions, but
-        the answers depend on what ChatGPT “knows”. As several people have noted,
-        what would be even better is to be able to run ChatGPT on your own content.
-        Indeed,  ChatGPT itself now supports this using plugins. Paul Graham GPT However,
-        it’s still useful to see how to add ChatGPT functionality to your own content
-        from...","published_at":1680535800,"updated_at":1680535924,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":[],"language":"en","reference":[]},{"id":"9d19993f-a228-4883-8933-be5b5459530d","doi":"https://doi.org/10.59350/r3g44-d5s15","url":"https://iphylo.blogspot.com/2023/06/a-taxonomic-search-engine.html","title":"A
-        taxonomic search engine","summary":"Tony Rees commented on my recent post
-        Ten years and a million links. I’ve responded to some of his comments, but
-        I think the bigger question deserves more space, hence this blog post. Tony’s
-        comment Hi Rod, I like what you’re doing. Still struggling (a little) to find
-        the exact point where it answers the questions that are my “entry points”
-        so to speak, which (paraphrasing a post of yours from some years back) start
-        with: Is this a name that “we” (the human race I suppose) recognise as...","published_at":1687016280,"updated_at":1687016300,"indexed_at":1688982864,"authors":[{"url":"https://orcid.org/0000-0002-7101-9767","name":"Roderic
-        Page"}],"image":null,"tags":[],"language":"en","reference":[]}]}'
-  recorded_at: Mon, 10 Jul 2023 20:37:16 GMT
+      string: |
+        <!doctype html>
+        <html lang=en>
+        <title>500 Internal Server Error</title>
+        <h1>Internal Server Error</h1>
+        <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+  recorded_at: Thu, 05 Oct 2023 19:48:26 GMT
 recorded_with: VCR 6.2.0

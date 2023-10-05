@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Sep 2023 12:42:54 GMT
+      - Thu, 05 Oct 2023 19:47:51 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Vg9jJRoD8Bx%2F%2FtAJtsL%2Bjc5hyQRjXstObTEF7JWwOO4SO0zjBXT1SgkRWZb2YFtwZBSJDzLRmzXdMTcTLXE41WwyDIa9LQ0ityFcC5A0xQ3zV%2BjNuMcrqsUaW4zS4JC9kTT5440%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cUpPNu3JSkK0HjQZ6fLLGj%2BtWvfLvZ%2B0vThpffS0Kbv6AdEAXlutIFcBY1Tm0tJi3GSQwiukRRz9VQIrHVM1byvwqz3VJY0%2FsXouWw%2BWsPBaSfuk24LilWUsTbk2kr9uG%2Bpfxe0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 80374628ad4041bc-AMS
+      - 81182dc6ad2e0bd5-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,7 +51,7 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Fri, 08 Sep 2023 12:42:54 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:51 GMT
 - request:
     method: get
     uri: https://api.crossref.org/works/10.1371/journal.pone.0000030
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Sep 2023 12:42:54 GMT
+      - Thu, 05 Oct 2023 19:47:51 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -101,7 +101,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,9,7]],"date-time":"2023-09-07T13:30:02Z","timestamp":1694093402929},"reference-count":73,"publisher":"Public
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,10,2]],"date-time":"2023-10-02T08:59:45Z","timestamp":1696237185368},"reference-count":73,"publisher":"Public
         Library of Science (PLoS)","issue":"1","license":[{"start":{"date-parts":[[2006,12,20]],"date-time":"2006-12-20T00:00:00Z","timestamp":1166572800000},"content-version":"unspecified","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"content-domain":{"domain":["www.plosone.org"],"crossmark-restriction":false},"short-container-title":["PLoS
         ONE"],"DOI":"10.1371\/journal.pone.0000030","type":"journal-article","created":{"date-parts":[[2006,12,20]],"date-time":"2006-12-20T19:38:57Z","timestamp":1166643537000},"page":"e30","update-policy":"http:\/\/dx.doi.org\/10.1371\/journal.pone.corrections_policy","source":"Crossref","is-referenced-by-count":63,"title":["Triose
         Phosphate Isomerase Deficiency Is Caused by Altered Dimerization\u2013Not
@@ -295,7 +295,7 @@ http_interactions:
         of statewide neonatal screening for cystic fibrosis by assay of trypsinogen
         concentrations.","volume":"325","author":"KB Hammond","year":"1991","journal-title":"N
         Engl J Med"}],"container-title":["PLoS ONE"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/dx.plos.org\/10.1371\/journal.pone.0000030","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,8,6]],"date-time":"2021-08-06T23:49:55Z","timestamp":1628293795000},"score":1,"resource":{"primary":{"URL":"https:\/\/dx.plos.org\/10.1371\/journal.pone.0000030"}},"subtitle":[],"editor":[{"given":"Guilhem","family":"Janbon","sequence":"first","affiliation":[]}],"short-title":[],"issued":{"date-parts":[[2006,12,20]]},"references-count":73,"journal-issue":{"issue":"1","published-online":{"date-parts":[[2006,12,20]]}},"URL":"http:\/\/dx.doi.org\/10.1371\/journal.pone.0000030","relation":{},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}],"subject":["Multidisciplinary"],"published":{"date-parts":[[2006,12,20]]}}}'
-  recorded_at: Fri, 08 Sep 2023 12:42:54 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:52 GMT
 - request:
     method: get
     uri: https://api.crossref.org/members/340
@@ -315,7 +315,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Sep 2023 12:42:55 GMT
+      - Thu, 05 Oct 2023 19:47:52 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -345,13 +345,13 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1694129365389,"primary-name":"Public
-        Library of Science (PLoS)","counts":{"current-dois":54820,"backfile-dois":289964,"total-dois":344784},"breakdowns":{"dois-by-issued-year":[[2013,36487],[2014,35452],[2015,33537],[2012,27083],[2016,26725],[2017,24569],[2018,22183],[2021,20842],[2022,20628],[2020,20426],[2019,19633],[2011,16660],[2023,13350],[2010,9348],[2009,6703],[2008,4589],[2007,2671],[2005,1643],[2006,1612],[2004,540],[2003,103]]},"prefixes":["10.24196","10.1371"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.2255038556510463,"licenses-backfile":0.9877364086576265,"funders-current":0.6876322510032835,"affiliations-backfile":7.207791312024941E-4,"resource-links-backfile":0.0,"orcids-backfile":0.2808555544826254,"update-policies-current":1.0,"ror-ids-backfile":0.0,"orcids-current":0.9599963516964611,"similarity-checking-backfile":0.9124029189830462,"references-backfile":0.9200521444041329,"descriptions-backfile":0.0,"award-numbers-backfile":0.1966451007711302,"update-policies-backfile":0.9945613938281994,"licenses-current":0.9999452754469172,"award-numbers-current":0.5794418095585553,"abstracts-backfile":0.0123291167179374,"resource-links-current":0.0,"abstracts-current":0.9574790222546516,"references-current":0.9997081357168917},"prefix":[{"name":"Public
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1696462389283,"primary-name":"Public
+        Library of Science (PLoS)","counts":{"current-dois":56123,"backfile-dois":289964,"total-dois":346087},"breakdowns":{"dois-by-issued-year":[[2013,36487],[2014,35452],[2015,33537],[2012,27083],[2016,26725],[2017,24569],[2018,22183],[2021,20842],[2022,20628],[2020,20426],[2019,19633],[2011,16660],[2023,14653],[2010,9348],[2009,6703],[2008,4589],[2007,2671],[2005,1643],[2006,1612],[2004,540],[2003,103]]},"prefixes":["10.24196","10.1371"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.2255038556510463,"licenses-backfile":0.9877364086576265,"funders-current":0.687151435240454,"affiliations-backfile":7.207791312024941E-4,"resource-links-backfile":0.0,"orcids-backfile":0.2808555544826254,"update-policies-current":1.0,"ror-ids-backfile":0.0,"orcids-current":0.9600876645938385,"similarity-checking-backfile":0.9124029189830462,"references-backfile":0.9200521444041329,"descriptions-backfile":0.0,"award-numbers-backfile":0.1966451007711302,"update-policies-backfile":0.9945613938281994,"licenses-current":0.9999465459793667,"award-numbers-current":0.579174313561285,"abstracts-backfile":0.0123291167179374,"resource-links-current":0.0,"abstracts-current":0.9574684175828092,"references-current":0.999714911889956},"prefix":[{"name":"Public
         Library of Science (PLoS)","value":"10.24196"},{"name":"Public Library of
-        Science","value":"10.1371"}],"id":340,"tokens":["public","library","of","science","plos"],"counts-type":{"all":{"journal-article":344784,"journal":1,"component":3610715,"dataset":7},"backfile":{"journal-article":289964},"current":{"journal-article":54820}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1694129365389,"affiliations":6.061766207248596E-4,"abstracts":0.162606153417792,"orcids":0.3888376490788436,"licenses":0.9896775952480394,"references":0.9327172954661469,"funders":0.2989813912478537,"similarity-checking":0.9263306881989885,"award-numbers":0.2575090491438118,"ror-ids":0.0,"update-policies":0.9954261218618033,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1694129365389,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1694129365389,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":4.763599453293877E-5},"dataset":{"last-status-check-time":1694129365389,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1694129365389,"affiliations":7.207791312024941E-4,"abstracts":0.0123291167179374,"orcids":0.2808555544826254,"licenses":0.9877364086576265,"references":0.9200521444041329,"funders":0.2255038556510463,"similarity-checking":0.9124029189830462,"award-numbers":0.1966451007711302,"ror-ids":0.0,"update-policies":0.9945613938281994,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1694129365389,"affiliations":0.0,"abstracts":0.9574790222546516,"orcids":0.9599963516964611,"licenses":0.9999452754469172,"references":0.9997081357168917,"funders":0.6876322510032835,"similarity-checking":1.0,"award-numbers":0.5794418095585553,"ror-ids":0.0,"update-policies":1.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"San
+        Science","value":"10.1371"}],"id":340,"tokens":["public","library","of","science","plos"],"counts-type":{"all":{"journal-article":346087,"journal":1,"component":3628608,"dataset":7},"backfile":{"journal-article":289964},"current":{"journal-article":56123}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1696462389283,"affiliations":6.038943964956788E-4,"abstracts":0.1655970897491093,"orcids":0.3910028403262763,"licenses":0.9897164585783343,"references":0.9329706114358528,"funders":0.3003666708082072,"similarity-checking":0.9266080494210993,"award-numbers":0.2586777313218931,"ror-ids":0.0,"update-policies":0.9954433422809872,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1696462389283,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1696462389283,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":4.740109705980916E-5},"dataset":{"last-status-check-time":1696462389283,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1696462389283,"affiliations":7.207791312024941E-4,"abstracts":0.0123291167179374,"orcids":0.2808555544826254,"licenses":0.9877364086576265,"references":0.9200521444041329,"funders":0.2255038556510463,"similarity-checking":0.9124029189830462,"award-numbers":0.1966451007711302,"ror-ids":0.0,"update-policies":0.9945613938281994,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1696462389283,"affiliations":0.0,"abstracts":0.9574684175828092,"orcids":0.9600876645938385,"licenses":0.9999465459793667,"references":0.999714911889956,"funders":0.687151435240454,"similarity-checking":1.0,"award-numbers":0.579174313561285,"ror-ids":0.0,"update-policies":1.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"San
         Francisco, CA, United States","names":["Public Library of Science (PLoS)","Public
         Library of Science"]}}'
-  recorded_at: Fri, 08 Sep 2023 12:42:55 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:52 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1371
@@ -371,7 +371,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 08 Sep 2023 12:42:55 GMT
+      - Thu, 05 Oct 2023 19:47:53 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -383,7 +383,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FdXsevVbKKu2o%2BnfM3Fxb7TzsZmm%2Ft%2FTp80ef48I1noPzaoqlQCrnCjw7%2FO9HGwX4QEXHhQtLJjrTnL%2Bd%2FLcj848UdAspUjrQeQY0FhMRDr6z2e%2FXnxrtt804Hcb7hqCHrFsACA%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ywE7stp2u6itB3nPUWdWV4AZyrZXUD12KCuDsOm%2FtCK02Qd18ciuYbXP8zlkAT4Xpiiib9%2BaguQ6S90346%2FV7oovRvSxXBXe74uO9%2BcNH%2BD948OdRh79Y6bYgzLgxGU6RnE4iwU%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -391,7 +391,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 803746320ab20a48-AMS
+      - 81182dd048b6655b-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -403,5 +403,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Fri, 08 Sep 2023 12:42:55 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:52 GMT
 recorded_with: VCR 6.2.0

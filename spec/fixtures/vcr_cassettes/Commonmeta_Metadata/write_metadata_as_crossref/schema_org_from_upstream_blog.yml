@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://upstream.force11.org/deep-dive-into-ethics-of-contributor-roles
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.14.0 (Ubuntu)
       Date:
-      - Wed, 06 Sep 2023 14:50:11 GMT
+      - Thu, 05 Oct 2023 19:47:50 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -35,12 +35,12 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: ''
-  recorded_at: Wed, 06 Sep 2023 14:50:11 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:50 GMT
 - request:
     method: get
     uri: https://upstream.force11.org/deep-dive-into-ethics-of-contributor-roles/
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -57,7 +57,7 @@ http_interactions:
       Server:
       - nginx/1.14.0 (Ubuntu)
       Date:
-      - Wed, 06 Sep 2023 14:50:11 GMT
+      - Thu, 05 Oct 2023 19:47:51 GMT
       Content-Type:
       - text/html; charset=utf-8
       Content-Length:
@@ -1040,5 +1040,5 @@ http_interactions:
         – Published with <a href='https://ghost.org'>Ghost</a> & <a href='https://aspirethemes.com/themes/tripoli'>Tripoli</a></span>\n
         \   </div>\n  </div>\n</footer>\n    <script src='/assets/js/app.min.js?v=77b77c0c74'></script>\n
         \   \n  </body>\n</html>"
-  recorded_at: Wed, 06 Sep 2023 14:50:12 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:51 GMT
 recorded_with: VCR 6.2.0

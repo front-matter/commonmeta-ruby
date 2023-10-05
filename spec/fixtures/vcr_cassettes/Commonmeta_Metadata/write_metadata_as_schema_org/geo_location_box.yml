@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.1594
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:53 GMT
+      - Thu, 05 Oct 2023 19:47:21 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3E18s43Woo6dZjFQmD4pWlVcy6gzDjHNrnSWYxERZaa9UkyEYNeG%2FLzkT5EFaWyYeB%2BR6A9gXKnnYM%2FbUTJl2U1d1l67AFLp9UXxKSGNy46Jq1EHqVfxVIsHhDbBYh3f6L6zd%2F0%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Pw2qOe0eAUeCLZzGKIx5KAtyRyiP85L8PpC2llQH2tFhnpp7cCox2y8TQSolTJS7z%2B8NpVXZAEBofoZTwXX54Fd2h9On2H%2F0WoLg%2FPqYDceOltImkMxCArI6lmjK98YyxpfUP5w%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d948ab10d9e28ac-AMS
+      - 81182d0c1bf91c96-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,12 +51,12 @@ http_interactions:
             "RA": "DataCite"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:24:53 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:21 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.1594/pangaea.842237?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:53 GMT
+      - Thu, 05 Oct 2023 19:47:21 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -93,7 +93,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 0d634363-630e-48e3-9103-f0b535fb1144
+      - dea59ff0-d9db-4372-81e4-3144a9d8f3e4
       X-Download-Options:
       - noopen
       Etag:
@@ -101,13 +101,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.053745'
+      - '0.059742'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -177,5 +177,5 @@ http_interactions:
         the further development of services for cross-linking data and paper publications
         as well as evaluating the FAIR-ness of repositories according to the FAIR
         principles.","language":["en"],"clientType":"repository","domains":"pangaea.de,doi.pangaea.de","re3data":"https://doi.org/10.17616/R3XS37","opendoar":null,"issn":{},"url":"https://www.pangaea.de/","created":"2020-03-11T13:58:41.000Z","updated":"2023-04-24T19:21:25.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"pangaea","type":"providers"}},"prefixes":{"data":[{"id":"10.1594","type":"prefixes"},{"id":"10.25594","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:24:53 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:47:21 GMT
+recorded_with: VCR 6.2.0

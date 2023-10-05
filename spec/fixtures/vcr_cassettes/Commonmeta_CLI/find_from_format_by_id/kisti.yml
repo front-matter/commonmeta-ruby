@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.5012
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 19 Mar 2023 18:55:43 GMT
+      - Thu, 05 Oct 2023 19:47:54 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tYqSKPUyS1ev6zhX5r0zq1WdQxM%2Ba6ZHGAF1QhHOcHMk93RApJOiT2kQejCnIzgwInj9j%2BH1RMzixyCm7hZw9q1oE2e1gIKc2d%2F%2BbC5tZubNMq4FTYwAoeHkKrgSfmcJN6oDkMc%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ZP1W65%2B%2BBHjqv18cQg9svl4uaCgqVx98q5Ymln85HP6udn78EFnUW%2Fmw%2BlGFnIPrK1lAq6Sh5XBKkeD4WNILLWvLnAqPp67n0GycWbUqpcJmfBCTbBQBZLjW2R0w9FidcVzhAoI%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,9 +39,9 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7aa7ee6a9de70eb3-AMS
+      - 81182dda1ca00e48-AMS
       Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: |-
@@ -51,5 +51,5 @@ http_interactions:
             "RA": "KISTI"
           }
         ]
-  recorded_at: Sun, 19 Mar 2023 18:55:43 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:47:54 GMT
+recorded_with: VCR 6.2.0

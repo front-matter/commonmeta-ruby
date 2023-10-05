@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/a163e340-5b3c-4736-9ab0-8c54fdff6a3c
+    uri: https://api.rogue-scholar.org/posts/a163e340-5b3c-4736-9ab0-8c54fdff6a3c
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,46 +18,31 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '2105'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '1825'
       Date:
-      - Wed, 06 Sep 2023 14:26:28 GMT
-      Etag:
-      - '"zhstbxmwhv1m8"'
+      - Thu, 05 Oct 2023 20:37:43 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::6gq6b-1694010388391-9a051a8960a1
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0RYZHQP9KBD2W309CHMGSD-fra
     body:
       encoding: UTF-8
-      string: "{\"id\":\"a163e340-5b3c-4736-9ab0-8c54fdff6a3c\",\"doi\":\"https://doi.org/10.59350/33es7-fqz31\",\"url\":\"https://lab.sub.uni-goettingen.de/welcome.html\",\"title\":\"Welcome
-        to the Lab\",\"summary\":\"Welcome everyone!  This is the place to read about
-        projects, resources and all the things we deal with at our work on digital
-        collections, databases, APIs, tools and esoteric programming languages we
-        prefer to write in. It is <em>not</em> meant for a single subject, but covers
-        all topics we \U0001F496. So I hope you don’t mind if the next post is about
-        one of my adorable cute rabbits.\",\"content_html\":\"<p>Welcome everyone!</p>
-        <p>This is the place to read about projects, resources and all the things
-        we deal with at our work on digital collections, databases, APIs, tools and
-        esoteric programming languages we prefer to write in. It is <em>not</em> meant
-        for a single subject, but covers all topics we \U0001F496. So I hope you don’t
-        mind if the next post is about one of my adorable cute rabbits.</p>\",\"published_at\":1483228801,\"updated_at\":1483228801,\"indexed_at\":1689006804,\"authors\":[{\"url\":null,\"name\":\"Mathias
-        Göbel\"}],\"image\":\"https://lab.sub.uni-goettingen.de/assets/images/Bibliothek_der_UNI_Goettingen-wikiCommons-Suhaknoke.webp\",\"tags\":[\"Meta\"],\"language\":\"en\",\"reference\":[],\"relationships\":[],\"blog_id\":\"6hezn63\",\"blog_name\":\"lab.sub
-        - Articles\",\"blog_slug\":\"lab_sub\",\"blog\":{\"id\":\"6hezn63\",\"title\":\"lab.sub
-        - Articles\",\"description\":\"Better sit thus, and observe thy strange things\",\"language\":\"en\",\"favicon\":null,\"feed_url\":\"https://lab.sub.uni-goettingen.de/atom.xml\",\"home_page_url\":\"https://lab.sub.uni-goettingen.de\",\"user_id\":\"dead81b3-8a8b-45c9-85fe-f01bb3948c77\",\"created_at\":\"2023-04-24\",\"feed_format\":\"application/atom+xml\",\"license\":\"https://creativecommons.org/licenses/by/4.0/legalcode\",\"generator\":\"Jekyll\",\"category\":\"computerAndInformationSciences\",\"prefix\":\"10.59350\",\"modified_at\":\"2023-06-01T00:00:01+00:00\",\"version\":\"https://jsonfeed.org/version/1.1\",\"current_feed_url\":null,\"status\":\"active\",\"issn\":null,\"backlog\":0,\"authors\":null,\"plan\":\"Starter\",\"slug\":\"lab_sub\",\"use_mastodon\":false}}"
-  recorded_at: Wed, 06 Sep 2023 14:26:28 GMT
+      string: '{"archive_url":null,"authors":[{"name":"Mathias G\u00f6bel","url":null}],"blog":{"api":false,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":null,"category":"computerAndInformationSciences","created_at":"2023-04-24","current_feed_url":null,"description":"Better
+        sit thus, and observe thy strange things","favicon":null,"feed_format":"application/atom+xml","feed_url":"https://lab.sub.uni-goettingen.de/atom.xml","filter":null,"funding":null,"generator":"Jekyll","home_page_url":"https://lab.sub.uni-goettingen.de","id":"6hezn63","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-06-01T00:00:01+00:00","plan":"Starter","prefix":"10.59350","relative_url":null,"slug":"lab_sub","status":"active","title":"lab.sub
+        - Articles","use_api":null,"use_mastodon":false,"user_id":"dead81b3-8a8b-45c9-85fe-f01bb3948c77","version":"https://jsonfeed.org/version/1.1"},"blog_name":"lab.sub
+        - Articles","blog_slug":"lab_sub","doi":"https://doi.org/10.59350/33es7-fqz31","id":"a163e340-5b3c-4736-9ab0-8c54fdff6a3c","image":"https://lab.sub.uni-goettingen.de/assets/images/Bibliothek_der_UNI_Goettingen-wikiCommons-Suhaknoke.webp","indexed_at":1689006804,"language":"en","published_at":1483228801,"reference":[],"relationships":[],"summary":"Welcome
+        everyone!  This is the place to read about projects, resources and all the
+        things we deal with at our work on digital collections, databases, APIs, tools
+        and esoteric programming languages we prefer to write in. It is <em>not</em>
+        meant for a single subject, but covers all topics we \ud83d\udc96. So I hope
+        you don\u2019t mind if the next post is about one of my adorable cute rabbits.","tags":["Meta"],"title":"Welcome
+        to the Lab","updated_at":1483228801,"url":"https://lab.sub.uni-goettingen.de/welcome.html"}
+
+        '
+  recorded_at: Thu, 05 Oct 2023 20:37:43 GMT
 recorded_with: VCR 6.2.0

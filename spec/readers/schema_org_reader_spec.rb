@@ -29,7 +29,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.descriptions.first["description"]).to start_with("Eating your own dog food")
       expect(subject.subjects).to eq([{ "subject" => "Feature" }])
       expect(subject.date).to eq("published" => "2016-12-20T00:00:00Z",
-                                 "updated" => "2022-08-15T09:06:22Z")
+                                 "updated" => "2023-09-07T08:34:41Z")
       expect(subject.references.length).to eq(0)
       expect(subject.publisher).to eq("name" => "Front Matter")
     end

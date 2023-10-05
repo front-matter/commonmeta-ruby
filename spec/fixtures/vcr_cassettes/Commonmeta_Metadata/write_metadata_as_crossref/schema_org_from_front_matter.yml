@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://blog.front-matter.io/posts/editorial-by-more-than-200-call-for-emergency-action-to-limit-global-temperature-increases-restore-biodiversity-and-protect-health
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -27,8 +27,8 @@ http_interactions:
       Status:
       - 301 Moved Permanently
       X-Request-Id:
-      - 884c560f-6a42-4d41-8924-f3fc2c082a01
-      - 884c560f-6a42-4d41-8924-f3fc2c082a01
+      - a2d80df7-a1d2-411c-809d-bc506af6aa5e
+      - a2d80df7-a1d2-411c-809d-bc506af6aa5e
       Location:
       - "/posts/editorial-by-more-than-200-call-for-emergency-action-to-limit-global-temperature-increases-restore-biodiversity-and-protect-health/"
       Ghost-Cache:
@@ -37,22 +37,22 @@ http_interactions:
       - public, max-age=31536000
       Ghost-Age:
       - '0'
-      Via:
-      - 1.1 varnish, 1.1 varnish
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 06 Sep 2023 14:50:13 GMT
+      - Thu, 05 Oct 2023 19:47:47 GMT
+      Via:
+      - 1.1 varnish
       Age:
-      - '0'
+      - '4337'
       X-Served-By:
-      - cache-ams21049-AMS, cache-fra-eddf8230053-FRA
+      - cache-ams21034-AMS
       X-Cache:
-      - MISS, MISS
+      - HIT
       X-Cache-Hits:
-      - 0, 0
+      - '1'
       X-Timer:
-      - S1694011814.667675,VS0,VE34
+      - S1696535268.565336,VS0,VE2
       Vary:
       - Cookie
       Ghost-Fastly:
@@ -62,12 +62,12 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: ''
-  recorded_at: Wed, 06 Sep 2023 14:50:13 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:47 GMT
 - request:
     method: get
     uri: https://blog.front-matter.io/posts/editorial-by-more-than-200-call-for-emergency-action-to-limit-global-temperature-increases-restore-biodiversity-and-protect-health/
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -84,7 +84,7 @@ http_interactions:
       Connection:
       - close
       Content-Length:
-      - '33136'
+      - '33330'
       Server:
       - openresty
       Content-Type:
@@ -92,32 +92,32 @@ http_interactions:
       Status:
       - 200 OK
       X-Request-Id:
-      - 5d9f6530-f5c9-4b45-918a-bbf552ea0503
-      - 5d9f6530-f5c9-4b45-918a-bbf552ea0503
+      - b78323f5-7570-48d7-878a-44ef5f4abe0e
+      - b78323f5-7570-48d7-878a-44ef5f4abe0e
       Etag:
-      - W/"8170-QT2qDWY+khJ7qJlszjVodsp4e3A"
+      - W/"8232-Jkk7sTrOLAy/9t20GB/FQhhyXbE"
       Ghost-Cache:
       - MISS
       Cache-Control:
       - public, max-age=0
       Ghost-Age:
       - '0'
-      Via:
-      - 1.1 varnish, 1.1 varnish
       Accept-Ranges:
       - bytes
       Date:
-      - Wed, 06 Sep 2023 14:50:14 GMT
+      - Thu, 05 Oct 2023 19:47:47 GMT
+      Via:
+      - 1.1 varnish
       Age:
-      - '0'
+      - '4337'
       X-Served-By:
-      - cache-ams21039-AMS, cache-fra-eddf8230026-FRA
+      - cache-ams21049-AMS
       X-Cache:
-      - MISS, MISS
+      - HIT
       X-Cache-Hits:
-      - 0, 0
+      - '1'
       X-Timer:
-      - S1694011814.033554,VS0,VE217
+      - S1696535268.707578,VS0,VE1
       Vary:
       - Cookie, Accept-Encoding
       Ghost-Fastly:
@@ -130,7 +130,7 @@ http_interactions:
         \   <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n
         \   <title>Editorial by more than 200 health journals: Call for emergency
         action to limit global temperature increases, restore biodiversity, and protect
-        health</title>\n    <link rel=\"stylesheet\" href=\"https://blog.front-matter.io/assets/built/screen.css?v=7f17228953\">\n\n
+        health</title>\n    <link rel=\"stylesheet\" href=\"https://blog.front-matter.io/assets/built/screen.css?v=6869c21382\">\n\n
         \   <meta name=\"citation_doi\" content=\"https://doi.org/10.53731/r9nqx6h-97aq74v-ag7bw\">\n
         \   <meta name=\"citation_title\" content=\"Editorial by more than 200 health
         journals: Call for emergency action to limit global temperature increases,
@@ -213,9 +213,9 @@ http_interactions:
         greatest threat to global public health is the continued failure of world
         leaders to keep the global temperature rise below 1.5°C and to restore na\",\n
         \   \"mainEntityOfPage\": \"https://blog.front-matter.io/posts/editorial-by-more-than-200-call-for-emergency-action-to-limit-global-temperature-increases-restore-biodiversity-and-protect-health/\"\n}\n
-        \   </script>\n\n    <meta name=\"generator\" content=\"Ghost 5.61\">\n    <link
+        \   </script>\n\n    <meta name=\"generator\" content=\"Ghost 5.67\">\n    <link
         rel=\"alternate\" type=\"application/rss+xml\" title=\"Front Matter\" href=\"https://blog.front-matter.io/rss/\">\n
-        \   <script defer src=\"https://cdn.jsdelivr.net/ghost/portal@~2.34/umd/portal.min.js\"
+        \   <script defer src=\"https://cdn.jsdelivr.net/ghost/portal@~2.36/umd/portal.min.js\"
         data-i18n=\"true\" data-ghost=\"https://blog.front-matter.io/\" data-key=\"d0d5aabcc0f96718307d5944b6\"
         data-api=\"https://front-matter.ghost.io/ghost/api/content/\" crossorigin=\"anonymous\"></script><style
         id=\"gh-members-styles\">.gh-post-upgrade-cta-content,\n.gh-post-upgrade-cta
@@ -239,9 +239,9 @@ http_interactions:
         data-key=\"d0d5aabcc0f96718307d5944b6\" data-styles=\"https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css\"
         data-sodo-search=\"https://front-matter.ghost.io/\" crossorigin=\"anonymous\"></script>\n
         \   \n    <link href=\"https://blog.front-matter.io/webmentions/receive/\"
-        rel=\"webmention\">\n    <script defer src=\"/public/cards.min.js?v=7f17228953\"></script>\n
-        \   <link rel=\"stylesheet\" type=\"text/css\" href=\"/public/cards.min.css?v=7f17228953\">\n
-        \   <script defer src=\"/public/comment-counts.min.js?v=7f17228953\" data-ghost-comments-counts-api=\"https://blog.front-matter.io/members/api/comments/counts/\"></script>\n
+        rel=\"webmention\">\n    <script defer src=\"/public/cards.min.js?v=6869c21382\"></script>\n
+        \   <link rel=\"stylesheet\" type=\"text/css\" href=\"/public/cards.min.css?v=6869c21382\">\n
+        \   <script defer src=\"/public/comment-counts.min.js?v=6869c21382\" data-ghost-comments-counts-api=\"https://blog.front-matter.io/members/api/comments/counts/\"></script>\n
         \   <link href=\"/atom/\" type=\"application/atom+xml\" rel=\"alternate\"
         title=\"Atom feed\" />\n<link rel=\"me\" href=\"https://hachyderm.io/@mfenner\">\n<script
         defer data-domain=\"blog.front-matter.io\" src=\"https://plausible.io/js/plausible.js\"></script><style>:root
@@ -339,73 +339,74 @@ http_interactions:
         class=\"gh-pagehead\">\n                    <h4 class=\"gh-pagehead-title\">Read
         next</h4>\n                </section>\n\n                <div class=\"gh-topic
         gh-topic-grid\">\n                    <div class=\"gh-topic-content\">\n                            <article
-        class=\"gh-card post\">\n    <a class=\"gh-card-link\" href=\"/posts/filter-posts-by-language/\">\n
-        \           <figure class=\"gh-card-image\">\n                <img\n                    srcset=\"https://images.unsplash.com/photo-1601520525445-1039c1fa232b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fGxhbmd1YWdlfGVufDB8fHx8MTY5MzgzMjMwOXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300
-        300w,\n                            https://images.unsplash.com/photo-1601520525445-1039c1fa232b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fGxhbmd1YWdlfGVufDB8fHx8MTY5MzgzMjMwOXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720
-        720w,\n                            https://images.unsplash.com/photo-1601520525445-1039c1fa232b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fGxhbmd1YWdlfGVufDB8fHx8MTY5MzgzMjMwOXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960
-        960w,\n                            https://images.unsplash.com/photo-1601520525445-1039c1fa232b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fGxhbmd1YWdlfGVufDB8fHx8MTY5MzgzMjMwOXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200
-        1200w,\n                            https://images.unsplash.com/photo-1601520525445-1039c1fa232b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fGxhbmd1YWdlfGVufDB8fHx8MTY5MzgzMjMwOXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000
+        class=\"gh-card post\">\n    <a class=\"gh-card-link\" href=\"/posts/use-cases-for-science-blogs-grant-funded-projects/\">\n
+        \           <figure class=\"gh-card-image\">\n                <img\n                    srcset=\"https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI3fHxwcm9qZWN0fGVufDB8fHx8MTY5NTY0MjU4MHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300
+        300w,\n                            https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI3fHxwcm9qZWN0fGVufDB8fHx8MTY5NTY0MjU4MHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720
+        720w,\n                            https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI3fHxwcm9qZWN0fGVufDB8fHx8MTY5NTY0MjU4MHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960
+        960w,\n                            https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI3fHxwcm9qZWN0fGVufDB8fHx8MTY5NTY0MjU4MHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200
+        1200w,\n                            https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI3fHxwcm9qZWN0fGVufDB8fHx8MTY5NTY0MjU4MHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000
         2000w\"\n                    sizes=\"(max-width: 1200px) 100vw, 1200px\"\n
-        \                   src=\"https://images.unsplash.com/photo-1601520525445-1039c1fa232b?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDh8fGxhbmd1YWdlfGVufDB8fHx8MTY5MzgzMjMwOXww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720\"\n
-        \                   alt=\"New in Rogue Scholar: filter posts by language\"\n
+        \                   src=\"https://images.unsplash.com/photo-1517048676732-d65bc937f952?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI3fHxwcm9qZWN0fGVufDB8fHx8MTY5NTY0MjU4MHww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720\"\n
+        \                   alt=\"Use cases for science blogs: grant-funded projects\"\n
         \               >\n            </figure>\n\n        <div class=\"gh-card-wrapper\">\n
-        \           <header class=\"gh-card-header\">\n                <h3 class=\"gh-card-title\">New
-        in Rogue Scholar: filter posts by language</h3>\n            </header>\n\n
+        \           <header class=\"gh-card-header\">\n                <h3 class=\"gh-card-title\">Use
+        cases for science blogs: grant-funded projects</h3>\n            </header>\n\n
         \                   <div class=\"gh-card-excerpt\">The Rogue Scholar science
-        blog archive received a small update today with the following changes: optionally
-        filter blog posts by language, added support for all OECD fields of science
-        and technology, and searching by DOI. And it passed another big milestone:
-        more than 5,000 (5,483 today) blog posts</div>\n\n            <footer class=\"gh-card-footer\">\n
-        \               <span class=\"gh-card-author\">Martin Fenner</span>\n                <time
-        class=\"gh-card-date\" datetime=\"2023-09-04\">Sep 4, 2023</time>\n                    <script\n
-        \   data-ghost-comment-count=\"64f5d470fc96ff00012a5f7b\"\n    data-ghost-comment-count-empty=\"\"\n
-        \   data-ghost-comment-count-singular=\"comment\"\n    data-ghost-comment-count-plural=\"comments\"\n
-        \   data-ghost-comment-count-tag=\"span\"\n    data-ghost-comment-count-class-name=\"gh-card-comments\"\n
-        \   data-ghost-comment-count-autowrap=\"true\"\n>\n</script>\n            </footer>\n
-        \       </div>\n    </a>\n</article>                            <article class=\"gh-card
-        post\">\n    <a class=\"gh-card-link\" href=\"/posts/rogue-scholar-is-growing/\">\n
-        \           <figure class=\"gh-card-image\">\n                <img\n                    srcset=\"https://images.unsplash.com/photo-1590415024718-798cdaab96dd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGdyb3d8ZW58MHx8fHwxNjkzMjExNzkwfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300
-        300w,\n                            https://images.unsplash.com/photo-1590415024718-798cdaab96dd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGdyb3d8ZW58MHx8fHwxNjkzMjExNzkwfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720
-        720w,\n                            https://images.unsplash.com/photo-1590415024718-798cdaab96dd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGdyb3d8ZW58MHx8fHwxNjkzMjExNzkwfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960
-        960w,\n                            https://images.unsplash.com/photo-1590415024718-798cdaab96dd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGdyb3d8ZW58MHx8fHwxNjkzMjExNzkwfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200
-        1200w,\n                            https://images.unsplash.com/photo-1590415024718-798cdaab96dd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGdyb3d8ZW58MHx8fHwxNjkzMjExNzkwfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000
-        2000w\"\n                    sizes=\"(max-width: 1200px) 100vw, 1200px\"\n
-        \                   src=\"https://images.unsplash.com/photo-1590415024718-798cdaab96dd?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDJ8fGdyb3d8ZW58MHx8fHwxNjkzMjExNzkwfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720\"\n
-        \                   alt=\"Rogue Scholar is growing\"\n                >\n
-        \           </figure>\n\n        <div class=\"gh-card-wrapper\">\n            <header
-        class=\"gh-card-header\">\n                <h3 class=\"gh-card-title\">Rogue
-        Scholar is growing</h3>\n            </header>\n\n                    <div
-        class=\"gh-card-excerpt\">The Rogue Scholar science blog archive continues
-        to grow. It is closing in on 50 science blogs (currently 45), 3,000 blog posts
-        (currently 2,944, of which 2,775 have a DOI), and 250 (currently 212) blog
-        posts with references registered with Crossref. I have set up eleven Mastodon</div>\n\n
-        \           <footer class=\"gh-card-footer\">\n                <span class=\"gh-card-author\">Martin
-        Fenner</span>\n                <time class=\"gh-card-date\" datetime=\"2023-08-28\">Aug
-        28, 2023</time>\n                    <script\n    data-ghost-comment-count=\"64ec5c8ae107b30001d69e20\"\n
+        blog archive is open to science blogs that want to be enhanced by adding long-term
+        archiving, DOI registration, and full-text search. The currently 56 participating
+        blogs represent a broad spectrum of topics, people, and communities. Today
+        I want to go into more detail into one particular</div>\n\n            <footer
+        class=\"gh-card-footer\">\n                <span class=\"gh-card-author\">Martin
+        Fenner</span>\n                <time class=\"gh-card-date\" datetime=\"2023-09-25\">Sep
+        25, 2023</time>\n                    <script\n    data-ghost-comment-count=\"651173cd0538110001aae364\"\n
         \   data-ghost-comment-count-empty=\"\"\n    data-ghost-comment-count-singular=\"comment\"\n
         \   data-ghost-comment-count-plural=\"comments\"\n    data-ghost-comment-count-tag=\"span\"\n
         \   data-ghost-comment-count-class-name=\"gh-card-comments\"\n    data-ghost-comment-count-autowrap=\"true\"\n>\n</script>\n
         \           </footer>\n        </div>\n    </a>\n</article>                            <article
-        class=\"gh-card post\">\n    <a class=\"gh-card-link\" href=\"/posts/rogue-scholar-joins-fediverse/\">\n
-        \           <figure class=\"gh-card-image\">\n                <img\n                    srcset=\"https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fGpvaW58ZW58MHx8fHwxNjkyNjAxNTA1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300
-        300w,\n                            https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fGpvaW58ZW58MHx8fHwxNjkyNjAxNTA1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720
-        720w,\n                            https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fGpvaW58ZW58MHx8fHwxNjkyNjAxNTA1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960
-        960w,\n                            https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fGpvaW58ZW58MHx8fHwxNjkyNjAxNTA1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200
-        1200w,\n                            https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fGpvaW58ZW58MHx8fHwxNjkyNjAxNTA1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000
+        class=\"gh-card post\">\n    <a class=\"gh-card-link\" href=\"/posts/doi-registration-workflow-science-blog/\">\n
+        \           <figure class=\"gh-card-image\">\n                <img\n                    srcset=\"https://images.unsplash.com/photo-1595126731003-755959b6baf8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEyfHxyZWdpc3RyYXRpb258ZW58MHx8fHwxNjk1MzczNDkzfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300
+        300w,\n                            https://images.unsplash.com/photo-1595126731003-755959b6baf8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEyfHxyZWdpc3RyYXRpb258ZW58MHx8fHwxNjk1MzczNDkzfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720
+        720w,\n                            https://images.unsplash.com/photo-1595126731003-755959b6baf8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEyfHxyZWdpc3RyYXRpb258ZW58MHx8fHwxNjk1MzczNDkzfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960
+        960w,\n                            https://images.unsplash.com/photo-1595126731003-755959b6baf8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEyfHxyZWdpc3RyYXRpb258ZW58MHx8fHwxNjk1MzczNDkzfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200
+        1200w,\n                            https://images.unsplash.com/photo-1595126731003-755959b6baf8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEyfHxyZWdpc3RyYXRpb258ZW58MHx8fHwxNjk1MzczNDkzfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000
         2000w\"\n                    sizes=\"(max-width: 1200px) 100vw, 1200px\"\n
-        \                   src=\"https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fGpvaW58ZW58MHx8fHwxNjkyNjAxNTA1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720\"\n
-        \                   alt=\"Rogue Scholar joins the Fediverse\"\n                >\n
-        \           </figure>\n\n        <div class=\"gh-card-wrapper\">\n            <header
-        class=\"gh-card-header\">\n                <h3 class=\"gh-card-title\">Rogue
-        Scholar joins the Fediverse</h3>\n            </header>\n\n                    <div
-        class=\"gh-card-excerpt\">Today I am happy to announce that the Rogue Scholar
-        science blog archive has joined the Fediverse, the federated social network
-        that communicates using the ActivityPub protocol. I have launched a Mastodon
-        instance at Rogue Scholar Social that accepts Science Blog bots as accounts,
-        publishing summaries of blog posts.\n\n\n\nScience</div>\n\n            <footer
+        \                   src=\"https://images.unsplash.com/photo-1595126731003-755959b6baf8?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDEyfHxyZWdpc3RyYXRpb258ZW58MHx8fHwxNjk1MzczNDkzfDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720\"\n
+        \                   alt=\"DOI registration workflow for a science blog\"\n
+        \               >\n            </figure>\n\n        <div class=\"gh-card-wrapper\">\n
+        \           <header class=\"gh-card-header\">\n                <h3 class=\"gh-card-title\">DOI
+        registration workflow for a science blog</h3>\n            </header>\n\n                    <div
+        class=\"gh-card-excerpt\">In previous blog posts such as the one published
+        earlier this week, I discussed the various elements involved in registering
+        a DOI for a science blog post. Briefly, the Rogue Scholar service takes advantage
+        of the fact that blogs\n\n\n * use RSS feeds (or the Atom or JSON Feed format)
+        to</div>\n\n            <footer class=\"gh-card-footer\">\n                <span
+        class=\"gh-card-author\">Martin Fenner</span>\n                <time class=\"gh-card-date\"
+        datetime=\"2023-09-22\">Sep 22, 2023</time>\n                    <script\n
+        \   data-ghost-comment-count=\"650d58ae0538110001aae161\"\n    data-ghost-comment-count-empty=\"\"\n
+        \   data-ghost-comment-count-singular=\"comment\"\n    data-ghost-comment-count-plural=\"comments\"\n
+        \   data-ghost-comment-count-tag=\"span\"\n    data-ghost-comment-count-class-name=\"gh-card-comments\"\n
+        \   data-ghost-comment-count-autowrap=\"true\"\n>\n</script>\n            </footer>\n
+        \       </div>\n    </a>\n</article>                            <article class=\"gh-card
+        post\">\n    <a class=\"gh-card-link\" href=\"/posts/streamlining/\">\n            <figure
+        class=\"gh-card-image\">\n                <img\n                    srcset=\"https://images.unsplash.com/photo-1476725994324-6f6833ea0631?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDM1fHxmYXN0fGVufDB8fHx8MTY5NTEwNjkzN3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;300
+        300w,\n                            https://images.unsplash.com/photo-1476725994324-6f6833ea0631?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDM1fHxmYXN0fGVufDB8fHx8MTY5NTEwNjkzN3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720
+        720w,\n                            https://images.unsplash.com/photo-1476725994324-6f6833ea0631?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDM1fHxmYXN0fGVufDB8fHx8MTY5NTEwNjkzN3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960
+        960w,\n                            https://images.unsplash.com/photo-1476725994324-6f6833ea0631?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDM1fHxmYXN0fGVufDB8fHx8MTY5NTEwNjkzN3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200
+        1200w,\n                            https://images.unsplash.com/photo-1476725994324-6f6833ea0631?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDM1fHxmYXN0fGVufDB8fHx8MTY5NTEwNjkzN3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000
+        2000w\"\n                    sizes=\"(max-width: 1200px) 100vw, 1200px\"\n
+        \                   src=\"https://images.unsplash.com/photo-1476725994324-6f6833ea0631?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDM1fHxmYXN0fGVufDB8fHx8MTY5NTEwNjkzN3ww&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;720\"\n
+        \                   alt=\"Streamlining the archiving of science blog posts\"\n
+        \               >\n            </figure>\n\n        <div class=\"gh-card-wrapper\">\n
+        \           <header class=\"gh-card-header\">\n                <h3 class=\"gh-card-title\">Streamlining
+        the archiving of science blog posts</h3>\n            </header>\n\n                    <div
+        class=\"gh-card-excerpt\">The Rogue Scholar science blog archive is adding
+        important functionality to existing science blogs. The first step after a
+        blog has signed up with Rogue Scholar is archiving the content. This is not
+        only needed for long-term preservation but also enables full-text search and
+        DOI registration with meaningful metadata. Rogue</div>\n\n            <footer
         class=\"gh-card-footer\">\n                <span class=\"gh-card-author\">Martin
-        Fenner</span>\n                <time class=\"gh-card-date\" datetime=\"2023-08-21\">Aug
-        21, 2023</time>\n                    <script\n    data-ghost-comment-count=\"64e30c392b0a4f000195bc2f\"\n
+        Fenner</span>\n                <time class=\"gh-card-date\" datetime=\"2023-09-19\">Sep
+        19, 2023</time>\n                    <script\n    data-ghost-comment-count=\"6509473a4e05250001e02f74\"\n
         \   data-ghost-comment-count-empty=\"\"\n    data-ghost-comment-count-singular=\"comment\"\n
         \   data-ghost-comment-count-plural=\"comments\"\n    data-ghost-comment-count-tag=\"span\"\n
         \   data-ghost-comment-count-class-name=\"gh-card-comments\"\n    data-ghost-comment-count-autowrap=\"true\"\n>\n</script>\n
@@ -467,6 +468,6 @@ http_interactions:
         (arrow left)\"></button>\n            <button class=\"pswp__button pswp__button--arrow--right\"
         title=\"Next (arrow right)\"></button>\n\n            <div class=\"pswp__caption\">\n
         \               <div class=\"pswp__caption__center\"></div>\n            </div>\n
-        \       </div>\n    </div>\n</div>\n<script src=\"https://blog.front-matter.io/assets/built/main.min.js?v=7f17228953\"></script>\n\n\n\n</body>\n\n</html>\n"
-  recorded_at: Wed, 06 Sep 2023 14:50:14 GMT
+        \       </div>\n    </div>\n</div>\n<script src=\"https://blog.front-matter.io/assets/built/main.min.js?v=6869c21382\"></script>\n\n\n\n</body>\n\n</html>\n"
+  recorded_at: Thu, 05 Oct 2023 19:47:47 GMT
 recorded_with: VCR 6.2.0

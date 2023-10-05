@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://upstream.force11.org/elife-reviewed-preprints-interview-with-fiona-hutton
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.14.0 (Ubuntu)
       Date:
-      - Sun, 18 Jun 2023 15:22:09 GMT
+      - Thu, 05 Oct 2023 19:47:41 GMT
       Transfer-Encoding:
       - chunked
       Connection:
@@ -35,12 +35,12 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: ''
-  recorded_at: Sun, 18 Jun 2023 15:22:09 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:41 GMT
 - request:
     method: get
     uri: https://upstream.force11.org/elife-reviewed-preprints-interview-with-fiona-hutton/
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -57,11 +57,11 @@ http_interactions:
       Server:
       - nginx/1.14.0 (Ubuntu)
       Date:
-      - Sun, 18 Jun 2023 15:22:10 GMT
+      - Thu, 05 Oct 2023 19:47:42 GMT
       Content-Type:
       - text/html; charset=utf-8
       Content-Length:
-      - '112293'
+      - '113106'
       Connection:
       - close
       X-Powered-By:
@@ -69,7 +69,7 @@ http_interactions:
       Cache-Control:
       - public, max-age=0
       Etag:
-      - W/"1b6a5-ONSJsr/UsHvm/ZS4am4WCz6MlNk"
+      - W/"1b9d2-Y79QwIjRnWjrXAUJ1SPy1ZTfMmw"
       Vary:
       - Accept-Encoding
     body:
@@ -544,9 +544,9 @@ http_interactions:
         data-key=\"5c1b6ee01f44f70c7feb624aab\" data-styles=\"https://cdn.jsdelivr.net/ghost/sodo-search@~1.1/umd/main.css\"
         data-sodo-search=\"https://upstream.force11.org/\" crossorigin=\"anonymous\"></script>\n
         \   \n    <link href=\"https://upstream.force11.org/webmentions/receive/\"
-        rel=\"webmention\">\n    <script defer src=\"/public/cards.min.js?v=250d1aa540\"></script>\n
-        \   <link rel=\"stylesheet\" type=\"text/css\" href=\"/public/cards.min.css?v=250d1aa540\">\n
-        \   <script defer src=\"/public/comment-counts.min.js?v=250d1aa540\" data-ghost-comments-counts-api=\"https://upstream.force11.org/members/api/comments/counts/\"></script>\n
+        rel=\"webmention\">\n    <script defer src=\"/public/cards.min.js?v=77b77c0c74\"></script>\n
+        \   <link rel=\"stylesheet\" type=\"text/css\" href=\"/public/cards.min.css?v=77b77c0c74\">\n
+        \   <script defer src=\"/public/comment-counts.min.js?v=77b77c0c74\" data-ghost-comments-counts-api=\"https://upstream.force11.org/members/api/comments/counts/\"></script>\n
         \   <script async=\"\" defer=\"\" data-domain=\"upstream.force11.org\" src=\"https://plausible.io/js/plausible.js\"></script>\n<script>window.plausible
         = window.plausible || function() { (window.plausible.q = window.plausible.q
         || []).push(arguments) }</script><style>:root {--ghost-accent-color: #8cbfd0;}</style>\n</head>\n
@@ -803,6 +803,53 @@ http_interactions:
         c-section--latest'>\n      <div class='o-grid'>\n        <div class='c-section-heading'>\n
         \         <h2 class='c-section-heading__title'>Latest</h2>\n        </div>\n
         \     </div>\n\n      <div class='o-grid o-grid--4-columns'>\n          <article
+        class='js-card c-card c-card-- c-card-- post tag-thought-pieces'>\n    <a
+        href='/experiences-of-scholarly-marginalization/' class='c-card__media'>\n
+        \     <img\n        class='c-card__image lazyload'\n        alt=\"Experiences
+        of scholarly marginalization\"\n        data-src='https://images.unsplash.com/photo-1535231540604-72e8fbaf8cdb?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDF8fG1ldGFtb3JwaG9zaXN8ZW58MHx8fHwxNjg3OTQ1Mzk3fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1304'\n
+        \     >\n    </a>\n\n  <div class='c-card__content'>\n      <div class='c-card__tag
+        c-tag'>\n        <a href=\"/tag/thought-pieces/\">Thought Pieces</a>\n      </div>\n\n
+        \   <h3 class='c-card__headline'><a href='/experiences-of-scholarly-marginalization/'
+        class='c-card__link'>Experiences of scholarly marginalization</a></h3>\n\n\n
+        \   <div class='c-card__meta'>\n      <div class='c-byline c-card__byline'>\n
+        \   <span class='u-hidden u-hidden'>,&nbsp;</span>\n    <span class='u-hidden
+        '>&nbsp;and&nbsp;</span>\n\n    <a href='/author/amalia/'>Amalia Raquel Pérez-Nebra</a>\n</div>\n
+        \     <time class='c-timestamp c-card__timestamp' datetime='2023-08-01'>\n
+        \ August 1, 2023\n\n</time>    </div>\n  </div>\n</article>          <article
+        class='js-card c-card c-card-- c-card-- post tag-thought-pieces tag-original-research
+        featured'>\n    <a href='/fairer-future-for-open-science-choosing-community-over-commercialization-with-equitable-article-processing-charges/'
+        class='c-card__media'>\n      <img\n        class='c-card__image lazyload'\n
+        \       alt=\"A Fairer Future for Open Science: Choosing community over commercialization
+        with equitable article processing charges\"\n        data-src='/content/images/size/w1304/2023/06/standard-quality-control-collage-concept--1-.jpg'\n
+        \     >\n    </a>\n\n  <div class='c-card__content'>\n      <div class='c-card__tag
+        c-tag'>\n        <a href=\"/tag/thought-pieces/\">Thought Pieces</a>\n      </div>\n\n
+        \   <h3 class='c-card__headline'><a href='/fairer-future-for-open-science-choosing-community-over-commercialization-with-equitable-article-processing-charges/'
+        class='c-card__link'>A Fairer Future for Open Science: Choosing community
+        over commercialization with equitable article processing charges</a></h3>\n\n\n
+        \   <div class='c-card__meta'>\n      <div class='c-byline c-card__byline'>\n
+        \   <span class='u-hidden '>,&nbsp;</span>\n    <span class='u-hidden '>&nbsp;and&nbsp;</span>\n\n
+        \   <a href='/author/uttkarsha/'>Uttkarsha Bhosale</a>\n    <span class='
+        '>,&nbsp;</span>\n    <span class='u-hidden '>&nbsp;and&nbsp;</span>\n\n    <a
+        href='/author/riya/'>Riya Thomas</a>\n    <span class=' '>,&nbsp;</span>\n
+        \   <span class='u-hidden '>&nbsp;and&nbsp;</span>\n\n    <a href='/author/gayatri-phadke/'>Dr.
+        Gayatri Phadke</a>\n    <span class=' u-hidden'>,&nbsp;</span>\n    <span
+        class='u-hidden u-block'>&nbsp;and&nbsp;</span>\n\n    <a href='/author/anupama/'>Anupama
+        Kapadia</a>\n</div>\n      <time class='c-timestamp c-card__timestamp' datetime='2023-07-04'>\n
+        \ July 4, 2023\n\n</time>    </div>\n  </div>\n</article>          <article
+        class='js-card c-card c-card-- c-card-- post tag-thought-pieces featured'>\n
+        \   <a href='/flowcharts-from-the-f11-cope-data-publishing-ethics-working-group/'
+        class='c-card__media'>\n      <img\n        class='c-card__image lazyload'\n
+        \       alt=\"Announcing new resources from the FORCE11-COPE Research Data
+        Publishing Ethics Working Group: flowcharts!\"\n        data-src='/content/images/size/w1304/2023/06/Screen-Shot-2023-06-26-at-11.33.11-AM.png'\n
+        \     >\n    </a>\n\n  <div class='c-card__content'>\n      <div class='c-card__tag
+        c-tag'>\n        <a href=\"/tag/thought-pieces/\">Thought Pieces</a>\n      </div>\n\n
+        \   <h3 class='c-card__headline'><a href='/flowcharts-from-the-f11-cope-data-publishing-ethics-working-group/'
+        class='c-card__link'>Announcing new resources from the FORCE11-COPE Research
+        Data Publishing Ethics Working Group: flowcharts!</a></h3>\n\n\n    <div class='c-card__meta'>\n
+        \     <div class='c-byline c-card__byline'>\n    <span class='u-hidden u-hidden'>,&nbsp;</span>\n
+        \   <span class='u-hidden '>&nbsp;and&nbsp;</span>\n\n    <a href='/author/iratxe/'>Iratxe
+        Puebla</a>\n</div>\n      <time class='c-timestamp c-card__timestamp' datetime='2023-06-27'>\n
+        \ June 27, 2023\n\n</time>    </div>\n  </div>\n</article>          <article
         class='js-card c-card c-card-- c-card-- post tag-thought-pieces featured'>\n
         \   <a href='/navigating-data-intensive-innovation-the-transition-from-research-data-management-to-research-data-governance/'
         class='c-card__media'>\n      <img\n        class='c-card__image lazyload'\n
@@ -817,50 +864,10 @@ http_interactions:
         class='u-hidden u-hidden'>,&nbsp;</span>\n    <span class='u-hidden '>&nbsp;and&nbsp;</span>\n\n
         \   <a href='/author/andrea/'>Andrea Chiarelli</a>\n</div>\n      <time class='c-timestamp
         c-card__timestamp' datetime='2023-06-06'>\n  June 6, 2023\n\n</time>    </div>\n
-        \ </div>\n</article>          <article class='js-card c-card c-card-- c-card--
-        post tag-original-research'>\n    <a href='/attempts-at-automating-journal-subject-classification/'
-        class='c-card__media'>\n      <img\n        class='c-card__image lazyload'\n
-        \       alt=\"Fiber optics with lightbulbs on black background\"\n        data-src='/content/images/size/w1304/2023/05/esha-subject-blog.jpg'\n
-        \     >\n    </a>\n\n  <div class='c-card__content'>\n      <div class='c-card__tag
-        c-tag'>\n        <a href=\"/tag/original-research/\">Original Research</a>\n
-        \     </div>\n\n    <h3 class='c-card__headline'><a href='/attempts-at-automating-journal-subject-classification/'
-        class='c-card__link'>Attempts at automating journal subject classification</a></h3>\n\n\n
-        \   <div class='c-card__meta'>\n      <div class='c-byline c-card__byline'>\n
-        \   <span class='u-hidden u-hidden'>,&nbsp;</span>\n    <span class='u-hidden
-        '>&nbsp;and&nbsp;</span>\n\n    <a href='/author/esha/'>Esha Datta</a>\n</div>\n
-        \     <time class='c-timestamp c-card__timestamp' datetime='2023-05-23'>\n
-        \ May 23, 2023\n\n</time>    </div>\n  </div>\n</article>          <article
-        class='js-card c-card c-card-- c-card-- post tag-thought-pieces featured'>\n
-        \   <a href='/opening-new-paths-to-technology-transfer/' class='c-card__media'>\n
-        \     <img\n        class='c-card__image lazyload'\n        alt=\"Opening
-        New Paths to Technology Transfer: Open Science, Intellectual Property, and
-        Technology Transfer\"\n        data-src='https://images.unsplash.com/photo-1512314889357-e157c22f938d?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;MnwxMTc3M3wwfDF8c2VhcmNofDN8fGlkZWF8ZW58MHx8fHwxNjgzNTMyNjc1&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1304'\n
-        \     >\n    </a>\n\n  <div class='c-card__content'>\n      <div class='c-card__tag
-        c-tag'>\n        <a href=\"/tag/thought-pieces/\">Thought Pieces</a>\n      </div>\n\n
-        \   <h3 class='c-card__headline'><a href='/opening-new-paths-to-technology-transfer/'
-        class='c-card__link'>Opening New Paths to Technology Transfer: Open Science,
-        Intellectual Property, and Technology Transfer</a></h3>\n\n\n    <div class='c-card__meta'>\n
-        \     <div class='c-byline c-card__byline'>\n    <span class='u-hidden u-hidden'>,&nbsp;</span>\n
-        \   <span class='u-hidden '>&nbsp;and&nbsp;</span>\n\n    <a href='/author/dylan/'>Dylan
-        Roskams-Edris</a>\n</div>\n      <time class='c-timestamp c-card__timestamp'
-        datetime='2023-05-09'>\n  May 9, 2023\n\n</time>    </div>\n  </div>\n</article>
-        \         <article class='js-card c-card c-card-- c-card-- post tag-open-tabs
-        featured'>\n    <a href='/patricio-panataleo-open-tabs/' class='c-card__media'>\n
-        \     <img\n        class='c-card__image lazyload'\n        alt=\"Patricio
-        Pantaleo is Keeping Tabs on Open Research\"\n        data-src='/content/images/size/w1304/2023/04/alice-donovan-rouse-yu68fUQDvOI-unsplash.jpg'\n
-        \     >\n    </a>\n\n  <div class='c-card__content'>\n      <div class='c-card__tag
-        c-tag'>\n        <a href=\"/tag/open-tabs/\">Open Tabs</a>\n      </div>\n\n
-        \   <h3 class='c-card__headline'><a href='/patricio-panataleo-open-tabs/'
-        class='c-card__link'>Patricio Pantaleo is Keeping Tabs on Open Research</a></h3>\n\n\n
-        \   <div class='c-card__meta'>\n      <div class='c-byline c-card__byline'>\n
-        \   <span class='u-hidden u-hidden'>,&nbsp;</span>\n    <span class='u-hidden
-        '>&nbsp;and&nbsp;</span>\n\n    <a href='/author/patricio_pantaleo/'>Patricio
-        Pantaleo</a>\n</div>\n      <time class='c-timestamp c-card__timestamp' datetime='2023-04-25'>\n
-        \ April 25, 2023\n\n</time>    </div>\n  </div>\n</article>      </div>\n
-        \   </div>\n\n    </main>\n\n    <footer class='c-footer'>\n  <div class='o-grid
-        c-footer__content'>\n    <div class='c-logo'>\n    <div class='c-logo__dark'>\n
-        \       <a href='https://upstream.force11.org' class='u-block'>\n          <img
-        class='c-logo__img' src='https://upstream.force11.org/content/images/2022/06/Upstream-logo--dark-mode-.png'
+        \ </div>\n</article>      </div>\n    </div>\n\n    </main>\n\n    <footer
+        class='c-footer'>\n  <div class='o-grid c-footer__content'>\n    <div class='c-logo'>\n
+        \   <div class='c-logo__dark'>\n        <a href='https://upstream.force11.org'
+        class='u-block'>\n          <img class='c-logo__img' src='https://upstream.force11.org/content/images/2022/06/Upstream-logo--dark-mode-.png'
         alt='Upstream' width='' height=''>\n        </a>\n    </div>\n\n  <div class='c-logo__light'>\n
         \     <a href='https://upstream.force11.org' class='u-block'>\n        <img
         class='c-logo__img' src='https://upstream.force11.org/content/images/2022/06/Upstream-logo--light-mode-.png'
@@ -879,7 +886,7 @@ http_interactions:
         \     <span class='u-screenreader'>RSS</span>\n    </a>\n  </li>\n</ul>\n\n
         \   <div class='c-footer-copy'>\n      &copy; 2023 Upstream\n      <span>
         – Published with <a href='https://ghost.org'>Ghost</a> & <a href='https://aspirethemes.com/themes/tripoli'>Tripoli</a></span>\n
-        \   </div>\n  </div>\n</footer>\n    <script src='/assets/js/app.min.js?v=250d1aa540'></script>\n
+        \   </div>\n  </div>\n</footer>\n    <script src='/assets/js/app.min.js?v=77b77c0c74'></script>\n
         \   \n  </body>\n</html>"
-  recorded_at: Sun, 18 Jun 2023 15:22:10 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:47:42 GMT
+recorded_with: VCR 6.2.0

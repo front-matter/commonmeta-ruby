@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://api.crossref.org/works/10.1371/journal.pone.0214986
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:32 GMT
+      - Thu, 05 Oct 2023 19:45:56 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -49,7 +49,7 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,5,2]],"date-time":"2023-05-02T00:14:50Z","timestamp":1682986490495},"reference-count":65,"publisher":"Public
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,8,29]],"date-time":"2023-08-29T14:02:01Z","timestamp":1693317721094},"reference-count":65,"publisher":"Public
         Library of Science (PLoS)","issue":"5","license":[{"start":{"date-parts":[[2019,5,8]],"date-time":"2019-05-08T00:00:00Z","timestamp":1557273600000},"content-version":"vor","delay-in-days":0,"URL":"https:\/\/creativecommons.org\/publicdomain\/zero\/1.0\/"}],"funder":[{"name":"Unites
         States Environmental Protection Agency"}],"content-domain":{"domain":["www.plosone.org"],"crossmark-restriction":false},"short-container-title":["PLoS
         ONE"],"DOI":"10.1371\/journal.pone.0214986","type":"journal-article","created":{"date-parts":[[2019,5,8]],"date-time":"2019-05-08T17:27:27Z","timestamp":1557336447000},"page":"e0214986","update-policy":"http:\/\/dx.doi.org\/10.1371\/journal.pone.corrections_policy","source":"Crossref","is-referenced-by-count":9,"title":["River
@@ -221,12 +221,12 @@ http_interactions:
         Surveys","volume":"Vol 3","author":"DA Dillman","year":"2009"}],"container-title":["PLOS
         ONE"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/dx.plos.org\/10.1371\/journal.pone.0214986","content-type":"unspecified","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2020,5,9]],"date-time":"2020-05-09T15:20:59Z","timestamp":1589037659000},"score":1,"resource":{"primary":{"URL":"https:\/\/dx.plos.org\/10.1371\/journal.pone.0214986"}},"subtitle":[],"editor":[{"given":"Miguel","family":"Ca\u00f1edo-Arg\u00fcelles
         Iglesias","sequence":"first","affiliation":[]}],"short-title":[],"issued":{"date-parts":[[2019,5,8]]},"references-count":65,"journal-issue":{"issue":"5","published-online":{"date-parts":[[2019,5,8]]}},"URL":"http:\/\/dx.doi.org\/10.1371\/journal.pone.0214986","relation":{},"ISSN":["1932-6203"],"issn-type":[{"value":"1932-6203","type":"electronic"}],"subject":["Multidisciplinary"],"published":{"date-parts":[[2019,5,8]]}}}'
-  recorded_at: Sun, 18 Jun 2023 15:24:32 GMT
+  recorded_at: Thu, 05 Oct 2023 19:45:56 GMT
 - request:
     method: get
     uri: https://api.crossref.org/members/340
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -241,7 +241,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:33 GMT
+      - Thu, 05 Oct 2023 19:45:57 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -271,18 +271,18 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687044255022,"primary-name":"Public
-        Library of Science (PLoS)","counts":{"current-dois":50624,"backfile-dois":289964,"total-dois":340588},"breakdowns":{"dois-by-issued-year":[[2013,36487],[2014,35452],[2015,33537],[2012,27083],[2016,26725],[2017,24569],[2018,22183],[2021,20842],[2022,20628],[2020,20426],[2019,19633],[2011,16660],[2010,9348],[2023,9154],[2009,6703],[2008,4589],[2007,2671],[2005,1643],[2006,1612],[2004,540],[2003,103]]},"prefixes":["10.24196","10.1371"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.2255038556510463,"licenses-backfile":0.9877364086576265,"funders-current":0.6879345764854614,"affiliations-backfile":7.207791312024941E-4,"resource-links-backfile":0.0,"orcids-backfile":0.2808555544826254,"update-policies-current":1.0,"ror-ids-backfile":0.0,"orcids-current":0.9589522756005057,"similarity-checking-backfile":0.9124029189830462,"references-backfile":0.9200521444041329,"descriptions-backfile":0.0,"award-numbers-backfile":0.1966451007711302,"update-policies-backfile":0.9945613938281994,"licenses-current":0.9999407395701643,"award-numbers-current":0.5789941529709229,"abstracts-backfile":0.01232566801396035,"resource-links-current":0.0,"abstracts-current":0.9565621049304678,"references-current":0.9997036978508217},"prefix":[{"name":"Public
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1696462389283,"primary-name":"Public
+        Library of Science (PLoS)","counts":{"current-dois":56123,"backfile-dois":289964,"total-dois":346087},"breakdowns":{"dois-by-issued-year":[[2013,36487],[2014,35452],[2015,33537],[2012,27083],[2016,26725],[2017,24569],[2018,22183],[2021,20842],[2022,20628],[2020,20426],[2019,19633],[2011,16660],[2023,14653],[2010,9348],[2009,6703],[2008,4589],[2007,2671],[2005,1643],[2006,1612],[2004,540],[2003,103]]},"prefixes":["10.24196","10.1371"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":1.0,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.2255038556510463,"licenses-backfile":0.9877364086576265,"funders-current":0.687151435240454,"affiliations-backfile":7.207791312024941E-4,"resource-links-backfile":0.0,"orcids-backfile":0.2808555544826254,"update-policies-current":1.0,"ror-ids-backfile":0.0,"orcids-current":0.9600876645938385,"similarity-checking-backfile":0.9124029189830462,"references-backfile":0.9200521444041329,"descriptions-backfile":0.0,"award-numbers-backfile":0.1966451007711302,"update-policies-backfile":0.9945613938281994,"licenses-current":0.9999465459793667,"award-numbers-current":0.579174313561285,"abstracts-backfile":0.0123291167179374,"resource-links-current":0.0,"abstracts-current":0.9574684175828092,"references-current":0.999714911889956},"prefix":[{"name":"Public
         Library of Science (PLoS)","value":"10.24196"},{"name":"Public Library of
-        Science","value":"10.1371"}],"id":340,"tokens":["public","library","of","science","plos"],"counts-type":{"all":{"journal-article":340588,"journal":1,"component":3553624,"dataset":7},"backfile":{"journal-article":289964},"current":{"journal-article":50624}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1687044255022,"affiliations":6.136446380964685E-4,"abstracts":0.152674198738652,"orcids":0.3816458595135472,"licenses":0.9895504245598788,"references":0.9318913173687857,"funders":0.2942381998191363,"similarity-checking":0.9254230918294244,"award-numbers":0.2534763409162977,"ror-ids":0.0,"update-policies":0.9953697722761812,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1687044255022,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1687044255022,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":4.840129400296711E-5},"dataset":{"last-status-check-time":1687044255022,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1687044255022,"affiliations":7.207791312024941E-4,"abstracts":0.01232566801396035,"orcids":0.2808555544826254,"licenses":0.9877364086576265,"references":0.9200521444041329,"funders":0.2255038556510463,"similarity-checking":0.9124029189830462,"award-numbers":0.1966451007711302,"ror-ids":0.0,"update-policies":0.9945613938281994,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1687044255022,"affiliations":0.0,"abstracts":0.9565621049304678,"orcids":0.9589522756005057,"licenses":0.9999407395701643,"references":0.9997036978508217,"funders":0.6879345764854614,"similarity-checking":1.0,"award-numbers":0.5789941529709229,"ror-ids":0.0,"update-policies":1.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"San
+        Science","value":"10.1371"}],"id":340,"tokens":["public","library","of","science","plos"],"counts-type":{"all":{"journal-article":346087,"journal":1,"component":3628608,"dataset":7},"backfile":{"journal-article":289964},"current":{"journal-article":56123}},"coverage-type":{"all":{"journal-article":{"last-status-check-time":1696462389283,"affiliations":6.038943964956788E-4,"abstracts":0.1655970897491093,"orcids":0.3910028403262763,"licenses":0.9897164585783343,"references":0.9329706114358528,"funders":0.3003666708082072,"similarity-checking":0.9266080494210993,"award-numbers":0.2586777313218931,"ror-ids":0.0,"update-policies":0.9954433422809872,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1696462389283,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1696462389283,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":4.740109705980916E-5},"dataset":{"last-status-check-time":1696462389283,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"journal-article":{"last-status-check-time":1696462389283,"affiliations":7.207791312024941E-4,"abstracts":0.0123291167179374,"orcids":0.2808555544826254,"licenses":0.9877364086576265,"references":0.9200521444041329,"funders":0.2255038556510463,"similarity-checking":0.9124029189830462,"award-numbers":0.1966451007711302,"ror-ids":0.0,"update-policies":0.9945613938281994,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1696462389283,"affiliations":0.0,"abstracts":0.9574684175828092,"orcids":0.9600876645938385,"licenses":0.9999465459793667,"references":0.999714911889956,"funders":0.687151435240454,"similarity-checking":1.0,"award-numbers":0.579174313561285,"ror-ids":0.0,"update-policies":1.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":false,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"San
         Francisco, CA, United States","names":["Public Library of Science (PLoS)","Public
         Library of Science"]}}'
-  recorded_at: Sun, 18 Jun 2023 15:24:33 GMT
+  recorded_at: Thu, 05 Oct 2023 19:45:57 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1371
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -297,7 +297,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:33 GMT
+      - Thu, 05 Oct 2023 19:45:57 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -309,7 +309,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=V6zz4K6duIjcBqk8%2BpX3Luu0qtXNOh2nr10i3cBIIdOt3hGSgqyXfKJJa7hixK6ebc965bfKRK4waLgmqFjD7lIrfLjnH2EQHXE9GNqBgk6iVA6Zg5ZDSnSKHGVL3sZFqTh9l70%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AsPRn1dwZfceI33O7K4LHBuRFEh3H1E5dwZ3nYtiwD4sRMtynYwYi374XG82V8UQJi5%2Bw2i1FW9b45r5xnjr%2BJfKVoQHmB8KjQZLKukbJczm17kzJblTlGl1bxH4VNpg%2FPaJEMA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -317,7 +317,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d948a369b3e0a53-AMS
+      - 81182afe5c1e656c-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -329,5 +329,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:24:33 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:45:57 GMT
+recorded_with: VCR 6.2.0

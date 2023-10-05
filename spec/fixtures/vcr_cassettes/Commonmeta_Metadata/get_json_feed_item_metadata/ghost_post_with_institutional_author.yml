@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/2b3cdd27-5123-4167-9482-3c074392e2d2
+    uri: https://api.rogue-scholar.org/posts/2b3cdd27-5123-4167-9482-3c074392e2d2
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,64 +18,33 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '3681'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '1826'
       Date:
-      - Wed, 06 Sep 2023 14:27:15 GMT
-      Etag:
-      - '"17jxeuju1lh2u9"'
+      - Thu, 05 Oct 2023 20:37:16 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::2rr8q-1694010434804-33fa121905f5
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0RY5KS9X7HXA36CK81FHQH-fra
     body:
       encoding: UTF-8
-      string: '{"id":"2b3cdd27-5123-4167-9482-3c074392e2d2","doi":"https://doi.org/10.59350/tfahc-rp566","url":"https://blog.oa.works/nature-features-oa-reports-work-putting-oa-policy-into-practice","title":"Nature
-        features OA.Report''s work putting OA policy into practice!","summary":"After
+      string: '{"archive_url":null,"authors":[{"name":"OA.Works","url":"https://oa.works"}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":true,"category":"computerAndInformationSciences","created_at":"2023-01-04","current_feed_url":null,"description":"OA.Works
+        Blog","favicon":"https://blog.oa.works/favicon.png","feed_format":"application/rss+xml","feed_url":"https://blog.oa.works/rss/","filter":null,"funding":null,"generator":"Ghost
+        5.66","home_page_url":"https://blog.oa.works","id":"h7bpg11","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-10-02T04:28:31+00:00","plan":"Starter","prefix":"10.59350","relative_url":null,"slug":"oa_works","status":"active","title":"OA.Works
+        Blog","use_api":true,"use_mastodon":false,"user_id":"dead81b3-8a8b-45c9-85fe-f01bb3948c77","version":"https://jsonfeed.org/version/1.1"},"blog_name":"OA.Works
+        Blog","blog_slug":"oa_works","doi":"https://doi.org/10.59350/tfahc-rp566","id":"2b3cdd27-5123-4167-9482-3c074392e2d2","image":"https://blog.oa.works/content/images/2023/01/nature-website-v2.png","indexed_at":1696202714,"language":"en","published_at":1674558707,"reference":[],"relationships":[],"summary":"After
         a couple of years of working to support institutions implementing their OA
         policies, we''re so proud to see OA.Report, our development partner, and one
         of our collaborators featured in Nature. We appreciate Nature bringing attention
-        to the progress being made in more effectively implementing OA policies.","content_html":"<img
-        src=\"https://blog.oa.works/content/images/2023/01/nature-website-v2.png\"
-        alt=\"Nature features OA.Report''s work putting OA policy into practice!\"
-        /><p>After a couple of years of working to support institutions implementing
-        their OA policies, we''re so proud to see <a href=\"https://oa.report/?ref=blog.oa.works\">OA.Report</a>,
-        <a href=\"https://blog.oa.works/grant-to-bolster-oa-policies-from-bmgf/\">our
-        development partner</a>, and <a href=\"https://dataseer.ai/?ref=blog.oa.works\">one
-        of our collaborators</a> <a href=\"https://www.nature.com/articles/d41586-023-00175-1?ref=blog.oa.works\">featured
-        in Nature</a>. We appreciate Nature bringing attention to the progress being
-        made in more effectively implementing OA policies.</p><p>Read the full story
-        on <a href=\"https://www.nature.com/articles/d41586-023-00175-1?ref=blog.oa.works\">Nature''s
-        website</a>.</p><figure><a href=\"https://www.nature.com/articles/d41586-023-00175-1?ref=blog.oa.works\"><img
-        src=\"https://blog.oa.works/content/images/2023/01/nature-website-v2-1.png\"
-        alt=\"Nature features OA.Report''s work putting OA policy into practice!\"
-        loading=\"lazy\" width=\"1520\" height=\"1584\" srcset=\"https://blog.oa.works/content/images/size/w600/2023/01/nature-website-v2-1.png
-        600w, https://blog.oa.works/content/images/size/w1000/2023/01/nature-website-v2-1.png
-        1000w, https://blog.oa.works/content/images/2023/01/nature-website-v2-1.png
-        1520w\" /></a><figcaption>Screenshot of the story on the Nature website</figcaption></figure><p>Find
-        out more about how OA.Report can help your organization <a href=\"https://oa.report/?ref=blog.oa.works\">on
-        our website</a> or <a href=\"https://blog.oa.works/oa-report-helps-funders-measure-and-increase-oa-policy-compliance-and-their-investments-impact/\">in
-        our recent update</a>.</p><hr /><p>Grant support for this work was provided
-        in part by the Bill and Melinda Gates Foundation and the Robert Wood Johnson
-        Foundation. The views expressed here do not necessarily reflect the views
-        of either foundation.</p>","published_at":1674558707,"updated_at":1674558707,"indexed_at":1688982864,"authors":[{"url":null,"name":"OA.Works"}],"image":"https://blog.oa.works/content/images/2023/01/nature-website-v2.png","tags":["OA
-        Report"],"language":"en","reference":[],"relationships":[],"blog_id":"h7bpg11","blog_name":"OA.Works
-        Blog","blog_slug":"oa_works","blog":{"id":"h7bpg11","title":"OA.Works Blog","description":"OA.Works
-        Blog","language":"en","favicon":"https://blog.oa.works/favicon.png","feed_url":"https://blog.oa.works/rss/","home_page_url":"https://blog.oa.works","user_id":"dead81b3-8a8b-45c9-85fe-f01bb3948c77","created_at":"2023-01-04","feed_format":"application/rss+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
-        5.61","category":"computerAndInformationSciences","prefix":"10.59350","modified_at":"2023-07-31T10:36:26+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":null,"status":"active","issn":null,"backlog":165,"authors":null,"plan":"Starter","slug":"oa_works","use_mastodon":false}}'
-  recorded_at: Wed, 06 Sep 2023 14:27:15 GMT
+        to the progress being made in more effectively implementing OA policies. Read
+        the full story on Nature''s website.","tags":["Nofeature","Noexcerpt","OA
+        Report"],"title":"Nature features OA.Report''s work putting OA policy into
+        practice!","updated_at":1696174453,"url":"https://blog.oa.works/nature-features-oa-reports-work-putting-oa-policy-into-practice"}
+
+        '
+  recorded_at: Thu, 05 Oct 2023 20:37:16 GMT
 recorded_with: VCR 6.2.0

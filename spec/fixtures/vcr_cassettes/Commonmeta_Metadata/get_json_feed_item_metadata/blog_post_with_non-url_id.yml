@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/1898d2d7-4d87-4487-96c4-3073cf99e9a5
+    uri: https://api.rogue-scholar.org/posts/1898d2d7-4d87-4487-96c4-3073cf99e9a5
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,115 +18,37 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '8527'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '2413'
       Date:
-      - Wed, 06 Sep 2023 14:27:24 GMT
-      Etag:
-      - '"sk275cf3ap6kl"'
+      - Thu, 05 Oct 2023 20:37:41 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::bsggp-1694010443675-85c6731865df
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0RYYAT5ZSJYQBXM529P6S8-fra
     body:
       encoding: UTF-8
-      string: '{"id":"1898d2d7-4d87-4487-96c4-3073cf99e9a5","doi":"https://doi.org/10.59350/63055-a8604","url":"http://sfmatheson.blogspot.com/2023/01/quintessence-of-dust-2023-restart-why.html","title":"Quintessence
-        of Dust 2023 restart: the why","summary":"It''s early January 2023, a little
-        before sunset in Tucson. Live image below, showing the glorious Santa Catalina
-        mountains (the snow on the upper reaches is more apparent earlier in the day)
-        and my dinner preparations (shrimp and veggies on the grill).I''ve decided
-        to start writing here at <i>Quintessence of Dust</i>, after another long hiatus.","content_html":"It''s
+      string: '{"archive_url":null,"authors":[{"name":"Stephen Matheson","url":null}],"blog":{"api":false,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":null,"category":"socialSciences","created_at":"2023-04-18","current_feed_url":null,"description":"<i>Quintessence
+        of Dust</i> explores science, society, and human nature, focusing on genetics,
+        development, evolution, neuroscience, systems biology, and topics related
+        to scientific literacy. I occasionally discuss intelligent design, creationism,
+        science denial, and other political/social influences on scientific literacy.
+        Additional topics: philosophy, baseball, scientific culture, and Shakespeare.
+        My main theme is <b><u>scientific explanation</u></b>.","favicon":null,"feed_format":"application/atom+xml","feed_url":"http://sfmatheson.blogspot.com/feeds/posts/default","filter":null,"funding":null,"generator":"Blogger
+        7.00","home_page_url":"http://sfmatheson.blogspot.com","id":"5764g49","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-11T17:46:56+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"sfmatheson","status":"active","title":"Quintessence
+        of Dust","use_api":null,"use_mastodon":false,"user_id":"656f9875-3304-4056-935b-b29429e14222","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Quintessence
+        of Dust","blog_slug":"sfmatheson","doi":"https://doi.org/10.59350/63055-a8604","id":"1898d2d7-4d87-4487-96c4-3073cf99e9a5","image":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghgBx9BU21qMDFnLxgHmnsl6TQVfb3QCwOXrC1zcXq7WH9gN8E0TcH3pTslRBG6O8mb5gcuF9JVtDlJ2je6dFcfyzKE4OD38-ftr66nBxddo892_NkyuevrrX65ndSbwmXMaLh3F5yiqU1QIj8JtA8FLkKOcHOEVwVafz0rzh7PejbFzp3XT25nQxc/s320/Jan%207.jpg","indexed_at":1689006804,"language":"en","published_at":1673233380,"reference":[],"relationships":[],"summary":"It''s
         early January 2023, a little before sunset in Tucson. Live image below, showing
         the glorious Santa Catalina mountains (the snow on the upper reaches is more
         apparent earlier in the day) and my dinner preparations (shrimp and veggies
-        on the grill).<div><a href=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghgBx9BU21qMDFnLxgHmnsl6TQVfb3QCwOXrC1zcXq7WH9gN8E0TcH3pTslRBG6O8mb5gcuF9JVtDlJ2je6dFcfyzKE4OD38-ftr66nBxddo892_NkyuevrrX65ndSbwmXMaLh3F5yiqU1QIj8JtA8FLkKOcHOEVwVafz0rzh7PejbFzp3XT25nQxc/s4032/Jan%207.jpg\"><img
-        height=\"320\" src=\"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghgBx9BU21qMDFnLxgHmnsl6TQVfb3QCwOXrC1zcXq7WH9gN8E0TcH3pTslRBG6O8mb5gcuF9JVtDlJ2je6dFcfyzKE4OD38-ftr66nBxddo892_NkyuevrrX65ndSbwmXMaLh3F5yiqU1QIj8JtA8FLkKOcHOEVwVafz0rzh7PejbFzp3XT25nQxc/s320/Jan%207.jpg\"
-        width=\"240\" /></a></div><br /><div><div>I''ve decided to start writing here
-        at <i>Quintessence of Dust</i>, after another long hiatus. Here are some of
-        my reasons.</div><div><br /></div><div>1. I like to write, and I have things
-        to say, and I self-identify as an author. For eight years, I have co-organized
-        and taught in the <a href=\"https://meetings.cshl.edu/courses.aspx?course=C-WRITE&amp;year=23\"
-        target=\"_blank\">Scientific Writing Retreat at Cold Spring Harbor Laboratory</a>.
-        I''m a writer and I need to write, if only for myself.</div><div><br /></div><div>2.
-        I have an idea for a book, along with some introductory work (but no sample
-        chapters yet) and writing here will help me develop those thoughts. The idea
-        is over twelve years old and has never faded away, which I take to mean that
-        I need to get it out of my system somehow.</div><div><br /></div><div>3. I
-        have other ideas kicking around in my head and most of them are worth writing
-        about. I have one new intellectual passion that is totally worth writing about:
-        <a href=\"https://skyislandalliance.org/the-sky-islands/\" target=\"_blank\">the
-        Sky Islands</a> that nearly surround us here in Tucson.</div><div><br /></div><div>4.
-        I have an exciting new job with great new people at <a href=\"https://plos.org/\"
-        target=\"_blank\">an organization</a> that''s all in for <a href=\"https://plos.org/open-science/\"
-        target=\"_blank\">open science</a>. I recently turned over the tens digit
-        on my age-o-meter. My kids will very soon be all out of college. (One is about
-        to start a postdoc!) All of this led, predictably, to a spasm of reflection
-        on projects and vision. One clear result is that I''m feeling more inspired.<span><a
-        name=\"more\"></a></span></div><div><br /></div><div>5. The demise of Twitter
-        has led to a lot of <a href=\"https://www.theatlantic.com/technology/archive/2022/11/twitter-facebook-social-media-decline/672074/\"
-        target=\"_blank\">useful commentary</a> about the nature of social media.
-        I left Facebook two years ago and all but left Twitter two months ago. I''m
-        on a <a href=\"https://fediscience.org/explore\" target=\"_blank\">good server
-        at Mastodon</a> and I like it; maybe microblogging there can satisfy my desire
-        for conversation and connection. But <a href=\"https://www.theverge.com/23513418/bring-back-personal-blogging\"
-        target=\"_blank\">this recent piece</a> at <i>The Verge</i> by <a href=\"https://moniquejudge.com/\"
-        target=\"_blank\">Monique Judge</a> convinced me that blogging could (again)
-        have a place in the future.</div><div><br /><div>Here''s her summary, emphasis
-        mine:</div><div><blockquote>At the end of the day, we don’t know what is going
-        to happen next with Twitter or any of these platforms. We don’t know what
-        changes <a href=\"https://www.techtarget.com/whatis/definition/Web-30\" target=\"_blank\">Web
-        3.0</a> is going to bring to the internet. We do know that <b>we will all
-        still be here, wanting to share our thoughts, talk about anything and everything,
-        and commune with our people</b>. Personal blogging is the simplest and fastest
-        way to do all of that. </blockquote></div><div>That''s what I want! A place
-        to write, and (if I''m lucky) a place to discuss and \"commune\" with people.
-        That used to happen a lot at <i>Quintessence of Dust</i>.<span></span></div></div></div><div><br
-        /></div><div>Okay, but why here? This blog is over 15 years old and was started
-        when I was a Christian believer. <a href=\"https://sfmatheson.blogspot.com/2007/08/kicking-off-my-blog.html\"
-        target=\"_blank\">Its founding themes</a> were anchored in a desire to help
-        Christians understand and enjoy biology, to help them shake free of misinformation
-        and dishonesty. It has twice languished through long hiatuses and was <a href=\"https://sfmatheson.blogspot.com/p/about.html\"
-        target=\"_blank\">remodeled</a> back in 2017 a few years after I deconverted.
-        Maybe it''s time to start anew? I think not, for many of those same reasons:
-        I''m still a biologist who loves science, still worried about misinformation,
-        and still rooted in the power of scientific explanation. I''m still a bardolator
-        and a Red Sox fan. <a href=\"https://sfmatheson.blogspot.com/p/about.html\">I''m
-        still me</a>, and <i>Quintessence of Dust</i> is still my blog. The new <a
-        href=\"https://sfmatheson.blogspot.com/p/about.html\" target=\"_blank\">About
-        page</a> is slightly remodeled from 2017, and hints at the next post, which
-        will outline some new goals and ongoing projects.</div><div><br /></div><div>A
-        final note on inspiration, from Imani Perry, writing in her newsletter (<a
-        href=\"https://newsletters.theatlantic.com/unsettled-territory/\" target=\"_blank\">Unsettled
-        Territory</a>) at <i>The Atlantic</i>. The piece is \"<a href=\"https://newsletters.theatlantic.com/unsettled-territory/63af3facace609003751bacc/becoming-writer-habit-journalism/\"
-        target=\"_blank\">Writing is a Democratic Art</a>.\" It''s for subscribers
-        only but here is her challenge:</div><div><blockquote>Thinking and writing
-        at a faster pace stretched me and gave me greater confidence. Sometimes I
-        changed my mind about what I’d written a day later. But that was okay; a newsletter
-        is a moment in time. Writing it each week gave me a lovely rhythm in what
-        has otherwise been a difficult and disorienting season in history. Feeling
-        stuck can get you stuck. But writing can, and should, inspire deeds.</blockquote></div>","published_at":1673233380,"updated_at":1680470227,"indexed_at":1689006804,"authors":[{"url":null,"name":"Stephen
-        Matheson"}],"image":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghgBx9BU21qMDFnLxgHmnsl6TQVfb3QCwOXrC1zcXq7WH9gN8E0TcH3pTslRBG6O8mb5gcuF9JVtDlJ2je6dFcfyzKE4OD38-ftr66nBxddo892_NkyuevrrX65ndSbwmXMaLh3F5yiqU1QIj8JtA8FLkKOcHOEVwVafz0rzh7PejbFzp3XT25nQxc/s320/Jan%207.jpg","tags":["Introduction"],"language":"en","reference":[],"relationships":[],"blog_id":"5764g49","blog_name":"Quintessence
-        of Dust","blog_slug":"sfmatheson","blog":{"id":"5764g49","title":"Quintessence
-        of Dust","description":"<i>Quintessence of Dust</i> explores science, society,
-        and human nature, focusing on genetics, development, evolution, neuroscience,
-        systems biology, and topics related to scientific literacy. I occasionally
-        discuss intelligent design, creationism, science denial, and other political/social
-        influences on scientific literacy. Additional topics: philosophy, baseball,
-        scientific culture, and Shakespeare. My main theme is <b><u>scientific explanation</u></b>.","language":"en","favicon":null,"feed_url":"http://sfmatheson.blogspot.com/feeds/posts/default","home_page_url":"http://sfmatheson.blogspot.com","user_id":"656f9875-3304-4056-935b-b29429e14222","created_at":"2023-04-18","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Blogger
-        7.00","category":"socialSciences","prefix":"10.59350","modified_at":"2023-08-17T05:24:17+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":null,"status":"active","issn":null,"backlog":0,"authors":null,"plan":"Team","slug":"sfmatheson","use_mastodon":false}}'
-  recorded_at: Wed, 06 Sep 2023 14:27:24 GMT
+        on the grill).I''ve decided to start writing here at <i>Quintessence of Dust</i>,
+        after another long hiatus.","tags":["Introduction"],"title":"Quintessence
+        of Dust 2023 restart: the why","updated_at":1680470227,"url":"http://sfmatheson.blogspot.com/2023/01/quintessence-of-dust-2023-restart-why.html"}
+
+        '
+  recorded_at: Thu, 05 Oct 2023 20:37:41 GMT
 recorded_with: VCR 6.2.0

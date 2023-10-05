@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://api.datacite.org/dois/10.1594/pangaea.721193?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:23:28 GMT
+      - Thu, 05 Oct 2023 19:45:42 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -41,7 +41,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 5a906097-c3c1-4a78-9e17-f3cff67762f5
+      - 8e9163d9-0c13-4d64-86ff-68278bd468cf
       X-Download-Options:
       - noopen
       Etag:
@@ -49,13 +49,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.028621'
+      - '0.093717'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -145,5 +145,5 @@ http_interactions:
         the further development of services for cross-linking data and paper publications
         as well as evaluating the FAIR-ness of repositories according to the FAIR
         principles.","language":["en"],"clientType":"repository","domains":"pangaea.de,doi.pangaea.de","re3data":"https://doi.org/10.17616/R3XS37","opendoar":null,"issn":{},"url":"https://www.pangaea.de/","created":"2020-03-11T13:58:41.000Z","updated":"2023-04-24T19:21:25.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"pangaea","type":"providers"}},"prefixes":{"data":[{"id":"10.1594","type":"prefixes"},{"id":"10.25594","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:23:28 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:45:42 GMT
+recorded_with: VCR 6.2.0

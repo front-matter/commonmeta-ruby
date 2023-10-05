@@ -2,424 +2,9 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doi.org/ra/10.1186
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - doi.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:21:15 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jEbMi2ErrnPyP2Iq6xlESbzkk0Kk4PUNJdk%2FeUk%2FS4%2BAI3xYDcMkNRvB0%2FJgzrRnM7MXGrzvnlUK6mnZY93kQHm6ZPhC7KhXPm1w6FKV4wlPzRJO987DbdQUPyHi%2FfbELIs%2Bddk%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7d94855eaec2b8d0-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: |-
-        [
-          {
-            "DOI": "10.1186",
-            "RA": "Crossref"
-          }
-        ]
-  recorded_at: Sun, 18 Jun 2023 15:21:15 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1186/1471-2164-7-187
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - api.crossref.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:21:15 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - public
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,5,24]],"date-time":"2023-05-24T12:26:22Z","timestamp":1684931182250},"reference-count":38,"publisher":"Springer
-        Science and Business Media LLC","issue":"1","license":[{"start":{"date-parts":[[2006,7,25]],"date-time":"2006-07-25T00:00:00Z","timestamp":1153785600000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/2.0"}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["BMC
-        Genomics"],"published-print":{"date-parts":[[2006,12]]},"abstract":"<jats:title>Abstract<\/jats:title>\n          <jats:sec>\n            <jats:title>Background<\/jats:title>\n            <jats:p>Accurate
-        evaluation of the quality of genomic or proteomic data and computational methods
-        is vital to our ability to use them for formulating novel biological hypotheses
-        and directing further experiments. There is currently no standard approach
-        to evaluation in functional genomics. Our analysis of existing approaches
-        shows that they are inconsistent and contain substantial functional biases
-        that render the resulting evaluations misleading both quantitatively and qualitatively.
-        These problems make it essentially impossible to compare computational methods
-        or large-scale experimental datasets and also result in conclusions that generalize
-        poorly in most biological applications.<\/jats:p>\n          <\/jats:sec>\n          <jats:sec>\n            <jats:title>Results<\/jats:title>\n            <jats:p>We
-        reveal issues with current evaluation methods here and suggest new approaches
-        to evaluation that facilitate accurate and representative characterization
-        of genomic methods and data. Specifically, we describe a functional genomics
-        gold standard based on curation by expert biologists and demonstrate its use
-        as an effective means of evaluation of genomic approaches. Our evaluation
-        framework and gold standard are freely available to the community through
-        our website.<\/jats:p>\n          <\/jats:sec>\n          <jats:sec>\n            <jats:title>Conclusion<\/jats:title>\n            <jats:p>Proper
-        methods for evaluating genomic data and computational approaches will determine
-        how much we, as a community, are able to learn from the wealth of available
-        data. We propose one possible solution to this problem here but emphasize
-        that this topic warrants broader community discussion.<\/jats:p>\n          <\/jats:sec>","DOI":"10.1186\/1471-2164-7-187","type":"journal-article","created":{"date-parts":[[2006,7,25]],"date-time":"2006-07-25T18:14:51Z","timestamp":1153851291000},"update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":170,"title":["Finding
-        function: evaluation methods for functional genomic data"],"prefix":"10.1186","volume":"7","author":[{"given":"Chad
-        L","family":"Myers","sequence":"first","affiliation":[]},{"given":"Daniel
-        R","family":"Barrett","sequence":"additional","affiliation":[]},{"given":"Matthew
-        A","family":"Hibbs","sequence":"additional","affiliation":[]},{"given":"Curtis","family":"Huttenhower","sequence":"additional","affiliation":[]},{"given":"Olga
-        G","family":"Troyanskaya","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2006,7,25]]},"reference":[{"key":"570_CR1","volume-title":"Bioinformatics","author":"Z
-        Barutcuoglu","year":"2006","unstructured":"Barutcuoglu Z, Schapire RE, Troyanskaya
-        OG: Hierarchical multi-label prediction of gene function. Bioinformatics.
-        2006"},{"issue":"Suppl 2","key":"570_CR2","doi-asserted-by":"publisher","first-page":"II42","DOI":"10.1093\/bioinformatics\/btg1058","volume":"19","author":"A
-        Clare","year":"2003","unstructured":"Clare A, King RD: Predicting gene function
-        in Saccharomyces cerevisiae. Bioinformatics. 2003, 19 (Suppl 2): II42-II49.","journal-title":"Bioinformatics"},{"key":"570_CR3","first-page":"300","volume-title":"Pac
-        Symp Biocomput","author":"GR Lanckriet","year":"2004","unstructured":"Lanckriet
-        GR, Deng M, Cristianini N, Jordan MI, Noble WS: Kernel-based data fusion and
-        its application to protein function prediction in yeast. Pac Symp Biocomput.
-        2004, 300-311."},{"issue":"2","key":"570_CR4","doi-asserted-by":"publisher","first-page":"401","DOI":"10.1089\/10665270252935539","volume":"9","author":"P
-        Pavlidis","year":"2002","unstructured":"Pavlidis P, Weston J, Cai J, Noble
-        WS: Learning gene functional classifications from multiple data types. J Comput
-        Biol. 2002, 9 (2): 401-411. 10.1089\/10665270252935539.","journal-title":"J
-        Comput Biol"},{"issue":"Suppl 1","key":"570_CR5","doi-asserted-by":"publisher","first-page":"i38","DOI":"10.1093\/bioinformatics\/bti1016","volume":"21","author":"A
-        Ben-Hur","year":"2005","unstructured":"Ben-Hur A, Noble WS: Kernel methods
-        for predicting protein-protein interactions. Bioinformatics. 2005, 21 (Suppl
-        1): i38-i46. 10.1093\/bioinformatics\/bti1016.","journal-title":"Bioinformatics"},{"issue":"5644","key":"570_CR6","doi-asserted-by":"publisher","first-page":"449","DOI":"10.1126\/science.1087361","volume":"302","author":"R
-        Jansen","year":"2003","unstructured":"Jansen R, Yu H, Greenbaum D, Kluger
-        Y, Krogan NJ, Chung S, Emili A, Snyder M, Greenblatt JF, Gerstein M: A Bayesian
-        networks approach for predicting protein-protein interactions from genomic
-        data. Science. 2003, 302 (5644): 449-453. 10.1126\/science.1087361.","journal-title":"Science"},{"issue":"5701","key":"570_CR7","doi-asserted-by":"publisher","first-page":"1555","DOI":"10.1126\/science.1099511","volume":"306","author":"I
-        Lee","year":"2004","unstructured":"Lee I, Date SV, Adai AT, Marcotte EM: A
-        probabilistic functional network of yeast genes. Science. 2004, 306 (5701):
-        1555-1558. 10.1126\/science.1099511.","journal-title":"Science"},{"issue":"1","key":"570_CR8","doi-asserted-by":"publisher","first-page":"154","DOI":"10.1186\/1471-2105-5-154","volume":"5","author":"N
-        Lin","year":"2004","unstructured":"Lin N, Wu B, Jansen R, Gerstein M, Zhao
-        H: Information assessment on predicting protein-protein interactions. BMC
-        Bioinformatics. 2004, 5 (1): 154-10.1186\/1471-2105-5-154.","journal-title":"BMC
-        Bioinformatics"},{"issue":"14","key":"570_CR9","doi-asserted-by":"publisher","first-page":"8348","DOI":"10.1073\/pnas.0832373100","volume":"100","author":"OG
-        Troyanskaya","year":"2003","unstructured":"Troyanskaya OG, Dolinski K, Owen
-        AB, Altman RB, Botstein D: A Bayesian framework for combining heterogeneous
-        data sources for gene function prediction (in Saccharomyces cerevisiae). Proc
-        Natl Acad Sci USA. 2003, 100 (14): 8348-8353. 10.1073\/pnas.0832373100.","journal-title":"Proc
-        Natl Acad Sci USA"},{"issue":"8","key":"570_CR10","doi-asserted-by":"publisher","first-page":"424","DOI":"10.1016\/j.tig.2005.06.006","volume":"21","author":"SL
-        Wong","year":"2005","unstructured":"Wong SL, Zhang LV, Roth FP: Discovering
-        functional relationships: biochemistry versus genetics. Trends Genet. 2005,
-        21 (8): 424-427. 10.1016\/j.tig.2005.06.006.","journal-title":"Trends Genet"},{"issue":"1","key":"570_CR11","doi-asserted-by":"publisher","first-page":"27","DOI":"10.1093\/nar\/28.1.27","volume":"28","author":"M
-        Kanehisa","year":"2000","unstructured":"Kanehisa M, Goto S: KEGG: kyoto encyclopedia
-        of genes and genomes. Nucleic Acids Res. 2000, 28 (1): 27-30. 10.1093\/nar\/28.1.27.","journal-title":"Nucleic
-        Acids Res"},{"issue":"Suppl 1","key":"570_CR12","doi-asserted-by":"publisher","first-page":"I363","DOI":"10.1093\/bioinformatics\/bth910","volume":"20","author":"Y
-        Yamanishi","year":"2004","unstructured":"Yamanishi Y, Vert JP, Kanehisa M:
-        Protein network inference from multiple genomic data: a supervised approach.
-        Bioinformatics. 2004, 20 (Suppl 1): I363-I370. 10.1093\/bioinformatics\/bth910.","journal-title":"Bioinformatics"},{"key":"570_CR13","unstructured":"GRIFn
-        Home Page. [http:\/\/function.princeton.edu\/GRIFn]"},{"issue":"6868","key":"570_CR14","doi-asserted-by":"publisher","first-page":"141","DOI":"10.1038\/415141a","volume":"415","author":"AC
-        Gavin","year":"2002","unstructured":"Gavin AC, Bosche M, Krause R, Grandi
-        P, Marzioch M, Bauer A, Schultz J, Rick JM, Michon AM, Cruciat CM: Functional
-        organization of the yeast proteome by systematic analysis of protein complexes.
-        Nature. 2002, 415 (6868): 141-147. 10.1038\/415141a.","journal-title":"Nature"},{"issue":"5","key":"570_CR15","doi-asserted-by":"publisher","first-page":"919","DOI":"10.1016\/S0022-2836(03)00239-0","volume":"327","author":"E
-        Sprinzak","year":"2003","unstructured":"Sprinzak E, Sattath S, Margalit H:
-        How reliable are experimental protein-protein interaction data?. J Mol Biol.
-        2003, 327 (5): 919-923. 10.1016\/S0022-2836(03)00239-0.","journal-title":"J
-        Mol Biol"},{"issue":"6770","key":"570_CR16","doi-asserted-by":"publisher","first-page":"623","DOI":"10.1038\/35001009","volume":"403","author":"P
-        Uetz","year":"2000","unstructured":"Uetz P, Giot L, Cagney G, Mansfield TA,
-        Judson RS, Knight JR, Lockshon D, Narayan V, Srinivasan M, Pochart P: A comprehensive
-        analysis of protein-protein interactions in Saccharomyces cerevisiae. Nature.
-        2000, 403 (6770): 623-627. 10.1038\/35001009.","journal-title":"Nature"},{"issue":"6887","key":"570_CR17","doi-asserted-by":"publisher","first-page":"399","DOI":"10.1038\/nature750","volume":"417","author":"C
-        von Mering","year":"2002","unstructured":"von Mering C, Krause R, Snel B,
-        Cornell M, Oliver SG, Fields S, Bork P: Comparative assessment of large-scale
-        data sets of protein-protein interactions. Nature. 2002, 417 (6887): 399-403.
-        10.1038\/nature750.","journal-title":"Nature"},{"issue":"3","key":"570_CR18","doi-asserted-by":"publisher","first-page":"381","DOI":"10.1093\/bioinformatics\/btg420","volume":"20","author":"SG
-        Lee","year":"2004","unstructured":"Lee SG, Hur JU, Kim YS: A graph-theoretic
-        modeling on GO space for biological interpretation of gene clusters. Bioinformatics.
-        2004, 20 (3): 381-388. 10.1093\/bioinformatics\/btg420.","journal-title":"Bioinformatics"},{"issue":"1","key":"570_CR19","doi-asserted-by":"publisher","first-page":"25","DOI":"10.1038\/75556","volume":"25","author":"M
-        Ashburner","year":"2000","unstructured":"Ashburner M, Ball CA, Blake JA, Botstein
-        D, Butler H, Cherry JM, Davis AP, Dolinski K, Dwight SS, Eppig JT: Gene ontology:
-        tool for the unification of biology. The Gene Ontology Consortium. Nat Genet.
-        2000, 25 (1): 25-29. 10.1038\/75556.","journal-title":"Nat Genet"},{"issue":"1","key":"570_CR20","doi-asserted-by":"publisher","first-page":"77","DOI":"10.1093\/nar\/28.1.77","volume":"28","author":"CA
-        Ball","year":"2000","unstructured":"Ball CA, Dolinski K, Dwight SS, Harris
-        MA, Issel-Tarver L, Kasarskis A, Scafe CR, Sherlock G, Binkley G, Jin H: Integrating
-        functional genomic information into the Saccharomyces genome database. Nucleic
-        Acids Res. 2000, 28 (1): 77-80. 10.1093\/nar\/28.1.77.","journal-title":"Nucleic
-        Acids Res"},{"issue":"1","key":"570_CR21","doi-asserted-by":"publisher","first-page":"31","DOI":"10.1093\/nar\/30.1.31","volume":"30","author":"HW
-        Mewes","year":"2002","unstructured":"Mewes HW, Frishman D, Guldener U, Mannhaupt
-        G, Mayer K, Mokrejs M, Morgenstern B, Munsterkotter M, Rudd S, Weil B: MIPS:
-        a database for genomes and protein sequences. Nucleic Acids Res. 2002, 30
-        (1): 31-34. 10.1093\/nar\/30.1.31.","journal-title":"Nucleic Acids Res"},{"issue":"1","key":"570_CR22","doi-asserted-by":"publisher","first-page":"75","DOI":"10.1093\/nar\/29.1.75","volume":"29","author":"MC
-        Costanzo","year":"2001","unstructured":"Costanzo MC, Crawford ME, Hirschman
-        JE, Kranz JE, Olsen P, Robertson LS, Skrzypek MS, Braun BR, Hopkins KL, Kondu
-        P: YPD, PombePD and WormPD: model organism volumes of the BioKnowledge library,
-        an integrated resource for protein information. Nucleic Acids Res. 2001, 29
-        (1): 75-79. 10.1093\/nar\/29.1.75.","journal-title":"Nucleic Acids Res"},{"issue":"5","key":"570_CR23","doi-asserted-by":"publisher","first-page":"535","DOI":"10.1016\/j.mib.2004.08.012","volume":"7","author":"R
-        Jansen","year":"2004","unstructured":"Jansen R, Gerstein M: Analyzing protein
-        function on a genomic scale: the importance of gold-standard positives and
-        negatives for network prediction. Curr Opin Microbiol. 2004, 7 (5): 535-545.
-        10.1016\/j.mib.2004.08.012.","journal-title":"Curr Opin Microbiol"},{"issue":"1","key":"570_CR24","doi-asserted-by":"publisher","first-page":"100","DOI":"10.1186\/1471-2105-6-100","volume":"6","author":"A
-        Patil","year":"2005","unstructured":"Patil A, Nakamura H: Filtering high-throughput
-        protein-protein interaction data using a combination of genomic features.
-        BMC Bioinformatics. 2005, 6 (1): 100-10.1186\/1471-2105-6-100.","journal-title":"BMC
-        Bioinformatics"},{"issue":"6959","key":"570_CR25","doi-asserted-by":"publisher","first-page":"686","DOI":"10.1038\/nature02026","volume":"425","author":"WK
-        Huh","year":"2003","unstructured":"Huh WK, Falvo JV, Gerke LC, Carroll AS,
-        Howson RW, Weissman JS, O''Shea EK: Global analysis of protein localization
-        in budding yeast. Nature. 2003, 425 (6959): 686-691. 10.1038\/nature02026.","journal-title":"Nature"},{"issue":"5","key":"570_CR26","doi-asserted-by":"publisher","first-page":"349","DOI":"10.1074\/mcp.M100037-MCP200","volume":"1","author":"CM
-        Deane","year":"2002","unstructured":"Deane CM, Salwinski L, Xenarios I, Eisenberg
-        D: Protein interactions: two methods for assessment of the reliability of
-        high throughput observations. Mol Cell Proteomics. 2002, 1 (5): 349-356. 10.1074\/mcp.M100037-MCP200.","journal-title":"Mol
-        Cell Proteomics"},{"key":"570_CR27","first-page":"531","volume-title":"Pac
-        Symp Biocomput","author":"Y Qi","year":"2005","unstructured":"Qi Y, Klein-Seetharaman
-        J, Bar-Joseph Z: Random forest similarity for protein-protein interaction
-        prediction from multiple sources. Pac Symp Biocomput. 2005, 531-542."},{"issue":"3","key":"570_CR28","doi-asserted-by":"publisher","first-page":"292","DOI":"10.1016\/j.sbi.2004.05.003","volume":"14","author":"P
-        Bork","year":"2004","unstructured":"Bork P, Jensen LJ, von Mering C, Ramani
-        AK, Lee I, Marcotte EM: Protein interaction networks from yeast to human.
-        Curr Opin Struct Biol. 2004, 14 (3): 292-299. 10.1016\/j.sbi.2004.05.003.","journal-title":"Curr
-        Opin Struct Biol"},{"issue":"1","key":"570_CR29","doi-asserted-by":"publisher","first-page":"289","DOI":"10.1093\/nar\/28.1.289","volume":"28","author":"I
-        Xenarios","year":"2000","unstructured":"Xenarios I, Rice DW, Salwinski L,
-        Baron MK, Marcotte EM, Eisenberg D: DIP: the database of interacting proteins.
-        Nucleic Acids Res. 2000, 28 (1): 289-291. 10.1093\/nar\/28.1.289.","journal-title":"Nucleic
-        Acids Res"},{"issue":"3","key":"570_CR30","doi-asserted-by":"publisher","first-page":"R23","DOI":"10.1186\/gb-2003-4-3-r23","volume":"4","author":"BJ
-        Breitkreutz","year":"2003","unstructured":"Breitkreutz BJ, Stark C, Tyers
-        M: The GRID: the General Repository for Interaction Datasets. Genome Biol.
-        2003, 4 (3): R23-10.1186\/gb-2003-4-3-r23.","journal-title":"Genome Biol"},{"key":"570_CR31","doi-asserted-by":"crossref","unstructured":"Alfarano
-        C, Andrade CE, Anthony K, Bahroos N, Bajec M, Bantoft K, Betel D, Bobechko
-        B, Boutilier K, Burgess E: The Biomolecular Interaction Network Database and
-        related tools 2005 update. Nucleic Acids Res. 2005, D418-424. 33 Database","DOI":"10.1093\/nar\/gki051"},{"issue":"10","key":"570_CR32","doi-asserted-by":"publisher","first-page":"1275","DOI":"10.1093\/bioinformatics\/btg153","volume":"19","author":"PW
-        Lord","year":"2003","unstructured":"Lord PW, Stevens RD, Brass A, Goble CA:
-        Investigating semantic similarity measures across the Gene Ontology: the relationship
-        between sequence and annotation. Bioinformatics. 2003, 19 (10): 1275-1283.
-        10.1093\/bioinformatics\/btg153.","journal-title":"Bioinformatics"},{"issue":"Suppl61","key":"570_CR33","first-page":"S2","volume":"7","author":"A
-        Ben-Hur","year":"2005","unstructured":"Ben-Hur A, Noble WS: Choosing negative
-        examples for the prediction of protein-protein interactions. BMC Bioinformatics.
-        2005, 7 (Suppl61): S2-","journal-title":"BMC Bioinformatics"},{"issue":"8","key":"570_CR34","doi-asserted-by":"publisher","first-page":"4569","DOI":"10.1073\/pnas.061034498","volume":"98","author":"T
-        Ito","year":"2001","unstructured":"Ito T, Chiba T, Ozawa R, Yoshida M, Hattori
-        M, Sakaki Y: A comprehensive two-hybrid analysis to explore the yeast protein
-        interactome. Proc Natl Acad Sci U S A. 2001, 98 (8): 4569-4574. 10.1073\/pnas.061034498.","journal-title":"Proc
-        Natl Acad Sci U S A"},{"issue":"5553","key":"570_CR35","doi-asserted-by":"publisher","first-page":"321","DOI":"10.1126\/science.1064987","volume":"295","author":"AH
-        Tong","year":"2002","unstructured":"Tong AH, Drees B, Nardelli G, Bader GD,
-        Brannetti B, Castagnoli L, Evangelista M, Ferracuti S, Nelson B, Paoluzi S:
-        A combined experimental and computational strategy to define protein interaction
-        networks for peptide recognition modules. Science. 2002, 295 (5553): 321-324.
-        10.1126\/science.1064987.","journal-title":"Science"},{"issue":"6868","key":"570_CR36","doi-asserted-by":"publisher","first-page":"180","DOI":"10.1038\/415180a","volume":"415","author":"Y
-        Ho","year":"2002","unstructured":"Ho Y, Gruhler A, Heilbut A, Bader GD, Moore
-        L, Adams SL, Millar A, Taylor P, Bennett K, Boutilier K: Systematic identification
-        of protein complexes in Saccharomyces cerevisiae by mass spectrometry. Nature.
-        2002, 415 (6868): 180-183. 10.1038\/415180a.","journal-title":"Nature"},{"issue":"10","key":"570_CR37","doi-asserted-by":"publisher","first-page":"2987","DOI":"10.1091\/mbc.12.10.2987","volume":"12","author":"AP
-        Gasch","year":"2001","unstructured":"Gasch AP, Huang M, Metzner S, Botstein
-        D, Elledge SJ, Brown PO: Genomic expression responses to DNA-damaging agents
-        and the regulatory role of the yeast ATR homolog Mec1p. Mol Biol Cell. 2001,
-        12 (10): 2987-3003.","journal-title":"Mol Biol Cell"},{"issue":"12","key":"570_CR38","doi-asserted-by":"publisher","first-page":"3273","DOI":"10.1091\/mbc.9.12.3273","volume":"9","author":"PT
-        Spellman","year":"1998","unstructured":"Spellman PT, Sherlock G, Zhang MQ,
-        Iyer VR, Anders K, Eisen MB, Brown PO, Botstein D, Futcher B: Comprehensive
-        identification of cell cycle-regulated genes of the yeast Saccharomyces cerevisiae
-        by microarray hybridization. Mol Biol Cell. 1998, 9 (12): 3273-3297.","journal-title":"Mol
-        Biol Cell"}],"container-title":["BMC Genomics"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1186\/1471-2164-7-187.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/link.springer.com\/article\/10.1186\/1471-2164-7-187\/fulltext.html","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/link.springer.com\/content\/pdf\/10.1186\/1471-2164-7-187.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,9,1]],"date-time":"2021-09-01T01:37:43Z","timestamp":1630460263000},"score":1,"resource":{"primary":{"URL":"https:\/\/bmcgenomics.biomedcentral.com\/articles\/10.1186\/1471-2164-7-187"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2006,7,25]]},"references-count":38,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2006,12]]}},"alternative-id":["570"],"URL":"http:\/\/dx.doi.org\/10.1186\/1471-2164-7-187","relation":{},"ISSN":["1471-2164"],"issn-type":[{"value":"1471-2164","type":"electronic"}],"subject":["Genetics","Biotechnology"],"published":{"date-parts":[[2006,7,25]]},"assertion":[{"value":"10
-        May 2006","order":1,"name":"received","label":"Received","group":{"name":"ArticleHistory","label":"Article
-        History"}},{"value":"25 July 2006","order":2,"name":"accepted","label":"Accepted","group":{"name":"ArticleHistory","label":"Article
-        History"}},{"value":"25 July 2006","order":3,"name":"first_online","label":"First
-        Online","group":{"name":"ArticleHistory","label":"Article History"}}],"article-number":"187"}}'
-  recorded_at: Sun, 18 Jun 2023 15:21:15 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/members/297
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - api.crossref.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:21:16 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - public
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687044227035,"primary-name":"Springer
-        Science and Business Media LLC","counts":{"current-dois":1798782,"backfile-dois":13838189,"total-dois":15636971},"breakdowns":{"dois-by-issued-year":[[2022,738328],[2021,736414],[2020,696998],[2019,637478],[2018,626386],[2017,607295],[2014,594440],[2016,586876],[2013,576773],[2015,524012],[2012,469433],[2011,453240],[2010,415850],[2009,397352],[2023,324022],[2008,322054],[2007,283326],[2006,254697],[2004,251651],[2005,239697],[2003,235979],[2000,234840],[2002,225220],[2001,222769],[1999,205327],[1998,204478],[1997,198548],[1996,184875],[1995,174607],[1994,168404],[1993,166708],[1991,162565],[1992,161494],[1990,157101],[1989,152466],[1988,142595],[1987,135929],[1986,125331],[1985,117258],[1984,114663],[1983,101438],[1982,99014],[1981,96225],[1980,91070],[1979,84436],[1978,83740],[1977,79756],[1976,73466],[1975,69520],[1974,67539],[1973,62912],[1972,59917],[1971,55752],[1970,53101],[1969,49815],[1968,48947],[1967,47186],[1966,42444],[1965,37484],[1964,33194],[1963,30593],[1962,30083],[1961,29432],[1960,28851],[1959,25681],[1958,24481],[1956,21941],[1957,21837],[1955,19907],[1954,16716],[1953,16707],[1932,16468],[1928,16373],[1930,16178],[1927,15870],[1926,15581],[1929,15329],[1931,15286],[1933,15129],[1952,14987],[1936,14706],[1938,14651],[1950,14507],[1935,14396],[1937,14279],[1939,14063],[1951,13951],[1934,13698],[1925,13413],[1924,13128],[1923,12818],[1922,12374],[1949,11829],[1913,11542],[1921,11472],[1940,11277],[1914,10095],[1941,9997],[1920,9970],[1942,9650],[1948,9430],[1912,9290],[1910,9128],[1911,9063],[1943,8570],[1904,8229],[1903,8054],[1909,7961],[1919,7949],[1908,7910],[1905,7554],[1907,7549],[1902,7376],[1906,7298],[1918,7183],[1901,7167],[1915,7030],[1900,7023],[1916,6836],[1897,6815],[1917,6752],[1899,6699],[1887,6682],[1886,6652],[1888,6512],[1947,6407],[1893,6407],[1898,6398],[1889,6361],[1895,6147],[1891,6122],[1894,6116],[1880,6105],[1944,6070],[1892,6068],[1885,6010],[1890,5981],[1896,5963],[1877,5912],[1884,5694],[1883,5675],[1878,5633],[1882,5628],[1881,5603],[1946,5556],[1876,5486],[1879,5427],[1847,5058],[1945,3954],[1848,3882],[1872,3827],[1875,3819],[1873,3761],[1870,3725],[1874,3641],[1871,3604],[1852,3065],[1849,3025],[1869,3021],[1856,2943],[1855,2836],[1857,2796],[1854,2772],[1851,2733],[1850,2690],[1860,2628],[1867,2586],[1859,2530],[1853,2512],[1868,2447],[1858,2433],[1865,2238],[1863,2148],[1864,2145],[1866,2110],[1862,2044],[1846,1920],[1861,1703],[1845,265],[1844,176],[1843,99],[1837,66],[1840,64],[1835,62],[1833,62],[1400,57],[1834,56],[1838,55],[1841,50],[1832,50],[1839,49],[1842,42],[1836,38],[2024,18],[1827,2],[1815,2]]},"prefixes":["10.1208","10.19150","10.1245","10.7603","10.1007","10.17269","10.4076","10.7123","10.1140","10.1381","10.33283","10.4333","10.1186","10.1065","10.1361","10.4056","10.1023","10.1385","10.26778","10.26777","10.5819","10.1617","10.1013","10.1057","10.1379","10.1038","10.1114","10.3758","10.1557","10.3858","10.7759","10.2165","10.1251","10.5052"],"coverage":{"affiliations-current":1.267524358149014E-4,"similarity-checking-current":0.9963225115661598,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.04592559040781998,"licenses-backfile":0.718562811940204,"funders-current":0.2507591247855493,"affiliations-backfile":4.914660437142461E-4,"resource-links-backfile":0.53193282733745,"orcids-backfile":0.05139386374907873,"update-policies-current":0.9279234504236756,"ror-ids-backfile":0.0,"orcids-current":0.3901023025580643,"similarity-checking-backfile":0.9344421441273855,"references-backfile":0.6704000068217019,"descriptions-backfile":0.0,"award-numbers-backfile":0.0372477207819607,"update-policies-backfile":0.2802055962669682,"licenses-current":0.9928040196088243,"award-numbers-current":0.1936743863347532,"abstracts-backfile":0.03308807243491182,"resource-links-current":0.6257840027307368,"abstracts-current":0.2164497976964413,"references-current":0.864806296705215},"prefix":[{"name":"American
-        Association of Pharmaceutical Scientists","value":"10.1208"},{"name":"Society
-        for Mining, Metallurgy & Exploration Inc.","value":"10.19150"},{"name":"Springer
-        - Society of Surgical Oncology","value":"10.1245"},{"name":"Springer - Global
-        Science Journals","value":"10.7603"},{"name":"Springer-Verlag","value":"10.1007"},{"name":"Canadian
-        Public Health Association","value":"10.17269"},{"name":"Springer (Cases Network,
-        Ltd.)","value":"10.4076"},{"name":"Springer Science and Business Media LLC","value":"10.7123"},{"name":"Springer-Verlag","value":"10.1140"},{"name":"Springer
-        - FD Communications","value":"10.1381"},{"name":"Springer Science and Business
-        Media LLC","value":"10.33283"},{"name":"Springer - The Korean Society of Pharmaceutical
-        Sciences and Technology","value":"10.4333"},{"name":"Springer (Biomed Central
-        Ltd.)","value":"10.1186"},{"name":"Springer - Ecomed Publishers","value":"10.1065"},{"name":"Springer
-        - ASM International","value":"10.1361"},{"name":"Genomic Standards Consortium","value":"10.4056"},{"name":"Springer
-        (Kluwer Academic Publishers)","value":"10.1023"},{"name":"Springer - Humana
-        Press","value":"10.1385"},{"name":"SpringerNature","value":"10.26778"},{"name":"SpringerNature","value":"10.26777"},{"name":"Springer
-        - (backfiles)","value":"10.5819"},{"name":"Springer - RILEM Publishing","value":"10.1617"},{"name":"Springer
-        Science and Business Media LLC","value":"10.1013"},{"name":"Springer Science
-        and Business Media LLC","value":"10.1057"},{"name":"Springer - Cell Stress
-        Society International","value":"10.1379"},{"name":"Springer Science and Business
-        Media LLC","value":"10.1038"},{"name":"Springer (Kluwer Academic Publishers
-        - Biomedical Engineering Society (BMES))","value":"10.1114"},{"name":"Springer
-        - Psychonomic Society","value":"10.3758"},{"name":"Materials Research Society","value":"10.1557"},{"name":"Springer
-        Science and Business Media LLC","value":"10.3858"},{"name":"Cureus, Inc.","value":"10.7759"},{"name":"Springer
-        - Adis","value":"10.2165"},{"name":"Springer (Biological Procedures Online)","value":"10.1251"},{"name":"Springer
-        - Real Academia de Ciencias Exactas, Fisicas y Naturales","value":"10.5052"}],"id":297,"tokens":["springer","science","and","business","media","llc"],"counts-type":{"all":{"monograph":359,"journal-article":9392043,"book":329229,"reference-entry":85798,"proceedings-article":1149,"journal":2146,"component":4443,"book-chapter":6424734,"reference-book":1007,"journal-issue":1311,"dataset":23415},"backfile":{"monograph":359,"journal-article":8293043,"book":295345,"proceedings-article":1149,"book-chapter":5226129,"reference-book":743,"journal-issue":1311,"dataset":20110},"current":{"journal-article":1098999,"book":33884,"book-chapter":662332,"reference-book":264,"dataset":3303}},"coverage-type":{"all":{"monograph":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.6295264623955432,"references":0.0,"funders":0.0,"similarity-checking":0.6295264623955432,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.6295264623955432,"descriptions":0.0},"journal-article":{"last-status-check-time":1687044227035,"affiliations":7.48399469636159E-4,"abstracts":0.08796701633499761,"orcids":0.1362866417881605,"licenses":0.878906431752921,"references":0.7304443772244228,"funders":0.1138326347100413,"similarity-checking":0.9064530475424782,"award-numbers":0.09181516737093302,"ror-ids":0.0,"update-policies":0.3710155500778691,"resource-links":0.8686014320845848,"descriptions":0.0},"book":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.02600621451937709,"licenses":0.9949093184379262,"references":3.037399500044042E-6,"funders":0.004413341473563993,"similarity-checking":0.9965829255624505,"award-numbers":6.257042970090726E-4,"ror-ids":0.0,"update-policies":3.037399500044042E-6,"resource-links":0.9945174939024205,"descriptions":0.0},"reference-entry":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.005396396186391291,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.006092254134029591,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":4.659832246039143E-4,"references":0.0,"funders":0.0,"similarity-checking":0.001863932898415657,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":4.659832246039143E-4,"descriptions":0.0},"component":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":6.75219446320054E-4},"book-chapter":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.003274065509949517,"orcids":0.0184194396219361,"licenses":0.4896562254561823,"references":0.6562951866956671,"funders":0.001361768440529989,"similarity-checking":0.9697749354292333,"award-numbers":1.990743896945772E-4,"ror-ids":0.0,"update-policies":0.3178142472513259,"resource-links":1.556484673139775E-7,"descriptions":0.0},"reference-book":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.02184707050645482,"licenses":0.9910625620655412,"references":0.0,"funders":0.00198609731876862,"similarity-checking":0.9940417080436941,"award-numbers":0.00198609731876862,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9910625620655412,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.03508771929824561,"references":0.0,"funders":0.0,"similarity-checking":0.07704042715484363,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.03508771929824561,"descriptions":0.0},"dataset":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.2550928891736067,"licenses":0.0,"references":0.0,"funders":0.3101857783472133,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.862822976724322,"resource-links":0.0,"descriptions":0.0}},"backfile":{"monograph":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.6295264623955432,"references":0.0,"funders":0.0,"similarity-checking":0.6295264623955432,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.6295264623955432,"descriptions":0.0},"journal-article":{"last-status-check-time":1687044227035,"affiliations":8.200849796630742E-4,"abstracts":0.05472189159033662,"orcids":0.08018745350771725,"licenses":0.8637461544574169,"references":0.7047474612153826,"funders":0.07529335130663135,"similarity-checking":0.8942189254294232,"award-numbers":0.06204272665654815,"ror-ids":0.0,"update-policies":0.2979894111244811,"resource-links":0.8520822814978772,"descriptions":0.0},"book":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.01166432477272343,"licenses":0.9943354382163233,"references":3.385870761313041E-6,"funders":0.001919788721664494,"similarity-checking":0.9964786944082344,"award-numbers":3.589023006991823E-4,"ror-ids":0.0,"update-policies":3.385870761313041E-6,"resource-links":0.9941763022905415,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.006092254134029591,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":7.783964000888612E-4,"orcids":0.007472452363881565,"licenses":0.4756572216261788,"references":0.6568188423974992,"funders":9.88111851046922E-4,"similarity-checking":0.9987918400024186,"award-numbers":1.553731260747678E-4,"ror-ids":0.0,"update-policies":0.2652496714107134,"resource-links":1.913462143777928E-7,"descriptions":0.0},"reference-book":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.0161507402422611,"licenses":0.9878869448183042,"references":0.0,"funders":0.0,"similarity-checking":0.9919246298788694,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9878869448183042,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.03508771929824561,"references":0.0,"funders":0.0,"similarity-checking":0.07704042715484363,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.03508771929824561,"descriptions":0.0},"dataset":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.1835405271009448,"licenses":0.0,"references":0.0,"funders":0.2677772252610641,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.9979612133267031,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1687044227035,"affiliations":2.074615172534279E-4,"abstracts":0.3388347032162905,"orcids":0.559611064250286,"licenses":0.9933057263928357,"references":0.9243538893120012,"funders":0.4046500497270698,"similarity-checking":0.9987716094373152,"award-numbers":0.3164779949754276,"ror-ids":0.0,"update-policies":0.9220709027032782,"resource-links":0.9932547709324576,"descriptions":0.0},"book":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.1510152284263959,"licenses":0.9999114626372329,"references":0.0,"funders":0.02614803447054657,"similarity-checking":0.9974914413882658,"award-numbers":0.00295124542556959,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9974914413882658,"descriptions":0.0},"book-chapter":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.02561706213802142,"orcids":0.1197103567395204,"licenses":0.9965561078130001,"references":0.8148994763955237,"funders":0.005412693332044956,"similarity-checking":0.9971660738119251,"award-numbers":7.050844591534155E-4,"ror-ids":0.0,"update-policies":0.9899008352306699,"resource-links":0.0,"descriptions":0.0},"reference-book":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.03787878787878788,"licenses":1.0,"references":0.0,"funders":0.007575757575757576,"similarity-checking":1.0,"award-numbers":0.007575757575757576,"ror-ids":0.0,"update-policies":0.0,"resource-links":1.0,"descriptions":0.0},"dataset":{"last-status-check-time":1687044227035,"affiliations":0.0,"abstracts":0.0,"orcids":0.690887072358462,"licenses":0.0,"references":0.0,"funders":0.5685740236148955,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.04056917953375719,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"Dordrecht,
-        GX, Netherlands","names":["Springer Science and Business Media LLC","American
-        Association of Pharmaceutical Scientists","Society for Mining, Metallurgy
-        & Exploration Inc.","Springer - Society of Surgical Oncology","Springer -
-        Global Science Journals","Springer-Verlag","Canadian Public Health Association","Springer
-        (Cases Network, Ltd.)","Springer - FD Communications","Springer - The Korean
-        Society of Pharmaceutical Sciences and Technology","Springer (Biomed Central
-        Ltd.)","Springer - Ecomed Publishers","Springer - ASM International","Genomic
-        Standards Consortium","Springer (Kluwer Academic Publishers)","Springer -
-        Humana Press","SpringerNature","Springer - (backfiles)","Springer - RILEM
-        Publishing","Springer - Cell Stress Society International","Springer (Kluwer
-        Academic Publishers - Biomedical Engineering Society (BMES))","Springer -
-        Psychonomic Society","Materials Research Society","Cureus, Inc.","Springer
-        - Adis","Springer (Biological Procedures Online)","Springer - Real Academia
-        de Ciencias Exactas, Fisicas y Naturales"]}}'
-  recorded_at: Sun, 18 Jun 2023 15:21:16 GMT
-- request:
-    method: get
-    uri: https://doi.org/ra/10.1186
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - doi.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:21:17 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ZyhUsn2WPykfCb347nfY4%2FflaRhetPzN8DIjaBHn9J3K9GUNsYDmNQBq0E7gZd5kkCKJUR4lstdklU2JlBvVf8C6AL5jJOGd8C7BQ6WfRCUmyDzmd5dTKQ7i%2BVfJ4xGFwaFTkSI%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7d94856918630bd7-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: |-
-        [
-          {
-            "DOI": "10.1186",
-            "RA": "Crossref"
-          }
-        ]
-  recorded_at: Sun, 18 Jun 2023 15:21:16 GMT
-- request:
-    method: get
     uri: https://api.crossref.org/works/10.1186/1471-2164-7-187/transform/application/vnd.crossref.unixsd+xml
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -434,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:25:24 GMT
+      - Thu, 05 Oct 2023 19:46:21 GMT
       Transfer-Encoding:
       - chunked
       Link:
@@ -483,7 +68,7 @@ http_interactions:
         type=\"string\">10.1186</crm-item>\r\n        <crm-item name=\"last-update\"
         type=\"date\">2021-09-01T01:37:43Z</crm-item>\r\n        <crm-item name=\"created\"
         type=\"date\">2006-07-25T18:14:51Z</crm-item>\r\n        <crm-item name=\"citedby-count\"
-        type=\"number\">171</crm-item>\r\n        <crm-item name=\"relation\" type=\"doi\"
+        type=\"number\">172</crm-item>\r\n        <crm-item name=\"relation\" type=\"doi\"
         claim=\"isReviewOf\">10.3410/f.1044091.494000</crm-item>\r\n        <crm-item
         name=\"relation\" type=\"doi\" claim=\"isReviewOf\">10.3410/f.1044091.496329</crm-item>\r\n
         \       <doi_record>\r\n          <crossref xmlns=\"http://www.crossref.org/xschema/1.1\"
@@ -856,5 +441,420 @@ http_interactions:
         \               </citation_list>\r\n              </journal_article>\r\n            </journal>\r\n
         \         </crossref>\r\n        </doi_record>\r\n      </query>\r\n    </body>\r\n
         \ </query_result>\r\n</crossref_result>"
-  recorded_at: Sun, 18 Jun 2023 15:25:24 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:46:21 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1186
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:46:21 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jMTdlN9PoDfJU7hGLwHOwvk9%2BKLxSp2UYYvLbil8kHEwhhR4fDQyWkZTKakp7MzWDoxZXin6w5sBTjyocZYMXkYx33IIftsGCQkUN2aYbJrqKjOlGyi24bmweyxMWHS9Q7HXYZw%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 81182b950bb4b7d3-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.1186",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Thu, 05 Oct 2023 19:46:21 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1186/1471-2164-7-187
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:48:56 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"indexed":{"date-parts":[[2023,9,26]],"date-time":"2023-09-26T12:00:57Z","timestamp":1695729657408},"reference-count":38,"publisher":"Springer
+        Science and Business Media LLC","issue":"1","license":[{"start":{"date-parts":[[2006,7,25]],"date-time":"2006-07-25T00:00:00Z","timestamp":1153785600000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/2.0"}],"content-domain":{"domain":["link.springer.com"],"crossmark-restriction":false},"short-container-title":["BMC
+        Genomics"],"published-print":{"date-parts":[[2006,12]]},"abstract":"<jats:title>Abstract<\/jats:title>\n          <jats:sec>\n            <jats:title>Background<\/jats:title>\n            <jats:p>Accurate
+        evaluation of the quality of genomic or proteomic data and computational methods
+        is vital to our ability to use them for formulating novel biological hypotheses
+        and directing further experiments. There is currently no standard approach
+        to evaluation in functional genomics. Our analysis of existing approaches
+        shows that they are inconsistent and contain substantial functional biases
+        that render the resulting evaluations misleading both quantitatively and qualitatively.
+        These problems make it essentially impossible to compare computational methods
+        or large-scale experimental datasets and also result in conclusions that generalize
+        poorly in most biological applications.<\/jats:p>\n          <\/jats:sec>\n          <jats:sec>\n            <jats:title>Results<\/jats:title>\n            <jats:p>We
+        reveal issues with current evaluation methods here and suggest new approaches
+        to evaluation that facilitate accurate and representative characterization
+        of genomic methods and data. Specifically, we describe a functional genomics
+        gold standard based on curation by expert biologists and demonstrate its use
+        as an effective means of evaluation of genomic approaches. Our evaluation
+        framework and gold standard are freely available to the community through
+        our website.<\/jats:p>\n          <\/jats:sec>\n          <jats:sec>\n            <jats:title>Conclusion<\/jats:title>\n            <jats:p>Proper
+        methods for evaluating genomic data and computational approaches will determine
+        how much we, as a community, are able to learn from the wealth of available
+        data. We propose one possible solution to this problem here but emphasize
+        that this topic warrants broader community discussion.<\/jats:p>\n          <\/jats:sec>","DOI":"10.1186\/1471-2164-7-187","type":"journal-article","created":{"date-parts":[[2006,7,25]],"date-time":"2006-07-25T18:14:51Z","timestamp":1153851291000},"update-policy":"http:\/\/dx.doi.org\/10.1007\/springer_crossmark_policy","source":"Crossref","is-referenced-by-count":172,"title":["Finding
+        function: evaluation methods for functional genomic data"],"prefix":"10.1186","volume":"7","author":[{"given":"Chad
+        L","family":"Myers","sequence":"first","affiliation":[]},{"given":"Daniel
+        R","family":"Barrett","sequence":"additional","affiliation":[]},{"given":"Matthew
+        A","family":"Hibbs","sequence":"additional","affiliation":[]},{"given":"Curtis","family":"Huttenhower","sequence":"additional","affiliation":[]},{"given":"Olga
+        G","family":"Troyanskaya","sequence":"additional","affiliation":[]}],"member":"297","published-online":{"date-parts":[[2006,7,25]]},"reference":[{"key":"570_CR1","volume-title":"Bioinformatics","author":"Z
+        Barutcuoglu","year":"2006","unstructured":"Barutcuoglu Z, Schapire RE, Troyanskaya
+        OG: Hierarchical multi-label prediction of gene function. Bioinformatics.
+        2006"},{"issue":"Suppl 2","key":"570_CR2","doi-asserted-by":"publisher","first-page":"II42","DOI":"10.1093\/bioinformatics\/btg1058","volume":"19","author":"A
+        Clare","year":"2003","unstructured":"Clare A, King RD: Predicting gene function
+        in Saccharomyces cerevisiae. Bioinformatics. 2003, 19 (Suppl 2): II42-II49.","journal-title":"Bioinformatics"},{"key":"570_CR3","first-page":"300","volume-title":"Pac
+        Symp Biocomput","author":"GR Lanckriet","year":"2004","unstructured":"Lanckriet
+        GR, Deng M, Cristianini N, Jordan MI, Noble WS: Kernel-based data fusion and
+        its application to protein function prediction in yeast. Pac Symp Biocomput.
+        2004, 300-311."},{"issue":"2","key":"570_CR4","doi-asserted-by":"publisher","first-page":"401","DOI":"10.1089\/10665270252935539","volume":"9","author":"P
+        Pavlidis","year":"2002","unstructured":"Pavlidis P, Weston J, Cai J, Noble
+        WS: Learning gene functional classifications from multiple data types. J Comput
+        Biol. 2002, 9 (2): 401-411. 10.1089\/10665270252935539.","journal-title":"J
+        Comput Biol"},{"issue":"Suppl 1","key":"570_CR5","doi-asserted-by":"publisher","first-page":"i38","DOI":"10.1093\/bioinformatics\/bti1016","volume":"21","author":"A
+        Ben-Hur","year":"2005","unstructured":"Ben-Hur A, Noble WS: Kernel methods
+        for predicting protein-protein interactions. Bioinformatics. 2005, 21 (Suppl
+        1): i38-i46. 10.1093\/bioinformatics\/bti1016.","journal-title":"Bioinformatics"},{"issue":"5644","key":"570_CR6","doi-asserted-by":"publisher","first-page":"449","DOI":"10.1126\/science.1087361","volume":"302","author":"R
+        Jansen","year":"2003","unstructured":"Jansen R, Yu H, Greenbaum D, Kluger
+        Y, Krogan NJ, Chung S, Emili A, Snyder M, Greenblatt JF, Gerstein M: A Bayesian
+        networks approach for predicting protein-protein interactions from genomic
+        data. Science. 2003, 302 (5644): 449-453. 10.1126\/science.1087361.","journal-title":"Science"},{"issue":"5701","key":"570_CR7","doi-asserted-by":"publisher","first-page":"1555","DOI":"10.1126\/science.1099511","volume":"306","author":"I
+        Lee","year":"2004","unstructured":"Lee I, Date SV, Adai AT, Marcotte EM: A
+        probabilistic functional network of yeast genes. Science. 2004, 306 (5701):
+        1555-1558. 10.1126\/science.1099511.","journal-title":"Science"},{"issue":"1","key":"570_CR8","doi-asserted-by":"publisher","first-page":"154","DOI":"10.1186\/1471-2105-5-154","volume":"5","author":"N
+        Lin","year":"2004","unstructured":"Lin N, Wu B, Jansen R, Gerstein M, Zhao
+        H: Information assessment on predicting protein-protein interactions. BMC
+        Bioinformatics. 2004, 5 (1): 154-10.1186\/1471-2105-5-154.","journal-title":"BMC
+        Bioinformatics"},{"issue":"14","key":"570_CR9","doi-asserted-by":"publisher","first-page":"8348","DOI":"10.1073\/pnas.0832373100","volume":"100","author":"OG
+        Troyanskaya","year":"2003","unstructured":"Troyanskaya OG, Dolinski K, Owen
+        AB, Altman RB, Botstein D: A Bayesian framework for combining heterogeneous
+        data sources for gene function prediction (in Saccharomyces cerevisiae). Proc
+        Natl Acad Sci USA. 2003, 100 (14): 8348-8353. 10.1073\/pnas.0832373100.","journal-title":"Proc
+        Natl Acad Sci USA"},{"issue":"8","key":"570_CR10","doi-asserted-by":"publisher","first-page":"424","DOI":"10.1016\/j.tig.2005.06.006","volume":"21","author":"SL
+        Wong","year":"2005","unstructured":"Wong SL, Zhang LV, Roth FP: Discovering
+        functional relationships: biochemistry versus genetics. Trends Genet. 2005,
+        21 (8): 424-427. 10.1016\/j.tig.2005.06.006.","journal-title":"Trends Genet"},{"issue":"1","key":"570_CR11","doi-asserted-by":"publisher","first-page":"27","DOI":"10.1093\/nar\/28.1.27","volume":"28","author":"M
+        Kanehisa","year":"2000","unstructured":"Kanehisa M, Goto S: KEGG: kyoto encyclopedia
+        of genes and genomes. Nucleic Acids Res. 2000, 28 (1): 27-30. 10.1093\/nar\/28.1.27.","journal-title":"Nucleic
+        Acids Res"},{"issue":"Suppl 1","key":"570_CR12","doi-asserted-by":"publisher","first-page":"I363","DOI":"10.1093\/bioinformatics\/bth910","volume":"20","author":"Y
+        Yamanishi","year":"2004","unstructured":"Yamanishi Y, Vert JP, Kanehisa M:
+        Protein network inference from multiple genomic data: a supervised approach.
+        Bioinformatics. 2004, 20 (Suppl 1): I363-I370. 10.1093\/bioinformatics\/bth910.","journal-title":"Bioinformatics"},{"key":"570_CR13","unstructured":"GRIFn
+        Home Page. [http:\/\/function.princeton.edu\/GRIFn]"},{"issue":"6868","key":"570_CR14","doi-asserted-by":"publisher","first-page":"141","DOI":"10.1038\/415141a","volume":"415","author":"AC
+        Gavin","year":"2002","unstructured":"Gavin AC, Bosche M, Krause R, Grandi
+        P, Marzioch M, Bauer A, Schultz J, Rick JM, Michon AM, Cruciat CM: Functional
+        organization of the yeast proteome by systematic analysis of protein complexes.
+        Nature. 2002, 415 (6868): 141-147. 10.1038\/415141a.","journal-title":"Nature"},{"issue":"5","key":"570_CR15","doi-asserted-by":"publisher","first-page":"919","DOI":"10.1016\/S0022-2836(03)00239-0","volume":"327","author":"E
+        Sprinzak","year":"2003","unstructured":"Sprinzak E, Sattath S, Margalit H:
+        How reliable are experimental protein-protein interaction data?. J Mol Biol.
+        2003, 327 (5): 919-923. 10.1016\/S0022-2836(03)00239-0.","journal-title":"J
+        Mol Biol"},{"issue":"6770","key":"570_CR16","doi-asserted-by":"publisher","first-page":"623","DOI":"10.1038\/35001009","volume":"403","author":"P
+        Uetz","year":"2000","unstructured":"Uetz P, Giot L, Cagney G, Mansfield TA,
+        Judson RS, Knight JR, Lockshon D, Narayan V, Srinivasan M, Pochart P: A comprehensive
+        analysis of protein-protein interactions in Saccharomyces cerevisiae. Nature.
+        2000, 403 (6770): 623-627. 10.1038\/35001009.","journal-title":"Nature"},{"issue":"6887","key":"570_CR17","doi-asserted-by":"publisher","first-page":"399","DOI":"10.1038\/nature750","volume":"417","author":"C
+        von Mering","year":"2002","unstructured":"von Mering C, Krause R, Snel B,
+        Cornell M, Oliver SG, Fields S, Bork P: Comparative assessment of large-scale
+        data sets of protein-protein interactions. Nature. 2002, 417 (6887): 399-403.
+        10.1038\/nature750.","journal-title":"Nature"},{"issue":"3","key":"570_CR18","doi-asserted-by":"publisher","first-page":"381","DOI":"10.1093\/bioinformatics\/btg420","volume":"20","author":"SG
+        Lee","year":"2004","unstructured":"Lee SG, Hur JU, Kim YS: A graph-theoretic
+        modeling on GO space for biological interpretation of gene clusters. Bioinformatics.
+        2004, 20 (3): 381-388. 10.1093\/bioinformatics\/btg420.","journal-title":"Bioinformatics"},{"issue":"1","key":"570_CR19","doi-asserted-by":"publisher","first-page":"25","DOI":"10.1038\/75556","volume":"25","author":"M
+        Ashburner","year":"2000","unstructured":"Ashburner M, Ball CA, Blake JA, Botstein
+        D, Butler H, Cherry JM, Davis AP, Dolinski K, Dwight SS, Eppig JT: Gene ontology:
+        tool for the unification of biology. The Gene Ontology Consortium. Nat Genet.
+        2000, 25 (1): 25-29. 10.1038\/75556.","journal-title":"Nat Genet"},{"issue":"1","key":"570_CR20","doi-asserted-by":"publisher","first-page":"77","DOI":"10.1093\/nar\/28.1.77","volume":"28","author":"CA
+        Ball","year":"2000","unstructured":"Ball CA, Dolinski K, Dwight SS, Harris
+        MA, Issel-Tarver L, Kasarskis A, Scafe CR, Sherlock G, Binkley G, Jin H: Integrating
+        functional genomic information into the Saccharomyces genome database. Nucleic
+        Acids Res. 2000, 28 (1): 77-80. 10.1093\/nar\/28.1.77.","journal-title":"Nucleic
+        Acids Res"},{"issue":"1","key":"570_CR21","doi-asserted-by":"publisher","first-page":"31","DOI":"10.1093\/nar\/30.1.31","volume":"30","author":"HW
+        Mewes","year":"2002","unstructured":"Mewes HW, Frishman D, Guldener U, Mannhaupt
+        G, Mayer K, Mokrejs M, Morgenstern B, Munsterkotter M, Rudd S, Weil B: MIPS:
+        a database for genomes and protein sequences. Nucleic Acids Res. 2002, 30
+        (1): 31-34. 10.1093\/nar\/30.1.31.","journal-title":"Nucleic Acids Res"},{"issue":"1","key":"570_CR22","doi-asserted-by":"publisher","first-page":"75","DOI":"10.1093\/nar\/29.1.75","volume":"29","author":"MC
+        Costanzo","year":"2001","unstructured":"Costanzo MC, Crawford ME, Hirschman
+        JE, Kranz JE, Olsen P, Robertson LS, Skrzypek MS, Braun BR, Hopkins KL, Kondu
+        P: YPD, PombePD and WormPD: model organism volumes of the BioKnowledge library,
+        an integrated resource for protein information. Nucleic Acids Res. 2001, 29
+        (1): 75-79. 10.1093\/nar\/29.1.75.","journal-title":"Nucleic Acids Res"},{"issue":"5","key":"570_CR23","doi-asserted-by":"publisher","first-page":"535","DOI":"10.1016\/j.mib.2004.08.012","volume":"7","author":"R
+        Jansen","year":"2004","unstructured":"Jansen R, Gerstein M: Analyzing protein
+        function on a genomic scale: the importance of gold-standard positives and
+        negatives for network prediction. Curr Opin Microbiol. 2004, 7 (5): 535-545.
+        10.1016\/j.mib.2004.08.012.","journal-title":"Curr Opin Microbiol"},{"issue":"1","key":"570_CR24","doi-asserted-by":"publisher","first-page":"100","DOI":"10.1186\/1471-2105-6-100","volume":"6","author":"A
+        Patil","year":"2005","unstructured":"Patil A, Nakamura H: Filtering high-throughput
+        protein-protein interaction data using a combination of genomic features.
+        BMC Bioinformatics. 2005, 6 (1): 100-10.1186\/1471-2105-6-100.","journal-title":"BMC
+        Bioinformatics"},{"issue":"6959","key":"570_CR25","doi-asserted-by":"publisher","first-page":"686","DOI":"10.1038\/nature02026","volume":"425","author":"WK
+        Huh","year":"2003","unstructured":"Huh WK, Falvo JV, Gerke LC, Carroll AS,
+        Howson RW, Weissman JS, O''Shea EK: Global analysis of protein localization
+        in budding yeast. Nature. 2003, 425 (6959): 686-691. 10.1038\/nature02026.","journal-title":"Nature"},{"issue":"5","key":"570_CR26","doi-asserted-by":"publisher","first-page":"349","DOI":"10.1074\/mcp.M100037-MCP200","volume":"1","author":"CM
+        Deane","year":"2002","unstructured":"Deane CM, Salwinski L, Xenarios I, Eisenberg
+        D: Protein interactions: two methods for assessment of the reliability of
+        high throughput observations. Mol Cell Proteomics. 2002, 1 (5): 349-356. 10.1074\/mcp.M100037-MCP200.","journal-title":"Mol
+        Cell Proteomics"},{"key":"570_CR27","first-page":"531","volume-title":"Pac
+        Symp Biocomput","author":"Y Qi","year":"2005","unstructured":"Qi Y, Klein-Seetharaman
+        J, Bar-Joseph Z: Random forest similarity for protein-protein interaction
+        prediction from multiple sources. Pac Symp Biocomput. 2005, 531-542."},{"issue":"3","key":"570_CR28","doi-asserted-by":"publisher","first-page":"292","DOI":"10.1016\/j.sbi.2004.05.003","volume":"14","author":"P
+        Bork","year":"2004","unstructured":"Bork P, Jensen LJ, von Mering C, Ramani
+        AK, Lee I, Marcotte EM: Protein interaction networks from yeast to human.
+        Curr Opin Struct Biol. 2004, 14 (3): 292-299. 10.1016\/j.sbi.2004.05.003.","journal-title":"Curr
+        Opin Struct Biol"},{"issue":"1","key":"570_CR29","doi-asserted-by":"publisher","first-page":"289","DOI":"10.1093\/nar\/28.1.289","volume":"28","author":"I
+        Xenarios","year":"2000","unstructured":"Xenarios I, Rice DW, Salwinski L,
+        Baron MK, Marcotte EM, Eisenberg D: DIP: the database of interacting proteins.
+        Nucleic Acids Res. 2000, 28 (1): 289-291. 10.1093\/nar\/28.1.289.","journal-title":"Nucleic
+        Acids Res"},{"issue":"3","key":"570_CR30","doi-asserted-by":"publisher","first-page":"R23","DOI":"10.1186\/gb-2003-4-3-r23","volume":"4","author":"BJ
+        Breitkreutz","year":"2003","unstructured":"Breitkreutz BJ, Stark C, Tyers
+        M: The GRID: the General Repository for Interaction Datasets. Genome Biol.
+        2003, 4 (3): R23-10.1186\/gb-2003-4-3-r23.","journal-title":"Genome Biol"},{"key":"570_CR31","doi-asserted-by":"crossref","unstructured":"Alfarano
+        C, Andrade CE, Anthony K, Bahroos N, Bajec M, Bantoft K, Betel D, Bobechko
+        B, Boutilier K, Burgess E: The Biomolecular Interaction Network Database and
+        related tools 2005 update. Nucleic Acids Res. 2005, D418-424. 33 Database","DOI":"10.1093\/nar\/gki051"},{"issue":"10","key":"570_CR32","doi-asserted-by":"publisher","first-page":"1275","DOI":"10.1093\/bioinformatics\/btg153","volume":"19","author":"PW
+        Lord","year":"2003","unstructured":"Lord PW, Stevens RD, Brass A, Goble CA:
+        Investigating semantic similarity measures across the Gene Ontology: the relationship
+        between sequence and annotation. Bioinformatics. 2003, 19 (10): 1275-1283.
+        10.1093\/bioinformatics\/btg153.","journal-title":"Bioinformatics"},{"issue":"Suppl61","key":"570_CR33","first-page":"S2","volume":"7","author":"A
+        Ben-Hur","year":"2005","unstructured":"Ben-Hur A, Noble WS: Choosing negative
+        examples for the prediction of protein-protein interactions. BMC Bioinformatics.
+        2005, 7 (Suppl61): S2-","journal-title":"BMC Bioinformatics"},{"issue":"8","key":"570_CR34","doi-asserted-by":"publisher","first-page":"4569","DOI":"10.1073\/pnas.061034498","volume":"98","author":"T
+        Ito","year":"2001","unstructured":"Ito T, Chiba T, Ozawa R, Yoshida M, Hattori
+        M, Sakaki Y: A comprehensive two-hybrid analysis to explore the yeast protein
+        interactome. Proc Natl Acad Sci U S A. 2001, 98 (8): 4569-4574. 10.1073\/pnas.061034498.","journal-title":"Proc
+        Natl Acad Sci U S A"},{"issue":"5553","key":"570_CR35","doi-asserted-by":"publisher","first-page":"321","DOI":"10.1126\/science.1064987","volume":"295","author":"AH
+        Tong","year":"2002","unstructured":"Tong AH, Drees B, Nardelli G, Bader GD,
+        Brannetti B, Castagnoli L, Evangelista M, Ferracuti S, Nelson B, Paoluzi S:
+        A combined experimental and computational strategy to define protein interaction
+        networks for peptide recognition modules. Science. 2002, 295 (5553): 321-324.
+        10.1126\/science.1064987.","journal-title":"Science"},{"issue":"6868","key":"570_CR36","doi-asserted-by":"publisher","first-page":"180","DOI":"10.1038\/415180a","volume":"415","author":"Y
+        Ho","year":"2002","unstructured":"Ho Y, Gruhler A, Heilbut A, Bader GD, Moore
+        L, Adams SL, Millar A, Taylor P, Bennett K, Boutilier K: Systematic identification
+        of protein complexes in Saccharomyces cerevisiae by mass spectrometry. Nature.
+        2002, 415 (6868): 180-183. 10.1038\/415180a.","journal-title":"Nature"},{"issue":"10","key":"570_CR37","doi-asserted-by":"publisher","first-page":"2987","DOI":"10.1091\/mbc.12.10.2987","volume":"12","author":"AP
+        Gasch","year":"2001","unstructured":"Gasch AP, Huang M, Metzner S, Botstein
+        D, Elledge SJ, Brown PO: Genomic expression responses to DNA-damaging agents
+        and the regulatory role of the yeast ATR homolog Mec1p. Mol Biol Cell. 2001,
+        12 (10): 2987-3003.","journal-title":"Mol Biol Cell"},{"issue":"12","key":"570_CR38","doi-asserted-by":"publisher","first-page":"3273","DOI":"10.1091\/mbc.9.12.3273","volume":"9","author":"PT
+        Spellman","year":"1998","unstructured":"Spellman PT, Sherlock G, Zhang MQ,
+        Iyer VR, Anders K, Eisen MB, Brown PO, Botstein D, Futcher B: Comprehensive
+        identification of cell cycle-regulated genes of the yeast Saccharomyces cerevisiae
+        by microarray hybridization. Mol Biol Cell. 1998, 9 (12): 3273-3297.","journal-title":"Mol
+        Biol Cell"}],"container-title":["BMC Genomics"],"original-title":[],"language":"en","link":[{"URL":"http:\/\/link.springer.com\/content\/pdf\/10.1186\/1471-2164-7-187.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"},{"URL":"http:\/\/link.springer.com\/article\/10.1186\/1471-2164-7-187\/fulltext.html","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"},{"URL":"https:\/\/link.springer.com\/content\/pdf\/10.1186\/1471-2164-7-187.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"similarity-checking"}],"deposited":{"date-parts":[[2021,9,1]],"date-time":"2021-09-01T01:37:43Z","timestamp":1630460263000},"score":1,"resource":{"primary":{"URL":"https:\/\/bmcgenomics.biomedcentral.com\/articles\/10.1186\/1471-2164-7-187"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2006,7,25]]},"references-count":38,"journal-issue":{"issue":"1","published-print":{"date-parts":[[2006,12]]}},"alternative-id":["570"],"URL":"http:\/\/dx.doi.org\/10.1186\/1471-2164-7-187","relation":{},"ISSN":["1471-2164"],"issn-type":[{"value":"1471-2164","type":"electronic"}],"subject":["Genetics","Biotechnology"],"published":{"date-parts":[[2006,7,25]]},"assertion":[{"value":"10
+        May 2006","order":1,"name":"received","label":"Received","group":{"name":"ArticleHistory","label":"Article
+        History"}},{"value":"25 July 2006","order":2,"name":"accepted","label":"Accepted","group":{"name":"ArticleHistory","label":"Article
+        History"}},{"value":"25 July 2006","order":3,"name":"first_online","label":"First
+        Online","group":{"name":"ArticleHistory","label":"Article History"}}],"article-number":"187"}}'
+  recorded_at: Thu, 05 Oct 2023 19:48:56 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/297
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:48:57 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1696462315722,"primary-name":"Springer
+        Science and Business Media LLC","counts":{"current-dois":2032926,"backfile-dois":13845713,"total-dois":15878639},"breakdowns":{"dois-by-issued-year":[[2022,738697],[2021,736641],[2020,697200],[2019,637628],[2018,626498],[2017,607344],[2014,594488],[2016,586868],[2013,576898],[2023,557382],[2015,524075],[2012,469541],[2011,453210],[2010,415852],[2009,397477],[2008,322290],[2007,283545],[2006,254889],[2004,251758],[2005,239917],[2003,236134],[2000,234944],[2002,225415],[2001,222802],[1999,205539],[1998,204688],[1997,198738],[1996,185252],[1995,174987],[1994,168734],[1993,167014],[1991,162873],[1992,161821],[1990,157387],[1989,152727],[1988,142846],[1987,136059],[1986,125472],[1985,117421],[1984,114755],[1983,101536],[1982,99089],[1981,96284],[1980,91121],[1979,84520],[1978,83762],[1977,79778],[1976,73482],[1975,69575],[1974,67550],[1973,62944],[1972,59939],[1971,55787],[1970,53125],[1969,49815],[1968,48955],[1967,47205],[1966,42454],[1965,37501],[1964,33205],[1963,30595],[1962,30097],[1961,29432],[1960,28854],[1959,25681],[1958,24491],[1956,21941],[1957,21848],[1955,19912],[1954,16716],[1953,16708],[1932,16468],[1928,16373],[1930,16195],[1927,15870],[1926,15584],[1929,15329],[1931,15287],[1933,15129],[1952,14994],[1936,14706],[1938,14651],[1950,14507],[1935,14397],[1937,14279],[1939,14063],[1951,13951],[1934,13698],[1925,13413],[1924,13128],[1923,12818],[1922,12374],[1949,11829],[1913,11542],[1921,11472],[1940,11281],[1914,10095],[1941,9997],[1920,9970],[1942,9650],[1948,9430],[1912,9290],[1910,9128],[1911,9063],[1943,8590],[1904,8229],[1903,8054],[1909,7961],[1919,7949],[1908,7910],[1905,7554],[1907,7549],[1902,7376],[1906,7298],[1918,7183],[1901,7167],[1915,7030],[1900,7023],[1916,6836],[1897,6815],[1917,6752],[1887,6742],[1886,6713],[1899,6699],[1888,6512],[1947,6407],[1893,6407],[1898,6398],[1889,6361],[1895,6147],[1891,6122],[1894,6116],[1880,6105],[1944,6080],[1885,6076],[1892,6068],[1890,5981],[1896,5963],[1877,5912],[1884,5771],[1883,5732],[1878,5633],[1882,5628],[1881,5603],[1946,5556],[1876,5486],[1879,5427],[1847,5058],[1945,3954],[1848,3882],[1872,3827],[1875,3819],[1873,3761],[1870,3725],[1874,3641],[1871,3604],[1852,3065],[1849,3025],[1869,3021],[1856,2943],[1855,2836],[1857,2796],[1854,2772],[1851,2733],[1850,2690],[1860,2628],[1867,2601],[1859,2530],[1853,2512],[1868,2447],[1858,2433],[1865,2238],[1863,2148],[1864,2145],[1866,2110],[1862,2044],[1846,1920],[1861,1703],[1845,278],[2024,206],[1844,176],[1843,99],[1837,66],[1840,64],[1836,62],[1835,62],[1833,62],[1400,57],[1834,56],[1838,55],[1841,50],[1832,50],[1839,49],[1842,42],[1827,2],[1815,2]]},"prefixes":["10.1208","10.19150","10.1245","10.7603","10.1007","10.17269","10.4076","10.7123","10.1140","10.1381","10.33283","10.4333","10.1186","10.1065","10.1361","10.4056","10.1023","10.1385","10.26778","10.26777","10.5819","10.1617","10.1013","10.1057","10.1379","10.1038","10.1114","10.3758","10.1557","10.3858","10.7759","10.2165","10.1251","10.5052"],"coverage":{"affiliations-current":1.116617132153359E-4,"similarity-checking-current":0.9964356794098752,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.04590951726357465,"licenses-backfile":0.7187580011228024,"funders-current":0.2501512598097521,"affiliations-backfile":4.914156461281552E-4,"resource-links-backfile":0.5320717683516912,"orcids-backfile":0.05136384092317962,"update-policies-current":0.9261217575061758,"ror-ids-backfile":0.0,"orcids-current":0.3873869486641422,"similarity-checking-backfile":0.9344034503676336,"references-backfile":0.6703077696323765,"descriptions-backfile":0.0,"award-numbers-backfile":0.03723087427855828,"update-policies-backfile":0.2806135733132703,"licenses-current":0.9904787483656562,"award-numbers-current":0.1925293886742557,"abstracts-backfile":0.03314506085746541,"resource-links-current":0.6217284839684278,"abstracts-current":0.217546039550874,"references-current":0.8660187335889254},"prefix":[{"name":"American
+        Association of Pharmaceutical Scientists","value":"10.1208"},{"name":"Society
+        for Mining, Metallurgy & Exploration Inc.","value":"10.19150"},{"name":"Springer
+        - Society of Surgical Oncology","value":"10.1245"},{"name":"Springer - Global
+        Science Journals","value":"10.7603"},{"name":"Springer-Verlag","value":"10.1007"},{"name":"Canadian
+        Public Health Association","value":"10.17269"},{"name":"Springer (Cases Network,
+        Ltd.)","value":"10.4076"},{"name":"Springer Science and Business Media LLC","value":"10.7123"},{"name":"Springer-Verlag","value":"10.1140"},{"name":"Springer
+        - FD Communications","value":"10.1381"},{"name":"Springer Science and Business
+        Media LLC","value":"10.33283"},{"name":"Springer - The Korean Society of Pharmaceutical
+        Sciences and Technology","value":"10.4333"},{"name":"Springer (Biomed Central
+        Ltd.)","value":"10.1186"},{"name":"Springer - Ecomed Publishers","value":"10.1065"},{"name":"Springer
+        - ASM International","value":"10.1361"},{"name":"Genomic Standards Consortium","value":"10.4056"},{"name":"Springer
+        (Kluwer Academic Publishers)","value":"10.1023"},{"name":"Springer - Humana
+        Press","value":"10.1385"},{"name":"SpringerNature","value":"10.26778"},{"name":"SpringerNature","value":"10.26777"},{"name":"Springer
+        - (backfiles)","value":"10.5819"},{"name":"Springer - RILEM Publishing","value":"10.1617"},{"name":"Springer
+        Science and Business Media LLC","value":"10.1013"},{"name":"Springer Science
+        and Business Media LLC","value":"10.1057"},{"name":"Springer - Cell Stress
+        Society International","value":"10.1379"},{"name":"Springer Science and Business
+        Media LLC","value":"10.1038"},{"name":"Springer (Kluwer Academic Publishers
+        - Biomedical Engineering Society (BMES))","value":"10.1114"},{"name":"Springer
+        - Psychonomic Society","value":"10.3758"},{"name":"Materials Research Society","value":"10.1557"},{"name":"Springer
+        Science and Business Media LLC","value":"10.3858"},{"name":"Cureus, Inc.","value":"10.7759"},{"name":"Springer
+        - Adis","value":"10.2165"},{"name":"Springer (Biological Procedures Online)","value":"10.1251"},{"name":"Springer
+        - Real Academia de Ciencias Exactas, Fisicas y Naturales","value":"10.5052"}],"id":297,"tokens":["springer","science","and","business","media","llc"],"counts-type":{"all":{"monograph":359,"journal-article":9538976,"book":333443,"reference-entry":85798,"proceedings-article":1149,"journal":2144,"component":5270,"book-chapter":6514303,"reference-book":1047,"journal-issue":1311,"dataset":23869},"backfile":{"monograph":359,"journal-article":8299935,"book":295341,"proceedings-article":1149,"book-chapter":5226764,"reference-book":744,"journal-issue":1311,"dataset":20110},"current":{"journal-article":1239040,"book":38102,"book-chapter":751724,"reference-book":303,"dataset":3757}},"coverage-type":{"all":{"monograph":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.6295264623955432,"references":0.0,"funders":0.0,"similarity-checking":0.6295264623955432,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.6295264623955432,"descriptions":0.0},"journal-article":{"last-status-check-time":1696462315722,"affiliations":7.37081212910065E-4,"abstracts":0.09197035405058153,"orcids":0.1414656038551727,"licenses":0.8800411071377053,"references":0.733224090300678,"funders":0.118032480635238,"similarity-checking":0.9077871670921491,"award-numbers":0.09490903426111985,"ror-ids":0.0,"update-policies":0.3790063000473007,"resource-links":0.869894839865411,"descriptions":0.0},"book":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.02808875879835534,"licenses":0.9949586586013202,"references":2.999013324616201E-6,"funders":0.00470545190632282,"similarity-checking":0.9965841238232621,"award-numbers":6.357908248186347E-4,"ror-ids":0.0,"update-policies":2.999013324616201E-6,"resource-links":0.9945477937758477,"descriptions":0.0},"reference-entry":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.005396396186391291,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.006092254134029591,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":4.664179104477612E-4,"references":0.0,"funders":0.0,"similarity-checking":0.001865671641791045,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":4.664179104477612E-4,"descriptions":0.0},"component":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":5.692599620493359E-4},"book-chapter":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.003664091154494963,"orcids":0.02050641488429384,"licenses":0.4969893171993995,"references":0.6587463002565278,"funders":0.001408285736785655,"similarity-checking":0.9701639607491392,"award-numbers":2.052406834622215E-4,"ror-ids":0.0,"update-policies":0.327355973463316,"resource-links":1.535083645940325E-7,"descriptions":0.0},"reference-book":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.02578796561604585,"licenses":0.9914040114613181,"references":0.0,"funders":0.001910219675262655,"similarity-checking":0.994269340974212,"award-numbers":0.001910219675262655,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9914040114613181,"descriptions":0.0},"journal-issue":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.03508771929824561,"references":0.0,"funders":0.0,"similarity-checking":0.07704042715484363,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.03508771929824561,"descriptions":0.0},"dataset":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.2632284553186141,"licenses":0.0,"references":0.0,"funders":0.3156814277933722,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.8464116636641669,"resource-links":0.0,"descriptions":0.0}},"backfile":{"monograph":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.6295264623955432,"references":0.0,"funders":0.0,"similarity-checking":0.6295264623955432,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.6295264623955432,"descriptions":0.0},"journal-article":{"last-status-check-time":1696462315722,"affiliations":8.197654559945349E-4,"abstracts":0.05477982658900341,"orcids":0.0801156876529756,"licenses":0.8637439931758502,"references":0.7045625056099837,"funders":0.07523167350105754,"similarity-checking":0.8941902557068218,"award-numbers":0.06199181077924104,"ror-ids":0.0,"update-policies":0.2983495653881627,"resource-links":0.8520898055225734,"descriptions":0.0},"book":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.01171527149972405,"licenses":0.9943319755807692,"references":3.385916618417355E-6,"funders":0.00191981472264264,"similarity-checking":0.996454945300517,"award-numbers":3.589071615522396E-4,"ror-ids":0.0,"update-policies":3.385916618417355E-6,"resource-links":0.9941559079166116,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.006092254134029591,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":8.127399668322503E-4,"orcids":0.007471353212044776,"licenses":0.4760161354138048,"references":0.6568241841414688,"funders":0.001010185269509012,"similarity-checking":0.9987814640186548,"award-numbers":1.633898144243742E-4,"ror-ids":0.0,"update-policies":0.2657366967400862,"resource-links":1.913229677100401E-7,"descriptions":0.0},"reference-book":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.01612903225806452,"licenses":0.9879032258064516,"references":0.0,"funders":0.0,"similarity-checking":0.9919354838709677,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9879032258064516,"descriptions":0.0},"journal-issue":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.03508771929824561,"references":0.0,"funders":0.0,"similarity-checking":0.07704042715484363,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.03508771929824561,"descriptions":0.0},"dataset":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.1835405271009448,"licenses":0.0,"references":0.0,"funders":0.2677772252610641,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.9979612133267031,"resource-links":0.0,"descriptions":0.0}},"current":{"journal-article":{"last-status-check-time":1696462315722,"affiliations":1.832063533057851E-4,"abstracts":0.3410979467975207,"orcids":0.5524293001033058,"licenses":0.9892101949896694,"references":0.9252195247933884,"funders":0.4047415741219008,"similarity-checking":0.998868478822314,"award-numbers":0.3154111247417355,"ror-ids":0.0,"update-policies":0.9193004261363636,"resource-links":0.9891649987086777,"descriptions":0.0},"book":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.1550049866148759,"licenses":0.9998162826098368,"references":0.0,"funders":0.02629783213479607,"similarity-checking":0.9975854285864258,"award-numbers":0.002782006193900583,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.9975854285864258,"descriptions":0.0},"book-chapter":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.02610133506446515,"orcids":0.1257562616066535,"licenses":0.9970427976225317,"references":0.8170126269747939,"funders":0.00518009269359499,"similarity-checking":0.9973461004304771,"award-numbers":6.425230536739548E-4,"ror-ids":0.0,"update-policies":0.9891303191064806,"resource-links":0.0,"descriptions":0.0},"reference-book":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.0495049504950495,"licenses":1.0,"references":0.0,"funders":0.006600660066006601,"similarity-checking":1.0,"award-numbers":0.006600660066006601,"ror-ids":0.0,"update-policies":0.0,"resource-links":1.0,"descriptions":0.0},"dataset":{"last-status-check-time":1696462315722,"affiliations":0.0,"abstracts":0.0,"orcids":0.689912163960607,"licenses":0.0,"references":0.0,"funders":0.5722651051370775,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.03566675538993878,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"Dordrecht,
+        GX, Netherlands","names":["Springer Science and Business Media LLC","American
+        Association of Pharmaceutical Scientists","Society for Mining, Metallurgy
+        & Exploration Inc.","Springer - Society of Surgical Oncology","Springer -
+        Global Science Journals","Springer-Verlag","Canadian Public Health Association","Springer
+        (Cases Network, Ltd.)","Springer - FD Communications","Springer - The Korean
+        Society of Pharmaceutical Sciences and Technology","Springer (Biomed Central
+        Ltd.)","Springer - Ecomed Publishers","Springer - ASM International","Genomic
+        Standards Consortium","Springer (Kluwer Academic Publishers)","Springer -
+        Humana Press","SpringerNature","Springer - (backfiles)","Springer - RILEM
+        Publishing","Springer - Cell Stress Society International","Springer (Kluwer
+        Academic Publishers - Biomedical Engineering Society (BMES))","Springer -
+        Psychonomic Society","Materials Research Society","Cureus, Inc.","Springer
+        - Adis","Springer (Biological Procedures Online)","Springer - Real Academia
+        de Ciencias Exactas, Fisicas y Naturales"]}}'
+  recorded_at: Thu, 05 Oct 2023 19:48:57 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1186
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:48:57 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=PwdN4XilmXN%2BLiKvtzVBdsUDk4MIh7nHmAtDQWrJdlwTbzoa0tYAlIJ0byd193aQ9Fvqti04l2w8TVgNn2HxU36zz0x2r2sy6lFgM6k2jI8GkAA2F3sxCpr%2Fi8W0CT6vT5ks%2FaA%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 81182f64ba3fd0c5-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.1186",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Thu, 05 Oct 2023 19:48:57 GMT
+recorded_with: VCR 6.2.0

@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/unregistered
+    uri: https://api.rogue-scholar.org/posts/unregistered
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,78 +18,182 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '7384'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '28147'
       Date:
-      - Mon, 10 Jul 2023 20:41:56 GMT
-      Etag:
-      - '"das7e3njkl5os"'
+      - Thu, 05 Oct 2023 19:45:43 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::dglhh-1689021716211-c61392582849
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0NZS5CXZGE7F13ZT1QWAE2-fra
     body:
       encoding: UTF-8
-      string: "[{\"id\":\"3023e24a-817d-452e-bb6e-ddadecce94c6\",\"doi\":null,\"url\":\"https://blog.front-matter.io/posts/rogue-scholar-full-text-search-improvements\",\"title\":\"Rogue
-        Scholar full-text search improvements\",\"summary\":\"Two weeks ago I added
-        a first version of full-text search to the Rogue Scholar blog archive. This
-        was a good start, as blogs typically only have the timeline, tags, and metadata
-        like titles and authors to help readers find relevant content. Today I launched
-        an improved version of full-text search with these improvements: Sorting of
-        search results by relevanceSupport for fuzzy search or approximate string
-        matchingAdded the backend for an updated search interface supporting faceted
-        search and/or...\",\"published_at\":1688994653,\"updated_at\":1689001959,\"indexed_at\":1689007007,\"authors\":[{\"url\":\"https://orcid.org/0000-0003-1419-2405\",\"name\":\"Martin
-        Fenner\"}],\"image\":\"https://images.unsplash.com/photo-1472512946974-cc09a294e210?crop&#x3D;entropy&cs&#x3D;tinysrgb&fit&#x3D;max&fm&#x3D;jpg&ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDI3fHxzZWFyY2h8ZW58MHx8fHwxNjg4OTkyNDk1fDA&ixlib&#x3D;rb-4.0.3&q&#x3D;80&w&#x3D;2000\",\"tags\":[\"News\"],\"language\":\"en\",\"reference\":[{\"doi\":\"https://doi.org/10.53731/80awr-zcc48\",\"key\":\"ref1\"},{\"doi\":\"https://doi.org/10.1136/bmj.c181\",\"key\":\"ref2\"}],\"blog_id\":\"f0m0e38\",\"blog_name\":\"Front
-        Matter\",\"blog\":{\"id\":\"f0m0e38\",\"title\":\"Front Matter\",\"description\":\"The
-        Front Matter Blog covers the intersection of science and technology since
-        2007.\",\"language\":\"en\",\"favicon\":\"https://blog.front-matter.io/favicon.png\",\"feed_url\":\"https://blog.front-matter.io/atom-complete/\",\"home_page_url\":\"https://blog.front-matter.io\",\"user_id\":\"8498eaf6-8c58-4b58-bc15-27eda292b1aa\",\"created_at\":\"2023-05-31T07:20:33+00:00\",\"indexed_at\":\"2023-01-02\",\"feed_format\":\"application/atom+xml\",\"license\":\"https://creativecommons.org/licenses/by/4.0/legalcode\",\"generator\":\"Ghost
-        5.52\",\"category\":\"Engineering and Technology\",\"prefix\":\"10.53731\",\"modified_at\":\"2023-07-05T19:22:17+00:00\",\"version\":\"https://jsonfeed.org/version/1.1\",\"backlog\":false,\"current_feed_url\":\"https://blog.front-matter.io/atom/\",\"expired\":null}},{\"id\":\"a90b23ea-fda1-4c07-b034-9d16961c2046\",\"doi\":null,\"url\":\"https://blog.oa.works/join-the-oa-report-for-libraries-pilot-to-simplify-compliance-checking-for-your-institutional-funders-oa-policies\",\"title\":\"Join
-        the OA.Report for libraries pilot to simplify compliance checking for your
-        institutional & funder’s OA policies.\",\"summary\":\"Today, we’re happy to
-        announce that you can join the OA.Report for libraries pilot! If you’re interested
-        in joining: read on and get in touch!Get in touch\U0001F4A1About OA.ReportOA.Report
-        is an open-source tool that identifies research outputs organizations have
-        supported, analyzes their openness (including OA policy compliance), and then
-        streamlines taking action to make results more open.Getting an OA.Report takes
-        just seconds!OA.Report has been in use at major foundations for...\",\"published_at\":1688994400,\"updated_at\":1688994400,\"indexed_at\":0,\"authors\":[{\"url\":null,\"name\":\"OA.Works\"}],\"image\":\"https://blog.oa.works/content/images/2023/07/OA.Report-for-libraries-pilot.png\",\"tags\":[\"OA.Report\"],\"language\":\"en\",\"reference\":[],\"blog_id\":\"h7bpg11\",\"blog_name\":\"OA.Works
-        Blog\",\"blog\":{\"id\":\"h7bpg11\",\"title\":\"OA.Works Blog\",\"description\":\"OA.Works
-        Blog\",\"language\":\"en\",\"favicon\":\"https://blog.oa.works/favicon.png\",\"feed_url\":\"https://blog.oa.works/rss/\",\"home_page_url\":\"https://blog.oa.works/\",\"user_id\":\"8498eaf6-8c58-4b58-bc15-27eda292b1aa\",\"created_at\":\"2023-05-31T14:11:14+00:00\",\"indexed_at\":\"2023-01-04\",\"feed_format\":\"application/rss+xml\",\"license\":\"https://creativecommons.org/licenses/by/4.0/legalcode\",\"generator\":\"Ghost
-        5.53\",\"category\":\"Engineering and Technology\",\"prefix\":\"10.59350\",\"modified_at\":\"2023-07-03T15:34:01+00:00\",\"version\":\"https://jsonfeed.org/version/1.1\",\"backlog\":true,\"current_feed_url\":null,\"expired\":null}},{\"id\":\"d49b2093-2d78-46a1-909a-a29cfdf91df9\",\"doi\":null,\"url\":\"https://libscie.org/minutes-assembly-11\",\"title\":\"Minutes
-        Assembly #11\",\"summary\":\"On June 28th, we assembled our supporting community
-        to decide next steps, together (see our original agenda). In this post, we
-        report some key points for those who were unable to attend.Business developmentThe
-        business is progressing steadily, but our revenue is not growing fast enough
-        to cover costs as they are. We had a great quarter, where we covered around
-        44% of our expenses with our own income. This continues the upward trend as
-        you can see specified in the slides below.Slides capturing...\",\"published_at\":1688986812,\"updated_at\":1688986812,\"indexed_at\":0,\"authors\":[{\"url\":null,\"name\":\"Chris
-        Hartgerink\"}],\"image\":\"https://images.unsplash.com/photo-1688841903329-62edd2ea6cb1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8YWxsfDN8fHx8fHwyfHwxNjg4OTcwNzk5fA&ixlib=rb-4.0.3&q=80&w=2000\",\"tags\":[],\"language\":\"en\",\"reference\":[],\"blog_id\":\"h49ct36\",\"blog_name\":\"Liberate
-        Science\",\"blog\":{\"id\":\"h49ct36\",\"title\":\"Liberate Science\",\"description\":\"Research
-        as a commons\",\"language\":\"en\",\"favicon\":\"https://libscie.org/favicon.png\",\"feed_url\":\"https://libscie.org/rss/\",\"home_page_url\":\"https://libscie.org/\",\"user_id\":\"8498eaf6-8c58-4b58-bc15-27eda292b1aa\",\"created_at\":\"2023-05-31T14:08:03+00:00\",\"indexed_at\":\"2023-01-04\",\"feed_format\":\"application/rss+xml\",\"license\":\"https://creativecommons.org/licenses/by/4.0/legalcode\",\"generator\":\"Ghost
-        5.49\",\"category\":\"Social Sciences\",\"prefix\":\"10.59350\",\"modified_at\":\"2023-07-04T06:30:20+00:00\",\"version\":\"https://jsonfeed.org/version/1.1\",\"backlog\":true,\"current_feed_url\":null,\"expired\":null}},{\"id\":\"e58803df-87a2-4e85-95de-c2b4a35d6c9a\",\"doi\":null,\"url\":\"https://blog.oa.works/oa-report-now-freely-available-for-hundreds-of-research-funders-to-analyze-and-increase-their-openness\",\"title\":\"OA.Report
-        now free for thousands of funders to analyze and increase their impact using
-        open research\",\"summary\":\"Today, we’re releasing free public OA.Reports
-        for thousands of major research funders to help discover publications they’ve
-        funded, understand how open their research is, and increase the impact of
-        their investments. This release is an important milestone for OA.Report, which
-        was developed in partnership with the Gates Foundation and is currently in
-        use at the Robert Wood Johnson Foundation, Wellcome, the Michael J. Fox Foundation,
-        and other major foundations.Find your...\",\"published_at\":1688994571,\"updated_at\":1688994571,\"indexed_at\":0,\"authors\":[{\"url\":null,\"name\":\"OA.Works\"}],\"image\":\"https://blog.oa.works/content/images/2023/07/oareport-short-optim-looping.gif\",\"tags\":[\"OA.Report\"],\"language\":\"en\",\"reference\":[],\"blog_id\":\"h7bpg11\",\"blog_name\":\"OA.Works
-        Blog\",\"blog\":{\"id\":\"h7bpg11\",\"title\":\"OA.Works Blog\",\"description\":\"OA.Works
-        Blog\",\"language\":\"en\",\"favicon\":\"https://blog.oa.works/favicon.png\",\"feed_url\":\"https://blog.oa.works/rss/\",\"home_page_url\":\"https://blog.oa.works/\",\"user_id\":\"8498eaf6-8c58-4b58-bc15-27eda292b1aa\",\"created_at\":\"2023-05-31T14:11:14+00:00\",\"indexed_at\":\"2023-01-04\",\"feed_format\":\"application/rss+xml\",\"license\":\"https://creativecommons.org/licenses/by/4.0/legalcode\",\"generator\":\"Ghost
-        5.53\",\"category\":\"Engineering and Technology\",\"prefix\":\"10.59350\",\"modified_at\":\"2023-07-03T15:34:01+00:00\",\"version\":\"https://jsonfeed.org/version/1.1\",\"backlog\":true,\"current_feed_url\":null,\"expired\":null}}]"
-  recorded_at: Mon, 10 Jul 2023 20:41:56 GMT
+      string: '[{"archive_url":null,"authors":[{"name":null}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":true,"category":"law","created_at":"2023-09-15","current_feed_url":null,"description":"Urheberrecht
+        und kreatives Schaffen in der digitalen Welt","favicon":null,"feed_format":"application/atom+xml","feed_url":"https://irights.info/feed/atom","filter":null,"funding":null,"generator":"WordPress","home_page_url":"https://irights.info","id":"15san30","issn":null,"language":"de","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-25T10:21:48+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"irights","status":"active","title":"iRights.info","use_api":true,"use_mastodon":false,"user_id":"81a5b5f1-97c2-416b-8715-46e10f37018c","version":"https://jsonfeed.org/version/1.1"},"blog_name":"iRights.info","blog_slug":"irights","doi":null,"id":"17d0e31c-bc41-42b8-b873-d3dacee61f5c","image":"https://irights.info/wp-content/uploads/2015/09/mobilsicher-screenshot-490x202.jpg","indexed_at":0,"language":"de","published_at":1441610738,"reference":[],"relationships":[],"summary":"Wer
+        sich Gedanken \u00fcber die Sicherheit seiner Daten auf mobilen Ger\u00e4ten
+        macht, findet seit heute einen neuen Anlaufpunkt: das Informationsangebot
+        mobilsicher.de, welches heute auf der Internationalen Funkausstellung in Berlin
+        offiziell gestartet wird.","tags":["Datenschutz Sicherheit","Datensicherheit","Handy"],"title":"Smartphone
+        und mobile Ger\u00e4te sicher nutzen: Neue Info-Website mobilsicher.de","updated_at":1477054286,"url":"https://irights.info/2015/09/07/smartphone-und-mobile-geraete-sicher-nutzen-neue-info-website-mobilsicher-de/26023"},{"archive_url":null,"authors":[{"name":null}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":true,"category":"law","created_at":"2023-09-15","current_feed_url":null,"description":"Urheberrecht
+        und kreatives Schaffen in der digitalen Welt","favicon":null,"feed_format":"application/atom+xml","feed_url":"https://irights.info/feed/atom","filter":null,"funding":null,"generator":"WordPress","home_page_url":"https://irights.info","id":"15san30","issn":null,"language":"de","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-25T10:21:48+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"irights","status":"active","title":"iRights.info","use_api":true,"use_mastodon":false,"user_id":"81a5b5f1-97c2-416b-8715-46e10f37018c","version":"https://jsonfeed.org/version/1.1"},"blog_name":"iRights.info","blog_slug":"irights","doi":null,"id":"1d947df1-4fda-43b2-a6ec-701ede80844d","image":null,"indexed_at":0,"language":"de","published_at":1441603552,"reference":[],"relationships":[],"summary":"Vergangene
+        Woche schrieb Jan Engelmann auf iRights.info \u00fcber die Band \u201eThe
+        Grateful Dead\u201c, musikalisches Schaffen und freie Lizenzen. Der Artikel\u00a0pl\u00e4diert
+        daf\u00fcr,\u00a0kreative Sch\u00f6pfung st\u00e4rker als gemeinschaftlichen
+        Prozess zu begreifen.\u00a0  Jetzt hat der Autor und Sprecher\u00a0Fabian
+        Neidhardt eine H\u00f6rfassung des Artikels erstellt. Er schreibt:  Ich mochte
+        den Text und habe ihn eingesprochen, ihn \u201eweiterverarbeitet\u201c zu
+        einer 20-min\u00fctigen H\u00f6rfassung.","tags":["Autor Text","Creative Commons
+        Lizenzen","Gesellschaft Kunst","Musik MP 3","Urheberrecht","Fabian Neidhardt","Pop","The
+        Grateful Dead"],"title":"Jetzt auch zum H\u00f6ren: \u201eDas Gemeinsame in
+        der Musik\u201c","updated_at":1447345399,"url":"https://irights.info/2015/09/07/jetzt-auch-zum-hoeren-das-gemeinsame-in-der-musik/26011"},{"archive_url":null,"authors":[{"name":"Martin
+        Paul Eve","url":"https://orcid.org/0000-0002-5589-8511"}],"blog":{"api":false,"archive_prefix":null,"authors":[{"name":"Martin
+        Paul Eve","url":null}],"backlog":0,"canonical_url":null,"category":"languagesAndLiterature","created_at":"2023-07-26","current_feed_url":"https://eve.gd/feed.xml","description":null,"favicon":"https://eve.gd/favicon.png","feed_format":"application/atom+xml","feed_url":"https://eve.gd/feed_all.xml","filter":null,"funding":null,"generator":"Jekyll","home_page_url":"https://eve.gd","id":"z4b9d78","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"1970-01-01T00:00:00+00:00","plan":"Team","prefix":"10.59348","relative_url":"blog","slug":"eve","status":"active","title":"Martin
+        Paul Eve","use_api":null,"use_mastodon":false,"user_id":"eb3f6a26-3e38-42ad-b752-250eb2c0bf89","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Martin
+        Paul Eve","blog_slug":"eve","doi":null,"id":"494165aa-123c-43da-be99-65cf0e538903","image":null,"indexed_at":0,"language":"en","published_at":1441554958,"reference":[],"relationships":[],"summary":"In
+        a previous piece, I noted in defence of Creative Commons licenses that \u201cWhether
+        a work is openly licensed or not does not affect whether people can or will
+        write things that are not true\u201d. In that piece, I focused on the fact
+        that legal redress seems to remain available under a CC BY license. Here,
+        I want to briefly cover the other side: work that isn\u2019t openly licensed
+        but that still gets misquoted.","tags":[],"title":"A final example to show
+        that misquotation is nothing to do with open licensing","updated_at":1441554958,"url":"https://eve.gd/2015/09/06/a-final-example-to-show-that-misquotation-is-nothing-to-do-with-open-licensing"},{"archive_url":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"blog":{"api":true,"archive_prefix":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"backlog":0,"canonical_url":true,"category":"chemicalSciences","created_at":"2023-08-27","current_feed_url":null,"description":"Chemistry
+        with a twist","favicon":"https://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2023/08/cropped-blog-rzepa-32x32.jpg","feed_format":"application/atom+xml","feed_url":"https://www.ch.imperial.ac.uk/rzepa/blog/?feed=atom","filter":null,"funding":null,"generator":"WordPress
+        6.3.1","home_page_url":"https://www.ch.imperial.ac.uk/rzepa/blog","id":"jqdyv23","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-25T16:46:13+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"rzepa","status":"active","title":"Henry
+        Rzepa''s Blog","use_api":true,"use_mastodon":false,"user_id":"d876eef7-660b-4934-ab47-fa52cca7ad5a","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Henry
+        Rzepa''s Blog","blog_slug":"rzepa","doi":null,"id":"61c731f9-f835-4a29-9238-f2d102ed82b3","image":"http://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2015/09/CC.jpg","indexed_at":0,"language":"en","published_at":1441528272,"reference":[{"doi":"http://doi.org/10.1002/anie.201410407","key":"ref1"}],"relationships":[{"type":"IsIdenticalTo","url":"https://doi.org/10.15200/winn.145586.67744"}],"summary":"An
+        article entitled \"<em>Four Decades of the Chemistry of Planar Hypercoordinate
+        Compounds</em>\"[1] was recently reviewed by Steve Bacharach on his blog,
+        where you can also see comments. Given the recent crystallographic themes
+        here, I thought I might try a search of the CSD (Cambridge structure database)
+        to see whether anything interesting might emerge for tetracoordinate carbon.","tags":["Crystal
+        Structure Mining"],"title":"Deviations from tetrahedral four-coordinate carbon:
+        a statistical exploration.","updated_at":1694924447,"url":"https://www.ch.imperial.ac.uk/rzepa/blog?p=14548"},{"archive_url":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"blog":{"api":true,"archive_prefix":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"backlog":0,"canonical_url":true,"category":"chemicalSciences","created_at":"2023-08-27","current_feed_url":null,"description":"Chemistry
+        with a twist","favicon":"https://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2023/08/cropped-blog-rzepa-32x32.jpg","feed_format":"application/atom+xml","feed_url":"https://www.ch.imperial.ac.uk/rzepa/blog/?feed=atom","filter":null,"funding":null,"generator":"WordPress
+        6.3.1","home_page_url":"https://www.ch.imperial.ac.uk/rzepa/blog","id":"jqdyv23","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-25T16:46:13+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"rzepa","status":"active","title":"Henry
+        Rzepa''s Blog","use_api":true,"use_mastodon":false,"user_id":"d876eef7-660b-4934-ab47-fa52cca7ad5a","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Henry
+        Rzepa''s Blog","blog_slug":"rzepa","doi":null,"id":"f1ed804f-1204-4c20-a183-5d31cbd231ac","image":"http://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2015/09/SAmide-def.jpg","indexed_at":0,"language":"en","published_at":1441441075,"reference":[],"relationships":[{"type":"IsIdenticalTo","url":"https://doi.org/10.15200/winn.144212.25425"}],"summary":"The\u00a0previous
+        post explored the structural features of amides. Here I compare the analysis
+        with that for the closely related thioamides.      Here is the torsional analysis
+        around the C-N bond. The \u201cdiff\u201d (difference) is that almost all
+        the hits are concentrated into angles of 0\u00b0 or 180\u00b0; the twist about
+        the C-N bond\u00a0from co-planarity is much less if S is present.","tags":["Crystal
+        Structure Mining"],"title":"\u03c0-Resonance in thioamides: a crystallographic
+        &#8220;diff&#8221; with amides.","updated_at":1694924009,"url":"https://www.ch.imperial.ac.uk/rzepa/blog?p=14543"},{"archive_url":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"blog":{"api":true,"archive_prefix":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"backlog":0,"canonical_url":true,"category":"chemicalSciences","created_at":"2023-08-27","current_feed_url":null,"description":"Chemistry
+        with a twist","favicon":"https://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2023/08/cropped-blog-rzepa-32x32.jpg","feed_format":"application/atom+xml","feed_url":"https://www.ch.imperial.ac.uk/rzepa/blog/?feed=atom","filter":null,"funding":null,"generator":"WordPress
+        6.3.1","home_page_url":"https://www.ch.imperial.ac.uk/rzepa/blog","id":"jqdyv23","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-25T16:46:13+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"rzepa","status":"active","title":"Henry
+        Rzepa''s Blog","use_api":true,"use_mastodon":false,"user_id":"d876eef7-660b-4934-ab47-fa52cca7ad5a","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Henry
+        Rzepa''s Blog","blog_slug":"rzepa","doi":null,"id":"39f292c1-0cc1-47b0-bd38-67bc19f93d3b","image":"http://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2015/09/Amide-def.jpg","indexed_at":0,"language":"en","published_at":1441434729,"reference":[],"relationships":[{"type":"IsIdenticalTo","url":"https://doi.org/10.15200/winn.144212.25356"}],"summary":"The
+        \u03c0-resonance in amides famously helped Pauling to his proposal\u00a0of
+        a helical structure for proteins. Here I explore some geometric properties
+        of amides related to the C-N bond and the torsions about it.     \t   \tThe
+        key aspect of amides is that a lone pair of electrons on the nitrogen can
+        conjugate with the C=O carbonyl only if the\u00a0lone pair orbital is parallel
+        to the C-O \u03c0-system.","tags":["Crystal Structure Mining"],"title":"\u03c0-Resonance
+        in amides: a crystallographic reality check.","updated_at":1694924603,"url":"https://www.ch.imperial.ac.uk/rzepa/blog?p=14537"},{"archive_url":null,"authors":[{"name":"Mike
+        Taylor","url":"http://www.miketaylor.org.uk/dino/pubs/"}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":1550,"canonical_url":null,"category":"earthAndRelatedEnvironmentalSciences","created_at":"2023-02-01","current_feed_url":null,"description":"SV-POW!  ...  All
+        sauropod vertebrae, except when we''re talking about Open Access","favicon":null,"feed_format":"application/atom+xml","feed_url":"https://svpow.com/feed/atom/","filter":null,"funding":null,"generator":"WordPress.com","home_page_url":"https://svpow.com","id":"dkvra02","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-22T14:44:45+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"svpow","status":"active","title":"Sauropod
+        Vertebra Picture of the Week","use_api":true,"use_mastodon":false,"user_id":"04d03585-c8bb-40f2-9619-5076a5e0aed2","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Sauropod
+        Vertebra Picture of the Week","blog_slug":"svpow","doi":null,"id":"55073236-c87a-4545-9754-b51c284dba16","image":null,"indexed_at":0,"language":"en","published_at":1441376229,"reference":[],"relationships":[],"summary":"THIS
+        POST IS RETRACTED. The reasons are explained in the next post. I wish I had
+        never posted this, but you can\u2019t undo what is done, especially on the
+        Internet, so I am not deleting it but marking it as retracted.","tags":["Conferences","Rants","Stinkin
+        Delegates"],"title":"Unhappy thoughts on student projects at SVPCA 2015","updated_at":1532510552,"url":"https://svpow.com/2015/09/04/unhappy-thoughts-on-student-projects-at-svpca-2015"},{"archive_url":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"blog":{"api":true,"archive_prefix":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"backlog":0,"canonical_url":true,"category":"chemicalSciences","created_at":"2023-08-27","current_feed_url":null,"description":"Chemistry
+        with a twist","favicon":"https://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2023/08/cropped-blog-rzepa-32x32.jpg","feed_format":"application/atom+xml","feed_url":"https://www.ch.imperial.ac.uk/rzepa/blog/?feed=atom","filter":null,"funding":null,"generator":"WordPress
+        6.3.1","home_page_url":"https://www.ch.imperial.ac.uk/rzepa/blog","id":"jqdyv23","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-25T16:46:13+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"rzepa","status":"active","title":"Henry
+        Rzepa''s Blog","use_api":true,"use_mastodon":false,"user_id":"d876eef7-660b-4934-ab47-fa52cca7ad5a","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Henry
+        Rzepa''s Blog","blog_slug":"rzepa","doi":null,"id":"dc03e446-f927-4427-908c-8975edaacbca","image":null,"indexed_at":0,"language":"en","published_at":1441297408,"reference":[],"relationships":[],"summary":"The
+        first conference devoted to scientific uses of Wikipedia has just finished;
+        there was lots of fascinating stuff but here I concentrate on one report that
+        I thought was especially interesting.\u00a0To introduce it, I need first to
+        introduce WikiData. This is part of the WikiMedia ecosystem, and one of the
+        newest. The basic concept is really simple.   It is a repository for data
+        objects; 14,757,419 of them as I write this to be precise.","tags":[],"title":"A
+        sea-change in science citation? The Wikipedia Science conference.","updated_at":1441367089,"url":"https://www.ch.imperial.ac.uk/rzepa/blog?p=14527"},{"archive_url":null,"authors":[{"name":"Mike
+        Taylor","url":"http://www.miketaylor.org.uk/dino/pubs/"}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":1550,"canonical_url":null,"category":"earthAndRelatedEnvironmentalSciences","created_at":"2023-02-01","current_feed_url":null,"description":"SV-POW!  ...  All
+        sauropod vertebrae, except when we''re talking about Open Access","favicon":null,"feed_format":"application/atom+xml","feed_url":"https://svpow.com/feed/atom/","filter":null,"funding":null,"generator":"WordPress.com","home_page_url":"https://svpow.com","id":"dkvra02","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-22T14:44:45+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"svpow","status":"active","title":"Sauropod
+        Vertebra Picture of the Week","use_api":true,"use_mastodon":false,"user_id":"04d03585-c8bb-40f2-9619-5076a5e0aed2","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Sauropod
+        Vertebra Picture of the Week","blog_slug":"svpow","doi":null,"id":"0215cd88-a879-4f2b-af12-9e97f0910b42","image":"https://svpow.files.wordpress.com/2014/02/dorsals-ab-composite.jpeg","indexed_at":0,"language":"en","published_at":1441263559,"reference":[],"relationships":[],"summary":"Here
+        I am at SVPCA in 2015. I am haunted by the fact that\u00a0ten years ago at
+        SVPCA 2005, I gave a talk about the NHM\u2019s Tendaguru brachiosaurid, NHMUK
+        R5937. And the description is still not done and submitted a full decade later.","tags":["Brachiosaurids","Im
+        Stupid","The Archbishop"],"title":"Just write the Archbishop description already!","updated_at":1441742127,"url":"https://svpow.com/2015/09/03/just-write-the-archbishop-description-already"},{"archive_url":null,"authors":[{"name":"Ross
+        Mounce","url":""}],"blog":{"api":true,"archive_prefix":null,"authors":[{"name":"Ross
+        Mounce"}],"backlog":0,"canonical_url":null,"category":"naturalSciences","created_at":"2023-09-20","current_feed_url":"https://rossmounce.co.uk/feed/atom","description":null,"favicon":null,"feed_format":"application/atom+xml","feed_url":"https://rossmounce.co.uk/wp-json/wp/v2/posts","filter":null,"funding":null,"generator":"WordPress","home_page_url":"https://rossmounce.co.uk","id":"vbmdy90","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2021-11-19T15:57:46+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"rossmounce","status":"active","title":"A
+        blog by Ross Mounce","use_api":true,"use_mastodon":false,"user_id":"dead81b3-8a8b-45c9-85fe-f01bb3948c77","version":"https://jsonfeed.org/version/1.1"},"blog_name":"A
+        blog by Ross Mounce","blog_slug":"rossmounce","doi":null,"id":"99134b98-6919-45ce-b624-aa89ba7f8bc5","image":"http://rossmounce.co.uk/wp-content/uploads/2015/09/fncom-06-00019-g004.jpg","indexed_at":0,"language":"en","published_at":1441107231,"reference":[],"relationships":[],"summary":"Today
+        (2015-09-01), marks the public announcement of Research Ideas &amp; Outcomes\u00a0(RIO
+        for short), a new open access journal for all disciplines that seeks to open-up
+        the entire research cycle with some truly novel features    I know what you
+        might be thinking: <em>Another open access journal? Really?\u00a0</em>  Myself,
+        nor Daniel Mietchen simply wouldn\u2019t be involved with this project if
+        it was just another boring open access journal.","tags":["Generation Open","Open
+        Access","Open Data","Open Science","Publications"],"title":"I am supporting
+        RIO Journal. I think you should too","updated_at":1441109858,"url":"https://rossmounce.co.uk/2015/09/01/im-supporting-rio-journal-i-think-you-should-too"},{"archive_url":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"blog":{"api":true,"archive_prefix":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"backlog":0,"canonical_url":true,"category":"chemicalSciences","created_at":"2023-08-27","current_feed_url":null,"description":"Chemistry
+        with a twist","favicon":"https://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2023/08/cropped-blog-rzepa-32x32.jpg","feed_format":"application/atom+xml","feed_url":"https://www.ch.imperial.ac.uk/rzepa/blog/?feed=atom","filter":null,"funding":null,"generator":"WordPress
+        6.3.1","home_page_url":"https://www.ch.imperial.ac.uk/rzepa/blog","id":"jqdyv23","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-25T16:46:13+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"rzepa","status":"active","title":"Henry
+        Rzepa''s Blog","use_api":true,"use_mastodon":false,"user_id":"d876eef7-660b-4934-ab47-fa52cca7ad5a","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Henry
+        Rzepa''s Blog","blog_slug":"rzepa","doi":null,"id":"741660e0-f9fd-4614-87a8-c65cf054c98b","image":"http://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2015/08/SB2WJ.jpg","indexed_at":0,"language":"en","published_at":1440856475,"reference":[],"relationships":[],"summary":"Most
+        visitors to London use the famous <i>underground trains</i>\u00a0(the \u201ctube\u201d)
+        or a<i>\u00a0double-decker bus</i> to see the city (one can also use rivers
+        and canals).\u00a0So I thought, during the tourism month of August, I would
+        show you an alternative overground circumnavigation of the city using the
+        metaphor of benzene.    Benzene you see is a ring, comprising three\u00a0\u201cHCCH\u201d
+        segments.","tags":[],"title":"A tourist trip around London Overground with
+        a chemical theme.","updated_at":1440856924,"url":"https://www.ch.imperial.ac.uk/rzepa/blog?p=14515"},{"archive_url":null,"authors":[{"name":null}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":true,"category":"law","created_at":"2023-09-15","current_feed_url":null,"description":"Urheberrecht
+        und kreatives Schaffen in der digitalen Welt","favicon":null,"feed_format":"application/atom+xml","feed_url":"https://irights.info/feed/atom","filter":null,"funding":null,"generator":"WordPress","home_page_url":"https://irights.info","id":"15san30","issn":null,"language":"de","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-25T10:21:48+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"irights","status":"active","title":"iRights.info","use_api":true,"use_mastodon":false,"user_id":"81a5b5f1-97c2-416b-8715-46e10f37018c","version":"https://jsonfeed.org/version/1.1"},"blog_name":"iRights.info","blog_slug":"irights","doi":null,"id":"e5092cf0-ba9a-47f5-ad93-ecd59512d8e9","image":null,"indexed_at":0,"language":"de","published_at":1440828029,"reference":[],"relationships":[],"summary":"Das
+        Urheberrecht hat in der digitalen Welt einen dramatischen Bedeutungswandel
+        erfahren. Aus einem Recht f\u00fcr einen sehr kleinen, hoch spezialisierten
+        Adressatenkreis ist ein Verhaltensrecht f\u00fcr die ganze Gesellschaft geworden.
+        Der Umstand, dass das Recht bis heute weit davon entfernt ist, an diese neue
+        Situation angepasst zu werden, f\u00fchrt zu massiven Problemen.","tags":["In
+        Eigener Sache","Politik Recht","Urheberrecht","Urheberrechtsreform"],"title":"Ein
+        Gedankenexperiment zur Neuordnung des Urheberrechts","updated_at":1441011958,"url":"https://irights.info/2015/08/29/ein-gedankenexperiment-zur-neuordnung-des-urheberrechts/25980"},{"archive_url":null,"authors":[{"name":"Ross
+        Mounce","url":""}],"blog":{"api":true,"archive_prefix":null,"authors":[{"name":"Ross
+        Mounce"}],"backlog":0,"canonical_url":null,"category":"naturalSciences","created_at":"2023-09-20","current_feed_url":"https://rossmounce.co.uk/feed/atom","description":null,"favicon":null,"feed_format":"application/atom+xml","feed_url":"https://rossmounce.co.uk/wp-json/wp/v2/posts","filter":null,"funding":null,"generator":"WordPress","home_page_url":"https://rossmounce.co.uk","id":"vbmdy90","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2021-11-19T15:57:46+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"rossmounce","status":"active","title":"A
+        blog by Ross Mounce","use_api":true,"use_mastodon":false,"user_id":"dead81b3-8a8b-45c9-85fe-f01bb3948c77","version":"https://jsonfeed.org/version/1.1"},"blog_name":"A
+        blog by Ross Mounce","blog_slug":"rossmounce","doi":null,"id":"d95daa7f-f284-4a6d-9c94-fd311b603768","image":"","indexed_at":0,"language":"en","published_at":1440719050,"reference":[],"relationships":[],"summary":"I\u2019ve
+        just read a paper published in <em>Systematic Biology</em> called \u2018A
+        Falsification of the Citation Impediment in the Taxonomic Literature\u2018.  Having
+        read the full paper many times, including the 64-page PDF supplementary materials
+        file. I\u2019m amazed the paper was published in its current form.","tags":["Publications"],"title":"What
+        is Journal Visibility?","updated_at":1440741304,"url":"https://rossmounce.co.uk/2015/08/28/what-is-journal-visibility"},{"archive_url":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"blog":{"api":true,"archive_prefix":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"backlog":0,"canonical_url":true,"category":"chemicalSciences","created_at":"2023-08-27","current_feed_url":null,"description":"Chemistry
+        with a twist","favicon":"https://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2023/08/cropped-blog-rzepa-32x32.jpg","feed_format":"application/atom+xml","feed_url":"https://www.ch.imperial.ac.uk/rzepa/blog/?feed=atom","filter":null,"funding":null,"generator":"WordPress
+        6.3.1","home_page_url":"https://www.ch.imperial.ac.uk/rzepa/blog","id":"jqdyv23","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-25T16:46:13+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"rzepa","status":"active","title":"Henry
+        Rzepa''s Blog","use_api":true,"use_mastodon":false,"user_id":"d876eef7-660b-4934-ab47-fa52cca7ad5a","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Henry
+        Rzepa''s Blog","blog_slug":"rzepa","doi":null,"id":"77033c92-b885-47da-9fc3-4cf50f321145","image":"http://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2015/08/anomeric.jpg","indexed_at":0,"language":"en","published_at":1440677839,"reference":[],"relationships":[{"type":"IsIdenticalTo","url":"https://doi.org/10.15200/winn.144212.25640"}],"summary":"The
+        anomeric effect is best known in sugars, occuring in sub-structures such as
+        RO-C-OR. Its origins relate to how the lone pairs on each oxygen atom align
+        with the adjacent C-O bonds. When the alignment is 180\u00b0, one oxygen lone
+        pair can donate into the C-O \u03c3* empty orbital and a stabilisation occurs.
+        Here I explore whether crystal structures reflect this effect.","tags":["Crystal
+        Structure Mining"],"title":"A visualization of the anomeric effect from crystal
+        structures.","updated_at":1694924268,"url":"https://www.ch.imperial.ac.uk/rzepa/blog?p=14508"},{"archive_url":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"blog":{"api":true,"archive_prefix":null,"authors":[{"name":"Henry
+        Rzepa","url":"https://orcid.org/0000-0002-8635-8390"}],"backlog":0,"canonical_url":true,"category":"chemicalSciences","created_at":"2023-08-27","current_feed_url":null,"description":"Chemistry
+        with a twist","favicon":"https://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2023/08/cropped-blog-rzepa-32x32.jpg","feed_format":"application/atom+xml","feed_url":"https://www.ch.imperial.ac.uk/rzepa/blog/?feed=atom","filter":null,"funding":null,"generator":"WordPress
+        6.3.1","home_page_url":"https://www.ch.imperial.ac.uk/rzepa/blog","id":"jqdyv23","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-25T16:46:13+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"rzepa","status":"active","title":"Henry
+        Rzepa''s Blog","use_api":true,"use_mastodon":false,"user_id":"d876eef7-660b-4934-ab47-fa52cca7ad5a","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Henry
+        Rzepa''s Blog","blog_slug":"rzepa","doi":null,"id":"15df946c-f1a8-412b-a7b3-e17a6a38d74b","image":"http://www.ch.ic.ac.uk/rzepa/blog/wp-content/uploads/2015/08/benzenes.svg","indexed_at":0,"language":"en","published_at":1440587825,"reference":[],"relationships":[],"summary":"Previously,
+        I showed how conjugation in dienes and diaryls can be visualised by inspecting
+        bond lengths as a function of torsions.","tags":["Crystal Structure Mining"],"title":"Mesomeric
+        resonance in substituted benzenes: a crystallographic reality check.","updated_at":1465537919,"url":"https://www.ch.imperial.ac.uk/rzepa/blog?p=14492"}]
+
+        '
+  recorded_at: Thu, 05 Oct 2023 19:45:43 GMT
 recorded_with: VCR 6.2.0

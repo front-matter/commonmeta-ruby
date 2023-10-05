@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.23725
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:57 GMT
+      - Thu, 05 Oct 2023 19:47:25 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=QusDqdW9O5LFAbIHoYbh8ekZEtLQ4X36YxqIYOcvmHS21tL5IMHEvZ408kfqOXGRGv0B4Wv2fycuXNw15tVigAaAB5iY6m95h%2BrIwf7Otn0w61Xoz20aiksXVUS0nN%2BV5fEnSS4%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=4z2ysyOZGaj0nSXCIzkrWa5YHyvDq7hMowIEujyL5ffQd4cF7YnMMol62AZ7f%2F1Sfm87RmdtEJ27RbMoRG5PD%2F%2Fi5C3R%2BLnjtiLHKfRt%2FSq%2BCzmlzL%2BRTpKQ8rPuB3n5RxxL7Og%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d948accfada1c9e-AMS
+      - 81182d246b2cb939-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,12 +51,12 @@ http_interactions:
             "RA": "DataCite"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:24:57 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:25 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.23725/8na3-9s47?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:58 GMT
+      - Thu, 05 Oct 2023 19:47:25 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -93,7 +93,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 12586270-29d3-4c4e-96df-4ccfcb21e1af
+      - 7c606a7d-a7a3-4ccd-ba9f-11c3b18e8da4
       X-Download-Options:
       - noopen
       Etag:
@@ -101,13 +101,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.033440'
+      - '0.033496'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -127,5 +127,5 @@ http_interactions:
         ","created":"2018-08-31T15:42:23.000Z","updated":"2018-08-31T15:42:23.000Z"},"relationships":{"dataciteDoi":{"data":{"id":"10.23725/8NA3-9S47","type":"datacite_dois"}}}},{"id":"0000-0000-0001-e5hd","type":"media","attributes":{"version":1,"url":"gs://topmed-irc-share/public/NWD165827.recab.cram","mediaType":"text/plain
         ","created":"2018-08-31T15:42:23.000Z","updated":"2018-08-31T15:42:23.000Z"},"relationships":{"dataciteDoi":{"data":{"id":"10.23725/8NA3-9S47","type":"datacite_dois"}}}},{"id":"0000-0000-0001-e5he","type":"media","attributes":{"version":1,"url":"dos://dos.commons.ucsc-cgp.org/c3d66dc9-58da-411c-83c4-dd656aa3c4b7?version=2018-05-26T133719.892835Z","mediaType":"text/plain
         ","created":"2018-08-31T15:42:23.000Z","updated":"2018-08-31T15:42:23.000Z"},"relationships":{"dataciteDoi":{"data":{"id":"10.23725/8NA3-9S47","type":"datacite_dois"}}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:24:58 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:47:25 GMT
+recorded_with: VCR 6.2.0

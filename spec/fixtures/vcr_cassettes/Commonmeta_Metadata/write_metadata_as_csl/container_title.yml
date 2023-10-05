@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.6102
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:28 GMT
+      - Thu, 05 Oct 2023 19:46:00 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fSEjDHYNFcDgB2GZ5eVsLhzFO9tUku4B6vqVxTq99lebJ7pKemE0v%2BCSTJljZt8incA89dwI5bmIseT3sVlGYvVPDNkp8TIJhSGdOvpJYosaG%2FhlCQ9abW%2Fg%2B0qdE0qR0vWbHgk%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fXpTQFWkv%2F2JeXRPHziZ%2BdMUlBEK3WDkXcXqH%2B062fyRDVECw9wDBN7vwDXnCvUR1I5w4ou%2BcQ9NLDAzGcPr%2BJWSIeAljKpdHzguU2ZChkcVyEjgk3mz6BF6uWt0BNYo1L9CwU0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d948a1569921b08-AMS
+      - 81182b137c670bdb-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,12 +51,12 @@ http_interactions:
             "RA": "DataCite"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:24:28 GMT
+  recorded_at: Thu, 05 Oct 2023 19:46:00 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.6102/zis146?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:29 GMT
+      - Thu, 05 Oct 2023 19:46:01 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -93,21 +93,21 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 78b67257-fbb6-4bd1-9232-bce78111a696
+      - 4f3612f7-5132-4fea-8315-cf8b423ebc0e
       X-Download-Options:
       - noopen
       Etag:
-      - W/"2115e33471ad6a7daf7b7d97e985fa1e"
+      - W/"6dbf2d533b699441026fdaaad8fb798d"
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.038444'
+      - '0.055774'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -142,12 +142,7 @@ http_interactions:
         übertragen. Die Skala erfasst sowohl positive als auch negative Affektivität,
         indem sie eine Beurteilung von positiven und negativen Gemütszuständen unter
         Bezug auf verschieden lange Zeiträume erfragt.","descriptionType":"Abstract"},{"lang":"de","description":"Zusammenstellung
-        sozialwissenschaftlicher Items und Skalen (ZIS)","descriptionType":"SeriesInformation"}],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC42MTAyL1pJUzE0NjwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+SmFua2UsIFMuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5HbMO2Y2tuZXItUmlzdCwgQS48L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZSB4bWw6bGFuZz0iZGUiPkRldXRzY2hlIFZlcnNpb24gZGVyIFBvc2l0aXZlIGFuZCBOZWdhdGl2ZSBBZmZlY3QgU2NoZWR1bGUgKFBBTkFTKTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5aSVMgLSBHRVNJUyBMZWlibml6IEluc3RpdHV0ZSBmb3IgdGhlIFNvY2lhbCBTY2llbmNlczwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAxMjwvcHVibGljYXRpb25ZZWFyPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iVGV4dCI+U2thbGE8L3Jlc291cmNlVHlwZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdCB4bWw6bGFuZz0iZGUiIHN1YmplY3RTY2hlbWU9IiI+QWZmZWt0aXZpdMOkdDwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHhtbDpsYW5nPSJkZSIgc3ViamVjdFNjaGVtZT0iIj5Xb2hsYmVmaW5kZW48L3N1YmplY3Q+CiAgICA8c3ViamVjdCB4bWw6bGFuZz0iZGUiIHN1YmplY3RTY2hlbWU9IiI+R2Vmw7xobDwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHhtbDpsYW5nPSJkZSIgc3ViamVjdFNjaGVtZT0iIj5FbW90aW9uPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGxhbmd1YWdlPmRldTwvbGFuZ3VhZ2U+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IlVSTCIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiI+aHR0cDovL3ppcy5nZXNpcy5vcmcvPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8dmVyc2lvbj4xLjA8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHhtbDpsYW5nPSJkZSI+TnV0enVuZ3NiZWRpbmd1bmdlbjogQWxsZSBpbiBaSVMgZG9rdW1lbnRpZXJ0ZW4gRXJoZWJ1bmdzaW5zdHJ1bWVudGUgZMO8cmZlbiBrb3N0ZW5mcmVpIGbDvHIgbmljaHQta29tbWVyemllbGxlIEZvcnNjaHVuZ3N6d2Vja2UgdmVyd2VuZGV0IHdlcmRlbi5CZWkgZWluZW0gRWluc2F0eiBmw7xyIGFuZGVyZSBad2Vja2Ugb2RlciBpbiBlaW5lciBhbmRlcmVuIGFscyBkZXIgaGllciBkb2t1bWVudGllcnRlbiBGb3JtIGlzdCBkYXMgRWludmVyc3TDpG5kbmlzIGRlciBBdXRvcmVuIGJ6dy4gQXV0b3Jpbm5lbiBlaW56dWhvbGVuLiBJbiBhbGxlbiByZXN1bHRpZXJlbmRlbiBBcmJlaXRlbiB1bmQgUHVibGlrYXRpb25lbiBpc3QgZGllIFpJUy1Eb2t1bWVudGF0aW9uIGFscyBRdWVsbGUgYW56dWdlYmVuLjwvcmlnaHRzPgogICAgPHJpZ2h0cyB4bWw6bGFuZz0iZW4iPlRlcm1zIG9mIHVzZTogQWxsIHN1cnZleSBpbnN0cnVtZW50cyBkb2N1bWVudGVkIGluIFpJUyBtYXkgYmUgdXNlZCBmcmVlIG9mIGNoYXJnZSBmb3Igbm9uLWNvbW1lcmNpYWwgcmVzZWFyY2ggcHVycG9zZXMuIEluIHRoZSBjYXNlIG9mIHVzZSBmb3Igb3RoZXIgcHVycG9zZXMgb3IgaW4gYSBmb3JtIG90aGVyIHRoYW4gdGhvc2UgZG9jdW1lbnRlZCBoZXJlLCB0aGUgY29uc2VudCBvZiB0aGUgYXV0aG9ycyBtdXN0IGJlIG9idGFpbmVkLiBJbiBhbGwgcmVzdWx0aW5nIHdvcmtzIGFuZCBwdWJsaWNhdGlvbnMsIHRoZSBaSVMgZG9jdW1lbnRhdGlvbiBtdXN0IGJlIGNpdGVkIGFzIHRoZSBzb3VyY2UuPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24geG1sOmxhbmc9ImRlIiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij4mbHQ7cCZndDtNZW5zY2hsaWNoZSBHZW3DvHRzenVzdMOkbmRlIGluIHBvc2l0aXZlCnVuZCBuZWdhdGl2ZSBBZmZla3Rpdml0w6R0IHVudGVydGVpbGVuLiBOZWdhdGl2ZSBBZmZla3Rpdml0w6R0IHVtZmFzc3QgZGFiZWkgZGFzCkVybGViZW4gdm9uIFVuenVmcmllZGVuaGVpdCB1bmQgYXZlcnNpdmVuIEdlZsO8aGxlbiwgcG9zaXRpdmUgQWZmZWt0aXZpdMOkdCBkYXMKdm9uIEZyZXVkZSB1bmQgcG9zaXRpdmVyIEFrdGl2aXTDpHQuIERpZSB2b3JsaWVnZW5kZSwgMjAgSXRlbXMgdW1mYXNzZW5kZSBTa2FsYQp3dXJkZSB2b24gV2F0c29uLCBDbGFyayB1bmQgVGVsbGVnZW4gKDE5ODgpIGVudHdpY2tlbHQgdW5kIHZvbiBLcm9obmUsIEVnbG9mZiwKS29obG1hbm4gdW5kIFRhdXNjaMKgICgxOTk2KSBpbiBkaWUgZGV1dHNjaGUgU3ByYWNoZSDDvGJlcnRyYWdlbi4gRGllIFNrYWxhCmVyZmFzc3Qgc293b2hswqAgcG9zaXRpdmUgYWxzIGF1Y2ggbmVnYXRpdmUgQWZmZWt0aXZpdMOkdCwgaW5kZW0gc2llIGVpbmUKQmV1cnRlaWx1bmfCoCB2b24gcG9zaXRpdmVuIHVuZCBuZWdhdGl2ZW4gR2Vtw7x0c3p1c3TDpG5kZW4gdW50ZXIgQmV6dWcgYXVmwqAKdmVyc2NoaWVkZW4gbGFuZ2UgWmVpdHLDpHVtZSBlcmZyYWd0LiZsdDsvcCZndDs8L2Rlc2NyaXB0aW9uPgogICAgPGRlc2NyaXB0aW9uIHhtbDpsYW5nPSJkZSIgZGVzY3JpcHRpb25UeXBlPSJTZXJpZXNJbmZvcm1hdGlvbiI+WnVzYW1tZW5zdGVsbHVuZyBzb3ppYWx3aXNzZW5zY2hhZnRsaWNoZXIgSXRlbXMgdW5kIFNrYWxlbiAoWklTKTwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+","url":"http://zis.gesis.org/DoiId/zis146","contentUrl":null,"metadataVersion":7,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":1,"versionCount":0,"versionOfCount":0,"created":"2014-07-02T07:36:04.000Z","registered":"2014-07-02T07:36:05.000Z","published":"2012","updated":"2022-12-21T20:34:42.000Z"},"relationships":{"client":{"data":{"id":"gesis.gesis","type":"clients"}},"provider":{"data":{"id":"vzek","type":"providers"}},"media":{"data":{"id":"10.6102/zis146","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"gesis.gesis","type":"clients","attributes":{"name":"GESIS
-        Data Archive","symbol":"GESIS.GESIS","year":2011,"alternateName":"GESIS Long-term
-        digital preservation","description":"GESIS preserves quantitative social research
-        data to make it available to the scientific research community. All data are
-        preserved for the long-term and documented to international standards. Data
-        is free to archive, and free to access.\r\nWhen you transfer data and documents
-        to GESIS, you enter into a contractual relationship: https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/contract","language":[],"clientType":"repository","domains":"*","re3data":"https://doi.org/10.17616/R3BB70","opendoar":null,"issn":{},"url":"https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/long-term-digital-preservation-ltda","created":"2011-07-21T13:08:41.000Z","updated":"2023-06-16T18:54:16.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"vzek","type":"providers"}},"consortium":{"data":{"id":"DARACO","type":"providers"}},"prefixes":{"data":[{"id":"10.4232","type":"prefixes"},{"id":"10.6102","type":"prefixes"},{"id":"10.7802","type":"prefixes"},{"id":"10.7804","type":"prefixes"},{"id":"10.12758","type":"prefixes"},{"id":"10.13150","type":"prefixes"},{"id":"10.15465","type":"prefixes"},{"id":"10.17173","type":"prefixes"},{"id":"10.17622","type":"prefixes"},{"id":"10.17889","type":"prefixes"},{"id":"10.18448","type":"prefixes"},{"id":"10.23663","type":"prefixes"},{"id":"10.25524","type":"prefixes"},{"id":"10.34879","type":"prefixes"},{"id":"10.34877","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:24:29 GMT
-recorded_with: VCR 6.1.0
+        sozialwissenschaftlicher Items und Skalen (ZIS)","descriptionType":"SeriesInformation"}],"geoLocations":[],"fundingReferences":[],"xml":"PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJlc291cmNlIHhtbG5zPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCIgeG1sbnM6eHNpPSJodHRwOi8vd3d3LnczLm9yZy8yMDAxL1hNTFNjaGVtYS1pbnN0YW5jZSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vZGF0YWNpdGUub3JnL3NjaGVtYS9rZXJuZWwtNCBodHRwOi8vc2NoZW1hLmRhdGFjaXRlLm9yZy9tZXRhL2tlcm5lbC00LjEvbWV0YWRhdGEueHNkIj4KICA8aWRlbnRpZmllciBpZGVudGlmaWVyVHlwZT0iRE9JIj4xMC42MTAyL1pJUzE0NjwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+SmFua2UsIFMuPC9jcmVhdG9yTmFtZT4KICAgIDwvY3JlYXRvcj4KICAgIDxjcmVhdG9yPgogICAgICA8Y3JlYXRvck5hbWUgbmFtZVR5cGU9IlBlcnNvbmFsIj5HbMO2Y2tuZXItUmlzdCwgQS48L2NyZWF0b3JOYW1lPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZSB4bWw6bGFuZz0iZGUiPkRldXRzY2hlIFZlcnNpb24gZGVyIFBvc2l0aXZlIGFuZCBOZWdhdGl2ZSBBZmZlY3QgU2NoZWR1bGUgKFBBTkFTKTwvdGl0bGU+CiAgPC90aXRsZXM+CiAgPHB1Ymxpc2hlcj5aSVMgLSBHRVNJUyBMZWlibml6IEluc3RpdHV0ZSBmb3IgdGhlIFNvY2lhbCBTY2llbmNlczwvcHVibGlzaGVyPgogIDxwdWJsaWNhdGlvblllYXI+MjAxMjwvcHVibGljYXRpb25ZZWFyPgogIDxyZXNvdXJjZVR5cGUgcmVzb3VyY2VUeXBlR2VuZXJhbD0iVGV4dCI+U2thbGE8L3Jlc291cmNlVHlwZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdCB4bWw6bGFuZz0iZGUiIHN1YmplY3RTY2hlbWU9IiI+QWZmZWt0aXZpdMOkdDwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHhtbDpsYW5nPSJkZSIgc3ViamVjdFNjaGVtZT0iIj5Xb2hsYmVmaW5kZW48L3N1YmplY3Q+CiAgICA8c3ViamVjdCB4bWw6bGFuZz0iZGUiIHN1YmplY3RTY2hlbWU9IiI+R2Vmw7xobDwvc3ViamVjdD4KICAgIDxzdWJqZWN0IHhtbDpsYW5nPSJkZSIgc3ViamVjdFNjaGVtZT0iIj5FbW90aW9uPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGxhbmd1YWdlPmRldTwvbGFuZ3VhZ2U+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZWxhdGVkSWRlbnRpZmllclR5cGU9IlVSTCIgcmVsYXRpb25UeXBlPSJJc1BhcnRPZiI+aHR0cDovL3ppcy5nZXNpcy5vcmcvPC9yZWxhdGVkSWRlbnRpZmllcj4KICA8L3JlbGF0ZWRJZGVudGlmaWVycz4KICA8dmVyc2lvbj4xLjA8L3ZlcnNpb24+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHhtbDpsYW5nPSJkZSI+TnV0enVuZ3NiZWRpbmd1bmdlbjogQWxsZSBpbiBaSVMgZG9rdW1lbnRpZXJ0ZW4gRXJoZWJ1bmdzaW5zdHJ1bWVudGUgZMO8cmZlbiBrb3N0ZW5mcmVpIGbDvHIgbmljaHQta29tbWVyemllbGxlIEZvcnNjaHVuZ3N6d2Vja2UgdmVyd2VuZGV0IHdlcmRlbi5CZWkgZWluZW0gRWluc2F0eiBmw7xyIGFuZGVyZSBad2Vja2Ugb2RlciBpbiBlaW5lciBhbmRlcmVuIGFscyBkZXIgaGllciBkb2t1bWVudGllcnRlbiBGb3JtIGlzdCBkYXMgRWludmVyc3TDpG5kbmlzIGRlciBBdXRvcmVuIGJ6dy4gQXV0b3Jpbm5lbiBlaW56dWhvbGVuLiBJbiBhbGxlbiByZXN1bHRpZXJlbmRlbiBBcmJlaXRlbiB1bmQgUHVibGlrYXRpb25lbiBpc3QgZGllIFpJUy1Eb2t1bWVudGF0aW9uIGFscyBRdWVsbGUgYW56dWdlYmVuLjwvcmlnaHRzPgogICAgPHJpZ2h0cyB4bWw6bGFuZz0iZW4iPlRlcm1zIG9mIHVzZTogQWxsIHN1cnZleSBpbnN0cnVtZW50cyBkb2N1bWVudGVkIGluIFpJUyBtYXkgYmUgdXNlZCBmcmVlIG9mIGNoYXJnZSBmb3Igbm9uLWNvbW1lcmNpYWwgcmVzZWFyY2ggcHVycG9zZXMuIEluIHRoZSBjYXNlIG9mIHVzZSBmb3Igb3RoZXIgcHVycG9zZXMgb3IgaW4gYSBmb3JtIG90aGVyIHRoYW4gdGhvc2UgZG9jdW1lbnRlZCBoZXJlLCB0aGUgY29uc2VudCBvZiB0aGUgYXV0aG9ycyBtdXN0IGJlIG9idGFpbmVkLiBJbiBhbGwgcmVzdWx0aW5nIHdvcmtzIGFuZCBwdWJsaWNhdGlvbnMsIHRoZSBaSVMgZG9jdW1lbnRhdGlvbiBtdXN0IGJlIGNpdGVkIGFzIHRoZSBzb3VyY2UuPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24geG1sOmxhbmc9ImRlIiBkZXNjcmlwdGlvblR5cGU9IkFic3RyYWN0Ij4mbHQ7cCZndDtNZW5zY2hsaWNoZSBHZW3DvHRzenVzdMOkbmRlIGluIHBvc2l0aXZlCnVuZCBuZWdhdGl2ZSBBZmZla3Rpdml0w6R0IHVudGVydGVpbGVuLiBOZWdhdGl2ZSBBZmZla3Rpdml0w6R0IHVtZmFzc3QgZGFiZWkgZGFzCkVybGViZW4gdm9uIFVuenVmcmllZGVuaGVpdCB1bmQgYXZlcnNpdmVuIEdlZsO8aGxlbiwgcG9zaXRpdmUgQWZmZWt0aXZpdMOkdCBkYXMKdm9uIEZyZXVkZSB1bmQgcG9zaXRpdmVyIEFrdGl2aXTDpHQuIERpZSB2b3JsaWVnZW5kZSwgMjAgSXRlbXMgdW1mYXNzZW5kZSBTa2FsYQp3dXJkZSB2b24gV2F0c29uLCBDbGFyayB1bmQgVGVsbGVnZW4gKDE5ODgpIGVudHdpY2tlbHQgdW5kIHZvbiBLcm9obmUsIEVnbG9mZiwKS29obG1hbm4gdW5kIFRhdXNjaMKgICgxOTk2KSBpbiBkaWUgZGV1dHNjaGUgU3ByYWNoZSDDvGJlcnRyYWdlbi4gRGllIFNrYWxhCmVyZmFzc3Qgc293b2hswqAgcG9zaXRpdmUgYWxzIGF1Y2ggbmVnYXRpdmUgQWZmZWt0aXZpdMOkdCwgaW5kZW0gc2llIGVpbmUKQmV1cnRlaWx1bmfCoCB2b24gcG9zaXRpdmVuIHVuZCBuZWdhdGl2ZW4gR2Vtw7x0c3p1c3TDpG5kZW4gdW50ZXIgQmV6dWcgYXVmwqAKdmVyc2NoaWVkZW4gbGFuZ2UgWmVpdHLDpHVtZSBlcmZyYWd0LiZsdDsvcCZndDs8L2Rlc2NyaXB0aW9uPgogICAgPGRlc2NyaXB0aW9uIHhtbDpsYW5nPSJkZSIgZGVzY3JpcHRpb25UeXBlPSJTZXJpZXNJbmZvcm1hdGlvbiI+WnVzYW1tZW5zdGVsbHVuZyBzb3ppYWx3aXNzZW5zY2hhZnRsaWNoZXIgSXRlbXMgdW5kIFNrYWxlbiAoWklTKTwvZGVzY3JpcHRpb24+CiAgPC9kZXNjcmlwdGlvbnM+CjwvcmVzb3VyY2U+","url":"http://zis.gesis.org/DoiId/zis146","contentUrl":null,"metadataVersion":7,"schemaVersion":"http://datacite.org/schema/kernel-4","source":"mds","isActive":true,"state":"findable","reason":null,"viewCount":0,"viewsOverTime":[],"downloadCount":0,"downloadsOverTime":[],"referenceCount":0,"citationCount":0,"citationsOverTime":[],"partCount":0,"partOfCount":1,"versionCount":0,"versionOfCount":0,"created":"2014-07-02T07:36:04.000Z","registered":"2014-07-02T07:36:05.000Z","published":"2012","updated":"2023-08-18T14:14:57.000Z"},"relationships":{"client":{"data":{"id":"vzek.zis","type":"clients"}},"provider":{"data":{"id":"vzek","type":"providers"}},"media":{"data":{"id":"10.6102/zis146","type":"media"}},"references":{"data":[]},"citations":{"data":[]},"parts":{"data":[]},"partOf":{"data":[]},"versions":{"data":[]},"versionOf":{"data":[]}}},"included":[{"id":"vzek.zis","type":"clients","attributes":{"name":"Open
+        Access Repository for Measurement Instruments","symbol":"VZEK.ZIS","year":2023,"alternateName":"ZIS","description":null,"language":[],"clientType":"repository","domains":"*","re3data":null,"opendoar":null,"issn":{},"url":null,"created":"2023-06-16T11:23:28.000Z","updated":"2023-08-18T14:24:00.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"vzek","type":"providers"}},"consortium":{"data":{"id":"DARACO","type":"providers"}},"prefixes":{"data":[{"id":"10.6102","type":"prefixes"}]}}}]}'
+  recorded_at: Thu, 05 Oct 2023 19:46:01 GMT
+recorded_with: VCR 6.2.0

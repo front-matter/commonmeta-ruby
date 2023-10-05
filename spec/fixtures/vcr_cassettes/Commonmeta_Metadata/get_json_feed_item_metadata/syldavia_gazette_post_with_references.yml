@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/0022b9ef-525a-4a79-81ad-13411697f58a
+    uri: https://api.rogue-scholar.org/posts/0022b9ef-525a-4a79-81ad-13411697f58a
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,81 +18,39 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '5716'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '2363'
       Date:
-      - Wed, 06 Sep 2023 14:23:07 GMT
-      Etag:
-      - '"ctoonrrd9y4en"'
+      - Thu, 05 Oct 2023 20:37:44 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::p6jq5-1694010187037-ea11ac8f907e
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0RZ0FF2BGX0Y7Q3BHPNJQ7-fra
     body:
       encoding: UTF-8
-      string: '{"id":"0022b9ef-525a-4a79-81ad-13411697f58a","doi":"https://doi.org/10.53731/ffbx660-083tnag","url":"https://syldavia-gazette.org/guinea-worms-chatgpt-neanderthals","title":"Guinea
-        Worms, ChatGPT, Neanderthals, Plagiarism, Tidyverse","summary":"<strong>Guinea
-        worm disease reaches all-time low: only 13* human cases reported in 2022</strong>
-        Only 13 human cases of Guinea worm disease were reported worldwide in 2022.","content_html":"
-        <h3><a href=\"https://www.cartercenter.org/news/pr/2023/2022-guinea-worm-worldwide-cases-announcement.html?ref=syldavia-gazette.org\">Guinea
-        worm disease reaches all-time low: only 13* human cases reported in 2022</a></h3><p>Only
+      string: '{"archive_url":null,"authors":[{"name":"Martin Fenner","url":"https://orcid.org/0000-0003-1419-2405"}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":null,"category":"humanities","created_at":"2023-02-01","current_feed_url":null,"description":"The
+        Syldavia Gazette is a weekly newsletter that highlights interesting science
+        stories from around the web.","favicon":"https://syldavia-gazette.org/favicon.png","feed_format":"application/atom+xml","feed_url":"https://syldavia-gazette.org/atom/","filter":"tags:weekly","funding":null,"generator":"Ghost
+        5.40","home_page_url":"https://syldavia-gazette.org","id":"f4wdg32","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-10-03T15:53:31+00:00","plan":"Team","prefix":null,"relative_url":null,"slug":"syldavia_gazette","status":"active","title":"Syldavia
+        Gazette","use_api":true,"use_mastodon":true,"user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Syldavia
+        Gazette","blog_slug":"syldavia_gazette","doi":"https://doi.org/10.53731/ffbx660-083tnag","id":"0022b9ef-525a-4a79-81ad-13411697f58a","image":"https://digitalpress.fra1.cdn.digitaloceanspaces.com/gtpg506/2023/04/gw-release-2023.jpg","indexed_at":1688982503,"language":"en","published_at":1675263360,"reference":[{"key":"ref1","url":"https://cartercenter.org/news/pr/2023/2022-guinea-worm-worldwide-cases-announcement.html"},{"doi":"https://doi.org/10.1126/science.adg7879","key":"ref2"},{"key":"ref3","url":"https://leakeyfoundation.org/meet-the-first-neanderthal-family"},{"key":"ref4","url":"https://retractionwatch.com/2022/12/30/university-to-investigate-adjunct-professor-after-allegations-of-plagiarism-and-legal-threats"},{"doi":"https://doi.org/10.21105/joss.01686","key":"ref5"}],"relationships":[],"summary":"Guinea
+        worm disease reaches all-time low: only 13* human cases reported in 2022 Only
         13 human cases of Guinea worm disease were reported worldwide in 2022. This
         Neglected Tropical Disease is on the WHO 2030 roadmap to become only the second
-        human disease in history to be eradicated, after smallpox.</p><h3><a href=\"https://doi.org/10.1126/science.adg7879?ref=syldavia-gazette.org\">ChatGPT
-        is fun, but not an author</a></h3><p>The Editor-In-Chief of the <em>Science</em>
-        journals explains their updated Editorial Policy specifying that text generated
-        by ChatGPT (or any other AI tools) cannot be used in publications, nor can
-        figures produced by such tools.</p><h3><a href=\"https://leakeyfoundation.org/meet-the-first-neanderthal-family/?ref=syldavia-gazette.org\">Meet
-        the first Neanderthal family</a></h3><p>A study published in October last
-        year retrieved the DNA from 17 Neanderthal remains, for the first time using
-        genetics to study the social organization of a Neanderthal community. </p><h3><a
-        href=\"https://retractionwatch.com/2022/12/30/university-to-investigate-adjunct-professor-after-allegations-of-plagiarism-and-legal-threats/?ref=syldavia-gazette.org\">University
-        to investigate adjunct professor after allegations of plagiarism – and legal
-        threats</a></h3><p>The University of Zürich in Switzerland has announced that
-        it had started an investigation into allegations that a researcher used images
-        and other material from a blog without attribution in a published book.</p><h3><a
-        href=\"https://doi.org/10.21105/joss.01686?ref=syldavia-gazette.org\">Welcome
-        to the tidyverse</a></h3><p>The tidyverse is a language for solving data science
-        challenges with R code. It is also a collection of R packages with a shared
-        high-level design philosophy. This article gives a short introduction to these
-        highly popular software packages.</p><hr /><h3>References</h3><ol><li>Guinea
-        Worm Disease Reaches All-Time Low: Only 13* Human Cases Reported in 2022.
-        The Carter Center. Accessed March 28, 2023. <a href=\"https://www.cartercenter.org/news/pr/2023/2022-guinea-worm-worldwide-cases-announcement.html?ref=syldavia-gazette.org\">https://www.cartercenter.org/news/pr/2023/2022-guinea-worm-worldwide-cases-announcement.html</a></li><li>Thorp
-        HH. ChatGPT is fun, but not an author. <em>Science</em>. 2023;379(6630):313-313.
-        doi:<a href=\"https://doi.org/10.1126/science.adg7879?ref=syldavia-gazette.org\">10.1126/science.adg7879</a></li><li>Meet
-        the first Neanderthal family. The Leakey Foundation. Accessed March 28, 2023.
-        <a href=\"https://leakeyfoundation.org/meet-the-first-neanderthal-family/?ref=syldavia-gazette.org\">https://leakeyfoundation.org/meet-the-first-neanderthal-family/</a></li><li>Kincaid
-        AE. University to investigate adjunct professor after allegations of plagiarism
-        – and legal threats. Retraction Watch. Published December 30, 2022. Accessed
-        March 28, 2023. <a href=\"https://retractionwatch.com/2022/12/30/university-to-investigate-adjunct-professor-after-allegations-of-plagiarism-and-legal-threats/?ref=syldavia-gazette.org\">https://retractionwatch.com/2022/12/30/university-to-investigate-adjunct-professor-after-allegations-of-plagiarism-and-legal-threats/</a></li><li>Wickham
-        H, Averick M, Bryan J, et al. Welcome to the Tidyverse. <em>Journal of Open
-        Source Software</em>. 2019;4(43):1686. doi:<a href=\"https://doi.org/10.21105/joss.01686?ref=syldavia-gazette.org\">10.21105/joss.01686</a></li></ol>
-        ","published_at":1675263360,"updated_at":1681415899,"indexed_at":1688982503,"authors":[{"url":"https://orcid.org/0000-0003-1419-2405","name":"Martin
-        Fenner"}],"image":"https://digitalpress.fra1.cdn.digitaloceanspaces.com/gtpg506/2023/04/gw-release-2023.jpg","tags":[],"language":"en","reference":[{"key":"ref1","url":"https://cartercenter.org/news/pr/2023/2022-guinea-worm-worldwide-cases-announcement.html"},{"doi":"https://doi.org/10.1126/science.adg7879","key":"ref2"},{"key":"ref3","url":"https://leakeyfoundation.org/meet-the-first-neanderthal-family"},{"key":"ref4","url":"https://retractionwatch.com/2022/12/30/university-to-investigate-adjunct-professor-after-allegations-of-plagiarism-and-legal-threats"},{"doi":"https://doi.org/10.21105/joss.01686","key":"ref5"}],"relationships":[],"blog_id":"f4wdg32","blog_name":"Syldavia
-        Gazette","blog_slug":"syldavia_gazette","blog":{"id":"f4wdg32","title":"Syldavia
-        Gazette","description":"The Syldavia Gazette is a weekly newsletter that highlights
-        interesting science stories from around the web.","language":"en","favicon":"https://syldavia-gazette.org/favicon.png","feed_url":"https://syldavia-gazette.org/atom/","home_page_url":"https://syldavia-gazette.org","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-02-01","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
-        5.40","category":"humanities","prefix":"10.53731","modified_at":"2023-04-13T19:58:19+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":null,"status":"active","issn":null,"backlog":0,"authors":null,"plan":"Team","slug":"syldavia_gazette","use_mastodon":true}}'
-  recorded_at: Wed, 06 Sep 2023 14:23:08 GMT
+        human disease in history to be eradicated, after smallpox.","tags":["Weekly"],"title":"Guinea
+        Worms, ChatGPT, Neanderthals, Plagiarism, Tidyverse","updated_at":1681415899,"url":"https://syldavia-gazette.org/guinea-worms-chatgpt-neanderthals"}
+
+        '
+  recorded_at: Thu, 05 Oct 2023 20:37:44 GMT
 - request:
     method: head
     uri: https://cartercenter.org/news/pr/2023/2022-guinea-worm-worldwide-cases-announcement.html
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -113,14 +71,14 @@ http_interactions:
       Content-Type:
       - text/html; charset=utf-8
       Date:
-      - Wed, 06 Sep 2023 14:23:09 GMT
+      - Thu, 05 Oct 2023 20:37:43 GMT
       Server:
       - Microsoft-IIS/10.0
       Location:
       - https://www.cartercenter.org/news/pr/2023/2022-guinea-worm-worldwide-cases-announcement.html
       Set-Cookie:
-      - ARRAffinity=21fff2021ce2e73817415964b0b20eb45eb42257cfe3a740785e5ea399c3e138;Path=/;HttpOnly;Secure;Domain=cartercenter.org
-      - ARRAffinitySameSite=21fff2021ce2e73817415964b0b20eb45eb42257cfe3a740785e5ea399c3e138;Path=/;HttpOnly;SameSite=None;Secure;Domain=cartercenter.org
+      - ARRAffinity=c784d822dafa59dad6a0e7af16d5bfafd5bae270c965ca0880fc90e093c58dd1;Path=/;HttpOnly;Secure;Domain=cartercenter.org
+      - ARRAffinitySameSite=c784d822dafa59dad6a0e7af16d5bfafd5bae270c965ca0880fc90e093c58dd1;Path=/;HttpOnly;SameSite=None;Secure;Domain=cartercenter.org
       Vary:
       - Accept-Encoding
       X-Powered-By:
@@ -128,12 +86,12 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Wed, 06 Sep 2023 14:23:09 GMT
+  recorded_at: Thu, 05 Oct 2023 20:37:44 GMT
 - request:
     method: get
     uri: https://doi.org/10.1126/science.adg7879
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -150,7 +108,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:23:10 GMT
+      - Thu, 05 Oct 2023 20:37:45 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -162,13 +120,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 14:34:06 GMT
+      - Thu, 05 Oct 2023 20:54:23 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Oju5X5kpVg8J6Ln1cMolYZ%2BHIaJxZdoCr8jxMKqEyRWdzAadiP5Yd%2BuvmiL7C1SZ17v%2Fo2g5JeQLSVi0FVJQFahkdL%2BmSwH0i79fgbZAA0viVImGXIsKKN4%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=YCzu4A5ZiRitKOeZhb2wY%2FhsdEvJi1CMWpMUd%2FN%2Bgyd86WchZQHw4RyGZBBSAA1dzAIjWz%2BAww%2B9nKG%2BtJaD8XvkFEK3WIhnRqMHg4Y9rmmlHFip1YjxxBZ62xJqtEuAesN5Jpc%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -176,7 +134,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 80275e4b1b9d9b45-FRA
+      - 811876dbfce40eaf-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -184,12 +142,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.1126%2Fscience.adg7879/transform">https://api.crossref.org/v1/works/10.1126%2Fscience.adg7879/transform</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:23:10 GMT
+  recorded_at: Thu, 05 Oct 2023 20:37:45 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.1126%2Fscience.adg7879/transform
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -206,7 +164,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:23:11 GMT
+      - Thu, 05 Oct 2023 20:37:45 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -240,7 +198,7 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"indexed":{"date-parts":[[2023,9,6]],"date-time":"2023-09-06T12:29:50Z","timestamp":1694003390242},"reference-count":0,"publisher":"American
+      string: '{"indexed":{"date-parts":[[2023,10,5]],"date-time":"2023-10-05T12:32:35Z","timestamp":1696509155419},"reference-count":0,"publisher":"American
         Association for the Advancement of Science (AAAS)","issue":"6630","content-domain":{"domain":["www.science.org"],"crossmark-restriction":true},"published-print":{"date-parts":[[2023,1,27]]},"abstract":"<jats:p>\n            In
         less than 2 months, the artificial intelligence (AI) program ChatGPT has become
         a cultural sensation. It is freely accessible through a web portal created
@@ -256,17 +214,17 @@ http_interactions:
         by her son Happy, \u201cCome on, Mom. You\u2019re Elsa from\n            <jats:italic>Frozen<\/jats:italic>\n            .
         You have ice powers and you\u2019re a queen. You\u2019re unstoppable.\u201d
         Mash-ups like this are certainly fun, but there are serious implications for
-        generative AI programs like ChatGPT in science and academia.\n          <\/jats:p>","DOI":"10.1126\/science.adg7879","type":"journal-article","created":{"date-parts":[[2023,1,26]],"date-time":"2023-01-26T18:58:32Z","timestamp":1674759512000},"page":"313-313","update-policy":"http:\/\/dx.doi.org\/10.34133\/aaas_crossmark","source":"Crossref","is-referenced-by-count":252,"title":"ChatGPT
+        generative AI programs like ChatGPT in science and academia.\n          <\/jats:p>","DOI":"10.1126\/science.adg7879","type":"journal-article","created":{"date-parts":[[2023,1,26]],"date-time":"2023-01-26T18:58:32Z","timestamp":1674759512000},"page":"313-313","update-policy":"http:\/\/dx.doi.org\/10.34133\/aaas_crossmark","source":"Crossref","is-referenced-by-count":285,"title":"ChatGPT
         is fun, but not an author","prefix":"10.1126","volume":"379","author":[{"given":"H.
         Holden","family":"Thorp","sequence":"first","affiliation":[{"name":"H. Holden
         Thorp Editor-in-Chief, Science journals."}]}],"member":"221","container-title":"Science","original-title":[],"language":"en","deposited":{"date-parts":[[2023,2,28]],"date-time":"2023-02-28T18:45:47Z","timestamp":1677609947000},"score":1,"resource":{"primary":{"URL":"https:\/\/www.science.org\/doi\/10.1126\/science.adg7879"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2023,1,27]]},"references-count":0,"journal-issue":{"issue":"6630","published-print":{"date-parts":[[2023,1,27]]}},"alternative-id":["10.1126\/science.adg7879"],"URL":"http:\/\/dx.doi.org\/10.1126\/science.adg7879","relation":{},"ISSN":["0036-8075","1095-9203"],"subject":["Multidisciplinary"],"container-title-short":"Science","published":{"date-parts":[[2023,1,27]]},"assertion":[{"value":"2023-01-26","order":2,"name":"published","label":"Published","group":{"name":"publication_history","label":"Publication
         History"}}]}'
-  recorded_at: Wed, 06 Sep 2023 14:23:11 GMT
+  recorded_at: Thu, 05 Oct 2023 20:37:45 GMT
 - request:
     method: head
     uri: https://leakeyfoundation.org/meet-the-first-neanderthal-family
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -281,7 +239,7 @@ http_interactions:
       message: Moved Permanently
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:23:13 GMT
+      - Thu, 05 Oct 2023 20:37:47 GMT
       Content-Type:
       - text/html; charset=UTF-8
       Connection:
@@ -299,22 +257,22 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=43Ybw72fI%2B3%2FEcw%2BZATw14MLvC%2FG4zXoC1begSTxrI9ymjsKvHQCVS0XnrWZpAcRgbjbYUCdS%2BSmaeXmZ1C57YhSkIlfW8gZGPy3vfqRLFHvI%2FztZmO5o4Gt4N9mEM606vbzy0tQ"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1G3raqyOXGVlJgNmpyomMsNoboXreHkwFBT6gL6trPnFiuHndAgnMYiFiPh01d8HDVR1cqs9fC7CrrpMNfRi5hVqOUs1r7D27AlJUO4GVCNZk9U624ezhTT%2B777CLv05zmqURJmg4X5W2YTWzLQsug83"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 80275e55fa2e2c4d-FRA
+      - 811876e1f8e5b8a2-AMS
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Wed, 06 Sep 2023 14:23:13 GMT
+  recorded_at: Thu, 05 Oct 2023 20:37:47 GMT
 - request:
     method: head
     uri: https://retractionwatch.com/2022/12/30/university-to-investigate-adjunct-professor-after-allegations-of-plagiarism-and-legal-threats
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -329,7 +287,7 @@ http_interactions:
       message: Moved Permanently
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:18:32 GMT
+      - Thu, 05 Oct 2023 20:32:37 GMT
       Server:
       - Apache
       X-Redirect-By:
@@ -347,12 +305,12 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Wed, 06 Sep 2023 14:23:16 GMT
+  recorded_at: Thu, 05 Oct 2023 20:37:50 GMT
 - request:
     method: get
     uri: https://doi.org/10.21105/joss.01686
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -369,7 +327,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:23:17 GMT
+      - Thu, 05 Oct 2023 20:37:50 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -381,13 +339,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Wed, 06 Sep 2023 14:30:09 GMT
+      - Thu, 05 Oct 2023 20:54:23 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2a7ry1kvAZsfgGMBIp64tK94fjwDmjfvX3lCebo4PfYwo2cLVCocyimBjt%2BGnX9L8FR7uCCJ3cMZXYbrMohS8YHt6S0wJEj3Uo7XhWwF%2FR5qrQnq5aSzABM%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mUH9euZ12TirxDm%2FDjovjxdiGSjv3%2FTPA43NofcXwJjX0R3cGsBgoQ%2B9BOETEcizFfSHtrqa7B7U%2FiVCGmURiVdcjCF%2FPO3ERex7VhFlbPpoa%2BTg5hoq%2BPURut0wPEFCgwHd5lw%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -395,7 +353,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 80275e7578194da1-FRA
+      - 811877000cc606dc-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -403,12 +361,12 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.21105%2Fjoss.01686/transform">https://api.crossref.org/v1/works/10.21105%2Fjoss.01686/transform</a></body></html>
-  recorded_at: Wed, 06 Sep 2023 14:23:17 GMT
+  recorded_at: Thu, 05 Oct 2023 20:37:50 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.21105%2Fjoss.01686/transform
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Accept:
@@ -425,7 +383,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 06 Sep 2023 14:23:22 GMT
+      - Thu, 05 Oct 2023 20:37:51 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -460,8 +418,8 @@ http_interactions:
       - close
     body:
       encoding: ASCII-8BIT
-      string: '{"indexed":{"date-parts":[[2023,9,6]],"date-time":"2023-09-06T13:47:59Z","timestamp":1694008079290},"reference-count":33,"publisher":"The
-        Open Journal","issue":"43","license":[{"start":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T00:00:00Z","timestamp":1574294400000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"},{"start":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T00:00:00Z","timestamp":1574294400000},"content-version":"am","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"},{"start":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T00:00:00Z","timestamp":1574294400000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2019,11,21]]},"DOI":"10.21105\/joss.01686","type":"journal-article","created":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T21:05:35Z","timestamp":1574370335000},"page":"1686","source":"Crossref","is-referenced-by-count":7131,"title":"Welcome
+      string: '{"indexed":{"date-parts":[[2023,10,5]],"date-time":"2023-10-05T20:27:07Z","timestamp":1696537627791},"reference-count":33,"publisher":"The
+        Open Journal","issue":"43","license":[{"start":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T00:00:00Z","timestamp":1574294400000},"content-version":"vor","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"},{"start":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T00:00:00Z","timestamp":1574294400000},"content-version":"am","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"},{"start":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T00:00:00Z","timestamp":1574294400000},"content-version":"tdm","delay-in-days":0,"URL":"http:\/\/creativecommons.org\/licenses\/by\/4.0\/"}],"content-domain":{"domain":[],"crossmark-restriction":false},"published-print":{"date-parts":[[2019,11,21]]},"DOI":"10.21105\/joss.01686","type":"journal-article","created":{"date-parts":[[2019,11,21]],"date-time":"2019-11-21T21:05:35Z","timestamp":1574370335000},"page":"1686","source":"Crossref","is-referenced-by-count":7426,"title":"Welcome
         to the Tidyverse","prefix":"10.21105","volume":"4","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-4757-117X","authenticated-orcid":false,"given":"Hadley","family":"Wickham","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-9659-6192","authenticated-orcid":false,"given":"Mara","family":"Averick","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-6983-2759","authenticated-orcid":false,"given":"Jennifer","family":"Bryan","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-1576-2126","authenticated-orcid":false,"given":"Winston","family":"Chang","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-7297-9359","authenticated-orcid":false,"given":"Lucy","family":"McGowan","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-2444-4226","authenticated-orcid":false,"given":"Romain","family":"Fran\u00e7ois","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-7765-6011","authenticated-orcid":false,"given":"Garrett","family":"Grolemund","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-4985-5160","authenticated-orcid":false,"given":"Alex","family":"Hayes","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-8143-5908","authenticated-orcid":false,"given":"Lionel","family":"Henry","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-2739-7082","authenticated-orcid":false,"given":"Jim","family":"Hester","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-2402-136X","authenticated-orcid":false,"given":"Max","family":"Kuhn","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-5147-4711","authenticated-orcid":false,"given":"Thomas","family":"Pedersen","sequence":"additional","affiliation":[]},{"given":"Evan","family":"Miller","sequence":"additional","affiliation":[]},{"given":"Stephan","family":"Bache","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-1416-3412","authenticated-orcid":false,"given":"Kirill","family":"M\u00fcller","sequence":"additional","affiliation":[]},{"given":"Jeroen","family":"Ooms","sequence":"additional","affiliation":[]},{"given":"David","family":"Robinson","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-9088-5767","authenticated-orcid":false,"given":"Dana","family":"Seidel","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-2138-3413","authenticated-orcid":false,"given":"Vitalie","family":"Spinu","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-6076-4828","authenticated-orcid":false,"given":"Kohske","family":"Takahashi","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0003-4777-038X","authenticated-orcid":false,"given":"Davis","family":"Vaughan","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-7470-9261","authenticated-orcid":false,"given":"Claus","family":"Wilke","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-5125-4188","authenticated-orcid":false,"given":"Kara","family":"Woo","sequence":"additional","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0002-3385-7233","authenticated-orcid":false,"given":"Hiroaki","family":"Yutani","sequence":"additional","affiliation":[]}],"member":"8722","reference":[{"key":"ref1","unstructured":"R
         for Data Science: Import, Tidy, Transform, Visualize, and Model Data, Wickham,
         Hadley and Grolemund, Garrett, 2017, O\u2019Reilly Media, Inc."},{"key":"ref2","unstructured":"ggplot2:
@@ -536,5 +494,5 @@ http_interactions:
         version 1.2.2, https:\/\/CRAN.R-project.org\/package=xml2"}],"container-title":"Journal
         of Open Source Software","original-title":[],"link":[{"URL":"http:\/\/www.theoj.org\/joss-papers\/joss.01686\/10.21105.joss.01686.pdf","content-type":"application\/pdf","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2022,10,6]],"date-time":"2022-10-06T17:14:20Z","timestamp":1665076460000},"score":1,"resource":{"primary":{"URL":"https:\/\/joss.theoj.org\/papers\/10.21105\/joss.01686"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2019,11,21]]},"references-count":33,"journal-issue":{"issue":"43","published-online":{"date-parts":[[2019,11]]}},"alternative-id":["10.21105\/joss.01686"],"URL":"http:\/\/dx.doi.org\/10.21105\/joss.01686","relation":{"references":[{"id-type":"doi","id":"\u201chttps:\/\/doi.org\/10.5281\/zenodo.3547813\u201d","asserted-by":"subject"}],"has-review":[{"id-type":"uri","id":"https:\/\/github.com\/openjournals\/joss-reviews\/issues\/1686","asserted-by":"subject"}]},"ISSN":["2475-9066"],"subject":["General
         Earth and Planetary Sciences","General Environmental Science"],"container-title-short":"JOSS","published":{"date-parts":[[2019,11,21]]}}'
-  recorded_at: Wed, 06 Sep 2023 14:23:29 GMT
+  recorded_at: Thu, 05 Oct 2023 20:37:51 GMT
 recorded_with: VCR 6.2.0

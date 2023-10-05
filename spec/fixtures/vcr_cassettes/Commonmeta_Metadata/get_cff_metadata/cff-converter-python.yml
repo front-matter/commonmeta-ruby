@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://raw.githubusercontent.com/citation-file-format/cff-converter-python/main/CITATION.cff
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -21,7 +21,7 @@ http_interactions:
       Connection:
       - close
       Content-Length:
-      - '4446'
+      - '5037'
       Cache-Control:
       - max-age=300
       Content-Security-Policy:
@@ -29,7 +29,7 @@ http_interactions:
       Content-Type:
       - text/plain; charset=utf-8
       Etag:
-      - '"4974fffdc9a25f5f89ff7e5d2ad280e99988d2efee603db8fd0f0b38eeaed7a5"'
+      - '"29e2ee196eef62665165fa7ea8ce22f66ee428919194a110cec8c451df7b0dd6"'
       Strict-Transport-Security:
       - max-age=31536000
       X-Content-Type-Options:
@@ -39,21 +39,21 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Github-Request-Id:
-      - 374A:5E27:1CF7D31:1E2D9E4:648F2166
+      - BB0C:5BA9:F8ABF8:101E66A:651F0BEA
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 18 Jun 2023 15:23:20 GMT
+      - Thu, 05 Oct 2023 19:46:56 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-ams21024-AMS
+      - cache-ams21070-AMS
       X-Cache:
-      - MISS
+      - HIT
       X-Cache-Hits:
-      - '0'
+      - '1'
       X-Timer:
-      - S1687101800.855637,VS0,VE293
+      - S1696535216.294279,VS0,VE217
       Vary:
       - Authorization,Accept-Encoding,Origin
       Access-Control-Allow-Origin:
@@ -61,9 +61,9 @@ http_interactions:
       Cross-Origin-Resource-Policy:
       - cross-origin
       X-Fastly-Request-Id:
-      - 1de9490f31bacb1870e62180bbe5be435dcd0988
+      - c1c53cd912599f09bfe6e14c52fa0f114dd21db5
       Expires:
-      - Sun, 18 Jun 2023 15:28:20 GMT
+      - Thu, 05 Oct 2023 19:51:56 GMT
       Source-Age:
       - '0'
     body:
@@ -72,35 +72,60 @@ http_interactions:
         abstract: Command line program to validate and convert CITATION.cff files.
         authors:
           - affiliation: Netherlands eScience Center
+            alias: jspaaks
             family-names: Spaaks
             given-names: Jurriaan H.
             orcid: https://orcid.org/0000-0002-7064-4069
-          - affiliation: Netherlands eScience Center
-            family-names: Klaver
-            given-names: Tom
-          - affiliation: Netherlands eScience Center
-            family-names: Verhoeven
-            given-names: Stefan
-            orcid: https://orcid.org/0000-0002-5821-2060
-          - affiliation: Humboldt-Universität zu Berlin
-            family-names: Druskat
-            given-names: Stephan
-            orcid: https://orcid.org/0000-0003-4925-7248
+        contributors:
           - affiliation: University of Oslo
+            alias: wleoncio
             family-names: Leoncio
             given-names: Waldir
             name-suffix: Netto
-        cff-version: 1.2.0
+          - affiliation: Humboldt-Universität zu Berlin
+            alias: sdruskat
+            family-names: Druskat
+            given-names: Stephan
+            orcid: https://orcid.org/0000-0003-4925-7248
+          - affiliation: Netherlands eScience Center
+            alias: Tommos0
+            family-names: Klaver
+            given-names: Tom
+          - alias: zmoon
+            family-names: Moon
+            given-names: Zachary
+          - alias: nialov
+            family-names: Ovaskainen
+            given-names: Nikolas
+          - alias: musicinmybrain
+            family-names: Beasley
+            given-names: Ben
+          - alias: abelsiqueira
+            family-names: Soares Siqueira
+            given-names: Abel
+            orcid: https://orcid.org/0000-0003-4451-281X
+          - alias: monperrus
+            family-names: Monperrus
+            given-names: Martin
+          - alias: ots22
+          - affiliation: Netherlands eScience Center
+            alias: sverhoeven
+            family-names: Verhoeven
+            given-names: Stefan
+            orcid: https://orcid.org/0000-0002-5821-2060
+        cff-version: 1.3.0
         date-released: 2021-09-22
         identifiers:
           - type: doi
             value: 10.5281/zenodo.1162057
             description: Persistent identifier for all versions of cffconvert
+            relation: isPartOf
           - type: doi
             value: 10.5281/zenodo.5521767
             description: Persistent identifier for this version of cffconvert
+            relation: isIdenticalTo
           - type: url
-            value: https://github.com/citation-file-format/cff-converter-python
+            value: https://github.com/citation-file-format/cffconvert
             description: URL to the GitHub repository for cffconvert
           - type: url
             value: https://pypi.org/project/cffconvert
@@ -118,9 +143,10 @@ http_interactions:
         license: Apache-2.0
         message: If you use this software, please cite it using these metadata.
         repository-artifact: https://pypi.org/project/cffconvert
-        repository-code: https://github.com/citation-file-format/cff-converter-python
+        repository-code: https://github.com/citation-file-format/cffconvert
         title: cffconvert
-        version: 2.0.0
+        type: software
+        version: 3.0.0a0
         references:
           - authors:
               - affiliation: Netherlands eScience Center
@@ -198,5 +224,5 @@ http_interactions:
             type: blog
             url: >-
               https://blog.apastyle.org/apastyle/2015/01/how-to-cite-software-in-apa-style.html
-  recorded_at: Sun, 18 Jun 2023 15:23:20 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:46:56 GMT
+recorded_with: VCR 6.2.0

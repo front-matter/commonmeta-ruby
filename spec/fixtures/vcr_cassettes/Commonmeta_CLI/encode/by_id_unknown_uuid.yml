@@ -2,48 +2,38 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/2b22bbba-bcba-4072-94cc-3f88442
+    uri: https://api.rogue-scholar.org/posts/2b22bbba-bcba-4072-94cc-3f88442
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 400
+      message: Bad Request
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '28'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '30'
       Date:
-      - Sun, 09 Jul 2023 11:52:35 GMT
-      Etag:
-      - '"jtxxi9yf69s"'
+      - Thu, 05 Oct 2023 19:48:27 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::r2jnr-1688903554372-bc572f9c2183
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0P4S2QZXGZCEW9JXGB9G9E-fra
     body:
       encoding: UTF-8
-      string: '{"message":"Post not found"}'
-  recorded_at: Sun, 09 Jul 2023 11:52:35 GMT
+      string: '{"error":"Not a valid uuid."}
+
+        '
+  recorded_at: Thu, 05 Oct 2023 19:48:27 GMT
 recorded_with: VCR 6.2.0

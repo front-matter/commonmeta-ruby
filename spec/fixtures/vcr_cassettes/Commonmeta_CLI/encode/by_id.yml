@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/2b22bbba-bcba-4072-94cc-3f88442fff88
+    uri: https://api.rogue-scholar.org/posts/2b22bbba-bcba-4072-94cc-3f88442fff88
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,45 +18,29 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '1894'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '1019'
       Date:
-      - Sun, 09 Jul 2023 11:52:35 GMT
-      Etag:
-      - '"15o6g3vltsa1gm"'
+      - Thu, 05 Oct 2023 19:48:27 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::flst9-1688903555530-c16d7c4324cc
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0P4RTTZTA35BYD7WJ2VDH8-fra
     body:
       encoding: UTF-8
-      string: '{"id":"2b22bbba-bcba-4072-94cc-3f88442fff88","doi":"https://doi.org/10.54900/6p6re-xyj61","url":"https://upstream.force11.org/an-initial-scholarly-ai-taxonomy","title":"An
-        Initial Scholarly AI Taxonomy","summary":"Although advances in artificial
-        intelligence (AI)1 have been unfolding for over decades, the progress in the
-        last six months has come faster than anyone expected. The public release of
-        ChatGPT in November 2022, in particular, has opened up new possibilities and
-        heightened awareness of AI''s potential role in various aspects of our work
-        and life.It follows that in the context of the publishing industry, AI also
-        holds the promise of transforming multiple facets of the publishing process2.
-        In this...","date_published":"2023-04-11T08:00:34+00:00","date_modified":"2023-04-11T15:29:38+00:00","date_indexed":"2023-06-27T10:51:38.566+00:00","authors":[{"url":null,"name":"Adam
-        Hyde"},{"url":"https://orcid.org/0000-0002-7378-2408","name":"John Chodacki"},{"url":null,"name":"Paul
-        Shannon"}],"image":"https://upstream.force11.org/content/images/2023/04/1-1.png","tags":["Thought
-        Pieces"],"language":"en","references":[],"blog_id":"pm0p222","blog":{"id":"pm0p222","title":"Upstream","description":"The
-        community blog for all things Open Research.","language":"en","favicon":"https://upstream.force11.org/favicon.png","feed_url":"https://upstream.force11.org/atom-complete/","home_page_url":"https://upstream.force11.org","user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","created_at":"2023-05-31T07:23:49+00:00","indexed_at":"2023-01-13","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Ghost
-        5.25","category":"Humanities","prefix":"10.54900","modified_at":"2023-07-04T21:15:51+00:00","version":"https://jsonfeed.org/version/1.1","backlog":false,"current_feed_url":"https://upstream.force11.org/atom/","expired":null}}'
-  recorded_at: Sun, 09 Jul 2023 11:52:35 GMT
+      string: '{"archive_url":null,"authors":[{"name":"Adam Hyde","url":"https://coko.foundation"},{"name":"John
+        Chodacki","url":"https://orcid.org/0000-0002-7378-2408"},{"name":"Paul Shannon","url":null}],"blog_name":"Upstream","blog_slug":"upstream","doi":"https://doi.org/10.54900/6p6re-xyj61","id":"2b22bbba-bcba-4072-94cc-3f88442fff88","image":"https://upstream.force11.org/content/images/2023/04/1-1.png","indexed_at":1689006804,"language":"en","published_at":1681200034,"reference":[],"relationships":[],"summary":"Although
+        advances in artificial intelligence (AI)1 have been unfolding for over decades,
+        the progress in the last six months has come faster than anyone expected.
+        The public release of ChatGPT in November 2022, in particular, has opened
+        up new possibilities and heightened awareness of AI''s potential role in various
+        aspects of our work and life.","tags":["Thought Pieces"],"title":"An Initial
+        Scholarly AI Taxonomy","updated_at":1681226978,"url":"https://upstream.force11.org/an-initial-scholarly-ai-taxonomy"}
+
+        '
+  recorded_at: Thu, 05 Oct 2023 19:48:27 GMT
 recorded_with: VCR 6.2.0

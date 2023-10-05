@@ -207,7 +207,7 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it "json_feed_item from upstream blog" do
-      input = "https://rogue-scholar.org/api/posts/5d14ffac-b9ac-4e20-bdc0-d9248df4e80d"
+      input = "https://api.rogue-scholar.org/posts/5d14ffac-b9ac-4e20-bdc0-d9248df4e80d"
       subject = described_class.new(input: input)
 
       expect(subject.valid?).to be true
@@ -235,7 +235,7 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it "json_feed_item with references" do
-      input = "https://rogue-scholar.org/api/posts/954f8138-0ecd-4090-87c5-cef1297f1470"
+      input = "https://api.rogue-scholar.org/posts/954f8138-0ecd-4090-87c5-cef1297f1470"
       subject = described_class.new(input: input)
 
       expect(subject.valid?).to be true
@@ -267,7 +267,7 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it "json_feed_item from rogue scholar with doi" do
-      input = "https://rogue-scholar.org/api/posts/1c578558-1324-4493-b8af-84c49eabc52f"
+      input = "https://api.rogue-scholar.org/posts/1c578558-1324-4493-b8af-84c49eabc52f"
       subject = described_class.new(input: input, doi: "10.59350/9ry27-7cz42")
 
       expect(subject.valid?).to be true
@@ -295,7 +295,7 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it "json_feed_item from rogue scholar with organizational author" do
-      input = "https://rogue-scholar.org/api/posts/5561f8e4-2ff1-4186-a8d5-8dacb3afe414"
+      input = "https://api.rogue-scholar.org/posts/5561f8e4-2ff1-4186-a8d5-8dacb3afe414"
       subject = described_class.new(input: input, doi: "10.59350/9ry27-7cz42")
 
       expect(subject.valid?).to be true
@@ -323,7 +323,7 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it "json_feed_item from rogue scholar with relations" do
-      input = "https://rogue-scholar.org/api/posts/8a4de443-3347-4b82-b57d-e3c82b6485fc"
+      input = "https://api.rogue-scholar.org/posts/8a4de443-3347-4b82-b57d-e3c82b6485fc"
       subject = described_class.new(input: input, doi: "10.53731/r79v4e1-97aq74v-ag578")
 
       expect(subject.id).to eq("https://doi.org/10.53731/r79v4e1-97aq74v-ag578")
@@ -360,7 +360,7 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it "json_feed_item from rogue scholar with relations and funding" do
-      input = "https://rogue-scholar.org/api/posts/e58dc9c8-b870-4db2-8896-238b3246c551"
+      input = "https://api.rogue-scholar.org/posts/e58dc9c8-b870-4db2-8896-238b3246c551"
       subject = described_class.new(input: input, doi: "10.53731/r79s4nh-97aq74v-ag4t1")
 
       expect(subject.valid?).to be true
@@ -396,7 +396,7 @@ describe Commonmeta::Metadata, vcr: true do
     end
 
     it "json_feed_item from rogue scholar with anonymous author" do
-      input = "https://rogue-scholar.org/api/posts/a163e340-5b3c-4736-9ab0-8c54fdff6a3c"
+      input = "https://api.rogue-scholar.org/posts/a163e340-5b3c-4736-9ab0-8c54fdff6a3c"
       subject = described_class.new(input: input, doi: "10.59350/9ry27-7cz42")
 
       expect(subject.id).to eq("https://doi.org/10.59350/9ry27-7cz42")

@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://raw.githubusercontent.com/datacite/maremma/master/codemeta.json
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -39,21 +39,21 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Github-Request-Id:
-      - 22EC:E557:1C52E30:1D88A2D:648F2136
+      - 752C:86F9:F367C0:FCD3F6:651F0AC6
       Accept-Ranges:
       - bytes
       Date:
-      - Sun, 18 Jun 2023 15:23:46 GMT
+      - Thu, 05 Oct 2023 19:49:35 GMT
       Via:
       - 1.1 varnish
       X-Served-By:
-      - cache-ams21028-AMS
+      - cache-ams21066-AMS
       X-Cache:
       - HIT
       X-Cache-Hits:
       - '1'
       X-Timer:
-      - S1687101827.520903,VS0,VE1
+      - S1696535376.856409,VS0,VE1
       Vary:
       - Authorization,Accept-Encoding,Origin
       Access-Control-Allow-Origin:
@@ -61,11 +61,11 @@ http_interactions:
       Cross-Origin-Resource-Policy:
       - cross-origin
       X-Fastly-Request-Id:
-      - 1bbb9973352950f5532c7544b2f7fe0d4205242f
+      - 2fb7e7aec605933b04db834928ebc496178f654b
       Expires:
-      - Sun, 18 Jun 2023 15:28:46 GMT
+      - Thu, 05 Oct 2023 19:54:35 GMT
       Source-Age:
-      - '74'
+      - '234'
     body:
       encoding: UTF-8
       string: "{\n\t\"@context\": \"https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld\",\n\t\"@type\":
@@ -84,5 +84,5 @@ http_interactions:
         \"Maremma: a Ruby library for simplified network calls\",\n\t\"programmingLanguage\":
         {\n\t\t\"name\": \"Ruby\",\n\t\t\"version\": \"≥ 2.3.3\",\n\t\t\"URL\": \"https://www.ruby-lang.org\"\n\t},\n\t\"readme\":
         \"https://github.com/datacite/maremma/blob/master/README.md\"\n}\n"
-  recorded_at: Sun, 18 Jun 2023 15:23:46 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:49:35 GMT
+recorded_with: VCR 6.2.0

@@ -206,7 +206,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.descriptions.first["description"]).to start_with("This article presents a practical roadmap")
       expect(subject.date).to include("published" => "2017-10-09",
                                       "registered" => "2019-07-16",
-                                      "updated" => "2020-01-18")
+                                      "updated" => "2020-01-17")
       expect(subject.publisher).to eq("name" => "Cold Spring Harbor Laboratory")
       expect(subject.provider).to eq("Crossref")
     end
@@ -315,7 +315,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Paving the path to HIV neurotherapy: Predicting SIV CNS disease" }])
       expect(subject.date).to include("published" => "2015-07",
                                       "registered" => "2016-08-16",
-                                      "updated" => "2020-08-31")
+                                      "updated" => "2023-08-09")
       expect(subject.publisher).to eq("name" => "Elsevier BV")
       expect(subject.references.length).to eq(98)
       expect(subject.references.last).to eq("containerTitle" => "HIV Med.",
@@ -516,7 +516,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "The Politics of the Past in Early China" }])
       expect(subject.date).to eq("published" => "2019-07-01",
                                  "registered" => "2019-07-06",
-                                 "updated" => "2022-09-22")
+                                 "updated" => "2023-09-17")
       expect(subject.publisher).to eq("name" => "Cambridge University Press (CUP)")
       expect(subject.provider).to eq("Crossref")
     end
@@ -601,7 +601,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Synthesis, Crystal Structure and Theoretical Calculation of a Novel Nickel(II) Complex with Dibromotyrosine and 1,10-Phenanthroline" }])
       expect(subject.date).to eq("published" => "2013-10-20",
                                  "registered" => "2013-11-25",
-                                 "updated" => "2016-12-14")
+                                 "updated" => "2016-12-15")
       expect(subject.publisher).to eq("name" => "Korean Chemical Society")
       expect(subject.provider).to eq("KISTI")
     end
@@ -750,12 +750,12 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input, from: "crossref_xml")
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1111/nph.14619")
-      expect(subject.url).to eq("https://onlinelibrary.wiley.com/doi/10.1111/nph.14619")
+      expect(subject.url).to eq("https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.14619")
       expect(subject.type).to eq("JournalArticle")
       expect(subject.contributors.length).to eq(3)
       expect(subject.contributors.first).to eq("type" => "Person", "contributorRoles" => ["Author"],
                                                "id" => "https://orcid.org/0000-0002-4156-3761",
-                                               "givenName" => "Nico", "familyName" => "Dissmeyer", "affiliation" => [{ "name" => "Independent Junior Research Group on Protein Recognition and Degradation; Leibniz Institute of Plant Biochemistry (IPB); Weinberg 3 Halle (Saale) D-06120 Germany" }, { "name" => "ScienceCampus Halle - Plant-based Bioeconomy; Betty-Heimann-Strasse 3 Halle (Saale) D-06120 Germany" }])
+                                               "givenName" => "Nico", "familyName" => "Dissmeyer", "affiliation" => [{ "name" => "Independent Junior Research Group on Protein Recognition and Degradation Leibniz Institute of Plant Biochemistry (IPB) Weinberg 3 Halle (Saale) D-06120 Germany" }, { "name" => "ScienceCampus Halle - Plant-based Bioeconomy Betty-Heimann-Strasse 3 Halle (Saale) D-06120 Germany" }])
       expect(subject.titles).to eq([{ "title" => "Life and death of proteins after protease cleavage: protein degradation by the N-end rule pathway" }])
       expect(subject.license).to eq("url" => "http://onlinelibrary.wiley.com/termsAndConditions#vor")
       expect(subject.date).to include("published" => "2018-05",
@@ -912,7 +912,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.descriptions.empty?).to be(true)
       expect(subject.date).to include("published" => "2010-01-01",
                                       "registered" => "2010-02-18",
-                                      "updated" => "2010-02-18")
+                                      "updated" => "2010-02-19")
       expect(subject.publisher).to eq("name" => "Office of Scientific and Technical Information (OSTI)")
       expect(subject.provider).to eq("Crossref")
     end

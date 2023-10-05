@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/5d95d90d-ff59-4c8b-b7f8-44e6b45fd593
+    uri: https://api.rogue-scholar.org/posts/5d95d90d-ff59-4c8b-b7f8-44e6b45fd593
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,166 +18,32 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '11911'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '1866'
       Date:
-      - Wed, 06 Sep 2023 14:23:31 GMT
-      Etag:
-      - '"215twlqxlm94s"'
+      - Thu, 05 Oct 2023 20:37:43 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::7jz6k-1694010210452-1a90d9f3e3f3
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0RZ07SM9D6FJWVW0EMJDPB-fra
     body:
       encoding: UTF-8
-      string: '{"id":"5d95d90d-ff59-4c8b-b7f8-44e6b45fd593","doi":"https://doi.org/10.59350/tpa8t-j6292","url":"https://www.samuelmoore.org/2023/04/20/how-to-cultivate-good-closures-scaling-small-and-the-limits-of-openness","title":"How
-        to cultivate good closures: ‘scaling small’ and the limits of openness","summary":"<em>Text
-        of a talk given to the COPIM end-of-project conference: <strong>“Scaling Small:
-        Community-Owned Futures for Open Access Books”,</strong> April 20th 2023</em>  Open
-        access publishing has always had a difficult relationship with smoothness
-        and scale.","content_html":"\n<p><em>Text of a talk given to the COPIM end-of-project
-        conference: <strong><a href=\"https://scalingsmall.pubpub.org/\">“Scaling
-        Small: Community-Owned Futures for Open Access Books”</a>,</strong> April
-        20th 2023</em></p>\n\n\n\n<p>Open access publishing has always had a difficult
-        relationship with smoothness and scale. Openness implies seamlessness, limitlessness
-        or structureless-ness – or the idea that the removal of price and permission
-        barriers is what’s needed to allow research to reach its full potential. The
-        drive for seamlessness is on display in much of the push for <a href=\"https://scholarlykitchen.sspnet.org/2023/04/06/guest-post-why-interoperability-matters-for-open-research-and-more-than-ever/\">interoperability</a>
-        of standards and persistent identifiers that shape the infrastructures of
-        openness. Throughout the evolution of open access, many ideas have been propagated
-        around, for example, the necessity of CC BY as the one and only licence that
-        facilitates this interoperability and smoothness of access and possible reuse.
-        Similarly, failed projects such as <a href=\"https://blog.onerepo.net/\">One
-        Repo</a> sought to create a single open access repository to rule them all,
-        in response to the perceived messy and stratified institutional and subject
-        repository landscape.</p>\n\n\n\n<p>Yet this relationship between openness
-        and scale also leads to new kinds of closure, particularly the commercial
-        closures of walled gardens that stretch across proprietary services and make
-        researcher data available for increasing user surveillance. The economies
-        of scale of commercial publishers require cookie-cutter production processes
-        that remove all traces of care from publishing, in exchange for APCs and BPCs,
-        thus ensuring that more publications can be processed cheaply with as little
-        recourse to paid human labour as possible. Smoothness and scale are simply
-        market enclosures by another name.</p>\n\n\n\n<p>When Janneke and I were writing
-        our <a href=\"https://www.westminsterpapers.org/article/id/918/\">‘scaling
-        small’</a> article, we were particularly interested in exploring alternative
-        understandings of scale that preserve and facilitate difference and messiness
-        for open access book publishing. How can we nurture careful and bibliodiverse
-        publishing through open access infrastructures when it is exactly this difference
-        and complexity that commercial forms of sustainability want to standardise
-        at every turn? In outlining ‘scaling small’, we looked to the commons as a
-        way of thinking through these issues.</p>\n\n\n\n<p>As a mode of production
-        based on collaboration and self-organisation of labour, the commons was a
-        natural fit for the kinds of projects we were involved in. We charted the
-        informal mutual reliance – what we referred to as the latent commons, borrowing
-        from Anna Tsing (2017) – within the Radical Open Access Collective right through
-        to the expansive formality of the COPIM project. In doing so, we illustrated
-        the different forms of organisation that facilitate alternative publishing
-        projects that stand in opposition to the market as the dominant mode of production.
-        Scaling small is primarily about how open access can be sustained if we embed
-        ourselves in each other’s projects and infrastructures in a way that has ‘global
-        reach but preserves local contexts’ (Adema and Moore 2021). It is a reminder
-        that the commons is an active social process rather than a fixed set of open
-        resources available to all.  </p>\n\n\n\n<p>In their posthumously released
-        book <em>On the Inconvenience of Other People</em>, Lauren Berlant writes
-        against a fixed understanding of the commons that ‘merely needs the world
-        to create infrastructures to catch up with it’ (Berlant 2022). Instead, for
-        Berlant, the ‘better power’ of the commons is to ‘point to a way to view what’s
-        broken in sociality, the difficulty of convening a world conjointly’. From
-        our perspective, the commons is about revealing how hard it is to scale small
-        in a world dominated by the need for big, homogenising platforms. It is not,
-        then, about having a fixed understanding of the infrastructures necessary
-        for open access publishing but more about experimenting with the different
-        kinds of socialities that may allow experimental infrastructures of different
-        scales and formalities to flourish.</p>\n\n\n\n<p>This is why scaling small
-        reveals the limits of openness and forces us to instead cultivate good closures
-        (echoing the ‘good cuts’ of Sarah Kember and Joanna Zylinska’s (2012) reading
-        of Karen Barad) based on what we want to value ethically and politically.
-        So rather than leaving everything to the structureless-ness of market-centric
-        openness, through COPIM we learn how to deal with the fact that things like
-        governance, careful publishing and labour-intensive processes do not scale
-        well according to economic logic. In my time on the COPIM project, for example,
-        I learned how community governance requires pragmatic decision-making and
-        norms of trust within the community; it is not something that can be completely
-        organised through rules and board structures. Yet we still proceed to build
-        these structures to see what works and what doesn’t, relying on the fact that
-        we all share a broad horizon of better, more ethical futures for book publishing.</p>\n\n\n\n<p>Yet
-        of course, antagonism still exists within and outside the COPIM project. Is
-        it OK that the models and infrastructures being developed within this community
-        are being extracted from it by commercial publishers? Bloomsbury, for example,
-        has just proudly announced it is the first commercial book publisher to utilise
-        the kind of collective funding model being developed by COPIM, Open Library
-        of Humanities, and other scholar-led publishers. How is it possible to scale
-        small when a big commercial actor is waiting to take what you have developed
-        and piggyback on it for commercial gain? Do we engage with commercial publishers
-        or keep them at arms’ length?</p>\n\n\n\n<p>Again, part of the answer to this
-        question lies in sociality, or the fact that COPIM has managed to carve out
-        a pretty unique situation in neoliberal higher education that has brought
-        together a vast array of likeminded people and organisations with an explicit
-        goal of undermining the monopolisation of commercial publishers in place of
-        community-led approaches. Coupled with the move to diamond open access journals
-        that is gaining traction particularly in continental Europe, we have an important
-        counter-hegemonic project being formed around communities cross-pollinating
-        with one another rather than competing. Commercial publishers may treat COPIM’s
-        work as free R&amp;D but it cannot extract the social glue that keeps it together
-        and sets it apart from marketised models. </p>\n\n\n\n<p>This is why I am
-        so excited about the recent announcement of <a href=\"https://copim.pubpub.org/pub/open-book-futures-announcement/release/1\">Open
-        Book Futures</a> and its potential to further reach out to and engage libraries,
-        infrastructure providers and communities outside the Global North, increasing
-        the messiness that allows us to scale small. As someone now working in one,
-        I am especially pleased to see libraries treated as partners rather than a
-        chequebook – as is too often the case with new open access initiatives – and
-        given meaningful governance over the future of the Open Book Collective. Scaling
-        small will only work if libraries are understood as part of the community
-        and part of the cross-pollination at work. Without this, there is a danger
-        that the additional labour of collections librarians is undervalued or objectified
-        as a tool for the provision of open access, even though it is a crucial and
-        active facilitator of the smallness we desire.  </p>\n\n\n\n<p>As an interdisciplinary,
-        multi-practitioner group of advocates for better publishing futures, I hope
-        we can also consider how scaling small may help transform our professional
-        networks away from the commercially driven conservatism of learned societies
-        and towards expansive forms of mutual reliance and care within and between
-        them. In doing so, it can help build the necessary chains of equivalence between
-        previously disparate learned societies and member organisations, allowing
-        us to turn our attention to the brutally individuating structures of marketised
-        academia (which, at bottom, is the bigger issue at hand).</p>\n\n\n\n<p>So
-        in conclusion, I hope to have conveyed in these short remarks that scaling
-        small is, above all, a project of sociality, building new connections and
-        getting together in different ways, and not simply or even primarily about
-        the publications and resources being produced and shared. The point is to
-        continue learning how to hold onto this social and biblio-diversity through
-        the decisions we take and the institutional closures we enact, particularly
-        as more and more actors become involved. Viewed in this light, scaling small
-        reveals the limits of openness and the necessity of cultivating good closures
-        with other (inconvenient) people.</p>\n\n\n\n<p><strong>Work cited:</strong></p>\n\n\n\n<p>Adema,
-        Janneke, and Samuel A. Moore. 2021. ‘Scaling Small; Or How to Envision New
-        Relationalities for Knowledge Production’. <em>Westminster Papers in Communication
-        and Culture</em> 16 (1). <a href=\"https://doi.org/10.16997/wpcc.918\">https://doi.org/10.16997/wpcc.918</a>.</p>\n\n\n\n<p>Berlant,
-        Lauren. 2022. <em>On the Inconvenience of Other People</em>. Writing Matters!
-        Durham: Duke University Press.</p>\n\n\n\n<p>Kember, Sarah, and Joanna Zylinska.
-        2012. <em>Life after New Media: Mediation as a Vital Process</em>. Cambridge,
-        Mass: MIT Press.</p>\n\n\n\n<p>Tsing, Anna Lowenhaupt. 2017. <em>The Mushroom
-        at the End of the World On the Possibility of Life in Capitalist Ruins</em>.
-        Princeton, NJ: Princeton University Press.</p>\n<p>The post <a href=\"https://www.samuelmoore.org/2023/04/20/how-to-cultivate-good-closures-scaling-small-and-the-limits-of-openness/\">How
-        to cultivate good closures: ‘scaling small’ and the limits of openness</a>
-        appeared first on <a href=\"https://www.samuelmoore.org\">Samuel Moore</a>.</p>\n","published_at":1682005040,"updated_at":1687172511,"indexed_at":1689006804,"authors":[{"url":"https://orcid.org/0000-0002-0504-2897","name":"Samuel
-        Moore"}],"image":null,"tags":["Open Access"],"language":"en","reference":[],"relationships":[],"blog_id":"gr1by89","blog_name":"Samuel
-        Moore","blog_slug":"samuelmoore","blog":{"id":"gr1by89","title":"Samuel Moore","description":"publishing,
-        technology, commons","language":"en","favicon":"https://www.samuelmoore.org/wp-content/uploads/2019/02/cropped-cropped-cropped-roAorange-icon-2-32x32.png","feed_url":"https://www.samuelmoore.org/feed/atom/","home_page_url":"https://www.samuelmoore.org","user_id":"c58a77c3-88d4-49ca-88ab-4f3de88301d8","created_at":"2023-01-05","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"WordPress
-        6.3.1","category":"socialSciences","prefix":"10.59350","modified_at":"2023-06-19T11:01:51+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":null,"status":"active","issn":null,"backlog":0,"authors":null,"plan":"Starter","slug":"samuelmoore","use_mastodon":false}}'
-  recorded_at: Wed, 06 Sep 2023 14:23:35 GMT
+      string: '{"archive_url":null,"authors":[{"name":"Samuel Moore"}],"blog":{"api":true,"archive_prefix":null,"authors":[{"name":"Samuel
+        Moore"}],"backlog":0,"canonical_url":true,"category":"socialSciences","created_at":"2023-01-05","current_feed_url":null,"description":"publishing,
+        technology, commons","favicon":"https://www.samuelmoore.org/wp-content/uploads/2019/02/cropped-cropped-cropped-roAorange-icon-2-32x32.png","feed_format":"application/atom+xml","feed_url":"https://www.samuelmoore.org/feed/atom/","filter":null,"funding":null,"generator":"WordPress
+        6.3.1","home_page_url":"https://www.samuelmoore.org","id":"gr1by89","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-06-19T09:01:51+00:00","plan":"Starter","prefix":"10.59350","relative_url":null,"slug":"samuelmoore","status":"active","title":"Samuel
+        Moore","use_api":true,"use_mastodon":false,"user_id":"c58a77c3-88d4-49ca-88ab-4f3de88301d8","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Samuel
+        Moore","blog_slug":"samuelmoore","doi":"https://doi.org/10.59350/tpa8t-j6292","id":"5d95d90d-ff59-4c8b-b7f8-44e6b45fd593","image":"https://www.samuelmoore.org/wp-content/uploads/2023/04/EYJIDW1.jpg","indexed_at":1689006804,"language":"en","published_at":1681997840,"reference":[],"relationships":[],"summary":"<em>Text
+        of a talk given to the COPIM end-of-project conference: <strong>\u201cScaling
+        Small: Community-Owned Futures for Open Access Books\u201d,</strong> April
+        20th 2023</em>  Open access publishing has always had a difficult relationship
+        with smoothness and scale.","tags":["Open Access"],"title":"How to cultivate
+        good closures: \u2018scaling small\u2019 and the limits of openness","updated_at":1687165311,"url":"https://www.samuelmoore.org/2023/04/20/how-to-cultivate-good-closures-scaling-small-and-the-limits-of-openness"}
+
+        '
+  recorded_at: Thu, 05 Oct 2023 20:37:43 GMT
 recorded_with: VCR 6.2.0

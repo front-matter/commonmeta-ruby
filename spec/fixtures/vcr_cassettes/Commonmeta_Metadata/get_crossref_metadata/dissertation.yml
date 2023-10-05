@@ -2,224 +2,9 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doi.org/ra/10.14264
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - doi.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:21:13 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lJOwQZce9TIJuJudFpioX3XmJegmHupJI0g2UBys0slfXTWPkzoNV4DyjRNLNE%2BzlFXCLDsbtFb3BjC8UZ9tKfJ1qI54CBzDXVMxIIXmrAuN1jNSf0bI46udw1tfPv0VtKqYuPY%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7d948553ec01b79c-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: |-
-        [
-          {
-            "DOI": "10.14264",
-            "RA": "Crossref"
-          }
-        ]
-  recorded_at: Sun, 18 Jun 2023 15:21:13 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.14264/uql.2020.791
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - api.crossref.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:21:14 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - public
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":[{"name":"The
-        University of Queensland","department":["School of Social Science"]}],"indexed":{"date-parts":[[2022,4,3]],"date-time":"2022-04-03T00:57:13Z","timestamp":1648947433930},"reference-count":0,"publisher":"University
-        of Queensland Library","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.14264\/uql.2020.791","type":"dissertation","created":{"date-parts":[[2020,6,8]],"date-time":"2020-06-08T05:08:58Z","timestamp":1591592938000},"approved":{"date-parts":[[2020,5,25]]},"source":"Crossref","is-referenced-by-count":0,"title":["School
-        truancy and financial independence during emerging adulthood: a longitudinal
-        analysis of receipt of and reliance on cash transfers"],"prefix":"10.14264","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-3086-4443","authenticated-orcid":true,"given":"Patricia
-        Maree","family":"Collingwood","sequence":"first","affiliation":[]}],"member":"5387","container-title":[],"original-title":[],"deposited":{"date-parts":[[2020,6,8]],"date-time":"2020-06-08T05:08:59Z","timestamp":1591592939000},"score":1,"degree":["PhD
-        Thesis"],"resource":{"primary":{"URL":"http:\/\/espace.library.uq.edu.au\/view\/UQ:23a1e74"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.14264\/uql.2020.791","relation":{}}}'
-  recorded_at: Sun, 18 Jun 2023 15:21:14 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/members/5387
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - api.crossref.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:21:14 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - public
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687045413950,"primary-name":"University
-        of Queensland Library","counts":{"current-dois":237,"backfile-dois":1123,"total-dois":1360},"breakdowns":{"dois-by-issued-year":[[2020,443],[2015,227],[2021,194],[2016,94],[2014,81],[2019,79],[2013,55],[2018,54],[2017,39],[2023,32],[1970,24],[2022,11],[2012,4],[2009,3],[2008,3],[1979,2],[2010,1],[2007,1],[2006,1],[2005,1],[2004,1],[2003,1],[2000,1],[1995,1],[1994,1],[1992,1],[1990,1],[1985,1],[1983,1],[1982,1],[1980,1]]},"prefixes":["10.14264"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":0.0,"descriptions-current":0.2320675105485232,"ror-ids-current":0.0,"funders-backfile":0.0,"licenses-backfile":0.0,"funders-current":0.0,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.2956366874443455,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.4472573839662447,"similarity-checking-backfile":0.0,"references-backfile":0.0,"descriptions-backfile":0.4292074799643811,"award-numbers-backfile":0.0,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.0,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"references-current":0.0},"prefix":[{"name":"University
-        of Queensland Library","value":"10.14264"}],"id":5387,"tokens":["university","of","queensland","library"],"counts-type":{"all":{"monograph":15,"report":76,"book":3,"proceedings-article":728,"journal-issue":1,"dissertation":12319,"dataset":538},"backfile":{"monograph":3,"report":29,"proceedings-article":608,"journal-issue":1,"dataset":482},"current":{"monograph":12,"report":47,"book":3,"proceedings-article":120,"dataset":55}},"coverage-type":{"all":{"monograph":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.6666666666666667,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.8289473684210527,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.6666666666666667,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.0879120879120879,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dissertation":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.287848039613605,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dataset":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.5557620817843866,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.9981412639405204}},"backfile":{"monograph":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.3333333333333333,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.6896551724137931,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.1019736842105263,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dataset":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.516597510373444,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":1.0}},"current":{"monograph":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.75,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.9148936170212766,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.6666666666666667,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.01666666666666667,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dataset":{"last-status-check-time":1687045413950,"affiliations":0.0,"abstracts":0.0,"orcids":0.9090909090909091,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":1.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":false,"deposits-affiliations-current":false,"deposits-funders-current":false,"deposits-references-backfile":false,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-descriptions-current":true,"deposits-references-current":false,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":true,"deposits-orcids-backfile":true,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":false,"deposits-licenses-current":false},"location":"St.
-        Lucia, QLD, Australia","names":["University of Queensland Library"]}}'
-  recorded_at: Sun, 18 Jun 2023 15:21:14 GMT
-- request:
-    method: get
-    uri: https://doi.org/ra/10.14264
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - doi.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:21:15 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lu9MUxdxDN2WvJmHgr%2BH7KSTQtS22xkZZkDw2IFBB3PYhUlVNNq9GOQtr%2B1bVwNP5ZNVO1h9spyZKll5zikyFSiQCyAyK%2BmwbHw2frbV%2FZvAdzygV%2BtTWkWTmQ1Q%2Bj%2Bg8g0LYTE%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7d94855cfa1b0bbf-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: |-
-        [
-          {
-            "DOI": "10.14264",
-            "RA": "Crossref"
-          }
-        ]
-  recorded_at: Sun, 18 Jun 2023 15:21:15 GMT
-- request:
-    method: get
     uri: https://api.crossref.org/works/10.14264/uql.2020.791/transform/application/vnd.crossref.unixsd+xml
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -234,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:25:33 GMT
+      - Thu, 05 Oct 2023 19:46:32 GMT
       Transfer-Encoding:
       - chunked
       Link:
@@ -297,5 +82,220 @@ http_interactions:
         \               <resource>http://espace.library.uq.edu.au/view/UQ:23a1e74</resource>\r\n
         \             </doi_data>\r\n            </dissertation>\r\n          </crossref>\r\n
         \       </doi_record>\r\n      </query>\r\n    </body>\r\n  </query_result>\r\n</crossref_result>"
-  recorded_at: Sun, 18 Jun 2023 15:25:33 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:46:32 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.14264
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:46:32 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fUjGDaG%2BoQK2jg76%2BD4YnmzyMpZBp1js6lz%2Bdef14lzcxe%2Bf%2FfRRlGB0PzED9zCVPs9%2Bmg2%2F8%2FR9rM4w0DrqIogKBz5K8QBznTGuzS%2FDcOvn6dSkZ4DIlDXaJ7XbPY1ppEX2RlI%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 81182bd9dbefb8ae-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.14264",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Thu, 05 Oct 2023 19:46:32 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.14264/uql.2020.791
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:48:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"work","message-version":"1.0.0","message":{"institution":[{"name":"The
+        University of Queensland","department":["School of Social Science"]}],"indexed":{"date-parts":[[2022,4,3]],"date-time":"2022-04-03T00:57:13Z","timestamp":1648947433930},"reference-count":0,"publisher":"University
+        of Queensland Library","content-domain":{"domain":[],"crossmark-restriction":false},"short-container-title":[],"DOI":"10.14264\/uql.2020.791","type":"dissertation","created":{"date-parts":[[2020,6,8]],"date-time":"2020-06-08T05:08:58Z","timestamp":1591592938000},"approved":{"date-parts":[[2020,5,25]]},"source":"Crossref","is-referenced-by-count":0,"title":["School
+        truancy and financial independence during emerging adulthood: a longitudinal
+        analysis of receipt of and reliance on cash transfers"],"prefix":"10.14264","author":[{"ORCID":"http:\/\/orcid.org\/0000-0003-3086-4443","authenticated-orcid":true,"given":"Patricia
+        Maree","family":"Collingwood","sequence":"first","affiliation":[]}],"member":"5387","container-title":[],"original-title":[],"deposited":{"date-parts":[[2020,6,8]],"date-time":"2020-06-08T05:08:59Z","timestamp":1591592939000},"score":1,"degree":["PhD
+        Thesis"],"resource":{"primary":{"URL":"http:\/\/espace.library.uq.edu.au\/view\/UQ:23a1e74"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[null]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.14264\/uql.2020.791","relation":{}}}'
+  recorded_at: Thu, 05 Oct 2023 19:48:53 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/members/5387
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:48:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1696467925415,"primary-name":"University
+        of Queensland Library","counts":{"current-dois":262,"backfile-dois":1153,"total-dois":1415},"breakdowns":{"dois-by-issued-year":[[2020,443],[2015,227],[2021,195],[2016,94],[2014,81],[2019,79],[2023,55],[2013,55],[2018,54],[2017,40],[1970,24],[2022,12],[2012,7],[1980,6],[2009,5],[2005,4],[1981,4],[1979,4],[2008,3],[2006,3],[1983,3],[2010,2],[1992,2],[1982,2],[2007,1],[2004,1],[2003,1],[2002,1],[2000,1],[1996,1],[1995,1],[1994,1],[1990,1],[1985,1],[1971,1]]},"prefixes":["10.14264"],"coverage":{"affiliations-current":0.0,"similarity-checking-current":0.0,"descriptions-current":0.2099236641221374,"ror-ids-current":0.0,"funders-backfile":0.0,"licenses-backfile":0.0,"funders-current":0.0,"affiliations-backfile":0.0,"resource-links-backfile":0.0,"orcids-backfile":0.3061578490893322,"update-policies-current":0.0,"ror-ids-backfile":0.0,"orcids-current":0.4809160305343511,"similarity-checking-backfile":0.0,"references-backfile":0.0,"descriptions-backfile":0.4180398959236774,"award-numbers-backfile":0.0,"update-policies-backfile":0.0,"licenses-current":0.0,"award-numbers-current":0.0,"abstracts-backfile":0.0,"resource-links-current":0.0,"abstracts-current":0.0,"references-current":0.0},"prefix":[{"name":"University
+        of Queensland Library","value":"10.14264"}],"id":5387,"tokens":["university","of","queensland","library"],"counts-type":{"all":{"monograph":17,"report":129,"book":3,"proceedings-article":728,"journal-issue":1,"dissertation":12852,"dataset":538},"backfile":{"monograph":3,"report":59,"proceedings-article":608,"journal-issue":1,"dataset":482},"current":{"monograph":14,"report":70,"book":3,"proceedings-article":120,"dataset":55}},"coverage-type":{"all":{"monograph":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.7058823529411765,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.7751937984496124,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.6666666666666667,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.0879120879120879,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dissertation":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.2969187675070028,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dataset":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.5594795539033457,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.9981412639405204}},"backfile":{"monograph":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.3333333333333333,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.6610169491525424,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.1019736842105263,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dataset":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.520746887966805,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":1.0}},"current":{"monograph":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.7857142857142857,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"report":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.8714285714285714,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.6666666666666667,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"proceedings-article":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.01666666666666667,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"dataset":{"last-status-check-time":1696467925415,"affiliations":0.0,"abstracts":0.0,"orcids":0.9090909090909091,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":1.0}}},"flags":{"deposits-abstracts-current":false,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":false,"deposits-update-policies-backfile":false,"deposits-similarity-checking-backfile":false,"deposits-award-numbers-current":false,"deposits-resource-links-current":false,"deposits-ror-ids-current":false,"deposits-articles":false,"deposits-affiliations-current":false,"deposits-funders-current":false,"deposits-references-backfile":false,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":false,"deposits-licenses-backfile":false,"deposits-award-numbers-backfile":false,"deposits-descriptions-current":true,"deposits-references-current":false,"deposits-resource-links-backfile":false,"deposits-descriptions-backfile":true,"deposits-orcids-backfile":true,"deposits-funders-backfile":false,"deposits-update-policies-current":false,"deposits-similarity-checking-current":false,"deposits-licenses-current":false},"location":"St.
+        Lucia, QLD, Australia","names":["University of Queensland Library"]}}'
+  recorded_at: Thu, 05 Oct 2023 19:48:53 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.14264
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:48:53 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Nvy1jOeS1%2B4nb6JUE03OLbLbEPnVVd8dvLPzb5KrlrQddWCYa%2F%2F9JpTy0Y%2FlUTpaPWMBNVSUPzCT1xPmdNeqWo9PYQr1yB2l5mk3er9ntaRxvUjITrpokumjn%2FqooSKUW3h0KCs%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 81182f4cdaec0b5b-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.14264",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Thu, 05 Oct 2023 19:48:53 GMT
+recorded_with: VCR 6.2.0

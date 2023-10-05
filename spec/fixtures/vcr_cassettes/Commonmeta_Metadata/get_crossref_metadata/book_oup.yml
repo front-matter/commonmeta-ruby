@@ -2,61 +2,9 @@
 http_interactions:
 - request:
     method: get
-    uri: https://doi.org/ra/10.1093
+    uri: https://api.crossref.org/works/10.1093/oxfordhb/9780198746140.013.5/transform/application/vnd.crossref.unixsd+xml
     body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - doi.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:20:53 GMT
-      Content-Type:
-      - application/json;charset=UTF-8
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - close
-      Permissions-Policy:
-      - interest-cohort=(),browsing-topics=()
-      Cf-Cache-Status:
-      - DYNAMIC
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=U64w4HJYfeW1GTl0dSOuzRL%2B752NGkp5z1G4DdlwvAXlne6N1klU%2FZKPCBpkXu5u6V3025OYGlMtiwpaOAPYGDs6ryC2ifJGFbUw1R1cBoRfNBoowZOth2PqgJe7LqjiemFsKj4%3D"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Server:
-      - cloudflare
-      Cf-Ray:
-      - 7d9484d85dce0c05-AMS
-      Alt-Svc:
-      - h3=":443"; ma=86400
-    body:
-      encoding: UTF-8
-      string: |-
-        [
-          {
-            "DOI": "10.1093",
-            "RA": "Crossref"
-          }
-        ]
-  recorded_at: Sun, 18 Jun 2023 15:20:53 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1093/oxfordhb/9780198746140.013.5
-    body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -71,7 +19,111 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:20:54 GMT
+      - Thu, 05 Oct 2023 19:46:19 GMT
+      Transfer-Encoding:
+      - chunked
+      Link:
+      - <http://dx.doi.org/10.1093/oxfordhb/9780198746140.013.5>; rel="canonical"
+      Access-Control-Expose-Headers:
+      - Link
+      Access-Control-Allow-Headers:
+      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
+        Accept-Ranges, Cache-Control
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - Jetty(9.4.40.v20210413)
+      X-Ratelimit-Limit:
+      - '50'
+      X-Ratelimit-Interval:
+      - 1s
+      X-Api-Pool:
+      - public
+      X-Rate-Limit-Limit:
+      - '50'
+      X-Rate-Limit-Interval:
+      - 1s
+      Permissions-Policy:
+      - interest-cohort=()
+      Connection:
+      - close
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIiB2ZXJzaW9uPSIzLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIGh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3NjaGVtYXMvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0My4wLnhzZCI+DQogIDxxdWVyeV9yZXN1bHQ+DQogICAgPGhlYWQ+DQogICAgICA8ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICA8cXVlcnkgc3RhdHVzPSJyZXNvbHZlZCI+DQogICAgICAgIDxkb2kgdHlwZT0iYm9va190aXRsZSI+MTAuMTA5My9veGZvcmRoYi85NzgwMTk4NzQ2MTQwLjAxMy41PC9kb2k+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJwdWJsaXNoZXItbmFtZSIgdHlwZT0ic3RyaW5nIj5PeGZvcmQgVW5pdmVyc2l0eSBQcmVzcyAoT1VQKTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJwcmVmaXgtbmFtZSIgdHlwZT0ic3RyaW5nIj5PeGZvcmQgVW5pdmVyc2l0eSBQcmVzczwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJtZW1iZXItaWQiIHR5cGU9Im51bWJlciI+Mjg2PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImNpdGF0aW9uLWlkIiB0eXBlPSJudW1iZXIiPjk3NjQ3MzU0PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImJvb2staWQiIHR5cGU9Im51bWJlciI+MzAyMzQ1NDwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJzZXJpZXMtaWQiIHR5cGU9Im51bWJlciI+MTQzNjE1MjwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJkZXBvc2l0LXRpbWVzdGFtcCIgdHlwZT0ibnVtYmVyIj4yMDIyMDcwNTE2MTMwMDwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJvd25lci1wcmVmaXgiIHR5cGU9InN0cmluZyI+MTAuMTA5MzwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJsYXN0LXVwZGF0ZSIgdHlwZT0iZGF0ZSI+MjAyMi0wOC0wMlQxNzowODozN1o8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iY3JlYXRlZCIgdHlwZT0iZGF0ZSI+MjAxOC0wNC0wNVQxNDozMDowN1o8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iY2l0ZWRieS1jb3VudCIgdHlwZT0ibnVtYmVyIj4xPC9jcm0taXRlbT4NCiAgICAgICAgPGRvaV9yZWNvcmQ+DQogICAgICAgICAgPGNyb3NzcmVmIHhtbG5zPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy94c2NoZW1hLzEuMSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy94c2NoZW1hLzEuMSBodHRwOi8vZG9pLmNyb3NzcmVmLm9yZy9zY2hlbWFzL3VuaXhyZWYxLjEueHNkIj4NCiAgICAgICAgICAgIDxib29rIGJvb2tfdHlwZT0iZWRpdGVkX2Jvb2siPg0KICAgICAgICAgICAgICA8Ym9va19zZXRfbWV0YWRhdGEgbGFuZ3VhZ2U9ImVuIiBtZXRhZGF0YV9kaXN0cmlidXRpb25fb3B0cz0icXVlcnkiIHJlZmVyZW5jZV9kaXN0cmlidXRpb25fb3B0cz0ibm9uZSI+DQogICAgICAgICAgICAgICAgPHNldF9tZXRhZGF0YT4NCiAgICAgICAgICAgICAgICAgIDx0aXRsZXM+DQogICAgICAgICAgICAgICAgICAgIDx0aXRsZT5PeGZvcmQgSGFuZGJvb2tzIE9ubGluZTwvdGl0bGU+DQogICAgICAgICAgICAgICAgICAgIDxvcmlnaW5hbF9sYW5ndWFnZV90aXRsZT5PeGZvcmQgSGFuZGJvb2tzIE9ubGluZTwvb3JpZ2luYWxfbGFuZ3VhZ2VfdGl0bGU+DQogICAgICAgICAgICAgICAgICA8L3RpdGxlcz4NCiAgICAgICAgICAgICAgICAgIDxub2lzYm4gcmVhc29uPSJzaW1wbGVfc2VyaWVzIiAvPg0KICAgICAgICAgICAgICAgIDwvc2V0X21ldGFkYXRhPg0KICAgICAgICAgICAgICAgIDxjb250cmlidXRvcnM+DQogICAgICAgICAgICAgICAgICA8cGVyc29uX25hbWUgY29udHJpYnV0b3Jfcm9sZT0iZWRpdG9yIiBsYW5ndWFnZT0iZW4iIHNlcXVlbmNlPSJmaXJzdCI+DQogICAgICAgICAgICAgICAgICAgIDxnaXZlbl9uYW1lPkRhbmllbDwvZ2l2ZW5fbmFtZT4NCiAgICAgICAgICAgICAgICAgICAgPHN1cm5hbWU+Q296b3J0PC9zdXJuYW1lPg0KICAgICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBjb250cmlidXRvcl9yb2xlPSJlZGl0b3IiIGxhbmd1YWdlPSJlbiIgc2VxdWVuY2U9ImFkZGl0aW9uYWwiPg0KICAgICAgICAgICAgICAgICAgICA8Z2l2ZW5fbmFtZT5KYW1lcyBNYXJrPC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgICA8c3VybmFtZT5TaGllbGRzPC9zdXJuYW1lPg0KICAgICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiIGxhbmd1YWdlPSJlbiIgc2VxdWVuY2U9ImFkZGl0aW9uYWwiPg0KICAgICAgICAgICAgICAgICAgICA8Z2l2ZW5fbmFtZT5CYXJicmEgUi48L2dpdmVuX25hbWU+DQogICAgICAgICAgICAgICAgICAgIDxzdXJuYW1lPkNsYXl0b248L3N1cm5hbWU+DQogICAgICAgICAgICAgICAgICA8L3BlcnNvbl9uYW1lPg0KICAgICAgICAgICAgICAgIDwvY29udHJpYnV0b3JzPg0KICAgICAgICAgICAgICAgIDx0aXRsZXM+DQogICAgICAgICAgICAgICAgICA8dGl0bGU+VGhlIENoYW5naW5nIFdheSBvZiB0aGUgQm9kaGlzYXR0dmE8L3RpdGxlPg0KICAgICAgICAgICAgICAgICAgPG9yaWdpbmFsX2xhbmd1YWdlX3RpdGxlPlRoZSBDaGFuZ2luZyBXYXkgb2YgdGhlIEJvZGhpc2F0dHZhPC9vcmlnaW5hbF9sYW5ndWFnZV90aXRsZT4NCiAgICAgICAgICAgICAgICA8L3RpdGxlcz4NCiAgICAgICAgICAgICAgICA8YWJzdHJhY3QgeG1sbnM9Imh0dHA6Ly93d3cubmNiaS5ubG0ubmloLmdvdi9KQVRTMSI+DQogICAgICAgICAgICAgICAgICA8cD5UaGlzIGNoYXB0ZXIgZXhwbG9yZXMgdGhlIG5hdHVyZSBvZiB0aGUgY29ubmVjdGlvbnMgYmV0d2VlbiBjb250ZW1wb3JhcnkgdW5kZXJzdGFuZGluZ3Mgb2YgdGhlIGJvZGhpc2F0dHZhIHBhdGggYXMgc29jaWFsbHkgZW5nYWdlZCwgYW5kIHRoZSBjYW5vbmljYWwgTWFoxIF5xIFuYSB0cmFkaXRpb24gaW4gSW5kaWHigJR0aGUgVWdyYXBhcmlw4bmbY2NoxIEtc8WrdHJhIGFuZCB0aGUgd29ya3Mgb2YgxZrEgW50aWRldmEuIFRoZXNlIGNhbm9uaWNhbCB0cmVhdG1lbnRzIG9mIHRoZSBib2RoaXNhdHR2YeKAmXMgY2FyZWVyIGFyZSBjb21wYXJlZCB3aXRoIGEgY29udGVtcG9yYXJ5IHVuZGVyc3RhbmRpbmcgYXMgcmVmbGVjdGVkIGluIHRoZSBjb21tZW50YXJ5IG9uIMWaxIFudGlkZXZh4oCZcyBCb2RoaWNhcnnEgXZhdMSBcmEgYnkgUGVtYSBDaMO2ZHLDtm4uIFRoaXMgYW5hbHlzaXMgcmV2ZWFscyBkaXN0aW5jdCB2aXNpb25zIG9mIHRoZSBib2RoaXNhdHR2YSwgZnJvbSB0aGUgVWdyYeKAmXMgZWxpdGUgc3VwZXJoZXJvLCB0byDFmsSBbnRpZGV2YeKAmXMgc2FpbnRseSBib2RoaXNhdHR2YSwgdG8gdGhlIG1vZGVybiB2aWV3IG9mIHRoZSBib2RoaXNhdHR2YSBhcyBzb2NpYWwgYWN0aXZpc3QuIFRoZSBjYXJlZXIgb2YgdGhlIGJvZGhpc2F0dHZhIGlzIGZ1cnRoZXJtb3JlIHNob3duIHRvIGludm9sdmUgYSByYW5nZSBvZiB0eXBlcyBvZiBzb2NpYWwgZW5nYWdlbWVudC4gV2hpbGUgdGhlIGNhbm9uaWNhbCB0ZXh0cyBzdXBwb3J0IHRoZSBpZGVhbCBvZiBpbWJ1aW5nIGFsbCBkYWlseSBhY3Rpdml0aWVzIHdpdGggYW4gYWx0cnVpc3RpYyBtb3RpdmUsIGFzIHdlbGwgYXMgZW5kb3JzaW5nIHNlbGZsZXNzIHNlcnZpY2UgdG8gbWVldCB0aGUgbmVlZHMgYW5kIHdhbnRzIG9mIHNlbnRpZW50IGJlaW5ncywgb25seSB0aGUgY29udGVtcG9yYXJ5IHJlYWRpbmcgb2YgdGhlIGJvZGhpc2F0dHZhIHBhdGggYWR2b2NhdGVzIHNvY2lhbCBhY3Rpb24gdG8gYWRkcmVzcyBzeXN0ZW1pYyBjYXVzZXMgb2YgY29sbGVjdGl2ZSBzdWZmZXJpbmcuPC9wPg0KICAgICAgICAgICAgICAgIDwvYWJzdHJhY3Q+DQogICAgICAgICAgICAgICAgPHZvbHVtZT4xPC92b2x1bWU+DQogICAgICAgICAgICAgICAgPHB1YmxpY2F0aW9uX2RhdGU+DQogICAgICAgICAgICAgICAgICA8bW9udGg+MDQ8L21vbnRoPg0KICAgICAgICAgICAgICAgICAgPGRheT4wNTwvZGF5Pg0KICAgICAgICAgICAgICAgICAgPHllYXI+MjAxODwveWVhcj4NCiAgICAgICAgICAgICAgICA8L3B1YmxpY2F0aW9uX2RhdGU+DQogICAgICAgICAgICAgICAgPG5vaXNibiByZWFzb249InNpbXBsZV9zZXJpZXMiIC8+DQogICAgICAgICAgICAgICAgPHB1Ymxpc2hlcj4NCiAgICAgICAgICAgICAgICAgIDxwdWJsaXNoZXJfbmFtZT5PeGZvcmQgVW5pdmVyc2l0eSBQcmVzczwvcHVibGlzaGVyX25hbWU+DQogICAgICAgICAgICAgICAgPC9wdWJsaXNoZXI+DQogICAgICAgICAgICAgICAgPGRvaV9kYXRhPg0KICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDkzL294Zm9yZGhiLzk3ODAxOTg3NDYxNDAuMDEzLjU8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDxyZXNvdXJjZSBtaW1lX3R5cGU9InRleHQvaHRtbCI+aHR0cHM6Ly9hY2FkZW1pYy5vdXAuY29tL2VkaXRlZC12b2x1bWUvMjgwODEvY2hhcHRlci8yMTIxMTY0MTU8L3Jlc291cmNlPg0KICAgICAgICAgICAgICAgIDwvZG9pX2RhdGE+DQogICAgICAgICAgICAgIDwvYm9va19zZXRfbWV0YWRhdGE+DQogICAgICAgICAgICA8L2Jvb2s+DQogICAgICAgICAgPC9jcm9zc3JlZj4NCiAgICAgICAgPC9kb2lfcmVjb3JkPg0KICAgICAgPC9xdWVyeT4NCiAgICA8L2JvZHk+DQogIDwvcXVlcnlfcmVzdWx0Pg0KPC9jcm9zc3JlZl9yZXN1bHQ+
+  recorded_at: Thu, 05 Oct 2023 19:46:19 GMT
+- request:
+    method: get
+    uri: https://doi.org/ra/10.1093
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - doi.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:46:19 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - close
+      Permissions-Policy:
+      - interest-cohort=(),browsing-topics=()
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IIDDS2ZHE%2FfPd%2BM0NicLvrH7VHnqZZWurz5MZQAj17BMLAh5GabijyZvAZomWQeCEIek1O4fQcVy%2BYWiQJL0AsEOO%2B2K2eMOOeSvmUc3IzWfHYaqFv4FzNoYoSy4TFPizP9HGrM%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 81182b8788c21b06-AMS
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: |-
+        [
+          {
+            "DOI": "10.1093",
+            "RA": "Crossref"
+          }
+        ]
+  recorded_at: Thu, 05 Oct 2023 19:46:19 GMT
+- request:
+    method: get
+    uri: https://api.crossref.org/works/10.1093/oxfordhb/9780198746140.013.5
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.crossref.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 05 Oct 2023 19:48:59 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -122,12 +174,12 @@ http_interactions:
         R.","family":"Clayton","sequence":"additional","affiliation":[]}],"member":"286","container-title":["Oxford
         Handbooks Online"],"original-title":["The Changing Way of the Bodhisattva"],"deposited":{"date-parts":[[2022,8,2]],"date-time":"2022-08-02T17:08:37Z","timestamp":1659460117000},"score":1,"resource":{"primary":{"URL":"https:\/\/academic.oup.com\/edited-volume\/28081\/chapter\/212116415"}},"subtitle":[],"editor":[{"given":"Daniel","family":"Cozort","sequence":"first","affiliation":[]},{"given":"James
         Mark","family":"Shields","sequence":"additional","affiliation":[]}],"short-title":[],"issued":{"date-parts":[[2018,4,5]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.1093\/oxfordhb\/9780198746140.013.5","relation":{},"published":{"date-parts":[[2018,4,5]]}}}'
-  recorded_at: Sun, 18 Jun 2023 15:20:54 GMT
+  recorded_at: Thu, 05 Oct 2023 19:48:59 GMT
 - request:
     method: get
     uri: https://api.crossref.org/members/286
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -142,7 +194,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:20:55 GMT
+      - Thu, 05 Oct 2023 19:49:00 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -172,21 +224,21 @@ http_interactions:
       - close
     body:
       encoding: UTF-8
-      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1687044209527,"primary-name":"Oxford
-        University Press (OUP)","counts":{"current-dois":303881,"backfile-dois":4263920,"total-dois":4567801},"breakdowns":{"dois-by-issued-year":[[2011,259215],[2007,218889],[2018,152726],[2020,134015],[2017,130811],[2021,130604],[2022,122869],[2019,121560],[2016,119175],[2015,112102],[2013,108376],[2014,101293],[2012,98369],[2009,92088],[2003,89815],[2001,89251],[2010,80653],[2008,80478],[2004,78965],[2000,74148],[2006,72072],[2005,70450],[2002,69113],[1999,55308],[1997,51088],[1998,50550],[2023,50394],[1996,49536],[1995,49347],[1993,46950],[1994,44404],[1991,43015],[1992,41972],[1990,41168],[1988,39484],[1989,38280],[1987,35579],[1986,34520],[1984,34114],[1985,33469],[1983,31780],[1980,30436],[1982,29326],[1981,28338],[1979,27696],[1976,26231],[1978,26095],[1977,25946],[1975,25798],[1974,24480],[1973,23959],[1972,23155],[1967,22929],[1971,22029],[1965,20189],[1970,19962],[1968,19726],[1969,19566],[1966,18403],[1964,17388],[1963,16446],[1962,15383],[1961,13243],[1960,12644],[1958,12595],[1959,11954],[1956,11273],[1957,11042],[1955,10674],[1954,10325],[1951,10269],[1953,9901],[1938,9839],[1952,9518],[1932,9332],[1935,9135],[1950,9077],[1949,8855],[1936,8831],[1937,8782],[1941,8667],[1939,8380],[1934,8347],[1931,8273],[1933,8126],[1940,7989],[1948,7954],[1947,7917],[1930,7580],[1880,7555],[1942,7341],[1902,7209],[1929,7117],[1925,6967],[1946,6873],[1910,6700],[1928,6598],[1924,6560],[1926,6552],[1945,6494],[1944,6483],[1943,6468],[1911,6457],[1922,6423],[1906,6341],[1921,6227],[1901,6182],[1896,6167],[1923,6127],[1894,6104],[1909,6016],[1927,5873],[1912,5785],[1893,5776],[1916,5770],[1915,5752],[1898,5735],[1907,5705],[1897,5697],[1889,5671],[1895,5613],[1908,5612],[1888,5553],[1900,5516],[1891,5503],[1904,5379],[1905,5362],[1890,5308],[1903,5190],[1920,5094],[1887,5032],[1882,5028],[1886,5023],[1899,4973],[1914,4935],[1879,4920],[1885,4868],[1884,4582],[1881,4488],[1913,4464],[1876,4416],[1867,4413],[1917,4358],[1878,4254],[1875,4155],[1874,4140],[1873,3979],[1872,3978],[1870,3972],[1877,3955],[1883,3896],[1852,3801],[1868,3751],[1892,3623],[1919,3609],[1853,3574],[1859,3549],[1862,3521],[1866,3506],[1863,3495],[1856,3438],[1858,3406],[1857,3369],[1918,3246],[1860,3134],[1854,3089],[1855,3076],[1861,3075],[1864,3031],[1851,2987],[1850,2775],[1648,2173],[1869,2161],[1865,2159],[1871,2113],[1647,2012],[1609,1057],[1623,1052],[1784,734],[1711,710],[1834,691],[1823,542],[1633,534],[1619,502],[1765,495],[1791,483],[1815,412],[1827,393],[1849,376],[1712,343],[1651,309],[1600,301],[1710,275],[1640,271],[1826,266],[1831,253],[1634,248],[1595,242],[1835,232],[1670,217],[1597,189],[1822,184],[1807,183],[1787,181],[1616,181],[1767,180],[1842,159],[1687,159],[1848,155],[1646,154],[1845,151],[1596,149],[1847,148],[1682,148],[1667,146],[1837,141],[1788,137],[1800,136],[1802,135],[1673,131],[1573,131],[1759,130],[1748,129],[1841,126],[1657,125],[1751,124],[1645,122],[1681,120],[1709,118],[1832,117],[1830,115],[1599,114],[1752,112],[1649,110],[1846,109],[1785,109],[1792,104],[1659,104],[1828,101],[1810,101],[1808,101],[1796,101],[1820,99],[1840,98],[1798,98],[1794,96],[1812,93],[1797,93],[1665,93],[1816,91],[1698,88],[1686,88],[1817,87],[1622,87],[1844,86],[1779,86],[1763,86],[1833,85],[1836,84],[1714,83],[1652,83],[1829,80],[1793,79],[1789,79],[1750,79],[1843,78],[1839,77],[1678,76],[1838,72],[1656,72],[1638,71],[1592,70],[1655,69],[1653,69],[1727,66],[1705,64],[1613,62],[1590,62],[1803,61],[1753,61],[1692,61],[1608,61],[1598,60],[1813,59],[1617,58],[1716,57],[1683,57],[1601,57],[1778,55],[1697,55],[1700,54],[1824,53],[1818,53],[1604,53],[1804,52],[1728,52],[1685,52],[1819,51],[1786,51],[1773,51],[1814,50],[1693,50],[1757,49],[1594,49],[1591,49],[1766,48],[1684,47],[1580,47],[1635,46],[1821,45],[1738,45],[1790,44],[1637,43],[1795,42],[1668,42],[1661,42],[1801,41],[1769,41],[1632,41],[1568,40],[1771,39],[1811,36],[1577,36],[1799,35],[1747,34],[1704,33],[1691,32],[1825,31],[1650,31],[1809,30],[1688,30],[1777,29],[1672,29],[1612,29],[1754,28],[1720,26],[1679,26],[1664,26],[1570,26],[1660,25],[1589,25],[1729,24],[1671,23],[1631,23],[1602,23],[1756,22],[1606,20],[1764,19],[1680,19],[1694,18],[1690,18],[1639,18],[1588,18],[1713,17],[1629,17],[1618,17],[1611,17],[1587,17],[1806,16],[1805,16],[1725,16],[1699,16],[1676,16],[1675,16],[1669,16],[1662,16],[1658,16],[1593,16],[1626,15],[1508,15],[2024,14],[1770,14],[1689,14],[1642,14],[1783,12],[1743,12],[1733,12],[1717,12],[1586,12],[1755,11],[1746,11],[1739,11],[1736,11],[1732,11],[1731,11],[1730,11],[1706,11],[1695,11],[1677,11],[1641,11],[1775,10],[1654,10],[1630,10],[1620,10],[1615,10],[1603,10],[1532,10],[1741,9],[1625,9],[1607,9],[1581,9],[1485,9],[1772,8],[1768,8],[1749,8],[1737,8],[1734,8],[1663,8],[1621,8],[1614,8],[1605,8],[1761,7],[1740,7],[1696,7],[1666,7],[1584,7],[1582,7],[1526,7],[1674,6],[1636,6],[1523,6],[1782,5],[1776,5],[1762,5],[1758,5],[1742,5],[1724,5],[1701,5],[1627,5],[1624,5],[1561,5],[1781,4],[1774,4],[1760,4],[1735,4],[1715,4],[1707,4],[1525,4],[1513,4],[1722,3],[1708,3],[1780,2],[1745,2],[1744,2],[1726,2],[1644,2],[1610,2],[1583,2],[1578,2],[1566,2],[1545,2],[1542,2],[1509,2],[1476,2],[1723,1],[1719,1],[1703,1],[1702,1],[1643,1],[1628,1],[1579,1],[1574,1],[1569,1],[1563,1],[1559,1],[1557,1],[1550,1],[1548,1],[1536,1],[1530,1],[1524,1],[1515,1],[1514,1],[1506,1],[1499,1],[1498,1],[1475,1]]},"prefixes":["10.1093","10.3382","10.5740","10.2146","10.1534"],"coverage":{"affiliations-current":0.702334137376144,"similarity-checking-current":0.851287181495388,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.03093819771477889,"licenses-backfile":0.1610241280324209,"funders-current":0.2460502630964094,"affiliations-backfile":0.154050029081221,"resource-links-backfile":0.0637662057449483,"orcids-backfile":0.01913075292219366,"update-policies-current":0.03219681388438237,"ror-ids-backfile":0.0,"orcids-current":0.3183219747203675,"similarity-checking-backfile":0.6972635509108989,"references-backfile":0.2092581474324096,"descriptions-backfile":0.0,"award-numbers-backfile":0.02298729807313458,"update-policies-backfile":0.01232879603744911,"licenses-current":0.7380652294812772,"award-numbers-current":0.1886429227230396,"abstracts-backfile":0.123019662657836,"resource-links-current":0.03241071340426022,"abstracts-current":0.8178892395378454,"references-current":0.4959770436453743},"prefix":[{"name":"Oxford
+      string: '{"status":"ok","message-type":"member","message-version":"1.0.0","message":{"last-status-check-time":1696462278138,"primary-name":"Oxford
+        University Press (OUP)","counts":{"current-dois":2086314,"backfile-dois":4268724,"total-dois":6355038},"breakdowns":{"dois-by-issued-year":[[2023,1831126],[2011,259249],[2007,218894],[2018,153071],[2020,134466],[2017,131299],[2021,131067],[2022,123914],[2019,122066],[2016,119587],[2015,112264],[2013,108763],[2014,101486],[2012,98579],[2009,92181],[2003,90350],[2001,89509],[2010,80652],[2008,80481],[2004,79034],[2000,74262],[2006,72076],[2005,70454],[2002,69143],[1999,55386],[1997,51134],[1998,50634],[1996,49605],[1995,49400],[1993,46973],[1994,44468],[1991,43020],[1992,42015],[1990,41168],[1988,39484],[1989,38280],[1987,35589],[1986,34520],[1984,34114],[1985,33469],[1983,31780],[1980,30436],[1982,29326],[1981,28338],[1979,27696],[1976,26231],[1978,26095],[1977,25946],[1975,25798],[1974,24480],[1973,23959],[1972,23155],[1967,22929],[1971,22029],[1965,20189],[1970,19962],[1968,19726],[1969,19566],[1966,18403],[1964,17388],[1963,16446],[1962,15383],[1961,13243],[1960,12644],[1958,12595],[1959,11956],[1956,11273],[1957,11042],[1955,10674],[1954,10325],[1951,10269],[1953,9901],[1938,9839],[1952,9518],[1932,9332],[1935,9135],[1950,9077],[1949,8855],[1936,8831],[1937,8782],[1941,8667],[1939,8380],[1934,8347],[1931,8273],[1933,8126],[1940,7989],[1948,7954],[1947,7917],[1930,7580],[1880,7555],[1942,7341],[1902,7209],[1929,7117],[1925,6967],[1946,6873],[1910,6700],[1928,6598],[1924,6560],[1926,6552],[1945,6494],[1944,6483],[1943,6468],[1911,6457],[1922,6423],[1906,6341],[1921,6227],[1901,6182],[1896,6167],[1923,6127],[1894,6104],[1909,6016],[1927,5873],[1912,5785],[1893,5776],[1916,5770],[1915,5752],[1898,5735],[1907,5705],[1897,5697],[1889,5671],[1895,5613],[1908,5612],[1888,5578],[1900,5516],[1891,5503],[1904,5379],[1905,5362],[1890,5308],[1903,5190],[1920,5094],[1887,5032],[1882,5028],[1886,5023],[1899,4973],[1914,4935],[1879,4920],[1885,4868],[1884,4582],[1881,4488],[1913,4464],[1876,4416],[1867,4413],[1917,4358],[1878,4254],[1875,4155],[1874,4140],[1873,3979],[1872,3978],[1870,3972],[1877,3955],[1883,3896],[1852,3801],[1868,3751],[1892,3623],[1919,3609],[1853,3574],[1859,3549],[1862,3521],[1866,3506],[1863,3495],[1856,3438],[1858,3406],[1857,3369],[1918,3246],[1860,3134],[1854,3089],[1855,3076],[1861,3075],[1864,3031],[1851,2987],[1850,2775],[1648,2173],[1869,2161],[1865,2159],[1871,2113],[1647,2012],[1609,1057],[1623,1052],[1784,734],[1711,710],[1834,691],[1823,542],[1633,534],[1619,502],[1765,495],[1791,483],[1815,412],[1827,393],[1849,376],[1712,343],[1651,309],[1600,301],[1710,275],[1640,271],[1826,266],[1831,253],[1634,248],[1595,242],[1835,232],[1670,217],[2024,207],[1597,189],[1822,184],[1807,183],[1787,181],[1616,181],[1767,180],[1842,159],[1687,159],[1848,155],[1646,154],[1845,151],[1596,149],[1847,148],[1682,148],[1667,146],[1837,141],[1788,137],[1800,136],[1802,135],[1673,131],[1573,131],[1759,130],[1748,129],[1841,126],[1657,125],[1751,124],[1645,122],[1681,120],[1709,118],[1832,117],[1830,115],[1599,114],[1752,112],[1649,110],[1846,109],[1785,109],[1792,104],[1659,104],[1828,101],[1810,101],[1808,101],[1796,101],[1820,99],[1840,98],[1798,98],[1794,96],[1812,93],[1797,93],[1665,93],[1816,91],[1698,88],[1686,88],[1817,87],[1622,87],[1844,86],[1779,86],[1763,86],[1833,85],[1836,84],[1714,83],[1652,83],[1829,80],[1793,79],[1789,79],[1750,79],[1843,78],[1839,77],[1678,76],[1838,72],[1656,72],[1638,71],[1592,70],[1655,69],[1653,69],[1727,66],[1705,64],[1613,62],[1590,62],[1803,61],[1753,61],[1692,61],[1608,61],[1598,60],[1813,59],[1617,58],[1716,57],[1683,57],[1601,57],[1778,55],[1697,55],[1700,54],[1824,53],[1818,53],[1604,53],[1804,52],[1728,52],[1685,52],[1819,51],[1786,51],[1773,51],[1814,50],[1693,50],[1757,49],[1594,49],[1591,49],[1766,48],[1684,47],[1580,47],[1635,46],[1821,45],[1738,45],[1790,44],[1637,43],[1795,42],[1668,42],[1661,42],[1801,41],[1769,41],[1632,41],[1568,40],[1771,39],[1811,36],[1577,36],[1799,35],[1747,34],[1704,33],[1691,32],[1825,31],[1650,31],[1809,30],[1688,30],[1777,29],[1672,29],[1612,29],[1754,28],[1720,26],[1679,26],[1664,26],[1570,26],[1660,25],[1589,25],[1729,24],[1671,23],[1631,23],[1602,23],[1756,22],[1606,20],[1764,19],[1680,19],[1694,18],[1690,18],[1639,18],[1588,18],[1713,17],[1629,17],[1618,17],[1611,17],[1587,17],[1806,16],[1805,16],[1725,16],[1699,16],[1676,16],[1675,16],[1669,16],[1662,16],[1658,16],[1593,16],[1626,15],[1508,15],[1770,14],[1689,14],[1642,14],[1783,12],[1743,12],[1733,12],[1717,12],[1586,12],[1755,11],[1746,11],[1739,11],[1736,11],[1732,11],[1731,11],[1730,11],[1706,11],[1695,11],[1677,11],[1641,11],[1775,10],[1654,10],[1630,10],[1620,10],[1615,10],[1603,10],[1532,10],[1741,9],[1625,9],[1607,9],[1581,9],[1485,9],[1772,8],[1768,8],[1749,8],[1737,8],[1734,8],[1663,8],[1621,8],[1614,8],[1605,8],[1761,7],[1740,7],[1696,7],[1666,7],[1584,7],[1582,7],[1526,7],[1674,6],[1636,6],[1523,6],[1782,5],[1776,5],[1762,5],[1758,5],[1742,5],[1724,5],[1701,5],[1627,5],[1624,5],[1561,5],[1781,4],[1774,4],[1760,4],[1735,4],[1715,4],[1707,4],[1525,4],[1513,4],[1722,3],[1708,3],[1780,2],[1745,2],[1744,2],[1726,2],[1644,2],[1610,2],[1583,2],[1578,2],[1566,2],[1545,2],[1542,2],[1509,2],[1476,2],[1723,1],[1719,1],[1703,1],[1702,1],[1643,1],[1628,1],[1579,1],[1574,1],[1569,1],[1563,1],[1559,1],[1557,1],[1550,1],[1548,1],[1536,1],[1530,1],[1524,1],[1515,1],[1514,1],[1506,1],[1499,1],[1498,1],[1475,1]]},"prefixes":["10.1093","10.3382","10.5740","10.2146","10.1534"],"coverage":{"affiliations-current":0.1149222983692771,"similarity-checking-current":0.1419767110799237,"descriptions-current":0.0,"ror-ids-current":0.0,"funders-backfile":0.03090806526727893,"licenses-backfile":0.1611882145577929,"funders-current":0.04025712332851143,"affiliations-backfile":0.1554869792471942,"resource-links-backfile":0.06369444358548362,"orcids-backfile":0.01911226867794685,"update-policies-current":0.004689610480493349,"ror-ids-backfile":0.0,"orcids-current":0.05242259794067432,"similarity-checking-backfile":0.6974126226010396,"references-backfile":0.2096401641333569,"descriptions-backfile":0.0,"award-numbers-backfile":0.022964707954883,"update-policies-backfile":0.01231492127389824,"licenses-current":0.1204147601942948,"award-numbers-current":0.03084099517138839,"abstracts-backfile":0.1240862609060694,"resource-links-current":0.004720765905803249,"abstracts-current":0.1345276885454443,"references-current":0.08321086854615364},"prefix":[{"name":"Oxford
         University Press","value":"10.1093"},{"name":"Poultry Science Association","value":"10.3382"},{"name":"The
         Journal of AOAC International","value":"10.5740"},{"name":"American Society
         of Health System Pharmacists","value":"10.2146"},{"name":"The Genetics Society
-        of America","value":"10.1534"}],"id":286,"tokens":["oxford","university","press","oup"],"counts-type":{"all":{"book-section":8272,"monograph":10521,"report":14,"journal-article":3337894,"other":12991,"book":73427,"reference-entry":416286,"journal":87,"component":527,"book-chapter":557561,"reference-book":193195,"journal-issue":15982,"dataset":5827,"edited-book":2899},"backfile":{"book-section":5729,"monograph":10521,"report":14,"journal-article":3111081,"other":8282,"book":71034,"reference-entry":358148,"book-chapter":483120,"reference-book":193195,"journal-issue":15740,"dataset":5769,"edited-book":1287},"current":{"book-section":2543,"journal-article":226813,"other":4709,"book":2393,"reference-entry":9106,"book-chapter":56463,"journal-issue":242,"edited-book":1612}},"coverage-type":{"all":{"book-section":{"last-status-check-time":1687044209527,"affiliations":0.01148452611218569,"abstracts":0.00640715667311412,"orcids":0.0,"licenses":0.04158607350096712,"references":0.5209139264990329,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"monograph":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.01064537591483699,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.005892975952856192,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":9.5047999239616E-5,"descriptions":0.0},"report":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687044209527,"affiliations":0.254501191469831,"abstracts":0.1514832406301698,"orcids":0.05341811333733186,"licenses":0.2693201162169919,"references":0.2927504588222394,"funders":0.06192167875912177,"similarity-checking":0.9357963434429014,"award-numbers":0.04653862585210914,"ror-ids":0.0,"update-policies":0.01868034155668215,"resource-links":0.08208439213468133,"descriptions":0.0},"other":{"last-status-check-time":1687044209527,"affiliations":6.927873142945116E-4,"abstracts":0.0,"orcids":0.0,"licenses":0.05496112693403125,"references":0.4165961049957663,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1687044209527,"affiliations":0.03308047448486252,"abstracts":0.7536464788156945,"orcids":0.0,"licenses":0.0,"references":0.010323178122489,"funders":0.0,"similarity-checking":0.0177455159546216,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-entry":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.07116501635894552,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.06896551724137931,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.06641366223908918,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.06641366223908918},"book-chapter":{"last-status-check-time":1687044209527,"affiliations":0.02792519562881909,"abstracts":0.3218966175898243,"orcids":0.0,"licenses":0.005082851921135087,"references":0.09653831598695031,"funders":0.0,"similarity-checking":0.1505826268336559,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":1.972878303898587E-5,"descriptions":0.0},"reference-book":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.4880490551870855,"references":0.0,"funders":0.0,"similarity-checking":0.09948692278813664,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.4844199724690277,"descriptions":0.0},"dataset":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1687044209527,"affiliations":0.9251466022766471,"abstracts":0.9820627802690584,"orcids":0.0,"licenses":0.07726802345636426,"references":0.5184546395308727,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"book-section":{"last-status-check-time":1687044209527,"affiliations":0.01204398673415954,"abstracts":0.009251178216093559,"orcids":0.0,"licenses":0.03438645487868738,"references":0.5355210333391517,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"monograph":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.01064537591483699,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.005892975952856192,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":9.5047999239616E-5,"descriptions":0.0},"report":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687044209527,"affiliations":0.2066953576586402,"abstracts":0.103252213619639,"orcids":0.02621982519902246,"licenses":0.217454640364555,"references":0.2723905292083363,"funders":0.04240262468254603,"similarity-checking":0.9314579080390385,"award-numbers":0.03150544778486963,"ror-ids":0.0,"update-policies":0.01689734211356117,"resource-links":0.0849029645965502,"descriptions":0.0},"other":{"last-status-check-time":1687044209527,"affiliations":0.001086694035257184,"abstracts":0.0,"orcids":0.0,"licenses":0.0495049504950495,"references":0.4300893503984545,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1687044209527,"affiliations":0.03135118394008503,"abstracts":0.7458822535687136,"orcids":0.0,"licenses":0.0,"references":0.01030492440239885,"funders":0.0,"similarity-checking":0.01834332854689304,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-entry":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.06427789628868512,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1687044209527,"affiliations":0.02142738864050339,"abstracts":0.260583291935751,"orcids":0.0,"licenses":0.003195893359827786,"references":0.07585279019705249,"funders":0.0,"similarity-checking":0.1206097863884749,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":2.276867030965392E-5,"descriptions":0.0},"reference-book":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.4955527318932656,"references":0.0,"funders":0.0,"similarity-checking":0.1010165184243964,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.4918678526048285,"descriptions":0.0},"dataset":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1687044209527,"affiliations":0.8966588966588968,"abstracts":0.9774669774669775,"orcids":0.0,"licenses":0.09634809634809635,"references":0.6394716394716395,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"book-section":{"last-status-check-time":1687044209527,"affiliations":0.01022414471097129,"abstracts":0.0,"orcids":0.0,"licenses":0.05780574125049155,"references":0.4880062917813606,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1687044209527,"affiliations":0.9102300132708443,"abstracts":0.8130442258600697,"orcids":0.4264834908052008,"licenses":0.9807330267665434,"references":0.5720174769523793,"funders":0.329654825781591,"similarity-checking":0.9953045019465375,"award-numbers":0.2527412449903665,"ror-ids":0.0,"update-policies":0.04313685723481458,"resource-links":0.0434234369282184,"descriptions":0.0},"other":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0645572308345721,"references":0.3928647271182841,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1687044209527,"affiliations":0.08441287087338069,"abstracts":0.9841203510238195,"orcids":0.0,"licenses":0.0,"references":0.01086502298370247,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-entry":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.7252361080606194,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1687044209527,"affiliations":0.0924145015319767,"abstracts":0.949010856667198,"orcids":0.0,"licenses":0.02284682004144307,"references":0.3042700529550325,"funders":0.0,"similarity-checking":0.4549882223757151,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1687044209527,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1687044209527,"affiliations":0.9478908188585607,"abstracts":0.9857320099255583,"orcids":0.0,"licenses":0.06203473945409429,"references":0.4218362282878412,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"Oxford,
+        of America","value":"10.1534"}],"id":286,"tokens":["oxford","university","press","oup"],"counts-type":{"all":{"book-section":9435,"monograph":10465,"report":14,"journal-article":3364878,"other":15103,"book":70008,"reference-entry":417716,"journal":87,"component":1453497,"book-chapter":860224,"reference-book":192878,"journal-issue":15982,"dataset":5762,"edited-book":6598},"backfile":{"book-section":6061,"monograph":10465,"report":14,"journal-article":3111091,"other":8796,"book":67672,"reference-entry":359022,"book-chapter":486988,"reference-book":192878,"journal-issue":15740,"dataset":5704,"edited-book":4293},"current":{"book-section":3374,"journal-article":253787,"other":6307,"book":2336,"reference-entry":9735,"component":1452970,"book-chapter":355258,"journal-issue":242,"edited-book":2305}},"coverage-type":{"all":{"book-section":{"last-status-check-time":1696462278138,"affiliations":0.01218865924748278,"abstracts":0.005617382087970323,"orcids":0.0,"licenses":0.04144144144144144,"references":0.5121356650768415,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"monograph":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.01070234113712375,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.005924510272336359,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":9.555661729574773E-5,"descriptions":0.0},"report":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1696462278138,"affiliations":0.2616585207546901,"abstracts":0.1568196528967766,"orcids":0.05674945718685789,"licenses":0.2754735832918757,"references":0.2952561727349402,"funders":0.06417082580705749,"similarity-checking":0.9363644090513831,"award-numbers":0.04825553853661262,"ror-ids":0.0,"update-policies":0.01853053810569061,"resource-links":0.0814261319429709,"descriptions":0.0},"other":{"last-status-check-time":1696462278138,"affiliations":6.621201085876978E-4,"abstracts":0.0,"orcids":0.0,"licenses":0.05091703635039396,"references":0.4180626365622724,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1696462278138,"affiliations":0.01108444749171523,"abstracts":0.7523854416638099,"orcids":0.0,"licenses":0.0,"references":0.001028453890983888,"funders":0.0,"similarity-checking":0.01861215861044452,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-entry":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.07152946020741364,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.06896551724137931,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":2.407985706196848E-5,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":2.407985706196848E-5},"book-chapter":{"last-status-check-time":1696462278138,"affiliations":0.01984599360166654,"abstracts":0.225674940480619,"orcids":0.0,"licenses":0.003659511941075813,"references":0.07121865932594301,"funders":0.0,"similarity-checking":0.1104654136596979,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":1.278736701138308E-5,"descriptions":0.0},"reference-book":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.4880490551870855,"references":0.0,"funders":0.0,"similarity-checking":0.09948692278813664,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.4844199724690277,"descriptions":0.0},"dataset":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1696462278138,"affiliations":0.768869354349803,"abstracts":0.8836010912397696,"orcids":0.0,"licenses":0.03758714762049106,"references":0.3814792361321613,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"backfile":{"book-section":{"last-status-check-time":1696462278138,"affiliations":0.01468404553704009,"abstracts":0.008744431611945224,"orcids":0.0,"licenses":0.03497772644778089,"references":0.5327503712258703,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"monograph":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.01070234113712375,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.005924510272336359,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":9.555661729574773E-5,"descriptions":0.0},"report":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1696462278138,"affiliations":0.2086284200622868,"abstracts":0.1034502044459645,"orcids":0.02622391951890832,"licenses":0.2179106943512742,"references":0.2723983322892194,"funders":0.04240891700049918,"similarity-checking":0.9315108429808064,"award-numbers":0.03150984654579374,"ror-ids":0.0,"update-policies":0.01689728780032471,"resource-links":0.08490269169239988,"descriptions":0.0},"other":{"last-status-check-time":1696462278138,"affiliations":0.001136880400181901,"abstracts":0.0,"orcids":0.0,"licenses":0.04752160072760346,"references":0.4282628467485221,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1696462278138,"affiliations":0.008570753044095047,"abstracts":0.7443994562004965,"orcids":0.0,"licenses":0.0,"references":6.945265397801159E-4,"funders":0.0,"similarity-checking":0.01925464002837215,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-entry":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.06347243344419005,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1696462278138,"affiliations":0.02262478746909575,"abstracts":0.2689306512686144,"orcids":0.0,"licenses":0.003225952179519824,"references":0.07969395549787674,"funders":0.0,"similarity-checking":0.1257423180858666,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":2.258782557270405E-5,"descriptions":0.0},"reference-book":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.4955527318932656,"references":0.0,"funders":0.0,"similarity-checking":0.1010165184243964,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.4918678526048285,"descriptions":0.0},"dataset":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1696462278138,"affiliations":0.6922897740507803,"abstracts":0.8276263685068717,"orcids":0.0,"licenses":0.02958304216165851,"references":0.3696715583508036,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}},"current":{"book-section":{"last-status-check-time":1696462278138,"affiliations":0.007705986959098992,"abstracts":0.0,"orcids":0.0,"licenses":0.05305275637225845,"references":0.475103734439834,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-article":{"last-status-check-time":1696462278138,"affiliations":0.9117370078057584,"abstracts":0.81105809202205,"orcids":0.4309519400126878,"licenses":0.9811180241698747,"references":0.5754628881700008,"funders":0.3309428772947393,"similarity-checking":0.9958626722408949,"award-numbers":0.2535354450779591,"ror-ids":0.0,"update-policies":0.03855201409055625,"resource-links":0.03880813438040562,"descriptions":0.0},"other":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.05565244965910893,"references":0.4038370065007135,"funders":0.0,"similarity-checking":1.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book":{"last-status-check-time":1696462278138,"affiliations":0.0839041095890411,"abstracts":0.9837328767123288,"orcids":0.0,"licenses":0.0,"references":0.01070205479452055,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"reference-entry":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.7284026707755521,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"component":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"book-chapter":{"last-status-check-time":1696462278138,"affiliations":0.01704113630094185,"abstracts":0.1778003591755851,"orcids":0.0,"licenses":0.004439027411064635,"references":0.06320476949146817,"funders":0.0,"similarity-checking":0.09511397350657833,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"journal-issue":{"last-status-check-time":1696462278138,"affiliations":0.0,"abstracts":0.0,"orcids":0.0,"licenses":0.0,"references":0.0,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0},"edited-book":{"last-status-check-time":1696462278138,"affiliations":0.9114967462039046,"abstracts":0.9878524945770065,"orcids":0.0,"licenses":0.05249457700650759,"references":0.403470715835141,"funders":0.0,"similarity-checking":0.0,"award-numbers":0.0,"ror-ids":0.0,"update-policies":0.0,"resource-links":0.0,"descriptions":0.0}}},"flags":{"deposits-abstracts-current":true,"deposits-orcids-current":true,"deposits":true,"deposits-affiliations-backfile":true,"deposits-update-policies-backfile":true,"deposits-similarity-checking-backfile":true,"deposits-award-numbers-current":true,"deposits-resource-links-current":true,"deposits-ror-ids-current":false,"deposits-articles":true,"deposits-affiliations-current":true,"deposits-funders-current":true,"deposits-references-backfile":true,"deposits-ror-ids-backfile":false,"deposits-abstracts-backfile":true,"deposits-licenses-backfile":true,"deposits-award-numbers-backfile":true,"deposits-descriptions-current":false,"deposits-references-current":true,"deposits-resource-links-backfile":true,"deposits-descriptions-backfile":false,"deposits-orcids-backfile":true,"deposits-funders-backfile":true,"deposits-update-policies-current":true,"deposits-similarity-checking-current":true,"deposits-licenses-current":true},"location":"Oxford,
         Oxfordshire, United Kingdom","names":["Oxford University Press (OUP)","Oxford
         University Press","Poultry Science Association","The Journal of AOAC International","American
         Society of Health System Pharmacists","The Genetics Society of America"]}}'
-  recorded_at: Sun, 18 Jun 2023 15:20:55 GMT
+  recorded_at: Thu, 05 Oct 2023 19:49:00 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.1093
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -201,7 +253,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:20:55 GMT
+      - Thu, 05 Oct 2023 19:49:00 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -213,7 +265,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bNPZZAPxiZHbczvVeYwTOkX9XagsgdmoUMoNXSR%2FkKzWiv5aq8zBsqwtWdA6Jgl%2FbP8qvxS%2BzOqLZpLn6YBxbW1sio5%2FqoCoTnm9S%2BGvIDL8WEdV35MjMd6AZ08Y%2Fvjn%2FSh9KYE%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BmapXgFE4S2B%2FfbdBjcUcA3r9kz4kndtNyKvF3aqa3TbKai1ozI8IkYEuP%2BiyThtIWFDfvsoja%2B3Il9ZfujepBZR6rffTsWBLZnt2NVxFtP14g%2Fw4CloyPRcQ%2BtASTHRvt0Y9hA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -221,7 +273,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d9484e23ddbb921-AMS
+      - 81182f77be2b0b44-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -233,57 +285,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:20:55 GMT
-- request:
-    method: get
-    uri: https://api.crossref.org/works/10.1093/oxfordhb/9780198746140.013.5/transform/application/vnd.crossref.unixsd+xml
-    body:
-      encoding: UTF-8
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - api.crossref.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Sun, 18 Jun 2023 15:25:29 GMT
-      Transfer-Encoding:
-      - chunked
-      Link:
-      - <http://dx.doi.org/10.1093/oxfordhb/9780198746140.013.5>; rel="canonical"
-      Access-Control-Expose-Headers:
-      - Link
-      Access-Control-Allow-Headers:
-      - X-Requested-With, Accept, Accept-Encoding, Accept-Charset, Accept-Language,
-        Accept-Ranges, Cache-Control
-      Access-Control-Allow-Origin:
-      - "*"
-      Server:
-      - Jetty(9.4.40.v20210413)
-      X-Ratelimit-Limit:
-      - '50'
-      X-Ratelimit-Interval:
-      - 1s
-      X-Api-Pool:
-      - public
-      X-Rate-Limit-Limit:
-      - '50'
-      X-Rate-Limit-Interval:
-      - 1s
-      Permissions-Policy:
-      - interest-cohort=()
-      Connection:
-      - close
-    body:
-      encoding: ASCII-8BIT
-      string: !binary |-
-        PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPGNyb3NzcmVmX3Jlc3VsdCB4bWxucz0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIiB2ZXJzaW9uPSIzLjAiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhzaTpzY2hlbWFMb2NhdGlvbj0iaHR0cDovL3d3dy5jcm9zc3JlZi5vcmcvcXJzY2hlbWEvMy4wIGh0dHA6Ly93d3cuY3Jvc3NyZWYub3JnL3NjaGVtYXMvY3Jvc3NyZWZfcXVlcnlfb3V0cHV0My4wLnhzZCI+DQogIDxxdWVyeV9yZXN1bHQ+DQogICAgPGhlYWQ+DQogICAgICA8ZG9pX2JhdGNoX2lkPm5vbmU8L2RvaV9iYXRjaF9pZD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICA8cXVlcnkgc3RhdHVzPSJyZXNvbHZlZCI+DQogICAgICAgIDxkb2kgdHlwZT0iYm9va190aXRsZSI+MTAuMTA5My9veGZvcmRoYi85NzgwMTk4NzQ2MTQwLjAxMy41PC9kb2k+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJwdWJsaXNoZXItbmFtZSIgdHlwZT0ic3RyaW5nIj5PeGZvcmQgVW5pdmVyc2l0eSBQcmVzcyAoT1VQKTwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJwcmVmaXgtbmFtZSIgdHlwZT0ic3RyaW5nIj5PeGZvcmQgVW5pdmVyc2l0eSBQcmVzczwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJtZW1iZXItaWQiIHR5cGU9Im51bWJlciI+Mjg2PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImNpdGF0aW9uLWlkIiB0eXBlPSJudW1iZXIiPjk3NjQ3MzU0PC9jcm0taXRlbT4NCiAgICAgICAgPGNybS1pdGVtIG5hbWU9ImJvb2staWQiIHR5cGU9Im51bWJlciI+MzAyMzQ1NDwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJzZXJpZXMtaWQiIHR5cGU9Im51bWJlciI+MTQzNjE1MjwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJkZXBvc2l0LXRpbWVzdGFtcCIgdHlwZT0ibnVtYmVyIj4yMDIyMDcwNTE2MTMwMDwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJvd25lci1wcmVmaXgiIHR5cGU9InN0cmluZyI+MTAuMTA5MzwvY3JtLWl0ZW0+DQogICAgICAgIDxjcm0taXRlbSBuYW1lPSJsYXN0LXVwZGF0ZSIgdHlwZT0iZGF0ZSI+MjAyMi0wOC0wMlQxNzowODozN1o8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iY3JlYXRlZCIgdHlwZT0iZGF0ZSI+MjAxOC0wNC0wNVQxNDozMDowN1o8L2NybS1pdGVtPg0KICAgICAgICA8Y3JtLWl0ZW0gbmFtZT0iY2l0ZWRieS1jb3VudCIgdHlwZT0ibnVtYmVyIj4xPC9jcm0taXRlbT4NCiAgICAgICAgPGRvaV9yZWNvcmQ+DQogICAgICAgICAgPGNyb3NzcmVmIHhtbG5zPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy94c2NoZW1hLzEuMSIgeHNpOnNjaGVtYUxvY2F0aW9uPSJodHRwOi8vd3d3LmNyb3NzcmVmLm9yZy94c2NoZW1hLzEuMSBodHRwOi8vZG9pLmNyb3NzcmVmLm9yZy9zY2hlbWFzL3VuaXhyZWYxLjEueHNkIj4NCiAgICAgICAgICAgIDxib29rIGJvb2tfdHlwZT0iZWRpdGVkX2Jvb2siPg0KICAgICAgICAgICAgICA8Ym9va19zZXRfbWV0YWRhdGEgbGFuZ3VhZ2U9ImVuIiBtZXRhZGF0YV9kaXN0cmlidXRpb25fb3B0cz0icXVlcnkiIHJlZmVyZW5jZV9kaXN0cmlidXRpb25fb3B0cz0ibm9uZSI+DQogICAgICAgICAgICAgICAgPHNldF9tZXRhZGF0YT4NCiAgICAgICAgICAgICAgICAgIDx0aXRsZXM+DQogICAgICAgICAgICAgICAgICAgIDx0aXRsZT5PeGZvcmQgSGFuZGJvb2tzIE9ubGluZTwvdGl0bGU+DQogICAgICAgICAgICAgICAgICAgIDxvcmlnaW5hbF9sYW5ndWFnZV90aXRsZT5PeGZvcmQgSGFuZGJvb2tzIE9ubGluZTwvb3JpZ2luYWxfbGFuZ3VhZ2VfdGl0bGU+DQogICAgICAgICAgICAgICAgICA8L3RpdGxlcz4NCiAgICAgICAgICAgICAgICAgIDxub2lzYm4gcmVhc29uPSJzaW1wbGVfc2VyaWVzIiAvPg0KICAgICAgICAgICAgICAgIDwvc2V0X21ldGFkYXRhPg0KICAgICAgICAgICAgICAgIDxjb250cmlidXRvcnM+DQogICAgICAgICAgICAgICAgICA8cGVyc29uX25hbWUgY29udHJpYnV0b3Jfcm9sZT0iZWRpdG9yIiBsYW5ndWFnZT0iZW4iIHNlcXVlbmNlPSJmaXJzdCI+DQogICAgICAgICAgICAgICAgICAgIDxnaXZlbl9uYW1lPkRhbmllbDwvZ2l2ZW5fbmFtZT4NCiAgICAgICAgICAgICAgICAgICAgPHN1cm5hbWU+Q296b3J0PC9zdXJuYW1lPg0KICAgICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBjb250cmlidXRvcl9yb2xlPSJlZGl0b3IiIGxhbmd1YWdlPSJlbiIgc2VxdWVuY2U9ImFkZGl0aW9uYWwiPg0KICAgICAgICAgICAgICAgICAgICA8Z2l2ZW5fbmFtZT5KYW1lcyBNYXJrPC9naXZlbl9uYW1lPg0KICAgICAgICAgICAgICAgICAgICA8c3VybmFtZT5TaGllbGRzPC9zdXJuYW1lPg0KICAgICAgICAgICAgICAgICAgPC9wZXJzb25fbmFtZT4NCiAgICAgICAgICAgICAgICAgIDxwZXJzb25fbmFtZSBjb250cmlidXRvcl9yb2xlPSJhdXRob3IiIGxhbmd1YWdlPSJlbiIgc2VxdWVuY2U9ImFkZGl0aW9uYWwiPg0KICAgICAgICAgICAgICAgICAgICA8Z2l2ZW5fbmFtZT5CYXJicmEgUi48L2dpdmVuX25hbWU+DQogICAgICAgICAgICAgICAgICAgIDxzdXJuYW1lPkNsYXl0b248L3N1cm5hbWU+DQogICAgICAgICAgICAgICAgICA8L3BlcnNvbl9uYW1lPg0KICAgICAgICAgICAgICAgIDwvY29udHJpYnV0b3JzPg0KICAgICAgICAgICAgICAgIDx0aXRsZXM+DQogICAgICAgICAgICAgICAgICA8dGl0bGU+VGhlIENoYW5naW5nIFdheSBvZiB0aGUgQm9kaGlzYXR0dmE8L3RpdGxlPg0KICAgICAgICAgICAgICAgICAgPG9yaWdpbmFsX2xhbmd1YWdlX3RpdGxlPlRoZSBDaGFuZ2luZyBXYXkgb2YgdGhlIEJvZGhpc2F0dHZhPC9vcmlnaW5hbF9sYW5ndWFnZV90aXRsZT4NCiAgICAgICAgICAgICAgICA8L3RpdGxlcz4NCiAgICAgICAgICAgICAgICA8YWJzdHJhY3QgeG1sbnM9Imh0dHA6Ly93d3cubmNiaS5ubG0ubmloLmdvdi9KQVRTMSI+DQogICAgICAgICAgICAgICAgICA8cD5UaGlzIGNoYXB0ZXIgZXhwbG9yZXMgdGhlIG5hdHVyZSBvZiB0aGUgY29ubmVjdGlvbnMgYmV0d2VlbiBjb250ZW1wb3JhcnkgdW5kZXJzdGFuZGluZ3Mgb2YgdGhlIGJvZGhpc2F0dHZhIHBhdGggYXMgc29jaWFsbHkgZW5nYWdlZCwgYW5kIHRoZSBjYW5vbmljYWwgTWFoxIF5xIFuYSB0cmFkaXRpb24gaW4gSW5kaWHigJR0aGUgVWdyYXBhcmlw4bmbY2NoxIEtc8WrdHJhIGFuZCB0aGUgd29ya3Mgb2YgxZrEgW50aWRldmEuIFRoZXNlIGNhbm9uaWNhbCB0cmVhdG1lbnRzIG9mIHRoZSBib2RoaXNhdHR2YeKAmXMgY2FyZWVyIGFyZSBjb21wYXJlZCB3aXRoIGEgY29udGVtcG9yYXJ5IHVuZGVyc3RhbmRpbmcgYXMgcmVmbGVjdGVkIGluIHRoZSBjb21tZW50YXJ5IG9uIMWaxIFudGlkZXZh4oCZcyBCb2RoaWNhcnnEgXZhdMSBcmEgYnkgUGVtYSBDaMO2ZHLDtm4uIFRoaXMgYW5hbHlzaXMgcmV2ZWFscyBkaXN0aW5jdCB2aXNpb25zIG9mIHRoZSBib2RoaXNhdHR2YSwgZnJvbSB0aGUgVWdyYeKAmXMgZWxpdGUgc3VwZXJoZXJvLCB0byDFmsSBbnRpZGV2YeKAmXMgc2FpbnRseSBib2RoaXNhdHR2YSwgdG8gdGhlIG1vZGVybiB2aWV3IG9mIHRoZSBib2RoaXNhdHR2YSBhcyBzb2NpYWwgYWN0aXZpc3QuIFRoZSBjYXJlZXIgb2YgdGhlIGJvZGhpc2F0dHZhIGlzIGZ1cnRoZXJtb3JlIHNob3duIHRvIGludm9sdmUgYSByYW5nZSBvZiB0eXBlcyBvZiBzb2NpYWwgZW5nYWdlbWVudC4gV2hpbGUgdGhlIGNhbm9uaWNhbCB0ZXh0cyBzdXBwb3J0IHRoZSBpZGVhbCBvZiBpbWJ1aW5nIGFsbCBkYWlseSBhY3Rpdml0aWVzIHdpdGggYW4gYWx0cnVpc3RpYyBtb3RpdmUsIGFzIHdlbGwgYXMgZW5kb3JzaW5nIHNlbGZsZXNzIHNlcnZpY2UgdG8gbWVldCB0aGUgbmVlZHMgYW5kIHdhbnRzIG9mIHNlbnRpZW50IGJlaW5ncywgb25seSB0aGUgY29udGVtcG9yYXJ5IHJlYWRpbmcgb2YgdGhlIGJvZGhpc2F0dHZhIHBhdGggYWR2b2NhdGVzIHNvY2lhbCBhY3Rpb24gdG8gYWRkcmVzcyBzeXN0ZW1pYyBjYXVzZXMgb2YgY29sbGVjdGl2ZSBzdWZmZXJpbmcuPC9wPg0KICAgICAgICAgICAgICAgIDwvYWJzdHJhY3Q+DQogICAgICAgICAgICAgICAgPHZvbHVtZT4xPC92b2x1bWU+DQogICAgICAgICAgICAgICAgPHB1YmxpY2F0aW9uX2RhdGU+DQogICAgICAgICAgICAgICAgICA8bW9udGg+MDQ8L21vbnRoPg0KICAgICAgICAgICAgICAgICAgPGRheT4wNTwvZGF5Pg0KICAgICAgICAgICAgICAgICAgPHllYXI+MjAxODwveWVhcj4NCiAgICAgICAgICAgICAgICA8L3B1YmxpY2F0aW9uX2RhdGU+DQogICAgICAgICAgICAgICAgPG5vaXNibiByZWFzb249InNpbXBsZV9zZXJpZXMiIC8+DQogICAgICAgICAgICAgICAgPHB1Ymxpc2hlcj4NCiAgICAgICAgICAgICAgICAgIDxwdWJsaXNoZXJfbmFtZT5PeGZvcmQgVW5pdmVyc2l0eSBQcmVzczwvcHVibGlzaGVyX25hbWU+DQogICAgICAgICAgICAgICAgPC9wdWJsaXNoZXI+DQogICAgICAgICAgICAgICAgPGRvaV9kYXRhPg0KICAgICAgICAgICAgICAgICAgPGRvaT4xMC4xMDkzL294Zm9yZGhiLzk3ODAxOTg3NDYxNDAuMDEzLjU8L2RvaT4NCiAgICAgICAgICAgICAgICAgIDxyZXNvdXJjZSBtaW1lX3R5cGU9InRleHQvaHRtbCI+aHR0cHM6Ly9hY2FkZW1pYy5vdXAuY29tL2VkaXRlZC12b2x1bWUvMjgwODEvY2hhcHRlci8yMTIxMTY0MTU8L3Jlc291cmNlPg0KICAgICAgICAgICAgICAgIDwvZG9pX2RhdGE+DQogICAgICAgICAgICAgIDwvYm9va19zZXRfbWV0YWRhdGE+DQogICAgICAgICAgICA8L2Jvb2s+DQogICAgICAgICAgPC9jcm9zc3JlZj4NCiAgICAgICAgPC9kb2lfcmVjb3JkPg0KICAgICAgPC9xdWVyeT4NCiAgICA8L2JvZHk+DQogIDwvcXVlcnlfcmVzdWx0Pg0KPC9jcm9zc3JlZl9yZXN1bHQ+
-  recorded_at: Sun, 18 Jun 2023 15:25:29 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:49:00 GMT
+recorded_with: VCR 6.2.0

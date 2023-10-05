@@ -42,30 +42,12 @@ describe Commonmeta::Metadata, vcr: true do
       input = "https://github.com/citation-file-format/cff-converter-python/blob/main/CITATION.cff"
       subject = described_class.new(input: input)
       expect(subject.id).to eq("https://doi.org/10.5281/zenodo.1162057")
-      expect(subject.url).to eq("https://github.com/citation-file-format/cff-converter-python")
+      expect(subject.url).to eq("https://github.com/citation-file-format/cffconvert")
       expect(subject.type).to eq("Software")
       expect(subject.contributors).to eq([{ "affiliation" => [{ "name" => "Netherlands eScience Center" }],
                                             "familyName" => "Spaaks",
                                             "givenName" => "Jurriaan H.",
                                             "id" => "https://orcid.org/0000-0002-7064-4069",
-                                            "type" => "Person", "contributorRoles" => ["Author"] },
-                                          { "affiliation" => [{ "name" => "Netherlands eScience Center" }],
-                                            "familyName" => "Klaver",
-                                            "givenName" => "Tom",
-                                            "type" => "Person", "contributorRoles" => ["Author"] },
-                                          { "affiliation" => [{ "name" => "Netherlands eScience Center" }],
-                                            "familyName" => "Verhoeven",
-                                            "id" => "https://orcid.org/0000-0002-5821-2060",
-                                            "givenName" => "Stefan",
-                                            "type" => "Person", "contributorRoles" => ["Author"] },
-                                          { "affiliation" => [{ "name" => "Humboldt-Universität zu Berlin" }],
-                                            "familyName" => "Druskat",
-                                            "givenName" => "Stephan",
-                                            "id" => "https://orcid.org/0000-0003-4925-7248",
-                                            "type" => "Person", "contributorRoles" => ["Author"] },
-                                          { "affiliation" => [{ "name" => "University of Oslo" }],
-                                            "familyName" => "Leoncio",
-                                            "givenName" => "Waldir",
                                             "type" => "Person", "contributorRoles" => ["Author"] }])
       expect(subject.titles).to eq([{ "title" => "cffconvert" }])
       expect(subject.descriptions.first["description"]).to start_with("Command line program to validate and convert CITATION.cff files")
@@ -78,7 +60,7 @@ describe Commonmeta::Metadata, vcr: true do
                                       { "subject" => "Endnote" },
                                       { "subject" => "Ris" },
                                       { "subject" => "Citation file format" }])
-      expect(subject.version).to eq("2.0.0")
+      expect(subject.version).to eq("3.0.0a0")
       expect(subject.date).to eq("published" => "2021-09-22")
       expect(subject.publisher).to eq("name" => "GitHub")
       expect(subject.license).to eq("id" => "Apache-2.0", "url" => "http://www.apache.org/licenses/LICENSE-2.0")

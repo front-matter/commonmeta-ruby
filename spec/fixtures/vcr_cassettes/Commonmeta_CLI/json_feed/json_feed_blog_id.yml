@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/blogs/01a92f9a-f8e0-442b-86e2-11530d9d5635
+    uri: https://api.rogue-scholar.org/posts/01a92f9a-f8e0-442b-86e2-11530d9d5635
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -10,7 +10,7 @@ http_interactions:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,100 +18,27 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '0'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '719'
       Date:
-      - Sun, 01 Oct 2023 13:03:42 GMT
+      - Thu, 05 Oct 2023 19:48:26 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/blogs/[...params]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::l5p8f-1696165422190-26d900c36ebf
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0P4QNT09WHH72MD4TBZZJD-fra
     body:
       encoding: UTF-8
-      string: ''
-  recorded_at: Sun, 01 Oct 2023 13:03:42 GMT
-- request:
-    method: get
-    uri: https://rogue-scholar.org/api/posts/01a92f9a-f8e0-442b-86e2-11530d9d5635
-    body:
-      encoding: ASCII-8BIT
-      string: ''
-    headers:
-      Connection:
-      - close
-      Host:
-      - rogue-scholar.org
-      User-Agent:
-      - http.rb/5.1.1
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '3101'
-      Content-Type:
-      - application/json; charset=utf-8
-      Date:
-      - Sun, 01 Oct 2023 13:04:10 GMT
-      Etag:
-      - '"m7vq2i46dx2df"'
-      Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::m4qk2-1696165449788-443242d21f91
-      Connection:
-      - close
-    body:
-      encoding: UTF-8
-      string: '{"id":"01a92f9a-f8e0-442b-86e2-11530d9d5635","doi":"https://doi.org/10.59348/dmq66-f5d26","url":"https://eve.gd/2017/05/07/an-important-note-if-you-have-a-lenovo-g580","archive_url":null,"title":"An
-        important note if you have a Lenovo G580","summary":"The Lenovo G580 comes
-        with Windows 8. It is possible to permanently lock yourself out of the operating
-        system if you begin with a Microsoft account and migrate this to a local account.","content_html":"<p>The
+      string: '{"archive_url":null,"authors":[{"name":"Martin Paul Eve","url":"https://orcid.org/0000-0002-5589-8511"}],"blog_name":"Martin
+        Paul Eve","blog_slug":"eve","doi":"https://doi.org/10.59348/dmq66-f5d26","id":"01a92f9a-f8e0-442b-86e2-11530d9d5635","image":null,"indexed_at":1696162656,"language":"en","published_at":1494172558,"reference":[],"relationships":[],"summary":"The
         Lenovo G580 comes with Windows 8. It is possible to permanently lock yourself
         out of the operating system if you begin with a Microsoft account and migrate
-        this to a local account. Further, you won’t be able to rescue the system since
-        <em>it is impossible to enter the BIOS setup in the machine’s default state
-        if you cannot login to Windows</em>.</p>\n\n<p>To fix this:</p>\n\n<ol>\n  <li>Disable
-        “fast boot” mode in Windows 8. You can do this in “Power Settings”. If you
-        don’t do this, you can’t modify the Windows disk partition when booting from
-        a recovery USB.</li>\n  <li><a href=\"https://download.lenovo.com/consumer/mobiles/62cn97ww_64.exe\">Update
-        your BIOS</a>. Do it now or you won’t be able to unless you can still login
-        to Windows 8.</li>\n  <li>Go into the BIOS (shutdown the machine then press
-        the small button next to the power button and select “BIOS setup”). Then,
-        set an administrator password in the BIOS settings. Then, “disable secure
-        boot”. This will allow you to boot from a recovery USB stick such as Kali
-        or Ubuntu.</li>\n</ol>\n\n<p>Urgh. A Catch-22 where Microsoft Windows corrupted
-        a login (thanks, Microsoft) and a hardware defect stops you booting into a
-        recovery medium (thanks, Lenovo).</p>\n\n    <p><a href=\"https://eve.gd/2017/05/07/an-important-note-if-you-have-a-lenovo-g580/\">An
-        important note if you have a Lenovo G580</a> was originally published by Martin
-        Paul Eve at <a href=\"https://eve.gd\">Martin Paul Eve</a> on May 07, 2017.</p>","published_at":1494172558,"updated_at":1494172558,"indexed_at":1696162656,"authors":[{"url":"https://orcid.org/0000-0002-5589-8511","name":"Martin
-        Paul Eve"}],"image":null,"tags":[],"language":"en","reference":[],"relationships":[],"blog_id":"z4b9d78","blog_name":"Martin
-        Paul Eve","blog_slug":"eve","blog":{"id":"z4b9d78","title":"Martin Paul Eve","description":null,"language":"en","favicon":"https://eve.gd/favicon.png","feed_url":"https://eve.gd/feed_all.xml","home_page_url":"https://eve.gd","user_id":"eb3f6a26-3e38-42ad-b752-250eb2c0bf89","created_at":"2023-07-26","feed_format":"application/atom+xml","license":"https://creativecommons.org/licenses/by/4.0/legalcode","generator":"Jekyll","category":"languagesAndLiterature","prefix":"10.59348","modified_at":"1970-01-01T00:00:00+00:00","version":"https://jsonfeed.org/version/1.1","current_feed_url":"https://eve.gd/feed.xml","status":"active","issn":null,"backlog":0,"authors":[{"url":null,"name":"Martin
-        Paul Eve"}],"plan":"Team","slug":"eve","use_mastodon":false,"api":false,"funding":null,"archive_prefix":null,"use_api":null,"relative_url":"blog","canonical_url":null}}'
-  recorded_at: Sun, 01 Oct 2023 13:04:10 GMT
+        this to a local account.","tags":[],"title":"An important note if you have
+        a Lenovo G580","updated_at":1494172558,"url":"https://eve.gd/2017/05/07/an-important-note-if-you-have-a-lenovo-g580"}
+
+        '
+  recorded_at: Thu, 05 Oct 2023 19:48:26 GMT
 recorded_with: VCR 6.2.0

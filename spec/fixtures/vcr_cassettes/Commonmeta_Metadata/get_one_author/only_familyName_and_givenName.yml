@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://doi.pangaea.de/10.1594/PANGAEA.836178
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,37 +19,41 @@ http_interactions:
       message: OK
     headers:
       Server:
-      - nginx/1.25.0
+      - nginx/1.25.2
       Date:
-      - Sun, 18 Jun 2023 15:20:28 GMT
+      - Thu, 05 Oct 2023 19:47:17 GMT
       Content-Type:
       - text/html;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - close
-      Set-Cookie:
-      - pansessid=d87eb8727875c001f87732a972a43312; Path=/; Domain=.pangaea.de; Secure;
-        HttpOnly
+      X-Powered-By:
+      - Jetty(12.0.1)
       Vary:
-      - Cookie, Authorization, Accept
+      - Origin, Cookie, Authorization, Accept
+      Set-Cookie:
+      - pansessid=eebba761b0f86d912226376182350e6e; Path=/; Domain=.pangaea.de; Secure;
+        HttpOnly
       Cache-Control:
       - public
       X-Cid:
-      - d87eb8727875c001f87732a972a43312
+      - eebba761b0f86d912226376182350e6e
       Link:
-      - <https://doi.org/10.1594/PANGAEA.836178>;rel="cite-as", <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_dif>;rel="describedby";type="application/vnd.nasa.dif-metadata+xml",
-        <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_jsonld>;rel="describedby";type="application/ld+json",
-        <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_datacite4>;rel="describedby";type="application/vnd.datacite.datacite+xml",
-        <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=citation_ris>;rel="describedby";type="application/x-research-info-systems",
-        <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=citation_text>;rel="describedby";type="text/x-bibliography",
-        <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_panmd>;rel="describedby";type="application/vnd.pangaea.metadata+xml",
+      - <https://doi.org/10.1594/PANGAEA.836178>;rel="cite-as", <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_datacite4>;rel="describedby";type="application/vnd.datacite.datacite+xml",
         <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_iso19139>;rel="describedby";type="application/vnd.iso19139.metadata+xml",
+        <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=citation_ris>;rel="describedby";type="application/x-research-info-systems",
+        <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_dif>;rel="describedby";type="application/vnd.nasa.dif-metadata+xml",
+        <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=citation_text>;rel="describedby";type="text/x-bibliography",
+        <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_jsonld>;rel="describedby";type="application/ld+json",
+        <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_panmd>;rel="describedby";type="application/vnd.pangaea.metadata+xml",
         <https://doi.pangaea.de/10.1594/PANGAEA.836178?format=citation_bibtex>;rel="describedby";type="application/x-bibtex",
         <https://store.pangaea.de/Publications/JohanssonE_et_al_2014/johansson_etal-2014.zip>;rel="item";type="application/zip",
         <https://orcid.org/0000-0002-6553-8982>;rel="author", <https://orcid.org/0000-0001-6058-1466>;rel="author"
-      X-Powered-By:
-      - Jetty(10.0.14)
+      X-Robots-Tag:
+      - index,follow,archive
+      Alt-Svc:
+      - h3=":443"; ma=2592000
       Strict-Transport-Security:
       - max-age=31536000
       X-Ua-Compatible:
@@ -63,11 +67,11 @@ http_interactions:
       string: "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\n<meta charset=\"UTF-8\">\r\n<meta
         name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1,
         maximum-scale=1, user-scalable=no\">\r\n<link rel=\"stylesheet\" href=\"//fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,700,700italic,600italic,300,300italic,800,800italic\">\n<link
-        rel=\"stylesheet\" href=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/bootstrap-24col/css/bootstrap.min.css\">\n<link
-        rel=\"stylesheet\" href=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/css/pangaea.css\">\n<!--[if
+        rel=\"stylesheet\" href=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/bootstrap-24col/css/bootstrap.min.css\">\n<link
+        rel=\"stylesheet\" href=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/css/pangaea.css\">\n<!--[if
         lte IE 9]>\r\n<style>#topics-pulldown-wrapper label:after { display:none;
-        }</style>\r\n<![endif]-->\r\n<link rel=\"shortcut icon\" href=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/favicon.ico\">\r\n<link
-        rel=\"icon\" href=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/favicon.ico\"
+        }</style>\r\n<![endif]-->\r\n<link rel=\"shortcut icon\" href=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/favicon.ico\">\r\n<link
+        rel=\"icon\" href=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/favicon.ico\"
         type=\"image/vnd.microsoft.icon\">\r\n<link rel=\"image_src\" type=\"image/png\"
         href=\"https://www.pangaea.de/assets/social-icons/pangaea-share.png\">\r\n<meta
         property=\"og:image\" content=\"https://www.pangaea.de/assets/social-icons/pangaea-share.png\">\r\n<script
@@ -75,38 +79,39 @@ http_interactions:
         type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js\"></script>\n<script
         type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.4.1/jquery.appear.min.js\"></script>\n<script
         type=\"text/javascript\" src=\"//cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js\"></script>\n<script
-        type=\"text/javascript\" src=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/bootstrap-24col/js/bootstrap.min.js\"></script>\n<script
-        type=\"text/javascript\" src=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/js/datacombo-min.js\"></script>\n<title>Johansson,
+        type=\"text/javascript\" src=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/bootstrap-24col/js/bootstrap.min.js\"></script>\n<script
+        type=\"text/javascript\" src=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/js/datacombo-min.js\"></script>\n<title>Johansson,
         E et al. (2014): Hydrological and meteorological investigations in a lake
         near Kangerlussuaq, west Greenland</title>\n<meta name=\"title\" content=\"Hydrological
         and meteorological investigations in a lake near Kangerlussuaq, west Greenland\"
         />\n<meta name=\"author\" content=\"Johansson, Emma; Berglund, Sten; Lindborg,
         Tobias; Petrone, Johannes; van As, Dirk; Gustafsson, Lars-Göran; Näslund,
-        Jens-Ove; Laudon, Hjalmar\" />\n<meta name=\"date\" content=\"2014-09-25\"
-        />\n<meta name=\"description\" content=\"Johansson, Emma; Berglund, Sten;
-        Lindborg, Tobias; Petrone, Johannes; van As, Dirk; Gustafsson, Lars-Göran;
-        Näslund, Jens-Ove; Laudon, Hjalmar (2014): Hydrological and meteorological
-        investigations in a lake near Kangerlussuaq, west Greenland. PANGAEA, https://doi.org/10.1594/PANGAEA.836178,
-        Supplement to: Johansson, E et al. (2015): Hydrological and meteorological
-        investigations in a periglacial lake catchment near Kangerlussuaq, west Greenland
-        – presentation of a new multi-parameter data set. Earth System Science Data,
-        7(1), 93-108, https://doi.org/10.5194/essd-7-93-2015\" />\n<meta name=\"geo.position\"
-        content=\"67.125940;-50.180370\" />\n<meta name=\"ICBM\" content=\"67.125940,
-        -50.180370\" />\n<!--BEGIN: Dublin Core description-->\n<link rel=\"schema.DC\"
-        href=\"http://purl.org/dc/elements/1.1/\" />\n<link rel=\"schema.DCTERMS\"
-        href=\"http://purl.org/dc/terms/\" />\n<meta name=\"DC.title\" content=\"Hydrological
-        and meteorological investigations in a lake near Kangerlussuaq, west Greenland\"
-        />\n<meta name=\"DC.creator\" content=\"Johansson, Emma\" />\n<meta name=\"DC.creator\"
-        content=\"Berglund, Sten\" />\n<meta name=\"DC.creator\" content=\"Lindborg,
-        Tobias\" />\n<meta name=\"DC.creator\" content=\"Petrone, Johannes\" />\n<meta
-        name=\"DC.creator\" content=\"van As, Dirk\" />\n<meta name=\"DC.creator\"
-        content=\"Gustafsson, Lars-Göran\" />\n<meta name=\"DC.creator\" content=\"Näslund,
-        Jens-Ove\" />\n<meta name=\"DC.creator\" content=\"Laudon, Hjalmar\" />\n<meta
-        name=\"DC.publisher\" content=\"PANGAEA\" />\n<meta name=\"DC.source\" content=\"Supplement
+        Jens-Ove; Laudon, Hjalmar\" />\n<meta name=\"date\" content=\"2014\" />\n<meta
+        name=\"robots\" content=\"index,follow,archive\" />\n<meta name=\"description\"
+        content=\"Johansson, Emma; Berglund, Sten; Lindborg, Tobias; Petrone, Johannes;
+        van As, Dirk; Gustafsson, Lars-Göran; Näslund, Jens-Ove; Laudon, Hjalmar (2014):
+        Hydrological and meteorological investigations in a lake near Kangerlussuaq,
+        west Greenland. PANGAEA, https://doi.org/10.1594/PANGAEA.836178, Supplement
         to: Johansson, E et al. (2015): Hydrological and meteorological investigations
         in a periglacial lake catchment near Kangerlussuaq, west Greenland – presentation
         of a new multi-parameter data set. Earth System Science Data, 7(1), 93-108,
-        https://doi.org/10.5194/essd-7-93-2015\" />\n<meta name=\"DC.date\" content=\"2014-09-25\"
+        https://doi.org/10.5194/essd-7-93-2015\" />\n<meta name=\"geo.position\" content=\"67.125940;-50.180370\"
+        />\n<meta name=\"ICBM\" content=\"67.125940, -50.180370\" />\n<!--BEGIN: Dublin
+        Core description-->\n<link rel=\"schema.DC\" href=\"http://purl.org/dc/elements/1.1/\"
+        />\n<link rel=\"schema.DCTERMS\" href=\"http://purl.org/dc/terms/\" />\n<meta
+        name=\"DC.title\" content=\"Hydrological and meteorological investigations
+        in a lake near Kangerlussuaq, west Greenland\" />\n<meta name=\"DC.creator\"
+        content=\"Johansson, Emma\" />\n<meta name=\"DC.creator\" content=\"Berglund,
+        Sten\" />\n<meta name=\"DC.creator\" content=\"Lindborg, Tobias\" />\n<meta
+        name=\"DC.creator\" content=\"Petrone, Johannes\" />\n<meta name=\"DC.creator\"
+        content=\"van As, Dirk\" />\n<meta name=\"DC.creator\" content=\"Gustafsson,
+        Lars-Göran\" />\n<meta name=\"DC.creator\" content=\"Näslund, Jens-Ove\" />\n<meta
+        name=\"DC.creator\" content=\"Laudon, Hjalmar\" />\n<meta name=\"DC.publisher\"
+        content=\"PANGAEA\" />\n<meta name=\"DC.source\" content=\"Supplement to:
+        Johansson, E et al. (2015): Hydrological and meteorological investigations
+        in a periglacial lake catchment near Kangerlussuaq, west Greenland – presentation
+        of a new multi-parameter data set. Earth System Science Data, 7(1), 93-108,
+        https://doi.org/10.5194/essd-7-93-2015\" />\n<meta name=\"DC.date\" content=\"2014\"
         scheme=\"DCTERMS.W3CDTF\" />\n<meta name=\"DC.type\" content=\"Dataset\" />\n<meta
         name=\"DC.language\" content=\"en\" scheme=\"DCTERMS.RFC3066\" />\n<meta name=\"DCTERMS.license\"
         scheme=\"DCTERMS.URI\" content=\"https://creativecommons.org/licenses/by/3.0/\"
@@ -124,17 +129,17 @@ http_interactions:
         google.maps.LatLngBounds(new google.maps.LatLng(67.12594,-50.18037),new google.maps.LatLng(67.12594,-50.18037)),undefined);
         });/*]]>*/</script>\n<script type=\"text/javascript\" src=\"//d1bxh8uas1mnw7.cloudfront.net/assets/embed.js\"></script>\n<link
         rel=\"cite-as\" href=\"https://doi.org/10.1594/PANGAEA.836178\">\n<link rel=\"describedby\"
-        href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_dif\"
-        type=\"application/vnd.nasa.dif-metadata+xml\">\n<link rel=\"describedby\"
-        href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_jsonld\"
-        type=\"application/ld+json\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_datacite4\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_datacite4\"
         type=\"application/vnd.datacite.datacite+xml\">\n<link rel=\"describedby\"
-        href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=citation_ris\"
-        type=\"application/x-research-info-systems\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=citation_text\"
-        type=\"text/x-bibliography\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_panmd\"
-        type=\"application/vnd.pangaea.metadata+xml\">\n<link rel=\"describedby\"
         href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_iso19139\"
         type=\"application/vnd.iso19139.metadata+xml\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=citation_ris\"
+        type=\"application/x-research-info-systems\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_dif\"
+        type=\"application/vnd.nasa.dif-metadata+xml\">\n<link rel=\"describedby\"
+        href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=citation_text\"
+        type=\"text/x-bibliography\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_jsonld\"
+        type=\"application/ld+json\">\n<link rel=\"describedby\" href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=metadata_panmd\"
+        type=\"application/vnd.pangaea.metadata+xml\">\n<link rel=\"describedby\"
         href=\"https://doi.pangaea.de/10.1594/PANGAEA.836178?format=citation_bibtex\"
         type=\"application/x-bibtex\">\n<link rel=\"item\" href=\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/johansson_etal-2014.zip\"
         type=\"application/zip\">\n<link rel=\"author\" href=\"https://orcid.org/0000-0002-6553-8982\">\n<link
@@ -184,16 +189,16 @@ http_interactions:
         and utilized equipment, as well as the data collection and processing. The
         investigations were performed between 2010 and 2013. The high spatial resolution,
         within the investigated area, of the dataset makes it highly suitable for
-        various detailed hydrological and ecological studies on catchment scale.\",\"comment\":\"The
+        various detailed hydrological and ecological studies on catchment scale.\",\"citation\":[{\"@id\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/twoboatlake_greenland.jpg\",\"@type\":[\"CreativeWork\",\"WebPage\"],\"identifier\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/twoboatlake_greenland.jpg\",\"url\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/twoboatlake_greenland.jpg\",\"name\":\"Map
+        of Two Boat Lake in Greenland (jpg 13 MB) with position of sampling sites\"},{\"@id\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/Timelapse_TBL.zip\",\"@type\":[\"CreativeWork\",\"WebPage\"],\"identifier\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/Timelapse_TBL.zip\",\"url\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/Timelapse_TBL.zip\",\"name\":\"Time
+        laps photos of lake 2012-09-05 to 2013-08-14 (mov file, zipped 205 MB)\"}],\"spatialCoverage\":{\"@type\":\"Place\",\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":67.12594,\"longitude\":-50.18037}},\"size\":{\"@type\":\"QuantitativeValue\",\"value\":5.5,\"unitText\":\"MBytes\"},\"comment\":\"The
         dataset contains hydrological and meteorological data from a lake catchment
         in the Kangerlussuaq region, Western Greenland. The investigations were performed
         during 2010-2013 and the following parameters are included: Soil moisture,
         Soil temperature, Hydraulic properties of the active layer, meteorological
         parameters from a local weather station within the catchment, water levels
         and discharge, sublimation and evaportation measurments, snow depth and snow
-        water content data and time lapse photos.\",\"citation\":[{\"@id\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/twoboatlake_greenland.jpg\",\"@type\":[\"CreativeWork\",\"WebPage\"],\"identifier\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/twoboatlake_greenland.jpg\",\"url\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/twoboatlake_greenland.jpg\",\"name\":\"Map
-        of Two Boat Lake in Greenland (jpg 13 MB) with position of sampling sites\"},{\"@id\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/Timelapse_TBL.zip\",\"@type\":[\"CreativeWork\",\"WebPage\"],\"identifier\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/Timelapse_TBL.zip\",\"url\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/Timelapse_TBL.zip\",\"name\":\"Time
-        laps photos of lake 2012-09-05 to 2013-08-14 (mov file, zipped 205 MB)\"}],\"spatialCoverage\":{\"@type\":\"Place\",\"geo\":{\"@type\":\"GeoCoordinates\",\"latitude\":67.12594,\"longitude\":-50.18037}},\"inLanguage\":\"en\",\"license\":\"https://creativecommons.org/licenses/by/3.0/\",\"conditionsOfAccess\":\"unrestricted\",\"isAccessibleForFree\":true,\"size\":{\"@type\":\"QuantitativeValue\",\"value\":5.5,\"unitText\":\"MBytes\"},\"distribution\":{\"@type\":\"DataDownload\",\"encodingFormat\":\"application/zip\",\"contentUrl\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/johansson_etal-2014.zip\"}}</script>\n<script
+        water content data and time lapse photos.\",\"license\":\"https://creativecommons.org/licenses/by/3.0/\",\"conditionsOfAccess\":\"unrestricted\",\"isAccessibleForFree\":true,\"inLanguage\":\"en\",\"distribution\":{\"@type\":\"DataDownload\",\"encodingFormat\":\"application/zip\",\"contentUrl\":\"https://store.pangaea.de/Publications/JohanssonE_et_al_2014/johansson_etal-2014.zip\"}}</script>\n<script
         type=\"text/javascript\">/*<![CDATA[*/\r\nvar _paq=window._paq=window._paq||[];(function(){\r\nvar
         u=\"https://analytics.pangaea.de/\";_paq.push(['setTrackerUrl',u+'matomo.php']);_paq.push(['setCookieDomain','pangaea.de']);_paq.push(['setDomains',['pangaea.de','www.pangaea.de','doi.pangaea.de']]);_paq.push(['setSiteId',1]);\r\n_paq.push(['enableLinkTracking']);_paq.push(['setDownloadClasses',['dl-link']]);_paq.push(['setDownloadExtensions',[]]);_paq.push(['setIgnoreClasses',['notrack']]);_paq.push(['trackPageView']);\r\nvar
         d=document,g=d.createElement('script'),s=d.getElementsByTagName('script')[0];g.async=true;g.src=u+'matomo.js';s.parentNode.insertBefore(g,s);\r\n})();\r\n/*]]>*/</script>\r\n</head>\r\n<body
@@ -212,7 +217,7 @@ http_interactions:
         \       \r\n        <div id=\"header-logo-block\" class=\"header-block col-lg-3
         col-md-4 col-sm-4 col-xs-8\">\r\n          <div id=\"pangaea-logo\">\r\n            <a
         title=\"PANGAEA home\" href=\"//www.pangaea.de/\" class=\"home-link\"><img
-        src=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/layout-images/pangaea-logo.png\"
+        src=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/layout-images/pangaea-logo.png\"
         alt=\"PANGAEA home\"></a>\r\n          </div>\r\n        </div>\r\n        \r\n
         \       <div id=\"header-mid-block\" class=\"header-block col-lg-12 col-md-9
         col-sm-20 col-xs-16\">\r\n          <div id=\"pangaea-logo-headline\">\r\n
@@ -428,13 +433,13 @@ http_interactions:
         \             PANGAEA is certified by\r\n            </div>\r\n            \r\n
         \           <div>\r\n              <a href=\"//www.worlddatasystem.org/\"
         target=\"_blank\" title=\"World Data System\">\r\n                <img class=\"col-lg-6
-        col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/logos/logo-wds-block.png\"
+        col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/logos/logo-wds-block.png\"
         alt=\"World Data System\">\r\n              </a>\r\n              <a href=\"//www.wmo.int/\"
         target=\"_blank\" title=\"World Meteorological Organization\">\r\n                <img
-        class=\"col-lg-6 col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/logos/logo-wmo-block.png\"
+        class=\"col-lg-6 col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/logos/logo-wmo-block.png\"
         alt=\"World Meteorological Organization\">\r\n              </a>\r\n              <a
         href=\"//www.coretrustseal.org/\" target=\"_blank\" title=\"CoreTrustSeal\">\r\n
-        \               <img class=\"col-lg-6 col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/logos/logo-coretrustseal-block.png\"
+        \               <img class=\"col-lg-6 col-md-6 col-sm-6 col-xs-6\" src=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/logos/logo-coretrustseal-block.png\"
         alt=\"CoreTrustSeal\">\r\n              </a>\r\n            </div>\r\n          </div>\r\n
         \       </div>\r\n        <div id=\"footer-social-area\" class=\"col-lg-3
         col-md-24 col-sm-24 col-xs-24\">\r\n          <div id=\"footer-social-area-wrapper\"
@@ -445,12 +450,12 @@ http_interactions:
         class=\"self-referer-link share-link\" href=\"//www.pangaea.de/nojs.php\"
         data-template=\"https://www.facebook.com/sharer.php?u=#u#&amp;t=#t#\" title=\"Share
         on Facebook\" target=\"_blank\">\r\n                  <img id=\"facebook-icon\"
-        class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\" src=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/social-icons/facebook-icon.png\"
+        class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\" src=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/social-icons/facebook-icon.png\"
         alt=\"Facebook Icon\">\r\n                </a>\r\n                <a rel=\"nofollow\"
         class=\"self-referer-link share-link\" href=\"//www.pangaea.de/nojs.php\"
         data-template=\"https://twitter.com/intent/tweet?url=#u#&amp;text=#t#&amp;via=PANGAEAdataPubl\"
         title=\"Share on Twitter\" target=\"_blank\">\r\n                  <img id=\"twitter-icon\"
-        class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\" src=\"//www.pangaea.de/assets/v.a07178c340e5ef1cabfe93b78f306ceb/social-icons/twitter-icon.png\"
+        class=\"col-lg-12 col-md-12 col-sm-12 col-xs-12\" src=\"//www.pangaea.de/assets/v.112dc41eb49dfca575d9dbe3f2cf499e/social-icons/twitter-icon.png\"
         alt=\"Twitter Icon\">\r\n                </a>\r\n              </div>\r\n
         \           </div>\r\n            <div class=\"blindspalte col-lg-0 col-md-18\"></div>\r\n
         \         </div>\r\n        </div>\r\n                \r\n        <div id=\"footer-menu-area\"
@@ -470,5 +475,5 @@ http_interactions:
         \               </li>\r\n              </ul>\r\n            </nav>\r\n            <div
         class=\"clearfix\"></div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n
         \   </footer>\r\n  </div>\r\n</div>\r\n</body>\n</html>\n"
-  recorded_at: Sun, 18 Jun 2023 15:20:28 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:47:17 GMT
+recorded_with: VCR 6.2.0

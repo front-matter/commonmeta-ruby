@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/not_indexed
+    uri: https://api.rogue-scholar.org/posts/not_indexed
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
@@ -18,32 +18,20 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '2'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
+      Content-Length:
+      - '3'
       Date:
-      - Mon, 10 Jul 2023 20:41:58 GMT
-      Etag:
-      - '"38jmpejbxv2"'
+      - Thu, 05 Oct 2023 19:45:43 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::xcjq9-1689021717748-ef81dcd2383e
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0NZRKTM49WY5FJPMEP7GQ9-fra
     body:
       encoding: UTF-8
-      string: "[]"
-  recorded_at: Mon, 10 Jul 2023 20:41:58 GMT
+      string: "[]\n"
+  recorded_at: Thu, 05 Oct 2023 19:45:43 GMT
 recorded_with: VCR 6.2.0

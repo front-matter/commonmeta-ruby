@@ -61,7 +61,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(csv[4]).to eq('misc')
       expect(csv[5]).to eq('Integrated Multi-Mission Ocean Altimeter Data for Climate Research Version 2')
       expect(csv[6]).to eq('{GSFC}')
-      expect(csv[7]).to eq('NASA Physical Oceanography DAAC')
+      expect(csv[7]).to eq('NASA Physical Oceanography Distributed Active Archive Center')
     end
 
     it 'maremma' do

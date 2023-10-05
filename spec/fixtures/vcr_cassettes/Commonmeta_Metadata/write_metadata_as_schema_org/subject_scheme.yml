@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.4232
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:52 GMT
+      - Thu, 05 Oct 2023 19:47:27 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Ns6RW550EEi0IQ25VqrQJWo41Wly4v8mGbddJd9Y0iYXpT59WR4kpnlXBqVrStHyzFrBTC4bQ9GEy6vM%2ForP8z33AwyJtthk%2F6AF1HZU6J60jbfJhZzjFLxSeVVaIrvg8qAMjfM%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=G6x6M8KzKY5J2MSWaemzfTW9BbGM5Q%2BPWir43tBagb80SOT3TLbS%2B7MP364rdFZJ5uJmh4iGb1AAW8ckRHymaa%2Fkmz5ZjBI583j309JdIv7erNQMhAqeQNwhfzLQHH2Sa7ytM%2BY%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d948aacad0a0ea0-AMS
+      - 81182d2fda8c0b04-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,12 +51,12 @@ http_interactions:
             "RA": "DataCite"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:24:52 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:27 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.4232/1.2745?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:53 GMT
+      - Thu, 05 Oct 2023 19:47:27 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -93,21 +93,21 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - ee1c158a-4e3d-4080-8559-84cffd0c7733
+      - 64819119-c81c-4b5a-bac9-260ff04651e9
       X-Download-Options:
       - noopen
       Etag:
-      - W/"76b9b34d67f4501258f5240f221a003d"
+      - W/"eb7a6b444cb1d57982e10dc608f09802"
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.083919'
+      - '0.080959'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -194,6 +194,6 @@ http_interactions:
         data to make it available to the scientific research community. All data are
         preserved for the long-term and documented to international standards. Data
         is free to archive, and free to access.\r\nWhen you transfer data and documents
-        to GESIS, you enter into a contractual relationship: https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/contract","language":[],"clientType":"repository","domains":"*","re3data":"https://doi.org/10.17616/R3BB70","opendoar":null,"issn":{},"url":"https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/long-term-digital-preservation-ltda","created":"2011-07-21T13:08:41.000Z","updated":"2023-06-16T18:54:16.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"vzek","type":"providers"}},"consortium":{"data":{"id":"DARACO","type":"providers"}},"prefixes":{"data":[{"id":"10.4232","type":"prefixes"},{"id":"10.6102","type":"prefixes"},{"id":"10.7802","type":"prefixes"},{"id":"10.7804","type":"prefixes"},{"id":"10.12758","type":"prefixes"},{"id":"10.13150","type":"prefixes"},{"id":"10.15465","type":"prefixes"},{"id":"10.17173","type":"prefixes"},{"id":"10.17622","type":"prefixes"},{"id":"10.17889","type":"prefixes"},{"id":"10.18448","type":"prefixes"},{"id":"10.23663","type":"prefixes"},{"id":"10.25524","type":"prefixes"},{"id":"10.34879","type":"prefixes"},{"id":"10.34877","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:24:53 GMT
-recorded_with: VCR 6.1.0
+        to GESIS, you enter into a contractual relationship: https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/contract","language":[],"clientType":"repository","domains":"*","re3data":"https://doi.org/10.17616/R3BB70","opendoar":null,"issn":{},"url":"https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/long-term-digital-preservation-ltda","created":"2011-07-21T13:08:41.000Z","updated":"2023-08-18T14:33:18.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"vzek","type":"providers"}},"consortium":{"data":{"id":"DARACO","type":"providers"}},"prefixes":{"data":[{"id":"10.4232","type":"prefixes"},{"id":"10.7802","type":"prefixes"},{"id":"10.7804","type":"prefixes"},{"id":"10.12758","type":"prefixes"},{"id":"10.13150","type":"prefixes"},{"id":"10.15465","type":"prefixes"},{"id":"10.17889","type":"prefixes"},{"id":"10.18448","type":"prefixes"},{"id":"10.23663","type":"prefixes"},{"id":"10.25524","type":"prefixes"},{"id":"10.34877","type":"prefixes"}]}}}]}'
+  recorded_at: Thu, 05 Oct 2023 19:47:27 GMT
+recorded_with: VCR 6.2.0

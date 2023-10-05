@@ -4,7 +4,7 @@ http_interactions:
     method: get
     uri: https://doi.org/ra/10.26301
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:52 GMT
+      - Thu, 05 Oct 2023 19:47:24 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=UmHzFbZSmNZRwv2vjgOKB7gZ4jWwpzwRCI0E%2BWGeSanQ6Bo1YCs4cNEIUeX%2FMliwFq%2FC4SHVq2MT73R0NNhf1EPCRoLKbwCV60dcgAcQdl5WBc%2FB6%2FX2Ws3a8JKqBvNZRzdUtck%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=IvzFoRhzcUZjhkJ%2FaNxSGlth9Qae73jXO%2FKRxxHkfXSPvBJR3XVwTRzKqhUHOQvHui5JlwubLj%2FYD8JBbsIi0nNH1y4KCuz%2FCjVcX%2BBOml%2Bwog%2BqT9iVS5apabSCnZvleOvPhWo%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 7d948aa8cd681c7e-AMS
+      - 81182d1d4e7cb7ae-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,12 +51,12 @@ http_interactions:
             "RA": "DataCite"
           }
         ]
-  recorded_at: Sun, 18 Jun 2023 15:24:51 GMT
+  recorded_at: Thu, 05 Oct 2023 19:47:24 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.26301/jgf3-jm06?include=media,client
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: ''
     headers:
       Connection:
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 18 Jun 2023 15:24:52 GMT
+      - Thu, 05 Oct 2023 19:47:24 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -93,7 +93,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 1ffdaddd-d517-49e9-8fa7-dc59376d29c0
+      - 24936004-b031-4e76-892b-2e837104591a
       X-Download-Options:
       - noopen
       Etag:
@@ -101,13 +101,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.062079'
+      - '0.041246'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.17
+      - Phusion Passenger(R) 6.0.18
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.17
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -156,5 +156,5 @@ http_interactions:
         the OHA will work to provide democratized access to primary heritage 3D data
         submitted from donors and organizations, and will help to facilitate an operation
         platform, archive, and organization of resources into the future","language":["en"],"clientType":"repository","domains":"*","re3data":null,"opendoar":null,"issn":{},"url":"https://openheritage3d.org/","created":"2019-03-26T16:21:19.000Z","updated":"2023-04-13T18:13:04.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"cyark","type":"providers"}},"prefixes":{"data":[{"id":"10.26301","type":"prefixes"}]}}}]}'
-  recorded_at: Sun, 18 Jun 2023 15:24:52 GMT
-recorded_with: VCR 6.1.0
+  recorded_at: Thu, 05 Oct 2023 19:47:24 GMT
+recorded_with: VCR 6.2.0

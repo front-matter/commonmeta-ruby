@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://rogue-scholar.org/api/posts/2b22bbba-bcba-4072-94cc-3f88442fff55
+    uri: https://api.rogue-scholar.org/posts/2b22bbba-bcba-4072-94cc-3f88442fff55
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -10,40 +10,33 @@ http_interactions:
       Connection:
       - close
       Host:
-      - rogue-scholar.org
+      - api.rogue-scholar.org
       User-Agent:
       - http.rb/5.1.1
   response:
     status:
-      code: 404
-      message: Not Found
+      code: 500
+      message: Internal Server Error
     headers:
-      Age:
-      - '0'
-      Cache-Control:
-      - public, max-age=0, must-revalidate
-      Content-Length:
-      - '28'
       Content-Type:
-      - application/json; charset=utf-8
+      - text/html; charset=utf-8
+      Content-Length:
+      - '265'
       Date:
-      - Sun, 01 Oct 2023 12:54:48 GMT
-      Etag:
-      - '"jtxxi9yf69s"'
+      - Thu, 05 Oct 2023 19:45:49 GMT
       Server:
-      - Vercel
-      Strict-Transport-Security:
-      - max-age=63072000
-      X-Matched-Path:
-      - "/api/posts/[[...params]]"
-      X-Vercel-Cache:
-      - MISS
-      X-Vercel-Id:
-      - fra1::iad1::6plz2-1696164888551-86b03621bd39
-      Connection:
-      - close
+      - Fly/e440b950 (2023-09-20)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HC0NZYRN7PWFN549DH0E39AX-fra
     body:
       encoding: UTF-8
-      string: '{"message":"Post not found"}'
-  recorded_at: Sun, 01 Oct 2023 12:54:48 GMT
+      string: |
+        <!doctype html>
+        <html lang=en>
+        <title>500 Internal Server Error</title>
+        <h1>Internal Server Error</h1>
+        <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+  recorded_at: Thu, 05 Oct 2023 19:45:49 GMT
 recorded_with: VCR 6.2.0
