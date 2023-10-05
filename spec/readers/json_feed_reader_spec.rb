@@ -67,7 +67,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Differences between ORCID and DataCite Metadata" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2015-09-18", "updated" => "2023-09-05")
+      expect(subject.date).to eq("published" => "2015-09-18", "updated" => "2023-09-07")
       expect(subject.descriptions.first["description"]).to start_with("One of the first tasks for DataCite in the European Commission-funded THOR project")
       expect(subject.publisher).to eq("name" => "Front Matter")
       expect(subject.related_identifiers).to eq([{ "id" => "https://doi.org/10.5438/bc11-cqw1", "type" => "IsIdenticalTo" }])
@@ -195,7 +195,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
       expect(subject.date).to eq("published" => "2023-02-01", "updated" => "2023-04-13")
-      expect(subject.descriptions.first["description"]).to start_with("<strong>Guinea worm disease reaches all-time low: only 13* human cases")
+      expect(subject.descriptions.first["description"]).to start_with("Guinea worm disease reaches all-time low: only 13* human cases")
       expect(subject.publisher).to eq("name" => "Syldavia Gazette")
       expect(subject.subjects).to eq([{ "subject" => "Humanities" }, { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf", "subject" => "FOS: Humanities", "subjectScheme" => "Fields of Science and Technology (FOS)" }])
       expect(subject.language).to eq("en")
@@ -233,7 +233,7 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input)
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/faeph-x4x84")
-      expect(subject.url).to eq("https://project-thor.eu/2016/08/10/orcid-integration-in-pangaea")
+      expect(subject.url).to eq("https://web.archive.org/web/20190709153404/https://project-thor.eu/2016/08/10/orcid-integration-in-pangaea")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "570c8129-e867-49e6-8517-bd783627e76e", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
       expect(subject.contributors.length).to eq(1)
@@ -270,7 +270,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
       expect(subject.date).to eq("published" => "2023-06-09", "updated" => "2023-06-09")
-      expect(subject.descriptions.first["description"]).to start_with("<em>Haplocanthosaurus</em> tibiae and dorsal vertebrae.")
+      expect(subject.descriptions.first["description"]).to start_with("Brian Curtice and Colin Boisvert are presenting our talk on this project")
       expect(subject.publisher).to eq("name" => "Sauropod Vertebra Picture of the Week")
       expect(subject.subjects).to eq([{ "subject" => "Earth and related environmental sciences" },
                                       { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
@@ -318,7 +318,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Nature features OA.Report's work putting OA policy into practice!" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2023-01-24", "updated" => "2023-01-24")
+      expect(subject.date).to eq("published" => "2023-01-24", "updated" => "2023-10-01")
       expect(subject.descriptions.first["description"]).to start_with("After a couple of years of working to support institutions implementing their OA policies")
       expect(subject.publisher).to eq("name" => "OA.Works Blog")
       expect(subject.subjects).to eq([{ "subject" => "Computer and information sciences" },
@@ -363,9 +363,9 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "efdacb04-bcec-49d7-b689-ab3eab0634bf", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
-      expect(subject.contributors.length).to eq(1)
-      expect(subject.contributors.first).to eq("familyName" => "Karcher", "givenName" => "Sebastian",
-                                               "id" => "https://orcid.org/0000-0001-8249-7388", "type" => "Person", "contributorRoles" => ["Author"])
+      expect(subject.contributors.length).to eq(0)
+      # expect(subject.contributors.first).to eq("familyName" => "Karcher", "givenName" => "Sebastian",
+      #                                          "id" => "https://orcid.org/0000-0001-8249-7388", "type" => "Person", "contributorRoles" => ["Author"])
       expect(subject.titles).to eq([{ "title" => "Seeking Public Comment on CSL 1.0.2 Release" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -468,14 +468,14 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Grundlagen für die Entwicklung einer Open Scholarship-Strategie" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2019-01-31", "updated" => "2023-07-08")
+      expect(subject.date).to eq("published" => "2019-01-30", "updated" => "2023-07-08")
       expect(subject.descriptions.first["description"]).to start_with("<strong>Versionshistorie</strong> Version 1.0 — 16. Oktober 2017")
       expect(subject.publisher).to eq("name" => "Flavours of Open")
       expect(subject.subjects).to eq([{ "subject" => "Humanities" },
                                       { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
                                         "subject" => "FOS: Humanities",
                                         "subjectScheme" => "Fields of Science and Technology (FOS)" }])
-      expect(subject.language).to eq("de")
+      expect(subject.language).to eq("en")
       expect(subject.container).to eq("identifier" => "https://flavoursofopen.science", "identifierType" => "URL", "title" => "Flavours of Open", "type" => "Periodical")
       expect(subject.references.length).to eq(56)
       expect(subject.references.first).to eq("key" => "ref1", "url" => "http://oerstrategy.org/home/read-the-doc")

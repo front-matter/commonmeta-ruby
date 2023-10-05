@@ -21,18 +21,20 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '964'
+      - '1825'
       Date:
-      - Thu, 05 Oct 2023 19:47:53 GMT
+      - Thu, 05 Oct 2023 21:01:18 GMT
       Server:
       - Fly/e440b950 (2023-09-20)
       Via:
       - 1.1 fly.io
       Fly-Request-Id:
-      - 01HC0P3QQ7Y0PH4N1N1QZMRXBN-fra
+      - 01HC0TA1YDRW91GDJX1H8WJPSM-fra
     body:
       encoding: UTF-8
-      string: '{"archive_url":null,"authors":[{"name":"Mathias G\u00f6bel","url":null}],"blog_name":"lab.sub
+      string: '{"archive_url":null,"authors":[{"name":"Mathias G\u00f6bel","url":null}],"blog":{"api":false,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":null,"category":"computerAndInformationSciences","created_at":"2023-04-24","current_feed_url":null,"description":"Better
+        sit thus, and observe thy strange things","favicon":null,"feed_format":"application/atom+xml","feed_url":"https://lab.sub.uni-goettingen.de/atom.xml","filter":null,"funding":null,"generator":"Jekyll","home_page_url":"https://lab.sub.uni-goettingen.de","id":"6hezn63","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-06-01T00:00:01+00:00","plan":"Starter","prefix":"10.59350","relative_url":null,"slug":"lab_sub","status":"active","title":"lab.sub
+        - Articles","use_api":null,"use_mastodon":false,"user_id":"dead81b3-8a8b-45c9-85fe-f01bb3948c77","version":"https://jsonfeed.org/version/1.1"},"blog_name":"lab.sub
         - Articles","blog_slug":"lab_sub","doi":"https://doi.org/10.59350/33es7-fqz31","id":"a163e340-5b3c-4736-9ab0-8c54fdff6a3c","image":"https://lab.sub.uni-goettingen.de/assets/images/Bibliothek_der_UNI_Goettingen-wikiCommons-Suhaknoke.webp","indexed_at":1689006804,"language":"en","published_at":1483228801,"reference":[],"relationships":[],"summary":"Welcome
         everyone!  This is the place to read about projects, resources and all the
         things we deal with at our work on digital collections, databases, APIs, tools
@@ -42,5 +44,5 @@ http_interactions:
         to the Lab","updated_at":1483228801,"url":"https://lab.sub.uni-goettingen.de/welcome.html"}
 
         '
-  recorded_at: Thu, 05 Oct 2023 19:47:53 GMT
+  recorded_at: Thu, 05 Oct 2023 21:01:18 GMT
 recorded_with: VCR 6.2.0

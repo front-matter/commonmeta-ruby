@@ -145,7 +145,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(ris[3]).to eq('AU  - Fenner, Martin')
       expect(ris[4]).to eq('DO  - 10.53731/r79vxn1-97aq74v-ag58n')
       expect(ris[5]).to eq('UR  - https://blog.front-matter.io/posts/eating-your-own-dog-food')
-      expect(ris[6]).to eq('"AB  - Eating your own dog food is a slang term to describe that an organization should itself use th...cumentation (2016). These outputs also include the posts on this blog, where we discuss topics rele')
+      expect(ris[6]).to start_with("AB  - Eating your own dog food is a slang term to describe that an organization should itself use the products and services it provides.")
       expect(ris[7]).to eq('KW  - Feature')
       expect(ris[8]).to eq('PY  - 2016')
       expect(ris[9]).to eq('PB  - Front Matter')

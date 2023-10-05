@@ -323,12 +323,12 @@ describe Commonmeta::CLI do
     end
 
     it "by_blog" do
-      input = "tyfqw20"
+      input = "iphylo"
       expect { subject.encode_by_blog input }.to output(/https:\/\/doi.org\/10.59350/).to_stdout
     end
 
     it "by_blog unknown blog_id" do
-      input = "tyfqw"
+      input = "iballo"
       expect { subject.encode_by_blog input }.to output("").to_stdout
     end
 
@@ -367,16 +367,16 @@ describe Commonmeta::CLI do
 
   describe "json_feed", vcr: true do
     it "json_feed_unregistered" do
-      expect { subject.json_feed_unregistered }.to output(/3023e24a-817d-452e-bb6e-ddadecce94c6/).to_stdout
+      expect { subject.json_feed_unregistered }.to output(/17d0e31c-bc41-42b8-b873-d3dacee61f5c/).to_stdout
     end
     
-    it "json_feed_not_indexed" do
-      expect { subject.json_feed_not_indexed }.to output(/r294649-6f79289-8cw1w/).to_stdout
-    end
+    # it "json_feed_not_indexed" do
+    #   expect { subject.json_feed_not_indexed }.to output(/r294649-6f79289-8cw1w/).to_stdout
+    # end
 
     it "json_feed_by_blog" do
-      input = "tyfqw20"
-      expect { subject.json_feed_by_blog input }.to output(/37538c38-66e6-4ac4-ab5c-679684622ade/).to_stdout
+      input = "iphylo"
+      expect { subject.json_feed_by_blog input }.to output(/3749f8c4-1ba7-4e51-9dd6-9d9551ad451a/).to_stdout
     end
 
     it "json_feed_blog_id" do

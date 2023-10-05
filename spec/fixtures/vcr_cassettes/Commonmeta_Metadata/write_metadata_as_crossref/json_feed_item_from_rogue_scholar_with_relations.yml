@@ -21,18 +21,22 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '1012'
+      - '1980'
       Date:
-      - Thu, 05 Oct 2023 19:47:47 GMT
+      - Thu, 05 Oct 2023 21:01:18 GMT
       Server:
       - Fly/e440b950 (2023-09-20)
       Via:
       - 1.1 fly.io
       Fly-Request-Id:
-      - 01HC0P3JH6337T890KJ2G5T10A-fra
+      - 01HC0TA6473D3M0B99JVSFFFHX-fra
     body:
       encoding: UTF-8
-      string: '{"archive_url":null,"authors":[{"name":"Martin Fenner","url":"https://orcid.org/0000-0003-1419-2405"}],"blog_name":"Front
+      string: '{"archive_url":null,"authors":[{"name":"Martin Fenner","url":"https://orcid.org/0000-0003-1419-2405"}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":null,"category":"computerAndInformationSciences","created_at":"2023-01-02","current_feed_url":"https://blog.front-matter.io/atom/","description":"The
+        Front Matter Blog covers the intersection of science and technology since
+        2007.","favicon":"https://blog.front-matter.io/favicon.png","feed_format":"application/atom+xml","feed_url":"https://blog.front-matter.io/atom-complete/","filter":null,"funding":null,"generator":"Ghost
+        5.52","home_page_url":"https://blog.front-matter.io","id":"f0m0e38","issn":"2749-9952","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-10-04T10:36:32+00:00","plan":"Team","prefix":"10.53731","relative_url":null,"slug":"front_matter","status":"active","title":"Front
+        Matter","use_api":true,"use_mastodon":true,"user_id":"8498eaf6-8c58-4b58-bc15-27eda292b1aa","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Front
         Matter","blog_slug":"front_matter","doi":"https://doi.org/10.53731/r79v4e1-97aq74v-ag578","id":"8a4de443-3347-4b82-b57d-e3c82b6485fc","image":"https://blog.front-matter.io/content/images/2023/09/cat_and_dog-1.png","indexed_at":1694106996,"language":"en","published_at":1442534400,"reference":[{"doi":"https://doi.org/10.5281/ZENODO.30799","key":"ref1"}],"relationships":[{"type":"IsIdenticalTo","url":"https://doi.org/10.5438/bc11-cqw1"},{"type":"HasAward","url":"https://doi.org/10.3030/654039"}],"summary":"One
         of the first tasks for DataCite in the European Commission-funded THOR project,
         which started in June, was to contribute to a comparison of the ORCID and
@@ -40,7 +44,7 @@ http_interactions:
         ORCID and DataCite Metadata","updated_at":1694074485,"url":"https://blog.front-matter.io/posts/differences-between-orcid-and-datacite-metadata"}
 
         '
-  recorded_at: Thu, 05 Oct 2023 19:47:47 GMT
+  recorded_at: Thu, 05 Oct 2023 21:01:18 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/ZENODO.30799
@@ -62,7 +66,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:25 GMT
+      - Thu, 05 Oct 2023 21:01:19 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -74,13 +78,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:54:35 GMT
+      - Thu, 05 Oct 2023 21:36:16 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tNQUnawPeOOh%2Fs8nPLimWqh%2FtsqYPnvs7Q5WWMhcuojCbp%2B2uzLwLlUxtLi1vT1j0%2BnZOctoel7iHbJGvCi%2F4pS2zJnEhBRrBiyK1t5nBYCIMQwHQuS7u87eYgO%2FD8X3A6dYOBE%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LlYbnWyeHCX8cEwQSMQ4epNrevSljsZ18qT2P4cP3ywcHgoD0MSglv0In0z3sDQlbx7J7qQYeE%2F0ulD7LrY9MVxSYbo2E5il2G7fBwf5JA49qs4iZxRJG574%2BxI0fVTH2FsSYX4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -88,7 +92,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8118431d2d171aff-AMS
+      - 81189962d9c40e33-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -96,7 +100,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2FZENODO.30799">https://data.crosscite.org/10.5281%2FZENODO.30799</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:25 GMT
+  recorded_at: Thu, 05 Oct 2023 21:01:19 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2FZENODO.30799
@@ -118,7 +122,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:25 GMT
+      - Thu, 05 Oct 2023 21:01:19 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -134,9 +138,9 @@ http_interactions:
       Etag:
       - W/"808492baef8e3e4af0fa6812bc25a08c"
       X-Runtime:
-      - '0.016763'
+      - '0.017939'
       X-Request-Id:
-      - 953c5349-a54b-404a-9ee2-83a32e24145f
+      - 69195263-5a6b-470d-abf2-f2597cd6c425
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -204,7 +208,7 @@ http_interactions:
           "URL": "https://zenodo.org/record/30799",
           "copyright": "Creative Commons Attribution 4.0"
         }
-  recorded_at: Thu, 05 Oct 2023 20:02:25 GMT
+  recorded_at: Thu, 05 Oct 2023 21:01:19 GMT
 - request:
     method: head
     uri: https://doi.org/10.5438/bc11-cqw1
@@ -224,7 +228,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:26 GMT
+      - Thu, 05 Oct 2023 21:01:19 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -236,13 +240,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:54:35 GMT
+      - Thu, 05 Oct 2023 21:10:16 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lKTEkcttD4zGD8k3PLHqBH5p8d0zDffsdj3ExRPWWUiLxz7joUnlG5jUC%2BkPC5STs%2F4FtkMkmLdQ%2BpUcb%2F%2BoFsdTZJxbCk8xs8%2B7sCLR%2BaHskKGFTO6YI0edRkr%2BcOdHwYui4b0%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=d%2FVRGKoJ3TpvOU%2FDgNCVnjoOJMkIfT8i4LFNS7q4VJ3rBPp5ErXP6UMPf2FpbpI2AA1QlDnirjWs1U%2BQXHUNznXyvOGQBHZ2X1K1xDbfB3%2FlBlVbhNcqwN3YayHI4jXYgdAikxY%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -250,11 +254,11 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 811843204e3d0b4b-AMS
+      - 811899662aeb0e28-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 05 Oct 2023 20:02:25 GMT
+  recorded_at: Thu, 05 Oct 2023 21:01:19 GMT
 recorded_with: VCR 6.2.0

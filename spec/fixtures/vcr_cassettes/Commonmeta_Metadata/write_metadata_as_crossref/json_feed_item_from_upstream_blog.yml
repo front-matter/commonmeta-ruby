@@ -21,18 +21,20 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '946'
+      - '1845'
       Date:
-      - Thu, 05 Oct 2023 19:47:45 GMT
+      - Thu, 05 Oct 2023 21:22:56 GMT
       Server:
       - Fly/e440b950 (2023-09-20)
       Via:
       - 1.1 fly.io
       Fly-Request-Id:
-      - 01HC0P3FXBAGKY3VJXZV5QXCQC-fra
+      - 01HC0VHSQ6KY8KWP86JAFAGBW6-fra
     body:
       encoding: UTF-8
-      string: '{"archive_url":null,"authors":[{"name":"Esha Datta","url":"https://orcid.org/0000-0001-9165-2757"}],"blog_name":"Upstream","blog_slug":"upstream","doi":"https://doi.org/10.54900/n6dnt-xpq48","id":"5d14ffac-b9ac-4e20-bdc0-d9248df4e80d","image":"https://upstream.force11.org/content/images/2023/05/esha-subject-blog.jpg","indexed_at":1691141631,"language":"en","published_at":1684834305,"reference":[],"relationships":[],"summary":"Traditionally,
+      string: '{"archive_url":null,"authors":[{"name":"Esha Datta","url":"https://orcid.org/0000-0001-9165-2757"}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":null,"category":"humanities","created_at":"2023-01-13","current_feed_url":"https://upstream.force11.org/atom/","description":"The
+        community blog for all things Open Research.","favicon":"https://upstream.force11.org/favicon.png","feed_format":"application/atom+xml","feed_url":"https://upstream.force11.org/atom-complete/","filter":null,"funding":null,"generator":"Ghost
+        5.25","home_page_url":"https://upstream.force11.org","id":"pm0p222","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-24T13:05:54+00:00","plan":"Team","prefix":"10.54900","relative_url":null,"slug":"upstream","status":"active","title":"Upstream","use_api":true,"use_mastodon":false,"user_id":"08014cf6-3335-4588-96f4-c77ac1e535b2","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Upstream","blog_slug":"upstream","doi":"https://doi.org/10.54900/n6dnt-xpq48","id":"5d14ffac-b9ac-4e20-bdc0-d9248df4e80d","image":"https://upstream.force11.org/content/images/2023/05/esha-subject-blog.jpg","indexed_at":1691141631,"language":"en","published_at":1684834305,"reference":[],"relationships":[],"summary":"Traditionally,
         journal subject classification was done manually at varying levels of granularity,
         depending on the use case for the institution. Subject classification is done
         to help collate resources by subject enabling the user to discover publications
@@ -40,5 +42,5 @@ http_interactions:
         at automating journal subject classification","updated_at":1691141202,"url":"https://upstream.force11.org/attempts-at-automating-journal-subject-classification"}
 
         '
-  recorded_at: Thu, 05 Oct 2023 19:47:45 GMT
+  recorded_at: Thu, 05 Oct 2023 21:22:57 GMT
 recorded_with: VCR 6.2.0

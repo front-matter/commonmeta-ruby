@@ -175,7 +175,7 @@ module Commonmeta
                     elsif book_series_metadata.to_h.fetch('series_metadata', nil).present?
                       issn = normalize_issn(book_series_metadata.dig('series_metadata', 'issn'))
 
-                      { 'type' => 'Book Series',
+                      { 'type' => 'BookSeries',
                         'identifier' => issn,
                         'identifierType' => issn.present? ? 'ISSN' : nil,
                         'title' => book_series_metadata.dig('series_metadata', 'titles', 'title'),

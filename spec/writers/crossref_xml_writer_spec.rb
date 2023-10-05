@@ -277,6 +277,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "EU-Mitgliedstaaten betonen die Rolle von wissenschaftsgeleiteten Open-Access-Modellen jenseits von APCs" }])
       expect(subject.contributors.length).to eq(1)
       expect(subject.contributors.first).to eq("familyName" => "Pampel", "givenName" => "Heinz", "id" => "https://orcid.org/0000-0003-3334-2771", "type" => "Person", "contributorRoles" => ["Author"])
+      expect(subject.publisher).to eq("name"=>"wisspub.net")
       expect(subject.subjects).to eq([{ "subject" => "Social sciences" },
                                       { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
                                         "subject" => "FOS: Social sciences",
@@ -337,7 +338,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "Differences between ORCID and DataCite Metadata" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
-      expect(subject.date).to eq("published" => "2015-09-18", "updated" => "2023-09-05")
+      expect(subject.date).to eq("published" => "2015-09-18", "updated" => "2023-09-07")
       expect(subject.descriptions.first["description"]).to start_with("One of the first tasks for DataCite in the European Commission-funded THOR project")
       expect(subject.publisher).to eq("name" => "Front Matter")
       expect(subject.subjects).to eq([{ "subject" => "Computer and information sciences" },

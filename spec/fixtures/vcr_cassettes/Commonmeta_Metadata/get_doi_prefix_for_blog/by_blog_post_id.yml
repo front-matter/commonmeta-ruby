@@ -21,18 +21,26 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '1143'
+      - '2413'
       Date:
-      - Thu, 05 Oct 2023 19:45:49 GMT
+      - Thu, 05 Oct 2023 20:52:26 GMT
       Server:
       - Fly/e440b950 (2023-09-20)
       Via:
       - 1.1 fly.io
       Fly-Request-Id:
-      - 01HC0NZZ08HTMS414WQXWTQHEC-fra
+      - 01HC0SSSKF68NBHV4DW2E1EDZP-fra
     body:
       encoding: UTF-8
-      string: '{"archive_url":null,"authors":[{"name":"Stephen Matheson","url":null}],"blog_name":"Quintessence
+      string: '{"archive_url":null,"authors":[{"name":"Stephen Matheson","url":null}],"blog":{"api":false,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":null,"category":"socialSciences","created_at":"2023-04-18","current_feed_url":null,"description":"<i>Quintessence
+        of Dust</i> explores science, society, and human nature, focusing on genetics,
+        development, evolution, neuroscience, systems biology, and topics related
+        to scientific literacy. I occasionally discuss intelligent design, creationism,
+        science denial, and other political/social influences on scientific literacy.
+        Additional topics: philosophy, baseball, scientific culture, and Shakespeare.
+        My main theme is <b><u>scientific explanation</u></b>.","favicon":null,"feed_format":"application/atom+xml","feed_url":"http://sfmatheson.blogspot.com/feeds/posts/default","filter":null,"funding":null,"generator":"Blogger
+        7.00","home_page_url":"http://sfmatheson.blogspot.com","id":"5764g49","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-11T17:46:56+00:00","plan":"Team","prefix":"10.59350","relative_url":null,"slug":"sfmatheson","status":"active","title":"Quintessence
+        of Dust","use_api":null,"use_mastodon":false,"user_id":"656f9875-3304-4056-935b-b29429e14222","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Quintessence
         of Dust","blog_slug":"sfmatheson","doi":"https://doi.org/10.59350/63055-a8604","id":"1898d2d7-4d87-4487-96c4-3073cf99e9a5","image":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEghgBx9BU21qMDFnLxgHmnsl6TQVfb3QCwOXrC1zcXq7WH9gN8E0TcH3pTslRBG6O8mb5gcuF9JVtDlJ2je6dFcfyzKE4OD38-ftr66nBxddo892_NkyuevrrX65ndSbwmXMaLh3F5yiqU1QIj8JtA8FLkKOcHOEVwVafz0rzh7PejbFzp3XT25nQxc/s320/Jan%207.jpg","indexed_at":1689006804,"language":"en","published_at":1673233380,"reference":[],"relationships":[],"summary":"It''s
         early January 2023, a little before sunset in Tucson. Live image below, showing
         the glorious Santa Catalina mountains (the snow on the upper reaches is more
@@ -42,5 +50,5 @@ http_interactions:
         of Dust 2023 restart: the why","updated_at":1680470227,"url":"http://sfmatheson.blogspot.com/2023/01/quintessence-of-dust-2023-restart-why.html"}
 
         '
-  recorded_at: Thu, 05 Oct 2023 19:45:49 GMT
+  recorded_at: Thu, 05 Oct 2023 20:52:26 GMT
 recorded_with: VCR 6.2.0

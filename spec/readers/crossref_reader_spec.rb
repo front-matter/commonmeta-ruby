@@ -736,26 +736,19 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.url).to eq("https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.14619")
       expect(subject.type).to eq("JournalArticle")
       expect(subject.contributors.length).to eq(3)
-      expect(subject.contributors.first).to eq("affiliation" => [{ "name" => "Independent Junior Research Group on Protein Recognition and Degradation Leibniz Institute of Plant Biochemistry (IPB) Weinberg 3 Halle (Saale) D-06120 Germany" }, { "name" => "ScienceCampus Halle - Plant-based Bioeconomy; Betty-Heimann-Strasse 3 Halle (Saale) D-06120 Germany" }],
+      expect(subject.contributors.first).to eq("affiliation" => [{"name"=>"Independent Junior Research Group on Protein Recognition and Degradation Leibniz Institute of Plant Biochemistry (IPB) Weinberg 3 Halle (Saale) D‐06120 Germany"}, {"name"=>"ScienceCampus Halle – Plant‐based Bioeconomy Betty‐Heimann‐Strasse 3 Halle (Saale) D‐06120 Germany"}],
                                                "familyName" => "Dissmeyer",
                                                "givenName" => "Nico",
                                                "id" => "https://orcid.org/0000-0002-4156-3761",
                                                "type" => "Person", "contributorRoles" => ["Author"])
-      expect(subject.titles).to eq([{ "title" => "Life and death of proteins after protease cleavage: protein degradation by the N-end rule pathway" }])
-      expect(subject.license).to eq("url" => "http://doi.wiley.com/10.1002/tdm_license_1.1")
-      expect(subject.date).to eq("published" => "2017-06-05", "updated" => "2021-07-07")
+      expect(subject.titles).to eq([{ "title" => "Life and death of proteins after protease cleavage: protein degradation by the N‐end rule pathway" }])
+      expect(subject.license).to eq("url" => "http://onlinelibrary.wiley.com/termsAndConditions#vor")
+      expect(subject.date).to eq("published" => "2017-06-05", "updated" => "2023-09-12")
       expect(subject.publisher).to eq("id" => "https://api.crossref.org/members/311",
                                       "name" => "Wiley")
       expect(subject.references.length).to eq(49)
-      expect(subject.references.last).to eq("containerTitle" => "Proteomics",
-                                            "contributor" => "Zhang",
-                                            "doi" => "https://doi.org/10.1002/pmic.201400530",
-                                            "firstPage" => "2447",
-                                            "key" => "10.1111/nph.14619-BIB0049|nph14619-cit-0049",
-                                            "publicationYear" => "2015",
-                                            "title" => "Quantitative proteomics analysis of the Arg/N-end rule pathway of targeted degradation in Arabidopsis roots",
-                                            "volume" => "15")
-      expect(subject.container).to eq("firstPage" => "929", "identifier" => "0028-646X",
+      expect(subject.references.last).to eq("doi"=>"https://doi.org/10.1002/pmic.201400530", "key"=>"e_1_2_7_50_1")
+      expect(subject.container).to eq("firstPage" => "929", "identifier" => "1469-8137",
                                       "identifierType" => "ISSN", "issue" => "3", "lastPage" => "935", "title" => "New Phytologist", "type" => "Journal", "volume" => "218")
       expect(subject.provider).to eq("Crossref")
     end
@@ -796,7 +789,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "multiple issn" do
       input = "https://doi.org/10.1007/978-3-642-34922-5_19"
       subject = described_class.new(input: input)
-      #  expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1007/978-3-642-34922-5_19")
       expect(subject.url).to eq("https://link.springer.com/10.1007/978-3-642-34922-5_19")
       expect(subject.type).to eq("BookChapter")

@@ -21,24 +21,26 @@ http_interactions:
       Content-Type:
       - application/json
       Content-Length:
-      - '1487'
+      - '2386'
       Date:
-      - Thu, 05 Oct 2023 19:47:45 GMT
+      - Thu, 05 Oct 2023 21:25:20 GMT
       Server:
       - Fly/e440b950 (2023-09-20)
       Via:
       - 1.1 fly.io
       Fly-Request-Id:
-      - 01HC0P3FMATV6NJ0VH3GF64RME-fra
+      - 01HC0VP5KB4X15JC2F24HX9YT0-fra
     body:
       encoding: UTF-8
       string: '{"archive_url":null,"authors":[{"name":"Daniel S. Katz","url":"https://orcid.org/0000-0001-5934-7525"},{"name":"Michelle
-        Barker","url":"https://www.linkedin.com/in/michelledbarker/"}],"blog_name":"Upstream","blog_slug":"upstream","doi":"https://doi.org/10.54900/zwm7q-vet94","id":"954f8138-0ecd-4090-87c5-cef1297f1470","image":"https://upstream.force11.org/content/images/2023/04/resa-logo-7.png","indexed_at":1688982864,"language":"en","published_at":1681814212,"reference":[{"key":"ref1","url":"https://software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers"},{"doi":"https://doi.org/10.6084/m9.figshare.5328442.v3","key":"ref2"},{"doi":"https://doi.org/10.54900/9akm9y5-5ject5y","key":"ref3"},{"doi":"https://doi.org/10.5281/zenodo.7740084","key":"ref4"},{"doi":"https://doi.org/10.5281/zenodo.6859709","key":"ref5"},{"doi":"https://doi.org/10.5281/zenodo.7179892","key":"ref6"},{"doi":"https://doi.org/10.5281/zenodo.3884311","key":"ref7"},{"doi":"https://doi.org/10.15497/RDA00052","key":"ref8"},{"doi":"https://doi.org/10.15497/RDA00068","key":"ref9"},{"doi":"https://doi.org/10.5281/ZENODO.6239373","key":"ref10"},{"doi":"https://doi.org/10.5281/ZENODO.3699950","key":"ref11"}],"relationships":[],"summary":"Research
+        Barker","url":"https://www.linkedin.com/in/michelledbarker/"}],"blog":{"api":true,"archive_prefix":null,"authors":null,"backlog":0,"canonical_url":null,"category":"humanities","created_at":"2023-01-13","current_feed_url":"https://upstream.force11.org/atom/","description":"The
+        community blog for all things Open Research.","favicon":"https://upstream.force11.org/favicon.png","feed_format":"application/atom+xml","feed_url":"https://upstream.force11.org/atom-complete/","filter":null,"funding":null,"generator":"Ghost
+        5.25","home_page_url":"https://upstream.force11.org","id":"pm0p222","issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","modified_at":"2023-09-24T13:05:54+00:00","plan":"Team","prefix":"10.54900","relative_url":null,"slug":"upstream","status":"active","title":"Upstream","use_api":true,"use_mastodon":false,"user_id":"08014cf6-3335-4588-96f4-c77ac1e535b2","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Upstream","blog_slug":"upstream","doi":"https://doi.org/10.54900/zwm7q-vet94","id":"954f8138-0ecd-4090-87c5-cef1297f1470","image":"https://upstream.force11.org/content/images/2023/04/resa-logo-7.png","indexed_at":1688982864,"language":"en","published_at":1681814212,"reference":[{"key":"ref1","url":"https://software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers"},{"doi":"https://doi.org/10.6084/m9.figshare.5328442.v3","key":"ref2"},{"doi":"https://doi.org/10.54900/9akm9y5-5ject5y","key":"ref3"},{"doi":"https://doi.org/10.5281/zenodo.7740084","key":"ref4"},{"doi":"https://doi.org/10.5281/zenodo.6859709","key":"ref5"},{"doi":"https://doi.org/10.5281/zenodo.7179892","key":"ref6"},{"doi":"https://doi.org/10.5281/zenodo.3884311","key":"ref7"},{"doi":"https://doi.org/10.15497/RDA00052","key":"ref8"},{"doi":"https://doi.org/10.15497/RDA00068","key":"ref9"},{"doi":"https://doi.org/10.5281/ZENODO.6239373","key":"ref10"},{"doi":"https://doi.org/10.5281/ZENODO.3699950","key":"ref11"}],"relationships":[],"summary":"Research
         software is a key part of most research today.","tags":["News"],"title":"The
         Research Software Alliance (ReSA)","updated_at":1681814212,"url":"https://upstream.force11.org/the-research-software-alliance-resa"}
 
         '
-  recorded_at: Thu, 05 Oct 2023 19:47:44 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:20 GMT
 - request:
     method: head
     uri: https://software.ac.uk/blog/2014-12-04-its-impossible-conduct-research-without-software-say-7-out-10-uk-researchers
@@ -58,7 +60,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:19 GMT
+      - Thu, 05 Oct 2023 21:25:20 GMT
       Server:
       - Apache
       X-Content-Type-Options:
@@ -93,7 +95,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: ''
-  recorded_at: Thu, 05 Oct 2023 20:02:19 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:20 GMT
 - request:
     method: get
     uri: https://doi.org/10.6084/m9.figshare.5328442.v3
@@ -115,7 +117,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:20 GMT
+      - Thu, 05 Oct 2023 21:25:20 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -127,13 +129,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:36:15 GMT
+      - Thu, 05 Oct 2023 21:54:36 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=an8k5zyZguLdOy5UljHmlKDavQs93S33Wsz7ictqgHZCM2xmrLecBP6Ru2G1XSkoqkL9eMyQqLpj8KHh%2Bn9xvZ5EH47mx2QQg%2BKmBYwRCwvq4naNuzI3ia0KjG3Ns9kRso0tUiI%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=7rIOKOJC%2BCCaEj5MsQhUqCdfHLoBcMgNNILxgrMJujlfPyJ2NUhBjG9LS0YlBIr229pyIXbCNVFLq2qrxYUWAASCUI5YbiFcb9yAVZB5LZgrmhaJ9pFSKn%2FDEfWu6BNwy%2FTeuUM%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -141,7 +143,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 811842fb4a3db8c7-AMS
+      - 8118bc948f31b900-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -149,7 +151,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.6084%2Fm9.figshare.5328442.v3">https://data.crosscite.org/10.6084%2Fm9.figshare.5328442.v3</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:20 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:21 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.6084%2Fm9.figshare.5328442.v3
@@ -171,7 +173,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:20 GMT
+      - Thu, 05 Oct 2023 21:25:21 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -187,9 +189,9 @@ http_interactions:
       Etag:
       - W/"a7071f51b1eb40a8f30e8b154cbb14d8"
       X-Runtime:
-      - '0.017934'
+      - '0.019078'
       X-Request-Id:
-      - 92ff6bbe-2c76-42b4-9c30-f6440e08ed6e
+      - 7b76200d-018f-45a4-92a7-1972daca508b
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -232,7 +234,7 @@ http_interactions:
           "URL": "https://figshare.com/articles/journal_contribution/Track_1_Paper_Surveying_the_U_S_National_Postdoctoral_Association_Regarding_Software_Use_and_Training_in_Research/5328442/3",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Thu, 05 Oct 2023 20:02:20 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:21 GMT
 - request:
     method: get
     uri: https://doi.org/10.54900/9akm9y5-5ject5y
@@ -254,7 +256,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:20 GMT
+      - Thu, 05 Oct 2023 21:25:23 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -266,13 +268,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:54:23 GMT
+      - Thu, 05 Oct 2023 21:36:04 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=J%2FfduRY%2BwV4sQ2uBS5XnOscal350rXn0HYCZC6t%2BPX0SPe526Arzwas09SSF%2B5lkhjhJy7VQNE2k9g4xb1w3523CtqmOsi5OSDSzcoybymX21Kl1qV8BlLqZu1MM2zGdoaR0flY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=UOvMe0%2BtBQPDfprScErp%2BtmEUJsc59abXUnbsQaeC89xgchfp71KmTH%2BTT%2BMwG%2Fn9xe%2B7dUf1tMFOmWHzktlWPb6qt4AmQg%2FCcYyR%2FUiFnbPSULPbzkIFdrocd6yXGta3XolDzQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -280,7 +282,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 811842fed974b7b5-AMS
+      - 8118bc993d60b6f1-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -288,7 +290,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://api.crossref.org/v1/works/10.54900%2F9akm9y5-5ject5y/transform">https://api.crossref.org/v1/works/10.54900%2F9akm9y5-5ject5y/transform</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:20 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:23 GMT
 - request:
     method: get
     uri: https://api.crossref.org/v1/works/10.54900%2F9akm9y5-5ject5y/transform
@@ -310,7 +312,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:21 GMT
+      - Thu, 05 Oct 2023 21:25:23 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json
       Transfer-Encoding:
@@ -360,7 +362,7 @@ http_interactions:
         the roles of research software","prefix":"10.54900","author":[{"given":"Rob","family":"van
         Nieuwpoort","sequence":"first","affiliation":[]},{"ORCID":"http:\/\/orcid.org\/0000-0001-5934-7525","authenticated-orcid":false,"given":"Daniel
         S.","family":"Katz","sequence":"additional","affiliation":[]}],"member":"31795","container-title":[],"original-title":[],"link":[{"URL":"https:\/\/upstream.force11.org\/defining-the-roles-of-research-software","content-type":"text\/html","content-version":"vor","intended-application":"text-mining"}],"deposited":{"date-parts":[[2023,6,17]],"date-time":"2023-06-17T23:14:22Z","timestamp":1687043662000},"score":1,"resource":{"primary":{"URL":"https:\/\/upstream.force11.org\/defining-the-roles-of-research-software"}},"subtitle":[],"short-title":[],"issued":{"date-parts":[[2023,3,14]]},"references-count":0,"URL":"http:\/\/dx.doi.org\/10.54900\/9akm9y5-5ject5y","relation":{},"published":{"date-parts":[[2023,3,14]]},"subtype":"other"}'
-  recorded_at: Thu, 05 Oct 2023 20:02:21 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:23 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/zenodo.7740084
@@ -382,7 +384,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:21 GMT
+      - Thu, 05 Oct 2023 21:25:24 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -394,13 +396,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:54:35 GMT
+      - Thu, 05 Oct 2023 21:36:16 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zAvSW2RxLuxPEzvelHd6dttsrQ4F9HnU1bLRhAqVg0xW5Aql1SMZHzAIdfMOlbL7lG%2Bm3Fbq%2FLlp9Tp%2FZlCdW2ayvvl1fSeGVic9Fn9Zya%2FIDo%2FUtQ84323O%2BRqHWjTSL8nDyl4%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fXlE9uzFSIPm5VMjZ5Sk6%2FbZA1r5td%2B29JxfdlSFhk57xojoBnaFLFKWd4AIXFXUo52hYW%2Bd1juz7MBGI9%2FHnfBwBB%2FH0%2F3Ilx6CEwMEDkp1djRIbe2Wl5rD9um5GGoJDHqfei4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -408,7 +410,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 81184304abeeb734-AMS
+      - 8118bca87db2b987-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -416,7 +418,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.7740084">https://data.crosscite.org/10.5281%2Fzenodo.7740084</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:21 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:24 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2Fzenodo.7740084
@@ -438,7 +440,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:21 GMT
+      - Thu, 05 Oct 2023 21:25:24 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -454,9 +456,9 @@ http_interactions:
       Etag:
       - W/"a6451de9eb23725373223d1fdf4bc634"
       X-Runtime:
-      - '0.023183'
+      - '0.018165'
       X-Request-Id:
-      - d3ab26a4-6546-4042-b7c7-3aefeebaa27b
+      - e9514474-0083-42d6-9965-bd4a841b8799
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -510,7 +512,7 @@ http_interactions:
           "copyright": "Creative Commons Attribution 4.0 International",
           "version": "0.3"
         }
-  recorded_at: Thu, 05 Oct 2023 20:02:21 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:24 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/zenodo.6859709
@@ -532,7 +534,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:22 GMT
+      - Thu, 05 Oct 2023 21:25:24 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -544,13 +546,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:36:15 GMT
+      - Thu, 05 Oct 2023 21:54:36 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=716KT4eQSb%2BGpmJKeSEvpNq2Wzrsq0C6NRch0OleNDVAlBzm6uFKGpvc5hr9%2F%2B%2FDST5H8tl2pWWr1r7saLCtFBS3p3IR45cpqFbJjvh0KLHQDpx%2Fkg%2FWYu23baOdF0IvW2HJkO8%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=A%2Fn1ukItppMElGgZYZmofUGCJiUAudGmjppWkGAEdkMmf29Pqfn9PKcpwRvjvbz1nIQ49yzcIFWKEkGl73bY42wAKk3Sju6J9xP1RbpO7rjZfA3tJUi8q60s%2FWgeFeB5WeTT2CM%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -558,7 +560,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 81184307cfff0ea0-AMS
+      - 8118bcabcb5c0bcb-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -566,7 +568,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.6859709">https://data.crosscite.org/10.5281%2Fzenodo.6859709</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:22 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:24 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2Fzenodo.6859709
@@ -588,7 +590,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:22 GMT
+      - Thu, 05 Oct 2023 21:25:24 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -604,9 +606,9 @@ http_interactions:
       Etag:
       - W/"1ef634b21545647b47d59f6b4ca912b9"
       X-Runtime:
-      - '0.022380'
+      - '0.022745'
       X-Request-Id:
-      - 3cb24276-96cb-4ebd-bced-48f5e025d687
+      - 6b29b95b-a5f7-442e-9b13-101884be8ef8
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -715,7 +717,7 @@ http_interactions:
           "URL": "https://zenodo.org/record/6859709",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Thu, 05 Oct 2023 20:02:22 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:24 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/zenodo.7179892
@@ -737,7 +739,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:22 GMT
+      - Thu, 05 Oct 2023 21:25:25 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -749,13 +751,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:10:16 GMT
+      - Thu, 05 Oct 2023 22:10:17 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=H9F%2FX9GPdn%2BG2JFhapRXy05zwDTmNimJ7ZULvlbbBjmX%2FgG6Q213hTgLLEvGdb%2BRIxg6lR%2B1veMIHgUU9%2F2i1niEPTPDxc7CcjuQXnTEnJEx6lmx75xjhiSTDlFtJnkVKXHH5ds%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8PiAqZh%2F%2BmNUHPFGinplumzy5TTzx98e6AvOPes1evtiZtHBrY%2FUaYVhbbcLs7chvGft6%2Fr76bHt27qi6QVjZqlO3czysXiEBHNmXh24lw3tbjhBicZJoxYHi3tGq5Iz89sxHS4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -763,7 +765,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8118430adcd30bc2-AMS
+      - 8118bcaee83ab7a6-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -771,7 +773,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.7179892">https://data.crosscite.org/10.5281%2Fzenodo.7179892</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:22 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:25 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2Fzenodo.7179892
@@ -793,7 +795,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:22 GMT
+      - Thu, 05 Oct 2023 21:25:25 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -809,9 +811,9 @@ http_interactions:
       Etag:
       - W/"f5b7902dce814b3d03598f37990ce8f0"
       X-Runtime:
-      - '0.022214'
+      - '0.027161'
       X-Request-Id:
-      - 4dccf481-453c-4833-ae34-fb59a18a4c4f
+      - fe3bd458-a265-40de-981a-b1426b0c5014
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -905,7 +907,7 @@ http_interactions:
           "URL": "https://zenodo.org/record/7179892",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Thu, 05 Oct 2023 20:02:22 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:25 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/zenodo.3884311
@@ -927,7 +929,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:22 GMT
+      - Thu, 05 Oct 2023 21:25:25 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -939,13 +941,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:10:16 GMT
+      - Thu, 05 Oct 2023 22:10:17 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WK0WEEDk3WuyiqzoZr5vh0Z4LdBTMPBEJ2vRyt5UYh5z26%2BkghO5T7m6yqopzi4Kn1wbkO3OVOA2rn%2F72OYuzVuqtpny0arIZn3vS2BureU4AB0IcYgaUBywukQFRTBW74bUi0Y%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=E8e8ODxAeqlYvJ4FlskE4bC9wldlGzeLSsEAEGNVgx%2FuN%2F8i8bCikOgZ1lYdJbxXZjW4ykf0jsHcNbPgmsjz9wul3ECU3dzOjqXLm6ohkYgKs%2BpYqkopZ21wMnNMJ5F3aucI0Ec%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -953,7 +955,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8118430d8fa30e80-AMS
+      - 8118bcb22cff0a4b-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -961,7 +963,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2Fzenodo.3884311">https://data.crosscite.org/10.5281%2Fzenodo.3884311</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:22 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:25 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2Fzenodo.3884311
@@ -983,7 +985,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:23 GMT
+      - Thu, 05 Oct 2023 21:25:25 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -999,9 +1001,9 @@ http_interactions:
       Etag:
       - W/"51567bedd6280478432dd51a48ce7632"
       X-Runtime:
-      - '0.019800'
+      - '0.019605'
       X-Request-Id:
-      - fe0599ac-ccbf-4992-a1f5-071b0a05de55
+      - c3256a5f-786a-48fb-b62b-b0b2b48781d1
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -1049,7 +1051,7 @@ http_interactions:
           "URL": "https://zenodo.org/record/3884311",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Thu, 05 Oct 2023 20:02:23 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:25 GMT
 - request:
     method: get
     uri: https://doi.org/10.15497/RDA00052
@@ -1071,7 +1073,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:23 GMT
+      - Thu, 05 Oct 2023 21:25:26 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1083,13 +1085,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:54:35 GMT
+      - Thu, 05 Oct 2023 22:10:17 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9wfXv2OgrYMV1ao6L%2BpKepfa0cTxcE6eoBk36bwEj9Dbqald59m8xe%2FG6e1D8IXOQtwqUxATeyZ5uPDXFrmUlcdi%2BvOLx1sRFR4neab4xOETswmZdiP38pMtAtoEQMI7qqXO%2BKE%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=bPVcQCdRb8HLq7n22jyY%2BQpyw9sTdo3Qj6dXRdudAMUbRIHBVyx3jlENkDMs3%2F5d7kmcvUAZ%2Fg%2BB3H2FqEeTU0i4xmRKUw6C5y7Fs4p8bZwlPRXFGaY8Fy82LArakY1yBbMA7ME%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1097,7 +1099,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 811843104e1f0a74-AMS
+      - 8118bcb5ae86b92a-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1105,7 +1107,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.15497%2FRDA00052">https://data.crosscite.org/10.15497%2FRDA00052</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:23 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:26 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.15497%2FRDA00052
@@ -1127,7 +1129,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:23 GMT
+      - Thu, 05 Oct 2023 21:25:26 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -1143,9 +1145,9 @@ http_interactions:
       Etag:
       - W/"5605bebd477a12dddcf0628cd41fb513"
       X-Runtime:
-      - '0.014341'
+      - '0.016998'
       X-Request-Id:
-      - 8e1516d6-b7f1-4c85-bd61-71dcb2a2210e
+      - 5030ac13-5f93-45d5-88d6-228102c5291b
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -1174,7 +1176,7 @@ http_interactions:
           "title": "Final release: COVID-19 guidelines",
           "URL": "https://zenodo.org/record/3932953#.Xx_f7Z4za70"
         }
-  recorded_at: Thu, 05 Oct 2023 20:02:23 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:26 GMT
 - request:
     method: get
     uri: https://doi.org/10.15497/RDA00068
@@ -1196,7 +1198,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:24 GMT
+      - Thu, 05 Oct 2023 21:25:26 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1208,13 +1210,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:36:15 GMT
+      - Thu, 05 Oct 2023 21:36:16 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=n%2F0iLr3MvmE3iDhZv6jTOlsnRVveqE%2FKE0x8u5Dp2WaMZyYM9pfLuBPNeIjgrphfUIN9h2vHxly1yg4gdXbOV2Np3BzzogfFZGXPS1Ox7fp5S96QtAZeKzW3qRakqWZAFuqDeS8%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=iDVo6bRf7%2B1lfCb0rQdKrGzQ32NRbpYgvO%2FqgkogLiJP%2FQzvyXr9jV5uZJ1Y0tkWiGpQGjUvDf9oq0Hst74SMTj4IysKyFZIKybEo1kzQeBZxdNnET9FIApMjOihiqUBmMWEKV0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1222,7 +1224,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 811843135d390a60-AMS
+      - 8118bcb929640e86-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1230,7 +1232,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.15497%2FRDA00068">https://data.crosscite.org/10.15497%2FRDA00068</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:23 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:26 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.15497%2FRDA00068
@@ -1252,7 +1254,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:24 GMT
+      - Thu, 05 Oct 2023 21:25:27 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -1268,9 +1270,9 @@ http_interactions:
       Etag:
       - W/"7e2ad4283560ec29b408517db66a2cc7"
       X-Runtime:
-      - '0.026259'
+      - '0.034455'
       X-Request-Id:
-      - 75d54023-d6f3-4dc8-878c-3bc0c553ec56
+      - 13a3d5d8-518a-4030-aab0-9d70d1678267
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -1580,7 +1582,7 @@ http_interactions:
           "URL": "https://zenodo.org/record/6623556#.YqCJTJNBwlw",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Thu, 05 Oct 2023 20:02:24 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:27 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/ZENODO.6239373
@@ -1602,7 +1604,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:24 GMT
+      - Thu, 05 Oct 2023 21:25:27 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1614,13 +1616,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:36:15 GMT
+      - Thu, 05 Oct 2023 21:54:36 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=c%2FQalVMc6ZUR8j58qucg6ow95EzrS01UX4EZnj2QVp0BRwmmrwI160tASiD%2BwnGTNnMxqyrwReTTrbFRVl4CWEHPYzLPtxGHxsgYIAMWWtcjLOs61JGdKRJb5TG0Z8zdVZHIPIg%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TPkWOq2oeHQnKzjJlpFQMjpRuX9vesAugshqZ73XOevIZB99oplIewml2lwYuEipIpESygj75Kj2gZLDnj4pKyXiIvc1EBRz%2FIZU1bQVSVLjecAl59U3bthS%2FeLyH3scBTtEypA%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1628,7 +1630,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 811843169c671c94-AMS
+      - 8118bcbcdc0d0e74-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1636,7 +1638,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2FZENODO.6239373">https://data.crosscite.org/10.5281%2FZENODO.6239373</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:24 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:27 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2FZENODO.6239373
@@ -1658,7 +1660,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:24 GMT
+      - Thu, 05 Oct 2023 21:25:27 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -1674,9 +1676,9 @@ http_interactions:
       Etag:
       - W/"4b0f91a049d2529e7d7d8fc42c7e3310"
       X-Runtime:
-      - '0.020673'
+      - '0.019304'
       X-Request-Id:
-      - 112ed12d-3aa0-4e62-bc2f-6cde7aa2c281
+      - b51058a6-5440-4eb0-b2d8-ae067f3b3aa8
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -1715,7 +1717,7 @@ http_interactions:
           "URL": "https://zenodo.org/record/6239373",
           "copyright": "Creative Commons Attribution 4.0 International"
         }
-  recorded_at: Thu, 05 Oct 2023 20:02:24 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:27 GMT
 - request:
     method: get
     uri: https://doi.org/10.5281/ZENODO.3699950
@@ -1737,7 +1739,7 @@ http_interactions:
       message: Found
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:24 GMT
+      - Thu, 05 Oct 2023 21:25:27 GMT
       Content-Type:
       - text/html;charset=utf-8
       Content-Length:
@@ -1749,13 +1751,13 @@ http_interactions:
       Vary:
       - Accept
       Expires:
-      - Thu, 05 Oct 2023 20:36:15 GMT
+      - Thu, 05 Oct 2023 21:54:36 GMT
       Permissions-Policy:
       - interest-cohort=(),browsing-topics=()
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Cneyf1Hz4gdk%2FI6XLvuTElNN1VbkDUviIiZEs2zBYaoznwEPdMIxoY3GVMUf%2FMStEWRVgHba9Nl7MTCzWq6fNze%2FsIT%2Bh60scUZhDPQYVxiaTez0HC8yuUmD3Fwp7A1eWVyLUIU%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kPcUyS8iu5nlXRs59wypsbjBj0jbb57qLouFFNANRmWYfGSh8w8vnegctJ78lYr4qFKkg059HVFXOXaJErRV%2BcLz9g2BSmV8vFnY358S0pjItlOjGrEnWi7R5R9QNekdKsExWO0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -1763,7 +1765,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 811843195e4fb932-AMS
+      - 8118bcbffc5c655d-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -1771,7 +1773,7 @@ http_interactions:
       string: |-
         <html><head><title>Handle Redirect</title></head>
         <body><a href="https://data.crosscite.org/10.5281%2FZENODO.3699950">https://data.crosscite.org/10.5281%2FZENODO.3699950</a></body></html>
-  recorded_at: Thu, 05 Oct 2023 20:02:24 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:27 GMT
 - request:
     method: get
     uri: https://data.crosscite.org/10.5281%2FZENODO.3699950
@@ -1793,7 +1795,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 20:02:25 GMT
+      - Thu, 05 Oct 2023 21:25:27 GMT
       Content-Type:
       - application/vnd.citationstyles.csl+json; charset=utf-8
       Transfer-Encoding:
@@ -1809,9 +1811,9 @@ http_interactions:
       Etag:
       - W/"ff2b9c499754dee86387b4534c530c50"
       X-Runtime:
-      - '0.028161'
+      - '0.022138'
       X-Request-Id:
-      - 6d38e1df-56e4-4b4b-b1cd-3e3623620c7a
+      - af894854-f898-4e1a-b5fe-bb6c1e1cd98d
       X-Powered-By:
       - Phusion Passenger(R) 6.0.13
       Server:
@@ -1869,5 +1871,5 @@ http_interactions:
           "copyright": "Creative Commons Attribution 4.0 International",
           "version": "1.0"
         }
-  recorded_at: Thu, 05 Oct 2023 20:02:25 GMT
+  recorded_at: Thu, 05 Oct 2023 21:25:27 GMT
 recorded_with: VCR 6.2.0

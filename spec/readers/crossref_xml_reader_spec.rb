@@ -15,7 +15,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "DOI with data citation" do
       input = "10.7554/eLife.01567"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.7554/elife.01567")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "e01567",
                                                      "alternateIdentifierType" => "article_number" }])
@@ -58,7 +58,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "journal article" do
       input = "https://doi.org/10.1371/journal.pone.0000030"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1371/journal.pone.0000030")
       expect(subject.url).to eq("https://dx.plos.org/10.1371/journal.pone.0000030")
       expect(subject.type).to eq("JournalArticle")
@@ -91,7 +91,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "journal article with funding" do
       input = "https://doi.org/10.3389/fpls.2019.00816"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.3389/fpls.2019.00816")
       expect(subject.url).to eq("https://www.frontiersin.org/article/10.3389/fpls.2019.00816/full")
       expect(subject.type).to eq("JournalArticle")
@@ -124,7 +124,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "journal article original language title" do
       input = "https://doi.org/10.7600/jspfsm.56.60"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.7600/jspfsm.56.60")
       expect(subject.url).to eq("https://www.jstage.jst.go.jp/article/jspfsm/56/1/56_1_60/_article/-char/ja")
       expect(subject.type).to eq("JournalArticle")
@@ -145,7 +145,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "journal article with RDF for container" do
       input = "https://doi.org/10.1163/1937240X-00002096"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1163/1937240x-00002096")
       expect(subject.url).to eq("https://academic.oup.com/jcb/article-lookup/doi/10.1163/1937240X-00002096")
       expect(subject.type).to eq("JournalArticle")
@@ -170,7 +170,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "book chapter with RDF for container" do
       input = "10.1007/978-3-642-33191-6_49"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1007/978-3-642-33191-6_49")
       expect(subject.url).to eq("http://link.springer.com/10.1007/978-3-642-33191-6_49")
       expect(subject.type).to eq("BookChapter")
@@ -185,14 +185,14 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.references.length).to eq(11)
       expect(subject.references.first).to eq("key" => "49_CR1")
       expect(subject.container).to eq("identifier" => "1611-3349", "identifierType" => "ISSN",
-                                      "title" => "Lecture Notes in Computer Science", "type" => "Book Series")
+                                      "title" => "Lecture Notes in Computer Science", "type" => "BookSeries")
       expect(subject.provider).to eq("Crossref")
     end
 
     it "posted_content" do
       input = "https://doi.org/10.1101/097196"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.url).to eq("http://biorxiv.org/lookup/doi/10.1101/097196")
       expect(subject.type).to eq("Article")
       expect(subject.contributors.count).to eq(11)
@@ -214,7 +214,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "peer review" do
       input = "https://doi.org/10.7554/elife.55167.sa2"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.7554/elife.55167.sa2")
       expect(subject.url).to eq("https://elifesciences.org/articles/55167#sa2")
       expect(subject.type).to eq("PeerReview")
@@ -234,7 +234,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "dissertation" do
       input = "https://doi.org/10.14264/uql.2020.791"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.url).to eq("http://espace.library.uq.edu.au/view/UQ:23a1e74")
       expect(subject.type).to eq("Dissertation")
       expect(subject.contributors).to eq([{ "familyName" => "Collingwood",
@@ -253,7 +253,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "DOI with SICI DOI" do
       input = "https://doi.org/10.1890/0012-9658(2006)87[2832:tiopma]2.0.co;2"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1890/0012-9658(2006)87%255b2832:tiopma%255d2.0.co;2")
       expect(subject.url).to eq("http://doi.wiley.com/10.1890/0012-9658(2006)87%5B2832:TIOPMA%5D2.0.CO;2")
       expect(subject.type).to eq("JournalArticle")
@@ -277,7 +277,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "DOI with ORCID ID" do
       input = "https://doi.org/10.1155/2012/291294"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1155/2012/291294")
       expect(subject.url).to eq("http://www.hindawi.com/journals/pm/2012/291294")
       expect(subject.type).to eq("JournalArticle")
@@ -303,7 +303,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "date in future" do
       input = "https://doi.org/10.1016/j.ejphar.2015.03.018"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1016/j.ejphar.2015.03.018")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "S0014299915002332",
                                                      "alternateIdentifierType" => "sequence-number" }])
@@ -334,7 +334,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "vor with url" do
       input = "https://doi.org/10.1038/hdy.2013.26"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1038/hdy.2013.26")
       expect(subject.url).to eq("https://www.nature.com/articles/hdy201326")
       expect(subject.type).to eq("JournalArticle")
@@ -362,7 +362,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "dataset" do
       input = "10.2210/pdb4hhb/pdb"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.2210/pdb4hhb/pdb")
       expect(subject.url).to eq("https://www.wwpdb.org/pdb?id=pdb_00004hhb")
       expect(subject.type).to eq("Other")
@@ -382,7 +382,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "component" do
       input = "10.1371/journal.pmed.0030277.g001"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1371/journal.pmed.0030277.g001")
       expect(subject.url).to eq("https://dx.plos.org/10.1371/journal.pmed.0030277.g001")
       expect(subject.type).to eq("Other")
@@ -397,7 +397,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "dataset usda" do
       input = "https://doi.org/10.2737/RDS-2018-0001"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # # expect(subject.valid?).to be true
+      # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.2737/rds-2018-0001")
       expect(subject.url).to eq("https://www.fs.usda.gov/rds/archive/Catalog/RDS-2018-0001")
       expect(subject.type).to eq("Dataset")
@@ -416,7 +416,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "book chapter" do
       input = "https://doi.org/10.1007/978-3-662-46370-3_13"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1007/978-3-662-46370-3_13")
       expect(subject.url).to eq("https://link.springer.com/10.1007/978-3-662-46370-3_13")
       expect(subject.type).to eq("BookChapter")
@@ -440,7 +440,8 @@ describe Commonmeta::Metadata, vcr: true do
     it "another book chapter" do
       input = "https://doi.org/10.1007/978-3-319-75889-3_1"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      puts subject.errors unless subject.valid?
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1007/978-3-319-75889-3_1")
       expect(subject.url).to eq("http://link.springer.com/10.1007/978-3-319-75889-3_1")
       expect(subject.type).to eq("BookChapter")
@@ -452,7 +453,7 @@ describe Commonmeta::Metadata, vcr: true do
                                       "updated" => "2019-10-16")
       expect(subject.publisher).to eq("name" => "Springer Science and Business Media LLC")
       expect(subject.provider).to eq("Crossref")
-      expect(subject.container["type"]).to eq("Book Series")
+      expect(subject.container["type"]).to eq("BookSeries")
       expect(subject.container["title"]).to eq("SpringerBriefs in Medical Earth Sciences")
       expect(subject.container["identifier"]).to eq("2523-3629")
       expect(subject.container["identifierType"]).to eq("ISSN")
@@ -461,7 +462,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "yet another book chapter" do
       input = "https://doi.org/10.4018/978-1-4666-1891-6.ch004"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.4018/978-1-4666-1891-6.ch004")
       expect(subject.url).to eq("http://services.igi-global.com/resolvedoi/resolve.aspx?doi=10.4018/978-1-4666-1891-6.ch004")
       expect(subject.type).to eq("BookChapter")
@@ -482,7 +483,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "missing contributor" do
       input = "https://doi.org/10.3390/publications6020015"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.3390/publications6020015")
       expect(subject.url).to eq("https://www.mdpi.com/2304-6775/6/2/15")
       expect(subject.type).to eq("JournalArticle")
@@ -505,7 +506,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "book" do
       input = "https://doi.org/10.1017/9781108348843"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1017/9781108348843")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "9781108348843",
                                                      "alternateIdentifierType" => "ISBN" }])
@@ -524,7 +525,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "another book" do
       input = "https://doi.org/10.2973/odp.proc.ir.180.2000"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.2973/odp.proc.ir.180.2000")
       expect(subject.url).to eq("http://www-odp.tamu.edu/publications/180_IR/180TOC.HTM")
       expect(subject.type).to eq("Book")
@@ -542,7 +543,8 @@ describe Commonmeta::Metadata, vcr: true do
     it "yet another book" do
       input = "https://doi.org/10.1029/ar035"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      puts subject.errors unless subject.valid?
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1029/ar035")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "0-87590-181-6",
                                                      "alternateIdentifierType" => "ISBN" }])
@@ -563,14 +565,14 @@ describe Commonmeta::Metadata, vcr: true do
                                              "title" => "Latitudinal gradients in tertiary mol-luscan faunas of the Pacific coast",
                                              "volume" => "8")
       expect(subject.container).to eq("identifier" => "0066-4634", "identifierType" => "ISSN",
-                                      "title" => "Antarctic Research Series", "type" => "Book Series", "volume" => "35")
+                                      "title" => "Antarctic Research Series", "type" => "BookSeries", "volume" => "35")
       expect(subject.provider).to eq("Crossref")
     end
 
     it "mEDRA" do
       input = "https://doi.org/10.3280/ecag2018-001005"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.3280/ecag2018-001005")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "5",
                                                      "alternateIdentifierType" => "article_number" }])
@@ -589,7 +591,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "KISTI" do
       input = "https://doi.org/10.5012/bkcs.2013.34.10.2889"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5012/bkcs.2013.34.10.2889")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "JCGMCS_2013_v34n10_2889",
                                                      "alternateIdentifierType" => "Publisher ID" }])
@@ -609,7 +611,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "JaLC" do
       input = "https://doi.org/10.1241/johokanri.39.979"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1241/johokanri.39.979")
       expect(subject.url).to eq("http://joi.jlc.jst.go.jp/JST.JSTAGE/johokanri/39.979?from=CrossRef")
       expect(subject.type).to eq("JournalArticle")
@@ -625,7 +627,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "OP" do
       input = "https://doi.org/10.2903/j.efsa.2018.5239"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.2903/j.efsa.2018.5239")
       expect(subject.url).to eq("http://doi.wiley.com/10.2903/j.efsa.2018.5239")
       expect(subject.type).to eq("JournalArticle")
@@ -643,7 +645,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "multiple titles" do
       input = "https://doi.org/10.4000/dms.865"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.4000/dms.865")
       expect(subject.url).to eq("http://journals.openedition.org/dms/865")
       expect(subject.type).to eq("JournalArticle")
@@ -691,7 +693,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "markup" do
       input = "https://doi.org/10.1098/rspb.2017.0132"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1098/rspb.2017.0132")
       expect(subject.url).to eq("https://royalsocietypublishing.org/doi/10.1098/rspb.2017.0132")
       expect(subject.type).to eq("JournalArticle")
@@ -711,7 +713,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "empty given name" do
       input = "https://doi.org/10.1111/J.1865-1682.2010.01171.X"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1111/j.1865-1682.2010.01171.x")
       expect(subject.url).to eq("https://onlinelibrary.wiley.com/doi/10.1111/j.1865-1682.2010.01171.x")
       expect(subject.type).to eq("JournalArticle")
@@ -728,7 +730,8 @@ describe Commonmeta::Metadata, vcr: true do
     it "invalid date" do
       input = "https://doi.org/10.1055/s-0039-1690894"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      puts subject.errors unless subject.valid?
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1055/s-0039-1690894")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "s-0039-1690894",
                                                      "alternateIdentifierType" => "sequence-number" }])
@@ -748,30 +751,24 @@ describe Commonmeta::Metadata, vcr: true do
     it "journal article with" do
       input = "https://doi.org/10.1111/nph.14619"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      # puts subject.errors unless subject.valid?
+      expect(subject.valid?).to be false
       expect(subject.id).to eq("https://doi.org/10.1111/nph.14619")
       expect(subject.url).to eq("https://nph.onlinelibrary.wiley.com/doi/10.1111/nph.14619")
       expect(subject.type).to eq("JournalArticle")
       expect(subject.contributors.length).to eq(3)
       expect(subject.contributors.first).to eq("type" => "Person", "contributorRoles" => ["Author"],
                                                "id" => "https://orcid.org/0000-0002-4156-3761",
-                                               "givenName" => "Nico", "familyName" => "Dissmeyer", "affiliation" => [{ "name" => "Independent Junior Research Group on Protein Recognition and Degradation Leibniz Institute of Plant Biochemistry (IPB) Weinberg 3 Halle (Saale) D-06120 Germany" }, { "name" => "ScienceCampus Halle - Plant-based Bioeconomy Betty-Heimann-Strasse 3 Halle (Saale) D-06120 Germany" }])
-      expect(subject.titles).to eq([{ "title" => "Life and death of proteins after protease cleavage: protein degradation by the N-end rule pathway" }])
+                                               "givenName" => "Nico", "familyName" => "Dissmeyer", "affiliation" => [{ "name" => "Independent Junior Research Group on Protein Recognition and Degradation Leibniz Institute of Plant Biochemistry (IPB) Weinberg 3 Halle (Saale) D‐06120 Germany" }, { "name" => "ScienceCampus Halle – Plant‐based Bioeconomy Betty‐Heimann‐Strasse 3 Halle (Saale) D‐06120 Germany" }])
+      expect(subject.titles).to eq([{ "title" => "Life and death of proteins after protease cleavage: protein degradation by the N‐end rule pathway" }])
       expect(subject.license).to eq("url" => "http://onlinelibrary.wiley.com/termsAndConditions#vor")
-      expect(subject.date).to include("published" => "2018-05",
-                                      "registered" => "2018-08-03",
-                                      "updated" => "2021-07-07")
+      expect(subject.date).to include("published" => "2017-06-05",
+                "registered" => "2023-09-10",
+                "updated" => "2023-09-12")
       expect(subject.publisher).to eq("name" => "Wiley")
       expect(subject.references.length).to eq(49)
-      expect(subject.references.last).to eq("containerTitle" => "Proteomics",
-                                            "contributor" => "Zhang",
-                                            "doi" => "https://doi.org/10.1002/pmic.201400530",
-                                            "firstPage" => "2447",
-                                            "key" => "10.1111/nph.14619-BIB0049|nph14619-cit-0049",
-                                            "publicationYear" => "2015",
-                                            "title" => "Quantitative proteomics analysis of the Arg/N-end rule pathway of targeted degradation in Arabidopsis roots",
-                                            "volume" => "15")
-      expect(subject.container).to eq("firstPage" => "929", "identifier" => "0028-646X",
+      expect(subject.references.last).to eq("doi"=>"https://doi.org/10.1002/pmic.201400530", "key"=>"e_1_2_7_50_1")
+      expect(subject.container).to eq("firstPage" => "929", "identifier" => "1469-8137",
                                       "identifierType" => "ISSN", "issue" => "3", "lastPage" => "935", "title" => "New Phytologist", "type" => "Journal", "volume" => "218")
       expect(subject.provider).to eq("Crossref")
     end
@@ -779,7 +776,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "author literal" do
       input = "https://doi.org/10.1038/ng.3834"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1038/ng.3834")
       expect(subject.url).to eq("https://www.nature.com/articles/ng.3834")
       expect(subject.type).to eq("JournalArticle")
@@ -796,7 +793,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "affiliation is space" do
       input = "https://doi.org/10.1177/0042098011428175"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1177/0042098011428175")
       expect(subject.url).to eq("http://journals.sagepub.com/doi/10.1177/0042098011428175")
       expect(subject.type).to eq("JournalArticle")
@@ -814,7 +811,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "multiple issn" do
       input = "https://doi.org/10.1007/978-3-642-34922-5_19"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1007/978-3-642-34922-5_19")
       expect(subject.url).to eq("https://link.springer.com/10.1007/978-3-642-34922-5_19")
       expect(subject.type).to eq("BookChapter")
@@ -827,14 +824,14 @@ describe Commonmeta::Metadata, vcr: true do
                                       "updated" => "2023-02-17")
       expect(subject.publisher).to eq("name" => "Springer Science and Business Media LLC")
       expect(subject.container).to eq("identifier" => "1860-0808", "identifierType" => "ISSN",
-                                      "title" => "Studies in Fuzziness and Soft Computing", "type" => "Book Series")
+                                      "title" => "Studies in Fuzziness and Soft Computing", "type" => "BookSeries")
       expect(subject.provider).to eq("Crossref")
     end
 
     it "article id as page number" do
       input = "https://doi.org/10.1103/physrevlett.120.117701"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.1103/physrevlett.120.117701")
       expect(subject.url).to eq("https://link.aps.org/doi/10.1103/PhysRevLett.120.117701")
       expect(subject.type).to eq("JournalArticle")
@@ -854,7 +851,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "posted content copernicus" do
       input = "https://doi.org/10.5194/CP-2020-95"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.url).to eq("https://cp.copernicus.org/preprints/cp-2020-95/cp-2020-95.pdf")
       expect(subject.type).to eq("Article")
       expect(subject.contributors.count).to eq(6)
@@ -873,7 +870,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "book oup" do
       input = "10.1093/oxfordhb/9780198746140.013.5"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.url).to eq("https://academic.oup.com/edited-volume/28081/chapter/212116415")
       expect(subject.type).to eq("Book")
       expect(subject.contributors.count).to eq(3)
@@ -897,7 +894,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "report osti" do
       input = "10.2172/972169"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.url).to eq("http://www.osti.gov/servlets/purl/972169-1QXROM")
       expect(subject.type).to eq("Report")
       expect(subject.contributors.count).to eq(4)
@@ -920,7 +917,7 @@ describe Commonmeta::Metadata, vcr: true do
     it "journal issue" do
       input = "https://doi.org/10.6002/ect.2015.0371"
       subject = described_class.new(input: input, from: "crossref_xml")
-      # expect(subject.valid?).to be true
+      expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.6002/ect.2015.0371")
       expect(subject.url).to eq("http://ectrx.org/forms/ectrxcontentshow.php?doi_id=10.6002/ect.2015.0371")
       expect(subject.type).to eq("JournalIssue")

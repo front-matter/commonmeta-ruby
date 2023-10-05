@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 19:48:23 GMT
+      - Thu, 05 Oct 2023 21:10:55 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=F%2B0vEnxxeOdwHAkJ38EwsCQrKnR56l%2BX0n8JI0GZsx1x2SU8JMVrH4hYQn1qZh4yr9%2Bk8I1nwkRGccdZ6Xh6388OhCCmi3CeGdaSi5JrzaqU9VsjtfrjoBYyp53paWP3uWYe%2BHw%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=e4I%2BTtCjD%2B79ulUiAlxt88R27%2FpTcQh1vNB2jjXX1sF%2FdVkQlanZaX3x1GXjtL7CtsnT%2FrcmzBVm39EneD5CCETglCcWwEnCij17BlXFKyvsqVXhlYHDN%2F8CMOJrf3tVuokN3no%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 81182e8f5861b89a-AMS
+      - 8118a7763f261c83-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,7 +51,7 @@ http_interactions:
             "RA": "DataCite"
           }
         ]
-  recorded_at: Thu, 05 Oct 2023 19:48:23 GMT
+  recorded_at: Thu, 05 Oct 2023 21:10:55 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.5061/dryad.8515?include=media,client
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 19:48:23 GMT
+      - Thu, 05 Oct 2023 21:10:56 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -93,7 +93,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 3a19db56-217a-43ef-9f89-37feb3aed99a
+      - 4b898995-0fd9-460a-8cc1-08a27d6eb513
       X-Download-Options:
       - noopen
       Etag:
@@ -101,7 +101,7 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.030613'
+      - '0.025691'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
@@ -168,5 +168,5 @@ http_interactions:
         particularly data for which no specialized repository exists. The content
         is considered to be integral to the published research. All material in Dryad
         is associated with a scholarly publication","language":[],"clientType":"repository","domains":"*","re3data":"https://doi.org/10.17616/R34S33","opendoar":null,"issn":{},"url":"https://datadryad.org","created":"2018-04-24T20:59:15.000Z","updated":"2023-03-16T09:26:32.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"dryad","type":"providers"}},"prefixes":{"data":[{"id":"10.5061","type":"prefixes"},{"id":"10.15146","type":"prefixes"}]}}}]}'
-  recorded_at: Thu, 05 Oct 2023 19:48:23 GMT
+  recorded_at: Thu, 05 Oct 2023 21:10:56 GMT
 recorded_with: VCR 6.2.0

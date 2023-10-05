@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 19:47:56 GMT
+      - Thu, 05 Oct 2023 21:11:11 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2ni5lfsh5yLbL8u%2BZsBcjpsb6jVb1io71i82a3QpcP0AUL%2FV6JhZKyOCt6FVmt%2FSNX7oe1tPOIOoxO6RnFHZkDkSmtYXxvnZOc9Lbv4QZpetymrMdmQnTUJm0nXO27OzxJ0zmxI%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=iR%2Fu%2FvanI4RJlfZ4CqyCyhuVhBqcwA0DmzkOxTI17WKEC9D2xQbWfrvrkfd4gjxnK3CJyc8Koo0xQZCitAIOa4WoONwYvQ2qc31g9ewTdGDMzuOFmUYEKg06Ja6eLTa4lHrl2GQ%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 81182de7fc7fb906-AMS
+      - 8118a7db4891b8be-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,5 +51,5 @@ http_interactions:
             "RA": "Crossref"
           }
         ]
-  recorded_at: Thu, 05 Oct 2023 19:47:56 GMT
+  recorded_at: Thu, 05 Oct 2023 21:11:11 GMT
 recorded_with: VCR 6.2.0

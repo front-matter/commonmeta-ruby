@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.rogue-scholar.org/blogs/tyfqw
+    uri: https://api.rogue-scholar.org/blogs/iballo
     body:
       encoding: ASCII-8BIT
       string: ''
@@ -23,13 +23,13 @@ http_interactions:
       Content-Length:
       - '265'
       Date:
-      - Thu, 05 Oct 2023 19:48:27 GMT
+      - Thu, 05 Oct 2023 21:10:42 GMT
       Server:
       - Fly/e440b950 (2023-09-20)
       Via:
       - 1.1 fly.io
       Fly-Request-Id:
-      - 01HC0P4S75112MN8KXY1QTDS2Z-fra
+      - 01HC0TVCK3M814YB7NBVC30QJW-fra
     body:
       encoding: UTF-8
       string: |
@@ -38,5 +38,5 @@ http_interactions:
         <title>500 Internal Server Error</title>
         <h1>Internal Server Error</h1>
         <p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
-  recorded_at: Thu, 05 Oct 2023 19:48:27 GMT
+  recorded_at: Thu, 05 Oct 2023 21:10:42 GMT
 recorded_with: VCR 6.2.0
