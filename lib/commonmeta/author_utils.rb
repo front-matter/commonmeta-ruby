@@ -165,7 +165,7 @@ module Commonmeta
       return false if name.to_s.split(" ").size == 1 && name.to_s.exclude?(",")
 
       # check for suffixes, e.g. "John Smith, MD"
-      return true if %w[MD PhD].include? name.split(", ").last
+      return true if name && %w[MD PhD].include?(name.split(", ").last)
 
       # check of name can be parsed into given/family name
       Namae.options[:include_particle_in_family] = true
