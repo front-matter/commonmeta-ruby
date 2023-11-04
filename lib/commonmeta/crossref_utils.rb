@@ -86,7 +86,6 @@ module Commonmeta
         insert_funding_references(xml)
         insert_crossref_access_indicators(xml)
         insert_crossref_relations(xml)
-        insert_archive_locations(xml)
         insert_doi_data(xml)
         insert_citation_list(xml)
       end
