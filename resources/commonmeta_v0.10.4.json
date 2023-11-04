@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://commonmeta.org/commonmeta_v0.10.3.json",
-  "title": "Commonmeta v0.10.3",
+  "$id": "https://commonmeta.org/commonmeta_v0.10.4.json",
+  "title": "Commonmeta v0.10.4",
   "description": "JSON representation of the Commonmeta schema.",
   "additionalProperties": false,
   "definitions": {
@@ -516,6 +516,15 @@
       "description": "The state of the resource.",
       "type": "string",
       "enum": ["findable", "not_found"]
+    },
+    "archive_locations": {
+      "description": "The location where content is archived.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["CLOCKSS", "Internet Archive", "KB", "LOCKSS", "Portico", "Other"]
+      },
+      "uniqueItems": true
     }
   },
   "required": [

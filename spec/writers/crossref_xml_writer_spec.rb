@@ -323,6 +323,45 @@ describe Commonmeta::Metadata, vcr: true do
       expect(crossref_xml.dig("group_title")).to eq("Social sciences")
     end
 
+    it "json_feed_item from rogue scholar with archived content" do
+      input = "https://api.rogue-scholar.org/posts/570c8129-e867-49e6-8517-bd783627e76e"
+      subject = described_class.new(input: input)
+      # expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://doi.org/10.59350/faeph-x4x84")
+      expect(subject.url).to eq("https://wayback.archive-it.org/22143/20231103191454/https://project-thor.eu/2016/08/10/orcid-integration-in-pangaea")
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "570c8129-e867-49e6-8517-bd783627e76e", "alternateIdentifierType" => "UUID" }])
+      expect(subject.type).to eq("Article")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("contributorRoles" => ["Author"],
+           "type" => "Person",
+           "familyName" => "Stocker",
+           "givenName" => "Markus",
+           "id" => "https://orcid.org/0000-0001-5492-3212")
+      expect(subject.titles).to eq([{ "title" => "ORCID Integration Series: PANGAEA" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published" => "2016-08-10", "updated" => "2016-08-10")
+      expect(subject.descriptions.first["description"]).to start_with("This is the first in a series of posts describing how THOR partners")
+      expect(subject.publisher).to eq("name" => "Project THOR")
+      expect(subject.subjects).to eq([{ "subject" => "Computer and information sciences" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Computer and information sciences",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.funding_references).to eq([{ "awardNumber" => "654039", "funderIdentifier" => "https://doi.org/10.13039/501100007601", "funderIdentifierType"=>"Crossref Funder ID", "funderName" => "European Union’s Horizon 2020 research and innovation programme" }])
+      expect(subject.container).to eq("identifier" => "https://project-thor.eu", "identifierType" => "URL", "title" => "Project THOR", "type" => "Periodical")
+      expect(subject.archive_locations).to eq(["Internet Archive"])
+      # puts subject.crossref_xml
+      crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
+      expect(Array.wrap(crossref_xml.dig("contributors", "person_name")).length).to eq(1)
+      expect(Array.wrap(crossref_xml.dig("contributors",
+                                         "person_name")).first).to eq("ORCID"=>"https://orcid.org/0000-0001-5492-3212", "contributor_role"=>"author", "given_name"=>"Markus", "sequence"=>"first", "surname"=>"Stocker")
+      expect(crossref_xml.dig("titles",
+                              "title")).to eq("ORCID Integration Series: PANGAEA")
+      expect(crossref_xml.dig("item_number")).to eq("__content__" => "570c8129e86749e68517bd783627e76e", "item_number_type" => "uuid")
+      expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
+    end
+
     it "json_feed_item from rogue scholar with relations" do
       input = "https://api.rogue-scholar.org/posts/8a4de443-3347-4b82-b57d-e3c82b6485fc"
       subject = described_class.new(input: input, doi: "10.53731/r79v4e1-97aq74v-ag578")

@@ -65,6 +65,7 @@ module Commonmeta
           insert_funding_references(xml)
           insert_crossref_access_indicators(xml)
           insert_crossref_relations(xml)
+          insert_archive_locations(xml)
           insert_doi_data(xml)
           insert_citation_list(xml)
         end
@@ -85,6 +86,7 @@ module Commonmeta
         insert_funding_references(xml)
         insert_crossref_access_indicators(xml)
         insert_crossref_relations(xml)
+        insert_archive_locations(xml)
         insert_doi_data(xml)
         insert_citation_list(xml)
       end
@@ -324,6 +326,16 @@ module Commonmeta
         alternate_identifier["alternateIdentifier"] = alternate_identifier["alternateIdentifier"].gsub("-", "") if alternate_identifier["alternateIdentifierType"] == "UUID"
 
         xml.item_number(alternate_identifier["alternateIdentifier"], attributes)
+      end
+    end
+
+    def insert_archive_locations(xml)
+      return xml if archive_locations.blank?
+
+      xml.archive_locations do
+        archive_locations.each do |archive_location|
+          xml.archive("name" => archive_location)
+        end
       end
     end
 

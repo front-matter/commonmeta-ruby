@@ -69,6 +69,19 @@ module Commonmeta
         funding_references = get_funding_references(meta)
         related_identifiers = get_related_identifiers(meta)
         alternate_identifiers = [{ "alternateIdentifier" => meta["id"], "alternateIdentifierType" => "UUID" }]
+        
+        archive_url = meta.fetch("archive_url", nil)
+
+        if archive_url
+          host = URI.parse(archive_url).host
+          if ["web.archive.org", "wayback.archive-it.org"].include?(host)
+            archive_locations = ["Internet Archive"]
+          else
+            archive_locations = nil
+          end
+        else
+          archive_locations = nil
+        end
 
         { "id" => id,
           "type" => type,
@@ -86,6 +99,7 @@ module Commonmeta
           "funding_references" => funding_references.presence,
           "related_identifiers" => related_identifiers.presence,
           "alternate_identifiers" => alternate_identifiers,
+          "archive_locations" => archive_locations,
           "state" => state }.compact.merge(read_options)
       end
 

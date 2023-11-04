@@ -233,7 +233,7 @@ describe Commonmeta::Metadata, vcr: true do
       subject = described_class.new(input: input)
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/faeph-x4x84")
-      expect(subject.url).to eq("https://web.archive.org/web/20190709153404/https://project-thor.eu/2016/08/10/orcid-integration-in-pangaea")
+      expect(subject.url).to eq("https://wayback.archive-it.org/22143/20231103191454/https://project-thor.eu/2016/08/10/orcid-integration-in-pangaea")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "570c8129-e867-49e6-8517-bd783627e76e", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
       expect(subject.contributors.length).to eq(1)
@@ -255,6 +255,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.language).to eq("en")
       expect(subject.funding_references).to eq([{ "awardNumber" => "654039", "funderIdentifier" => "https://doi.org/10.13039/501100007601", "funderIdentifierType"=>"Crossref Funder ID", "funderName" => "European Union’s Horizon 2020 research and innovation programme" }])
       expect(subject.container).to eq("identifier" => "https://project-thor.eu", "identifierType" => "URL", "title" => "Project THOR", "type" => "Periodical")
+      expect(subject.archive_locations).to eq(["Internet Archive"])
     end
 
     it "wordpress post with references" do
