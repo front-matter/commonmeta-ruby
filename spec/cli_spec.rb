@@ -370,9 +370,9 @@ describe Commonmeta::CLI do
       expect { subject.json_feed_unregistered }.to output(/17d0e31c-bc41-42b8-b873-d3dacee61f5c/).to_stdout
     end
     
-    # it "json_feed_not_indexed" do
-    #   expect { subject.json_feed_not_indexed }.to output(/r294649-6f79289-8cw1w/).to_stdout
-    # end
+    it "json_feed_updated" do
+      expect { subject.json_feed_updated }.to output(/bb8932b9-2820-42f8-b22f-f191aaf00e32/).to_stdout
+    end
 
     it "json_feed_by_blog" do
       input = "iphylo"

@@ -1453,8 +1453,8 @@ module Commonmeta
       Base32::URL.decode(id)
     end
 
-    def json_feed_not_indexed_url
-      "https://api.rogue-scholar.org/posts/not_indexed"
+    def json_feed_updated_url
+      "https://api.rogue-scholar.org/posts/updated"
     end
 
     def json_feed_unregistered_url

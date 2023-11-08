@@ -515,9 +515,9 @@ describe Commonmeta::Metadata, vcr: true do
       expect(response).to eq("17d0e31c-bc41-42b8-b873-d3dacee61f5c")
     end
 
-    it "not indexed posts" do
-      response = subject.get_json_feed_not_indexed
-      expect(response).to be_nil
+    it "updated posts" do
+      response = subject.get_json_feed_updated
+      expect(response).to eq("bb8932b9-2820-42f8-b22f-f191aaf00e32")
     end
 
     it "by blog_id" do

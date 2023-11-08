@@ -1,0 +1,186 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rogue-scholar.org/posts/updated
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '25138'
+      Ratelimit-Limit:
+      - '15'
+      Ratelimit-Remaining:
+      - '13'
+      Ratelimit-Reset:
+      - '5'
+      Date:
+      - Wed, 08 Nov 2023 10:07:55 GMT
+      Server:
+      - Fly/442f90d3 (2023-11-07)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HEQ6E76W3EJQAJNP320B0RJP-fra
+    body:
+      encoding: UTF-8
+      string: '[{"archive_url":"https://wayback.archive-it.org/22141/20231105110201/https://blogs.fu-berlin.de/open-access-berlin/2023/10/06/veranstaltungshinweise-november-2023","authors":[{"name":"Georg
+        Fischer"}],"blog":{"category":"otherHumanities","description":null,"feed_url":"https://blogs.fu-berlin.de/open-access-berlin/feed/atom/","generator":"WordPress","home_page_url":"https://blogs.fu-berlin.de/open-access-berlin","language":"de","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"oaberlin","status":"active","title":"Open
+        Access Blog Berlin","updated_at":1699429735},"blog_name":"Open Access Blog
+        Berlin","blog_slug":"oaberlin","doi":"https://doi.org/10.59350/bmvf8-z4q23","guid":"https://blogs.fu-berlin.de/open-access-berlin/?p=1977","id":"bb8932b9-2820-42f8-b22f-f191aaf00e32","image":null,"indexed":false,"indexed_at":1699219437,"language":"de","published_at":1696581036,"reference":[],"relationships":[],"summary":"weiter
+        zu Dezember 2023 [folgt in K\u00fcrze] Anmerkung zu dieser Rubrik: Das OABB
+        erstellt monatlich eine \u00dcbersicht \u00fcber Termine und Veranstaltungen
+        zu Open Access und Open Research in Berlin bzw. an Berliner Einrichtungen.
+        Der Fokus liegt dabei auf unseren Partnereinrichtungen und auf Veranstaltungen,
+        die sich an die \u00d6ffentlichkeit richten bzw. die offen sind f\u00fcr Angeh\u00f6rige
+        der Wissenschafts- und Kulturerbeeinrichtungen in Berlin.","tags":["Veranstaltungshinweise"],"title":"Veranstaltungshinweise
+        November 2023","updated_at":1699429735,"url":"https://blogs.fu-berlin.de/open-access-berlin/2023/10/06/veranstaltungshinweise-november-2023"},{"archive_url":"https://wayback.archive-it.org/22124/20231105103706/https://upstream.force11.org/principles-of-open-scholarly-infrastructure-posi-version-1-1-reflections-from-adopters","authors":[{"name":"Ginny
+        Hendricks","url":"https://orcid.org/0000-0002-0353-2702"}],"blog":{"category":"humanities","description":"The
+        community blog for all things Open Research.","feed_url":"https://upstream.force11.org/atom-complete/","generator":"Ghost","home_page_url":"https://upstream.force11.org","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"upstream","status":"active","title":"Upstream","updated_at":1699378833},"blog_name":"Upstream","blog_slug":"upstream","doi":"https://doi.org/10.54900/n6az7-4xb07","guid":"652bb7cb4e902104cd51d525","id":"3d013369-c9fa-4b05-8b5f-ad7e1e2f39a2","image":"https://images.unsplash.com/photo-1529246337709-b1a561ebd175?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEyfHxjb2xvdXIlMjBzdGVwc3xlbnwwfHx8fDE2OTkzMDU0MTN8MA&ixlib=rb-4.0.3&q=80&w=2000","indexed":false,"indexed_at":1699348555,"language":"en","published_at":1699347653,"reference":[],"relationships":[],"summary":"<em>The
+        Upstream platform was created in order to discuss all things open. Open scholarly
+        infrastructure and the need for the community to assess such infrastructures
+        are surely at the heart of enabling the open research movement.","tags":["Interviews","Thought
+        Pieces"],"title":"Principles of Open Scholarly Infrastructure (POSI) version
+        1.1: Reflections from adopters","updated_at":1699378833,"url":"https://upstream.force11.org/principles-of-open-scholarly-infrastructure-posi-version-1-1-reflections-from-adopters"},{"archive_url":"https://wayback.archive-it.org/22124/20231105103706/https://upstream.force11.org/navigating-data-intensive-innovation-the-transition-from-research-data-management-to-research-data-governance","authors":[{"name":"Andrea
+        Chiarelli","url":"https://orcid.org/0000-0001-7336-8330"}],"blog":{"category":"humanities","description":"The
+        community blog for all things Open Research.","feed_url":"https://upstream.force11.org/atom-complete/","generator":"Ghost","home_page_url":"https://upstream.force11.org","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"upstream","status":"active","title":"Upstream","updated_at":1699378833},"blog_name":"Upstream","blog_slug":"upstream","doi":"https://doi.org/10.54900/qxbkv-rth08","guid":"6479cd0251698604a68d4b33","id":"d5bea9a2-5136-4ef1-8a73-0490aabd8b14","image":"https://upstream.force11.org/content/images/2023/06/alina-grubnyak-ZiQkhI7417A-unsplash.jpg","indexed":false,"indexed_at":1699197886,"language":"en","published_at":1686038449,"reference":[],"relationships":[],"summary":"The
+        exponential surge in research data, coupled with the advent of cutting-edge
+        computational tools, is ushering in an era of unprecedented opportunities
+        for research performing organisations. However, with many still in the process
+        of adopting basic research data management practices and support mechanisms,
+        the current state of play is concerning.","tags":["Thought Pieces"],"title":"Navigating
+        data-intensive innovation: The transition from research data management to
+        research data governance","updated_at":1699304092,"url":"https://upstream.force11.org/navigating-data-intensive-innovation-the-transition-from-research-data-management-to-research-data-governance"},{"archive_url":"https://wayback.archive-it.org/22124/20231105103706/https://upstream.force11.org/flowcharts-from-the-f11-cope-data-publishing-ethics-working-group","authors":[{"name":"Iratxe
+        Puebla","url":"https://orcid.org/0000-0003-1258-0746"}],"blog":{"category":"humanities","description":"The
+        community blog for all things Open Research.","feed_url":"https://upstream.force11.org/atom-complete/","generator":"Ghost","home_page_url":"https://upstream.force11.org","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"upstream","status":"active","title":"Upstream","updated_at":1699378833},"blog_name":"Upstream","blog_slug":"upstream","doi":"https://doi.org/10.54900/8ty1h-b7t22","guid":"64932cf93cf1043a4d8b0425","id":"0d86b023-1425-450e-a641-a3e5cc25544b","image":"https://upstream.force11.org/content/images/2023/06/Screen-Shot-2023-06-26-at-11.33.11-AM.png","indexed":false,"indexed_at":1699194850,"language":"en","published_at":1687852853,"reference":[],"relationships":[],"summary":"Recognizing
+        the need for dialogue on best practices around ethical challenges in data
+        publication, the FORCE11 Research Data Publication Ethics Working Group started
+        in early 2021 as a multi-stakeholder community effort involving representatives
+        of data repositories, journals, researchers, institutional research integrity
+        officers and libraries.","tags":["Thought Pieces"],"title":"Announcing new
+        resources from the FORCE11-COPE Research Data Publishing Ethics Working Group:
+        flowcharts!","updated_at":1699304063,"url":"https://upstream.force11.org/flowcharts-from-the-f11-cope-data-publishing-ethics-working-group"},{"archive_url":"https://wayback.archive-it.org/22124/20231105103706/https://upstream.force11.org/fairer-future-for-open-science-choosing-community-over-commercialization-with-equitable-article-processing-charges","authors":[{"name":"Uttkarsha
+        Bhosale","url":"https://orcid.org/0000-0002-4189-8975"},{"name":"Riya Thomas","url":"https://orcid.org/0000-0002-8720-4051"},{"name":"Dr.
+        Gayatri Phadke","url":"https://orcid.org/0000-0003-2206-0031"},{"name":"Anupama
+        Kapadia"}],"blog":{"category":"humanities","description":"The community blog
+        for all things Open Research.","feed_url":"https://upstream.force11.org/atom-complete/","generator":"Ghost","home_page_url":"https://upstream.force11.org","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"upstream","status":"active","title":"Upstream","updated_at":1699378833},"blog_name":"Upstream","blog_slug":"upstream","doi":"https://doi.org/10.54900/ra7z7-q2p46","guid":"6493e4be3cf1043a4d8b045b","id":"271749ff-66df-495a-893b-4bdc73ccc0cd","image":"https://upstream.force11.org/content/images/2023/06/standard-quality-control-collage-concept--1-.jpg","indexed":false,"indexed_at":1699194321,"language":"en","published_at":1688475577,"reference":[],"relationships":[],"summary":"The
+        open access (OA) movement has undoubtedly revolutionized the accessibility
+        of scholarly research, aiming to make knowledge freely available to all. While
+        many countries have embraced OA publishing with supportive policies, a persistent
+        obstacle remains\u2014article processing charges (APCs). These charges/fees
+        have led to a debate within the academic community, questioning whether they
+        align with the best interests of open science.","tags":["Thought Pieces","Original
+        Research"],"title":"A Fairer Future for Open Science: Choosing community over
+        commercialization with equitable article processing charges","updated_at":1699304052,"url":"https://upstream.force11.org/fairer-future-for-open-science-choosing-community-over-commercialization-with-equitable-article-processing-charges"},{"archive_url":"https://wayback.archive-it.org/22096/20231101172748/https://blog.front-matter.io/posts/rogue-scholar-blogs-are-now-searchable","authors":[{"name":"Martin
+        Fenner","url":"https://orcid.org/0000-0003-1419-2405"}],"blog":{"category":"computerAndInformationSciences","description":"The
+        Front Matter Blog covers the intersection of science and technology since
+        2007.","feed_url":"https://blog.front-matter.io/atom-complete/","generator":"Ghost","home_page_url":"https://blog.front-matter.io","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"front_matter","status":"active","title":"Front
+        Matter","updated_at":1699181519},"blog_name":"Front Matter","blog_slug":"front_matter","doi":"https://doi.org/10.53731/j4m27-bdw69","guid":"6544c3a43d863800019a5eec","id":"db56ed1f-6430-4418-b4a5-afa6338cf318","image":"https://images.unsplash.com/photo-1473163928189-364b2c4e1135?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE1fHxzZWFyY2glMjBrZXlzfGVufDB8fHx8MTY5OTE4MTQ2NHww&ixlib=rb-4.0.3&q=80&w=2000","indexed":false,"indexed_at":1699118710,"language":"en","published_at":1699009062,"reference":[],"relationships":[],"summary":"With
+        an update launched yesterday, all blogs that participate in the Rogue Scholar
+        science blog archive are now searchable by blog title, description, language,
+        blogging platform, category (scientific field using the OECD Fields of Science
+        and Technology), and ISSN.","tags":["News"],"title":"Rogue Scholar blogs are
+        now searchable","updated_at":1699181519,"url":"https://blog.front-matter.io/posts/rogue-scholar-blogs-are-now-searchable"},{"archive_url":null,"authors":[{"name":"Kim
+        Hartley"},{"name":"Michelle Barker"}],"blog":{"category":"computerAndInformationSciences","description":null,"feed_url":"https://www.researchsoft.org/feed.xml","generator":"Hugo","home_page_url":"https://researchsoft.org/","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"researchsoft","status":"active","title":"Research
+        Software Alliance","updated_at":1699160484},"blog_name":"Research Software
+        Alliance","blog_slug":"researchsoft","doi":"https://doi.org/10.59350/kjwtp-3yg06","guid":"tag:researchsoft.org,2023:/blog/2023-10/","id":"092b69ee-5f4e-4449-9fdb-34329c8d1444","image":"https://researchsoft.org/blog/2023-10/IMG_3080-1440x1080.jpg","indexed":false,"indexed_at":1698568390,"language":"en","published_at":1698105600,"reference":[],"relationships":[],"summary":"October
+        2023  Authors: Kim Hartley and Michelle Barker  We are proud to report that
+        the second International Research Software Funders Workshop, co-hosted by
+        the Digital Research Alliance of Canada (the Alliance) and the Research Software
+        Alliance (ReSA) from 18-20 September was a great success.","tags":[],"title":"Investing
+        in People: Anticipating the Future of Research Software","updated_at":1699160484,"url":"https://researchsoft.org/blog/2023-10"},{"archive_url":"https://wayback.archive-it.org/22135/20231101173016/https://irights.info/artikel/20-jahre-berliner-erklaerung-open-access-berlin-brandenburg/32078","authors":[{"name":"Georg
+        Fischer"}],"blog":{"category":"law","description":"Urheberrecht und kreatives
+        Schaffen in der digitalen Welt","feed_url":"https://irights.info/feed/atom","generator":"WordPress","home_page_url":"https://irights.info/","language":"de","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"irights","status":"active","title":"iRights.info","updated_at":1698917891},"blog_name":"iRights.info","blog_slug":"irights","doi":"https://doi.org/10.59350/6mhvf-28f30","guid":"https://irights.info/?post_type=custom_artikel&p=32078","id":"c85a507c-9125-40a1-9dc2-da10129b57c6","image":"https://irights.info/wp-content/uploads/2023/11/IMG_20231024_1601265362-490x254.jpg","indexed":false,"indexed_at":1698909349,"language":"de","published_at":1698908451,"reference":[],"relationships":[],"summary":"Open
+        Access f\u00fcr \u00f6ffentliche Forschung und Kultur: Zwei Jahrzehnte ist
+        es schon her, dass sich zahlreiche Organisationen in der <em>Berliner Erkl\u00e4rung</em>
+        daf\u00fcr aussprachen. Wie weit ist die \u00d6ffnung tats\u00e4chlich gekommen?
+        Und was gilt es weiterhin zu tun? Spannende Fragen, die Berliner und Brandenburger
+        Vertreter*innen aus Wissenschaft und Kultur letzte Woche diskutierten.","tags":["Gesellschaft
+        + Kunst","Museen + Archive","Urheberrecht","Wissen + Open Access","Wissenschaft"],"title":"20
+        Jahre Berliner Erkl\u00e4rung f\u00fcr Open Access: Wie ist die Lage in Berlin
+        und Brandenburg?","updated_at":1698917891,"url":"https://irights.info/artikel/20-jahre-berliner-erklaerung-open-access-berlin-brandenburg/32078"},{"archive_url":"https://wayback.archive-it.org/22135/20231101173016/https://irights.info/artikel/urheberrecht-schule-unterrichtsschranke-%C2%A760a-urhg/32073","authors":[{"name":"Till
+        Kreutzer"}],"blog":{"category":"law","description":"Urheberrecht und kreatives
+        Schaffen in der digitalen Welt","feed_url":"https://irights.info/feed/atom","generator":"WordPress","home_page_url":"https://irights.info/","language":"de","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"irights","status":"active","title":"iRights.info","updated_at":1698917891},"blog_name":"iRights.info","blog_slug":"irights","doi":"https://doi.org/10.59350/ekr0w-r5r66","guid":"https://irights.info/?post_type=custom_artikel&p=32073","id":"fc382624-1e55-48df-a09b-853674644716","image":"https://irights.info/wp-content/uploads/2023/09/Schule-150x213.png","indexed":false,"indexed_at":1698214609,"language":"de","published_at":1698213654,"reference":[],"relationships":[],"summary":"Das
+        Urheberrecht enth\u00e4lt Ausnahmen, die die Arbeit in Bildungseinrichtungen
+        leichter machen. Eine davon ist die sogenannte Unterrichtsschranke (\u00a7
+        60a UrhG). iRights.info erkl\u00e4rt die Regelung und gibt Tipps f\u00fcr
+        die Praxis. Die Unterrichtsschranke erleichtert es, urheberrechtlich gesch\u00fctztes
+        Fremdmaterial zu Bildungszwecken zu nutzen.","tags":["Bildung + OER","Grundwissen","Urheberrecht","Schrankenbestimmungen","Schule"],"title":"Urheberrecht
+        in Schulen: Welche Nutzungen die Unterrichtsschranke erlaubt","updated_at":1698908961,"url":"https://irights.info/artikel/urheberrecht-schule-unterrichtsschranke-%C2%A760a-urhg/32073"},{"archive_url":"https://wayback.archive-it.org/22135/20231101173016/https://irights.info/artikel/urheberrecht-schule-wissenschaft-bmbf/32021","authors":[{"name":"Redaktion
+        iRights.info"}],"blog":{"category":"law","description":"Urheberrecht und kreatives
+        Schaffen in der digitalen Welt","feed_url":"https://irights.info/feed/atom","generator":"WordPress","home_page_url":"https://irights.info/","language":"de","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"irights","status":"active","title":"iRights.info","updated_at":1698917891},"blog_name":"iRights.info","blog_slug":"irights","doi":"https://doi.org/10.59350/mbc9d-jet17","guid":"https://irights.info/?post_type=custom_artikel&p=32021","id":"f0a7cab6-67dd-48f2-b8be-f59f91254e07","image":"https://irights.info/wp-content/uploads/2023/09/Schule-150x213.png","indexed":false,"indexed_at":1698228321,"language":"de","published_at":1693829213,"reference":[],"relationships":[],"summary":"Darf
+        ich meinen Unterricht aufzeichen? Wem geh\u00f6ren die Rechte an meinem Aufsatz?
+        Und wie war das nochmal mit dem Zitatrecht? In Schule und Wissenschaft stellen
+        sich vielf\u00e4ltige Fragen rund ums Urheberrecht. Zwei neue Handreichungen
+        des BMBF helfen mit leicht verst\u00e4ndlichen und praxisnahen Antworten,
+        konzipiert und erarbeitet von Till Kreutzer und Georg Fischer.","tags":["Autor
+        + Text","Creative Commons + Lizenzen","Urheberrecht","Wissen + Open Access","Wissenschaft"],"title":"Urheberrecht
+        in Schule und Wissenschaft: Zwei neue Handreichungen unterst\u00fctzen bei
+        Alltagsfragen","updated_at":1698677589,"url":"https://irights.info/artikel/urheberrecht-schule-wissenschaft-bmbf/32021"},{"archive_url":"https://wayback.archive-it.org/22125/20231105110316/https://opencitations.hypotheses.org/3488","authors":[{"name":"Chiara
+        Di Giambattista"}],"blog":{"category":"socialSciences","description":"The
+        blog of the OpenCitations Infrastructure","feed_url":"https://opencitations.hypotheses.org/feed/atom/","generator":"WordPress","home_page_url":"https://opencitations.hypotheses.org","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"opencitations","status":"active","title":"OpenCitations
+        blog","updated_at":1698658626},"blog_name":"OpenCitations blog","blog_slug":"opencitations","doi":"https://doi.org/10.59350/canw4-3xd10","guid":"https://opencitations.hypotheses.org/?p=3488","id":"77e770e0-74be-46f4-b800-9f8dc6435741","image":null,"indexed":false,"indexed_at":1698180833,"language":"en","published_at":1697558939,"reference":[],"relationships":[],"summary":"In
+        OpenCitations, we like to define our infrastructure organization as \u201ccommunity-based\u201d
+        and \u201ccommunity-driven\u201d, and we&nbsp;really&nbsp;mean it. The support
+        coming from the number of academic libraries and consortia coming after&nbsp;OpenCitations\u2019
+        involvement in the 2nd SCOSS funding cycle&nbsp;has made it possible, starting
+        from 2020, to make OpenCitations develop from a small university project based
+        on time-limited grant incomes to being an","tags":["Open Abstracts","Open
+        Access","Open Citations","Open Scholarship","Open Science"],"title":"OpenCitations
+        needs you: support the change in research practices","updated_at":1698658626,"url":"https://opencitations.hypotheses.org/3488"},{"archive_url":"https://wayback.archive-it.org/22153/20231105213934/https://svpow.com/2023/10/28/facial-hair-of-the-mesozoic-bob-nicholls-edition-part-2-only-ten-years-late","authors":[{"name":"Mike
+        Taylor"}],"blog":{"category":"earthAndRelatedEnvironmentalSciences","description":"SV-POW!  ...  All
+        sauropod vertebrae, except when we''re talking about Open Access","feed_url":"https://svpow.com/feed/atom/","generator":"WordPress.com","home_page_url":"https://svpow.com","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"svpow","status":"active","title":"Sauropod
+        Vertebra Picture of the Week","updated_at":1698530723},"blog_name":"Sauropod
+        Vertebra Picture of the Week","blog_slug":"svpow","doi":"https://doi.org/10.59350/tfpdy-zkt79","guid":"https://svpow.com/?p=21347","id":"eec545af-44fd-4663-bcab-75d5c8de8bb1","image":"https://svpow.files.wordpress.com/2023/10/bob-nicholls-sideburns.jpeg?w=480&h=646","indexed":false,"indexed_at":1698526380,"language":"en","published_at":1698525657,"reference":[],"relationships":[],"summary":"Back
+        in 2013, we showed you Bob Nicholls\u2019 beautiful sketch \u201cThe Giant
+        &amp; Company\u201d, featuring a giant Apatosaurus with a shaggy beard running
+        along its neck.","tags":["Art","Bob Nicholls","Diplodocids","Life Restorations","Speculation"],"title":"Facial
+        hair of the Mesozoic: Bob Nicholls edition, part 2 (only ten years late)","updated_at":1698530723,"url":"https://svpow.com/2023/10/28/facial-hair-of-the-mesozoic-bob-nicholls-edition-part-2-only-ten-years-late"},{"archive_url":"https://wayback.archive-it.org/22096/20231101172748/https://blog.front-matter.io/posts/using-twitter-at-the-asco-conference","authors":[{"name":"Martin
+        Fenner","url":"https://orcid.org/0000-0003-1419-2405"}],"blog":{"category":"computerAndInformationSciences","description":"The
+        Front Matter Blog covers the intersection of science and technology since
+        2007.","feed_url":"https://blog.front-matter.io/atom-complete/","generator":"Ghost","home_page_url":"https://blog.front-matter.io","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"front_matter","status":"active","title":"Front
+        Matter","updated_at":1699181519},"blog_name":"Front Matter","blog_slug":"front_matter","doi":"https://doi.org/10.53731/r294649-6f79289-8cw55","guid":"62d42bbd41e317003df48e00","id":"b8f01608-05af-41a8-aa71-7238ddea1677","image":"https://blog.front-matter.io/content/images/2023/10/4691440146_bcaea61ee0-1.jpg","indexed":null,"indexed_at":1689007007,"language":"en","published_at":1276560000,"reference":[],"relationships":[],"summary":"Last
+        week I attended the annual meeting of the American Society of Clinical Oncology
+        (ASCO) in Chicago. For my work it is the most important scientific meeting
+        of the year, and it is also by far the biggest with more than 30.000 participants.
+        Blogging is a great way to report from conferences, and for me <em>FriendFeed</em>
+        is the best microblogging tool to do that.","tags":["Meeting Report"],"title":"Using
+        Twitter at the ASCO Conference","updated_at":1698521115,"url":"https://blog.front-matter.io/posts/using-twitter-at-the-asco-conference"},{"archive_url":"https://wayback.archive-it.org/22096/20231101172748/https://blog.front-matter.io/posts/what-is-scholarly-markdown","authors":[{"name":"Martin
+        Fenner","url":"https://orcid.org/0000-0003-1419-2405"}],"blog":{"category":"computerAndInformationSciences","description":"The
+        Front Matter Blog covers the intersection of science and technology since
+        2007.","feed_url":"https://blog.front-matter.io/atom-complete/","generator":"Ghost","home_page_url":"https://blog.front-matter.io","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"front_matter","status":"active","title":"Front
+        Matter","updated_at":1699181519},"blog_name":"Front Matter","blog_slug":"front_matter","doi":"https://doi.org/10.53731/r294649-6f79289-8cw1c","guid":"62d42bbd41e317003df48d87","id":"3850bdcb-6858-4883-a9e9-b474d0bc6f45","image":"https://blog.front-matter.io/content/images/2022/08/DALL-E-2022-08-29-11.57.15---Edward-hopper-oil-painting-of-a-garden-gnome-with-an-umbrella-under-the-Golden-Gate-Bridge.png","indexed":null,"indexed_at":1689007007,"language":"en","published_at":1371489360,"reference":[],"relationships":[],"summary":"One
+        of the important discussions taking place at the Markdown for Science workshop
+        last weekend was about the definition of Scholarly Markdown.","tags":["Meeting
+        Report"],"title":"What is Scholarly Markdown?","updated_at":1698520325,"url":"https://blog.front-matter.io/posts/what-is-scholarly-markdown"},{"archive_url":null,"authors":[{"name":"Roderic
+        Page","url":"https://orcid.org/0000-0002-7101-9767"}],"blog":{"category":"computerAndInformationSciences","description":"Rants,
+        raves (and occasionally considered opinions) on phyloinformatics, taxonomy,
+        and biodiversity informatics.  For more ranty and less considered opinions,
+        see my <a href=\"https://twitter.com/rdmpage\">Twitter feed</a>.<br />ISSN
+        2051-8188. Written content on this site is licensed under a <a href=\"https://creativecommons.org/licenses/by/4.0/\">Creative
+        Commons Attribution 4.0 International license</a>.","feed_url":"https://iphylo.blogspot.com/feeds/posts/default","generator":"Blogger","home_page_url":"https://iphylo.blogspot.com/","language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","slug":"iphylo","status":"active","title":"iPhylo","updated_at":1698394696},"blog_name":"iPhylo","blog_slug":"iphylo","doi":"https://doi.org/10.59350/m59qn-22v52","guid":"tag:blogger.com,1999:blog-16081779.post-903668539491051583","id":"087fc7fc-c157-414a-a7b6-00503a55b521","image":"https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjaJx_5psYTAPfRLaomxACMxZ5Ant1peCHJixf0PeYP82k2uw9vOq4P2Q-HzSakV8q5aSmfqs0X_J_OJmnnhttknlwVYeEguQaxhk4fWi0lKvh_KzugoZWd_MjHmXcImkuMVbJPxXmwln6-Ah7iy4elXNGhfhmofrZbHrgcc3VC7E7lrVd05Utw/s72-c/Screenshot%202023-10-26%20at%2013.30.11.png","indexed":false,"indexed_at":1698333872,"language":"en","published_at":1698333060,"reference":[],"relationships":[],"summary":"This
+        blog post documents my attempts to create links between two major resources
+        for plant taxonomy: JSTOR\u2019s Global Plants and GBIF, specifically between
+        type specimens in JSTOR and the corresponding occurrence in GBIF. The TL;DR
+        is that I have tried to map 1,354,861 records for type specimens from JSTOR
+        to the equivalent record in GBIF, and managed to find 903,945 (67%) matches.
+        Why do this? Why do this?","tags":[],"title":"Where are the plant type specimens?
+        Mapping JSTOR Global Plants to GBIF","updated_at":1698394696,"url":"https://iphylo.blogspot.com/2023/10/where-are-plant-type-specimens-mapping.html"}]
+
+        '
+  recorded_at: Wed, 08 Nov 2023 10:07:55 GMT
+recorded_with: VCR 6.2.0
