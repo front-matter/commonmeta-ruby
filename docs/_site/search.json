@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html#supported-metadata-formats",
+    "href": "index.html#supported-metadata-formats",
+    "title": "commonmeta-ruby",
+    "section": "Supported Metadata Formats",
+    "text": "Supported Metadata Formats\ncommonmeta-ruby reads and/or writes these metadata formats:\n\n\n\nFormat\nName\nContent Type\nRead\nWrite\n\n\n\n\nCommonmeta\ncommonmeta\napplication/vnd.commonmeta+json\nyes\nyes\n\n\nCrossRef Unixref XML\ncrossref\napplication/vnd.crossref.unixref+xml\nyes\nyes\n\n\nCrossref\ncrossref\napplication/vnd.crossref+json\nyes\nno\n\n\nDataCite\ndatacite\napplication/vnd.datacite.datacite+json\nyes\nyes\n\n\nSchema.org (in JSON-LD)\nschema_org\napplication/vnd.schemaorg.ld+json\nyes\nyes\n\n\nRDF XML\nrdf_xml\napplication/rdf+xml\nno\nyes\n\n\nRDF Turtle\nturtle\ntext/turtle\nno\nyes\n\n\nCSL-JSON\ncsl\napplication/vnd.citationstyles.csl+json\nyes\nyes\n\n\nFormatted text citation\ncitation\ntext/x-bibliography\nno\nyes\n\n\nCodemeta\ncodemeta\napplication/vnd.codemeta.ld+json\nyes\nyes\n\n\nCitation File Format (CFF)\ncff\napplication/vnd.cff+yaml\nyes\nyes\n\n\nJATS\njats\napplication/vnd.jats+xml\nno\nyes\n\n\nCSV\ncsv\ntext/csv\nno\nyes\n\n\nBibTex\nbibtex\napplication/x-bibtex\nyes\nyes\n\n\nRIS\nris\napplication/x-research-info-systems\nyes\nyes"
+  },
+  {
+    "objectID": "index.html#installation",
+    "href": "index.html#installation",
+    "title": "commonmeta-ruby",
+    "section": "Installation",
+    "text": "Installation\nRequires Ruby 3.0 or later (Ruby 2.x has reached its end of life March 2023). Then add the following to your Gemfile to install the latest version:\ngem 'commonmeta-ruby'\nThen run bundle install to install into your environment.\nYou can also install the gem system-wide in the usual way:\ngem install commonmeta-ruby"
+  }
+]
