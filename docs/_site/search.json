@@ -1,16 +1,74 @@
 [
   {
-    "objectID": "index.html#supported-metadata-formats",
-    "href": "index.html#supported-metadata-formats",
-    "title": "commonmeta-ruby",
-    "section": "Supported Metadata Formats",
-    "text": "Supported Metadata Formats\ncommonmeta-ruby reads and/or writes these metadata formats:\n\n\n\nFormat\nName\nContent Type\nRead\nWrite\n\n\n\n\nCommonmeta\ncommonmeta\napplication/vnd.commonmeta+json\nyes\nyes\n\n\nCrossRef Unixref XML\ncrossref\napplication/vnd.crossref.unixref+xml\nyes\nyes\n\n\nCrossref\ncrossref\napplication/vnd.crossref+json\nyes\nno\n\n\nDataCite\ndatacite\napplication/vnd.datacite.datacite+json\nyes\nyes\n\n\nSchema.org (in JSON-LD)\nschema_org\napplication/vnd.schemaorg.ld+json\nyes\nyes\n\n\nRDF XML\nrdf_xml\napplication/rdf+xml\nno\nyes\n\n\nRDF Turtle\nturtle\ntext/turtle\nno\nyes\n\n\nCSL-JSON\ncsl\napplication/vnd.citationstyles.csl+json\nyes\nyes\n\n\nFormatted text citation\ncitation\ntext/x-bibliography\nno\nyes\n\n\nCodemeta\ncodemeta\napplication/vnd.codemeta.ld+json\nyes\nyes\n\n\nCitation File Format (CFF)\ncff\napplication/vnd.cff+yaml\nyes\nyes\n\n\nJATS\njats\napplication/vnd.jats+xml\nno\nyes\n\n\nCSV\ncsv\ntext/csv\nno\nyes\n\n\nBibTex\nbibtex\napplication/x-bibtex\nyes\nyes\n\n\nRIS\nris\napplication/x-research-info-systems\nyes\nyes"
+    "objectID": "writers/bibtex_writer.html",
+    "href": "writers/bibtex_writer.html",
+    "title": "BibTex Writer",
+    "section": "",
+    "text": "As with all commonmeta-ruby notebooks, we start by fetching metadata, in this example a journal article via its Crossref DOI, and then convert it to the commonmeta format.",
+    "crumbs": [
+      "Writers",
+      "BibTex Writer"
+    ]
+  },
+  {
+    "objectID": "writers/bibtex_writer.html#fetch-the-metadata",
+    "href": "writers/bibtex_writer.html#fetch-the-metadata",
+    "title": "BibTex Writer",
+    "section": "",
+    "text": "As with all commonmeta-ruby notebooks, we start by fetching metadata, in this example a journal article via its Crossref DOI, and then convert it to the commonmeta format.",
+    "crumbs": [
+      "Writers",
+      "BibTex Writer"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Guide",
+    "section": "",
+    "text": "commonmeta-ruby is a Ruby gem and command-line utility for the conversion of scholarly metadata, including schema.org. Based on the bolognese gem, but using commonmeta as the intermediate format, and supporting additional metadata formats. A Python version is available at commonmeta-py.",
+    "crumbs": [
+      "Guide"
+    ]
   },
   {
     "objectID": "index.html#installation",
     "href": "index.html#installation",
-    "title": "commonmeta-ruby",
+    "title": "Guide",
     "section": "Installation",
-    "text": "Installation\nRequires Ruby 3.0 or later (Ruby 2.x has reached its end of life March 2023). Then add the following to your Gemfile to install the latest version:\ngem 'commonmeta-ruby'\nThen run bundle install to install into your environment.\nYou can also install the gem system-wide in the usual way:\ngem install commonmeta-ruby"
+    "text": "Installation\nRequires Ruby 3.0 or later (Ruby 2.x has reached its end of life March 2023). Then add the following to your Gemfile to install the latest version:\ngem 'commonmeta-ruby'\nThen run bundle install to install into your environment.\nYou can also install the gem system-wide in the usual way:\ngem install commonmeta-ruby",
+    "crumbs": [
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#commands",
+    "href": "index.html#commands",
+    "title": "Guide",
+    "section": "Commands",
+    "text": "Commands\nRun the commonmeta command with either an identifier (DOI or URL) or filename:\ncommonmeta https://doi.org/10.7554/elife.01567\ncommonmeta example.xml\ncommonmeta can read BibTeX files (file extension .bib), RIS files (file extension .ris), Crossref files (file extension .xml), DataCite files and CSL-JSON files.\nThe input format (e.g. Crossref or BibteX) is automatically detected, but you can also provide the format with the --from or -f flag. The supported input formats are listed in the table above.\nThe output format is determined by the --to or -t flag, and defaults to schema_org.\nShow all commands with commonmeta help:\nCommands:\n  commonmeta                 # convert metadata\n  commonmeta --version, -v   # print the version\n  commonmeta help [COMMAND]  # Describe available commands or one specific command",
+    "crumbs": [
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#errors",
+    "href": "index.html#errors",
+    "title": "Guide",
+    "section": "Errors",
+    "text": "Errors\nErrors are returned to STDOUT.\nAll input is validated against the commonmeta JSON schema.",
+    "crumbs": [
+      "Guide"
+    ]
+  },
+  {
+    "objectID": "index.html#supported-metadata-formats",
+    "href": "index.html#supported-metadata-formats",
+    "title": "Guide",
+    "section": "Supported Metadata Formats",
+    "text": "Supported Metadata Formats\ncommonmeta-ruby reads and/or writes these metadata formats:\n\n\n\nFormat\nName\nContent Type\nRead\nWrite\n\n\n\n\nCommonmeta\ncommonmeta\napplication/vnd.commonmeta+json\nyes\nyes\n\n\nCrossRef Unixref XML\ncrossref\napplication/vnd.crossref.unixref+xml\nyes\nyes\n\n\nCrossref\ncrossref\napplication/vnd.crossref+json\nyes\nno\n\n\nDataCite\ndatacite\napplication/vnd.datacite.datacite+json\nyes\nyes\n\n\nSchema.org (in JSON-LD)\nschema_org\napplication/vnd.schemaorg.ld+json\nyes\nyes\n\n\nRDF XML\nrdf_xml\napplication/rdf+xml\nno\nyes\n\n\nRDF Turtle\nturtle\ntext/turtle\nno\nyes\n\n\nCSL-JSON\ncsl\napplication/vnd.citationstyles.csl+json\nyes\nyes\n\n\nFormatted text citation\ncitation\ntext/x-bibliography\nno\nyes\n\n\nCodemeta\ncodemeta\napplication/vnd.codemeta.ld+json\nyes\nyes\n\n\nCitation File Format (CFF)\ncff\napplication/vnd.cff+yaml\nyes\nyes\n\n\nJATS\njats\napplication/vnd.jats+xml\nno\nyes\n\n\nCSV\ncsv\ntext/csv\nno\nyes\n\n\nBibTex\nbibtex\napplication/x-bibtex\nyes\nyes\n\n\nRIS\nris\napplication/x-research-info-systems\nyes\nyes",
+    "crumbs": [
+      "Guide"
+    ]
   }
 ]

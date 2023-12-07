@@ -1,12 +1,64 @@
+---
+title: Guide
+---
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5785519.svg)](https://doi.org/10.5281/zenodo.5785519)
 [![Gem Version](https://badge.fury.io/rb/commonmeta-ruby.svg)](https://badge.fury.io/rb/commonmeta-ruby)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=front-matter_commonmeta-ruby&metric=coverage)](https://sonarcloud.io/summary/new_code?id=front-matter_commonmeta-ruby)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=front-matter_commonmeta-ruby&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=front-matter_commonmeta-ruby)
 ![GitHub](https://img.shields.io/github/license/front-matter/commonmeta-ruby?logo=MIT)
 
-# commonmeta-ruby
+commonmeta-ruby is a Ruby gem and command-line utility for the conversion of scholarly metadata, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) gem, but using [commonmeta](https://commonmeta.org) as the intermediate format, and supporting additional metadata formats. A Python version is available at [commonmeta-py](https://github.com/front-matter/commonmeta-py).
 
-Ruby gem and command-line utility for the conversion of scholarly metadata, including [schema.org](https://schema.org). Based on the [bolognese](https://github.com/datacite/bolognese) gem, but using [commonmeta](https://commonmeta.org) as the intermediate format, and supporting additional metadata formats. A Python version is available at [commonmeta-py](https://github.com/front-matter/commonmeta-py).
+## Installation
+
+Requires Ruby 3.0 or later (Ruby 2.x [has reached its end of life](https://endoflife.date/ruby) March 2023). Then add the following to your `Gemfile` to install the
+latest version:
+
+```
+gem 'commonmeta-ruby'
+```
+
+Then run `bundle install` to install into your environment.
+
+You can also install the gem system-wide in the usual way:
+
+```
+gem install commonmeta-ruby
+```
+
+## Commands
+
+Run the `commonmeta` command with either an identifier (DOI or URL) or filename:
+
+```
+commonmeta https://doi.org/10.7554/elife.01567
+```
+
+```
+commonmeta example.xml
+```
+
+commonmeta can read BibTeX files (file extension `.bib`), RIS files (file extension `.ris`), Crossref files (file extension `.xml`), DataCite files and CSL-JSON files.
+
+The input format (e.g. Crossref or BibteX) is automatically detected, but
+you can also provide the format with the `--from` or `-f` flag. The supported
+input formats are listed in the table above.
+
+The output format is determined by the `--to` or `-t` flag, and defaults to `schema_org`.
+
+Show all commands with `commonmeta help`:
+
+```
+Commands:
+  commonmeta                 # convert metadata
+  commonmeta --version, -v   # print the version
+  commonmeta help [COMMAND]  # Describe available commands or one specific command
+```
+
+## Errors
+
+Errors are returned to STDOUT.
+
+All input is validated against the commonmeta JSON schema.
 
 ## Supported Metadata Formats
 
@@ -29,20 +81,3 @@ commonmeta-ruby reads and/or writes these metadata formats:
 | [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) | csv | text/csv | no | yes |
 | [BibTex](http://en.wikipedia.org/wiki/BibTeX) | bibtex | application/x-bibtex | yes | yes |
 | [RIS](http://en.wikipedia.org/wiki/RIS_(file_format)) | ris | application/x-research-info-systems | yes | yes |
-
-## Installation
-
-Requires Ruby 3.0 or later (Ruby 2.x [has reached its end of life](https://endoflife.date/ruby) March 2023). Then add the following to your `Gemfile` to install the
-latest version:
-
-```ruby
-gem 'commonmeta-ruby'
-```
-
-Then run `bundle install` to install into your environment.
-
-You can also install the gem system-wide in the usual way:
-
-```bash
-gem install commonmeta-ruby
-```
