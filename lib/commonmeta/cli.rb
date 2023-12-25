@@ -71,8 +71,8 @@ module Commonmeta
 
     desc "", "encode_by_blog"
 
-    def encode_by_blog(blog_id)
-      prefix = get_doi_prefix_by_blog_id(blog_id)
+    def encode_by_blog(blog_slug)
+      prefix = get_doi_prefix_by_blog_slug(blog_slug)
       return nil unless prefix.present?
       puts encode_doi(prefix)
     end
@@ -115,10 +115,10 @@ module Commonmeta
       puts get_json_feed_by_blog(id)
     end
 
-    desc "", "json_feed_blog_id"
+    desc "", "json_feed_blog_slug"
 
-    def json_feed_blog_id(id)
-      puts get_json_feed_blog_id(id)
+    def json_feed_blog_slug(slug)
+      puts get_json_feed_blog_slug(slug)
     end
 
     desc "", "update_ghost_post"

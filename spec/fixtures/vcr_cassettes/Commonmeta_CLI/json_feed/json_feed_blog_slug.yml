@@ -1,0 +1,71 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.rogue-scholar.org/posts/01a92f9a-f8e0-442b-86e2-11530d9d5635
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.rogue-scholar.org
+      User-Agent:
+      - http.rb/5.1.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '3313'
+      Ratelimit-Limit:
+      - '15'
+      Ratelimit-Remaining:
+      - '14'
+      Ratelimit-Reset:
+      - '3'
+      Date:
+      - Mon, 25 Dec 2023 10:38:50 GMT
+      Server:
+      - Fly/9e37a80f (2023-12-22)
+      Via:
+      - 1.1 fly.io
+      Fly-Request-Id:
+      - 01HJG8WMFGNRM35PXT9HSQJYJH-fra
+    body:
+      encoding: UTF-8
+      string: '{"archive_url":"https://wayback.archive-it.org/22123/20231101171300/https://eve.gd/2017/05/07/an-important-note-if-you-have-a-lenovo-g580","authors":[{"name":"Martin
+        Paul Eve","url":"https://orcid.org/0000-0002-5589-8511"}],"blog":{"api":false,"archive_prefix":"https://wayback.archive-it.org/22123/20231101171300/","authors":[{"name":"Martin
+        Paul Eve","url":null}],"backlog":0,"canonical_url":null,"category":"languagesAndLiterature","created_at":1690329600,"current_feed_url":"https://eve.gd/feed/feed.atom","description":null,"favicon":"https://eve.gd/favicon.png","feed_format":"application/atom+xml","feed_url":"https://eve.gd/feed_all.xml","filter":null,"funding":null,"generator":"Jekyll","generator_raw":"Jekyll","home_page_url":"https://eve.gd","id":"z4b9d78","indexed":false,"issn":null,"language":"en","license":"https://creativecommons.org/licenses/by/4.0/legalcode","plan":"Team","prefix":"10.59348","relative_url":"blog","secure":true,"slug":"eve","status":"active","title":"Martin
+        Paul Eve","updated_at":1702425600,"use_api":null,"use_mastodon":false,"user_id":"eb3f6a26-3e38-42ad-b752-250eb2c0bf89","version":"https://jsonfeed.org/version/1.1"},"blog_name":"Martin
+        Paul Eve","blog_slug":"eve","content_text":"The Lenovo G580 comes with Windows
+        8. It is possible to permanently lock\nyourself out of the operating system
+        if you begin with a Microsoft\naccount and migrate this to a local account.
+        Further, you won''t be able\nto rescue the system since *it is impossible
+        to enter the BIOS setup in\nthe machine''s default state if you cannot login
+        to Windows*.\n\nTo fix this:\n\n1.  Disable \"fast boot\" mode in Windows
+        8. You can do this in \"Power\n    Settings\". If you don''t do this, you
+        can''t modify the Windows disk\n    partition when booting from a recovery
+        USB.\n2.  [Update your\n    BIOS](https://download.lenovo.com/consumer/mobiles/62cn97ww_64.exe).\n    Do
+        it now or you won''t be able to unless you can still login to\n    Windows
+        8.\n3.  Go into the BIOS (shutdown the machine then press the small button\n    next
+        to the power button and select \"BIOS setup\"). Then, set an\n    administrator
+        password in the BIOS settings. Then, \"disable secure\n    boot\". This will
+        allow you to boot from a recovery USB stick such as\n    Kali or Ubuntu.\n\nUrgh.
+        A Catch-22 where Microsoft Windows corrupted a login (thanks,\nMicrosoft)
+        and a hardware defect stops you booting into a recovery\nmedium (thanks, Lenovo).\n\n[An
+        important note if you have a Lenovo\nG580](https://eve.gd/2017/05/07/an-important-note-if-you-have-a-lenovo-g580/)\nwas
+        originally published by Martin Paul Eve at [Martin Paul\nEve](https://eve.gd)
+        on May 07, 2017.\n","doi":"https://doi.org/10.59348/dmq66-f5d26","guid":"https://eve.gd/2017/05/07/an-important-note-if-you-have-a-lenovo-g580","id":"01a92f9a-f8e0-442b-86e2-11530d9d5635","image":null,"indexed_at":1696162656,"language":"en","published_at":1494172558,"reference":[],"relationships":[],"summary":"The
+        Lenovo G580 comes with Windows 8. It is possible to permanently lock yourself
+        out of the operating system if you begin with a Microsoft account and migrate
+        this to a local account.\n","tags":[],"title":"An important note if you have
+        a Lenovo G580","updated_at":1494115200,"url":"https://eve.gd/2017/05/07/an-important-note-if-you-have-a-lenovo-g580"}
+
+        '
+  recorded_at: Mon, 25 Dec 2023 10:38:50 GMT
+recorded_with: VCR 6.2.0

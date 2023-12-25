@@ -212,8 +212,8 @@ module Commonmeta
         blog["items"].map { |item| item["id"] }.first
       end
 
-      def get_json_feed_blog_id(id)
-        # get JSON Feed item by id and return blog id
+      def get_json_feed_blog_slug(id)
+        # get JSON Feed item by id and return blog slug
 
         url = json_feed_item_by_id_url(id)
         response = HTTP.get(url)
@@ -223,10 +223,10 @@ module Commonmeta
         post.to_h.dig("blog", "slug")
       end
 
-      def get_doi_prefix_by_blog_id(blog_id)
+      def get_doi_prefix_by_blog_slug(blog_slug)
         # for generating a random DOI.
 
-        url = json_feed_by_blog_url(blog_id)
+        url = json_feed_by_blog_url(blog_slug)
         response = HTTP.get(url)
         return nil unless response.status.success?
 

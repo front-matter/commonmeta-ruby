@@ -379,9 +379,9 @@ describe Commonmeta::CLI do
       expect { subject.json_feed_by_blog input }.to output(/3749f8c4-1ba7-4e51-9dd6-9d9551ad451a/).to_stdout
     end
 
-    it "json_feed_blog_id" do
+    it "json_feed_blog_slug" do
       input = "01a92f9a-f8e0-442b-86e2-11530d9d5635"
-      expect { subject.json_feed_blog_id input }.to output(/eve/).to_stdout
+      expect { subject.json_feed_blog_slug input }.to output(/eve/).to_stdout
     end
   end
 end
