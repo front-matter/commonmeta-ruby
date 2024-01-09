@@ -350,6 +350,8 @@ module Commonmeta
             xml.resource(url, "mime_type" => "text/html")
             if is_rogue_scholar_doi?(doi)
               Array.wrap(files).each do |file|
+                # Crossref schema currently doesn't support text/markdown
+                file["mimeType"] = "text/plain" if file["mimeType"] == "text/markdown"
                 xml.resource(file["url"], "mime_type" => file["mimeType"])
               end
             end
