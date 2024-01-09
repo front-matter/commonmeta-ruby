@@ -57,7 +57,7 @@ describe Commonmeta::Metadata, vcr: true do
                                                              "journal_article")
       expect(Array.wrap(crossref_xml.dig("contributors", "person_name")).length).to eq(6)
       expect(Array.wrap(crossref_xml.dig("contributors",
-                                         "person_name")).first).to eq("contributor_role"=>"author", "given_name"=>"Markus", "sequence"=>"first", "surname"=>"Ralser")
+                                         "person_name")).first).to eq("contributor_role" => "author", "given_name" => "Markus", "sequence" => "first", "surname" => "Ralser")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("Triose Phosphate Isomerase Deficiency Is Caused by Altered Dimerization–Not Catalytic Inactivity–of the Mutant Enzymes")
     end
@@ -232,6 +232,9 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Attempts at automating journal subject classification")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "5d14ffacb9ac4e20bdc0d9248df4e80d", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Humanities")
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource", 2)).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.54900/n6dnt-xpq48.pdf", "mime_type" => "application/pdf")
+    
     end
 
     it "json_feed_item with references" do
@@ -264,6 +267,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(crossref_xml.dig("citation_list", "citation").last).to eq("article_title" => "The Research Software Alliance (ReSA) and the community landscape", "cYear" => "2020", "doi" => "10.5281/zenodo.3699950", "key" => "ref11")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "954f81380ecd409087c5cef1297f1470", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Humanities")
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource", 2)).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.54900/zwm7q-vet94.pdf", "mime_type" => "application/pdf")
     end
 
     it "json_feed_item from rogue scholar with doi" do
@@ -277,7 +282,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.titles).to eq([{ "title" => "EU-Mitgliedstaaten betonen die Rolle von wissenschaftsgeleiteten Open-Access-Modellen jenseits von APCs" }])
       expect(subject.contributors.length).to eq(1)
       expect(subject.contributors.first).to eq("familyName" => "Pampel", "givenName" => "Heinz", "id" => "https://orcid.org/0000-0003-3334-2771", "type" => "Person", "contributorRoles" => ["Author"])
-      expect(subject.publisher).to eq("name"=>"wisspub.net")
+      expect(subject.publisher).to eq("name" => "wisspub.net")
       expect(subject.subjects).to eq([{ "subject" => "Social sciences" },
                                       { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
                                         "subject" => "FOS: Social sciences",
@@ -293,6 +298,8 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("EU-Mitgliedstaaten betonen die Rolle von wissenschaftsgeleiteten Open-Access-Modellen jenseits von APCs")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "1c57855813244493b8af84c49eabc52f", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Social sciences")
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource", 2)).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.59350/9ry27-7cz42.pdf", "mime_type" => "application/pdf")
     end
 
     it "json_feed_item from rogue scholar with organizational author" do
@@ -321,6 +328,8 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("KU Leuven supports ResearchEquals")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "5561f8e42ff14186a8d58dacb3afe414", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Social sciences")
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource", 2)).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.59350/9ry27-7cz42.pdf", "mime_type" => "application/pdf")
     end
 
     it "json_feed_item from rogue scholar with archived content" do
@@ -333,10 +342,10 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.type).to eq("Article")
       expect(subject.contributors.length).to eq(1)
       expect(subject.contributors.first).to eq("contributorRoles" => ["Author"],
-           "type" => "Person",
-           "familyName" => "Stocker",
-           "givenName" => "Markus",
-           "id" => "https://orcid.org/0000-0001-5492-3212")
+                                               "type" => "Person",
+                                               "familyName" => "Stocker",
+                                               "givenName" => "Markus",
+                                               "id" => "https://orcid.org/0000-0001-5492-3212")
       expect(subject.titles).to eq([{ "title" => "ORCID Integration Series: PANGAEA" }])
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
@@ -348,18 +357,20 @@ describe Commonmeta::Metadata, vcr: true do
                                         "subject" => "FOS: Computer and information sciences",
                                         "subjectScheme" => "Fields of Science and Technology (FOS)" }])
       expect(subject.language).to eq("en")
-      expect(subject.funding_references).to eq([{ "awardNumber" => "654039", "funderIdentifier" => "https://doi.org/10.13039/501100007601", "funderIdentifierType"=>"Crossref Funder ID", "funderName" => "European Union’s Horizon 2020 research and innovation programme" }])
+      expect(subject.funding_references).to eq([{ "awardNumber" => "654039", "funderIdentifier" => "https://doi.org/10.13039/501100007601", "funderIdentifierType" => "Crossref Funder ID", "funderName" => "European Union’s Horizon 2020 research and innovation programme" }])
       expect(subject.container).to eq("identifier" => "https://project-thor.eu", "identifierType" => "URL", "title" => "Project THOR", "type" => "Periodical")
       expect(subject.archive_locations).to eq(["Internet Archive"])
       # puts subject.crossref_xml
       crossref_xml = Hash.from_xml(subject.crossref_xml).dig("doi_batch", "body", "posted_content")
       expect(Array.wrap(crossref_xml.dig("contributors", "person_name")).length).to eq(1)
       expect(Array.wrap(crossref_xml.dig("contributors",
-                                         "person_name")).first).to eq("ORCID"=>"https://orcid.org/0000-0001-5492-3212", "contributor_role"=>"author", "given_name"=>"Markus", "sequence"=>"first", "surname"=>"Stocker")
+                                         "person_name")).first).to eq("ORCID" => "https://orcid.org/0000-0001-5492-3212", "contributor_role" => "author", "given_name" => "Markus", "sequence" => "first", "surname" => "Stocker")
       expect(crossref_xml.dig("titles",
                               "title")).to eq("ORCID Integration Series: PANGAEA")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "570c8129e86749e68517bd783627e76e", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource", 2)).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.59350/faeph-x4x84.pdf", "mime_type" => "application/pdf")
     end
 
     it "json_feed_item from rogue scholar with relations" do
@@ -397,6 +408,8 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Differences between ORCID and DataCite Metadata")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "8a4de44333474b82b57de3c82b6485fc", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource", 2)).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.53731/r79v4e1-97aq74v-ag578.pdf", "mime_type" => "application/pdf")
     end
 
     it "json_feed_item from rogue scholar with relations and funding" do
@@ -433,6 +446,8 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Tracking the Growth of the PID Graph")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "e58dc9c8b8704db28896238b3246c551", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource", 2)).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.53731/r79s4nh-97aq74v-ag4t1.pdf", "mime_type" => "application/pdf")
     end
 
     it "json_feed_item from rogue scholar with anonymous author" do
@@ -466,6 +481,8 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Welcome to the Lab")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "a163e3405b3c47369ab08c54fdff6a3c", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item", "resource", 2)).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.59350/9ry27-7cz42.pdf", "mime_type" => "application/pdf")
     end
   end
 end

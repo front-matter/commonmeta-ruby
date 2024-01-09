@@ -1,6 +1,6 @@
 # frozen_string_literal: truefiles
 
-require_relative 'metadata_utils'
+require_relative "metadata_utils"
 
 module Commonmeta
   class Metadata
@@ -10,7 +10,11 @@ module Commonmeta
                   :email, :registrant
     attr_reader :doc, :page_start, :page_end
     attr_writer :id, :provider_id, :client_id, :doi, :alternate_identifiers, :contributors,
-                :titles, :publisher, :license, :date, :volume, :url, :version, :subjects, :descriptions, :language, :sizes, :formats, :schema_version, :meta, :container, :provider, :format, :funding_references, :state, :geo_locations, :type, :additional_type, :files, :references, :related_identifiers, :related_items, :style, :locale, :archive_locations
+                :titles, :publisher, :license, :date, :volume, :url, :version, :subjects, 
+                :descriptions, :language, :sizes, :formats, :schema_version, :meta, :container, 
+                :provider, :format, :funding_references, :state, :geo_locations, :type, 
+                :additional_type, :files, :references, :related_identifiers, :related_items, 
+                :style, :locale, :archive_locations
 
     def initialize(options = {})
       options.symbolize_keys!
@@ -23,29 +27,29 @@ module Commonmeta
 
         # mEDRA, KISTI, JaLC and OP DOIs are found in the Crossref index
         case @from
-        when 'medra'
-          ra = 'mEDRA'
-        when 'kisti'
-          ra = 'KISTI'
-        when 'jalc'
-          ra = 'JaLC'
-        when 'op'
-          ra = 'OP'
+        when "medra"
+          ra = "mEDRA"
+        when "kisti"
+          ra = "KISTI"
+        when "jalc"
+          ra = "JaLC"
+        when "op"
+          ra = "OP"
         end
 
         # generate name for method to call dynamically
         hsh = @from.present? ? send("get_#{@from}", id: id, **options) : {}
-        string = hsh.fetch('string', nil)
+        string = hsh.fetch("string", nil)
       elsif options[:input].present? && File.exist?(options[:input])
         filename = File.basename(options[:input])
         ext = File.extname(options[:input])
         if %w[.bib .ris .xml .json .cff].include?(ext)
           hsh = {
-            'url' => options[:url],
-            'state' => options[:state],
-            'provider_id' => options[:provider_id],
-            'client_id' => options[:client_id],
-            'files' => options[:files]
+            "url" => options[:url],
+            "state" => options[:state],
+            "provider_id" => options[:provider_id],
+            "client_id" => options[:client_id],
+            "files" => options[:files],
           }
           string = File.read(options[:input])
           @from = options[:from] || find_from_format(string: string, ext: ext)
@@ -55,14 +59,14 @@ module Commonmeta
         end
       else
         hsh = {
-          'url' => options[:url],
-          'state' => options[:state],
-          'provider_id' => options[:provider_id],
-          'client_id' => options[:client_id],
-          'files' => options[:files],
-          'contributors' => options[:contributors],
-          'titles' => options[:titles],
-          'publisher' => options[:publisher]
+          "url" => options[:url],
+          "state" => options[:state],
+          "provider_id" => options[:provider_id],
+          "client_id" => options[:client_id],
+          "files" => options[:files],
+          "contributors" => options[:contributors],
+          "titles" => options[:titles],
+          "publisher" => options[:publisher],
         }
         string = options[:input]
         @from = options[:from] || find_from_format(string: string)
@@ -70,7 +74,7 @@ module Commonmeta
 
       # make sure input is encoded as utf8
       if string.present? && string.is_a?(String)
-        dup_string = string.dup.force_encoding('UTF-8').encode!
+        dup_string = string.dup.force_encoding("UTF-8").encode!
       end
       @string = dup_string
 
@@ -81,11 +85,11 @@ module Commonmeta
       @sandbox = options[:sandbox]
 
       # options that come from the datacite database
-      @url = hsh.to_h['url'].presence || options[:url].presence
-      @state = hsh.to_h['state'].presence
-      @provider_id = hsh.to_h['provider_id'].presence
-      @client_id = hsh.to_h['client_id'].presence
-      @files = hsh.to_h['files'].presence
+      @url = hsh.to_h["url"].presence || options[:url].presence
+      @state = hsh.to_h["state"].presence
+      @provider_id = hsh.to_h["provider_id"].presence
+      @client_id = hsh.to_h["client_id"].presence
+      @files = hsh.to_h["files"].presence
 
       # options that come from the cli, needed
       # for crossref doi registration
@@ -125,23 +129,23 @@ module Commonmeta
     end
 
     def id
-      @id ||= meta.fetch('id', nil)
+      @id ||= meta.fetch("id", nil)
     end
 
     def doi
-      @doi ||= meta.fetch('doi', nil)
+      @doi ||= meta.fetch("doi", nil)
     end
 
     def provider_id
-      @provider_id ||= meta.fetch('provider_id', nil)
+      @provider_id ||= meta.fetch("provider_id", nil)
     end
 
     def client_id
-      @client_id ||= meta.fetch('client_id', nil)
+      @client_id ||= meta.fetch("client_id", nil)
     end
 
     def exists?
-      (@state || meta.fetch('state', nil)) != 'not_found'
+      (@state || meta.fetch("state", nil)) != "not_found"
     end
 
     def valid?
@@ -151,111 +155,111 @@ module Commonmeta
     # Catch errors in the reader
     # Then validate against JSON schema for Commonmeta
     def errors
-      meta.fetch('errors', nil) || json_schema_errors
+      meta.fetch("errors", nil) || json_schema_errors
     end
 
     def descriptions
-      @descriptions ||= meta.fetch('descriptions', nil)
+      @descriptions ||= meta.fetch("descriptions", nil)
     end
 
     def license
-      @license ||= meta.fetch('license', nil)
+      @license ||= meta.fetch("license", nil)
     end
 
     def subjects
-      @subjects ||= meta.fetch('subjects', nil)
+      @subjects ||= meta.fetch("subjects", nil)
     end
 
     def language
-      @language ||= meta.fetch('language', nil)
+      @language ||= meta.fetch("language", nil)
     end
 
     def sizes
-      @sizes ||= meta.fetch('sizes', nil)
+      @sizes ||= meta.fetch("sizes", nil)
     end
 
     def formats
-      @formats ||= meta.fetch('formats', nil)
+      @formats ||= meta.fetch("formats", nil)
     end
 
     def schema_version
-      @schema_version ||= meta.fetch('schema_version', nil)
+      @schema_version ||= meta.fetch("schema_version", nil)
     end
 
     def funding_references
-      @funding_references ||= meta.fetch('funding_references', nil)
+      @funding_references ||= meta.fetch("funding_references", nil)
     end
 
     def references
-      @references ||= meta.fetch('references', nil)
+      @references ||= meta.fetch("references", nil)
     end
 
     def related_identifiers
-      @related_identifiers ||= meta.fetch('related_identifiers', nil)
+      @related_identifiers ||= meta.fetch("related_identifiers", nil)
     end
 
     def related_items
-      @related_items ||= meta.fetch('related_items', nil)
+      @related_items ||= meta.fetch("related_items", nil)
     end
 
     def url
-      @url ||= meta.fetch('url', nil)
+      @url ||= meta.fetch("url", nil)
     end
 
     def version
-      @version ||= meta.fetch('version', nil)
+      @version ||= meta.fetch("version", nil)
     end
 
     def container
-      @container ||= meta.fetch('container', nil)
+      @container ||= meta.fetch("container", nil)
     end
 
     def geo_locations
-      @geo_locations ||= meta.fetch('geo_locations', nil)
+      @geo_locations ||= meta.fetch("geo_locations", nil)
     end
 
     def date
-      @date ||= meta.fetch('date', nil)
+      @date ||= meta.fetch("date", nil)
     end
 
     def publisher
-      @publisher ||= meta.fetch('publisher', nil)
+      @publisher ||= meta.fetch("publisher", nil)
     end
 
     def alternate_identifiers
-      @alternate_identifiers ||= meta.fetch('alternate_identifiers', nil)
+      @alternate_identifiers ||= meta.fetch("alternate_identifiers", nil)
     end
 
     def files
-      @files ||= meta.fetch('files', nil)
+      @files ||= meta.fetch("files", nil)
     end
 
     def provider
-      @provider ||= meta.fetch('provider', nil)
+      @provider ||= meta.fetch("provider", nil)
     end
 
     def state
-      @state ||= meta.fetch('state', nil)
+      @state ||= meta.fetch("state", nil)
     end
 
     def type
-      @type ||= meta.fetch('type', nil)
+      @type ||= meta.fetch("type", nil)
     end
 
     def additional_type
-      @additional_type ||= meta.fetch('additional_type', nil)
+      @additional_type ||= meta.fetch("additional_type", nil)
     end
 
     def titles
-      @titles ||= meta.fetch('titles', nil)
+      @titles ||= meta.fetch("titles", nil)
     end
 
     def contributors
-      @contributors ||= meta.fetch('contributors', nil)
+      @contributors ||= meta.fetch("contributors", nil)
     end
 
     def archive_locations
-      @archive_locations ||= meta.fetch('archive_locations', nil)
+      @archive_locations ||= meta.fetch("archive_locations", nil)
     end
   end
 end

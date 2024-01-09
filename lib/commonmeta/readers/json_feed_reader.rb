@@ -69,7 +69,7 @@ module Commonmeta
         funding_references = get_funding_references(meta)
         related_identifiers = get_related_identifiers(meta)
         alternate_identifiers = [{ "alternateIdentifier" => meta["id"], "alternateIdentifierType" => "UUID" }]
-        
+        files = get_files(id)
         archive_url = meta.fetch("archive_url", nil)
 
         if archive_url
@@ -99,8 +99,18 @@ module Commonmeta
           "funding_references" => funding_references.presence,
           "related_identifiers" => related_identifiers.presence,
           "alternate_identifiers" => alternate_identifiers,
+          "files" => files.presence,
           "archive_locations" => archive_locations,
           "state" => state }.compact.merge(read_options)
+      end
+
+      def get_files(id)
+        doi = doi_from_url(id)
+        return nil unless is_rogue_scholar_doi?(doi)
+          
+        [{ "mimeType" => "text/markdown", "url" => "https://api.rogue-scholar.org/posts/#{doi}.md" },
+         { "mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/#{doi}.pdf" },
+         { "mimeType" => "application/epub+zip", "url" => "https://api.rogue-scholar.org/posts/#{doi}.epub" }]
       end
 
       def get_references(meta)

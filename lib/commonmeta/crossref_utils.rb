@@ -342,11 +342,17 @@ module Commonmeta
       return xml if doi_from_url(id).blank? || url.blank?
 
       xml.doi_data do
-        xml.doi(doi_from_url(id).downcase)
+        doi = doi_from_url(id).downcase
+        xml.doi(doi)
         xml.resource(url)
         xml.collection("property" => "text-mining") do
           xml.item do
             xml.resource(url, "mime_type" => "text/html")
+            if is_rogue_scholar_doi?(doi)
+              Array.wrap(files).each do |file|
+                xml.resource(file["url"], "mime_type" => file["mimeType"])
+              end
+            end
           end
         end
       end

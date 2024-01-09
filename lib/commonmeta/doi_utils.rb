@@ -77,5 +77,10 @@ module Commonmeta
 
       { 'id' => "https://api.crossref.org/members/#{member_id}", 'name' => name }
     end
+
+    def is_rogue_scholar_doi?(doi)
+      prefix = validate_prefix(doi)
+      %w[10.34732 10.53731 10.54900 10.57689 10.59348 10.59349 10.59350].include?(prefix)
+    end
   end
 end

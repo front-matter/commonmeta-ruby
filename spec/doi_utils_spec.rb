@@ -315,4 +315,18 @@ describe Commonmeta::Metadata, vcr: true do
       expect(response).to eq('10.5061')
     end
   end
+
+  context 'is_rogue_scholar_doi' do
+    it 'rogue scholar doi' do
+      doi = '10.53731/cjx855h-hn5jtq8'
+      response = subject.is_rogue_scholar_doi?(doi)
+      expect(response).to be true
+    end
+
+    it 'not a rogue scholar doi' do
+      doi = '10.1371/journal.pone.0000030'
+      response = subject.is_rogue_scholar_doi?(doi)
+      expect(response).to be false
+    end
+  end
 end
