@@ -232,7 +232,7 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Attempts at automating journal subject classification")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "5d14ffacb9ac4e20bdc0d9248df4e80d", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Humanities")
-      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(5)
       expect(crossref_xml.dig("doi_data", "collection", "item", 2, "resource")).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.54900/n6dnt-xpq48.pdf", "mime_type" => "application/pdf")
     end
 
@@ -266,7 +266,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(crossref_xml.dig("citation_list", "citation").last).to eq("article_title" => "The Research Software Alliance (ReSA) and the community landscape", "cYear" => "2020", "doi" => "10.5281/zenodo.3699950", "key" => "ref11")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "954f81380ecd409087c5cef1297f1470", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Humanities")
-      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(5)
       expect(crossref_xml.dig("doi_data", "collection", "item", 2, "resource")).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.54900/zwm7q-vet94.pdf", "mime_type" => "application/pdf")
     end
 
@@ -297,7 +297,7 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("EU-Mitgliedstaaten betonen die Rolle von wissenschaftsgeleiteten Open-Access-Modellen jenseits von APCs")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "1c57855813244493b8af84c49eabc52f", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Social sciences")
-      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(5)
       expect(crossref_xml.dig("doi_data", "collection", "item", 2, "resource")).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.59350/9ry27-7cz42.pdf", "mime_type" => "application/pdf")
     end
 
@@ -327,7 +327,7 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("KU Leuven supports ResearchEquals")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "5561f8e42ff14186a8d58dacb3afe414", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Social sciences")
-      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(5)
       expect(crossref_xml.dig("doi_data", "collection", "item", 2, "resource")).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.59350/9ry27-7cz42.pdf", "mime_type" => "application/pdf")
     end
 
@@ -368,7 +368,7 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("ORCID Integration Series: PANGAEA")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "570c8129e86749e68517bd783627e76e", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
-      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(5)
       expect(crossref_xml.dig("doi_data", "collection", "item", 2, "resource")).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.59350/faeph-x4x84.pdf", "mime_type" => "application/pdf")
     end
 
@@ -407,7 +407,7 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Differences between ORCID and DataCite Metadata")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "8a4de44333474b82b57de3c82b6485fc", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
-      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(5)
       expect(crossref_xml.dig("doi_data", "collection", "item", 2, "resource")).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.53731/r79v4e1-97aq74v-ag578.pdf", "mime_type" => "application/pdf")
     end
 
@@ -445,7 +445,7 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Tracking the Growth of the PID Graph")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "e58dc9c8b8704db28896238b3246c551", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
-      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(5)
       expect(crossref_xml.dig("doi_data", "collection", "item", 2, "resource")).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.53731/r79s4nh-97aq74v-ag4t1.pdf", "mime_type" => "application/pdf")
     end
 
@@ -480,7 +480,7 @@ describe Commonmeta::Metadata, vcr: true do
                               "title")).to eq("Welcome to the Lab")
       expect(crossref_xml.dig("item_number")).to eq("__content__" => "a163e3405b3c47369ab08c54fdff6a3c", "item_number_type" => "uuid")
       expect(crossref_xml.dig("group_title")).to eq("Computer and information sciences")
-      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(4)
+      expect(crossref_xml.dig("doi_data", "collection", "item").length).to eq(5)
       expect(crossref_xml.dig("doi_data", "collection", "item", 2, "resource")).to eq("__content__" => "https://api.rogue-scholar.org/posts/10.59350/9ry27-7cz42.pdf", "mime_type" => "application/pdf")
     end
   end

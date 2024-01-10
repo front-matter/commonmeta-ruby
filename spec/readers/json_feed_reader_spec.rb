@@ -36,7 +36,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.53731/4nwxn-frt36")
       expect(subject.url).to eq("https://blog.front-matter.io/posts/does-it-compose")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.53731/4nwxn-frt36.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "5bb66e92-5cb9-4659-8aca-20e486b695c9", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -62,7 +62,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.53731/r79v4e1-97aq74v-ag578")
       expect(subject.url).to eq("https://blog.front-matter.io/posts/differences-between-orcid-and-datacite-metadata")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.53731/r79v4e1-97aq74v-ag578.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "8a4de443-3347-4b82-b57d-e3c82b6485fc", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -89,7 +89,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.53731/r294649-6f79289-8cw18")
       expect(subject.url).to eq("https://blog.front-matter.io/posts/nine-simple-ways-to-make-it-easier-to-re-use-your-data")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.53731/r294649-6f79289-8cw18.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "2bdebfc5-e02e-42c2-90c5-e873e2d0435d", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -116,7 +116,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.53731/r79s4nh-97aq74v-ag4t1")
       expect(subject.url).to eq("https://blog.front-matter.io/posts/tracking-the-growth-of-the-pid-graph")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.53731/r79s4nh-97aq74v-ag4t1.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "e58dc9c8-b870-4db2-8896-238b3246c551", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -195,7 +195,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.53731/ffbx660-083tnag")
       expect(subject.url).to eq("https://syldavia-gazette.org/guinea-worms-chatgpt-neanderthals")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.53731/ffbx660-083tnag.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "0022b9ef-525a-4a79-81ad-13411697f58a", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -220,7 +220,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/kz04m-s8z58")
       expect(subject.url).to eq("https://wisspub.net/2023/05/23/eu-mitgliedstaaten-betonen-die-rolle-von-wissenschaftsgeleiteten-open-access-modellen-jenseits-von-apcs")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/kz04m-s8z58.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "1c578558-1324-4493-b8af-84c49eabc52f", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -246,7 +246,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/faeph-x4x84")
       expect(subject.url).to eq("https://wayback.archive-it.org/22143/20231103191454/https://project-thor.eu/2016/08/10/orcid-integration-in-pangaea")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/faeph-x4x84.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "570c8129-e867-49e6-8517-bd783627e76e", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -278,7 +278,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/hke8v-d1e66")
       expect(subject.url).to eq("https://svpow.com/2023/06/09/new-paper-curtice-et-al-2023-on-the-first-haplocanthosaurus-from-dry-mesa")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/hke8v-d1e66.pdf")
       expect(subject.type).to eq("Article")
       expect(subject.contributors.length).to eq(1)
@@ -305,7 +305,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/tpa8t-j6292")
       expect(subject.url).to eq("https://www.samuelmoore.org/2023/04/20/how-to-cultivate-good-closures-scaling-small-and-the-limits-of-openness")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/tpa8t-j6292.pdf")
       expect(subject.type).to eq("Article")
       expect(subject.contributors.length).to eq(1)
@@ -331,7 +331,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/tfahc-rp566")
       expect(subject.url).to eq("https://blog.oa.works/nature-features-oa-reports-work-putting-oa-policy-into-practice")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/tfahc-rp566.pdf")
       expect(subject.type).to eq("Article")
       expect(subject.contributors.length).to eq(1)
@@ -382,7 +382,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/zwdq7-waa43")
       expect(subject.url).to eq("https://citationstyles.org/2020/07/11/seeking-public-comment-on-CSL-1-0-2")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/zwdq7-waa43.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "efdacb04-bcec-49d7-b689-ab3eab0634bf", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -409,7 +409,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/2shz7-ehx26")
       expect(subject.url).to eq("https://libscie.org/ku-leuven-supports-researchequals")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/2shz7-ehx26.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "5561f8e4-2ff1-4186-a8d5-8dacb3afe414", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -436,7 +436,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/33es7-fqz31")
       expect(subject.url).to eq("https://lab.sub.uni-goettingen.de/welcome.html")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/33es7-fqz31.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "a163e340-5b3c-4736-9ab0-8c54fdff6a3c", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -463,7 +463,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/63055-a8604")
       expect(subject.url).to eq("http://sfmatheson.blogspot.com/2023/01/quintessence-of-dust-2023-restart-why.html")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/63055-a8604.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "1898d2d7-4d87-4487-96c4-3073cf99e9a5", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -490,7 +490,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/9gfjs-pey70")
       expect(subject.url).to eq("https://flavoursofopen.science/grundlagen-fur-die-entwicklung-einer-open-scholarship-strategie")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/9gfjs-pey70.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "f3dc29da-0481-4f3b-8110-4c07260fca67", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")
@@ -518,7 +518,7 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.59350/bbcsr-r4b59")
       expect(subject.url).to eq("https://markrubin.substack.com/p/the-preregistration-prescriptiveness")
-      expect(subject.files.length).to eq(3)
+      expect(subject.files.length).to eq(4)
       expect(subject.files[1]).to eq("mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/10.59350/bbcsr-r4b59.pdf")
       expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "2b105b29-acbc-4eae-9ff1-368803f36a4d", "alternateIdentifierType" => "UUID" }])
       expect(subject.type).to eq("Article")

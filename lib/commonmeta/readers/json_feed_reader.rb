@@ -110,7 +110,8 @@ module Commonmeta
           
         [{ "mimeType" => "text/markdown", "url" => "https://api.rogue-scholar.org/posts/#{doi}.md" },
          { "mimeType" => "application/pdf", "url" => "https://api.rogue-scholar.org/posts/#{doi}.pdf" },
-         { "mimeType" => "application/epub+zip", "url" => "https://api.rogue-scholar.org/posts/#{doi}.epub" }]
+         { "mimeType" => "application/epub+zip", "url" => "https://api.rogue-scholar.org/posts/#{doi}.epub" },
+         { "mimeType" => "application/xml", "url" => "https://api.rogue-scholar.org/posts/#{doi}.xml" }]
       end
 
       def get_references(meta)
