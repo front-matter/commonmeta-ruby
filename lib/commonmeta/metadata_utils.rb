@@ -10,6 +10,7 @@ require_relative 'readers/bibtex_reader'
 require_relative 'readers/cff_reader'
 require_relative 'readers/csl_reader'
 require_relative 'readers/codemeta_reader'
+require_relative 'readers/commonmeta_reader'
 require_relative 'readers/crossref_reader'
 require_relative 'readers/crossref_xml_reader'
 require_relative 'readers/datacite_reader'
@@ -44,6 +45,7 @@ module Commonmeta
     include Commonmeta::Readers::BibtexReader
     include Commonmeta::Readers::CffReader
     include Commonmeta::Readers::CodemetaReader
+    include Commonmeta::Readers::CommonmetaReader
     include Commonmeta::Readers::CrossrefReader
     include Commonmeta::Readers::CrossrefXmlReader
     include Commonmeta::Readers::CslReader
