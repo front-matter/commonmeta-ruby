@@ -497,7 +497,9 @@ module Commonmeta
     def find_from_format_by_string(string)
       begin # try to parse as JSON
         hsh = MultiJson.load(string).to_h
-        if hsh.dig("schema_version").to_s.start_with?("https://commonmeta.org")
+        if hsh.dig("blog", "version") == "https://jsonfeed.org/version/1.1"
+          return "json_feed_item"
+        elsif hsh.dig("schema_version").to_s.start_with?("https://commonmeta.org")
           return "commonmeta"
         elsif hsh.dig("@context") && URI.parse(hsh.dig("@context")).host == "schema.org"
           return "schema_org"
