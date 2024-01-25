@@ -55,7 +55,13 @@ module Commonmeta
         end
         contributors = get_authors(from_datacite(meta.fetch('creators', nil)))
         contributors += get_authors(from_datacite(meta.fetch('contributors', nil)))
-        publisher = { 'name' => meta.fetch('publisher', nil) }
+        if meta.fetch('publisher', nil).is_a?(Hash)
+          publisher = { 'name' => meta.fetch('publisher', nil).fetch('name', nil) }
+        elsif meta.fetch('publisher', nil).is_a?(String)
+          publisher = { 'name' => meta.fetch('publisher', nil) }
+        else
+          publisher = nil
+        end
 
         container = meta.fetch('container', nil)
         funding_references = meta.fetch('funding_references', nil)

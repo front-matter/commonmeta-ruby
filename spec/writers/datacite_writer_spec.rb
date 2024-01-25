@@ -136,7 +136,6 @@ describe Commonmeta::Metadata, vcr: true do
     it 'from schema.org' do
       input = 'https://blog.front-matter.io/posts/eating-your-own-dog-food/'
       subject = described_class.new(input: input, from: 'schema_org')
-      puts subject.errors
       expect(subject.valid?).to be true
       datacite = JSON.parse(subject.datacite)
       expect(datacite.fetch('titles')).to eq([{ 'title' => 'Eating your own Dog Food' }])

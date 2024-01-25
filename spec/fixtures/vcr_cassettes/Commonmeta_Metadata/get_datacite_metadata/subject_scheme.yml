@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 19:49:34 GMT
+      - Thu, 25 Jan 2024 19:19:53 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -31,7 +31,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TyX884jJXlBSSx%2FLPpbw%2BMrhMnjsRkq0KGInWR224aEGvmNDgkgyQKDAoQrw48Pzd3vQJ8C2DoMPj90n2I7kWXOSoYmSoOmgbkq1a2i8fHjOMFnZV8gHCo7gLRd1RHRts49huQ4%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=dl53P0sa%2FGuTSjnAoON8S8DGHETrk37VhU7oMyKfuTzNJz3l1XXeREPQWYwt3iiA7GIHwqGZ%2FGxSwamtzAeZnNY53ySYh0HD5nHpyi6jLhEEH2gKbc4S44YJRR9%2BT5Xz8eFZeH0%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -39,7 +39,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 811830485c760e32-AMS
+      - 84b2decfc9746685-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -51,7 +51,7 @@ http_interactions:
             "RA": "DataCite"
           }
         ]
-  recorded_at: Thu, 05 Oct 2023 19:49:34 GMT
+  recorded_at: Thu, 25 Jan 2024 19:19:53 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.6084/m9.figshare.3475223.v1?include=media,client
@@ -71,7 +71,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 19:49:34 GMT
+      - Thu, 25 Jan 2024 19:19:53 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -93,7 +93,7 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 90aa4e37-bde8-4d83-bd1b-b0034b6b7b3e
+      - c79b0e6a-0b9f-4208-9d05-2777317fb58b
       X-Download-Options:
       - noopen
       Etag:
@@ -101,13 +101,13 @@ http_interactions:
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.036993'
+      - '0.042301'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.18
+      - Phusion Passenger(R) 6.0.19
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.19
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -128,7 +128,7 @@ http_interactions:
         sharable and discoverable manner. All file formats can be published, including
         videos and datasets. Optional peer review process. figshare uses creative
         commons licensing.","language":[],"clientType":"repository","domains":"figshare.com,*.figshare.com,geolsoc.figshare.com,rs.figshare.com,tandf.figshare.com,springernature.figshare.com,books.openmonographs.org,tome.figshare.com","re3data":"https://doi.org/10.17616/R3PK5R","opendoar":null,"issn":{},"url":"http://figshare.com/","created":"2016-10-12T13:42:35.000Z","updated":"2021-12-15T13:46:22.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"otjm","type":"providers"}},"consortium":{"data":{"id":"fsco","type":"providers"}},"prefixes":{"data":[{"id":"10.6084","type":"prefixes"}]}}}]}'
-  recorded_at: Thu, 05 Oct 2023 19:49:34 GMT
+  recorded_at: Thu, 25 Jan 2024 19:19:53 GMT
 - request:
     method: get
     uri: https://doi.org/ra/10.4232
@@ -148,7 +148,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 19:49:35 GMT
+      - Thu, 25 Jan 2024 19:19:54 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Transfer-Encoding:
@@ -160,7 +160,7 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ilSrpLrJAfzNKtuJdl6HS2P%2FV0jz9u%2BXrgtV%2BC1%2FbJ9J7fH9JYaEUDKpWCWG%2BIXHG86IXndko1YN028884SU%2FQ9WCzpNGQmqANkkJ%2BVczeMiXwEQZvwco8dh5KP42BgADQ8I938%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=cdZKIQuw9p3iDIu8%2BlBMioay%2FoEMyFWlQjkmzym7581iPGeTGuojO%2B%2Fm7qZxPS%2BddFFWQ%2BumgLrJsISx4rFD7uV2%2B69jdUau6DAEnQ1Qzc5G47vC3CwH58L6k8nZOcELmpgOcg4%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Strict-Transport-Security:
@@ -168,7 +168,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 8118304f1e17b986-AMS
+      - 84b2ded41fe40b5e-AMS
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
@@ -180,7 +180,7 @@ http_interactions:
             "RA": "DataCite"
           }
         ]
-  recorded_at: Thu, 05 Oct 2023 19:49:35 GMT
+  recorded_at: Thu, 25 Jan 2024 19:19:54 GMT
 - request:
     method: get
     uri: https://api.datacite.org/dois/10.4232/1.2745?include=media,client
@@ -200,7 +200,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 05 Oct 2023 19:49:35 GMT
+      - Thu, 25 Jan 2024 19:19:54 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -222,21 +222,21 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Request-Id:
-      - 2a314fca-694a-430f-8b0b-13d288eed984
+      - 7524b9bd-843b-4ba9-8605-3563b11a7fc1
       X-Download-Options:
       - noopen
       Etag:
-      - W/"eb7a6b444cb1d57982e10dc608f09802"
+      - W/"9dd3a7703666b1565ddafa454f610f38"
       X-Frame-Options:
       - SAMEORIGIN
       X-Runtime:
-      - '0.065269'
+      - '0.074121'
       X-Content-Type-Options:
       - nosniff
       X-Powered-By:
-      - Phusion Passenger(R) 6.0.18
+      - Phusion Passenger(R) 6.0.19
       Server:
-      - nginx/1.18.0 + Phusion Passenger(R) 6.0.18
+      - nginx/1.18.0 + Phusion Passenger(R) 6.0.19
       Access-Control-Allow-Credentials:
       - 'true'
       Access-Control-Allow-Methods:
@@ -323,6 +323,6 @@ http_interactions:
         data to make it available to the scientific research community. All data are
         preserved for the long-term and documented to international standards. Data
         is free to archive, and free to access.\r\nWhen you transfer data and documents
-        to GESIS, you enter into a contractual relationship: https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/contract","language":[],"clientType":"repository","domains":"*","re3data":"https://doi.org/10.17616/R3BB70","opendoar":null,"issn":{},"url":"https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/long-term-digital-preservation-ltda","created":"2011-07-21T13:08:41.000Z","updated":"2023-08-18T14:33:18.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"vzek","type":"providers"}},"consortium":{"data":{"id":"DARACO","type":"providers"}},"prefixes":{"data":[{"id":"10.4232","type":"prefixes"},{"id":"10.7802","type":"prefixes"},{"id":"10.7804","type":"prefixes"},{"id":"10.12758","type":"prefixes"},{"id":"10.13150","type":"prefixes"},{"id":"10.15465","type":"prefixes"},{"id":"10.17889","type":"prefixes"},{"id":"10.18448","type":"prefixes"},{"id":"10.23663","type":"prefixes"},{"id":"10.25524","type":"prefixes"},{"id":"10.34877","type":"prefixes"}]}}}]}'
-  recorded_at: Thu, 05 Oct 2023 19:49:35 GMT
+        to GESIS, you enter into a contractual relationship: https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/contract","language":[],"clientType":"repository","domains":"*","re3data":"https://doi.org/10.17616/R3BB70","opendoar":null,"issn":{},"url":"https://www.gesis.org/en/data-services/about-the-data-services/standards-and-workflows-data-services/long-term-digital-preservation-ltda","created":"2011-07-21T13:08:41.000Z","updated":"2024-01-17T13:28:08.000Z","isActive":true},"relationships":{"provider":{"data":{"id":"vzek","type":"providers"}},"consortium":{"data":{"id":"DARACO","type":"providers"}},"prefixes":{"data":[{"id":"10.4232","type":"prefixes"},{"id":"10.7802","type":"prefixes"},{"id":"10.7804","type":"prefixes"},{"id":"10.12758","type":"prefixes"},{"id":"10.13150","type":"prefixes"},{"id":"10.17889","type":"prefixes"},{"id":"10.18448","type":"prefixes"},{"id":"10.23663","type":"prefixes"},{"id":"10.25524","type":"prefixes"},{"id":"10.34877","type":"prefixes"}]}}}]}'
+  recorded_at: Thu, 25 Jan 2024 19:19:54 GMT
 recorded_with: VCR 6.2.0

@@ -223,6 +223,7 @@ module Commonmeta
       "Dissertation" => "Dissertation",
       "Event" => "Event",
       "Image" => "Image",
+      "Instrument" => "Instrument",
       "InteractiveResource" => "InteractiveResource",
       "Journal" => "Journal",
       "JournalArticle" => "JournalArticle",
@@ -237,6 +238,7 @@ module Commonmeta
       "Software" => "Software",
       "Sound" => "Sound",
       "Standard" => "Standard",
+      "StudyRegistration" => "StudyRegistration",
       "Text" => "Document",
       "Thesis" => "Dissertation",
       "Workflow" => "Workflow",
@@ -256,6 +258,7 @@ module Commonmeta
       "Event" => "Event",
       "Figure" => "Image",
       "Image" => "Image",
+      "Instrument" => "Instrument",
       "JournalArticle" => "JournalArticle",
       "LegalDocument" => "Text",
       "Manuscript" => "Text",
@@ -271,6 +274,7 @@ module Commonmeta
       "Software" => "Software",
       "Sound" => "Sound",
       "Standard" => "Standard",
+      "StudyRegistration" => "StudyRegistration",
       "WebPage" => "Text",
     }
 
@@ -370,6 +374,7 @@ module Commonmeta
       "CreativeWork" => "Other",
       "Dataset" => "Dataset",
       "Dissertation" => "Dissertation",
+      "Instrument" => "Instrument",
       "NewsArticle" => "Article",
       "Legislation" => "LegalDocument",
       "ScholarlyArticle" => "JournalArticle",
@@ -389,6 +394,7 @@ module Commonmeta
       "Event" => "CreativeWork",
       "Figure" => "CreativeWork",
       "Image" => "CreativeWork",
+      "Instrument" => "Instrument",
       "JournalArticle" => "ScholarlyArticle",
       "LegalDocument" => "Legislation",
       "Software" => "SoftwareSourceCode",
@@ -509,7 +515,7 @@ module Commonmeta
           return "crossref"
         elsif hsh.dig("issued", "date-parts").present?
           return "csl"
-        elsif URI.parse(hsh.dig("@context")).to_s == "https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld"
+        elsif hsh.dig("@context") && URI.parse(hsh.dig("@context")).to_s == "https://raw.githubusercontent.com/codemeta/codemeta/master/codemeta.jsonld"
           return "codemeta"
         end
       rescue MultiJson::ParseError

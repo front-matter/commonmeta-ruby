@@ -36,13 +36,12 @@ describe Commonmeta::Metadata, vcr: true do
       # expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.5063/f1m61h5x")
       expect(subject.type).to eq("Software")
-      expect(subject.contributors).to eq([{"contributorRoles"=>["Author"],
-        "name"=>
-        "Jones, Matthew B.; Slaughter, Peter; Nahf, Rob; Boettiger, Carl ; Jones, Chris; Read, Jordan; Walker, Lauren; Hart, Edmund; Chamberlain, Scott",
-        "type"=>"Organization"}])
-      expect(subject.titles).to eq([{"title"=>"dataone: R interface to the DataONE network of data repositories"}])
-      expect(subject.date).to eq("created"=>"2016-03-12", "published"=>"2016", "registered"=>"2016-03-12", "updated"=>"2020-09-18")
-      expect(subject.publisher).to eq("name"=>"KNB Data Repository")
+      expect(subject.contributors).to eq([{ "contributorRoles" => ["Author"],
+                                            "name" => "Jones, Matthew B.; Slaughter, Peter; Nahf, Rob; Boettiger, Carl ; Jones, Chris; Read, Jordan; Walker, Lauren; Hart, Edmund; Chamberlain, Scott",
+                                            "type" => "Organization" }])
+      expect(subject.titles).to eq([{ "title" => "dataone: R interface to the DataONE network of data repositories" }])
+      expect(subject.date).to eq("created" => "2016-03-12", "published" => "2016", "registered" => "2016-03-12", "updated" => "2020-09-18")
+      expect(subject.publisher).to eq("name" => "KNB Data Repository")
       expect(subject.provider).to eq("DataCite")
     end
 
@@ -70,8 +69,8 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.type).to eq("Dissertation")
       expect(subject.contributors.length).to eq(3)
       expect(subject.contributors.first).to eq("type" => "Person", "contributorRoles" => ["Author"],
-                                            "givenName" => "Heiko", "familyName" => "Conrad")
-      expect(subject.contributors.last).to eq("id"=>"https://orcid.org/0000-0002-8633-8234", "type"=>"Person", "contributorRoles"=>["Supervision"], "givenName"=>"Gerhard", "familyName"=>"Gruebel", "affiliation"=>[{"name"=>"Deutsches Elektronen-Synchrotron"}])
+                                               "givenName" => "Heiko", "familyName" => "Conrad")
+      expect(subject.contributors.last).to eq("id" => "https://orcid.org/0000-0002-8633-8234", "type" => "Person", "contributorRoles" => ["Supervision"], "givenName" => "Gerhard", "familyName" => "Gruebel", "affiliation" => [{ "name" => "Deutsches Elektronen-Synchrotron" }])
       expect(subject.titles).to eq([{ "title" => "Dynamics of colloids in molecular glass forming liquids studied via X-ray photon correlation spectroscopy" }])
       expect(subject.date).to eq("created" => "2018-01-25", "published" => "2014",
                                  "registered" => "2018-01-25", "updated" => "2020-09-19")
@@ -154,6 +153,32 @@ describe Commonmeta::Metadata, vcr: true do
                                  "updated" => "2020-09-04")
       expect(subject.license).to eq("id" => "CC-BY-4.0",
                                     "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+    end
+
+    it "dataset schema v4.5" do
+      input = "#{fixture_path}datacite-dataset_v4.5.json"
+      subject = described_class.new(input: input)
+      expect(subject.id).to eq("https://doi.org/10.82433/b09z-4k37")
+      expect(subject.type).to eq("Dataset")
+      expect(subject.contributors.length).to eq(23)
+      expect(subject.contributors[0]).to eq("contributorRoles" => ["Author"], "familyName" => "ExampleFamilyName", "givenName" => "ExampleGivenName", "type" => "Person")
+      expect(subject.contributors[2]).to eq("contributorRoles" => ["ContactPerson"], "familyName" => "ExampleFamilyName", "givenName" => "ExampleGivenName", "type" => "Person")
+      expect(subject.date).to eq("created"=>"2022-10-27", "published"=>"2022", "registered"=>"2022-10-27", "updated"=>"2024-01-02")
+      expect(subject.publisher).to eq("name" => "Example Publisher")
+      expect(subject.license).to eq("id"=>"CC-PDDC", "url"=>"https://creativecommons.org/licenses/publicdomain/")
+    end
+
+    it "instrument" do
+      input = "#{fixture_path}datacite-instrument.json"
+      subject = described_class.new(input: input)
+      expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://doi.org/10.82433/08qf-ee96")
+      expect(subject.type).to eq("Instrument")
+      expect(subject.contributors.length).to eq(2)
+      expect(subject.contributors.first).to eq("contributorRoles" => ["Author"], "name" => "DECTRIS", "type" => "Organization")
+      expect(subject.date).to eq("created" => "2022-10-20", "published" => "2022", "registered" => "2022-10-20", "updated" => "2024-01-02")
+      expect(subject.publisher).to eq("name" => "Helmholtz Centre Potsdam - GFZ German Research Centre for Geosciences")
+      expect(subject.license).to be_nil
     end
   end
 end

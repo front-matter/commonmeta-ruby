@@ -110,6 +110,7 @@
         "Dissertation",
         "Event",
         "Image",
+        "Instrument",
         "InteractiveResource",
         "Journal",
         "JournalArticle",
@@ -123,6 +124,7 @@
         "Software",
         "Sound",
         "Standard",
+        "StudyRegistration",
         "Text",
         "Workflow",
         "Other"
@@ -187,7 +189,9 @@
         "IsRequiredBy",
         "Requires",
         "IsObsoletedBy",
-        "Obsoletes"
+        "Obsoletes",
+        "Collects",
+        "IsCollectedBy"
       ]
     },
     "descriptionType": {
@@ -276,7 +280,24 @@
       "uniqueItems": true
     },
     "publisher": {
-      "type": "string"
+      "type": ["object", "string"],
+      "anyOf": [
+        {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "publisherIdentifier": { "type": "string", "format": "uri" },
+              "publisherIdentifierScheme": { "type": "string" },
+              "schemeUri": { "type": "string", "format": "uri" },
+              "lang": { "type": "string" }
+            },
+            "required": ["name"]
+        }, 
+        {
+            "type": "string",
+            "minLength": 1
+        }
+    ]
     },
     "publication_year": {
       "type": "integer"
