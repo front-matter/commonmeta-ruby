@@ -54,18 +54,22 @@ module Commonmeta
       id = parse_attributes(author.fetch("id", nil), first: true) ||
            parse_attributes(author.fetch("identifier", nil), first: true) ||
            parse_attributes(author.fetch("sameAs", nil), first: true)
-
+      id = normalize_orcid(id) || normalize_ror(id) if id.present?
+      
       # DataCite metadata
       if id.nil? && author["nameIdentifiers"].present?
         id = Array.wrap(author.dig("nameIdentifiers")).find do |ni|
-          ni["nameIdentifierScheme"] == "ORCID"
+          normalize_name_identifier(ni).present?
         end
-        id = id["nameIdentifier"] if id.present?
-        # Crossref metadata
+        id = normalize_name_identifier(id) if id.present?
+      # Crossref metadata
       elsif id.nil? && author["ORCID"].present?
         id = author.fetch("ORCID")
+        id = normalize_orcid(id)
+      # JSON Feed metadata
+      elsif id.nil? && author["url"].present?
+        id = author.fetch("url")       
       end
-      id = normalize_orcid(id) || normalize_ror(id)
 
       # parse author type, i.e. "Person", "Organization" or not specified
       type = author.fetch("type", nil)

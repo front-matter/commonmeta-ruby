@@ -12,7 +12,7 @@ module Commonmeta
         read_options = ActiveSupport::HashWithIndifferentAccess.new(options.except(:doi, :id, :url,
                                                                                    :sandbox, :validate, :ra))
         meta = string.present? ? JSON.parse(string) : {}
-        meta["schema_version"] = "https://commonmeta.org/commonmeta_v0.10.5.json"
+        meta["schema_version"] = "https://commonmeta.org/commonmeta_v0.10"
         meta.compact.merge(read_options)
       end
     end

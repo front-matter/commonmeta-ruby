@@ -10,7 +10,7 @@ describe Commonmeta::Metadata, vcr: true do
   context 'read commonmeta metadata' do
     it "default" do
       expect(subject.valid?).to be true
-      expect(subject.schema_version).to eq("https://commonmeta.org/commonmeta_v0.10.5.json")
+      expect(subject.schema_version).to eq("https://commonmeta.org/commonmeta_v0.10")
       expect(subject.id).to eq("https://doi.org/10.7554/elife.01567")
       expect(subject.type).to eq("JournalArticle")
       expect(subject.url).to eq("https://elifesciences.org/articles/01567")

@@ -175,7 +175,7 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.id).to eq("https://doi.org/10.82433/08qf-ee96")
       expect(subject.type).to eq("Instrument")
       expect(subject.contributors.length).to eq(2)
-      expect(subject.contributors.first).to eq("contributorRoles" => ["Author"], "name" => "DECTRIS", "type" => "Organization")
+      expect(subject.contributors.first).to eq("contributorRoles" => ["Author"], "name" => "DECTRIS", "type" => "Organization", "id" => "https://www.wikidata.org/wiki/Q107529885")
       expect(subject.date).to eq("created" => "2022-10-20", "published" => "2022", "registered" => "2022-10-20", "updated" => "2024-01-02")
       expect(subject.publisher).to eq("name" => "Helmholtz Centre Potsdam - GFZ German Research Centre for Geosciences")
       expect(subject.license).to be_nil

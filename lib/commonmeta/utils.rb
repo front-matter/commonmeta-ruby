@@ -657,6 +657,43 @@ module Commonmeta
       "https://ror.org/" + Addressable::URI.encode(ror)
     end
 
+    def normalize_name_identifier(hsh)
+      return nil unless hsh.present? && hsh.is_a?(Hash)
+
+      name_identifier = hsh["nameIdentifier"]
+      name_identifier_scheme = hsh["nameIdentifierScheme"]
+      scheme_uri = hsh["schemeURI"] || hsh["schemeUri"] 
+      return nil unless name_identifier.present?
+        
+      if name_identifier_scheme == "ORCID" || scheme_uri == "https://orcid.org"
+        return normalize_orcid(name_identifier)
+      elsif name_identifier_scheme == "ROR" || scheme_uri == "https://ror.org"
+        return normalize_ror(name_identifier)
+      elsif name_identifier_scheme == "ISNI" || scheme_uri == "https://isni.org"
+        return normalize_isni(name_identifier)
+      elsif validate_url(name_identifier) == "URL"
+        return name_identifier
+      elsif scheme_uri.present?
+        return scheme_uri + Addressable::URI.encode(name_identifier)
+      end
+
+      return nil
+    end
+
+    def validate_isni(isni)
+      isni = Array(%r{\A(?:(?:http|https)://)?(isni\.org/isni/)?(\d{4}[[:space:]-]\d{4}[[:space:]-]\d{4}[[:space:]-]\d{3}[0-9X]+)\z}.match(isni)).last
+      isni.gsub(/[[:space:]]/, "-") if isni.present?
+    end
+
+    def normalize_isni(isni)
+      # TODO fix validation
+      # isni = validate_isni(isni)
+      return nil unless isni.present?
+
+      # turn ISNI ID into URL
+      "https://isni.org/isni/" + Addressable::URI.encode(isni)
+    end
+
     # pick electronic issn if there are multiple
     # format issn as xxxx-xxxx
     def normalize_issn(input, options = {})

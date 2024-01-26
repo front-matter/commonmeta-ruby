@@ -502,7 +502,7 @@ describe Commonmeta::Metadata do
     links = [{ "rel" => "self", "type" => "application/atom+xml", "href" => "https://syldavia-gazette.org/atom/" },
              { "rel" => "alternate", "type" => "text/html", "href" => "https://syldavia-gazette.org" },
              { "rel" => "license", "type" => "text/html", "href" => "https://creativecommons.org/licenses/by/4.0/legalcode" }]
-    
+
     it "url" do
       response = subject.get_link(links, "self")
       expect(response).to eq("https://syldavia-gazette.org/atom/")
@@ -721,7 +721,7 @@ describe Commonmeta::Metadata do
     it "decode doi to uuid" do
       doi = "https://doi.org/10.53731/6315bn4-aqg82ja-4a9wxdt-29f7279"
       response = subject.decode_doi(doi, uuid: true)
-      expect(response).to eq('255d48ab-c102-9288-a4f3-add092f388e9')
+      expect(response).to eq("255d48ab-c102-9288-a4f3-add092f388e9")
     end
   end
 
@@ -745,10 +745,36 @@ describe Commonmeta::Metadata do
     end
   end
 
-  context 'json_feed_unregistered_url' do
-    it 'all posts' do
+  context "json_feed_unregistered_url" do
+    it "all posts" do
       response = subject.json_feed_unregistered_url
       expect(response).to eq("https://api.rogue-scholar.org/posts/unregistered")
+    end
+  end
+
+  context "normalize_name_identifier" do
+    it "ORCID" do
+      hsh = {"schemeUri"=>"https://orcid.org", "nameIdentifier"=>"https://orcid.org/0000-0003-1419-2405", "nameIdentifierScheme"=>"ORCID"}
+      response = subject.normalize_name_identifier(hsh)
+      expect(response).to eq("https://orcid.org/0000-0003-1419-2405")
+    end
+
+    it "ROR" do
+      hsh = { "schemeUri" => "https://ror.org", "nameIdentifier" => "https://ror.org/02aj13c28", "nameIdentifierScheme" => "ROR" }
+      response = subject.normalize_name_identifier(hsh)
+      expect(response).to eq("https://ror.org/02aj13c28")
+    end
+
+    it "ISNI" do
+      hsh = { "schemeUri" => "http://isni.org/isni/", "nameIdentifier" => "0000000134596520", "nameIdentifierScheme" => "ISNI" }
+      response = subject.normalize_name_identifier(hsh)
+      expect(response).to eq("https://isni.org/isni/0000000134596520")
+    end
+
+    it "Wikidata" do
+      hsh = {"schemeUri"=>"https://www.wikidata.org/wiki/", "nameIdentifier"=>"Q107529885", "nameIdentifierScheme"=>"Wikidata"}
+      response = subject.normalize_name_identifier(hsh)
+      expect(response).to eq("https://www.wikidata.org/wiki/Q107529885")
     end
   end
 end
