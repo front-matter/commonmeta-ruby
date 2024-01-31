@@ -428,7 +428,7 @@
           "type": {
             "description": "The type of the description.",
             "type": "string",
-            "enum": ["Abstract", "Description", "Summary"]
+            "enum": ["Abstract", "Summary", "Methods", "TechnicalInfo", "Other"]
           },
           "language": {
             "description": "The language of the title. Use one of the language codes from the IETF BCP 47 standard.",

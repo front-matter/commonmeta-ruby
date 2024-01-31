@@ -5,7 +5,7 @@ require "pathname"
 
 module Commonmeta
   module SchemaUtils
-    COMMONMETA = File.read(File.expand_path("../../resources/commonmeta_v0.10.6.json",
+    COMMONMETA = File.read(File.expand_path("../../resources/commonmeta_v0.10.7.json",
                                             __dir__))
 
     def json_schema_errors

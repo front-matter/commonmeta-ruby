@@ -58,6 +58,16 @@ describe Commonmeta::Metadata, vcr: true do
       author = { "name" => "Tejas S. Sathe, MD" }
       expect(subject.is_personal_name?(name: author["name"])).to be true
     end
+
+    it "name with organization string" do
+      author = { "name" => "University of California, Santa Barbara" }
+      expect(subject.is_personal_name?(name: author["name"])).to be false
+    end
+
+    it "name with another organization string" do
+      author = { "name" => "Research Graph" }
+      expect(subject.is_personal_name?(name: author["name"])).to be false
+    end
   end
 
   context "cleanup_author" do

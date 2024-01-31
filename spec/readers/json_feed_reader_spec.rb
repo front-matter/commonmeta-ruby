@@ -189,6 +189,31 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.references).to be_nil
     end
 
+    it "medium post with institutional author" do
+      input = "https://api.rogue-scholar.org/posts/05f01f68-ef81-47d7-a3c1-40aba91d358f"
+      subject = described_class.new(input: input)
+      # expect(subject.valid?).to be true
+      expect(subject.id).to eq("https://doi.org/10.59350/jhrs4-22440")
+      expect(subject.url).to eq("https://medium.com/@researchgraph/unveiling-the-synergy-retrieval-augmented-generation-rag-meets-knowledge-graphs-fc0a6900f7eb")
+      expect(subject.alternate_identifiers).to eq([{ "alternateIdentifier" => "05f01f68-ef81-47d7-a3c1-40aba91d358f", "alternateIdentifierType" => "UUID" }])
+      expect(subject.type).to eq("Article")
+      expect(subject.contributors.length).to eq(1)
+      expect(subject.contributors.first).to eq("contributorRoles"=>["Author"], "name"=>"Research Graph", "type"=>"Organization")
+      expect(subject.titles).to eq([{ "title" => "Unveiling the Synergy: Retrieval Augmented Generation (RAG) Meets Knowledge Graphs" }])
+      expect(subject.license).to eq("id" => "CC-BY-4.0",
+                                    "url" => "https://creativecommons.org/licenses/by/4.0/legalcode")
+      expect(subject.date).to eq("published"=>"2024-01-18", "updated"=>"2024-01-18")
+      expect(subject.descriptions.first["description"]).to start_with("<strong> Tools and Platform for Integration of Knowledge Graph with RAG pipelines.")
+      expect(subject.publisher).to eq("name" => "Research Graph")
+      expect(subject.subjects).to eq([{ "subject" => "Computer and information sciences" },
+                                      { "schemeUri" => "http://www.oecd.org/science/inno/38235147.pdf",
+                                        "subject" => "FOS: Computer and information sciences",
+                                        "subjectScheme" => "Fields of Science and Technology (FOS)" }])
+      expect(subject.language).to eq("en")
+      expect(subject.container).to eq("identifier" => "https://medium.com/@researchgraph", "identifierType" => "URL", "title" => "Research Graph", "type" => "Periodical")
+      expect(subject.references).to be_nil
+    end
+
     it "syldavia gazette post with references" do
       input = "https://api.rogue-scholar.org/posts/0022b9ef-525a-4a79-81ad-13411697f58a"
       subject = described_class.new(input: input)

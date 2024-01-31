@@ -37,6 +37,7 @@ describe Commonmeta::Metadata, vcr: true do
     it 'text' do
       input = 'https://doi.org/10.3204/desy-2014-01645'
       subject = described_class.new(input: input, from: 'datacite')
+      puts subject.errors unless subject.valid?
       expect(subject.valid?).to be true
       csv = subject.csv.parse_csv
 

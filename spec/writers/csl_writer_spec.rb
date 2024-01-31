@@ -7,6 +7,7 @@ describe Commonmeta::Metadata, vcr: true do
     it 'Dataset' do
       input = 'https://doi.org/10.5061/DRYAD.8515'
       subject = described_class.new(input: input, from: 'datacite')
+      puts subject.errors unless subject.valid?
       expect(subject.valid?).to be true
       json = JSON.parse(subject.csl)
       expect(json['type']).to eq('dataset')

@@ -25,8 +25,8 @@ module Commonmeta
       "Researcher" => "Other",
       "Sponsor" => "Other",
       "Supervisor" => "Supervision",
-      "WorkPackageLeader" => "Other"
-    }
+      "WorkPackageLeader" => "Other",
+    }    
 
     def get_one_author(author)
       # basic sanity checks
@@ -55,20 +55,20 @@ module Commonmeta
            parse_attributes(author.fetch("identifier", nil), first: true) ||
            parse_attributes(author.fetch("sameAs", nil), first: true)
       id = normalize_orcid(id) || normalize_ror(id) if id.present?
-      
+
       # DataCite metadata
       if id.nil? && author["nameIdentifiers"].present?
         id = Array.wrap(author.dig("nameIdentifiers")).find do |ni|
           normalize_name_identifier(ni).present?
         end
         id = normalize_name_identifier(id) if id.present?
-      # Crossref metadata
+        # Crossref metadata
       elsif id.nil? && author["ORCID"].present?
         id = author.fetch("ORCID")
         id = normalize_orcid(id)
-      # JSON Feed metadata
+        # JSON Feed metadata
       elsif id.nil? && author["url"].present?
-        id = author.fetch("url")       
+        id = author.fetch("url")
       end
 
       # parse author type, i.e. "Person", "Organization" or not specified
@@ -167,6 +167,9 @@ module Commonmeta
 
       # check if a name has only one word, e.g. "FamousOrganization", not including commas
       return false if name.to_s.split(" ").size == 1 && name.to_s.exclude?(",")
+
+      # check if name contains words known to be used in organization names
+      return false if %w[University College Institute School Center Department Laboratory Library Museum Foundation Society Association Company Corporation Collaboration Consortium Incorporated Inc. Institut Research Science].any? { |word| name.to_s.include?(word) }
 
       # check for suffixes, e.g. "John Smith, MD"
       return true if name && %w[MD PhD].include?(name.split(", ").last)

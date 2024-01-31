@@ -90,7 +90,7 @@ describe Commonmeta::Metadata, vcr: true do
         "affiliation" => [{ "name" => "Тверская государственная сельскохозяйственная академия" }], "familyName" => "Ганичева", "givenName" => "А.В.", "type" => "Person", "contributorRoles" => ["Author"],
       )
       expect(subject.titles.last).to eq("title" => "MODEL OF SYSTEM DYNAMICS OF PROCESS OF TRAINING",
-                                        "titleType" => "TranslatedTitle")
+                                        "type" => "TranslatedTitle")
       expect(subject.date).to eq("created" => "2019-02-12", "published" => "2019",
                                  "registered" => "2019-02-12", "updated" => "2022-08-23")
       expect(subject.publisher).to eq("name" => "МОДЕЛИРОВАНИЕ, ОПТИМИЗАЦИЯ И ИНФОРМАЦИОННЫЕ ТЕХНОЛОГИИ")
@@ -114,10 +114,14 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.contributors.first).to eq(
         "name" => "Europäische Kommission", "contributorRoles" => ["Author"], "type" => "Organization",
       )
-      expect(subject.titles).to eq([
-                                     { "lang" => "de",
-                                       "title" => "Flash Eurobarometer 54 (Madrid Summit)" }, { "lang" => "en", "title" => "Flash Eurobarometer 54 (Madrid Summit)" }, { "titleType" => "Subtitle", "lang" => "de", "title" => "The Common European Currency" }, { "titleType" => "Subtitle", "lang" => "en", "title" => "The Common European Currency" },
-                                   ])
+      expect(subject.titles).to eq([{ "language" => "de", "title" => "Flash Eurobarometer 54 (Madrid Summit)" },
+                                    { "language" => "en", "title" => "Flash Eurobarometer 54 (Madrid Summit)" },
+                                    { "language" => "de",
+                                      "title" => "The Common European Currency",
+                                      "type" => "Subtitle" },
+                                    { "language" => "en",
+                                      "title" => "The Common European Currency",
+                                      "type" => "Subtitle" }])
       expect(subject.subjects).to eq([{ "lang" => "en",
                                         "subject" => "KAT12 International Institutions, Relations, Conditions",
                                         "subjectScheme" => "ZA" },
@@ -163,14 +167,39 @@ describe Commonmeta::Metadata, vcr: true do
       expect(subject.contributors.length).to eq(23)
       expect(subject.contributors[0]).to eq("contributorRoles" => ["Author"], "familyName" => "ExampleFamilyName", "givenName" => "ExampleGivenName", "type" => "Person")
       expect(subject.contributors[2]).to eq("contributorRoles" => ["ContactPerson"], "familyName" => "ExampleFamilyName", "givenName" => "ExampleGivenName", "type" => "Person")
-      expect(subject.date).to eq("created"=>"2022-10-27", "published"=>"2022", "registered"=>"2022-10-27", "updated"=>"2024-01-02")
+      expect(subject.date).to eq("created" => "2022-10-27", "published" => "2022", "registered" => "2022-10-27", "updated" => "2024-01-02")
       expect(subject.publisher).to eq("name" => "Example Publisher")
-      expect(subject.license).to eq("id"=>"CC-PDDC", "url"=>"https://creativecommons.org/licenses/publicdomain/")
+      expect(subject.titles).to eq([{ "language" => "en", "title" => "Example Title" },
+                                    { "language" => "en", "title" => "Example Subtitle", "type" => "Subtitle" },
+                                    { "language" => "fr",
+                                      "title" => "Example TranslatedTitle",
+                                      "type" => "TranslatedTitle" },
+                                    { "language" => "en",
+                                      "title" => "Example AlternativeTitle",
+                                      "type" => "AlternativeTitle" }])
+      expect(subject.descriptions).to eq([{ "description" => "Example Abstract",
+                                            "type" => "Abstract",
+                                            "language" => "en" },
+                                          { "description" => "Example Methods",
+                                            "type" => "Methods",
+                                            "language" => "en" },
+                                          { "description" => "Example SeriesInformation",
+                                            "type" => "Other",
+                                            "language" => "en" },
+                                          { "description" => "Example TableOfContents",
+                                            "type" => "Other",
+                                            "language" => "en" },
+                                          { "description" => "Example TechnicalInfo",
+                                            "type" => "TechnicalInfo",
+                                            "language" => "en" },
+                                          { "description" => "Example Other", "type" => "Other", "language" => "en" }])
+      expect(subject.license).to eq("id" => "CC-PDDC", "url" => "https://creativecommons.org/licenses/publicdomain/")
     end
 
     it "instrument" do
       input = "#{fixture_path}datacite-instrument.json"
       subject = described_class.new(input: input)
+      puts subject.errors unless subject.valid?
       expect(subject.valid?).to be true
       expect(subject.id).to eq("https://doi.org/10.82433/08qf-ee96")
       expect(subject.type).to eq("Instrument")
