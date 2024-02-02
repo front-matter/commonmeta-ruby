@@ -169,7 +169,7 @@ module Commonmeta
       return false if name.to_s.split(" ").size == 1 && name.to_s.exclude?(",")
 
       # check if name contains words known to be used in organization names
-      return false if %w[University College Institute School Center Department Laboratory Library Museum Foundation Society Association Company Corporation Collaboration Consortium Incorporated Inc. Institut Research Science].any? { |word| name.to_s.include?(word) }
+      return false if %w[University College Institute School Center Department Laboratory Library Museum Foundation Society Association Company Corporation Collaboration Consortium Incorporated Inc. Institut Research Science Team].any? { |word| name.to_s.include?(word) }
 
       # check for suffixes, e.g. "John Smith, MD"
       return true if name && %w[MD PhD].include?(name.split(", ").last)
