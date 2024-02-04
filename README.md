@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/435411633.svg)](https://zenodo.org/doi/10.5281/zenodo.5785518)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10615938.svg)](https://doi.org/10.5281/zenodo.10615938)
 [![Gem Version](https://badge.fury.io/rb/commonmeta-ruby.svg)](https://badge.fury.io/rb/commonmeta-ruby)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=front-matter_commonmeta-ruby&metric=coverage)](https://sonarcloud.io/summary/new_code?id=front-matter_commonmeta-ruby)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=front-matter_commonmeta-ruby&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=front-matter_commonmeta-ruby)
