@@ -1,5 +1,9 @@
 # Changelog
 
+## [v3.13](https://github.com/front-matter/commonmeta-ruby/tree/v3.13) (2024-02-04)
+
+[Full Changelog](https://github.com/front-matter/commonmeta-ruby/compare/v3.0.1...v3.13)
+
 ## [v3.0.1](https://github.com/front-matter/commonmeta-ruby/tree/v3.0.1) (2023-03-20)
 
 [Full Changelog](https://github.com/front-matter/commonmeta-ruby/compare/v2.9.0...v3.0.1)
