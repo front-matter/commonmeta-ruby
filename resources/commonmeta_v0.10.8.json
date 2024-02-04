@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://commonmeta.org/commonmeta_v0.10.7.json",
-  "title": "Commonmeta v0.10.7",
+  "$id": "https://commonmeta.org/commonmeta_v0.10.8.json",
+  "title": "Commonmeta v0.10.8",
   "description": "JSON representation of the Commonmeta schema.",
   "additionalProperties": false,
   "definitions": {
@@ -118,6 +118,7 @@
         "Journal",
         "PeerReview",
         "PhysicalObject",
+        "Presentation",
         "ProceedingsArticle",
         "ProceedingsSeries",
         "Proceedings",
@@ -266,8 +267,12 @@
       "description": "The container of the resource.",
       "type": "object",
       "properties": {
-        "id": {
+        "identifier": {
           "description": "The identifier for the container.",
+          "type": "string"
+        },
+        "identifierType": {
+          "description": "The identifierType for the container.",
           "type": "string"
         },
         "type": {
@@ -276,16 +281,33 @@
           "enum": [
             "Book",
             "BookSeries",
-            "DataCatalog",
             "Journal",
-            "Periodical",
+            "Proceedings",
             "ProceedingsSeries",
             "Repository",
+            "DataRepository",
+            "Periodical",
             "Series"
           ]
         },
         "title": {
           "description": "The title of the container.",
+          "type": "string"
+        },
+        "firstPage": {
+          "description": "The first page of the resource.",
+          "type": "string"
+        },
+        "lastPage": {
+          "description": "The last page of the resource.",
+          "type": "string"
+        },
+        "volume": {
+          "description": "The volume of the resource.",
+          "type": "string"
+        },
+        "issue": {
+          "description": "The issue of the resource.",
           "type": "string"
         }
       }
@@ -382,7 +404,7 @@
               "Reviews",
               "IsPreprintOf",
               "HasPreprint",
-              "isSupplementTo"
+              "IsSupplementTo"
             ]
           }
         },
@@ -483,7 +505,7 @@
     "provider": {
       "description": "The provider of the resource. This can be a DOI registration agency or a repository.",
       "type": "string",
-      "enum": ["Crossref", "DataCite", "GitHub", "JaLC", "KISTI", "mEDRA", "OP"]
+      "enum": ["Crossref", "DataCite", "GitHub", "JaLC", "KISTI", "mEDRA", "OP", "InvenioRDM"]
     },
     "alternate_identifiers": {
       "description": "Alternate identifiers for the resource.",
