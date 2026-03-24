@@ -6,13 +6,14 @@ on:
 
 name: Quarto Publish
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -32,3 +33,14 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/_site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
